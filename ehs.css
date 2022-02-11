@@ -13,13 +13,13 @@ h1 {
   font-weight: bold;
   font-family: verdana;
   text-align: center;
-  color: #D3D3D3;
+  color: white;
 }
 h2 {
   font-weight: bold;
   font-family: verdana;
   text-align: center;
-  color: lightgray;
+  color: white;
 }
 a {
   font-family: verdana;
@@ -30,13 +30,13 @@ h4 {
   font-weight: bold;
   font-family: verdana;
   text-align: center;
-  color: lightgrey;
+  color: white;
 }
 h6 {
   font-weight: bold;
   font-family: verdana;
   text-align: center;
-  color: lightgrey;
+  color: white;
 }
 h3 {
   font-weight: bold;
