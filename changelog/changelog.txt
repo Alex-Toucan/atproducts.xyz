@@ -1,0 +1,4 @@
+2.1 (Beta)
+-Dark Mode is added.
+-Light Mode has been removed temporary.
+-More Data added to CodingHome.
