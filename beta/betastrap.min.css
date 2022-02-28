@@ -14,3 +14,11 @@ p {
       font-family:verdana;
         color: white;
     }
+
+body {
+  color: white;
+}
+
+nav {
+  color: black;
+}
