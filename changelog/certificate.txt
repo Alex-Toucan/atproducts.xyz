@@ -1,4 +1,5 @@
 Builtin Object Token:ISRG Root X1
+
 Version: Version 3
 Serial Number: 00:82:10:CF:B0:D2:40:E3:59:44:63:E0:BB:63:82:8B:00
 Certificate Signature Algorithm: PKCS #1 SHA-256 With RSA Encryption
