@@ -8,31 +8,38 @@
 p {
   font-family:verdana;
   color: white;
+  text-align: center;
 }
     
-    a {
-      font-family:verdana;
-        color: white;
-    }
+a {
+font-family:verdana;
+color: white;
+text-align: center;
+}
 
 h1 {
-  color: white; 
+  color: white;
+  text-align: center;
 }
 
 h2 {
   color: white;
+  text-align: center;
 }
 
 h3 {
   color: white;
+  text-align: center;
 }
 
 h4 {
   color: white;
+  text-align: center;
 }
 
 h6 {
   color: white;
+  text-align: center;
 }
 
 
