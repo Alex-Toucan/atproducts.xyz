@@ -3,5 +3,10 @@
 -Light Mode has been removed.
 -Navbar updated.
 
-2.2 (Coming soon as a beta)
--Light mode is re-added, as a button.
+2.1.1
+-CSS Updated.
+-Added more links to CodingHome.
+
+2.1.2
+-Changed the main favicon
+-Added more favicons
