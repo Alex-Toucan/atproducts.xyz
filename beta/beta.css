@@ -18,7 +18,7 @@ body {
   padding-left: 1%
 }
 
-#codinghome-intro {
+#all-intro {
   text-align: center;
 }
 
@@ -44,11 +44,11 @@ body {
   padding-top: 7%;
 }
 
-#codinghome-title {
+#all-title {
    padding: 0% 5%;
    padding-bottom: 7%;
 }
-#codinghome {
+#all {
   padding: 7% 15%;
   text-align: center;
 }
