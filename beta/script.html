@@ -24,41 +24,85 @@
 </head>
 
 <body>
-  <section id="title">
-    <div class="container-fluid">
-      <!-- Nav Bar -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand atpro" href="">AT Products</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index">AT Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="roms">AT's ROM Games</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="script">The Script Community</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ehs">Ethical Hacking Society</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="codinghome">CodingHome</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="terms">Terms of Service</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="privacy">Privacy Policy</a>
-            </li>
-          </ul>
+ <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+          position: relative;
+        }
+        
+        .topnav #myLinks {
+          display: none;
+        }
+        
+        .topnav a {
+          color: white;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+          display: block;
+        }
+        
+        .topnav a.icon {
+          background: #383838;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .active {
+          background-color: #383838;
+          color: white;
+          text-align: center;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <!-- Simulate a smartphone / tablet -->
+        <div class="mobile-container">
+        
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <a href="#home" class="active">AT productions</a>
+          <div id="myLinks">
+            <a href="#index">AT Products</a>
+            <a href="#roms">AT's ROM Games</a>
+            <a href="#script">The Script Community</a>
+            <a href="#ehs">Ethical Hacking Society</a>
+            <a href="#codinghome">CodingHome</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#privacy">Privacy Policy</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
-      </nav>
-
+        
+        <!-- End smartphone / tablet look -->
+        </div>
+        
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
+        
 
     </div>
   </section>
@@ -83,10 +127,10 @@
 
   <section id="middle">
 <hr>
-    <div id="learn">
+    <div id="learn"> <center>
       <h2> Learning Resources </h2>
 <center> <a href="https://www.youtube.com/watch?v=3Kq1MIfTWCE">Hacking Course - Network Penetration Testing</a> <a href="https://hackthebox.com/">HackTheBox</a> <a href="https://tryhackme.com/">TryHackMe</a> <a href="https://github.com/yeahhub/Hacking-Security-Ebooks">E-Books</a> <a href="https://www.kali.org/tools">Library of tools from Kali Linux OS</a> <a href="https://www.w3schools.com/python/default.asp">W3schools</a> <a href="https://www.freecodecamp.org/">freeCodeCamp</a> <a href="https://www.codecademy.com/">CodeAcademy</a> <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc">Course 1</a> <a href="https://www.youtube.com/watch?v=rfscVS0vtbw&amp;t=9695s">Course 2</a> </center>
-</div>
+      </center> </div>
   </section>
 <br>
 <br>
