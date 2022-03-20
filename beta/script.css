@@ -1,0 +1,42 @@
+body {
+  background-color: black;
+  color: #fff;
+}
+
+hr {
+  border: 10px solid #191919;
+  border-radius: 5px;
+}
+
+#script {
+  padding-top: 7%;
+}
+
+#vib-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#info-1 {
+  color: #000;
+  padding-top: 10%;
+}
+
+#info-2 {
+  color: #000;
+}
+
+#End {
+  padding-top: 7%;
+}
+
+#misc {
+  padding-top: 7%;
+  text-align: center;
+}
+
+.MOVE {
+  padding-top: 7%;
+}
