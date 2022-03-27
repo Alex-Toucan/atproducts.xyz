@@ -1,0 +1,56 @@
+1.
+Name: atproducts.org
+TTL: 3600 seconds
+Type: MX
+Priority: 10
+Value: mx.zoho.com
+
+2.
+Name: atproducts.org
+TTL: 3600 seconds
+Type: MX
+Priority: 20
+Value: mx2.zoho.com
+
+3.
+Name: atproducts.org
+TTL: 3600 seconds
+Type: MX
+Priority: 50
+Value: mx3.zoho.com
+
+4.
+Name: atproducts.org
+TTL: 3600 seconds
+Type: NETLIFY
+Value: atproducts.netlify.app
+
+5.
+Name: www.atproducts.org
+TTL: 3600 seconds
+Type: NETLIFY
+Value: atproducts.netlify.app
+
+6.
+Name: atproducts.org
+TTL: 3600 seconds
+Type: NETLIFYv6
+Value: atproducts.netlify.app
+
+7.
+Name: www.atproducts.org
+TTL: 3600 seconds
+Type: NETLIFYv6
+Value: atproducts.netlify.app
+
+8.
+Name: at._domainkey.atproducts.org
+TTL: 3600 seconds
+Type: TXT
+Value: v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5ghIjeo6ZX7/0/CdBoTPtaRUeTRwhEwXRjbRyhc86fSLdBUTySGQh4Ka15F8dwEFMXgb5+HK7B3fdtcV8yXmW+qSlCToxZueprxZkhzMUCF/mfeBz0mYgSWPN53Xx9lNv5oMzg68Hy4ufTfHLApRoehAyNs5BF6xQ2sZ9BRK+BUp+ZeYdMuKuPBbexrtpUjlD3BB8EexJIX7/K20BzLmEKeigRtHySvdZclEjvNx01QbsPN8xp6EFVc903WkmXUfZeKTy+9sTP5y4c60sW/0Eayr3XQWwHQFXpJpoROJNLYJWcv1VGTLj6Y3vgZLV4kBDRbU1sHfpMOxoQeraLS8zwIDAQAB
+
+9.
+Name: atproducts.org
+TTL: 3600 seconds
+Type: TXT
+Value: v=spf1 include:zoho.com ~all
