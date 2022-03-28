@@ -1,0 +1,105 @@
+Python Basics
+
+Comments
+You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.
+
+
+py
+
+# This is a comment
+
+
+Data types
+Variables can store data of different types, and different types can do different things.
+
+Python has the following data types built-in by default, in these categories:
+
+
+Text Type: str
+
+Numeric Types: int, float, complex
+
+Sequence Types: list, tuple, range
+
+Mapping Type: dict
+
+Set Types: set, frozenset
+
+Boolean Type: bool
+
+Binary Types: bytes, bytearray, memoryview
+
+
+We will go more in-depth on some of these types in the next few paragraphs.
+
+You can print the data type of a variable with the type() function:
+
+py
+
+x = 5
+
+print(type(x))
+
+
+Strings
+Strings are surrounded by either single quotation marks, or double quotation marks.
+
+
+py
+
+x = "hello"
+
+y = 'hello'
+
+
+# single quotations and double quotation marks are the same
+
+
+x == y # returns True
+
+
+You can assign a multiline string to a variable by using three quotes:
+
+
+py
+
+x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
+
+
+You can check the length of a string using the len() function:
+
+
+py
+
+x = "hello"
+
+print(len(text)) # returns 5
+
+
+Numbers
+There are 2 primary, int and float
+
+
+py
+
+x = 2 # int
+
+y = 2.8 # float
+
+
+To verify the type of an object in Python, use the type() function:
+
+
+py
+
+print(type(x))
+
+print(type(y))
+
+
+Int, or integers, are whole numbers, positive or negative, without decimals.
+
+Float is a number, positive or negative, containing one or more decimals.
+
+
+Both strings and numbers are built-in data types
