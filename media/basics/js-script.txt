@@ -1,0 +1,74 @@
+Javascript Basics
+Including JavaScript in an HTML Page
+
+
+<script type="text/javascript">
+
+ //JS code goes here
+
+</script>
+
+
+Call an External JavaScript File
+
+
+<script src="myscript.js"></script><code></code>
+
+
+Including Comments
+
+Single line comments - // Comment
+
+Multi-line comments - /* comment here */
+
+
+
+Variables
+var, const, let
+
+var — The most common variable. Can be reassigned but only accessed
+
+within a function. Variables defined with var move to the top when
+
+code is executed.
+
+const — Can not be reassigned and not accessible before they appear
+
+within the code.
+
+let — Similar to const, however, let variable can be reassigned but
+
+not re-declared.
+
+
+ 
+
+Data Types
+Numbers — var age = 23
+
+Variables — var x
+
+Text (strings) — var a = "init"
+
+Operations — var b = 1 + 2 + 3
+
+True or fase statements — var c = true
+
+Constant numbers — const PI = 3.14
+
+Objects — var name = {firstName:"John", lastName:”Doe"}
+
+
+Objects
+var person = {
+
+ firstName:"John",
+
+ lastName:"Doe",
+
+ age:20,
+
+ nationality:"American"
+
+};
+
