@@ -2,8 +2,7 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+The security updates supported will be in the chart below.
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -14,8 +13,6 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Please report all vulnerabilities to support@atproducts.org immediately once found. Failure to do so may result in a unsafe environment at atproducts.org, looking for bugs (especially vulnerabilities) is our number one thing we worry about.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Vulnerabilities is very important to us because we need to fix it right away or atproducts.org may become unstable, unsafe, hacked, or all terrible things that may happen to the site.
