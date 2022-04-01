@@ -11,53 +11,11 @@ a {
 }
 
 
-h2 {
-  text-align: center;
-  color: white;
-  font-family: verdana;
-}
-
-h3 {
-  text-align: center;
-  color: white;
-  font-family: verdana;
-}
-
-h4 {
-  text-align: center;
-  color: white;
-  font-family: verdana;
-}
-
-h5 {
-  text-align: center;
-  color: white;
-  font-family: verdana;
-}
-
-h6 {
-  text-align: center;
-  color: white;
-  font-family: verdana;
-}
-
-p {
-  text-align: center;
-  color: white;
-  font-size: 16px;
-  font-family: verdana;
-
-}
-
 img {
   text-align: center;
   font-family: verdana;
 }
 
-
-nav {
-  background-color: #1e1e1e;
-}
 
 
 small {
@@ -86,4 +44,31 @@ h1 {
   color: white;
   text-align: center;
   font-family: verdana;
+}
+
+
+h2 {
+  color: white;
+  text-align: center;
+  font-family: verdana;
+}
+
+
+h4 {
+  color: white;
+  text-align: center;
+  font-family: verdana;
+}
+
+
+h6 {
+  color: white;
+  text-align: center;
+  font-family: verdana;
+}
+
+a {
+  text-align: center;
+  font-family: verdana;
+  color: #A8A8A8;
 }
