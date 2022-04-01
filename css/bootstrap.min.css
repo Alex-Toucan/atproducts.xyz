@@ -11,11 +11,6 @@ a {
 }
 
 
-h1 {
-  color: white;
-  text-align: center;
-  font-family: verdana;
-}
 h2 {
   text-align: center;
   color: white;
@@ -87,3 +82,8 @@ nav {
   background-color: #1e1e1e;
 }
 
+h1 {
+  color: white;
+  text-align: center;
+  font-family: verdana;
+}
