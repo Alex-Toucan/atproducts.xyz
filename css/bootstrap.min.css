@@ -53,6 +53,11 @@ h2 {
   font-family: verdana;
 }
 
+h3 {
+  color: white;
+  text-align: center;
+  font-family: verdana;
+}
 
 h4 {
   color: white;
@@ -61,7 +66,21 @@ h4 {
 }
 
 
+h5 {
+  color: white;
+  text-align: center;
+  font-family: verdana;
+}
+
+
 h6 {
+  color: white;
+  text-align: center;
+  font-family: verdana;
+}
+
+
+p {
   color: white;
   text-align: center;
   font-family: verdana;
