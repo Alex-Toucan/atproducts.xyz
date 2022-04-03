@@ -1,0 +1,62 @@
+qCSS Basics
+
+Example Document
+
+h1 {
+  color: black;   
+  text-align: center;
+  font-size: 26px;
+  font-family: verdana;
+} 
+
+<p style="font-size:10px">
+
+To put CSS files in HTML, use... <link rel="stylesheet" href="style.css">
+
+CSS Rulesets
+
+Selector    - p {  
+Property    - color: red; 
+Declaration - }          
+
+Properties - With these, you can style a HTML element, like for example; color.
+
+Property Value - This chooses one of the possible options for a given property, like red for color.
+
+You can also write css like html{color:red;}
+
+You can also put styles in HTML elements. <h1 style="font-color:white;">
+
+You can also select multiple elements at once like...
+
+h1, h4, h6, h2 {
+  color: red;
+}
+
+Text Elements
+
+font-size: 10px; - Size are in pixels
+font-family: verdana;  - Fonts
+text-align: center; - Can align to the left side, right side, or in the center of the webpage. 
+text-shadow: 3px black - Shadow of text. Can be in pixels and colors.
+font-size: 26px; - Text size, can be in pixels.
+
+Padding Elements
+
+padding-top: 50px; - Separation. Can be top, left, right, and the bottom in pixels.
+margin: 50px; - A margin. Can be in pixels.
+border-width: 5px; - Border width. Can be thin, medium, thick, or just pixels.
+border-style: dotted; - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.
+width=500px; - Width of the element. Can be pixels or percentages.
+
+Color Elements
+
+color: red; - Color of the element, can be hexadecimal, or RGB.
+background-color: white; - Background color of the element.
+
+Extra: Centering Images
+
+img {
+   margin: 0 auto;
+   display: block;
+}
