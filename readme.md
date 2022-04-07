@@ -1,14 +1,12 @@
-<h2> Alex Toucan </h2>
-<a href="mailto:support@atproducts.org">support@atproducts.org</a>
-<p> Hello, I'm the founder of AT Products and is currently working with groups such as ProtDos (CodingHome)</p>
+<h2> AT Products </h2>
 
-<center>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a973d717-40db-4d38-aca1-c298607f2882/deploy-status)](https://app.netlify.com/sites/atproducts/deploys) <a href="mailto:support@atproducts.org">support@atproducts.org</a> <a href="https://atproducts.org">atproducts.org</a>
+<h4> "We're here for you!" </h4>
+<hr>
+<p> AT Products is a Informational Technology Company </p>
+<p> Our partnerships are with <a href="https://protdos.com">ProtDos</a> and <a href="https://antianimesociety.tk">The Anti Anime Society</a>.</p>
+<p> What we provide is... Malware, Software, and alot more! (Educational and Personal use only) </p>
+<h6> This README.md file is both copyrighted by AT Products LLC (2019-2022) and GitHub. </h6>
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Alex-Toucan&show_icons=true&theme=dark)
 
-<br>
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Alex-Toucan&langs_count=8&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Alex-Toucan&layout=compact&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-
-  </center>
