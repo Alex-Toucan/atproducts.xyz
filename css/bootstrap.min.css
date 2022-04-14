@@ -9,6 +9,11 @@ html {
   overflow-x: hidden;
 }
 
+.center {
+border: 5px solid #FFFF00;
+text-align: center;
+}
+
 body {
   background-color: #141414;
   overflow-y: scroll; /* has to be scroll, not auto */
