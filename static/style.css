@@ -157,3 +157,19 @@ object {
 .announcement a:hover {
   color: red;
 }
+
+div.a {
+  text-align: center;
+}
+
+div.b {
+  text-align: left;
+}
+
+div.c {
+  text-align: right;
+}
+
+div.c {
+  text-align: justify;
+}
