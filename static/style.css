@@ -16,7 +16,6 @@ text-align: center;
 
 body {
   background-color: #141414;
-  overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch
 }
 
@@ -32,6 +31,10 @@ body {
 
 nav {
   background-color: #1e1e1e;
+}
+
+.navbar-default { 
+  margin : 0 !important; 
 }
 
 h1 {
