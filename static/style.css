@@ -28,14 +28,30 @@ body {
   color: #6a6767;
 }
 
+pre {
+  background-color: #141414;
+}
+
+table { border-collapse: collapse; }
+tr { border: none; }
+td {
+  border-right: solid 1px #999999; 
+  border-left: solid 1px #999999;
+}
+
+.p-tab {
+  color: black;
+}
+
+.a-tab {
+  color: #575757;
+}
 
 nav {
   background-color: #1e1e1e;
 }
 
-.navbar-default { 
-  margin : 0 !important; 
-}
+.navbar-default { margin : 0 !important; }
 
 h1 {
   color: white;
@@ -89,6 +105,15 @@ a {
   font-family: verdana;
   color: #A8A8A8;
   font-size: 16px;
+}
+
+a:hover {
+  color: #8c8c8c;
+}
+
+code {
+  color: #B9BBBE;
+  background-color: #2F3136;
 }
 
 object {
@@ -239,3 +264,9 @@ div.c {
 		width: 100%  !important;
 	}
 }
+
+  table { page-break-after:auto }
+  tr    { page-break-inside:avoid; page-break-after:auto }
+  td    { page-break-inside:avoid; page-break-after:auto }
+  thead { display:table-header-group }
+  tfoot { display:table-footer-group }
