@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> How to fix the "missing Flash.ocx" error on Windows XP through 11 </title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preload" href="/static/style.css" as="style">
+    <link rel="icon" type="image/png" href="/media/images/Adobe_Flash_Player_32.svg.png">
+    <meta charset="UTF-8">
+    <meta name="title" content="How to fix the "missing Flash.ocx" error on Windows XP through 11">
+    <meta name="keywords" content="flash.ocx">
+    <meta name="author" content="Alex Toucan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="https://kit.fontawesome.com/3424a9d376.js" crossorigin="anonymous"></script>
+    <script src="/static/purecookie.js"></script>
+  </head>
+  <body>
+    <div id="page">
+         <div id="navbar">
+      <nav class="navbar navbar-default">
+      <div class="container"> <h3> Flash Documentation </h3>
+        <div class="collapse navbar-collapse a">
+            <br> 
+          <p> <a href="/flash">Flash Documentation</a> • 
+          <a href="/">AT Products</a> <br> <br>
+          <a href="/flash/posts">Posts</a> <br> <br>
+          <a href="/terms">Terms of Service</a> •  
+          <a href="/privacy">Privacy Policy</a>
+          </p></div></div></nav></div>
+          <div class="cookieConsentContainer" id="cookieConsentContainer" style="opacity: 1; display: block;"><div class="cookieTitle"><a style="text-align: left;">Cookies.</a></div><div class="cookieDesc"><div class="a"><p style="text-align: left;">By using this website, you automatically accept that we use cookies. <a href="/privacy" style="font-size: 13px;" target="_blank" rel="noopener noreferrer">Why?</a></p></div></div><div class="cookieButton"><a onclick="purecookieDismiss();">Understood</a></div></div>
+<div id="index" class="a"> <div id="intro">
+  <h1> How to fix the "missing Flash.ocx" error on Windows XP through 11 </h1>
+  <p>
+    If you are having errors that say cannot create, or find <code>flash.ocx</code>, follow these steps.
+  <br> <br>
+1.  If you haven't installed Flash Player yet, please <a href="flash2022">click here</a>.
+  <br> <br>
+2. Find in Windows Explorer: <code>C:\Windows\SysWOW64\Macromed\Flash</code>, and find the file <code>Flash.ocx</code> (may look different depending on which version flash is). If you can't find it, look in instead: <code>C:\Windows\System32\Macromed\Flash</code>, <code>System32</code>, or <code>SysWOW64</code>.
+       <br>
+    a. If you still can't find <code>Flash.ocx</code> anywhere, you may have to <a href="/media/files/flash32_32_0_0_371.ocx">download it</a>, then put it in <code>C:\Windows\SysWOW64\Macromed\Flash</code>.
+  <br> <br>
+3. Copy the file, then rename said copied file to <code>flash.ocx</code>, <b>DO NOT RENAME OR MOVE THE ORIGINAL FILE</b>, and paste it in both: <code>System32</code> and/or <code>SysWOW64</code>. [The <code>flash.ocx</code> file should look like <code>flashversion.ocx</code> (for example <code>flash9.ocx</code>) ]
+  <br> <br>
+    Try the program, or screensaver, out now to see if it works. </p>
+  <hr>
+  <h6> &reg; AT Products 2019-2022 </h6>
+    </div> </div> </div>
+  </body>
+    </html>
+  
+  
