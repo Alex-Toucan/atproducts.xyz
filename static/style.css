@@ -14,6 +14,11 @@ border: 5px solid transparent;
 text-align: center;
 }
 
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   background-color: #141414;
   -webkit-overflow-scrolling: touch
