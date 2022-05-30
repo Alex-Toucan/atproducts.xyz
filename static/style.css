@@ -112,6 +112,11 @@ a {
   font-size: 16px;
 }
 
+code {
+  color: #B9BBBE;
+  background-color: #2F3136;
+}
+
 a:hover {
   color: #8c8c8c;
 }
