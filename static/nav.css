@@ -1,0 +1,45 @@
+.menu-btn {
+   background-color: #F8F8F8;
+   color: black;
+   padding: 12px;
+   font-size: 18px;
+   font-family: verdana;
+   border: none;
+}
+.dropdown-menu {
+   position: relative;
+   display: inline-block;
+}
+.menu-content {
+   display: none;
+   position: absolute;
+   background-color: #F8F8F8;
+   min-width: 160px;
+   z-index: 1;
+}
+nav {
+   background-color: #F8F8F8;
+}
+.links,.links-hidden{
+   display: inline-block;
+   color: black;
+   padding: 12px;
+   text-decoration: none;
+   font-family: verdana;
+   font-size: 18px;
+}
+.links-hidden{
+   display: block;
+}
+.links{
+   display: inline-block;
+}
+.links-hidden:hover,.links:hover {
+   background-color: #e6e6e6;
+}
+.dropdown-menu:hover .menu-content {
+   display: block;
+}
+.dropdown-menu:hover .menu-btn {
+   background-color: #e6e6e6;
+}
