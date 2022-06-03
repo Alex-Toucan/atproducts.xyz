@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <title> Flash Player for Android </title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="preload" href="/static/style.css" as="style">
+    <link rel="stylesheet" href="/static/nav.css">
+    <link rel="stylesheet" href="/static/div.css">
+    <link rel="stylesheet" href="/static/dark.css">
+    <link rel="stylesheet" href="/static/cookie.css">
+    <link rel="stylesheet" href="/static/navbutton.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
     <link rel="icon" type="image/png" href="/media/images/Adobe_Flash_Player_32.svg.png">
     <meta charset="UTF-8">
     <meta name="title" content="Flash Player for Android">
@@ -14,21 +18,40 @@
   </head>
   <body>
     <div id="page">
-      <div id="navbar" class="a">
-      <nav class="navbar navbar-default">
-      <div class="container"> <h3> AT Products </h3>
-        <div id="navbar" class="collapse navbar-collapse">
-            <br>
-         <p> <a href="/">AT Products</a> • 
-        <a href="/roms">AT's ROM Games</a> •
-        <a href="/flash">Flash Documentation</a> <br> <br>
-        <a href="/script">The Script Community</a> • 
-        <a href="/ehs">Ethical Hacking Society</a> • 
-        <a href="/codinghome">CodingHome</a> • 
-        <a href="/noodle">Noodle Hackerspace</a> <br> <br>
-        <a href="/terms">Terms of Service</a> • 
-        <a href="/privacy">Privacy Policy</a>
-          </p></div></div></nav></div>
+<header>
+<nav>
+<div class="a"> <div style="padding: 10px;">
+  <h3> AT Products </h3> </div>
+<a class="links" href="/">AT Products</a>
+  <div class="dropdown-menu">
+<button class="menu-btn">Products</button>
+<div class="menu-content">
+<a class="links-hidden" href="/roms">AT's ROM Games</a>
+<a class="links-hidden" href="/flash">Flash Documentation</a>
+<a class="links-hidden" href="/food">Food Bot</a>
+<a class="links-hidden" href="/sms">SMS Bomber</a>
+</div>
+</div>
+<div class="dropdown-menu">
+<button class="menu-btn">Communities</button>
+<div class="menu-content">
+<a class="links-hidden" href="/script">The Script Community</a>
+<a class="links-hidden" href="/ehs">Ethical Hacking Society</a>
+<a class="links-hidden" href="/codinghome">CodingHome</a>
+<a class="links-hidden" href="/noodle">Noodle Hackerspace</a>
+</div>
+</div>
+<div class="dropdown-menu">
+<button class="menu-btn">Documentation</button>
+<div class="menu-content">
+<a class="links-hidden" href="/terms">Terms of Service</a>
+<a class="links-hidden" href="/discord">Discord Rules</a>
+<a class="links-hidden" href="/privacy">Privacy Policy</a>
+</div>
+</div>
+  </div>
+</nav>
+    </header>
 <div class="cookieConsentContainer" id="cookieConsentContainer" style="opacity: 1; display: block;"><div class="cookieTitle"><a style="text-align: left;">Cookies.</a></div><div class="cookieDesc"><div class="a"><p style="text-align: left;">By using this website, you automatically accept that we use cookies. <a href="/privacy" style="font-size: 13px;" target="_blank" rel="noopener noreferrer">Why?</a></p></div></div><div class="cookieButton"><a onclick="purecookieDismiss();">Understood</a></div></div>
 <div id="android" class="a">
   <h1> Flash Player for Android </h1>
@@ -36,7 +59,9 @@
   <a href="/media/files/com.adobe.flashplayer-11.1.115.81-11111508.apk" download>Adobe Flash Player for Android (v11)</a> <br>
   <a href="/media/files/com.adobe.air.apk" download>Adobe AIR</a>
   <hr>
+  <footer>
   <h6> &reg; AT Products (LLC) 2019-2022 </h6>
+  </footer>
     </div> </div> </div>
   </body>
     </html>
