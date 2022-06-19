@@ -17,6 +17,8 @@ border-left: solid 1px #999999;
 }
 
 .center {
-border: 5px solid transparent;
-text-align: center;
+  border: 5px solid transparent;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
