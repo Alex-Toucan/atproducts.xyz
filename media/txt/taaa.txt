@@ -1,7 +1,7 @@
 The CodingHome Argument/Fight Action Act of June 2022
 The Argument/Fight Action Act on June 2022
 
-Enforcement - 6/25/2022
+Enforcement - 6/25/2022 @ 12 PM CDT
 Expire - N/A
 
 Reasons
@@ -21,3 +21,36 @@ Signed By
 AlexToucanYT
 Null glitch (A2)
 [SI] Sir Leel
+
+Timezone Enforcement
+
+June 25th
+
+Auckland/Wellington/Fiji (UTC -12) - 6 AM 06
+Samoa (UTC -11) - 7 AM 07
+Hawaii/Tahiti (UTC -10) - 8 AM 08
+Alaska (UTC -9) - 9 AM 09
+Pacific Time (UTC -8) - 10 AM 10
+Arizona/Mountain Time (UTC -7) - 11 AM 11
+Mexico City/Central Time (UTC -6) - 12 PM 12
+Bogota/Lima/New York/Eastern Time (UTC -5) - 1 PM 13
+La Paz/San Juan/Santiago (UTC -4) - 2 PM 14
+Brasilia/Buenos Aires/Montevideo (UTC -3) - 3 PM 15
+Mid-Atlantic (UTC -2) - 4 PM 16
+Azores/Cape Verde Islands (UTC -1) - 5 PM 17
+London/Dublic/Lisbon/Reykjavik (UTC 0) - 6 PM 18
+Amsterdam/Paris/Berlin/Rome (UTC +1) - 7 PM 19
+Bucharest/Beirut/Cario/Helsinki (UTC +2) - 8 PM 20
+Baghdad/Moscow/Nairobi (UTC +3) - 9 PM 21
+Dubai/Abu Dhabi/Muscat/Baku/Port Louis (UTC +4) - 10 PM 22
+Islambad/Tashkent/Karachi (UTC +5) - 11 PM 23
+
+June 26th
+
+Astana/Dhaka/Novosibirsk (UTC +6) - 12 AM 00/24
+Bangkok/Hanoi/Jakarta (UTC +7) - 1 AM 01
+Beijing/Hong Kong/Singapore (UTC +8) - 2 AM 02
+Tokyo/Osaka/Seoul (UTC +9) - 3 AM 03
+Canberra/Melbourne/Sydney (UTC +10) - 4 AM 04
+Magadan/Solomon Islands (UTC +11) - 5 AM 05
+Auckland/Wellington/Fiji (UTC +12) - 6 AM 06
