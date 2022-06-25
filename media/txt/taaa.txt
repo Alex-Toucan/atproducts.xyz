@@ -18,7 +18,7 @@ Disagreements are to be kept civil and professional. If the following sentence i
 
 Punishments - No Exceptions
 1. Warn
-2. Warn
+2. Warn & 1 Hour Mute
 3. Warn & 1 Day Mute
 4. Warn & 1 Week Mute
 5. Ban
