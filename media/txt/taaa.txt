@@ -13,9 +13,10 @@ Fight - A violent confrontation or struggle.
 
 Punishments - No Exceptions
 1. Warn
-2. Warn & Day Mute
-3. Warn & 3 Day Mute
-4. Ban
+2. Warn
+3. Warn & 1 Day Mute
+4. Warn & 1 Week Mute
+5. Ban
 
 Signed By
 AlexToucanYT
