@@ -24,6 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M">    
     <script src="https://kit.fontawesome.com/3424a9d376.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script src="/static/purecookie.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196258156-1">
@@ -34,6 +35,12 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-196258156-1');
+    </script>
+    <script>
+    function addDarkmodeWidget() {
+      new Darkmode().showWidget();
+    }
+    window.addEventListener('load', addDarkmodeWidget);
     </script>
   </head>
   <body>
