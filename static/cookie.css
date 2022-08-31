@@ -56,7 +56,7 @@
 	background: #3E9B67;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 700px) {
 	.cookieConsentContainer {
 		bottom: 0px !important;
 		left: 0px !important;
