@@ -44,7 +44,7 @@ nav {
    background-color: #e6e6e6;
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
    imgdiv {
       display: none;
    }
