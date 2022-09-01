@@ -49,10 +49,3 @@ nav {
       display: none;
    }
 }
-
-@media (max-width: 749px) {
-   .row {
-      justify-content: center;
-      text-align: center;
-   }
-}
