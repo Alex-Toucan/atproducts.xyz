@@ -43,3 +43,9 @@ nav {
 .dropdown-menu:hover .menu-btn {
    background-color: #e6e6e6;
 }
+
+@media (max-width:750px) {
+   imgdiv {
+      display: none;
+   }
+}
