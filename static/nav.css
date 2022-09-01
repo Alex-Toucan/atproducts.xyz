@@ -52,6 +52,7 @@ nav {
 
 @media (max-width: 749px) {
    .row {
+      display: flex;
       justify-content: center;
       text-align: center;
    }
