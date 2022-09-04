@@ -56,6 +56,39 @@
 	background: #3E9B67;
 }
 
+.cookieConsentContainer .cookieTitle p {
+	font-family: OpenSans, arial, "sans-serif";
+	color: #FFFFFF;
+	font-size: 22px;
+	line-height: 20px;
+	display: block;
+}
+
+.cookieConsentContainer .cookieDesc p {
+	font-family: OpenSans, arial, "sans-serif";
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.cookieConsentContainer .cookieButton p {
+	display: inline-block;
+	font-family: OpenSans, arial, "sans-serif";
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 14px;
+	background: #000000;
+	box-sizing: border-box; 
+	padding: 15px 24px;
+	text-align: center;
+	transition: background 0.3s;
+}
+
+.cookieConsentContainer .cookieButton p:hover { 
+	cursor: pointer;
+	background: #3E9B67;
+}
+
 @media (max-width: 700px) {
 	.cookieConsentContainer {
 		bottom: 0px !important;
