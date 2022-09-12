@@ -1,4 +1,4 @@
-.learn:link, .learn:visited {
+a.learn:link, a.learn:visited {
   background-color: #f44336;
   color: white;
   padding: 14px 25px;
@@ -7,6 +7,6 @@
   display: inline-block;
 }
 
-.learn:hover, .learn:active {
+a.learn:hover, a.learn:active {
   background-color: red;
 }
