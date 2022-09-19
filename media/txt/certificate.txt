@@ -43,14 +43,14 @@ Authority Information Access: [1]Authority Info Access Access Method=Certificati
 *.atproducts.xyz
 
 Version: V3
-Serial Number: 034dfa3e4e7be7f1129423674631997b5940
-Signature Algorithm: sha256RSA
+Serial Number: 03:02:5E:51:00:60:A2:42:9A:6F:A4:E8:E7:78:9B:61:8C:1D
+Signature Algorithm: PKCS #1 SHA-256 With RSA Encryption
 Signature Hash Algorithm: sha256
 Issuer: CN = R3 O = Let's Encrypt C = US
-Valid From: Saturday, May 28, 2022 3:41:14 PM
-Valid To: Friday, August 26, 2022 3:41:13 PM
+Valid From: 7/27/22, 3:00:34 PM CDT
+Valid To: 10/25/22, 3:00:33 PM CDT
 Subject: N = atproducts.xyz
-Public Key (ECC 256 Bits): 04 8a d9 87 36 e2 7b 8e 50 0b 1f 62 d3 f5 ae 25 b2 12 29 75 51 8d f7 10 cc 4d 57 9c 4f e0 28 49 62 27 10 81 44 1c 11 ac 04 ab 4b ca a3 b3 3a 07 26 45 c8 ee 41 cd a6 03 ed 57 60 a5 bb b5 21 00 c4
+Public Key (ECC 256 Bits): 00 04 64 2B 3E E1 DB 3C 49 A5 ED 2C 0A CD 1F C3 D3 60 CA 45 BF 82 7B 98 E4 D5 9C BA 94 7A EF 87 0E 82 26 7F 66 C7 BA 38 5E BF 30 E1 D8 CA 46 A5 83 05 87 59 6A 04 26 84 1B 37 DD DF 7A 73 11 44 1E FA
 Public Key Parameters: ECDSA_P256
 Subject Key Identifier: 2956c8bb68fc4d4a2a4accf6b2f189882342f7e8
 Key Usage: Digital Signature, Certificate Signing, Off-line CRL Signing, CRL Signing (86)
