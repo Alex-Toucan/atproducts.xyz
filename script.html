@@ -24,35 +24,44 @@
   <body>
       <div id="page">
 <header>
-<nav>
-<div class="a"> <div style="padding: 10px;">
-  <h3> AT Products </h3> </div>
-<a class="links" href="index">AT Products</a>
-  <div class="dropdown-menu">
-<button class="menu-btn">Products</button>
-<div class="menu-content">
-<a class="links-hidden" href="/flash">Flash Documentation</a>
-<a class="links-hidden" href="http://mdickie.netlify.app">MDickie Projects</a>
-<a class="links-hidden" href="sms">SMS Bomber</a>
-</div>
-</div>
-<div class="dropdown-menu">
-<button class="menu-btn">Communities</button>
-<div class="menu-content">
-<a class="links-hidden" href="script">The Script Community</a>
-<a class="links-hidden" href="ehs">Ethical Hacking Society</a>
-<a class="links-hidden" href="codinghome">CodingHome</a>
-<a class="links-hidden" href="noodle">Noodle Hackerspace</a>
-</div>
-</div>
-<div class="dropdown-menu">
-<button class="menu-btn">Documentation</button>
-<div class="menu-content">
-<a class="links-hidden" href="terms">Terms of Service</a>
-<a class="links-hidden" href="discord">Discord Rules</a>
-<a class="links-hidden" href="privacy">Privacy Policy</a>
-</div>
-</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">AT Products LLC</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">AT Products</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/flash">Flash Documentation</a></li>
+            <li><a class="dropdown-item" href="/sms">SMS Bomb</a></li>
+            <li><a class="dropdown-item" href="/mdickie">MDickie Projects</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Communities</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/ehs">Ethical Hacking Society</a></li>
+            <li><a class="dropdown-item" href="/script">The Script Community</a></li>
+            <li><a class="dropdown-item" href="/codinghome">CodingHome</a></li>
+            <li><a class="dropdown-item" href="/noodle">Noodle Hackerspace</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
+            <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
+            <li><a class="dropdown-item" href="Privacy">Privacy Policy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
     </header>
