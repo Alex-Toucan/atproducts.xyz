@@ -9,3 +9,7 @@
 nav, .navbar, .navbar-expand-sm, .bg-dark, .navbar-dark {
    position:fixed;top:0;right:0;left:0;z-index:1030;
 }
+
+h1 {
+   margin-top:10px;
+}
