@@ -67,11 +67,9 @@
   <h1> AMD GPU Fix for Flash Player </h1>
           <a href="/flash/posts">Return to Posts</a> <br> <br>
   <p> Thanks to <a href="https://www.reddit.com/user/Djracem">Djracem on Reddit</a> for contributing to this page.</p>
-  <p> AMD adrenalin drivers 22.5.2 and later are causing flash to only display a colored background associated with the background of that flash player. i've messed around with some settings and i figured out an easy way to fix it. i didn't want to keep my drivers rolled back pre-22.5.2 so i went in and buggered around and i disabled hardware accel on macromed\flash and on mms.cfg what you need to do is press the windows key and type "cmd" and then click "run as administrator" and then paste this in:
-<code> mkdir "%WINDIR% \SysWoW64\Macromed\Flash"  <br>
-  NUL & echo DisableHardwareAcceleration <br>
-  "WINDIR% \SysWoW64\Macromed\Flash\mms.cfg" </code>
-  After that, it should work. </p>
+  <p> AMD adrenalin drivers 22.5.2, and later, are causing Flash to only display a colored background associated with the background of Flash Player. To not roll back pre-22.5.2, disable "Hardware Accel" on Macromed\Flash and on mms.cfg. Run, and make sure Command Prompt is ran as administrator, and then copy the Batchfile code below.
+  <br> </code>mkdir "%WINDIR% \SysWoW64\Macromed\Flash" <br>
+    NUL & echo DisableHardwareAcceleration "WINDIR% \SysWoW64\Macromed\Flash\mms.cfg"</code></p>
            </div> <hr>
 <div class="container">
   <footer class="py-5">
