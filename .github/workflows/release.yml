@@ -1,0 +1,2 @@
+- name: Release Scheduler
+  uses: AnandChowdhary/release-scheduler@v1.0.0
