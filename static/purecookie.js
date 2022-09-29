@@ -83,25 +83,3 @@ window.onload = function() { cookieConsent(); };
 
 
 }
-/*
-     FILE ARCHIVED ON 12:31:58 Apr 08, 2022 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 17:48:35 Apr 17, 2022.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  captures_list: 78.97
-  exclusion.robots: 0.102
-  exclusion.robots.policy: 0.095
-  RedisCDXSource: 0.595
-  esindex: 0.008
-  LoadShardBlock: 62.878 (3)
-  PetaboxLoader3.datanode: 64.664 (5)
-  CDXLines.iter: 12.688 (3)
-  load_resource: 135.091
-  PetaboxLoader3.resolve: 79.146
-  loaddict: 43.811
-*/
