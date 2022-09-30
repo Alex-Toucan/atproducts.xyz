@@ -21,3 +21,10 @@ body,html {
 .icon, .aicon {
    color:rgba(33,37,41,255);
 }
+
+@media (min-width:768px) {
+   .psbr {
+      display: none;
+   }
+}
+   
