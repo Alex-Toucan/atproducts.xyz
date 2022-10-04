@@ -5,5 +5,4 @@
 <hr>
 <p> AT Products is a Informational Technology Company </p>
 <p> Our partnerships are with <a href="https://protdos.com">ProtDos</a>, <a href="https://sync-technologies.pynx.repl.co/">Pynx Technologies</a>, <a href="https://astrodog.xyz">Astrodog</a>, <a href="https://deltasoft-tools.netlify.app/">Deltasoft</a>, and <a href="https://astrocore.net/">AstroCore</a>. 
-<p> What we provide is... Malware, Software, and alot more! (Educational and Personal use only) </p>
-<h6> This README.md file is both copyrighted by AT Products LLC (2019-2022) and GitHub. </h6>
+<p> What we provide is... Malware, Software, Cybersecurity resources, and alot more! (Educational and Personal use only) </p>
