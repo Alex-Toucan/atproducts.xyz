@@ -34,7 +34,7 @@ body,html {
    margin-left: 5px;
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
    .container {
       width: 100%;
       padding-right: 0;
@@ -42,5 +42,11 @@ body,html {
       margin-right: 0;
       margin-left: 0;
       text-align: center;
+   }
+}
+
+@media (max-width:767px) {
+   .col-2 {
+     width: 100%;
    }
 }
