@@ -50,3 +50,9 @@ body,html {
      width: 100%;
    }
 }
+
+@media (max-width:767px) {
+   .imgdiv {
+      width: 20%;
+   }
+}
