@@ -54,5 +54,7 @@ body,html {
 @media (max-width:767px) {
    .imgdiv {
       width: 20%;
+      margin-left: auto;
+      margin-right: auto;
    }
 }
