@@ -59,3 +59,9 @@ body,html {
       margin-right: auto;
    }
 }
+
+@media (min-width:1000px) {
+    .pdont {
+      display:none;
+      }
+      }
