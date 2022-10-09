@@ -61,7 +61,7 @@ body,html {
 }
 
 @media (min-width:1000px) {
-    .pdont {
-      display:none;
-      }
-      }
+   .pdont {
+      display: none;
+   }
+}
