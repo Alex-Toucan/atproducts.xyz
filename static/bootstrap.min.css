@@ -41,7 +41,7 @@ body, html {
 }
 
 @media (max-width:350px) {
-   .tfont {
+   .tfonts {
       font-size:70%;
    }
 }
