@@ -34,6 +34,16 @@ body, html {
    margin-left: 5px;
 }
 
+@media (max-width:450px) {
+   .tfonts {
+      font-size:80%;
+   }
+}
+
+.table-center {
+   margin: 0 auto;
+}
+
 @media (max-width:767px) {
    .container,.py-5 {
       width: 100%;
