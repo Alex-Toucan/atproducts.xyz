@@ -18,8 +18,12 @@ body, html {
    overflow-x: hidden;
 }
 
-.icon, .aicon {
+.icon, .aicon, .bi, .abicon {
    color:rgba(33,37,41,255);
+}
+
+.abicon {
+   width: 3rem;
 }
 
 @media (min-width:768px) {
