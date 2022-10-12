@@ -23,8 +23,7 @@ body, html {
 }
 
 .abicon {
-   width: 32px;
-   height: 32px;
+   font-size:3em;
 }
 
 @media (min-width:768px) {
