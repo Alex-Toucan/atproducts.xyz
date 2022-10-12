@@ -20,6 +20,7 @@ body, html {
 
 .icon, .aicon, .bi, .abicon {
    color:rgba(33,37,41,255);
+   line-height: 100%;
 }
 
 .abicon {
