@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 
 <html>
   <head>
@@ -20,15 +21,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="/static/purecookie.js"></script>
-    <SCRIPT language="JavaScript">
-var password; 
-var pass1="uoK2#59FJ4j5"; 
-password=prompt('Enter Password',' '); 
-if (password==pass1) 
-alert('Correct Password! Click OK to Enter!'); 
-else { window.location="/"; 
-}
-</SCRIPT>
   </head>
   <body>
     <header>
@@ -116,9 +108,52 @@ else { window.location="/";
 <h5 class="modal-title" id="hbt">HTML Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> HTML Basics </h2>
-<object data="/media/basics/html-script.txt" type="text/plain" width="95%" style="height: 300px">
-      <a href="/media/basics/html-script.txt">No Support?</a>
-     </object></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+<div class="row">
+  <div class="col-4">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#example-1">Example Document</a>
+      <a class="list-group-item list-group-item-action" href="#text-1">HTML Text</a>
+      <a class="list-group-item list-group-item-action" href="#head-1">HTML Heading</a>
+      <a class="list-group-item list-group-item-action" href="#link-1">HTML Links</a>
+      <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+      <h2>HTML Basics</h2>
+<h4 id="example-1"> Example Document</h4>
+<code>
+&lt;!DOCTYPE HTML&gt; <br>
+&lt;html&gt; <br>
+&lt;head&gt; <br>
+&lt;/head&gt; <br>
+&lt;body&gt; <br>
+&lt;h1&gt; This is a heading &lt;/h1&gt;<br>
+&lt;p&gt; This is text &lt;/p&gt;<br>
+&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;<br>
+&lt;img src="at.png" width="99.99% alt="Example Image"&gt; <br>
+&lt;/body&gt; <br>
+&lt;/html&gt; <br>
+</code>
+<p>We gotta first lay down the very first thing to know. The <code>&lt;!DOCTYPE html&gt;</code> tag represents the Document Type and helps some browsers display correctly with your website, must only be used once. Some elements do need closing tag, like <code>&lt;/center&gt;</code>.</p>
+<p>The &lt;head&gt; tag is needed to represent the head of the website. The &lt;body&gt; tag is the same thing, but it's the body.</p>
+<h4 id="text-1">HTML Text</h4>
+<p>Some elements are meant to show text like <code>&lt;text&gt;</code>, and <code>&lt;p&gt;</code>.</p>
+<p><code>&lt;p&gt; This is text &lt;/p&gt;</code></p>
+<h4 id="head-1">HTML Headings</h4>
+<p>The <code>&lt;h&gt;</code> tag has 6 different sizes, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.</p>
+<p>1 is the hugest, to 6 is the smallest.</p>
+<p><code>&lt;h1&gt; This is a heading &lt;/h1&gt;</code></p>
+<h4 id="link-1">HTML Links</h4>
+<p>The <code>&lt;a&gt;</code> is a text element to represent links. Once clicked on the hyperlink, will redirect the user to a new link.</p>
+<p><code>&lt;a href="atproducts.tk">Example Website&lt;/a&gt;</code></p>
+<h4 id="img-1">HTML Images</h4>
+<p>The <code>&lt;img&gt;</code> tag is to show a image. The width or height description can be used by pixels or percentages by displays. The <code>alt</code> tag shows up when the image doesn't load or can't load, it shows the description.</p>
+<p><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></p>
+    </div>
+  </div>
+</div>
+        </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#os">OSINT</button><div class="modal fade" id="os" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="ost">OSINT</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
