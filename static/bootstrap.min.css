@@ -87,10 +87,19 @@ body, html {
     }
 }
 
+@media (min-width:768px) {
 .basics-scroll {
     height: 350px;
     margin-top: 0.5rem;
     overflow: auto;
 }
+}
 
+@media (max-width:769px) {
+   .col-4, .col-8 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+   }
+}
 
