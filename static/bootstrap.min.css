@@ -95,7 +95,7 @@ body, html {
 }
 }
 
-@media (max-width:769px) {
+@media (max-width:767px) {
    .col-4, .col-8 {
       text-align: center;
       margin-left: auto;
