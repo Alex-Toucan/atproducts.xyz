@@ -110,3 +110,8 @@ body, html {
    }
 }
 
+@media (min-width:768px) {
+   .dmsize {
+      height: 1366px;
+   }
+}
