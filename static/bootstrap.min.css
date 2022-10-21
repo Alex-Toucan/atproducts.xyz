@@ -104,3 +104,9 @@ body, html {
    }
 }
 
+@media (max-width:767px) {
+   .dmsize {
+      height: 350px;
+   }
+}
+
