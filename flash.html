@@ -520,6 +520,16 @@ After that, run a installer from the table of installers depending on your devic
     </div>
   </footer>
 </div>
+<script>
+$(document).on('show.bs.modal', '.modal', function (event) {
+    var zIndex = 1040 + (10 * $('.modal:visible').length);
+    $(this).css('z-index', zIndex);
+    setTimeout(function () {
+        $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+        $(".modal.fade.multi-modal").css("overflow-y", "auto");
+    }, 0);
+});
+</script>
     </body>
     </html>
 
