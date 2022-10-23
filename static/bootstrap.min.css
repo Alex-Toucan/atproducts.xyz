@@ -114,3 +114,9 @@ body, html {
   margin-top: 0.5rem;
   overflow: auto;
 }
+
+@media (max-width:768px) {
+   .psbr {
+      display: none;
+   }
+}
