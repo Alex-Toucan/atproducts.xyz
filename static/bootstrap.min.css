@@ -19,18 +19,12 @@ body, html {
 }
 
 .icon, .aicon, .bi, .abicon {
-   color:rgba(33,37,41,255);
+   color: rgba(33,37,41,255);
    line-height: 100%;
 }
 
 .abicon {
    font-size:3em;
-}
-
-@media (min-width:768px) {
-   .psbr {
-      display: none;
-   }
 }
    
 .btn-dark {
