@@ -23,7 +23,7 @@ body, html {
 }
 
 body {
-    padding-top: $navbar-padding-y + $nav-link-height + $navbar-padding-y;
+    padding-top: 56px;
 }
 
 .icon, .aicon, .bi, .abicon {
