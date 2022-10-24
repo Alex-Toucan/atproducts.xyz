@@ -10,12 +10,20 @@ h1 {
    margin-top:10px;
 }
 
-header,nav {
-   padding-right: 0;
+header {
+   position: fixed;
+   top: 0;
+   right: 0; 
+   left: 0;
+   z-index: 1030;
 }
 
 body, html {
    overflow-x: hidden;
+}
+
+body {
+   padding-top: 56px;
 }
 
 .icon, .aicon, .bi, .abicon {
