@@ -116,3 +116,9 @@ body, html {
       display: none;
    }
 }
+
+@media (min-width:1200px) {
+   .psbr {
+      display: none;
+   }
+}
