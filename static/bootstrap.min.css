@@ -10,7 +10,7 @@ h1, h2 {
    margin-top:10px;
 }
 
-pre, code, p, i, b, strong, text, h1, h2, h6 {
+pre, code, p, strong, text, h1, h2, h6 {
    padding-right: 10px;
    padding-left: 10px;
 }
