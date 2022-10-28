@@ -127,3 +127,9 @@ body, html {
       display: none;
    }
 }
+
+img.script {
+   border-radius: 15px;
+   background: #141414;
+   padding: 20px;
+}
