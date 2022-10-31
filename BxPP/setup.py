@@ -1,5 +1,5 @@
 # By installing this file you agree that most of my code is very buggy and needs to be worked on.
-
+# Updator version 2.0!
 import os
 import sys
 from pathlib import Path
