@@ -111,12 +111,15 @@ body, html {
 
 @media (max-width:768px) {
    .col-4b, .col-8b {
-      text-align: center;
       margin-left: auto;
       margin-right: auto;
    /* width: 100%; */
       margin-bottom: 10px;
    }
+}
+   
+.col-4b, .col-8b {
+   text-align: center;
 }
 
 @media (max-width:500px) {
@@ -153,3 +156,4 @@ img.script {
    background: #141414;
    padding: 20px;
 }
+  
