@@ -104,6 +104,7 @@ body, html {
        margin-right: calc(-.5 * var(--bs-gutter-x));
        margin-left: calc(-.5 * var(--bs-gutter-x));
    }
+}
 
 @media (max-width:768px) {
    .col-4, .col-8 {
