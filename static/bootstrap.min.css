@@ -88,7 +88,7 @@ body, html {
     overflow: auto;
 }
 
-@media (min-width: 768px)
+@media (min-width: 500px)
    .dmrow {
        --bs-gutter-x: 1.5rem;
        --bs-gutter-y: 0;
@@ -101,6 +101,16 @@ body, html {
 
 @media (max-width:768px) {
    .col-4, .col-8 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      margin-bottom: 10px;
+   }
+}
+
+@media (max-width:768px) {
+   .col-4b, .col-8b {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
