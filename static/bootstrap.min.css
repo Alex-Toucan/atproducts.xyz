@@ -175,4 +175,9 @@ img.script {
    background: #141414;
    padding: 20px;
 }
+   
+div.lrpad {
+    padding-right: 10px;
+    padding-left: 10px;
+} 
   
