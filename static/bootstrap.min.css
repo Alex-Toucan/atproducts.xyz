@@ -119,7 +119,8 @@ body, html {
 }
    
 .col-4b, .col-8b {
-   text-align: center;
+      margin-left: auto;
+      margin-right: auto;
 }
 
 @media (max-width:500px) {
