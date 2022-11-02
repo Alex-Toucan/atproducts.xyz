@@ -88,8 +88,18 @@ body, html {
     overflow: auto;
 }
 
+@media (min-width: 500px)
+   .dmrow {
+       --bs-gutter-x: 1.5rem;
+       --bs-gutter-y: 0;
+       display: flex;
+       flex-wrap: wrap;
+       margin-top: calc(-1 * var(--bs-gutter-y));
+       margin-right: calc(-.5 * var(--bs-gutter-x));
+       margin-left: calc(-.5 * var(--bs-gutter-x));
+   }
 
-@media (max-width:767px) {
+@media (max-width:500px) {
    .col-4, .col-8 {
       text-align: center;
       margin-left: auto;
@@ -99,7 +109,7 @@ body, html {
    }
 }
 
-@media (max-width:767px) {
+@media (max-width:500px) {
    .dmsize {
       height: 350px;
    }
