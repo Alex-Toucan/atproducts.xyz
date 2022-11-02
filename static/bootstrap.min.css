@@ -46,6 +46,12 @@ body, html {
    }
 }
 
+@media (max-width:320px) {
+   .tfonts {
+      font-size:60%;
+   }
+}
+
 .table-center {
    margin: 0 auto;
 }
