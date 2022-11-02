@@ -113,6 +113,8 @@ body, html {
    .col-8b {
     flex: 0 0 auto;
     width: 66.66666667%;
+    padding-right: 10px;
+    padding-left: 10px;
    }
 }
    
@@ -120,6 +122,8 @@ body, html {
    .col-4b {
     flex: 0 0 auto;
     width: 33.33333333%;
+    padding-right: 10px;
+    padding-left: 10px;
    }
 }
    
