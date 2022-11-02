@@ -88,7 +88,7 @@ body, html {
     overflow: auto;
 }
 
-@media (min-width: 500px)
+@media (min-width: 768px)
    .dmrow {
        --bs-gutter-x: 1.5rem;
        --bs-gutter-y: 0;
@@ -99,7 +99,7 @@ body, html {
        margin-left: calc(-.5 * var(--bs-gutter-x));
    }
 
-@media (max-width:500px) {
+@media (max-width:768px) {
    .col-4, .col-8 {
       text-align: center;
       margin-left: auto;
