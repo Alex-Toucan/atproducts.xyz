@@ -108,6 +108,12 @@ body, html {
       margin-bottom: 10px;
    }
 }
+   
+@media (min-width:768px) {
+   .col-4, .col-8 {
+     flex:1 0 0%
+   }
+}
 
 @media (max-width:768px) {
    .col-4b, .col-8b {
