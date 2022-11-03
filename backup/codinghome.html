@@ -67,7 +67,7 @@
 </nav>
     </header>
 <div class="cookieConsentContainer" id="cookieConsentContainer" style="opacity: 1; display: block;"><div class="cookieTitle"><a style="text-align: left;">Cookies.</div><div class="cookieDesc"><div class="a"><p style="text-align: left;">By using this website, you automatically accept that we use cookies. <a href="/privacy#cookies" style="font-size: 13px;" target="_blank" rel="noopener noreferrer">Why?</a></p></div></div><div class="cookieButton"><a onclick="purecookieDismiss();">Understood</a></div></div>
-<div id="codinghome" class="a"> <div id="intro">
+<div id="codinghome" class="a lrpad"> <div id="intro">
     <h1> CodingHome </h1>
   <img src="/media/images/codinghome.png">
   <br> <br>
@@ -202,9 +202,44 @@ print(type(y))</code></p>
           </div></div></div>
 </div> <hr> <div id="html"> 
      <h2> HTML Basics </h2>
-       <object data="/media/basics/html-coding.txt" type="text/plain" width="95%" style="height: 300px">
-        <a href="/media/basics/html-coding.txt">No Support?</a>
-       </object>
+        <div class="dmrow">
+          <div class="col-4b">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#example-1">Example Document</a>
+      <a class="list-group-item list-group-item-action" href="#head-1">HTML Headings</a>
+      <a class="list-group-item list-group-item-action" href="#text-1">HTML Paragraphs</a>
+      <a class="list-group-item list-group-item-action" href="#links-1">HTML Links</a>
+      <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
+            </div></div><div class="col-8b">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<h4 id="example-1">Example Document</h4>
+<code>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+&lt;h1&gt;My first Heading&lt;/h1&gt;<br>
+&lt;p&gt;My first paragraph&lt;/p&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</code>
+<p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags). The <code>&lt;!DOCTYPE&gt;</code> declaration is not case sensitive. </p>
+<h4 id="head-1">HTML Headings</h4>
+<p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.
+<code>&lt;h1&gt;</code>defines the most important heading. <code>&lt;h6&gt;</code> defines the least important heading:<br>
+<code>&lt;h1&gt;Big&lt;/h1&gt;</code> <br>
+<code>&lt;h6&gt;Small&lt;/h6&gt;</code> </p>
+<h4 id="text-1">HTML Paragraphs</h4>
+<p>HTML paragraphs are defined with the &lt;p&gt; tag:<code><br>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</code></p>
+<h4 id="links-1">HTML Links</h4>
+<p>HTML links are defined with the &lt;a&gt; tag:<br>
+<code>&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt</code></p>
+<h4 img="img-1">HTML Images</h4>
+<p>HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width, and height are provided as attributes:<br>
+<code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code></p>
+
+          </div></div></div>
     </div> <hr> <div id="css"> 
      <h2> CSS Basics </h2>
        <object data="/media/basics/css-coding.txt" type="text/plain" width="95%" style="height: 300px">
