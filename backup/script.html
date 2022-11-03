@@ -106,19 +106,156 @@
         
 </div> <hr> <div id="py">
   <h2>Python Basics</h2>
-<object data="/media/basics/py-script.txt" type="text/plain" width="95%" style="height: 300px">
-      <a href="/media/basics/py-script.txt">No Support?</a>
-     </object>
+<div class="dmrow">
+          <div class="col-4b">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
+      <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
+      <a class="list-group-item list-group-item-action" href="#str-3">Strings</a>
+      <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
+            </div></div><div class="col-8b">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<h4 id="com-3">Comments</h4>
+<p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
+py <br>
+# This is a comment
+</code></p>
+<h4 id="data-3">Data Types</h4>
+<p>Variables can store data of different types, and different types can do different things.</p>
+<p>Python has the following data types built-in by default, in these categories:<br>
+Text Type: <code>str</code><br>
+Numeric Types: <code>int, float, complex</code><br>
+Sequence Types: <code>list, tuple, range</code><br>
+Mapping Type: <code>dict</code><br>
+Set Types: <code>set, frozenset</code><br>
+Boolean Type: <code>bool</code><br>
+Binary Types: <code>bytes, bytearray, memoryview</code></p>
+<p>We will go more in-depth on some of these types in the next few paragraphs.</p>
+<p>You can print the data type of a variable with the type() function:<br>
+<code>
+py <br>
+x = 5 <br>
+print(type(x))
+</code></p>
+<h4 id="str-3">Strings</h4>
+<p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
+<code>
+py <br>
+x = "hello" <br>
+y = 'hello' <br>
+# single quotations and double quotation marks are the same<br>
+x == y # returns True
+</code></p>
+<p>You can assign a multiline string to a variable by using three quotes:<br>
+<code>
+py <br>
+x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
+</code></p>
+<p>You can check the length of a string using the len() function:
+<code>py<br>
+x = "hello"<br>
+print(len(text)) # returns 5<br></code></p>
+<h4 id="num-3">Numbers</h4>
+<p>There are 2 primary, <code>int</code> and <code>float</code></p><p><code>
+py<br>
+x = 2 # int<br>
+y = 2.8 # float
+</code></p>
+<p>To verify the type of an object in Python, use the type() function:<code>
+py<br>
+print(type(x))<br>
+print(type(y))</code></p>
+<p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
+<p>Float is a number, positive or negative, containing one or more decimals.</p>
+<p>Both strings and numbers are built-in data types.</p>
+          </div></div></div>
      </div> <hr> <div id="js">
 <h2> JavaScript Basics </h2>
-     <object data="/media/basics/js-script.txt" type="text/plain" width="95%" style="height: 300px">
-      <a href="/media/basics/js-script.txt">No Support?</a>
-     </object>
+         <div class="dmrow">
+          <div class="col-4b">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#html-2">Including JavaScript in an HTML Page</a>
+      <a class="list-group-item list-group-item-action" href="#call-2">Call an External JavaScript File</a>
+      <a class="list-group-item list-group-item-action" href="#com-2">Including Comments</a>
+      <a class="list-group-item list-group-item-action" href="#var-2">Variables</a>
+      <a class="list-group-item list-group-item-action" href="#data-2">Data Types</a>
+            </div></div><div class="col-8b">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<h4 id="html-2">Including JavaScript in an HTML Page</h4>
+<p><code>&lt;script type="text/javascript"&gt; <br>
+ //JS code goes here <br>
+&lt;/script&gt; </code></p>
+<h4 id="call-2">Call an External JavaScript File</h4>
+     <p> <code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code></p>
+<h4 id="com-2">Including Comments</h4>
+<p>Single line comments - <code>// Comment</code> <br>
+Multi-line comments - <code>/* comment here */</code></p>
+<h4 id="var-2">Variables</h4>
+<p>
+<code>var, const, let</code><br>
+<code>var</code> — The most common variable. Can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
+<code>const</code> — Can not be reassigned and not accessible before they appear within the code.<br>
+<code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
+<h4 id="data-2">Data Types</h4>
+Numbers — <code>var age = 23</code> <br>
+Variables — <code>var x</code><br>
+Text (strings) — <code>var a = "init"</code><br>
+Operations — <code>var b = 1 + 2 + 3</code><br>
+True or fase statements — <code>var c = true</code><br>
+Constant numbers — <code>const PI = 3.14</code><br>
+Objects — <code>var name = {firstName:"John", lastName:”Doe"}</code> </p>
+<p><b>Objects Example</b> <br>
+<code>
+var person = {<br>
+ firstName:"John",<br>
+ lastName:"Doe",<br>
+ age:20,<br>
+ nationality:"American"<br>
+};
+  </code></p>
+          </div></div></div>
      </div>
  <hr> <div id="html"> <h2> HTML Basics </h2>
-     <object data="/media/basics/html-script.txt" type="text/plain" width="95%" style="height: 300px">
-      <a href="/media/basics/html-script.txt">No Support?</a>
-     </object>
+        <div class="dmrow">
+          <div class="col-4b">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#example-1">Example Document</a>
+      <a class="list-group-item list-group-item-action" href="#text-1">HTML Text</a>
+      <a class="list-group-item list-group-item-action" href="#head-1">HTML Heading</a>
+      <a class="list-group-item list-group-item-action" href="#link-1">HTML Links</a>
+      <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
+            </div></div><div class="col-8b">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<h4 id="example-1"> Example Document</h4>
+<code>
+&lt;!DOCTYPE HTML&gt; <br>
+&lt;html&gt; <br>
+&lt;head&gt; <br>
+&lt;/head&gt; <br>
+&lt;body&gt; <br>
+&lt;h1&gt; This is a heading &lt;/h1&gt;<br>
+&lt;p&gt; This is text &lt;/p&gt;<br>
+&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;<br>
+&lt;img src="at.png" width="99.99% alt="Example Image"&gt; <br>
+&lt;/body&gt; <br>
+&lt;/html&gt; <br>
+</code>
+<p>We gotta first lay down the very first thing to know. The <code>&lt;!DOCTYPE html&gt;</code> tag represents the Document Type and helps some browsers display correctly with your website, must only be used once. Some elements do need closing tag, like <code>&lt;/center&gt;</code>.</p>
+<p>The <code>&lt;head&gt;</code> tag is needed to represent the head of the website. The <code>&lt;body&gt;</code> tag is the same thing, but it's the body.</p>
+<h4 id="text-1">HTML Text</h4>
+<p>Some elements are meant to show text like <code>&lt;text&gt;</code>, and <code>&lt;p&gt;</code>.</p>
+<p><code>&lt;p&gt; This is text &lt;/p&gt;</code></p>
+<h4 id="head-1">HTML Headings</h4>
+<p>The <code>&lt;h&gt;</code> tag has 6 different sizes, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.</p>
+<p>1 is the hugest, to 6 is the smallest.</p>
+<p><code>&lt;h1&gt; This is a heading &lt;/h1&gt;</code></p>
+<h4 id="link-1">HTML Links</h4>
+<p>The <code>&lt;a&gt;</code> is a text element to represent links. Once clicked on the hyperlink, will redirect the user to a new link.</p>
+<p><code>&lt;a href="atproducts.tk">Example Website&lt;/a&gt;</code></p>
+<h4 id="img-1">HTML Images</h4>
+<p>The <code>&lt;img&gt;</code> tag is to show a image. The width or height description can be used by pixels or percentages by displays. The <code>alt</code> tag shows up when the image doesn't load or can't load, it shows the description.</p>
+<p><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></p>
+          </div></div></div>
      </div> <hr> <div id="osint">
 <h2> OSINT </h2>
 <a href="https://osint.org/" target="_blank" rel="noreferrer noopener" class="btn btn-info">Learn More</a>
