@@ -137,9 +137,69 @@
 </div> <hr>
 <div id="py">
 <h2> Python Basics </h2>
-     <object data="/media/basics/py-coding.txt" type="text/plain" width="95%" style="height: 300px">
-      <a href="/media/basics/py-coding.txt">No Support?</a>
-     </object>
+<div class="dmrow">
+          <div class="col-4b">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
+      <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
+      <a class="list-group-item list-group-item-action" href="#str-3">Strings</a>
+      <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
+            </div></div><div class="col-8b">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<h4 id="com-3">Comments</h4>
+<p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
+py <br>
+# This is a comment
+</code></p>
+<h4 id="data-3">Data Types</h4>
+<p>Variables can store data of different types, and different types can do different things.</p>
+<p>Python has the following data types built-in by default, in these categories:<br>
+Text Type: <code>str</code><br>
+Numeric Types: <code>int, float, complex</code><br>
+Sequence Types: <code>list, tuple, range</code><br>
+Mapping Type: <code>dict</code><br>
+Set Types: <code>set, frozenset</code><br>
+Boolean Type: <code>bool</code><br>
+Binary Types: <code>bytes, bytearray, memoryview</code></p>
+<p>We will go more in-depth on some of these types in the next few paragraphs.</p>
+<p>You can print the data type of a variable with the type() function:<br>
+<code>
+py <br>
+x = 5 <br>
+print(type(x))
+</code></p>
+<h4 id="str-3">Strings</h4>
+<p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
+<code>
+py <br>
+x = "hello" <br>
+y = 'hello' <br>
+# single quotations and double quotation marks are the same<br>
+x == y # returns True
+</code><p></p>
+<p>You can assign a multiline string to a variable by using three quotes:<br>
+<code>
+py <br>
+x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
+</code></p>
+<p>You can check the length of a string using the len() function:
+<code>py<br>
+x = "hello"<br>
+print(len(text)) # returns 5<br></code></p>
+<h4 id="num-3">Numbers</h4>
+<p>There are 2 primary, <code>int</code> and <code>float</code></p><p><code>
+py<br>
+x = 2 # int<br>
+y = 2.8 # float
+</code></p>
+<p>To verify the type of an object in Python, use the type() function:<code>
+py<br>
+print(type(x))<br>
+print(type(y))</code></p>
+<p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
+<p>Float is a number, positive or negative, containing one or more decimals.</p>
+<p>Both strings and numbers are built-in data types.</p>
+          </div></div></div>
 </div> <hr> <div id="html"> 
      <h2> HTML Basics </h2>
        <object data="/media/basics/html-coding.txt" type="text/plain" width="95%" style="height: 300px">
