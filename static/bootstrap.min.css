@@ -182,6 +182,18 @@ img.script {
    background: #141414;
    padding: 20px;
 }
+
+@media (max-width:1024px) {
+   img.script {
+      width: 25.5%
+   }
+}
+
+@media (max-width:425px) {
+   img.script {
+      width: 50%
+   }
+}
    
 div.lrpad {
     padding-right: 10px;
