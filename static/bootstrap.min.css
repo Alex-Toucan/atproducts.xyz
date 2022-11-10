@@ -19,6 +19,10 @@ body, html {
    overflow-x: hidden;
 }
 
+.accordion-header {
+   margin-top: 0;
+   margin-bottom: 0;
+
 .icon, .aicon, .bi, .abicon {
    color: rgba(33,37,41,255);
    line-height: 100%;
