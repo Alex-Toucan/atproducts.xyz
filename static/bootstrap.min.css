@@ -31,7 +31,7 @@ body, html {
    }
 }
 
-@media (max-width:375px) {
+@media (max-width:550px) {
    .carousel {
       width: 90%;
    }
