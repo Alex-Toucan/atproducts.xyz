@@ -25,6 +25,12 @@ body, html {
    margin-right: auto;
 }
 
+@media (max-width:1300px) {
+   .carousel {
+      width: 60%;
+   }
+}
+
 @media (max-width:768px) {
    .carousel {
       width: 80%;
@@ -36,7 +42,6 @@ body, html {
       width: 90%;
    }
 }
-   
 
 .accordion-header {
    margin-top: 0;
