@@ -6,6 +6,12 @@ h1, h2, .h1, .h2 {
    margin-top:10px;
 }
 
+.btn-dark {
+   margin-bottom: 10px;
+   margin-right: 5px;
+   margin-left: 5px;
+}
+
 pre, p, strong, text, h1, h2, h6 {
    padding-right: 10px;
    padding-left: 10px;
