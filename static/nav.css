@@ -6,7 +6,7 @@ h1, h2, .h1, .h2 {
    margin-top:10px;
 }
 
-.modal-title h5, .col-2 h5 {
+.modal-header h5, .col-2 h5 {
    margin-top: 0;
 }
 
