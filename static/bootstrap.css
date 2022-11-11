@@ -123,6 +123,12 @@ div.lrpad {
     padding-left: 10px;
 } 
 
+.abicon {
+   font-size:3em;
+   color: rgba(33,37,41,255);
+   line-height: 100%;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
