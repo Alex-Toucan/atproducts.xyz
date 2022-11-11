@@ -25,9 +25,15 @@ body, html {
    margin-right: auto;
 }
 
+@media (max-width:2000px) {
+   .carousel {
+      width: 40%;
+   }
+}
+
 @media (max-width:1300px) {
    .carousel {
-      width: 60%;
+      width: 50%;
    }
 }
 
