@@ -25,7 +25,13 @@ body, html {
    margin-right: auto;
 }
 
-@media (min-width:2000px) {
+@media (max-width:2500px) {
+   .carousel {
+      width: 33.3%;
+   }
+}
+
+@media (max-width:1750px) {
    .carousel {
       width: 40%;
    }
