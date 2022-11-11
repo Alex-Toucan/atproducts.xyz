@@ -338,6 +338,28 @@ table {
   border-collapse: collapse;
 }
 
+@media (max-width:450px) {
+   .tfonts {
+      font-size:80%;
+   }
+}
+
+@media (max-width:375px) {
+   .tfonts {
+      font-size:70%;
+   }
+}
+
+@media (max-width:320px) {
+   .tfonts {
+      font-size:60%;
+   }
+}
+
+.table-center {
+   margin: 0 auto;
+}
+
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
