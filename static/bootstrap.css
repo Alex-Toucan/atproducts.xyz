@@ -646,7 +646,7 @@ progress {
   color: #6c757d;
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 767.98px) {
   .container,
   .container-fluid,
   .container-xxl,
