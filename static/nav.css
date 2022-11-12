@@ -16,6 +16,14 @@ h1, h2, .h1, .h2 {
     overflow: auto;
 }
 
+@media (max-width: 767px) {
+   .imgdiv {
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+   }
+}  
+
 img.atp {
    padding-top: 10px;
 }
