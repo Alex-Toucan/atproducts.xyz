@@ -77,3 +77,147 @@ body, html {
    padding-right: 0;
    padding-left: 0;
 }
+
+.icon, .aicon, .bi, .abicon {
+   color: rgba(33,37,41,255);
+   line-height: 100%;
+}
+
+.abicon {
+   font-size:3em;
+}
+
+@media (max-width:450px) {
+   .tfonts {
+      font-size:80%;
+   }
+}
+
+@media (max-width:375px) {
+   .tfonts {
+      font-size:70%;
+   }
+}
+
+@media (max-width:320px) {
+   .tfonts {
+      font-size:60%;
+   }
+}
+
+.table-center {
+   margin: 0 auto;
+}
+
+@media (max-width:1000px) {
+   .pdont {
+      display:none;
+    }
+}
+
+.basics-scroll {
+    height: 350px;
+    margin-top: 0.5rem;
+    overflow: auto;
+}
+
+@media (min-width: 500px) {
+   .dmrow {
+       --bs-gutter-x: 1.5rem;
+       --bs-gutter-y: 0;
+       display: flex;
+       flex-wrap: wrap;
+       margin-top: calc(-1 * var(--bs-gutter-y));
+       margin-right: calc(-.5 * var(--bs-gutter-x));
+       margin-left: calc(-.5 * var(--bs-gutter-x));
+   }
+}
+
+@media (min-width:768px) {
+   .col-8b {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+   
+@media (min-width:768px) {
+   .col-4b {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+   
+@media (max-width:768px) {
+   .col-4b, .col-8b {
+      margin-left: auto;
+      margin-right: auto;
+   /* width: 100%; */
+      margin-bottom: 10px;
+   }
+}
+   
+.col-4b, .col-8b {
+      margin-left: auto;
+      margin-right: auto;
+}
+
+@media (max-width:500px) {
+   .dmsize {
+      height: 350px;
+   }
+}
+
+@media (min-width:768px) {
+   .dmsize {
+      height: 1366px;
+   }
+}
+
+.dmsize {
+  margin-top: 0.5rem;
+  overflow: auto;
+}
+
+@media (max-width:768px) {
+   .psbr {
+      display: none;
+   }
+}
+
+@media (min-width:1200px) {
+   .psbr {
+      display: none;
+   }
+}
+
+img.script {
+   border-radius: 15px;
+   background: #141414;
+   padding: 20px;
+}
+
+@media (max-width:1024px) {
+   img.script {
+      width: 25.5%
+   }
+}
+
+@media (max-width:425px) {
+   img.script {
+      width: 33%
+   }
+}
+
+@media (max-width:768px) {
+   .col-4, .col-8 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      margin-bottom: 10px;
+   }
+}
