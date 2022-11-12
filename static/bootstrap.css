@@ -16,7 +16,7 @@
   --bs-yellow: #ffc107;
   --bs-green: #198754;
   --bs-teal: #20c997;
-  --bs-cyan: #0dcaf0;
+  --bs-cyan: #0dcaf0;f
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #6c757d;
@@ -330,6 +330,20 @@ figure {
 img,
 svg {
   vertical-align: middle;
+}
+
+@media (max-width:767px) {
+   .imgdiv {
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+   }
+}
+
+@media (max-width:1000px) {
+   .pdont {
+      display:none;
+    }
 }
 
 table {
