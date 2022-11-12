@@ -7855,7 +7855,7 @@ textarea.form-control-lg {
   padding-left: 3rem !important;
 }
 
-@media (max-width:767px) {
+@media (max-width:767.98px) {
    .container, .py-0, .py-1, .py-2, .py-3, .py-4, .py-5 {
       width: 100%;
       padding-right: 0;
@@ -7867,34 +7867,46 @@ textarea.form-control-lg {
    }
 }
 
-.py-0 {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+@media (max-width:767.98px) {
+  .py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }
 
-.py-1 {
-  padding-top: 0.25rem !important;
-  padding-bottom: 0.25rem !important;
+@media (max-width:767.98px) {
+  .py-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
 }
 
-.py-2 {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
+@media (max-width:767.98px) {
+  .py-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
 }
 
-.py-3 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+@media (max-width:767.98px) {
+  .py-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
 }
 
-.py-4 {
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
+@media (max-width:767.98px) {
+  .py-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
 }
-
-.py-5 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+ 
+@media (max-width:767.98px) {
+  .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
 }
 
 .pt-0 {
