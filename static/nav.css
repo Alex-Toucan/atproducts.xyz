@@ -10,6 +10,16 @@ h1, h2, .h1, .h2 {
    margin-top: 0;
 }
 
+.basics-scroll {
+    height: 350px;
+    margin-top: 0.5rem;
+    overflow: auto;
+}
+
+img.atp {
+   padding-top: 10px;
+}
+
 .btn-dark {
    margin-bottom: 10px;
    margin-right: 5px;
