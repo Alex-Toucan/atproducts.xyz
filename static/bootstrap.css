@@ -99,6 +99,29 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+div.a {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.b {
+  text-align: left;
+}
+
+div.c {
+  text-align: right;
+}
+
+div.d {
+  text-align: justify;
+}
+
+div.lrpad {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -108,7 +131,6 @@ hr {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-  margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -248,7 +270,6 @@ a:hover {
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -666,15 +687,30 @@ progress {
     max-width: 1320px;
   }
 }
-.row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
+@media(min-width:768px) {
+   .row {
+     --bs-gutter-x: 1.5rem;
+     --bs-gutter-y: 0;
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: calc(-1 * var(--bs-gutter-y));
+     margin-right: calc(-.5 * var(--bs-gutter-x));
+     margin-left: calc(-.5 * var(--bs-gutter-x))
+  }
 }
+
+@media(min-width:700px) {
+  .fontrow {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1*var(--bs-gutter-y));
+    margin-right: calc(-.5*var(--bs-gutter-x));
+    margin-left: calc(-.5*var(--bs-gutter-x));
+  }
+}
+
 .row > * {
   flex-shrink: 0;
   width: 100%;
@@ -726,6 +762,12 @@ progress {
 .col-auto {
   flex: 0 0 auto;
   width: auto;
+}
+
+@media (max-width:768px) {
+   .col-auto, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-8, .col-9, .col-10, .col-11, .col-12 {
+     width: 100%;
+   }
 }
 
 .col-1 {
@@ -1737,6 +1779,11 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
+
+.table-center {
+   margin: 0 auto;
+}
+
 .table {
   --bs-table-color: var(--bs-body-color);
   --bs-table-bg: transparent;
@@ -7806,6 +7853,18 @@ textarea.form-control-lg {
 .px-5 {
   padding-right: 3rem !important;
   padding-left: 3rem !important;
+}
+
+@media (max-width:767px) {
+   .container, .py-0, .py-1, .py-2, .py-3, .py-4, .py-5 {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 0;
+      margin-left: 0;
+      padding-top: 10px;
+      text-align: center;
+   }
 }
 
 .py-0 {
