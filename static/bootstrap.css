@@ -7957,6 +7957,16 @@ textarea.form-control-lg {
   padding-left: 3rem !important;
 }
 
+@media (max-width:767px) {
+   .container, .py-0, .py-1, .py-2, .py-3, .py-4, .py-5 {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 0;
+      margin-left: 0;
+      padding-top: 10px;
+      
+
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
