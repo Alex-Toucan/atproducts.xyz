@@ -107,6 +107,25 @@ header {
    }
 }
 
+@media (max-width:475px) {
+   .tfonts-m {
+      font-size:80%;
+   }
+}
+
+@media (max-width:400px) {
+   .tfonts-m {
+      font-size:70%;
+   }
+}
+
+@media (max-width:350px) {
+   .tfonts-m {
+      font-size:60%;
+   }
+}
+
+
 .table-center {
    margin: 0 auto;
 }
