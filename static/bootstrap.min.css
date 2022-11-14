@@ -19,6 +19,18 @@ body, html {
    overflow-x: hidden;
 }
 
+body {
+  padding-top: 65px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index:1030;
+}
+
 .carousel {
    width: 75%;
    margin-left: auto;
