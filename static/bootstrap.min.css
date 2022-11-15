@@ -21,6 +21,7 @@ body, html {
 
 body {
   padding-top: 56px;
+  scroll-padding-top: 56px;
 }
 
 header {
