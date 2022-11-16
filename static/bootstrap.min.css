@@ -17,11 +17,11 @@ pre, p, strong, text, h1, h2, h6, hr {
 
 body, html {
    overflow-x: hidden;
-   scroll-padding-top: 56px;
+   scroll-padding-top: 57px;
 }
 
 body {
-  padding-top: 57px;
+  padding-top: 56px;
 }
 
 header {
