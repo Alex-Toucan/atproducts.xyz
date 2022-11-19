@@ -10,6 +10,10 @@ h1, h2 {
    margin-top:10px;
 }
 
+.alert {
+   margin-bottom: 0;
+}
+
 body, html {
    overflow-x: hidden;
    scroll-padding-top: 57px;
