@@ -280,7 +280,7 @@ img.script {
 }
 
 @media (max-width:768px) {
-   div.lrpad p img pre {
+   div.lrpad p, div.lrpad img, div.lrpad pre {
       padding-right: 10px;
       padding-left: 10px;
    }
