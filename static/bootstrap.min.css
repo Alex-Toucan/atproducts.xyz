@@ -269,14 +269,17 @@ img.script {
       width: 33%
    }
 }
-   
-div.lrpad {
-    padding-right: 10px;
-    padding-left: 10px;
-} 
   
+@media (min-width:768px) {
+   div.lrpad {
+      padding-right: 10px;
+      padding-left: 10px;
+   }
+}
+
 @media (max-width:768px) {
-   hr {
-      padding: 0; 
+   div.lrpad p strong .fontrow .row .carousel img .btn pre {
+      padding-right: 10px;
+      padding-left: 10px;
    }
 }
