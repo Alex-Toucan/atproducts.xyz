@@ -31,6 +31,8 @@ header {
    width: 75%;
    margin-left: auto;
    margin-right: auto;
+   padding-right: 10px;
+   padding-left: 10px;
 }
 
 @media (max-width:2500px) {
@@ -278,7 +280,7 @@ img.script {
 }
 
 @media (max-width:768px) {
-   div.lrpad p strong .fontrow .row .carousel img .btn pre {
+   div.lrpad p img pre {
       padding-right: 10px;
       padding-left: 10px;
    }
