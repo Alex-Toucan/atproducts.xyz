@@ -261,13 +261,13 @@ img.script {
 }
 
 @media (max-width:1024px) {
-   img.script {
+   img.script, img.flash {
       width: 25.5%
    }
 }
 
 @media (max-width:425px) {
-   img.script {
+   img.script, img.flash {
       width: 33%
    }
 }
