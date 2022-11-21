@@ -1,3 +1,7 @@
+/* This file is unused, but it is supposed to "load in", so it doesn't logged to the console as 404. This affects our score as whole, so might as well keep it in the static directory. */
+/* Currently as of 11/21 @ 9:57 AM (09:57). */
+
+/*
 .alert {
   background-color: #000000;
   color: white;
@@ -17,3 +21,4 @@
 .closebtn:hover {
   color: black;
 }
+*/
