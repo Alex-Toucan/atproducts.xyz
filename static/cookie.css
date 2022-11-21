@@ -7,7 +7,7 @@
 	background: #232323;
 	overflow: hidden;
 	position: fixed;
-  bottom: 30px;
+        bottom: 30px;
 	right: 30px;
 	display: none;
 }
@@ -56,7 +56,7 @@
 	background: #3E9B67;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.cookieConsentContainer {
 		bottom: 0px !important;
 		left: 0px !important;
