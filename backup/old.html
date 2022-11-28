@@ -125,7 +125,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
             <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
-            <li><a class="dropdown-item" href="Privacy">Privacy Policy</a></li>
+            <li><a class="dropdown-item" href="/privacy">Privacy Policy</a></li>
           </ul>
         </li>
       </ul>
@@ -185,7 +185,8 @@
 <a href="https://2-9.atproducts.xyz" class="feature-box col-lg-12 bone">2.9</a>
 </div>
 <div class="fontrow">
-<a href="https://2-10.atproducts.xyz" class="feature-box col-lg-12 bone">2.10</a>
+<a href="https://2-10.atproducts.xyz" class="feature-box col-lg-12 bright">2.10</a>
+<a href="#" class="feature-box col-lg-12 bleft" data-bs-toggle="tooltip" data-bs-title="You are already on it, dingus.">2.10.1</a>
 </div>
   </div> <hr>
 <div class="container">
@@ -235,5 +236,9 @@
     </div>
   </footer>
 </div>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
     </body>
     </html>
