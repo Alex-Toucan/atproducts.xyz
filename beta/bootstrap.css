@@ -699,7 +699,12 @@ progress {
     max-width: 540px;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
@@ -715,6 +720,11 @@ progress {
   }
 }
 
+@media (min-width: 767.98px) {
+  footer.container {
+    max-width: 960px;
+  }
+}
 /* Custom row settings */
 @media (min-width:767.98px) {
   .row, .price-row {
@@ -8149,7 +8159,7 @@ header {
   }
 }
 
-@media (max-width:700px) {
+@media (max-width:767.98px) {
   footer.py-0, footer.py-1, footer.py-2, footer.py-3, footer.py-4, footer.py-5 {
     padding-top: 0;
   }
