@@ -1,23 +1,33 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title> Paid Services </title> 
-    <link rel="stylesheet" href="/static/nav.css">
-    <link rel="stylesheet" href="/static/div.css">
-    <link rel="stylesheet" href="/static/dark.css">
     <link rel="stylesheet" href="/static/cookie.css">
     <link rel="stylesheet" href="/static/navbutton.css">
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/beta/bootstrap.css">
     <link rel="stylesheet" href="/static/alert.css">
     <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
+    <meta name="title" content="Paid Services - AT Products LLC">
+    <meta name="description" content="Get stuff done with AT Products!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="/static/purecookie.js"></script>
+    <style>
+      .padright {
+        padding-right: 5px;
+      }
+      
+      .padleft {
+        padding-left: 5px;
+      }
+    </style>
   </head>
   <body>
       <div id="page">
@@ -57,7 +67,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
             <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
-            <li><a class="dropdown-item" href="Privacy">Privacy Policy</a></li>
+            <li><a class="dropdown-item" href="/privacy">Privacy Policy</a></li>
           </ul>
         </li>
       </ul>
@@ -65,31 +75,37 @@
   </div>
 </nav>
     </header>
-<div class="cookieConsentContainer" id="cookieConsentContainer" style="opacity: 1; display: block;"><div class="cookieTitle"><a style="text-align: left;">Cookies.</a></div><div class="cookieDesc"><div class="a"><p style="text-align: left;">By using this website, you automatically accept that we use cookies. <a href="/privacy#cookies" style="font-size: 13px;" target="_blank" rel="noopener noreferrer">Why?</a></p></div></div><div class="cookieButton"><a onclick="purecookieDismiss();">Understood</a></div></div>
   <div id="paid" class="a lrpad">
-    <h1> Paid Services </h1>
-    <div class="row">
-    <div class="card" style="width: 18rem; margin: 0 auto; display: block;">
-  <div class="card-body">
-    <h4 class="card-title">Website Design</h4>
-    <h5 class="card-text">$20-250</h5>
-    <p class="card-text">Your website can have HTML5 & CSS3, Bootstrap v5, responsive layout, and will be compatible with all browsers!</p>
-    <a href="mailto:support@atproducts.xyz" class="btn btn-primary">Contact our Support Line</a>
-  </div>
+    <h1 class="title"> Paid Services </h1>
+    <div class="price-row row-cols-1 row-cols-md-3 text-center">
+      <div class="col-lg-6 padright">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Website Design</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$20-250</h1>
+            <p class="list-unstyled mt-3 mb-4">Your website can have HTML5 & CSS3, Bootstrap v5, responsive layout, and will be compatible with all browsers!</p>
+            <a type="button" class="w-100 btn btn-lg btn-primary" href="mailto:support@atproducts.xyz">Contact us</a>
+          </div>
+        </div>
       </div>
-         <div class="card" style="width: 18rem; margin: 0 auto; display: block;">
-  <div class="card-body">
-    <h4 class="card-title">Website Maintaining</h4>
-    <h5 class="card-text">$20-100 per week</h5>
-    <p class="card-text">Keep your website up with our services!</p>
-    <a href="mailto:support@atproducts.xyz" class="btn btn-primary">Contact our Support Line</a>
-  </div>   
+      <div class="col-lg-6 padleft">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Website Maintaining</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$20-100<small class="text-muted fw-light">/week</small></h1>
+            <p class="list-unstyled mt-3 mb-4">Keep your website up with our services!</p>
+            <a type="button" class="w-100 btn btn-lg btn-primary" href="mailto:support@atproducts.xyz">Contact us</a>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-    <br>
-    <p> We don't have a current payment method that isn't PayPal, but you can contact <a href="mailto:support@atproducts.xyz">our support line</a>, and we can figure something out. </p>
+    <p> We only accept PayPal. Contact <a href="mailto:support@atproducts.xyz">our support line</a>, and we can figure something out. </p>
 </div> </div> <hr>
-<div class="container">
+<div class="container-footer">
   <footer class="py-5">
     <div class="row">
       <div class="col-2">
@@ -122,9 +138,9 @@
       <div class="col-2">
         <h5>Documentation</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
-          <li class="nav-item mb-2"><a href="discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
-          <li class="nav-item mb-2"><a href="privacy" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+          <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
+          <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
+          <li class="nav-item mb-2"><a href="/privacy" class="nav-link p-0 text-muted">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -133,6 +149,12 @@
 
     <div class="d-flex justify-content-between py-4 my-4 border-top">
       <p>® 2022 AT Products LLC</p>
+      <ul class="list-unstyled d-flex pe-3">
+        <li class="ms-3"><a class="link-dark" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="link-dark" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope"></i></a></li>
+        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
+      </ul>
     </div>
   </footer>
 </div>
