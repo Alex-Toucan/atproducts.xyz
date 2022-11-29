@@ -699,12 +699,7 @@ progress {
     max-width: 540px;
   }
 }
-@media (min-width: 767.98px) {
-  .container-md, .container-sm, .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 767.98px) {
+@media (min-width: 700px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
@@ -8155,7 +8150,7 @@ header {
 }
 
 @media (max-width:700px) {
-  nav.py-0, nav.py-1, nav.py-2, nav.py-3, nav.py-4, nav.py-5 {
+  footer.py-0, footer.py-1, footer.py-2, footer.py-3, footer.py-4, footer.py-5 {
     padding-top: 0;
   }
 }
