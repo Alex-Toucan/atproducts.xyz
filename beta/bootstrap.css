@@ -725,6 +725,8 @@ progress {
 @media (min-width: 767.98px) {
   .container-footer {
     max-width: 960px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
     padding-right: calc(var(--bs-gutter-x) * .5); 
     padding-left: calc(var(--bs-gutter-x) * .5);
   }
