@@ -5897,6 +5897,44 @@ header {
   position: relative;
 }
 
+.carousel-main {
+   width: 75%;
+   margin-left: auto;
+   margin-right: auto;
+   padding-right: 10px;
+   padding-left: 10px;
+}
+
+@media (max-width:2500px) {
+   .carousel-main {
+      width: 33.3%;
+   }
+}
+
+@media (max-width:1750px) {
+   .carousel-main {
+      width: 40%;
+   }
+}
+
+@media (max-width:1300px) {
+   .carousel-main {
+      width: 50%;
+   }
+}
+
+@media (max-width:768px) {
+   .carousel-main {
+      width: 80%;
+   }
+}
+
+@media (max-width:550px) {
+   .carousel-main {
+      width: 90%;
+   }
+}
+
 .carousel.pointer-event {
   touch-action: pan-y;
 }
