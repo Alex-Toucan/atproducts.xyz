@@ -107,6 +107,14 @@ hr {
   opacity: 0.25;
 }
 
+h1, .h1, h2, .h2 {
+  padding-top: 10px;
+}
+
+.nopadtop h1, .h1-nopadtop, .nopadtop h2, .h2-nopadtop {
+  padding-top: 0;
+}
+
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -3689,6 +3697,35 @@ textarea.form-control-lg {
   margin-bottom: 0;
   list-style: none;
 }
+
+/* Fixed navbar settings */
+
+body, html {
+   overflow-x: hidden;
+   scroll-padding-top: 57px;
+}
+
+body {
+  padding-top: 56px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index:1030;
+}
+
+.nofixed header {
+  position: block;
+}
+
+.alert {
+   margin-bottom: 0;
+}
+
+/* End fixed navbar settings */
 
 .nav-link {
   display: block;
