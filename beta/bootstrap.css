@@ -3958,9 +3958,10 @@ header {
   right: 0;
   left: 0;
   z-index:1030;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
 }
 
-.nofixed header {
+header.nofixed {
   position: block;
 }
 
