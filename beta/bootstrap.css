@@ -108,7 +108,7 @@ hr {
 }
 
 h1, .h1, h2, .h2 {
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .nopadtop h1, .h1-nopadtop, .nopadtop h2, .h2-nopadtop {
