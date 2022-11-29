@@ -11413,6 +11413,85 @@ div.d {
   text-align: justify;
 }
 
+      .padright {
+        padding-right: 5px;
+      }
+      
+      .padleft {
+        padding-left: 5px;
+      }
+      
+      @media (max-width:768px) {
+        .padright {
+          padding-left: 10px;
+        }
+      }
+      
+      @media (max-width:768px) {
+        .padleft {
+          padding-right: 10px;
+        }
+      }
+
+    .old-feature-box {
+      background-color: grey;
+      color: white;
+      padding: 10px;
+    }
+
+    .old-fontrow {
+      margin:10px;
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .old-fontrow a:hover {
+      color: wheat;
+    }
+      
+    .old-col-lg-3 {
+       flex: 0 0 auto;
+       width: 25%;
+    }
+    
+    .old-col-lg-4 {
+       flex: 0 0 auto;
+       width: 33.33333333%;
+    }  
+      
+    .old-col-lg-6 {
+       flex: 0 0 auto;
+       width: 50%;
+    }
+      
+    .old-col-lg-12 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+    
+    .bright {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border: 1px solid black;
+    }
+      
+    .bleft {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border: 1px solid black;
+    }
+    
+    .bboth {
+      border: 1px solid black;
+    }
+    
+    .bone {
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
