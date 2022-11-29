@@ -11377,7 +11377,7 @@ img.script {
 }
 
 @media (max-width:767.98px) {
-   div.lrpad p, div.lrpad img, div.lrpad pre, div.lrpad  {
+   div.lrpad p, div.lrpad img, div.lrpad pre, div.lrpad.row {
       padding-right: 10px;
       padding-left: 10px;
    }
