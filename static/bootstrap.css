@@ -11362,7 +11362,7 @@ header.nofixed {
 img.script {
    border-radius: 15px;
    background: #141414;
-   padding: 20px;
+   padding: 20px!important;
 }
 
 @media (max-width:1024px) {
