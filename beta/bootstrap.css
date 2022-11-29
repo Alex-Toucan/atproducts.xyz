@@ -665,15 +665,36 @@ progress {
     max-width: 1320px;
   }
 }
-.row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
+
+@media (min-width:767.98px) {
+  .row, .price-row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
+
+@media (min-width:767.98px) {
+  .row {
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x))
+  }
+}
+
+@media (min-width:700px) {
+  .fontrow {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1*var(--bs-gutter-y));
+    margin-right: calc(-.5*var(--bs-gutter-x));
+    margin-left: calc(-.5*var(--bs-gutter-x));
+  }
+}
+
 .row > * {
   flex-shrink: 0;
   width: 100%;
@@ -10939,7 +10960,7 @@ img.script {
 }
 
 @media (max-width:768px) {
-   div.lrpad p, div.lrpad img, div.lrpad pre {
+   div.lrpad p, div.lrpad img, div.lrpad pre, div.lrpad  {
       padding-right: 10px;
       padding-left: 10px;
    }
