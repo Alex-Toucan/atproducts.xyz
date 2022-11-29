@@ -13,7 +13,7 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
 // --- Config --- //
 var purecookieTitle = "Cookies."; // Title
 var purecookieDesc = "By using this website, you automatically accept that we use cookies."; // Description
-var purecookieLink = '<a href="https://web.archive.org/web/20220408123158/https://protdos.com/privacy" target="_blank">Why?</a>'; // Cookiepolicy link
+var purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookiepolicy link
 var purecookieButton = "Understood"; // Button text
 // ---        --- //
 
