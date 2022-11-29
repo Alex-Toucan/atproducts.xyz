@@ -4835,12 +4835,16 @@ header.nofixed {
   border-radius: 0;
 }
 
+/* Custom accordion settings */
+
 .accordion-header {
-   margin-top: 0;
-   margin-bottom: 0;
-   padding-right: 0;
-   padding-left: 0;
+   margin-top: 0 !important;
+   margin-bottom: 0 !important;
+   padding-right: 0 !important;
+   padding-left: 0 !important;
 }
+
+/* End custom accordion settings */
 
 .breadcrumb {
   --bs-breadcrumb-padding-x: 0;
@@ -6165,6 +6169,8 @@ header.nofixed {
   position: relative;
 }
 
+/* Custom carousel settings */
+
 .carousel-main {
    width: 75%;
    margin-left: auto;
@@ -6175,19 +6181,19 @@ header.nofixed {
 
 @media (max-width:2500px) {
    .carousel-main {
-      width: 33.3%;
+      width: 40%;
    }
 }
 
 @media (max-width:1750px) {
    .carousel-main {
-      width: 40%;
+      width: 60%;
    }
 }
 
 @media (max-width:1300px) {
    .carousel-main {
-      width: 50%;
+      width: 70%;
    }
 }
 
@@ -6202,6 +6208,8 @@ header.nofixed {
       width: 90%;
    }
 }
+
+/* End custom carousel settings */
 
 .carousel.pointer-event {
   touch-action: pan-y;
