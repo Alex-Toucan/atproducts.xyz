@@ -684,12 +684,6 @@ progress {
 }
 
 @media (min-width:767.98px) {
-  .price-row {
-    margin-left: calc(-.5 * var(--bs-gutter-x));
-  }
-}
-
-@media (min-width:767.98px) {
   .row {
     margin-top: calc(-1 * var(--bs-gutter-y));
     margin-right: calc(-.5 * var(--bs-gutter-x));
