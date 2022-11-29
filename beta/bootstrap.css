@@ -8166,7 +8166,7 @@ header {
 
 @media (max-width:767.98px) {
   footer.py-0, footer.py-1, footer.py-2, footer.py-3, footer.py-4, footer.py-5 {
-    padding-top: 0!important;
+    padding-top: 10px!important;
   }
 }
 /* End custom "py" settings */
