@@ -724,7 +724,11 @@ progress {
 
 @media (max-width:767.98px) {
    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
      width: 100%;
+     margin-bottom: 10px;
    }
 }
 
@@ -10878,6 +10882,85 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+
+@media (max-width:500px) {
+   .dmsize {
+      height: 350px;
+   }
+}
+
+@media (min-width:768px) {
+   .dmsize {
+      height: 1366px;
+   }
+}
+
+.dmsize {
+  margin-top: 0.5rem;
+  overflow: auto;
+}
+
+@media (max-width:768px) {
+   .psbr {
+      display: none;
+   }
+}
+
+@media (min-width:1200px) {
+   .psbr {
+      display: none;
+   }
+}
+
+img.script {
+   border-radius: 15px;
+   background: #141414;
+   padding: 20px;
+}
+
+@media (max-width:1024px) {
+   img.script, img.flash {
+      width: 25.5%
+   }
+}
+
+@media (max-width:425px) {
+   img.script, img.flash {
+      width: 33%
+   }
+}
+  
+@media (min-width:768px) {
+   div.lrpad {
+      padding-right: 10px;
+      padding-left: 10px;
+   }
+}
+
+@media (max-width:768px) {
+   div.lrpad p, div.lrpad img, div.lrpad pre {
+      padding-right: 10px;
+      padding-left: 10px;
+   }
+}
+
+div.a {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.b {
+  text-align: left;
+}
+
+div.c {
+  text-align: right;
+}
+
+div.d {
+  text-align: justify;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
