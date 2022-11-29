@@ -781,6 +781,11 @@ progress {
     margin-left: calc(-.5*var(--bs-gutter-x));
   }
 }
+
+p.fontrow {
+  margin-bottom: 1rem !important;
+}
+
 /* End custom row settings */
 
 .row > * {
