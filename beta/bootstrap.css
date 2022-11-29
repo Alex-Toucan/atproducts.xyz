@@ -782,7 +782,7 @@ progress {
   }
 }
 
-div.feature-box {
+div.feature-box, p.mb-1 {
   margin-bottom: 1rem !important;
 }
 
