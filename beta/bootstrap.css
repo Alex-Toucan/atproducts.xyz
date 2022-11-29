@@ -8101,7 +8101,7 @@ header {
 /* Custom "py" settings */
 
 @media (max-width:767px) {
-   .container, .py-0, .py-1, .py-2, .py-3, . {
+   .container, .py-0, .py-1, .py-2, .py-3, .py-4, .py-5 {
       width: 100%;
       padding-right: 0;
       padding-left: 0;
@@ -8155,7 +8155,7 @@ header {
 }
 
 @media (max-width:700px) {
-  nav.py-5 {
+  nav.py-0, nav.py-1, nav.py-2, nav.py-3, nav.py-4, nav.py-5 {
     padding-top: 0;
   }
 }
