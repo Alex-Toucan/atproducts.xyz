@@ -738,16 +738,6 @@ progress {
       max-width: 960px;
   }
 }
-@media (min-width: 768px) {
-  .container-footer {
-      max-width: 720px;
-  }
-}
-@media (min-width: 768px) {
-  .container-footer {
-      max-width: 540px;
-  }
-}
 @media (min-width: 1200px) {
   .container-footer {
      max-width: 1140px;
