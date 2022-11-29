@@ -11287,6 +11287,8 @@ header.nofixed {
   }
 }
 
+/* Secondary code */
+
 @media (max-width:500px) {
    .dmsize {
       height: 350px;
@@ -11304,6 +11306,25 @@ header.nofixed {
   overflow: auto;
 }
 
+.basics-scroll {
+    height: 350px;
+    margin-top: 0.5rem;
+    overflow: auto;
+}
+
+@media (min-width: 500px) {
+   .dmrow {
+       --bs-gutter-x: 1.5rem;
+       --bs-gutter-y: 0;
+       display: flex;
+       flex-wrap: wrap;
+       margin-top: calc(-1 * var(--bs-gutter-y));
+       margin-right: calc(-.5 * var(--bs-gutter-x));
+       margin-left: calc(-.5 * var(--bs-gutter-x));
+   }
+}
+
+
 @media (max-width:767.98px) {
    .psbr {
       display: none;
@@ -11314,6 +11335,12 @@ header.nofixed {
    .psbr {
       display: none;
    }
+}
+
+@media (max-width:1000px) {
+   .pdont {
+      display:none;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -11373,5 +11400,7 @@ div.c {
 div.d {
   text-align: justify;
 }
+
+/* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
