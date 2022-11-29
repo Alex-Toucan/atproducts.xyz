@@ -720,11 +720,16 @@ progress {
   }
 }
 
+/* Custom container settings */
+
 @media (min-width: 767.98px) {
-  footer.container {
+  container-footer {
     max-width: 960px;
   }
 }
+
+/* End custom container settings */
+
 /* Custom row settings */
 @media (min-width:767.98px) {
   .row, .price-row {
@@ -8108,10 +8113,10 @@ header {
 @media (max-width:767px) {
    .container, .py-0, .py-1, .py-2, .py-3, .py-4, .py-5 {
       width: 100%;
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: 0;
-      margin-left: 0;
+      padding-right: 0!important;
+      padding-left: 0!important;
+      margin-right: 0!important;
+      margin-left: 0!important;
       padding-top: 10px;
       text-align: center;
    }
@@ -8161,7 +8166,7 @@ header {
 
 @media (max-width:767.98px) {
   footer.py-0, footer.py-1, footer.py-2, footer.py-3, footer.py-4, footer.py-5 {
-    padding-top: 0;
+    padding-top: 0!important;
   }
 }
 /* End custom "py" settings */
