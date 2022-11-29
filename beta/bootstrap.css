@@ -1620,6 +1620,60 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
+@media (min-width: 700px) {
+  .font-col-lg-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .font-col-lg-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+  .font-col-lg-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .font-col-lg-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .font-col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .font-col-lg-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+  .font-col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .font-col-lg-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+  .font-col-lg-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .font-col-lg-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .font-col-lg-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .font-col-lg-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+  .font-col-lg-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
 @media (min-width: 1200px) {
   .col-xl {
     flex: 1 0 0%;
