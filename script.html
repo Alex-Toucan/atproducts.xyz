@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-        <title> The Script Community </title>
-    <link rel="stylesheet" href="/static/nav.css">
-    <link rel="stylesheet" href="/static/div.css">
-    <link rel="stylesheet" href="/static/dark.css">
+        <title>The Script Community</title>
     <link rel="stylesheet" href="/static/cookie.css">
     <link rel="stylesheet" href="/static/navbutton.css">
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/alert.css">
-    <link rel="stylesheet" href="/static/button.css">
+    <link rel="stylesheet" href="/static/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="icon" href="/media/images/vibrant2.png">
     <meta charset="UTF-8">
     <meta name="title" content="The Script Community">
@@ -18,7 +13,7 @@
     <meta name="keywords" content="Scripts, viruses, coding,">
     <meta name="author" content="nasus">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="/static/purecookie.js"></script>
   </head>
   <body>
@@ -58,7 +53,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
             <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
-            <li><a class="dropdown-item" href="Privacy">Privacy Policy</a></li>
+            <li><a class="dropdown-item" href="/privacy">Privacy Policy</a></li>
           </ul>
         </li>
       </ul>
@@ -67,9 +62,8 @@
 </nav>
     </header>
        
-<div class="cookieConsentContainer" id="cookieConsentContainer" style="opacity: 1; display: block;"><div class="cookieTitle"><a style="text-align: left;">Cookies.</a></div><div class="cookieDesc"><div class="a"><p style="text-align: left;">By using this website, you automatically accept that we use cookies. <a href="/privacy#cookies" style="font-size: 13px;" target="_blank" rel="noopener noreferrer">Why?</a></p></div></div><div class="cookieButton"><a onclick="purecookieDismiss();">Understood</a></div></div>
-      <div id="script" class="a lrpad"> <div id="intro">
- <h1> The Script Community </h1>
+       <div id="script" class="a lrpad"> <div id="intro">
+ <h1 class="title"> The Script Community </h1>
       <img src="/media/images/script.png" width="17.5%" class="script" alt="script icon"> <br> <br>
       <p> The Script Community is for hacking enthusiasts to share their knowledge.</p>
 <h3> Disclaimer </h3>
@@ -80,14 +74,14 @@
         <h2> Resources </h2>
         <p> What do you want to know about today? </p>
         <a href="/backup/script">View normal format</a> <br> <br>
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#lr">Learning Resources</button><div class="modal fade" id="lr" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#lr">Learning Resources</button><div class="modal fade" id="lr" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="lrt">Learning Resources</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> Learning Resources </h2>
 <a href="https://www.youtube.com/watch?v=3Kq1MIfTWCE">Hacking Course - Network Penetration Testing</a> <a href="https://hackthebox.com/">HackTheBox</a> <a href="https://tryhackme.com/">TryHackMe</a> <a href="https://github.com/yeahhub/Hacking-Security-Ebooks">E-Books</a> <a href="https://www.kali.org/tools">Library of tools from Kali Linux OS</a> <a href="https://www.w3schools.com/python/default.asp">W3schools</a> <a href="https://www.freecodecamp.org/">freeCodeCamp</a> <a href="https://www.codecademy.com/">CodeAcademy</a> <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc">Course 1</a> <a href="https://www.youtube.com/watch?v=rfscVS0vtbw&t=9695s">Course 2</a> 
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
 
-<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#pb">Python Basics</button><div class="modal fade" id="pb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+<button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#pb">Python Basics</button><div class="modal fade" id="pb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="pbt">Learning Resources</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> Python Basics </h2>
@@ -155,7 +149,7 @@ print(type(y))</code></p>
 <p>Both strings and numbers are built-in data types.</p>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#jb">JavaScript Basics</button><div class="modal fade" id="jb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#jb">JavaScript Basics</button><div class="modal fade" id="jb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="jbt">JavaScript Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> JavaScript Basics </h2>
@@ -203,7 +197,7 @@ var person = {<br>
   </code></p>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#hb">HTML Basics</button><div class="modal fade" id="hb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#hb">HTML Basics</button><div class="modal fade" id="hb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="hbt">HTML Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> HTML Basics </h2>
@@ -248,7 +242,7 @@ var person = {<br>
 <p><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></p>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#os">OSINT</button><div class="modal fade" id="os" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#os">OSINT</button><div class="modal fade" id="os" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="ost">OSINT</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> OSINT </h2>
@@ -258,7 +252,7 @@ var person = {<br>
      <a href="http://www.tineye.com/">Reverse Image Lookup</a> <a href="https://www.macvendorlookup.com/">Mac Address Lookup</a> <a href="http://exif-viewer.com/">EXIF Data</a> <a href="https://haveibeenpwned.com/">Database Lookup</a> <a href="https://whatismyipaddress.com/ip-lookup">IP Lookup</a> <a href="https://archive.org/index.php">Archive.org</a>
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#dos">Denial of Service</button><div class="modal fade" id="dos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#dos">Denial of Service</button><div class="modal fade" id="dos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="dost">Denial of Service</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> Denial of Service </h2>
@@ -271,7 +265,7 @@ var person = {<br>
        A distributed denial-of-service (DDoS) attack is a type of DoS attack that comes from many distributed sources, such as a botnet DDoS attack. </p> <br> <a href="/media/fileshttp.py" download> Website HTTP Flooder </a> 
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#pa">Passwords</button><div class="modal fade" id="pa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#pa">Passwords</button><div class="modal fade" id="pa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="pat">Passwords</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> Passwords </h2>
@@ -282,7 +276,7 @@ var person = {<br>
      <p> Nasus hasn't made a cracker yet, so he recommends <a href="https://github.com/vanhauser-thc/thc-hydra">Vanhauser's</a>, and <a href="https://github.com/openwall/john">Openwall's</a>. </p>
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#id">ID Creation Time</button><div class="modal fade" id="id" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#id">ID Creation Time</button><div class="modal fade" id="id" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="idt">ID Creation Time</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> ID Creation Time </h2>
@@ -292,7 +286,7 @@ var person = {<br>
      <a href="http://www.tineye.com/">Reverse Image Lookup</a> <a href="https://www.macvendorlookup.com/">Mac Address Lookup</a> <a href="http://exif-viewer.com/">EXIF Data</a> <a href="https://haveibeenpwned.com/">Database Lookup</a> <a href="https://whatismyipaddress.com/ip-lookup">IP Lookup</a> <a href="https://archive.org/index.php">Archive.org</a>
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#kl">Keylogging</button><div class="modal fade" id="kl" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#kl">Keylogging</button><div class="modal fade" id="kl" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="klt">Keylogging</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> Keylogging </h2>
@@ -303,7 +297,7 @@ var person = {<br>
      <p> <a href="/media/files/AdvKeylogger.py" download>Advanced Key Logger (Python)</a> <a href="/media/files/Decryptor.py" download>Decryptor (Python)</a> <a href="/media/files/require.txt" download>Requirements (TXT)</a> all by CУБΞЯC. </p>
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#to">Nitrologging | Tokenlogging</button><div class="modal fade" id="to" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#to">Nitrologging | Tokenlogging</button><div class="modal fade" id="to" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="tot">Nitrologging | Tokenlogging</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> Nitrologging | Tokenlogging </h2>
@@ -316,7 +310,7 @@ var person = {<br>
        <a href="https://github.com/Monst3red/Discord-Ethereum-Grabber">Monst3red</a> <a href="https://github.com/Alphalius/Discord-RAGE">Alphalius's Rage</a> <a href="https://github.com/billythegoat356/Riot"> BillyTheGoat356's Riot</a> <a href="https://github.com/billythegoat356/Plague">BillyTheGoat356's Plague</a> <a href="https://github.com/billythegoat356/Rage">BillyTheGoat356's Rage</a> <a href="https://github.com/NotSaksh/Discord-Server-Cloner">NotSaksh</a> <a href="https://github.com/ecriminal/Exploit-Discord-Cache-System-PoC">ECriminal</a> <a href="https://github.com/verlox/Discord-QR-Token-Logger">Verlox</a> <a href="https://github.com/KanekiWeb/Powerfull-Token-Stealer">KanekiWeb</a> <br> <br> <a href="https://github.com/WCBandit/Intersel">Discord Injector (WCBandit)</a> <a href="https://github.com/ZaikoARG/TokenGuard">Discord Token Stealer Malware Protection (ZaikoARD)</a> <a href="https://github.com/uvipen/ASCII-generator">Uvipen's ASCII Generator</a> <br><br><a href="https://cdn.discordapp.com/attachments/919531589724155914/919811835576848395/20211213_051630.MP4">Tutorial</a>
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ot">Other Scripts</button><div class="modal fade" id="ot" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+<button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#ot">Other Scripts</button><div class="modal fade" id="ot" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="ott">Other Scripts</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
         <h2> Other Scripts </h2>  
@@ -370,7 +364,7 @@ var person = {<br>
 </div>
        </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>        
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ph">Phishing</button><div class="modal fade" id="ph" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#ph">Phishing</button><div class="modal fade" id="ph" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="pht">Learning Resources</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> Phishing </h2>
@@ -397,7 +391,7 @@ var person = {<br>
     <h4> Voice Phishing </h4> <p>Attackers will dial a large quantity of telephone numbers and play automated recordings - often made using text to speech synthesizers - that make false claims of fraudulent activity on the victim's bank accounts or credit cards. The calling phone number will be spoofed to show the real number of the bank or institution impersonated. The victim is then directed to call a number controlled by the attackers, which will either automatically prompt them to enter sensitive information in order to "resolve" the supposed fraud, or connect them to a live person who will attempt to use social engineering to obtain information.
        </p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#gd">Google Dorking</button><div class="modal fade" id="gd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#gd">Google Dorking</button><div class="modal fade" id="gd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="gdt">Google Dorking</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> Google Dorking </h2>
@@ -423,7 +417,7 @@ var person = {<br>
        <code>ext:log “Software: Microsoft Internet Information Services *.*”</code> - Microsoft ISS server logs (online activity)
         </p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#wh">Wi-Fi Hacking</button><div class="modal fade" id="wh" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#wh">Wi-Fi Hacking</button><div class="modal fade" id="wh" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="wht">Wi-Fi Hacking</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2> Wi-Fi Hacking </h2>
@@ -433,7 +427,7 @@ var person = {<br>
          The most recommended brand is Alfa for WiFi Adapters. <br> <br> <h4> Tools </h4> <p>Alla Network AWUS036NH & Alla Network 1000 mW AWUS036H.</p><br><p> <a href="https://www.youtube.com/watch?v=zOYohNOnWp4">Tutorial</a> </p>
        </p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
     </div></div> <hr>
-        <div class="container">
+        <div class="container-footer">
   <footer class="py-5">
     <div class="row">
       <div class="col-2">
@@ -477,6 +471,12 @@ var person = {<br>
 
     <div class="d-flex justify-content-between py-4 my-4 border-top">
       <p>® 2022 AT Products LLC</p>
+      <ul class="list-unstyled d-flex pe-3">
+        <li class="ms-3"><a class="link-dark" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="link-dark" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope"></i></a></li>
+        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
+      </ul>
     </div>
   </footer>
 </div>

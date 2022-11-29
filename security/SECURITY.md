@@ -6,7 +6,8 @@ The security updates supported will be in the chart below.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.x     | :white_check_mark: |
+| Above 2.6.x | :white_check_mark: |
+| Below 2.6.x | ✖️ |
 
 ## Reporting a Vulnerability
 
