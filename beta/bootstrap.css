@@ -723,14 +723,17 @@ progress {
 /* Custom container settings */
 
 @media (min-width: 767.98px) {
-  container-footer {
+  .container-footer {
     max-width: 960px;
+    padding-right: calc(var(--bs-gutter-x) * .5); 
+    padding-left: calc(var(--bs-gutter-x) * .5);
   }
 }
 
 /* End custom container settings */
 
 /* Custom row settings */
+
 @media (min-width:767.98px) {
   .row, .price-row {
     --bs-gutter-x: 1.5rem;
