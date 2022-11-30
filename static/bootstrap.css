@@ -11420,12 +11420,14 @@ div.d {
       @media (max-width:768px) {
         .padright {
           padding-left: 10px;
+          padding-right: 10px;
         }
       }
       
       @media (max-width:768px) {
         .padleft {
           padding-right: 10px;
+          padding-left: 10px;
         }
       }
 
