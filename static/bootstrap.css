@@ -11417,14 +11417,14 @@ div.d {
         padding-left: 5px;
       }
       
-      @media (max-width:768px) {
+      @media (max-width:767.98px) {
         .padright {
           padding-left: 10px;
           padding-right: 10px;
         }
       }
       
-      @media (max-width:768px) {
+      @media (max-width:767.98px) {
         .padleft {
           padding-right: 10px;
           padding-left: 10px;
