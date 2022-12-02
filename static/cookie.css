@@ -22,14 +22,14 @@
 }
 
 .cookieConsentContainer .cookieDesc p {
-	margin: 0;
-	padding: 0;
+	margin: 0 !important;
+	padding: 0 !important;
 	font-family: OpenSans, arial, "sans-serif";
 	color: #FFFFFF;
 	font-size: 13px;
 	line-height: 20px;
 	display: block;
-	margin-top: 10px;
+	margin-top: 10px !important;
 	text-align: left !important;
 } 
 
