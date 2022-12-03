@@ -31,12 +31,13 @@
 	margin-top: 10px !important;
 	margin-bottom: 0 !important;
 	text-align: left !important;
+        text-decoration: none;
 } 
 
 .cookieConsentContainer .cookieDesc a {
 	font-family: OpenSans, arial, "sans-serif";
 	color: #FFFFFF;
-	text-decoration: underline !important;
+	text-decoration: underline;
         text-align: left !important;
 }
 
