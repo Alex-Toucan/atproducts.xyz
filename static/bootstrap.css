@@ -1021,6 +1021,9 @@ progress {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 10px;
+      padding-right: 10px !important;
+      padding-left: 10px !important;
+      width: 100% !important;
    }
 }
 
