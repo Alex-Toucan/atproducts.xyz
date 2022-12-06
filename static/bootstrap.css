@@ -88,6 +88,7 @@
 
 body {
   margin: 0;
+  padding-right: 0 !important;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -5646,6 +5647,7 @@ header.nofixed {
   --bs-modal-footer-border-color: var(--bs-border-color);
   --bs-modal-footer-border-width: 1px;
   position: fixed;
+  padding-right: 0 !important;
   top: 0;
   left: 0;
   z-index: var(--bs-modal-zindex);
