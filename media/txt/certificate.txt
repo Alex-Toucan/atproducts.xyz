@@ -42,23 +42,25 @@ Authority Information Access: [1]Authority Info Access Access Method=Certificati
 
 *.atproducts.xyz
 
-Version: V3
-Serial Number: 03:02:5E:51:00:60:A2:42:9A:6F:A4:E8:E7:78:9B:61:8C:1D
-Signature Algorithm: PKCS #1 SHA-256 With RSA Encryption
-Signature Hash Algorithm: sha256
+Version: Version 3
+Serial Number: 04:42:2D:5C:D8:B5:DB:31:6F:1B:11:15:52:D9:85:1F:B2:00
+Certificate Signature Algorithm: PKCS #1 SHA-256 With RSA Encryption
 Issuer: CN = R3 O = Let's Encrypt C = US
-Valid From: 7/27/22, 3:00:34 PM CDT
-Valid To: 10/25/22, 3:00:33 PM CDT
-Subject: N = atproducts.xyz
-Public Key (ECC 256 Bits): 00 04 64 2B 3E E1 DB 3C 49 A5 ED 2C 0A CD 1F C3 D3 60 CA 45 BF 82 7B 98 E4 D5 9C BA 94 7A EF 87 0E 82 26 7F 66 C7 BA 38 5E BF 30 E1 D8 CA 46 A5 83 05 87 59 6A 04 26 84 1B 37 DD DF 7A 73 11 44 1E FA
-Public Key Parameters: ECDSA_P256
-Subject Key Identifier: 2956c8bb68fc4d4a2a4accf6b2f189882342f7e8
-Key Usage: Digital Signature, Certificate Signing, Off-line CRL Signing, CRL Signing (86)
-Basic Constraints: Subject Type=End Entity ath Length Constraint=None
-Thumbprint: ec78fbebf56a304ab1cd9bd0776bf85dc5d9065d
-Enhanced Key Usage: Server Authentication (1.3.6.1.5.5.7.3.1) Client Authentication (1.3.6.1.5.5.7.3.2)
-Certificate Policies: [1]Certificate Policy: Policy Identifier=2.23.140.1.2.1 [2]Certificate Policy: Policy Identifier=1.3.6.1.4.1.44947.1.1.1 [2,1]Policy Qualifier Info: Policy Qualifier Id=CPS Qualifier: http://cps.letsencrypt.org
-Subject Key Identifier: 2956c8bb68fc4d4a2a4accf6b2f189882342f7e8
-Authority Key Identifier: KeyID=142eb317b75856cbae500940e61faf9d8b14c2c6
-Authority Information Access: [1]Authority Info Access Access Method=On-line Certificate Status Protocol (1.3.6.1.5.5.7.48.1) Alternative Name: URL=http://r3.o.lencr.org [2]Authority Info Access Access Method=Certification Authority Issuer (1.3.6.1.5.5.7.48.2) Alternative Name: URL=http://r3.i.lencr.org/\
-SCT List: v1 41c8cab1df22464a10c6a13a0942875e4e318b1b03ebeb4bc768f090629606f6 Saturday, May 28, 2022 4:41:14 PM SHA256 ECDSA 3045022100c8ca2a53886b5647b2cd9f14ea36c3de9b1f3f66c77f1c2d73892cf7cb7a7262022013f06e8231e0c825657b3c15f3d208936bfb8ed716d2e5265e5d77a5c121807e | v1 46a555eb75fa912030b5a28969f4f37d112c4174befd49b885abf2fc70fe6d47 Saturday, May 28, 2022 4:41:14 PM SHA256 ECDSA 304402207e8e94dc8d2438b4a9d804284e384f21b7d64cdc91008dd260bfc58d6e4c885c02205d0473e5c88fe6aaa1000c77168f2f725240f1a9912a1d4de56f4d70866b519f
+Valid From: 11/24/22, 12:31:41 PM CST
+Valid To: 2/22/23, 12:31:40 PM CST
+Subject: CN = *.atproducts.xyz
+Subject Public Key Algorithm: Elliptic Curve Public Key
+Subject's Public Key: 00 04 48 EC 51 A4 5D A0 22 CB 11 62 1C E5 06 F5 ED 6B F5 6C 03 F0 F6 B5 C3 B0 E6 01 B7 DB FD E1 27 78 1C 63 C1 06 87 97 BA C2 92 D6 AE 3F B0 59 E8 4E 4B 8A 2F 73 01 BC 0A DF 36 2A F8 23 C0 D3 A9 F7
+Certificate Key Usage: Critical Signing
+Extended Key Usage: Not Critical TLS WWW Server Authentication (OID.1.3.6.1.5.5.7.3.1) TLS WWW Client Authentication (OID.1.3.6.1.5.5.7.3.2)
+Certificate Basic Constraints: Critical Is not a Certification Authority
+Certificate Subject Key ID: Not Critical Key ID: 80 AC 7F E7 52 47 7A 39 13 C2 60 C5 DA 87 5E 5D DD E9 7D DF
+Certificate Authority Key ID: Not Critical Key ID: 14 2E B3 17 B7 58 56 CB AE 50 09 40 E6 1F AF 9D 8B 14 C2 C6
+Authority Information Access: Not Critical OCSP Responder: URI: http://r3.o.lencr.org CA Issuers: URI: http://r3.i.lencr.org/
+Certificate Subject Alternative Name: Not Critical DNS Name: *.atproducts.xyz DNS Name: atproducts.xyz
+Certificate Policies: Not Critical OID.2.23.140.1.2.1 OID.1.3.6.1.4.1.44947.1.1.1: Certification Practice Statement Pointer:    http://cps.letsencrypt.org
+OID.1.3.6.1.4.1.11129.2.4.2: Not Critical 04 81 F0 00 EE 00 75 00 7A 32 8C 54 D8 B7 2D B6 20 EA 38 E0 52 1E E9 84 16 70 32 13 85 4D 3B D2 2B C1 3A 57 A3 52 EB 52 00 00 01 84 AB 1F D8 06 00 00 04 03 00 46 30 44 02 20 04 17 3E FC 30 59 A2 A7 D7 82 11 C1 DD 13 17 77 C6 AE C2 64 4F 18 66 D6 05 00 53 43 CB 8F 26 AB 02 20 41 84 1B 2E 52 30 00 F1 50 66 96 CF 1C D5 3C C2 40 F5 7F 2B E0 82 F6 88 80 D0 F0 A5 00 B0 04 1E 00 75 00 AD F7 BE FA 7C FF 10 C8 8B 9D 3D 9C 1E 3E 18 6A B4 67 29 5D CF B1 0C 24 CA 85 86 34 EB DC 82 8A 00 00 01 84 AB 1F D8 10 00 00 04 03 00 46 30 44 02 20 0A 1A 34 B5 5B 7F 77 83 37 BA DD F4 06 EE 55 77 2C 35 41 23 BA 2F 8B B5 33 7D E4 AB 45 61 66 37 02 20 2B 76 F9 42 20 C9 2D C4 FC 02 FD E0 83 30 79 22 1C 53 1F 8F A6 61 DE E9 C8 64 B1 AB 54 E9 5F 42
+Certificate Signature Algorithm: PKCS #1 SHA-256 With RSA Encryption
+Certificate Signature Value: 12 AD C1 7A C8 25 75 4B 33 69 07 9F B6 42 49 2E C5 70 97 FC 03 68 35 29 82 48 6D 89 8B D5 F6 4C C7 7F B9 FA D3 8D 5E 1F 93 0A 6F 9B 21 33 7D 33 C0 8C 5A 6B 6B 78 A4 5C 69 1C 77 6E F4 D3 03 15 C9 05 21 0B 3C 53 B2 B2 31 FB 93 49 CB 7A 3A 70 29 26 6F 78 E8 B4 3E 0D 6C 66 88 8F 93 CB 0A 79 F1 4E 36 3F DF 21 80 41 5E 7A D9 7D 16 EA 6D 69 26 C0 63 BB 5D AD 4F 37 07 59 36 06 0A F0 2A E8 B2 E5 A8 D4 A9 C9 DC 84 C0 8B 91 AE E7 D8 69 10 B6 06 BA 2E 57 5C 72 99 19 FA 70 2B BB B0 ED 90 61 67 76 35 74 E4 47 A5 E6 31 5A FF 45 AE D4 56 82 12 3E 99 86 03 55 23 09 A9 FE 97 0F 5C 12 CC 92 F9 BA FC AC 30 7F 97 B2 1F 1C 04 4C 39 DB FA C0 5B 8A 54 63 EA 8B F7 27 CF 55 50 21 66 CF DB 50 1E 34 4B DC B9 A3 DB BB 96 B2 F4 A4 88 BC 78 79 6C 0F 6E 3C 72 DA 06 1B 3B E8 85 17 40 77 C5
+SHA-256 Fingerprint: A3 74 DC EC 78 48 58 EA 89 29 4C B7 19 4F 9F B5 22 D8 26 49 75 1E 9D F5 DC 8F 79 13 B0 41 92 C4
+SHA-1 Fingerprint: AA 8C 14 B1 0C A5 1B 1B E9 BB B2 AC 39 18 AE 24 CC 82 0F 78
