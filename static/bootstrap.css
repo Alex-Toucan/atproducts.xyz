@@ -11425,6 +11425,11 @@ div.d {
    }
 }
 
+carousel img {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
       .padright {
         padding-right: 5px;
       }
