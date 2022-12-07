@@ -11413,15 +11413,15 @@ div.d {
 
 @media (min-width:767.98px) {
    div.lrpad {
-      margin-left: 10px !important;
-      margin-right: 10px !important;
+      margin-left: 10px;
+      margin-right: 10px;
    }
 }
 
 @media (max-width:767.98px) {
    div.lrpad p, div.lrpad img, div.lrpad pre, div.lrpad.row {
-      margin-left: 10px !important;
-      margin-right: 10px !important;
+      margin-left: 10px;
+      margin-right: 10px;
    }
 }
 
