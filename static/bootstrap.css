@@ -11393,33 +11393,33 @@ img.script {
    }
 }
 
-div.a {
+.a {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
-div.b {
+.b {
   text-align: left;
 }
 
-div.c {
+.c {
   text-align: right;
 }
 
-div.d {
+.d {
   text-align: justify;
 }
 
 @media (min-width:767.98px) {
-   div.lrpad {
+   .lrpad {
       margin-left: 10px;
       margin-right: 10px;
    }
 }
 
 @media (max-width:767.98px) {
-   div.lrpad p, div.lrpad img, div.lrpad pre, div.lrpad.row {
+   .lrpad p, .lrpad img, .lrpad pre, .lrpad.row {
       margin-left: 10px;
       margin-right: 10px;
    }
