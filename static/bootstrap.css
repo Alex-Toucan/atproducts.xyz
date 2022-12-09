@@ -5757,6 +5757,10 @@ header.nofixed {
   padding: var(--bs-modal-padding);
 }
 
+.modal-body-title {
+    margin-top: 0.5rem;
+}
+
 .modal-footer {
   display: flex;
   flex-shrink: 0;
