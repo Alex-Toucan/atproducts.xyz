@@ -11515,6 +11515,10 @@ img.script {
       border-radius: 10px;
     }
 
+.footer-info {
+  text-decoration: none;
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
