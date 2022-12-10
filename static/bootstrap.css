@@ -11540,6 +11540,10 @@ img.script {
   margin-bottom: 0.5rem;
 }
 
+footer p {
+    margin-bottom: 0!important;
+}
+
 a:hover.footer-info {
   color: #696969;
 }
