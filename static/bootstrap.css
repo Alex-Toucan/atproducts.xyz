@@ -8276,7 +8276,6 @@ header.nofixed {
       margin-right: 0!important;
       margin-left: 0!important;
       padding-top: 10px;
-      text-align: center;
    }
 }
 
@@ -11538,6 +11537,11 @@ img.script {
 
 .footer-info {
   text-decoration: none;
+  color: var(--bs-body-color);
+}
+
+a:hover.footer-info {
+  color: #696969;
 }
 
 /* End secondary code */
