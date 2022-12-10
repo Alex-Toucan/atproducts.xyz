@@ -11537,6 +11537,7 @@ img.script {
 .footer-info {
   text-decoration: none;
   color: var(--bs-body-color);
+  margin-bottom: 0.5rem;
 }
 
 a:hover.footer-info {
