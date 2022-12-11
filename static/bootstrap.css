@@ -8221,6 +8221,48 @@ header.nofixed {
    }
 }
 
+@media (min-width:767.98px) {
+  footer .py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (min-width:767.98px) {
+  footer .py-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+}
+
+@media (min-width:767.98px) {
+  footer .py-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+}
+
+@media (min-width:767.98px) {
+  footer .py-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
+
+@media (min-width:767.98px) {
+  footer .py-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+}
+
+@media (min-width:767.98px) {
+  footer .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -8251,48 +8293,6 @@ header.nofixed {
   padding-bottom: 3rem !important;
 }
 
-@media (min-width:700px) {
-  footer .py-0 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-}
-
-@media (min-width:700px) {
-  footer .py-1 {
-    padding-top: 0.25rem !important;
-    padding-bottom: 0.25rem !important;
-  }
-}
-
-@media (min-width:700px) {
-  footer .py-2 {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
-}
-
-@media (min-width:700px) {
-  footer .py-3 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-  }
-}
-
-@media (min-width:700px) {
-  footer .py-4 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-}
-
-@media (min-width:700px) {
-  footer .py-5 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
-}
-
 /* End custom "py" settings */
 
 /* Custom "pt" settings */
@@ -8306,30 +8306,6 @@ header.nofixed {
       margin-left: 0!important;
       padding-top: 10px;
    }
-}
-
-.pt-0 {
-  padding-top: 0 !important;
-}
-
-.pt-1 {
-  padding-top: 0.25rem !important;
-}
-
-.pt-2 {
-  padding-top: 0.5rem !important;
-}
-
-.pt-3 {
-  padding-top: 1rem !important;
-}
-
-.pt-4 {
-  padding-top: 1.5rem !important;
-}
-
-.pt-5 {
-  padding-top: 3rem !important;
 }
 
 @media (min-width:767.98px) {
@@ -8367,6 +8343,32 @@ header.nofixed {
     padding-top: 3rem !important;
   }
 }
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pt-1 {
+  padding-top: 0.25rem !important;
+}
+
+.pt-2 {
+  padding-top: 0.5rem !important;
+}
+
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
+.pt-5 {
+  padding-top: 3rem !important;
+}
+
+/* End custom "pt" settings */
 
 .pe-0 {
   padding-right: 0 !important;
