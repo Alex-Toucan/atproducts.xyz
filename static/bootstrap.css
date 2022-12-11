@@ -8211,7 +8211,7 @@ header.nofixed {
 /* Custom "py" settings */
 
 @media (max-width:767.98px) {
-   .container, footer .py-0, footer .py-1, footer .py-2, footer .py-3, footer .py-4, footer .py-5 {
+   .container, .py-0, .py-1, .py-2, .py-3, .py-4, .py-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -8222,73 +8222,73 @@ header.nofixed {
 }
 
 @media (min-width:767.98px) {
-  footer .py-0 {
+  .py-0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .py-1 {
+  .py-1 {
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .py-2 {
+  .py-2 {
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .py-3 {
+  .py-3 {
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .py-4 {
+  .py-4 {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .py-5 {
+  .py-5 {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
 }
 
-.py-0 {
+.npy-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
 
-.py-1 {
+.npy-1 {
   padding-top: 0.25rem !important;
   padding-bottom: 0.25rem !important;
 }
 
-.py-2 {
+.npy-2 {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
 
-.py-3 {
+.npy-3 {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
 }
 
-.py-4 {
+.npy-4 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
 }
 
-.py-5 {
+.npy-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
@@ -8298,7 +8298,7 @@ header.nofixed {
 /* Custom "pt" settings */
 
 @media (max-width:767.98px) {
-   .container, footer .pt-0, footer .pt-1, footer .pt-2, footer .pt-3, footer .pt-4, footer .pt-5 {
+   .container, .pt-0, .pt-1, .pt-2, .pt-3, .pt-4, .pt-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -8309,62 +8309,62 @@ header.nofixed {
 }
 
 @media (min-width:767.98px) {
-  footer .pt-0 {
+  .pt-0 {
     padding-top: 0 !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .pt-1 {
+  .pt-1 {
     padding-top: 0.25rem !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .pt-2 {
+  .pt-2 {
     padding-top: 0.5rem !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .pt-3 {
+  .pt-3 {
     padding-top: 1rem !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .pt-4 {
+  .pt-4 {
     padding-top: 1.5rem !important;
   }
 }
 
 @media (min-width:767.98px) {
-  footer .pt-5 {
+  .pt-5 {
     padding-top: 3rem !important;
   }
 }
 
-.pt-0 {
+.npt-0 {
   padding-top: 0 !important;
 }
 
-.pt-1 {
+.npt-1 {
   padding-top: 0.25rem !important;
 }
 
-.pt-2 {
+.npt-2 {
   padding-top: 0.5rem !important;
 }
 
-.pt-3 {
+.npt-3 {
   padding-top: 1rem !important;
 }
 
-.pt-4 {
+.npt-4 {
   padding-top: 1.5rem !important;
 }
 
-.pt-5 {
+.npt-5 {
   padding-top: 3rem !important;
 }
 
