@@ -86,6 +86,11 @@
   }
 }
 
+::selection {
+    background: #3390ff;
+    color: white;
+}
+
 body {
   margin: 0;
   padding-right: 0 !important;
