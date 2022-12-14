@@ -2,6 +2,7 @@
 # Some modules may not be available in this file.
 # So, you may have to install them manually.
 
+dependabot/pip/media/files/pillow-9.0.1
 Pillow==9.3.0
 browserhistory==0.1.2
 cryptography==3.4.7
