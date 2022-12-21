@@ -698,7 +698,7 @@ progress {
 
 /* Custom container settings */
 
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .container-sm, .container {
     max-width: 540px;
   }
@@ -1135,7 +1135,7 @@ progress {
   --bs-gutter-y: 3rem;
 }
 
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .col-sm {
     flex: 1 0 0%;
   }
@@ -2227,7 +2227,7 @@ progress {
   -webkit-overflow-scrolling: touch;
 }
 
-@media (max-width: 634.98px) {
+@media (max-width: 645.98px) {
   .table-responsive-sm {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -3602,7 +3602,7 @@ textarea.form-control-lg {
   left: auto;
 }
 
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .dropdown-menu-sm-start {
     --bs-position: start;
   }
@@ -4237,7 +4237,7 @@ header.nofixed {
   overflow-y: auto;
 }
 
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .navbar-expand-sm {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4672,7 +4672,7 @@ header.nofixed {
 .card-group > .card {
   margin-bottom: var(--bs-card-group-margin);
 }
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .card-group {
     display: flex;
     flex-flow: row wrap;
@@ -5053,7 +5053,7 @@ header.nofixed {
   --bs-alert-border-color: #b6d4fe;
 }
 .alert-primary .alert-link {
-  color: #0634.987a;
+  color: #06357a;
 }
 
 .alert-secondary {
@@ -5281,7 +5281,7 @@ header.nofixed {
   border-left-width: var(--bs-list-group-border-width);
 }
 
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .list-group-horizontal-sm {
     flex-direction: row;
   }
@@ -5778,7 +5778,7 @@ header.nofixed {
   margin: calc(var(--bs-modal-footer-gap) * 0.5);
 }
 
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .modal {
     --bs-modal-margin: 1.75rem;
     --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -5822,7 +5822,7 @@ header.nofixed {
   overflow-y: auto;
 }
 
-@media (max-width: 634.98px) {
+@media (max-width: 645.98px) {
   .modal-fullscreen-sm-down {
     width: 100vw;
     max-width: none;
@@ -6503,7 +6503,7 @@ header.nofixed {
   --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-@media (max-width: 634.98px) {
+@media (max-width: 645.98px) {
   .offcanvas-sm {
     position: fixed;
     bottom: 0;
@@ -6519,12 +6519,12 @@ header.nofixed {
     transition: transform 0.3s ease-in-out;
   }
 }
-@media (max-width: 634.98px) and (prefers-reduced-motion: reduce) {
+@media (max-width: 645.98px) and (prefers-reduced-motion: reduce) {
   .offcanvas-sm {
     transition: none;
   }
 }
-@media (max-width: 634.98px) {
+@media (max-width: 645.98px) {
   .offcanvas-sm.offcanvas-start {
     top: 0;
     left: 0;
@@ -6533,7 +6533,7 @@ header.nofixed {
     transform: translateX(-100%);
   }
 }
-@media (max-width: 634.98px) {
+@media (max-width: 645.98px) {
   .offcanvas-sm.offcanvas-end {
     top: 0;
     right: 0;
@@ -6542,7 +6542,7 @@ header.nofixed {
     transform: translateX(100%);
   }
 }
-@media (max-width: 634.98px) {
+@media (max-width: 645.98px) {
   .offcanvas-sm.offcanvas-top {
     top: 0;
     right: 0;
@@ -6553,7 +6553,7 @@ header.nofixed {
     transform: translateY(-100%);
   }
 }
-@media (max-width: 634.98px) {
+@media (max-width: 645.98px) {
   .offcanvas-sm.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6563,17 +6563,17 @@ header.nofixed {
     transform: translateY(100%);
   }
 }
-@media (max-width: 634.98px) {
+@media (max-width: 645.98px) {
   .offcanvas-sm.showing, .offcanvas-sm.show:not(.hiding) {
     transform: none;
   }
 }
-@media (max-width: 634.98px) {
+@media (max-width: 645.98px) {
   .offcanvas-sm.showing, .offcanvas-sm.hiding, .offcanvas-sm.show {
     visibility: visible;
   }
 }
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .offcanvas-sm {
     --bs-offcanvas-height: auto;
     --bs-offcanvas-border-width: 0;
@@ -7253,7 +7253,7 @@ header.nofixed {
   z-index: 1020;
 }
 
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .sticky-sm-top {
     position: -webkit-sticky;
     position: sticky;
@@ -8844,7 +8844,7 @@ header.nofixed {
   visibility: hidden !important;
 }
 
-@media (min-width: 634.98px) {
+@media (min-width: 645.98px) {
   .float-sm-start {
     float: left !important;
   }
