@@ -744,7 +744,9 @@ progress {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+/* Custom container settings */
+
+@media (min-width: 645.98px) {
   .container-sm, .container {
     max-width: 540px;
   }
@@ -769,23 +771,67 @@ progress {
     max-width: 1320px;
   }
 }
-.row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
+
+@media (min-width: 767.98px) {
+  .container-footer {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    padding-right: calc(var(--bs-gutter-x) * .5); 
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
-.row > * {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
+
+@media (min-width: 700px) {
+  .container-footer {
+      max-width: 960px;
+  }
 }
+@media (min-width: 1200px) {
+  .container-footer {
+     max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-footer {
+      max-width: 1320px;
+  }
+}
+
+/* End custom container settings */
+
+/* Custom row settings */
+
+@media (min-width:767.98px) {
+  .row, .price-row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width:767.98px) {
+  .row {
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+  }
+}
+
+@media (min-width:700px) {
+  .fontrow {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1*var(--bs-gutter-y));
+    margin-right: calc(-.5*var(--bs-gutter-x));
+    margin-left: calc(-.5*var(--bs-gutter-x));
+  }
+}
+/* End custom row settings */
 
 .col {
   flex: 1 0 0%;
@@ -825,6 +871,9 @@ progress {
   flex: 0 0 auto;
   width: 16.6666666667%;
 }
+
+
+/* Custom "col" settings */
 
 .col-auto {
   flex: 0 0 auto;
@@ -890,6 +939,137 @@ progress {
   flex: 0 0 auto;
   width: 100%;
 }
+
+@media (max-width:767.98px) {
+   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+     width: 100%;
+     margin-bottom: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-1b {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-2b {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-3b {
+    flex: 0 0 auto;
+    width: 25%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-4b {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-5b {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-6b {
+    flex: 0 0 auto;
+    width: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-7b {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-8b {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-9b {
+    flex: 0 0 auto;
+    width: 75%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-10b {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-11b {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+
+@media (min-width:767.98px) {
+   .col-12b {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+}
+   
+@media (max-width:767.98px) {
+   .col-1b, .col-2b, .col-3b, .col-4b, .col-5b, .col-6b, .col-7b, .col-8b, .col-9b, .col-10b, .col-11b, .col-12b {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      padding-right: 10px !important;
+      padding-left: 10px !important;
+      width: 100% !important;
+   }
+}
+
+/* End custom "col" settings */
 
 .offset-1 {
   margin-left: 8.33333333%;
