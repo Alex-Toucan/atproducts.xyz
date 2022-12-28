@@ -12398,6 +12398,11 @@ a:hover.footer-info {
   color: #696969;
 }
 
+body.fixedtopnav {
+  padding-top: 56px;
+  scroll-padding-top: 61px;
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
