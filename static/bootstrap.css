@@ -12493,6 +12493,10 @@ body.fixedtopnav {
     }
 }
 
+h1.title, .h1.title {
+    padding-top: 5px;
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
