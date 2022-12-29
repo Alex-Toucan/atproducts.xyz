@@ -12302,12 +12302,6 @@ textarea.form-control-lg {
   }
 }
 
-img.script {
-   border-radius: 15px;
-   background: #141414;
-   padding: 20px!important;
-}
-
 @media (max-width:1024px) {
    img.script, img.flash {
       width: 25.5%
@@ -12497,6 +12491,12 @@ h1.title, .h1.title {
     padding-top: 5px;
 }
 
+[data-bs-theme=light] img.script {
+   border-radius: 15px;
+   background: #141414;
+   padding: 20px!important;
+}
+
 [data-bs-theme=dark] img.mainimg {
     border-radius: 15px;
     background: white;
@@ -12508,6 +12508,7 @@ h1.title, .h1.title {
     background: white;
     padding: 5px!important;
 }
+
   
 /* End secondary code */
 
