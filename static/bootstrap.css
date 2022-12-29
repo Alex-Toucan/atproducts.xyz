@@ -12497,6 +12497,18 @@ h1.title, .h1.title {
     padding-top: 5px;
 }
 
+img.mainimg, [data-bs-theme=dark] {
+    border-radius: 15px;
+    background: white;
+    padding: 20px!important;
+}
+
+img.footerimg, [data-bs-theme=dark] {
+    border-radius: 15px;
+    background: white;
+    padding: 5px!important;
+}
+  
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
