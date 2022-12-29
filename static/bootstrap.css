@@ -12497,13 +12497,13 @@ h1.title, .h1.title {
     padding-top: 5px;
 }
 
-img.mainimg, [data-bs-theme=dark] {
+[data-bs-theme=dark] img.mainimg {
     border-radius: 15px;
     background: white;
     padding: 20px!important;
 }
 
-img.footerimg, [data-bs-theme=dark] {
+[data-bs-theme=dark] img.footerimg {
     border-radius: 15px;
     background: white;
     padding: 5px!important;
