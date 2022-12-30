@@ -7307,11 +7307,18 @@ textarea.form-control-lg {
   color: #f9fafb !important;
 }
 
-.link-dark {
+[data-bs-theme=light] .link-dark {
   color: #212529 !important;
 }
-.link-dark:hover, .link-dark:focus {
+[data-bs-theme=light] .link-dark:hover, .link-dark:focus {
   color: #1a1e21 !important;
+}
+
+[data-bs-theme=dark] .link-dark {
+  color: #adb5bd !important;
+}
+[data-bs-theme=dark] .link-dark:hover, .link-dark:focus {
+  color: #b5bcc4 !important;
 }
 
 .ratio {
