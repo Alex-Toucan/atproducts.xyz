@@ -12515,6 +12515,12 @@ img.script {
     padding: 5px!important;
 }
 
+@media (max-width:767.98px) {
+  [data-bs-theme=dark] img.footerimg {
+    padding: 10px!important;
+  }
+}
+
 .abicon {
   font-size: 3em;
   line-height: 100%;
