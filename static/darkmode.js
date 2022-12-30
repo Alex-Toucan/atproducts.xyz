@@ -46,7 +46,7 @@
     }
   })
 
-  window.onload = (event) => {
+  window.addEventListener('load', (event) => {
     showActiveTheme(getPreferredTheme())
 
     document.querySelectorAll('[data-bs-theme-value]')
