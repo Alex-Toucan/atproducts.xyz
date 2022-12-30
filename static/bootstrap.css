@@ -12509,6 +12509,12 @@ img.script {
     padding: 20px!important;
 }
 
+@media (max-width:424.98px) {
+  [data-bs-theme=dark] img.mainimg {
+    width: 65%!important;
+  }
+}
+
 [data-bs-theme=dark] img.footerimg {
     border-radius: 15px;
     background: white;
