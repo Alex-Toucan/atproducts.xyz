@@ -58,5 +58,5 @@
           showActiveTheme(theme)
         })
       })
-  })
+  }
 })()
