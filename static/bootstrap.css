@@ -12508,11 +12508,11 @@ h1.title, .h1.title {
 }
 
 [data-bs-theme=light] .abicon {
-  color: rgba(33,37,41,255);
+  color: #212529;
 }
 
 [data-bs-theme=dark] .abicon {
-  color: white;
+  color: #adb5bd;
 }
 
 /* End secondary code */
