@@ -30,21 +30,15 @@
   const showActiveTheme = theme => {
     const activeThemeIcon = document.querySelector('.theme-icon-active use')
     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-    const svgOfActiveBtn = btnToActive.querySelector('i').getAttribute('')
+    // const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
 
     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
       element.classList.remove('active')
     })
 
     btnToActive.classList.add('active')
-    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+    // activeThemeIcon.setAttribute('href', svgOfActiveBtn)
   }
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (storedTheme !== 'light' || storedTheme !== 'dark') {
-      setTheme(getPreferredTheme())
-    }
-  })
   
   window.addEventListener('DOMContentLoaded', () => {
     // showActiveTheme(getPreferredTheme())
