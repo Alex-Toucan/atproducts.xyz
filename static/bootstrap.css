@@ -12537,6 +12537,10 @@ img.script {
   color: #adb5bd;
 }
 
+nav .dropdown-menu {
+  padding: 0.25rem;
+}
+
 nav .dropdown-menu .dropdown-item {
     border-radius: 0.25rem;
 }
