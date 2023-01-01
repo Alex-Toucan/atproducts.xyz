@@ -12537,6 +12537,10 @@ img.script {
   color: #adb5bd;
 }
 
+nav .bd-navbar .dropdown-menu .dropdown-item {
+    border-radius: 0.25rem;
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
