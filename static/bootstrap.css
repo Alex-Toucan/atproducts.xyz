@@ -12588,6 +12588,12 @@ nav .dropdown-menu .dropdown-item {
   color: #adb5bd;
 }
 
+.btn-resource {
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
