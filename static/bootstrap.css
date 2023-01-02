@@ -12451,6 +12451,11 @@ body.fixedtopnav {
   scroll-padding-top: 61px;
 }
 
+body.fixedtopnavimage {
+  padding-top: 71px;
+  scroll-padding-top: 76px;
+}
+
 @media (min-width: 768px) {
    p:not(.accordion p, .modal p, footer p) {
         padding-right: 5%;
