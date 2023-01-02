@@ -15,17 +15,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="/static/purecookie.js"></script>
+    <script src="/static/darkmode.js"></script>
   </head>
-  <body>
+  <body class="fixedtopnavimage">
     <header>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark shadow-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">AT Products LLC</a>
+    <a class="navbar-brand" href="/"><img src="/media/images/longwhite.png" height="45px" alt="Icon"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link" href="/">AT Products</a>
         </li>
@@ -47,14 +48,43 @@
             <li><a class="dropdown-item" href="/noodle">Noodle Hackerspace</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
-            <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
-            <li><a class="dropdown-item" href="/policies">Policies</a></li>
-          </ul>
-        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
+              <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
+              <li><a class="dropdown-item" href="/policies">Policies</a></li>
+            </ul>
+          </li>
+        </ul>
+        <hr class="m-2 permhr">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">Toggle theme</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;" data-bs-popper="static">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
+                  Light
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-moon-stars-fill"></i>
+                  Dark
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-circle-half"></i>
+                  Auto
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+            </ul>
+          </li>
       </ul>
     </div>
   </div>
@@ -72,14 +102,14 @@
         <h2> Resources </h2>
         <p> What do you want to know about today? </p>
         <a href="/backup/script">View normal format</a> <br> <br>
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#lr">Learning Resources</button><div class="modal fade" id="lr" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#lr">Learning Resources</button><div class="modal fade" id="lr" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="lrt">Learning Resources</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Learning Resources </h2>
 <a href="https://www.youtube.com/watch?v=3Kq1MIfTWCE">Hacking Course - Network Penetration Testing</a> <a href="https://hackthebox.com/">HackTheBox</a> <a href="https://tryhackme.com/">TryHackMe</a> <a href="https://github.com/yeahhub/Hacking-Security-Ebooks">E-Books</a> <a href="https://www.kali.org/tools">Library of tools from Kali Linux OS</a> <a href="https://www.w3schools.com/python/default.asp">W3schools</a> <a href="https://www.freecodecamp.org/">freeCodeCamp</a> <a href="https://www.codecademy.com/">CodeAcademy</a> <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc">Course 1</a> <a href="https://www.youtube.com/watch?v=rfscVS0vtbw&t=9695s">Course 2</a> 
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
 
-<button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#pb">Python Basics</button><div class="modal fade" id="pb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+<button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#pb">Python Basics</button><div class="modal fade" id="pb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="pbt">Learning Resources</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Python Basics </h2>
@@ -147,7 +177,7 @@ print(type(y))</code></p>
 <p>Both strings and numbers are built-in data types.</p>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#jb">JavaScript Basics</button><div class="modal fade" id="jb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#jb">JavaScript Basics</button><div class="modal fade" id="jb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="jbt">JavaScript Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> JavaScript Basics </h2>
@@ -195,7 +225,7 @@ var person = {<br>
   </code></p>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#hb">HTML Basics</button><div class="modal fade" id="hb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#hb">HTML Basics</button><div class="modal fade" id="hb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="hbt">HTML Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> HTML Basics </h2>
@@ -240,7 +270,7 @@ var person = {<br>
 <p><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></p>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#os">OSINT</button><div class="modal fade" id="os" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#os">OSINT</button><div class="modal fade" id="os" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="ost">OSINT</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> OSINT </h2>
@@ -252,7 +282,7 @@ var person = {<br>
      <a href="http://www.tineye.com/">Reverse Image Lookup</a> <a href="https://www.macvendorlookup.com/">Mac Address Lookup</a> <a href="http://exif-viewer.com/">EXIF Data</a> <a href="https://haveibeenpwned.com/">Database Lookup</a> <a href="https://whatismyipaddress.com/ip-lookup">IP Lookup</a> <a href="https://archive.org/index.php">Archive.org</a>
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#dos">Denial of Service</button><div class="modal fade" id="dos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#dos">Denial of Service</button><div class="modal fade" id="dos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="dost">Denial of Service</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Denial of Service </h2>
@@ -267,7 +297,7 @@ var person = {<br>
        A distributed denial-of-service (DDoS) attack is a type of DoS attack that comes from many distributed sources, such as a botnet DDoS attack. </p> <br> <a href="/media/fileshttp.py" download> Website HTTP Flooder </a> 
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#pa">Passwords</button><div class="modal fade" id="pa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#pa">Passwords</button><div class="modal fade" id="pa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="pat">Passwords</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Passwords </h2>
@@ -278,7 +308,7 @@ var person = {<br>
      <p> Nasus hasn't made a cracker yet, so he recommends <a href="https://github.com/vanhauser-thc/thc-hydra">Vanhauser's</a>, and <a href="https://github.com/openwall/john">Openwall's</a>. </p>
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#id">ID Creation Time</button><div class="modal fade" id="id" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#id">ID Creation Time</button><div class="modal fade" id="id" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="idt">ID Creation Time</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> ID Creation Time </h2>
@@ -286,7 +316,7 @@ var person = {<br>
      <p> <a href="/media/files/idcheck.py" download>ID Creation Time (Python)</a> by Nasus </p>
   </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#kl">Keylogging</button><div class="modal fade" id="kl" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#kl">Keylogging</button><div class="modal fade" id="kl" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="klt">Keylogging</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Keylogging </h2>
@@ -297,7 +327,7 @@ var person = {<br>
      <p> <a href="/media/files/AdvKeylogger.py" download>Advanced Key Logger (Python)</a> <a href="/media/files/Decryptor.py" download>Decryptor (Python)</a> <a href="/media/files/require.txt" download>Requirements (TXT)</a> all by CУБΞЯC. </p>
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#to">Nitrologging | Tokenlogging</button><div class="modal fade" id="to" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#to">Nitrologging | Tokenlogging</button><div class="modal fade" id="to" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="tot">Nitrologging | Tokenlogging</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Nitrologging | Tokenlogging </h2>
@@ -310,7 +340,7 @@ var person = {<br>
        <a href="https://github.com/Monst3red/Discord-Ethereum-Grabber">Monst3red</a> <a href="https://github.com/Alphalius/Discord-RAGE">Alphalius's Rage</a> <a href="https://github.com/billythegoat356/Riot"> BillyTheGoat356's Riot</a> <a href="https://github.com/billythegoat356/Plague">BillyTheGoat356's Plague</a> <a href="https://github.com/billythegoat356/Rage">BillyTheGoat356's Rage</a> <a href="https://github.com/NotSaksh/Discord-Server-Cloner">NotSaksh</a> <a href="https://github.com/ecriminal/Exploit-Discord-Cache-System-PoC">ECriminal</a> <a href="https://github.com/verlox/Discord-QR-Token-Logger">Verlox</a> <a href="https://github.com/KanekiWeb/Powerfull-Token-Stealer">KanekiWeb</a> <br> <br> <a href="https://github.com/WCBandit/Intersel">Discord Injector (WCBandit)</a> <a href="https://github.com/ZaikoARG/TokenGuard">Discord Token Stealer Malware Protection (ZaikoARD)</a> <a href="https://github.com/uvipen/ASCII-generator">Uvipen's ASCII Generator</a> 
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-<button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#ot">Other Scripts</button><div class="modal fade" id="ot" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+<button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#ot">Other Scripts</button><div class="modal fade" id="ot" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="ott">Other Scripts</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Other Scripts </h2>  
@@ -364,7 +394,7 @@ var person = {<br>
 </div>
        </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>        
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#ph">Phishing</button><div class="modal fade" id="ph" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#ph">Phishing</button><div class="modal fade" id="ph" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="pht">Learning Resources</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Phishing </h2>
@@ -463,7 +493,7 @@ var person = {<br>
     </div>
   </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#gd">Google Dorking</button><div class="modal fade" id="gd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#gd">Google Dorking</button><div class="modal fade" id="gd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="gdt">Google Dorking</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Google Dorking </h2>
@@ -491,7 +521,7 @@ var person = {<br>
        <code>ext:log “Software: Microsoft Internet Information Services *.*”</code> - Microsoft ISS server logs (online activity)
         </p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
         
-        <button type="button" class="btn btn-dark btn-resource" data-bs-toggle="modal" data-bs-target="#wh">Wi-Fi Hacking</button><div class="modal fade" id="wh" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#wh">Wi-Fi Hacking</button><div class="modal fade" id="wh" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="wht">Wi-Fi Hacking</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Wi-Fi Hacking </h2>
@@ -510,7 +540,7 @@ var person = {<br>
     <div class="row">
       <div class="col-2">
        <div class="a">
-         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon"></a></div>
+         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
            <br>
            <h5><a href="/">AT Products LLC</a></h5>
           </div></div>
