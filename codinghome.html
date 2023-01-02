@@ -169,12 +169,15 @@
       <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
             </div></div><div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<h4 id="com-3">Comments</h4>
+<div id="com-3">
+<h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
 py <br>
 # This is a comment
 </code></p>
-<h4 id="data-3">Data Types</h4>
+</div>
+<div id="data-3">
+<h>Data Types</h4>
 <p>Variables can store data of different types, and different types can do different things.</p>
 <p>Python has the following data types built-in by default, in these categories:<br>
 Text Type: <code>str</code><br>
@@ -191,7 +194,9 @@ py <br>
 x = 5 <br>
 print(type(x))
 </code></p>
-<h4 id="str-3">Strings</h4>
+</div>
+<div id=""str-3">
+<h4>Strings</h4>
 <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
 <code>
 py <br>
@@ -199,7 +204,7 @@ x = "hello" <br>
 y = 'hello' <br>
 # single quotations and double quotation marks are the same<br>
 x == y # returns True
-</code></p>
+</code><p></p>
 <p>You can assign a multiline string to a variable by using three quotes:<br>
 <code>
 py <br>
@@ -209,7 +214,9 @@ x = """The FitnessGram Pacer test is a multistage aerobic capacity test that pro
 <code>py<br>
 x = "hello"<br>
 print(len(text)) # returns 5<br></code></p>
-<h4 id="num-3">Numbers</h4>
+</div>
+<div id="num-3"">
+<h4>Numbers</h4>
 <p>There are 2 primary, <code>int</code> and <code>float</code></p><p><code>
 py<br>
 x = 2 # int<br>
@@ -222,6 +229,7 @@ print(type(y))</code></p>
 <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
 <p>Float is a number, positive or negative, containing one or more decimals.</p>
 <p>Both strings and numbers are built-in data types.</p>
+</div>
           </div></div></div>
 </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
          <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#cppb">C++ Basics</button><div class="modal fade" id="cppb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
@@ -236,9 +244,8 @@ print(type(y))</code></p>
       <a class="list-group-item list-group-item-action" href="#print-5">Print</a>
             </div></div><div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-
-
-<h4 id="strings-5">Strings</h4>
+<div id="strings-5">
+<h4>Strings</h4>
 <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
 <p><code>
 #include &lt;ostream&gt;<br>
@@ -249,7 +256,9 @@ int main()<br>
     std::string str = "codinghome";<br>
 }
   </code></p>
-<h4 id="integers-5">Integers and Floating Point Numbers</h4>
+</div>
+<div id="integers-5">
+<h4>Integers and Floating Point Numbers</h4>
 <p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple.</p>
 <p><code>
 #include &lt;iostream&gt;<br><br>
@@ -261,7 +270,9 @@ int main()<br>
     float fnum = 10.5;<br>
 }
       </code></p>
-<h4 id="print-5">Print</h4>
+</div>
+<div id="print-5">
+<h4>Print</h4>
           <p> Printing an output to the terminal/console or whatever you want to call it. </p>
 <p><code>
 #include &lt;iostream&gt;<br><br>
@@ -275,6 +286,7 @@ int main()<br>
     std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point Variable(Variable fnum)
 }
   </code></p>
+</div>
 </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
 <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#hb">HTML Basics</button><div class="modal fade" id="hb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="hbt">HTML Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
@@ -290,7 +302,8 @@ int main()<br>
       <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
             </div></div><div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<h4 id="example-1">Example Document</h4>
+<div id="example-1">
+<h4>Example Document</h4>
 <code>
 &lt;!DOCTYPE html&gt;<br>
 &lt;html&gt;<br>
@@ -301,21 +314,30 @@ int main()<br>
 &lt;/html&gt;
 </code>
 <p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags). The <code>&lt;!DOCTYPE&gt;</code> declaration is not case sensitive. </p>
-<h4 id="head-1">HTML Headings</h4>
+</div>
+<div  id="head-1">
+<h4>HTML Headings</h4>
 <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.
 <code>&lt;h1&gt;</code>defines the most important heading. <code>&lt;h6&gt;</code> defines the least important heading:<br>
 <code>&lt;h1&gt;Big&lt;/h1&gt;</code> <br>
 <code>&lt;h6&gt;Small&lt;/h6&gt;</code> </p>
-<h4 id="text-1">HTML Paragraphs</h4>
+</div>
+<div id="text-1">
+<h4>HTML Paragraphs</h4>
 <p>HTML paragraphs are defined with the &lt;p&gt; tag:<code><br>
 &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
 &lt;p&gt;This is another paragraph.&lt;/p&gt;</code></p>
-<h4 id="links-1">HTML Links</h4>
+</div>
+<div id="links-1">
+<h4>HTML Links</h4>
 <p>HTML links are defined with the &lt;a&gt; tag:<br>
-<code>&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt</code></p>
-<h4 img="img-1">HTML Images</h4>
+<code>&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;</code></p>
+</div>
+<div id="img-1">
+<h4>HTML Images</h4>
 <p>HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width, and height are provided as attributes:<br>
 <code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code></p>
+</div>
 </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
 <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#cb">CSS Basics</button><div class="modal fade" id="cb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="cbt">CSS Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
@@ -332,7 +354,8 @@ int main()<br>
             <a class="list-group-item list-group-item-action" href="#eci-4">Extra: Centering Images</a>
             </div></div><div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<h4 id="example-4">Example Document</h4>
+<div id="example-4">
+<h4>Example Document</h4>
 <code>
 h1 {<br>
   color: black;   <br>
@@ -343,16 +366,18 @@ h1 {<br>
 </code>
 <code>&lt;p style="font-size:10px"&gt;</code>
 <p>To put CSS files in HTML, use... <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
-
-<h4 id="rules-4">CSS Rulesets</h4>
+</div>
+<div id="rules-4">
+<h4>CSS Rulesets</h4>
 <p>
 Selector    - <code>p { </code> <br>
 Property    - <code>color: red; </code><br>
 Declaration - <code>}</code>     
 </p>
-<p>Properties - With these, you can style a HTML element, like for example; color.Property Value - This chooses one of the possible options for a given property, like red for color.
+<p>Properties - With these, you can style a HTML element, like for example; color. <br>
+Property Value - This chooses one of the possible options for a given property, like red for color.
 <br>
-You can also write css like <code>html{color:red;}</code>
+You can also write CSS like <code>html{color:red;}</code>
 <br>
 You can also put styles in HTML elements. <code>&lt;h1 style="font-color:white;"&gt;</code>
 <br>
@@ -362,28 +387,36 @@ You can also select multiple elements at once like...
 h1, h4, h6, h2 {<br>
   color: red;<br>
 }</code></p>
-
-<h4 id="text-4">Text Elements</h4><p>
-<code>font-size: 10px;</code> - Text size, can be in pixels.<r>
+</div>
+<div id="text-4">
+<h4>Text Elements</h4><p>
+<code>font-size: 10px;</code> - Text size, can be in pixels.<br>
 <code>font-family: verdana;</code> - Fonts<br>
 <code>text-align: center;</code> - Can align to the left side, right side, or in the center of the webpage. <br>
 <code>text-shadow: 3px black</code> - Shadow of text. Can be in pixels and colors.
 </p>
-<h4 id="pad-4">Padding Elements</h4>
+</div>
+<div id="pad-4">
+<h4>Padding Elements</h4>
 <p>
 <code>padding-top: 50px;</code> - Separation. Can be top, left, right, and the bottom in pixels.<br>
 <code>margin: 50px;</code> - A margin. Can be in pixels.<br>
 <code>border-width: 5px;</code> - Border width. Can be thin, medium, thick, or just pixels.<br>
 <code>border-style: dotted;</code> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
 <code>width=500px;</code> - Width of the element. Can be pixels or percentages.</p>
-<h4 id="color-4">Color Elements</h4>
+</div>
+<div id="color-4">
+<h4>Color Elements</h4>
 <p><code>color: red;</code> - Color of the element, can be hexadecimal, or RGB.<br>
 <code>background-color: white;</code> - Background color of the element.</p>
-<h4 id="eci-4">Extra: Centering Images</h4>
+</div>
+<div id="eci-4">
+<h4>Extra: Centering Images</h4>
 <code>img {<br>
    margin: 0 auto;<br>
    display: block;<br>
 }</code>
+  </div>
   </div></div></div>
   </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
 <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#jb">JavaScript Basics</button><div class="modal fade" id="jb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
@@ -400,29 +433,39 @@ h1, h4, h6, h2 {<br>
       <a class="list-group-item list-group-item-action" href="#data-2">Data Types</a>
             </div></div><div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<h4 id="html-2">Including JavaScript in an HTML Page</h4>
+<div id="html-2">
+<h4>Including JavaScript in an HTML Page</h4>
 <p><code>&lt;script type="text/javascript"&gt; <br>
  //JS code goes here <br>
 &lt;/script&gt; </code></p>
-<h4 id="call-2">Call an External JavaScript File</h4>
+</div>
+<div id="call-2">
+<h4>Call an External JavaScript File</h4>
      <p> <code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code></p>
-<h4 id="com-2">Including Comments</h4>
+</div>
+<div id="com-2">
+<h4>Including Comments</h4>
 <p>Single line comments - <code>// Comment</code> <br>
 Multi-line comments - <code>/* comment here */</code></p>
-<h4 id="var-2">Variables</h4>
+</div>
+<div id="var-2">
+<h4>Variables</h4>
 <p>
 <code>var, const, let</code><br>
 <code>var</code> — The most common variable. Can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
 <code>const</code> — Can not be reassigned and not accessible before they appear within the code.<br>
 <code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
-<h4 id="data-2">Data Types</h4>
+</p>
+</div>
+<div id="data-2">
+<h4>Data Types</h4>
 Numbers — <code>var age = 23</code> <br>
 Variables — <code>var x</code><br>
 Text (strings) — <code>var a = "init"</code><br>
 Operations — <code>var b = 1 + 2 + 3</code><br>
 True or fase statements — <code>var c = true</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
-Objects — <code>var name = {firstName:"John", lastName:”Doe"}</code> </p>
+Objects — <code>var name = {firstName:"John", lastName:”Doe"}</code> <p></p>
 <p><b>Objects Example</b> <br>
 <code>
 var person = {<br>
@@ -432,6 +475,7 @@ var person = {<br>
  nationality:"American"<br>
 };
   </code></p>
+          </div>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
 
           </div> </main>
