@@ -14,19 +14,20 @@
     <meta name="author" content="CodingLive">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/static/purecookie.js"></script>
+    <script src="/static/darkmode.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script> 
     </head>
-  <body>
+  <body class="fixedtopnavimage">
   <div id="page">
 <header>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark shadow-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">AT Products LLC</a>
+    <a class="navbar-brand" href="/"><img src="/media/images/longwhite.png" height="45px" alt="Icon"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link" href="/">AT Products</a>
         </li>
@@ -48,14 +49,43 @@
             <li><a class="dropdown-item" href="/noodle">Noodle Hackerspace</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
-            <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
-            <li><a class="dropdown-item" href="/policies">Policies</a></li>
-          </ul>
-        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
+              <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
+              <li><a class="dropdown-item" href="/policies">Policies</a></li>
+            </ul>
+          </li>
+        </ul>
+        <hr class="m-2 permhr">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">Toggle theme</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;" data-bs-popper="static">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
+                  Light
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-moon-stars-fill"></i>
+                  Dark
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-circle-half"></i>
+                  Auto
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+            </ul>
+          </li>
       </ul>
     </div>
   </div>
@@ -72,6 +102,7 @@
           <a href="#code">Code Samples</a>
           <a href="#app">Apps &amp; Software</a>
           <a href="#py">Python Basics</a>
+          <a href="#cpp">C++ Basics</a>
           <a href="#html">HTML Basics</a>
           <a href="#css">CSS Basics</a>
           <a href="#js">JavaScript Basics</a>       
@@ -195,6 +226,53 @@ print(type(y))</code></p>
 <p>Float is a number, positive or negative, containing one or more decimals.</p>
 <p>Both strings and numbers are built-in data types.</p>
           </div></div></div>
+  </div> <hr> <div id="cpp">
+<h2> C++ Basics </h2>
+        <div class="dmrow">
+          <div class="col-4b">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#strings-5">Strings</a>
+      <a class="list-group-item list-group-item-action" href="#integers-5">Integers and Floating Point Numbers</a>
+      <a class="list-group-item list-group-item-action" href="#print-5">Print</a>
+            </div></div><div class="col-8b">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<h4 id="strings-1">Strings</h4>
+<p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
+<code>
+#include &lt;ostream&gt;<br>
+#include &lt;string&gt;<br><br><br>
+int main()<br>
+{<br>
+    // Declare a string variable<br>
+    std::string str = "codinghome";<br>
+}
+</code>
+<h4 id="integers-5">Integers and Floating Point Numbers</h4>
+<p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple.</p>
+<code>
+#include &lt;iostream&gt;<br><br>
+int main()<br>
+{<br>
+    // Declare an integer variable<br>
+    int num = 10;<br><br>
+    // Declare a floating-point variable<br>
+    float fnum = 10.5;<br>
+}
+</code>
+<h4 id="print-5">Print</h4>
+<code>
+#include &lt;iostream&gt;<br><br>
+int main()<br>
+{<br>
+    // Declare an integer variable<br>
+    int num = 10;<br><br>
+    // Declare a floating-point variable<br>
+    float fnum = 10.5;<br><br>
+    std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl;  // &lt;-- Prints the integer Variable (Variable num)
+    std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point Variable(Variable fnum)
+}
+</code>
+</div></div></div>
 </div> <hr> <div id="html"> 
      <h2> HTML Basics </h2>
         <div class="dmrow">
@@ -355,7 +433,7 @@ var person = {<br>
     <div class="row">
       <div class="col-2">
        <div class="a">
-         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon"></a></div>
+         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
            <br>
            <h5><a href="/">AT Products LLC</a></h5>
           </div></div>
