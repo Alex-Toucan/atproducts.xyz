@@ -1,1 +1,1 @@
-document.write("A2-2.12");
+document.write("2.12");
