@@ -16,18 +16,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/static/purecookie.js"></script>
+    <script src="/static/darkmode.js"></script>
   </head>
-  <body>
+  <body class="fixedtopnavimage">
   <div id="page">
 <header>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark shadow-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">AT Products LLC</a>
+    <a class="navbar-brand" href="/"><img src="/media/images/longwhite.png" height="45px" alt="Icon"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link" href="/">AT Products</a>
         </li>
@@ -49,14 +50,43 @@
             <li><a class="dropdown-item" href="/noodle">Noodle Hackerspace</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
-            <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
-            <li><a class="dropdown-item" href="/policies">Policies</a></li>
-          </ul>
-        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
+              <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
+              <li><a class="dropdown-item" href="/policies">Policies</a></li>
+            </ul>
+          </li>
+        </ul>
+        <hr class="m-2 permhr">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">Toggle theme</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;" data-bs-popper="static">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
+                  Light
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-moon-stars-fill"></i>
+                  Dark
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-circle-half"></i>
+                  Auto
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+            </ul>
+          </li>
       </ul>
     </div>
   </div>
@@ -107,12 +137,15 @@
       <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
             </div></div><div class="col-8b">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<h4 id="com-3">Comments</h4>
+<div id="com-3">
+<h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
 py <br>
 # This is a comment
 </code></p>
-<h4 id="data-3">Data Types</h4>
+</div>
+<div id="data-3">
+<h>Data Types</h4>
 <p>Variables can store data of different types, and different types can do different things.</p>
 <p>Python has the following data types built-in by default, in these categories:<br>
 Text Type: <code>str</code><br>
@@ -129,7 +162,9 @@ py <br>
 x = 5 <br>
 print(type(x))
 </code></p>
-<h4 id="str-3">Strings</h4>
+</div>
+<div id=""str-3">
+<h4>Strings</h4>
 <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
 <code>
 py <br>
@@ -137,7 +172,7 @@ x = "hello" <br>
 y = 'hello' <br>
 # single quotations and double quotation marks are the same<br>
 x == y # returns True
-</code></p>
+</code><p></p>
 <p>You can assign a multiline string to a variable by using three quotes:<br>
 <code>
 py <br>
@@ -147,7 +182,9 @@ x = """The FitnessGram Pacer test is a multistage aerobic capacity test that pro
 <code>py<br>
 x = "hello"<br>
 print(len(text)) # returns 5<br></code></p>
-<h4 id="num-3">Numbers</h4>
+</div>
+<div id="num-3"">
+<h4>Numbers</h4>
 <p>There are 2 primary, <code>int</code> and <code>float</code></p><p><code>
 py<br>
 x = 2 # int<br>
@@ -160,6 +197,7 @@ print(type(y))</code></p>
 <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
 <p>Float is a number, positive or negative, containing one or more decimals.</p>
 <p>Both strings and numbers are built-in data types.</p>
+</div>
           </div></div></div>
      </div> <hr> <div id="js">
 <h2> JavaScript Basics </h2>
@@ -173,29 +211,39 @@ print(type(y))</code></p>
       <a class="list-group-item list-group-item-action" href="#data-2">Data Types</a>
             </div></div><div class="col-8b">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<h4 id="html-2">Including JavaScript in an HTML Page</h4>
+<div id="html-2">
+<h4>Including JavaScript in an HTML Page</h4>
 <p><code>&lt;script type="text/javascript"&gt; <br>
  //JS code goes here <br>
 &lt;/script&gt; </code></p>
-<h4 id="call-2">Call an External JavaScript File</h4>
+</div>
+<div id="call-2">
+<h4>Call an External JavaScript File</h4>
      <p> <code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code></p>
-<h4 id="com-2">Including Comments</h4>
+</div>
+<div id="com-2">
+<h4>Including Comments</h4>
 <p>Single line comments - <code>// Comment</code> <br>
 Multi-line comments - <code>/* comment here */</code></p>
-<h4 id="var-2">Variables</h4>
+</div>
+<div id="var-2">
+<h4>Variables</h4>
 <p>
 <code>var, const, let</code><br>
 <code>var</code> — The most common variable. Can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
 <code>const</code> — Can not be reassigned and not accessible before they appear within the code.<br>
 <code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
-<h4 id="data-2">Data Types</h4>
+</p>
+</div>
+<div id="data-2">
+<h4>Data Types</h4>
 Numbers — <code>var age = 23</code> <br>
 Variables — <code>var x</code><br>
 Text (strings) — <code>var a = "init"</code><br>
 Operations — <code>var b = 1 + 2 + 3</code><br>
 True or fase statements — <code>var c = true</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
-Objects — <code>var name = {firstName:"John", lastName:”Doe"}</code> </p>
+Objects — <code>var name = {firstName:"John", lastName:”Doe"}</code> <p></p>
 <p><b>Objects Example</b> <br>
 <code>
 var person = {<br>
@@ -205,6 +253,7 @@ var person = {<br>
  nationality:"American"<br>
 };
   </code></p>
+          </div>
           </div></div></div>
      </div>
  <hr> <div id="html"> <h2> HTML Basics </h2>
@@ -218,7 +267,8 @@ var person = {<br>
       <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
             </div></div><div class="col-8b">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<h4 id="example-1"> Example Document</h4>
+<div id="example-1">
+<h4>Example Document</h4>
 <code>
 &lt;!DOCTYPE HTML&gt; <br>
 &lt;html&gt; <br>
@@ -232,21 +282,30 @@ var person = {<br>
 &lt;/body&gt; <br>
 &lt;/html&gt; <br>
 </code>
-<p>We gotta first lay down the very first thing to know. The <code>&lt;!DOCTYPE html&gt;</code> tag represents the Document Type and helps some browsers display correctly with your website, must only be used once. Some elements do need closing tag, like <code>&lt;/center&gt;</code>.</p>
+<p>We got to first lay down the very first thing to know. The <code>&lt;!DOCTYPE html&gt;</code> tag represents the Document Type and helps some browsers display correctly with your website, must only be used once. Some elements do need a closing tag, like <code>&lt;/center&gt;</code>.</p>
 <p>The <code>&lt;head&gt;</code> tag is needed to represent the head of the website. The <code>&lt;body&gt;</code> tag is the same thing, but it's the body.</p>
-<h4 id="text-1">HTML Text</h4>
+</div>
+<div id="text-1">
+<h4>HTML Text</h4>
 <p>Some elements are meant to show text like <code>&lt;text&gt;</code>, and <code>&lt;p&gt;</code>.</p>
 <p><code>&lt;p&gt; This is text &lt;/p&gt;</code></p>
-<h4 id="head-1">HTML Headings</h4>
+</div>
+<div id="head-1">
+<h4>HTML Headings</h4>
 <p>The <code>&lt;h&gt;</code> tag has 6 different sizes, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.</p>
 <p>1 is the hugest, to 6 is the smallest.</p>
 <p><code>&lt;h1&gt; This is a heading &lt;/h1&gt;</code></p>
-<h4 id="link-1">HTML Links</h4>
+</div>
+<div id="link-1">
+<h4>HTML Links</h4>
 <p>The <code>&lt;a&gt;</code> is a text element to represent links. Once clicked on the hyperlink, will redirect the user to a new link.</p>
-<p><code>&lt;a href="atproducts.tk">Example Website&lt;/a&gt;</code></p>
-<h4 id="img-1">HTML Images</h4>
+<p><code>&lt;a href="atproducts.tk"&gt;Example Website&lt;/a&gt;</code></p>
+</div>
+<div id="img-1">
+<h4>HTML Images</h4>
 <p>The <code>&lt;img&gt;</code> tag is to show a image. The width or height description can be used by pixels or percentages by displays. The <code>alt</code> tag shows up when the image doesn't load or can't load, it shows the description.</p>
 <p><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></p>
+          </div>
           </div></div></div>
      </div> <hr> <div id="osint">
 <h2> OSINT </h2>
@@ -415,7 +474,7 @@ var person = {<br>
     <div class="row">
       <div class="col-2">
        <div class="a">
-         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon"></a></div>
+         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
            <br>
            <h5><a href="/">AT Products LLC</a></h5>
           </div></div>

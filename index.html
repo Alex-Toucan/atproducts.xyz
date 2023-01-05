@@ -29,18 +29,19 @@
     <meta name="google-site-verification" content="8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M">    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="/static/purecookie.js"></script>
+    <script src="/static/darkmode.js"></script>
   </head>
-  <body>
+  <body class="fixedtopnavimage">
       <div id="page">
 <header>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark shadow-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">AT Products LLC</a>
+    <a class="navbar-brand" href="/"><img src="/media/images/longwhite.png" height="45px" alt="Icon"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link" href="/">AT Products</a>
         </li>
@@ -62,14 +63,43 @@
             <li><a class="dropdown-item" href="/noodle">Noodle Hackerspace</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
-            <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
-            <li><a class="dropdown-item" href="/policies">Policies</a></li>
-          </ul>
-        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
+              <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
+              <li><a class="dropdown-item" href="/policies">Policies</a></li>
+            </ul>
+          </li>
+        </ul>
+        <hr class="m-2 permhr">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">Toggle theme</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;" data-bs-popper="static">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
+                  Light
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-moon-stars-fill"></i>
+                  Dark
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-circle-half"></i>
+                  Auto
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+            </ul>
+          </li>
       </ul>
     </div>
   </div>
@@ -77,7 +107,7 @@
     </header>
         <main id="index" class="a lrpad"> <div id="intro">    
 <h1 class="title"> AT Products (LLC) </h1>
-  <img src="/media/images/94952755_padded_logo.png" width="45%" alt="icon" style="padding-top:5px;">
+  <img src="/media/images/94952755_padded_logo.png" width="45%" alt="icon" style="padding-top:5px;" class="mainimg">
       <br> <br>
            <div class="dropdown">
           <button class="dropbtn">Navigation</button>
@@ -111,11 +141,17 @@
   </div>
  </div> 
           <hr>
-<div id="carousel-A" class="carousel carousel-main carousel-dark carousel-fade slide" data-bs-ride="true">
+<div id="carousel-A" class="carousel carousel-main carousel-fade slide" data-bs-ride="true">
 <div class="carousel-indicators">
   <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-  <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/media/slideshow/1ER-212-1-010423.webp" class="d-block w-100" alt="2.12 Preview">
+    </div>
+    <div class="carousel-item">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="/media/slideshow/NY23-1.webp" class="d-block w-100" alt="New Year of 2023 message.">
@@ -177,20 +213,16 @@ Beginning in 2019, this company was just a thought, and the past logo was alread
 </div><hr>
 <div id="what-new">
   <h2> What's New? </h2>
-  <p><b> Released on:</b> December 14th, 2022.<br>
-  <b>ATP Database:</b> 2.11
+  <p><b> Released on:</b> January 4th, 2023.<br>
+  <b>ATP Database:</b> 2.12
   <br> <br> 
     <b>Added</b><br>
-Added the new collapse menu, replacing the copyright text on the footer, with the text and more information on it. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Added new Policies and Web Projects pages are supposed to take up navbar and footer entries to make them less cramped. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Added a policy, the Title IX policy. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Added the new Encochat entry in code samples in CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Added licenses for our website. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/56" target="_blank" rel="noopener noreferrer">(#56)</a><br>
- Added a new <code>modal-body-title</code> class with padding on the bottom of modal body titles. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Readded AT's ROM Games  <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br><br>
+Readded Dark Mode as a optional feature. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/63" target="_blank" rel="noopener noreferrer">(#63)</a><br>
+Added the switch to both Light Mode and Dark Mode, and also with the Auto theme function. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/63" target="_blank" rel="noopener noreferrer">(#63)</a><br>
+Added C++ Basics to CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/63" target="_blank" rel="noopener noreferrer">(#63)</a><br>
     <b>Changed</b><br>
-MDickie Projects and Flash Documentation have new logos.  <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Changed pixels on the scroll padding.  <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
+The text in the navbar is now a image. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/63" target="_blank" rel="noopener noreferrer">(#63)</a><br>
+Updated Bootstrap from v5.2.3 to v5.3.0-alpha1. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/63" target="_blank" rel="noopener noreferrer">(#63)</a><br>
   </p>
 </div> </main>
 <footer>
@@ -200,7 +232,7 @@ Changed pixels on the scroll padding.  <a href="https://github.com/Alex-Toucan/a
     <div class="row">
       <div class="col-2">
        <div class="a">
-         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon"></a></div>
+         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
            <br>
            <h5><a href="/">AT Products LLC</a></h5>
           </div></div>
