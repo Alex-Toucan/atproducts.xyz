@@ -829,7 +829,8 @@ progress {
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.ororow > * {
+
+.prorow > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
