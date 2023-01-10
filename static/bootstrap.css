@@ -1415,7 +1415,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 767.98px) {
   .col-md {
     flex: 1 0 0%;
   }
@@ -8491,64 +8491,66 @@ textarea.form-control-lg {
 
 /* Custom padding percentage settings */
 
-.pcp-1 {
-  padding-left: 8.33333333%;
-  padding-right: 8.33333333%;
-}
+@media (min-width:767.98px) {
+  .pcp-1 {
+    padding-left: 8.33333333%;
+    padding-right: 8.33333333%;
+  }
 
-.pcp-2 {
-  padding-left: 16.66666667%;
-  padding-right: 16.66666667%;
-}
+  .pcp-2 {
+    padding-left: 16.66666667%;
+    padding-right: 16.66666667%;
+  }
 
-.pcp-3 {
-  padding-left: 25%;
-  padding-right: 25%;
-}
+  .pcp-3 {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
 
-.pcp-4 {
-  padding-left: 33.33333333%;
-  padding-right: 33.33333333%;
-}
+  .pcp-4 {
+    padding-left: 33.33333333%;
+    padding-right: 33.33333333%;
+  }
 
-.pcp-5 {
-  padding-left: 41.66666667%;
-  padding-right: 41.66666667%;
-}
+  .pcp-5 {
+    padding-left: 41.66666667%;
+    padding-right: 41.66666667%;
+  }
 
-.pcp-6 {
-  padding-left: 50%;
-  padding-right: 50%;
-}
+  .pcp-6 {
+    padding-left: 50%;
+    padding-right: 50%;
+  }
 
-.pcp-7 {
-  padding-left: 58.33333333%;
-  padding-right: 58.33333333%;
-}
+  .pcp-7 {
+    padding-left: 58.33333333%;
+    padding-right: 58.33333333%;
+  }
 
-.pcp-8 {
-  padding-left: 66.66666667%;
-  padding-right: 66.66666667%;
-}
+  .pcp-8 {
+    padding-left: 66.66666667%;
+    padding-right: 66.66666667%;
+  }
 
-.pcp-9 {
-  padding-left: 75%;
-  padding-right: 75%;
-}
+  .pcp-9 {
+    padding-left: 75%;
+    padding-right: 75%;
+  }
 
-.pcp-10 {
-  padding-left: 83.33333333%;
-  padding-right: 83.33333333%;
-}
+  .pcp-10 {
+    padding-left: 83.33333333%;
+    padding-right: 83.33333333%;
+  }
 
-.pcp-11 {
-  padding-left: 91.66666667%;
-  padding-right: 91.66666667%;
-}
+  .pcp-11 {
+    padding-left: 91.66666667%;
+    padding-right: 91.66666667%;
+  }
 
-.pcp-12 {
-  padding-left: 100%;
-  padding-right: 100%;
+  .pcp-12 {
+    padding-left: 100%;
+    padding-right: 100%;
+  }
 }
 
 /* End custom padding percentage settings */
