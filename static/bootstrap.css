@@ -12677,7 +12677,7 @@ img.script {
 }
 
 [data-bs-theme=dark] img.flashimg {
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 [data-bs-theme=dark] img.footerimg {
