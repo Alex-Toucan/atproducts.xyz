@@ -12596,13 +12596,19 @@ a:hover.footer-info {
   color: #696969;
 }
 
-.fixedtopnav {
+body.fixedtopnav {
   padding-top: 56px;
+}
+
+html.fixedtopnav {
   scroll-padding-top: 61px;
 }
 
-.fixedtopnavimage {
+body.fixedtopnavimage {
   padding-top: 71px;
+}
+
+html.fixedtopnavimage {
   scroll-padding-top: 76px;
 }
 
