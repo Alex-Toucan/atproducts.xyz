@@ -4702,6 +4702,17 @@ textarea.form-control-lg {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
+
+/* Custom card settings */
+
+@media (max-width: 768px) {
+  .procard {
+    width: 100%;
+  }
+}
+
+/* End custom card settings */
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
