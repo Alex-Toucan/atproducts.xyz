@@ -4705,6 +4705,11 @@ textarea.form-control-lg {
 
 /* Custom card settings */
 
+.procard {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (min-width: 767.98px) {
   .procard {
     width: 18rem;
