@@ -12490,7 +12490,7 @@ textarea.form-control-lg {
 }
 
 @media (max-width:767.98px) {
-   .lrpad p, .lrpad img, .lrpad pre, .lrpad.row, .lrpad.card {
+   .lrpad p, .lrpad img:not(.card img), .lrpad pre, .lrpad.row, .lrpad.card {
       margin-left: 10px;
       margin-right: 10px;
    }
