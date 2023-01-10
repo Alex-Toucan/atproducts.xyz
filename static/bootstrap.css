@@ -12664,6 +12664,11 @@ img.script {
    padding: 0px!important;
 }
 
+[data-bs-theme=dark] img.proimg {
+    border-radius: 15px;
+    background: white;
+}
+
 [data-bs-theme=dark] img.mainimg {
     border-radius: 15px;
     background: white;
