@@ -12664,11 +12664,6 @@ img.script {
    padding: 0px!important;
 }
 
-[data-bs-theme=dark] img.proimg {
-    border-radius: 15px;
-    background: white;
-}
-
 [data-bs-theme=dark] img.mainimg {
     border-radius: 15px;
     background: white;
@@ -12679,6 +12674,10 @@ img.script {
   [data-bs-theme=dark] img.mainimg {
     width: 65%!important;
   }
+}
+
+[data-bs-theme=dark] img.flashimg {
+  margin: 10px;
 }
 
 [data-bs-theme=dark] img.footerimg {
