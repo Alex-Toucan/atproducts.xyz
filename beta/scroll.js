@@ -20,5 +20,8 @@ function scrollToTop() {
     behavior: "smooth"
   });
 }
-scrollToTopBtn.addEventListener("click", scrollToTop);
-document.addEventListener("scroll", handleScroll);
+
+window.onload=function(){
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+  document.addEventListener("scroll", handleScroll);
+}
