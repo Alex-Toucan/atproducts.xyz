@@ -21,7 +21,7 @@ function scrollToTop() {
   });
 }
 
-window.onload=function(){
+if(scrollToTopBtn) {
   scrollToTopBtn.addEventListener("click", scrollToTop);
   document.addEventListener("scroll", handleScroll);
 }
