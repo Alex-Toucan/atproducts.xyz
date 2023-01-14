@@ -199,7 +199,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  overflow-x: hidden;
+  overflow-x: hidden; /* Custom */
 }
 
 hr {
@@ -3604,6 +3604,8 @@ textarea.form-control-lg {
   --bs-btn-border-radius: 0.25rem;
 }
 
+/* Custom button square settings */
+
 .btn-square {
   width: 36px;
   height: 36px;
@@ -3626,6 +3628,8 @@ textarea.form-control-lg {
   padding-right: 0;
   text-align: center;
 }
+
+/* End custom button square settings */
 
 .fade {
   transition: opacity 0.15s linear;
