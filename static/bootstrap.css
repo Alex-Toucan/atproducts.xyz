@@ -12726,6 +12726,12 @@ nav .dropdown-menu .dropdown-item {
     z-index: 99;
 }
 
+@media (max-width:767.98px) {
+  .back-to-top {
+    bottom: 60px !important;
+  }
+}
+
 [data-bs-theme=light] .back-to-top {
     color: white;
     background-color: black;
@@ -12733,7 +12739,7 @@ nav .dropdown-menu .dropdown-item {
 
 [data-bs-theme=light] .back-to-top:hover {
   color: white;
-  background-color: #262626;
+  background-color: #f2f2f2;
 }
 
 [data-bs-theme=light] .back-to-top:active {
