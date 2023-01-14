@@ -12731,9 +12731,25 @@ nav .dropdown-menu .dropdown-item {
     background-color: black;
 }
 
+[data-bs-theme=light] .back-to-top:hover {
+  color: #f2f2f2;
+}
+
+[data-bs-theme=light] .back-to-top:active {
+  color: #404040;
+}
+
 [data-bs-theme=dark] .back-to-top {
     color: black;
     background-color: white;
+}
+
+[data-bs-theme=dark] .back-to-top:hover {
+  color: #f2f2f2;
+}
+
+[data-bs-theme=dark] .back-to-top:active {
+  color: #bfbfbf;
 }
 
 /* End secondary code */
