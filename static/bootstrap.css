@@ -12732,11 +12732,11 @@ nav .dropdown-menu .dropdown-item {
 }
 
 [data-bs-theme=light] .back-to-top:hover {
-  color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 [data-bs-theme=light] .back-to-top:active {
-  color: #404040;
+  background-color: #404040;
 }
 
 [data-bs-theme=dark] .back-to-top {
@@ -12745,11 +12745,11 @@ nav .dropdown-menu .dropdown-item {
 }
 
 [data-bs-theme=dark] .back-to-top:hover {
-  color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 [data-bs-theme=dark] .back-to-top:active {
-  color: #bfbfbf;
+  background-color: #bfbfbf;
 }
 
 /* End secondary code */
