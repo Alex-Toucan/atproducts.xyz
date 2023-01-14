@@ -3604,6 +3604,29 @@ textarea.form-control-lg {
   --bs-btn-border-radius: 0.25rem;
 }
 
+.btn-square {
+  width: 36px;
+  height: 36px;
+}
+
+.btn-sm-square {
+  width: 28px;
+  height: 28px;
+}
+
+.btn-lg-square {
+  width: 46px;
+  height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
 .fade {
   transition: opacity 0.15s linear;
 }
