@@ -12732,10 +12732,12 @@ nav .dropdown-menu .dropdown-item {
 }
 
 [data-bs-theme=light] .back-to-top:hover {
+  color: white;
   background-color: #f2f2f2;
 }
 
 [data-bs-theme=light] .back-to-top:active {
+  color: white;
   background-color: #404040;
 }
 
@@ -12745,10 +12747,12 @@ nav .dropdown-menu .dropdown-item {
 }
 
 [data-bs-theme=dark] .back-to-top:hover {
+  color: black;
   background-color: #f2f2f2;
 }
 
 [data-bs-theme=dark] .back-to-top:active {
+  color: black;
   background-color: #bfbfbf;
 }
 
