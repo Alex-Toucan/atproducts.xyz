@@ -12708,7 +12708,7 @@ img.script {
 [data-bs-theme=dark] img.footerimg {
     border-radius: 15px;
     background: white;
-    padding: 5px!important;
+    padding: 7.5px!important;
 }
 
 @media (max-width:767.98px) {
