@@ -12693,8 +12693,8 @@ html.fixedtopnavimage {
     }
 }
 
-h1.title, .h1.title {
-    padding-top: 5px;
+.title {
+    padding-top: 7.5px;
 }
 
 img.script {
