@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="fixedtopnavimage" lang="en">
   <head>
     <title>Noodle Hackerspace</title>
     <link rel="stylesheet" href="/static/cookie.css">
@@ -15,6 +15,8 @@
     <meta name="author" content="pynx & lynx">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="/static/scroll.js"></script>
     <script src="/static/purecookie.js"></script>
     <script src="/static/darkmode.js"></script>
   </head>
@@ -38,7 +40,7 @@
             <li><a class="dropdown-item" href="/paid">Paid Services</a></li>
             <li><a class="dropdown-item" href="/web">Web Projects</a></li>
             <li><a class="dropdown-item" href="/sms">SMS Bomb</a></li>
-            <li><a class="dropdown-item" href="/bxpp">BxPP</a></li>
+            <li><a class="dropdown-item" href="/pynx">Pynx's Projects</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -91,21 +93,22 @@
     </div>
   </div>
 </nav>
-    </header>     
+    </header>   
+       <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
 <main id="noodle" class="a lrpad"> <div id="intro">
     <h1 class="title"> Noodle Hackerspace </h1>
   <img src="/media/images/noodle.webp" height="128" width="128" alt="icon">
   <br> <br>
  <div class="fontrow">
-   <div class="feature-box font-col-lg-4">
+   <div class="feature-box font-col-4">
           <a href="https://discord.gg/r7qVKedjwR" target="_blank" rel="noopener noreferrer" aria-label="Discord Server Invite"><i class="bi bi-discord abicon"></i></a>
           <p class="mb-2"><a href="https://discord.gg/r7qVKedjwR" target="_blank" rel="noopener noreferrer">Discord Server Invite</a></p>
    </div> 
-    <div class="feature-box font-col-lg-4">
+    <div class="feature-box font-col-4">
           <a href="https://twitter.com/Aquoz_co" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter abicon"></i></a>
           <p class="mb-2"><a href="https://twitter.com/Aquoz_co" target="_blank" rel="noopener noreferrer">Twitter</a></p>
          </div>
-   <div class="feature-box font-col-lg-4">
+   <div class="feature-box font-col-4">
    <a href="https://pynxtech.pynxthegoat.repl.co/" target="_blank" rel="noopener noreferrer" aria-label="Pynx Technologies"><i class="bi bi-bullseye abicon"></i></a>
    <p class="mb-2"><a href="https://pynxtech.pynxthegoat.repl.co/" target="_blank" rel="noopener noreferrer">Pynx Technologies</a></p>
    </div> 
@@ -152,7 +155,7 @@
           <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-muted">Paid <br class="psbr">Services</a></li>
           <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-muted">Web Projects</a></li>
           <li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-muted">SMS Bomb</a></li>
-          <li class="nav-item mb-2"><a href="/bxpp" class="nav-link p-0 text-muted">BxPP</a></li>
+          <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-muted">Pynx's Projects</a></li>
         </ul>
       </div>
 
@@ -198,6 +201,7 @@
       <ul class="list-unstyled d-flex pe-3">
         <li class="ms-3"><a class="link-dark" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
         <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="link-dark" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
         <li class="ms-3"><a class="link-dark" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope"></i></a></li>
         <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
       </ul>

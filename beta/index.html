@@ -1,5 +1,8 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html class="fixedtopnavimage" lang="en">
   <head>
     <title>AT Products LLC</title> 
     <link rel="stylesheet" href="/static/cookie.css">
@@ -25,7 +28,9 @@
     <meta name="author" content="Alex Toucan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M">    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="/static/scroll.js"></script>
     <script src="/static/purecookie.js"></script>
     <script src="/static/darkmode.js"></script>
   </head>
@@ -49,7 +54,7 @@
             <li><a class="dropdown-item" href="/paid">Paid Services</a></li>
             <li><a class="dropdown-item" href="/web">Web Projects</a></li>
             <li><a class="dropdown-item" href="/sms">SMS Bomb</a></li>
-            <li><a class="dropdown-item" href="/bxpp">BxPP</a></li>
+            <li><a class="dropdown-item" href="/pynx">Pynx's Projects</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -102,10 +107,11 @@
     </div>
   </div>
 </nav>
-    </header>
+    </header>    
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
         <main id="index" class="a lrpad"> <div id="intro">    
-<h1 class="title" style="padding-bottom:5px;"> AT Products (LLC) </h1>
-  <img src="/media/images/94952755_padded_logo.png" width="45%" alt="icon" class="mainimg">
+<h1 class="title"> AT Products (LLC) </h1>
+  <img src="/media/images/94952755_padded_logo.png" width="45%" alt="icon" style="padding-top:5px;" class="mainimg">
       <br> <br>
            <div class="dropdown">
           <button class="dropbtn">Navigation</button>
@@ -120,44 +126,46 @@
         </div>
         <br> <br>
         <div class="fontrow">
-        <div class="feature-box font-col-lg-3">
+        <div class="feature-box font-col-4">
           <a href="https://github.com/Alex-Toucan/atproducts.xyz" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github abicon"></i></a>
           <p class="mb-2"><a href="https://github.com/Alex-Toucan/atproducts.xyz" target="_blank" rel="noopener noreferrer">GitHub</a></p>
         </div>
-        <div class="feature-box font-col-lg-3">
+        <div class="feature-box font-col-4">
          <a href="https://twitter.com/ATProductsLLC" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bi bi-twitter abicon"></i></a>
          <p class="mb-2"><a href="https://twitter.com/ATProductsLLC" target="_blank" rel="noopener noreferrer">Twitter</a></p>
-        </div>
-        <div class="feature-box font-col-lg-3">
+          </div>
+        <div class="feature-box font-col-4">
+        <a href="https://youtube.com/c/AlexToucanAT" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube abicon"></i></a>
+        <p class="mb-2"><a href="https://youtube.com/c/AlexToucanAT" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+          </div>
+                    </div>
+          <div class="fontrow">
+        <div class="feature-box font-col-6">
          <a href="mailto:support@atproducts.xyz" target="_blank" rel="noopener noreferrer" aria-label="Support Email"><i class="bi bi-envelope-fill abicon"></i></a>
          <p class="mb-2"><a href="mailto:support@atproducts.xyz" target="_blank" rel="noopener noreferrer">Support Email</a></p>
         </div>
-        <div class="feature-box font-col-lg-3">
+        <div class="feature-box font-col-6">
         <a href="https://twitter.com/ATPWeather" target="_blank" rel="noopener noreferrer" aria-label="Weather"><i class="bi bi-cloud-sun-fill abicon"></i></a>
         <p class="mb-2"><a href="https://twitter.com/ATPWeather" target="_blank" rel="noopener noreferrer">Weather</a></p>
           </div>
   </div>
  </div> 
           <hr>
-<div id="carousel-A" class="carousel carousel-main carousel-dark carousel-fade slide" data-bs-ride="true">
+<div id="carousel-A" class="carousel carousel-main carousel-fade slide" data-bs-ride="true">
 <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/media/slideshow/H2022-1.webp" class="d-block w-100" alt="Holiday Preview">
+      <img src="/media/slideshow/1ER-212-1-010423.webp" class="d-block w-100" alt="2.12 Preview">
     </div>
     <div class="carousel-item">
-      <img src="/media/slideshow/H2022-2.webp" class="d-block w-100" alt="Holiday Preview">
+      <img src="/media/slideshow/NY23-1.webp" class="d-block w-100" alt="New Year of 2023 message.">
     </div>
     <div class="carousel-item">
       <img src="/media/slideshow/H2022-3.webp" class="d-block w-100" alt="Holiday Preview">
-    </div>
-    <div class="carousel-item">
-      <img src="/media/slideshow/H2022-4.webp" class="d-block w-100" alt="Holiday Preview">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carousel-A" data-bs-slide="prev">
@@ -179,32 +187,150 @@
 <div id="products">
   <h2> Products </h2>
   <p> Note that malware, code, or scripts. will not be on this section, and will be on the Ethical Hacking Society, The Script Community, CodingHome, and Noodle Hackerspace only. </p>
-<br>
-  <p> <a href="/paid">Paid Services</a>, for our services! </p>
-  <p> <a href="/flash">Flash Documentation</a>, for things about Flash Player! </p>
-  <p> <a href="/mdickie">MDickie Projects</a>, a fanmade site about what has MDickie developed since the 1990s! </p>
-  <p> <a href="/sms">SMS Bomb</a> for Android Devices. You can SMS bomb your friends! </p>
-  <p> <a href="/bxpp">BxPP</a>, a Python programming language!</p>
-  <p> <a href="/backup/old">Public Archive</a> </p>
+  <div class="prorow">
+    <div class="col-md mt-1 mb-3">
+    <div class="card procard shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title">Paid Projects</h2>
+        <p class="card-text">View our Paid Services!</p>
+        <a href="/paid" class="btn btn-primary w-100">Visit</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md mt-1 mb-3">
+  <div class="card procard shadow-sm">
+    <img class="bg-white card-img-top" src="/media/images/flashdoc.png" alt="Flash Documentation">   
+    <div class="card-body">
+      <h2 class="card-title">Flash Documentation</h2>
+      <p class="card-text">Here are some things about Adobe Flash!</p>
+      <a href="/flash" class="btn btn-primary w-100">Visit</a>
+    </div>
+  </div>
+</div>
+<div class="col-md mt-1 mb-3">
+<div class="card procard shadow-sm">
+  <img class="bg-white card-img-top" src="/media/images/mdickiepro.png" alt="MDickie Projects">   
+  <div class="card-body">
+    <h2 class="card-title">MDickie Projects</h2>
+    <p class="card-text">This is a fanmade site about what has MDickie developed since the 1990s!</p>
+    <a href="/mdickie" class="btn btn-primary w-100">Visit</a>
+  </div>
+</div>
+</div>
+<div class="col-md mt-1 mb-3">
+<div class="card procard shadow-sm">
+  <div class="bg-white card-img-top"><img src="/media/images/ya.png" alt="MDickie Projects" width="25%" class="npy-1"></div>
+  <div class="card-body">
+    <h2 class="card-title">SMS Bomb</h2>
+    <p class="card-text">This is for Android Devices. You can SMS bomb your friends!</p>
+    <a href="/sms" class="btn btn-primary w-100">Visit</a>
+  </div>
+</div>
+</div>
+<div class="col-md mt-1 mb-3">
+<div class="card procard shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">Pynx's Projects</h2>
+    <p class="card-text">Partnered with PynxTech, we released these projects!</p>
+    <a href="/pynx" class="btn btn-primary w-100">Visit</a>
+  </div>
+</div>
+</div>
+  </div>
   <h3 class="title"> Discontinued Products </h3>
   <p> <a href="/roms">AT's ROM Games</a> for Windows and Mac Devices. Have your classic video games into ROMs and emulators! </p>
   </div> <hr>
   <div id="allies">
     <h2> Allies </h2>
-    <p> <a href="https://protdos.com/">ProtDos</a> (CodingHome) </p>
-    <p> <a href="https://pynxtech.pynxthegoat.repl.co/">Pynx Technologies</a> </p>
-    <p> <a href="http://astrodog.xyz">Astro Dog</a> </p>
-    <p> <a href="https://deltasoft-tools.netlify.app/">Deltasoft</a> </p>
-    <p> <a href="https://astrocore.net/">AstroCore</a> </p>
-    <p> <a href="https://discord.gg/9msysrzAr4">The CodingHome Universe</a> </p>
+      <div class="prorow">
+    <div class="col-md mt-1 mb-3">
+    <div class="card procard shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title">ProtDos (CodingHome)</h2>
+        <a href="https://protdos.com" class="btn btn-primary w-100">Visit</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md mt-1 mb-3">
+  <div class="card procard shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Pynx Technologies</h2>
+      <a href="https://pynxtech.pynxthegoat.repl.co/" class="btn btn-primary w-100">Visit</a>
+    </div>
+  </div>
+</div>
+<div class="col-md mt-1 mb-3">
+<div class="card procard shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">Astro Dog</h2>
+    <a href="http://astrodog.xyz/" class="btn btn-primary w-100">Visit</a>
+  </div>
+</div>
+</div>
+<div class="col-md mt-1 mb-3">
+<div class="card procard shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">Deltasoft</h2>
+    <a href="https://deltasoft-tools.netlify.app/" class="btn btn-primary w-100">Visit</a>
+  </div>
+</div>
+</div>
+<div class="col-md mt-1 mb-3">
+<div class="card procard shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">AstroCore</h2>
+    <a href="https://astrocore.net/" class="btn btn-primary w-100">Visit</a>
+  </div>
+</div>
+  <div class="col-md mt-1 mb-3">
+<div class="card procard shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">The CodingHome Universe</h2>
+    <a href="https://discord.gg/9msysrzAr4" class="btn btn-primary w-100">Visit</a>
+  </div>
+</div>
+  </div></div>
     </div><hr>
           <div id="credits">
               <h2> Credits </h2>
-  <p> <a href="https://protdos.com/">ProtDos</a> for allowing us to use their past CSS. </p>
-  <p> <a href="https://getbootstrap.com/">Bootstrap</a> for providing their CSS library for us to use. </p>
-  <p> <a href="https://sync-technologies.pynx.repl.co/">Pynx Technologies</a> for contributing to our website, and is willing to protect our website as well.</p>
-  <p> <a href="https://w3schools.com/">W3Schools</a> for the navigation buttons, and for 15% of the current CSS.</p>
-          </div><hr>
+       <div class="prorow">
+    <div class="col-md mt-1 mb-3">
+    <div class="card procard shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title">ProtDos</h2>
+        <p class="card-text">They allowed us to use their past CSS. (Bootstrap v3.3.7)</p>
+        <a href="https://protdos.com" class="btn btn-primary w-100">Visit</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md mt-1 mb-3">
+  <div class="card procard shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title">Bootstrap</h2>
+      <p class="card-text">They have provided their CSS library for us to use.</p>
+      <a href="https://getbootstrap.com" class="btn btn-primary w-100">Visit</a>
+    </div>
+  </div>
+</div>
+<div class="col-md mt-1 mb-3">
+<div class="card procard shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">Pynx Technologies</h2>
+    <p class="card-text">They have contributed to our website, and is willing to protect our website as well.</p>
+    <a href="https://sync-technologies.pynx.repl.co/" class="btn btn-primary w-100">Visit</a>
+  </div>
+</div>
+</div>
+<div class="col-md mt-1 mb-3">
+<div class="card procard shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">W3Schools</h2>
+    <p class="card-text">They have provided the navigation buttons, and 15% of the current CSS.</p>
+    <a href="https://w3schools.com" class="btn btn-primary w-100">Visit</a>
+  </div>
+</div>
+</div>
+</div>          </div><hr>
 <div id="history">
 <h2> History </h2> 
 <p> This is the history section about AT Products LLC, spanning from 2019 to today in 2022.
@@ -213,20 +339,16 @@ Beginning in 2019, this company was just a thought, and the past logo was alread
 </div><hr>
 <div id="what-new">
   <h2> What's New? </h2>
-  <p><b> Released on:</b> December 14th, 2022.<br>
-  <b>ATP Database:</b> 2.11
+  <p><b> Released on:</b> January 18th, 2023.<br>
+  <b>ATP Database:</b> 2.13
   <br> <br> 
     <b>Added</b><br>
-Added the new collapse menu, replacing the copyright text on the footer, with the text and more information on it. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Added new Policies and Web Projects pages are supposed to take up navbar and footer entries to make them less cramped. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Added a policy, the Title IX policy. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Added the new Encochat entry in code samples in CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Added licenses for our website. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/56" target="_blank" rel="noopener noreferrer">(#56)</a><br>
- Added a new <code>modal-body-title</code> class with padding on the bottom of modal body titles. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Readded AT's ROM Games  <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br><br>
-    <b>Changed</b><br>
-MDickie Projects and Flash Documentation have new logos.  <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
-Changed pixels on the scroll padding.  <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/52" target="_blank" rel="noopener noreferrer">(#52)</a><br>
+Added the scroll up to top button as it appears as you scroll. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/65" target="_blank" rel="noopener noreferrer">(#65)</a><br>
+Replaced the links in the index, Web Projects, and Polices with cards. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/65" target="_blank" rel="noopener noreferrer">(#65)</a><br>
+Added Pynx’s Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/65" target="_blank" rel="noopener noreferrer">(#65)</a><br>
+Added the YouTube Links for the index page and the footer. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/65" target="_blank" rel="noopener noreferrer">(#65)</a><br><br>
+    <b>Bugs Fixed</b><br>
+Fixed the image on MDickie Projects, AT’s ROM Games, and the backup page of Flash Documentation. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/65" target="_blank" rel="noopener noreferrer">(#65)</a> 
   </p>
 </div> </main>
 <footer>
@@ -246,7 +368,7 @@ Changed pixels on the scroll padding.  <a href="https://github.com/Alex-Toucan/a
           <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-muted">Paid <br class="psbr">Services</a></li>
           <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-muted">Web Projects</a></li>
           <li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-muted">SMS Bomb</a></li>
-          <li class="nav-item mb-2"><a href="/bxpp" class="nav-link p-0 text-muted">BxPP</a></li>
+          <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-muted">Pynx's Projects</a></li>
         </ul>
       </div>
 
@@ -292,6 +414,7 @@ Changed pixels on the scroll padding.  <a href="https://github.com/Alex-Toucan/a
       <ul class="list-unstyled d-flex pe-3">
         <li class="ms-3"><a class="link-dark" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
         <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="link-dark" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
         <li class="ms-3"><a class="link-dark" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope"></i></a></li>
         <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
       </ul>
