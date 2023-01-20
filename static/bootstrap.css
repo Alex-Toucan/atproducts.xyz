@@ -4035,6 +4035,50 @@ textarea.form-control-lg {
   --bs-dropdown-header-color: #adb5bd;
 }
 
+/* Animated dropdown menus */
+
+.dropdown-menu.collapsing {
+  display: block;
+}
+@media (max-width: 767.98px) {
+  .dropdown-menu {
+    padding: 0;
+    margin-top: 0!important;
+    border: 0!important;
+  }
+  .dropdown-menu:before {
+    content: "";
+    display: block;
+    padding-top: .5rem;
+  }
+  .dropdown-menu:after {
+    content: "";
+    display: block;
+    padding-bottom: .5rem;
+  }
+}
+@media (min-width: 768px) {
+  .dropdown>div {
+    position: absolute;
+    clip: rect(0.5rem, 9999px, 9999px, -9999px);
+  }
+  .dropdown-menu {
+    height: auto!important;
+    transition: transform .35s ease!important;
+  }
+  .dropdown-menu.collapse, .dropdown-menu.sliding {
+    transform: translate(0, -100%);
+  }
+  .dropdown-menu.collapse:not(.show) {
+    display: block;
+  }
+  .dropdown-menu.collapse.show {
+    transform: translate(0, 0);
+  }
+}
+
+/* End animated dropdown menus */
+
 .btn-group,
 .btn-group-vertical {
   position: relative;
