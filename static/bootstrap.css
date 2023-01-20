@@ -411,6 +411,56 @@ table {
   border-collapse: collapse;
 }
 
+/* Custom table settings */
+
+@media (max-width:450px) {
+   .tfonts {
+      font-size:80%;
+   }
+}
+
+@media (max-width:375px) {
+   .tfonts {
+      font-size:70%;
+   }
+}
+
+@media (max-width:350px) {
+   .tfonts {
+      font-size:60%;
+   }
+}
+
+@media (max-width:475px) {
+   .tfonts-m {
+      font-size:80%;
+   }
+}
+
+@media (max-width:400px) {
+   .tfonts-m {
+      font-size:70%;
+   }
+}
+
+@media (max-width:375px) {
+   .tfonts-m {
+      font-size:60%;
+   }
+}
+
+@media (max-width:320px) {
+   .tfonts {
+      font-size:50%;
+   }
+}
+
+.table-center {
+   margin: 0 auto;
+}
+
+/* End custom table settings */
+
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
