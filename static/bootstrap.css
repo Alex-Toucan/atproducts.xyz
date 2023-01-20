@@ -4058,7 +4058,7 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
-  .dropdown>div {
+  .dropdown>ul {
     position: absolute;
     clip: rect(0.5rem, 9999px, 9999px, -9999px);
   }
