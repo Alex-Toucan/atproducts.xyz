@@ -411,6 +411,56 @@ table {
   border-collapse: collapse;
 }
 
+/* Custom table settings */
+
+@media (max-width:450px) {
+   .tfonts {
+      font-size:80%;
+   }
+}
+
+@media (max-width:375px) {
+   .tfonts {
+      font-size:70%;
+   }
+}
+
+@media (max-width:350px) {
+   .tfonts {
+      font-size:60%;
+   }
+}
+
+@media (max-width:475px) {
+   .tfonts-m {
+      font-size:80%;
+   }
+}
+
+@media (max-width:400px) {
+   .tfonts-m {
+      font-size:70%;
+   }
+}
+
+@media (max-width:375px) {
+   .tfonts-m {
+      font-size:60%;
+   }
+}
+
+@media (max-width:320px) {
+   .tfonts {
+      font-size:50%;
+   }
+}
+
+.table-center {
+   margin: 0 auto;
+}
+
+/* End custom table settings */
+
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -3984,6 +4034,57 @@ textarea.form-control-lg {
   --bs-dropdown-link-disabled-color: #adb5bd;
   --bs-dropdown-header-color: #adb5bd;
 }
+
+/* Animated dropdown menus */
+
+
+  .dropdown-menu {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.dropdown-menu {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+/* End animated dropdown menus */
 
 .btn-group,
 .btn-group-vertical {
@@ -12693,7 +12794,7 @@ html.fixedtopnavimage {
     }
 }
 
-.title {
+.modal-body-title, .title {
     padding-top: 7.5px;
 }
 
