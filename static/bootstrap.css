@@ -12794,7 +12794,7 @@ html.fixedtopnavimage {
     }
 }
 
-.title {
+.modal-body-title, .title {
     padding-top: 7.5px;
 }
 
