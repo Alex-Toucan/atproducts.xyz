@@ -10238,7 +10238,7 @@ textarea.form-control-lg {
     text-align: center !important;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 1200px) and (min-width: 700px) {
   .float-xsm-start {
     float: left !important;
   }
