@@ -13283,8 +13283,12 @@ footer p {
   margin-bottom: 0!important;
 }
 
-a:hover.footer-info {
+[data-bs-theme=light] a:hover.footer-info {
   color: #696969;
+}
+
+[data-bs-theme=dark] a:hover.footer-info {
+  color: #969696;
 }
 
 body.fixedtopnav {
