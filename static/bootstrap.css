@@ -8909,7 +8909,7 @@ textarea.form-control-lg {
   padding-bottom: 3rem !important;
 }
 
-@media (max-width:768px) {
+@media (min-width:767.98px) {
   .ops-0 {
     padding-left: 0 !important;
   }
