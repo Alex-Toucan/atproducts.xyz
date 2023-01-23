@@ -8909,27 +8909,53 @@ textarea.form-control-lg {
   padding-bottom: 3rem !important;
 }
 
+@media (max-width:768px) {
+  .ps-0 {
+    padding-left: 0 !important;
+  }
+
+  .ps-1 {
+    padding-left: 0.25rem !important;
+  }
+
+  .ps-2 {
+    padding-left: 0.5rem !important;
+  }
+
+  .ps-3 {
+    padding-left: 1rem !important;
+  }
+
+  .ps-4 {
+    padding-left: 1.5rem !important;
+  }
+
+  .ps-5 {
+    padding-left: 3rem !important;
+   }
+}
+
 .ps-0 {
   padding-left: 0 !important;
 }
 
-.ps-1 {
+.nps-1 {
   padding-left: 0.25rem !important;
 }
 
-.ps-2 {
+.nps-2 {
   padding-left: 0.5rem !important;
 }
 
-.ps-3 {
+.nps-3 {
   padding-left: 1rem !important;
 }
 
-.ps-4 {
+.nps-4 {
   padding-left: 1.5rem !important;
 }
 
-.ps-5 {
+.nps-5 {
   padding-left: 3rem !important;
 }
 
