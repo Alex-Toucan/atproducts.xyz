@@ -16173,6 +16173,12 @@ img.script {
     padding: 7.5px!important;
 }
 
+@media (max-width:1199.98px) {
+  [data-bs-theme=dark] img.footerimg {
+    padding: 8.5px!important;
+  }
+}
+
 @media (max-width:767.98px) {
   [data-bs-theme=dark] img.footerimg {
     padding: 10px!important;
