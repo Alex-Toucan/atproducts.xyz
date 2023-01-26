@@ -15895,7 +15895,7 @@ textarea.form-control-lg {
 
 /* Secondary code */
 
-p:not(.card p, footer p, #resources p, .fontrow p), a:not(.card a, footer a, #resources a, .fontrow a) {
+p:not(.card p, footer p, #resources p, .fontrow p), a:not(.card a, footer a, #resources a, .fontrow a, a.back-to-top) {
   text-align: left !important;
 }
 
