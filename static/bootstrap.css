@@ -3257,7 +3257,7 @@ textarea.form-control-lg {
   font-weight: var(--bs-btn-font-weight);
   line-height: var(--bs-btn-line-height);
   color: var(--bs-btn-color);
-  text-align: center;
+  text-align: center !important;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
