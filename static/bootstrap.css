@@ -353,7 +353,6 @@ a:hover {
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover 
   text-decoration: none;
-  /* color: inherit; */
 }
 
 pre,
@@ -1009,6 +1008,7 @@ progress {
 
 @media (max-width:767.98px) {
    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+     text-align: center;
      margin-left: auto;
      margin-right: auto;
      width: 100%;
@@ -15895,12 +15895,8 @@ textarea.form-control-lg {
 
 /* Secondary code */
 
-.modal-body, p:not(.card p, footer p, #resources p, .fontrow p), a:not(.card a, footer a, #resources a, .fontrow a, a.back-to-top, .list-group-item a) {
+p:not(.card p, footer p, #resources p, .fontrow p, #intro p), a:not(.card a, footer a, #resources a, #intro a, .fontrow a, a.back-to-top) {
   text-align: left !important;
-}
-
-footer {
-  text-align: center;
 }
 
 @media (min-width:767.98px) {
