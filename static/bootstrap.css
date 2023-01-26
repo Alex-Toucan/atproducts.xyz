@@ -15895,6 +15895,10 @@ textarea.form-control-lg {
 
 /* Secondary code */
 
+p:not(.card-text p, footer p, #resources p), a:not(.card-text a, footer a, #resources a) {
+  text-align: left !important;
+}
+
 @media (min-width:767.98px) {
   .text-starttocenter {
     text-align: left;
