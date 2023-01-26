@@ -16194,20 +16194,14 @@ img.script {
 }
 
 [data-bs-theme=dark] img.footerimg {
-    border-radius: 15px;
+    border-radius: 12.5px;
     background: white;
     padding: 7.5px!important;
 }
 
-@media (max-width:1199.98px) {
-  [data-bs-theme=dark] img.footerimg {
-    padding: 9px!important;
-  }
-}
-
 @media (max-width:767.98px) {
   [data-bs-theme=dark] img.footerimg {
-    padding: 10px!important;
+    padding: 9px!important;
   }
 }
 
