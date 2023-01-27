@@ -16181,9 +16181,9 @@ html.fixedtopnavimage {
 }
 
 .modal-body-title, .title {
-    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     padding-top: 7.5px;
-    padding-bottom: 3.33px;
 }
 
 img.script {
