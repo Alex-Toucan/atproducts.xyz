@@ -5538,6 +5538,7 @@ textarea.form-control-lg {
   text-decoration: none;
   background-color: var(--bs-list-group-bg);
   border: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+  text-align: left !important;
 }
 .list-group-item:first-child {
   border-top-left-radius: inherit;
