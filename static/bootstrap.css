@@ -15895,8 +15895,13 @@ textarea.form-control-lg {
 
 /* Secondary code */
 
-.modal-body p, .modal-body a, code, p:not(.card p, footer p, #resources p, .fontrow p, #intro p), a:not(.card a, footer a, #resources a, #intro a, .fontrow a, a.back-to-top, .btn a) {
+.modal-body {
   text-align: left !important;
+}
+
+
+.card, footer, #resources, .fontrow, #intro, a.back-to-top, .btn {
+  text-align: center !important;
 }
 
 @media (min-width:767.98px) {
@@ -15978,17 +15983,18 @@ textarea.form-control-lg {
 }
 
 .a {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.b {
   text-align: left;
 }
 
-.c {
+
+.b {
   text-align: right;
+}
+
+.c {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .d {
