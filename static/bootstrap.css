@@ -16052,6 +16052,7 @@ footer div.a, footer.a {
       background-color: grey;
       color: white;
       padding: 10px;
+      text-align: center;
     }
 
     .old-fontrow {
@@ -16185,6 +16186,7 @@ html.fixedtopnavimage {
     margin-left: 0 !important;
     margin-right: 0 !important;
     padding-top: 7.5px;
+    text-align: center !important;
 }
 
 img.script {
