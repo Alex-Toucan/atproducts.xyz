@@ -6075,7 +6075,7 @@ textarea.form-control-lg {
 }
 
 .modal-title {
-  margin: 0;
+  margin: 0 !important;
   line-height: var(--bs-modal-title-line-height);
   text-align: left !important; /* Custom modal title settings */
 }
@@ -6084,6 +6084,7 @@ textarea.form-control-lg {
   position: relative;
   flex: 1 1 auto;
   padding: var(--bs-modal-padding);
+  text-align: left !important;
 }
 
 .modal-footer {
@@ -15922,12 +15923,14 @@ textarea.form-control-lg {
 .dmsize {
   margin-top: 0.5rem;
   overflow: auto;
+  text-align: left !important;
 }
 
 .basics-scroll {
     height: 350px;
     margin-top: 0.5rem;
     overflow: auto;
+    text-align: left !important;
 }
 
 @media (min-width: 500px) {
@@ -16168,17 +16171,14 @@ html.fixedtopnavimage {
     }
 }
 
-.modal-body {
-  text-align: left !important;
-}
-
 .card, footer, #resources, .fontrow, #intro, a.back-to-top, .btn {
   text-align: center !important;
 }
 
 .modal-body-title, .title {
-    margin: 0;
+    margin: 0 !important;
     padding-top: 7.5px;
+    padding-bottom: 3.33px;
 }
 
 img.script {
