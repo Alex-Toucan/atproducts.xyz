@@ -6075,7 +6075,7 @@ textarea.form-control-lg {
 }
 
 .modal-title {
-  margin-bottom: 0;
+  margin: 0;
   line-height: var(--bs-modal-title-line-height);
   text-align: left !important; /* Custom modal title settings */
 }
@@ -16177,6 +16177,7 @@ html.fixedtopnavimage {
 }
 
 .modal-body-title, .title {
+    margin: 0;
     padding-top: 7.5px;
 }
 
