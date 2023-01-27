@@ -16015,7 +16015,10 @@ footer div.a, footer.a {
    }
 }
 
-.modal-body .h1, .modal-body h1, .modal-body .h2, .modal-body h2, .modal-body .h3, .modal-body h3, .modal-body .h4, .modal-body h4, .modal-body .h5, .modal-body h5, .modal-body .h6, .modal-body h6 {
+.modal-body img, .modal-body .h1, .modal-body h1, .modal-body .h2, .modal-body h2, .modal-body .h3, .modal-body h3, .modal-body .h4, .modal-body h4, .modal-body .h5, .modal-body h5, .modal-body .h6, .modal-body h6 {
+  margin-left: 0!important;
+  margin-right: 0!imporant;
+}
 
 .carousel img {
   margin-left: 0 !important;
