@@ -15977,6 +15977,12 @@ textarea.form-control-lg {
   text-align: left;
 }
 
+.a footer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .b {
   text-align: right;
