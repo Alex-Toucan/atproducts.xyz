@@ -16190,6 +16190,12 @@ html.fixedtopnavimage {
   text-align: center !important;
 }
 
+@media (min-width:767.98px) {
+  footer h1, footer .h1, footer h2, footer .h2, footer .h3, footer h4, footer .h4, footer h5, footer .h5, footer h6, footer .h6,  {
+    text-align: center;
+  }
+}
+
 .modal-body-title, .title {
     margin-left: 0 !important;
     margin-right: 0 !important;
