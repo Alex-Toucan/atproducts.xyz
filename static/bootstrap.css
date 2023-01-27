@@ -15930,14 +15930,12 @@ textarea.form-control-lg {
 }
 
 .dmsize {
-  margin-top: 0.5rem;
   overflow: auto;
   text-align: left !important;
 }
 
 .basics-scroll {
     height: 350px;
-    margin-top: 0.5rem;
     overflow: auto;
     text-align: left !important;
 }
