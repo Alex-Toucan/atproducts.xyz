@@ -1011,6 +1011,8 @@ progress {
      text-align: center;
      margin-left: auto;
      margin-right: auto;
+     padding-left: 0.25rem;
+     padding-right: 0.25rem;
      width: 100%;
      margin-bottom: 10px;
    }
@@ -6076,6 +6078,7 @@ textarea.form-control-lg {
 }
 
 .modal-title {
+  padding: 0 !important;
   margin: 0 !important;
   line-height: var(--bs-modal-title-line-height);
   text-align: left !important; /* Custom modal title settings */
