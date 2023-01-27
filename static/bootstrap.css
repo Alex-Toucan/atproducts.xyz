@@ -15977,10 +15977,10 @@ textarea.form-control-lg {
   text-align: left;
 }
 
-.a footer {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+footer div.a, footer.a {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 
