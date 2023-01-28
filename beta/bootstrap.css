@@ -12669,8 +12669,8 @@ textarea.form-control-lg {
     }
 }
 
-.card, footer, #resources, .fontrow, #intro, a.back-to-top, .btn {
-  text-align: center !important;
+.card, #resources, .fontrow, #intro, a.back-to-top, .btn {
+  text-align: center;
 }
 
 .carousel img {
@@ -12772,8 +12772,6 @@ body.fixedtopnavimage {
 html.fixedtopnavimage {
   scroll-padding-top: 76px;
 }
-
-
 
 .modal-body-title, .title {
     padding-top: 7.5px;
