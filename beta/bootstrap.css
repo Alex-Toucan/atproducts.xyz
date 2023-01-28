@@ -12612,13 +12612,6 @@ textarea.form-control-lg {
   text-align: left;
 }
 
-footer div.a, footer.a {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-
 .b {
   text-align: right;
 }
@@ -12783,14 +12776,9 @@ html.fixedtopnavimage {
     }
 }
 
-.card, footer, #resources, .fontrow, #intro, a.back-to-top, .btn {
-  text-align: center !important;
-}
 
 .modal-body-title, .title {
-    margin: 0 !important;
     padding-top: 7.5px;
-    padding-bottom: 3.33px;
 }
 
 img.script {
