@@ -12609,10 +12609,10 @@ textarea.form-control-lg {
 }
 
 @media (max-width:767.98px) {
-  .lrpad {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
+   .lrpad p, .lrpad img:not(.card img), .lrpad pre, .lrpad.row, .lrpad.card, .lrpad.h1, .lrpad h1, .lrpad.h2, .lrpad h2, .lrpad.h3, .lrpad h3, .lrpad.h4, .lrpad h4, .lrpad.h5, .lrpad h5, .lrpad.h6, .lrpad h6 {
+      margin-left: 10px;
+      margin-right: 10px;
+   }
 }
 
 .a {
@@ -12633,8 +12633,44 @@ textarea.form-control-lg {
   text-align: justify;
 }
 
-#intro, #resources { /* ID elements */
-  text-align: center;
+@media (min-width: 768px) {
+   p:not(.accordion p, .modal p, .card p, footer p) {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+@media (min-width: 1024px) {
+   p:not(.accordion p, .modal p, .card p, footer p) {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+}
+
+
+@media (min-width: 1440px) {
+   p:not(.accordion p, .modal p, .card p, footer p) {
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+}
+
+@media (min-width: 2000px) {
+   p:not(.accordion p, .modal p, .card p, footer p) {
+        padding-right: 25%;
+        padding-left: 25%;
+    }
+}
+
+@media (min-width: 2560px) {
+   p:not(.accordion p, .modal p, .card p, footer p) {
+        padding-right: 33%;
+        padding-left: 33%;
+    }
+}
+
+.card, footer, #resources, .fontrow, #intro, a.back-to-top, .btn {
+  text-align: center !important;
 }
 
 .carousel img {
