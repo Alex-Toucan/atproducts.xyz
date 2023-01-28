@@ -12626,7 +12626,9 @@ textarea.form-control-lg {
   text-align: justify;
 }
 
-
+#intro, #resources { /* ID elements */
+  text-align: center;
+}
 
 .carousel img {
   margin-left: 0 !important;
