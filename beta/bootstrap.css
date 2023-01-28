@@ -12608,6 +12608,13 @@ textarea.form-control-lg {
    }
 }
 
+@media (max-width:767.98px) {
+  .lrpad {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 .a {
   text-align: left;
 }
