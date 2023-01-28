@@ -7552,6 +7552,17 @@ textarea.form-control-lg {
   color: #1a1e21 !important;
 }
 
+/* Custom link settings */
+
+[data-bs-theme=dark] .link-dark {
+  color: #adb5bd !important;
+}
+[data-bs-theme=dark] .link-dark:hover, .link-dark:focus {
+  color: #b5bcc4 !important;
+}
+
+/* End custom link settings */
+
 .ratio {
   position: relative;
   width: 100%;
