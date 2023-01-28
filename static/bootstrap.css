@@ -941,6 +941,71 @@ progress {
 
 /* Custom "col" settings */
 
+.sw-col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.sw-col-1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+
+.sw-col-2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+
+.sw-col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.sw-col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.sw-col-5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+}
+
+.sw-col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.sw-col-7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+
+.sw-col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.sw-col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.sw-col-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.sw-col-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+}
+
+.sw-col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
 .col-auto {
   flex: 0 0 auto;
   width: auto;
@@ -16056,14 +16121,14 @@ footer div.a, footer.a {
         }
       }
 
-    .old-feature-box {
+    .sw-feature-box {
       background-color: grey;
       color: white;
       padding: 10px;
       text-align: center;
     }
 
-    .old-fontrow {
+    .sw-fontrow {
       margin:10px;
       --bs-gutter-x: 1.5rem;
       --bs-gutter-y: 0;
@@ -16071,28 +16136,8 @@ footer div.a, footer.a {
       flex-wrap: wrap;
     }
     
-    .old-fontrow a:hover {
+    .sw-fontrow a:hover {
       color: wheat;
-    }
-      
-    .old-col-lg-3 {
-       flex: 0 0 auto;
-       width: 25%;
-    }
-    
-    .old-col-lg-4 {
-       flex: 0 0 auto;
-       width: 33.33333333%;
-    }  
-      
-    .old-col-lg-6 {
-       flex: 0 0 auto;
-       width: 50%;
-    }
-      
-    .old-col-lg-12 {
-      flex: 0 0 auto;
-      width: 100%;
     }
     
     .bright {
