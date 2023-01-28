@@ -12626,19 +12626,7 @@ textarea.form-control-lg {
   text-align: justify;
 }
 
-@media (min-width:767.98px) {
-   .lrpad:not(footer, .carousel, .modal) {
-      margin-left: 10px;
-      margin-right: 10px;
-   }
-}
 
-@media (max-width:767.98px) {
-   .lrpad:not(.card, footer, .carousel, .modal)
-      margin-left: 10px;
-      margin-right: 10px;
-   }
-}
 
 .carousel img {
   margin-left: 0 !important;
@@ -12740,41 +12728,6 @@ html.fixedtopnavimage {
   scroll-padding-top: 76px;
 }
 
-@media (min-width: 768px) {
-  .lrpad:not(footer, .carousel, .modal, .accordion, img) {
-        padding-right: 5%;
-        padding-left: 5%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lrpad:not(footer, .carousel, .modal, .accordion, img) {
-        padding-right: 10%;
-        padding-left: 10%;
-  }
-}
-
-
-@media (min-width: 1440px) {
-  .lrpad:not(footer, .carousel, .modal, .accordion, img) {
-        padding-right: 20%;
-        padding-left: 20%;
-  }
-}
-
-@media (min-width: 2000px) {
-  .lrpad:not(footer, .carousel, .modal, .accordion, img) {
-        padding-right: 25%;
-        padding-left: 25%;
-  }
-}
-
-@media (min-width: 2560px) {
-   .lrpad:not(footer, .carousel, .modal, .accordion, img) {
-        padding-right: 33%;
-        padding-left: 33%;
-  }
-}
 
 
 .modal-body-title, .title {
