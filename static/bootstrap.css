@@ -16070,7 +16070,7 @@ footer div.a, footer.a {
 
 @media (max-width: 767.98px) {
   .fatoc {
-    text-align: center;
+    text-align: center !important;
   }
 }
   
