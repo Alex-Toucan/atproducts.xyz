@@ -14318,6 +14318,12 @@ textarea.form-control-lg {
   text-align: justify;
 }
 
+@media (max-width: 767.98px) {
+  .fatoc {
+    text-align: center !important;
+  }
+}
+
 @media (min-width: 768px) {
    p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1), .h1:not(.card .h1), h2:not(.card h2), .h2:not(.card .h2), h3:not(.card h3) .h3:not(.card .h3), h4:not(.card h4), .h4:not(.card .h4), h5:not(.card h5), .h5:not(.card .h5), h6:not(.card h6), .h6:not(.card .h6) {
         padding-right: 5%;
