@@ -16073,6 +16073,13 @@ footer div.a, footer.a {
   text-align: justify;
 }
 
+@media (max-width: 767.98px) {
+  .fatoc {
+    text-align: center;
+  }
+}
+  
+
 @media (min-width:767.98px) {
    .lrpad {
       margin-left: 10px;
