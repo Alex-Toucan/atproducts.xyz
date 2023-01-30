@@ -14293,6 +14293,12 @@ textarea.form-control-lg {
    }
 }
 
+@media (min-width: 767.98px)
+.lrpad {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 @media (max-width:767.98px) {
    .lrpad p, .lrpad img:not(.card img), .lrpad pre, .lrpad.row, .lrpad.card, .lrpad.h1, .lrpad h1, .lrpad.h2, .lrpad h2, .lrpad.h3, .lrpad h3, .lrpad.h4, .lrpad h4, .lrpad.h5, .lrpad h5, .lrpad.h6, .lrpad h6 {
       margin-left: 10px;
