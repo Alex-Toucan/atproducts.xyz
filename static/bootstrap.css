@@ -6123,7 +6123,10 @@ textarea.form-control-lg {
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
-  padding: var(--bs-modal-header-padding);
+  padding-top: var(--bs-modal-header-padding);
+  padding-bottom: var(--bs-modal-header-padding);
+  padding-right: var(--bs-modal-header-padding);
+  padding-left: 0;
   border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
   border-top-left-radius: var(--bs-modal-inner-border-radius);
   border-top-right-radius: var(--bs-modal-inner-border-radius);
@@ -14404,7 +14407,7 @@ textarea.form-control-lg {
 }
 
 @media (max-width:767.98px) {
-   .lrpad .btn:not(.lrpad .btn-resource, .lrpad .w-100), .lrpad i:not(p i, .modal i), .lrpad a:not(p a, .modal a, a.btn), .lrpad p:not(.modal p), .lrpad img:not(.card img, .modal img), .lrpad pre, .lrpad.row, .lrpad.card, .lrpad .h1:not(.modal .h1), .lrpad h1:not(.modal h1), .lrpad .h2:not(.modal .h2), .lrpad h2:not(.modal h2), .lrpad .h3:not(.modal .h3), .lrpad h3:not(.modal h3), .lrpad .h4:not(.modal .h4), .lrpad h4:not(.modal h4), .lrpad .h5:not(.modal .h5), .lrpad h5:not(.modal h5), .lrpad .h6:not(.modal .h6), .lrpad h6:not(.modal h6) {
+   .lrpad p, .lrpad img:not(.card img), .lrpad pre, .lrpad.row, .lrpad.card, .lrpad.h1, .lrpad h1, .lrpad.h2, .lrpad h2, .lrpad.h3, .lrpad h3, .lrpad.h4, .lrpad h4, .lrpad.h5, .lrpad h5, .lrpad.h6, .lrpad h6 {
       margin-left: 10px;
       margin-right: 10px;
    }
@@ -14435,14 +14438,14 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 768px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1, .modal h1), .h1:not(.card .h1, footer .h1, .modal .h1), h2:not(.card h2, footer h2, .modal h2), .h2:not(.card .h2, footer .h2, .modal .h2), h3:not(.card h3, footer h3, .modal h3) .h3:not(.card .h3, footer .h3, .modal .h3), h4:not(.card h4, footer h4, .modal h4), .h4:not(.card .h4, footer .h4, .modal .h4), h5:not(.card h5, footer h5, .modal h5), .h5:not(.card .h5, footer .h5, .modal .h5), h6:not(.card h6, footer h6, .modal h6), .h6:not(.card .h6, footer .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 5%;
         padding-left: 5%;
     }
 }
 
 @media (min-width: 1024px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1, .modal h1), .h1:not(.card .h1, footer .h1, .modal .h1), h2:not(.card h2, footer h2, .modal h2), .h2:not(.card .h2, footer .h2, .modal .h2), h3:not(.card h3, footer h3, .modal h3) .h3:not(.card .h3, footer .h3, .modal .h3), h4:not(.card h4, footer h4, .modal h4), .h4:not(.card .h4, footer .h4, .modal .h4), h5:not(.card h5, footer h5, .modal h5), .h5:not(.card .h5, footer .h5, .modal .h5), h6:not(.card h6, footer h6, .modal h6), .h6:not(.card .h6, footer .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 10%;
         padding-left: 10%;
     }
@@ -14450,32 +14453,28 @@ textarea.form-control-lg {
 
 
 @media (min-width: 1440px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1, .modal h1), .h1:not(.card .h1, footer .h1, .modal .h1), h2:not(.card h2, footer h2, .modal h2), .h2:not(.card .h2, footer .h2, .modal .h2), h3:not(.card h3, footer h3, .modal h3) .h3:not(.card .h3, footer .h3, .modal .h3), h4:not(.card h4, footer h4, .modal h4), .h4:not(.card .h4, footer .h4, .modal .h4), h5:not(.card h5, footer h5, .modal h5), .h5:not(.card .h5, footer .h5, .modal .h5), h6:not(.card h6, footer h6, .modal h6), .h6:not(.card .h6, footer .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 20%;
         padding-left: 20%;
     }
 }
 
 @media (min-width: 2000px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1, .modal h1), .h1:not(.card .h1, footer .h1, .modal .h1), h2:not(.card h2, footer h2, .modal h2), .h2:not(.card .h2, footer .h2, .modal .h2), h3:not(.card h3, footer h3, .modal h3) .h3:not(.card .h3, footer .h3, .modal .h3), h4:not(.card h4, footer h4, .modal h4), .h4:not(.card .h4, footer .h4, .modal .h4), h5:not(.card h5, footer h5, .modal h5), .h5:not(.card .h5, footer .h5, .modal .h5), h6:not(.card h6, footer h6, .modal h6), .h6:not(.card .h6, footer .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 25%;
         padding-left: 25%;
     }
 }
 
 @media (min-width: 2560px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1, .modal h1), .h1:not(.card .h1, footer .h1, .modal .h1), h2:not(.card h2, footer h2, .modal h2), .h2:not(.card .h2, footer .h2, .modal .h2), h3:not(.card h3, footer h3, .modal h3) .h3:not(.card .h3, footer .h3, .modal .h3), h4:not(.card h4, footer h4, .modal h4), .h4:not(.card .h4, footer .h4, .modal .h4), h5:not(.card h5, footer h5, .modal h5), .h5:not(.card .h5, footer .h5, .modal .h5), h6:not(.card h6, footer h6, .modal h6), .h6:not(.card .h6, footer .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 33%;
         padding-left: 33%;
     }
 }
 
-.card:not(footer .card), #resources:not(#resources div.modal), .fontrow, #intro, a.back-to-top, .btn, .title {
+.card:not(footer .card), #resources:not(#resources .modal), #menu, .fontrow, #intro, a.back-to-top, .btn {
   text-align: center;
-}
-
-.modal {
-  text-align: left;
 }
 
 .carousel img {
