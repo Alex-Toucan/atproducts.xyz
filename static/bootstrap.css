@@ -8928,6 +8928,32 @@ textarea.form-control-lg {
   padding-bottom: 3rem !important;
 }
 
+@media (min-width:767.98px) {
+  .ops-0 {
+    padding-left: 0 !important;
+  }
+
+  .ops-1 {
+    padding-left: 0.25rem !important;
+  }
+
+  .ops-2 {
+    padding-left: 0.5rem !important;
+  }
+
+  .ops-3 {
+    padding-left: 1rem !important;
+  }
+
+  .ops-4 {
+    padding-left: 1.5rem !important;
+  }
+
+  .ops-5 {
+    padding-left: 3rem !important;
+   }
+}
+
 .ps-0 {
   padding-left: 0 !important;
 }
@@ -14291,6 +14317,13 @@ textarea.form-control-lg {
    img.script, img.flash {
       width: 33%
    }
+}
+
+@media (min-width: 767.98px) {
+  .lrpad {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 @media (max-width:767.98px) {
