@@ -14470,7 +14470,7 @@ textarea.form-control-lg {
     }
 }
 
-.card:not(footer .card), #resources:not(#resources div.modal), .fontrow, #intro, a.back-to-top, .btn {
+.card:not(footer .card), #resources:not(#resources div.modal), .fontrow, #intro, a.back-to-top, .btn, .title {
   text-align: center;
 }
 
