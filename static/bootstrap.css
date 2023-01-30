@@ -6123,10 +6123,8 @@ textarea.form-control-lg {
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
-  padding-top: var(--bs-modal-header-padding);
-  padding-bottom: var(--bs-modal-header-padding);
-  padding-right: var(--bs-modal-header-padding);
-  padding-left: 0;
+  padding: var(--bs-modal-header-padding);
+  padding-left: 0.25rem;
   border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
   border-top-left-radius: var(--bs-modal-inner-border-radius);
   border-top-right-radius: var(--bs-modal-inner-border-radius);
@@ -14473,8 +14471,12 @@ textarea.form-control-lg {
     }
 }
 
-.card:not(footer .card), #resources:not(#resources .modal), .fontrow, #intro, a.back-to-top, .btn {
+.card:not(footer .card), #resources:not(#resources div.modal), .fontrow, #intro, a.back-to-top, .btn {
   text-align: center;
+}
+
+.modal {
+  text-align: left;
 }
 
 .carousel img {
