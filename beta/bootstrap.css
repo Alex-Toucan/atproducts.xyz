@@ -14293,10 +14293,11 @@ textarea.form-control-lg {
    }
 }
 
-@media (min-width: 767.98px)
-.lrpad {
+@media (min-width: 767.98px) {
+  .lrpad {
     margin-left: 10px;
     margin-right: 10px;
+  }
 }
 
 @media (max-width:767.98px) {
