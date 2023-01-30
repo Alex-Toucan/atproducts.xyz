@@ -8817,7 +8817,7 @@ textarea.form-control-lg {
 /* Custom "pt" settings */
 
 @media (max-width:767.98px) {
-   .container, .pt-0, .pt-1, .pt-2, .pt-3, .pt-4, .pt-5 {
+   .container, .fpt-0, .fpt-1, .fpt-2, .fpt-3, .fpt-4, .fpt-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
