@@ -14325,14 +14325,14 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 768px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1), .h1:not(.card .h1), h2:not(.card h2), .h2:not(.card .h2), h3:not(.card h3) .h3:not(.card .h3), h4:not(.card h4), .h4:not(.card .h4), h5:not(.card h5), .h5:not(.card .h5), h6:not(.card h6), .h6:not(.card .h6) {
+   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 5%;
         padding-left: 5%;
     }
 }
 
 @media (min-width: 1024px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1), .h1:not(.card .h1), h2:not(.card h2), .h2:not(.card .h2), h3:not(.card h3) .h3:not(.card .h3), h4:not(.card h4), .h4:not(.card .h4), h5:not(.card h5), .h5:not(.card .h5), h6:not(.card h6), .h6:not(.card .h6) {
+   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 10%;
         padding-left: 10%;
     }
@@ -14340,21 +14340,21 @@ textarea.form-control-lg {
 
 
 @media (min-width: 1440px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1), .h1:not(.card .h1), h2:not(.card h2), .h2:not(.card .h2), h3:not(.card h3) .h3:not(.card .h3), h4:not(.card h4), .h4:not(.card .h4), h5:not(.card h5), .h5:not(.card .h5), h6:not(.card h6), .h6:not(.card .h6) {
+   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 20%;
         padding-left: 20%;
     }
 }
 
 @media (min-width: 2000px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1), .h1:not(.card .h1), h2:not(.card h2), .h2:not(.card .h2), h3:not(.card h3) .h3:not(.card .h3), h4:not(.card h4), .h4:not(.card .h4), h5:not(.card h5), .h5:not(.card .h5), h6:not(.card h6), .h6:not(.card .h6) {
+   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 25%;
         padding-left: 25%;
     }
 }
 
 @media (min-width: 2560px) {
-   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1), .h1:not(.card .h1), h2:not(.card h2), .h2:not(.card .h2), h3:not(.card h3) .h3:not(.card .h3), h4:not(.card h4), .h4:not(.card .h4), h5:not(.card h5), .h5:not(.card .h5), h6:not(.card h6), .h6:not(.card .h6) {
+   p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 33%;
         padding-left: 33%;
     }
