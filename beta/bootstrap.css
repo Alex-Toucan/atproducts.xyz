@@ -14436,7 +14436,7 @@ textarea.form-control-lg {
     }
 }
 
-.card, #resources, .fontrow, #intro, a.back-to-top, .btn {
+.card:not(footer .card), #resources, .fontrow, #intro, a.back-to-top, .btn {
   text-align: center;
 }
 
