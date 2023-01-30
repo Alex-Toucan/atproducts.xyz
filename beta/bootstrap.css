@@ -8505,6 +8505,49 @@ textarea.form-control-lg {
   margin-bottom: auto !important;
 }
 
+/* Custom "mt" settings */
+
+@media (max-width:767.98px) {
+   .container, .fmt-0, .fmt-1, .fmt-2, .fmt-3, .fmt-4, .fmt-5 {
+      width: 100%;
+      padding-right: 0!important;
+      padding-left: 0!important;
+      margin-right: 0!important;
+      margin-left: 0!important;
+      margin-top: 10px;
+   }
+}
+
+@media (min-width: 767.98px) {
+  .fmt-0 {
+    margin-top: 0 !important;
+  }
+
+  .fmt-1 {
+    margin-top: 0.25rem !important;
+  }
+
+  .fmt-2 {
+    margin-top: 0.5rem !important;
+  }
+
+  .fmt-3 {
+    margin-top: 1rem !important;
+  }
+
+  .fmt-4 {
+    margin-top: 1.5rem !important;
+  }
+
+  .fmt-5 {
+    margin-top: 3rem !important;
+  }
+
+  .fmt-auto {
+    margin-top: auto !important;
+  }
+}
+
 .mt-0 {
   margin-top: 0 !important;
 }
