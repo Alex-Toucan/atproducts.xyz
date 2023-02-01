@@ -14512,6 +14512,13 @@ textarea.form-control-lg {
   text-align: left !important;
 }
 
+@media (max-width:767.98px) {
+  .icon-bar {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 .carousel img {
   margin-left: 0 !important;
   margin-right: 0 !important;
