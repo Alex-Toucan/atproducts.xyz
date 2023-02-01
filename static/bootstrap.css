@@ -14708,9 +14708,11 @@ nav .dropdown-menu .dropdown-item {
 
 @media (max-width:1079.98px) {
   .back-to-top {
-    bottom: 30px !important;
+    bottom: 47.5px !important;
   }
 }
+
+
 [data-bs-theme=light] .back-to-top {
     color: white;
     background-color: black;
