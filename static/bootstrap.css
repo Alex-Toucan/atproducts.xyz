@@ -6305,7 +6305,7 @@ textarea.form-control-lg {
   }
 }
 .tooltip {
-  --bs-tooltip-zindex: 1080;
+  --bs-tooltip-zindex: 1061;
   --bs-tooltip-max-width: 200px;
   --bs-tooltip-padding-x: 0.5rem;
   --bs-tooltip-padding-y: 0.25rem;
@@ -6408,7 +6408,7 @@ textarea.form-control-lg {
 }
 
 .popover {
-  --bs-popover-zindex: 1070;
+  --bs-popover-zindex: 1060;
   --bs-popover-max-width: 276px;
   --bs-popover-font-size: 0.875rem;
   --bs-popover-bg: var(--bs-body-bg);
@@ -7635,7 +7635,7 @@ textarea.form-control-lg {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 1070;
 }
 
 .fixed-bottom {
