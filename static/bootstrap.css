@@ -14438,7 +14438,7 @@ textarea.form-control-lg {
 }
 
 @media (max-width:767.98px) {
-   .lrpad p:not(.modal p), .lrpad a:not(p a, header a, b a, code a, a.back-to-top, a.w-100, .modal a), .lrpad b:not(p b, a b, code b, .modal b), .lrpad code:not(p code, a code, .modal code), .lrpad img:not(.card img, .modal img), .lrpad pre:not(.modal pre), .lrpad .row:not(.modal .row), .lrpad.card, .lrpad .h1:not(.modal .h1), .lrpad h1:not(.modal h1), .lrpad .h2:not(.modal .h2), .lrpad h2:not(.modal h2), .lrpad .h3:not(.modal .h3), .lrpad h3:not(.modal h3), .lrpad .h4:not(.modal .h4), .lrpad h4:not(.modal h4), .lrpad .h5:not(.modal .h5), .lrpad h5:not(.modal h5), .lrpad .h6:not(.modal .h6), .lrpad h6:not(.modal h6) {
+   .lrpad p:not(.modal p), .lrpad a:not(p a, header a, b a, code a, a.back-to-top, a.w-100, .modal a, a.btn), .lrpad b:not(p b, a b, code b, .modal b), .lrpad code:not(p code, a code, .modal code), .lrpad img:not(.card img, .modal img), .lrpad pre:not(.modal pre), .lrpad .row:not(.modal .row), .lrpad.card, .lrpad .h1:not(.modal .h1), .lrpad h1:not(.modal h1), .lrpad .h2:not(.modal .h2), .lrpad h2:not(.modal h2), .lrpad .h3:not(.modal .h3), .lrpad h3:not(.modal h3), .lrpad .h4:not(.modal .h4), .lrpad h4:not(.modal h4), .lrpad .h5:not(.modal .h5), .lrpad h5:not(.modal h5), .lrpad .h6:not(.modal .h6), .lrpad h6:not(.modal h6) {
       margin-left: 10px;
       margin-right: 10px;
    }
