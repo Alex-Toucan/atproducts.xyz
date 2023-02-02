@@ -14663,7 +14663,7 @@ nav .dropdown-menu .dropdown-item {
     right: 30px;
     bottom: 30px;
     box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
-    z-index: 10000;
+    z-index: 1050;
 }
 
 @media (max-width:767.98px) {
