@@ -6134,7 +6134,7 @@ textarea.form-control-lg {
 }
 
 .modal-title {
-  margin: 0;
+  margin-bottom: 0;
   line-height: var(--bs-modal-title-line-height);
 }
 
@@ -6203,7 +6203,6 @@ textarea.form-control-lg {
 .modal-fullscreen .modal-body {
   overflow-y: auto;
 }
-
 @media (max-width: 575.98px) {
   .modal-fullscreen-sm-down {
     width: 100vw;
@@ -6304,6 +6303,7 @@ textarea.form-control-lg {
     overflow-y: auto;
   }
 }
+
 .tooltip {
   --bs-tooltip-zindex: 1061;
   --bs-tooltip-max-width: 200px;
