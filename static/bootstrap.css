@@ -14476,7 +14476,7 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 768px) {
-  .mlr, a.btn {
+  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn) {
     margin-left: 5%;
     margin-right: 5%;
   }
@@ -14490,7 +14490,7 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 1024px) {
-  .mlr, a.btn {
+  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn) {
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -14505,7 +14505,7 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 1440px) {
-  .mlr, a.btn {
+  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn) {
     margin-left: 20%;
     margin-right: 20%;
   }
@@ -14518,9 +14518,8 @@ textarea.form-control-lg {
     }
 }
 
-
 @media (min-width: 2000px) {
-  .mlr, a.btn {
+  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn) {
     margin-left: 25%;
     margin-right: 25%;
   }
@@ -14534,7 +14533,7 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 2560px) {
-  .mlr, a.btn {
+  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn) {
     margin-left: 33%;
     margin-right: 33%;
   }
