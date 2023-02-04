@@ -51,7 +51,7 @@
 	margin-top: 14px;
 	background: #000000;
 	box-sizing: border-box; 
-	padding: 15px 24px;
+	padding: 15px 24px !important;
 	text-align: center;
 	transition: background 0.3s;
 	text-align: left !important;
@@ -63,7 +63,11 @@
 	background: #3E9B67;
 }
 
-@media (max-width: 768px) {
+.cookieConsentContainer p, .cookieConsentContainer a:not(.cookieButton a) { 
+	padding: 0 !important;
+}
+
+@media (max-width: 767.98px) {
 	.cookieConsentContainer {
 		bottom: 0px !important;
 		left: 0px !important;
