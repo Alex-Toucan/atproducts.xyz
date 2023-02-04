@@ -98,34 +98,20 @@
     <h1 class="title"> CodingHome </h1>
   <img src="/media/images/codinghome.png">
 <br> <br>
- <div class="fontrow">
-        <div class="feature-box font-col-4">
-          <a href="https://discord.gg/McV7AKaJ6c" target="_blank" rel="noopener noreferrer" aria-label="Discord Server Invite"><i class="bi bi-discord abicon"></i></a>
-          <p class="mb-2"><a href="https://discord.gg/McV7AKaJ6c" target="_blank" rel="noopener noreferrer">Discord Server Invite</a></p>
-        </div>
-        <div class="feature-box font-col-4">
-          <a href="https://protdos.com" target="_blank" rel="noopener noreferrer" aria-label="ProtDos"><i class="bi bi-bullseye abicon"></i></a>
-          <p class="mb-2"><a href="https://protdos.com" target="_blank" rel="noopener noreferrer">ProtDos</a></p>
-        </div>
-        <div class="feature-box font-col-4">
-          <a href="https://github.com/ProtDos" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github abicon"></i></a>
-          <p class="mb-2"><a href="https://github.com/ProtDos" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-        </div>
-  </div>
-  <div class="fontrow">
-        <div class="feature-box font-col-6">
-          <a href="mailto:contact@protdos.com" target="_blank" rel="noopener noreferrer" aria-label="ProtDos's Email"><i class="bi bi-envelope-fill abicon"></i></a>
-          <p class="mb-2"><a href="mailto:contact@protdos.com" target="_blank" rel="noopener noreferrer">ProtDos's Email</a></p>
-        </div>
-        <div class="feature-box font-col-6">
-          <a href="https://bit.ly/CodingHome" target="_blank" rel="noopener noreferrer" aria-label="Coder's Bot"><i class="bi bi-heart-fill abicon"></i></a>
-          <p class="mb-2"><a href="https://bit.ly/CodingHome" target="_blank" rel="noopener noreferrer">Coder's Bot</a></p>
-         </div>
-      </div>
     <h3> Disclaimer </h3>
     <p> We do not take responsibility for any damage, or legal issues, done with these files here at AT Products LLC, Ethical Hacking Society, The Script Community, CodingHome, or Noodle Hackerspace.      <br>
       Use a virtual machine if it's a computer virus, and never open them on your physical machine. As a pre-caution, download them on your VM.</p>
-  </div> <hr>
+         </div> <hr>
+         <div class="d-md-flex justify-content-between plr" id="links">
+<h2 class="me-md-auto text-starttocenter mb-0">Community Links</h2>
+           <br class="disbr">
+<div class="icon-bar fatoc">
+  <a href="https://discord.gg/McV7AKaJ6c" target="_blank" rel="noopener noreferrer" class="link-dark ms-md-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Discord Server Invite"><i class="bi bi-discord"></i></a> 
+  <a href="https://protdos.com" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="ProtDos"><i class="bi bi-bullseye"></i></a> 
+  <a href="https://github.com/protdos" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="GitHub"><i class="bi bi-github"></i></a> 
+  <a href="mailto:contact@protdos.com" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="ProtDos's Email"><i class="bi bi-envelope-fill"></i></a>
+  <a href="http://bit.ly/CodingHome" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Coder's Bot"><i class="bi bi-heart-fill"></i></a> 
+</div></div><hr>
   <div id="resources">
             <h2> Resources </h2>
         <p> What do you want to know about today? </p>
@@ -164,7 +150,7 @@
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> Python Basics </h2>
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 p-1">
     <div id="list-example" class="list-group">
       <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
       <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
@@ -172,7 +158,7 @@
       <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
             </div></div><div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="com-3">
+<div id="com-3 p-1">
 <h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
 py <br>
@@ -180,7 +166,7 @@ py <br>
 </code></p>
 </div>
 <div id="data-3">
-<h>Data Types</h4>
+<h4>Data Types</h4>
 <p>Variables can store data of different types, and different types can do different things.</p>
 <p>Python has the following data types built-in by default, in these categories:<br>
 Text Type: <code>str</code><br>
@@ -198,7 +184,7 @@ x = 5 <br>
 print(type(x))
 </code></p>
 </div>
-<div id=""str-3">
+<div id="str-3">
 <h4>Strings</h4>
 <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
 <code>
@@ -218,7 +204,7 @@ x = """The FitnessGram Pacer test is a multistage aerobic capacity test that pro
 x = "hello"<br>
 print(len(text)) # returns 5<br></code></p>
 </div>
-<div id="num-3"">
+<div id="num-3">
 <h4>Numbers</h4>
 <p>There are 2 primary, <code>int</code> and <code>float</code></p><p><code>
 py<br>
@@ -240,12 +226,12 @@ print(type(y))</code></p>
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> C++ Basics </h2>
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 p-1">
     <div id="list-example" class="list-group">
       <a class="list-group-item list-group-item-action" href="#strings-5">Strings</a>
       <a class="list-group-item list-group-item-action" href="#integers-5">Integers and Floating Point Numbers</a>
       <a class="list-group-item list-group-item-action" href="#print-5">Print</a>
-            </div></div><div class="col-8">
+            </div></div><div class="col-8 p-1">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="strings-5">
 <h4>Strings</h4>
@@ -296,14 +282,14 @@ int main()<br>
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> HTML Basics </h2>
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 p-1">
     <div id="list-example" class="list-group">
       <a class="list-group-item list-group-item-action" href="#example-1">Example Document</a>
       <a class="list-group-item list-group-item-action" href="#head-1">HTML Headings</a>
       <a class="list-group-item list-group-item-action" href="#text-1">HTML Paragraphs</a>
       <a class="list-group-item list-group-item-action" href="#links-1">HTML Links</a>
       <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
-            </div></div><div class="col-8">
+            </div></div><div class="col-8 p-1">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="example-1">
 <h4>Example Document</h4>
@@ -347,7 +333,7 @@ int main()<br>
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
  <h2 class="modal-body-title"> CSS Basics </h2>
 <div class="row">
-          <div class="col-4">
+          <div class="col-4 p-1">
     <div id="list-example" class="list-group">
       <a class="list-group-item list-group-item-action" href="#example-4">Example Document</a>
       <a class="list-group-item list-group-item-action" href="#rules-4">CSS Rulesets</a>
@@ -355,7 +341,7 @@ int main()<br>
       <a class="list-group-item list-group-item-action" href="#pad-4">Padding Elements</a>
       <a class="list-group-item list-group-item-action" href="#color-4">Color Elements</a>
             <a class="list-group-item list-group-item-action" href="#eci-4">Extra: Centering Images</a>
-            </div></div><div class="col-8">
+            </div></div><div class="col-8 p-1">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="example-4">
 <h4>Example Document</h4>
@@ -427,14 +413,14 @@ h1, h4, h6, h2 {<br>
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> JavaScript Basics </h2>
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 p-1">
     <div id="list-example" class="list-group">
       <a class="list-group-item list-group-item-action" href="#html-2">Including JavaScript in an HTML Page</a>
       <a class="list-group-item list-group-item-action" href="#call-2">Call an External JavaScript File</a>
       <a class="list-group-item list-group-item-action" href="#com-2">Including Comments</a>
       <a class="list-group-item list-group-item-action" href="#var-2">Variables</a>
       <a class="list-group-item list-group-item-action" href="#data-2">Data Types</a>
-            </div></div><div class="col-8">
+            </div></div><div class="col-8 p-1">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="html-2">
 <h4>Including JavaScript in an HTML Page</h4>
@@ -485,15 +471,16 @@ var person = {<br>
 <footer>
   <hr>
   <div class="container-footer">
-  <div class="pt-5">
+  <div class="fmt-5">
     <div class="row px-xosm-2">
       <div class="col-2 me-xesm-2">
-       <div class="a">
+       <div class="c">
          <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
            <br>
            <h5><a href="/">AT Products LLC</a></h5>
-          </div></div>
-      <div class="col-2 me-xosm-2">
+          </div>
+      </div>
+      <div class="col-2 me-xosm-2 fatoc">
         <h5>Products</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-muted">Paid Services</a></li>
@@ -503,7 +490,7 @@ var person = {<br>
         </ul>
       </div>
 
-      <div class="col-2 me-xosm-2">
+      <div class="col-2 me-xosm-2 fatoc">
         <h5>Communities</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-muted">The Script Community</a></li>
@@ -513,7 +500,7 @@ var person = {<br>
         </ul>
       </div>
 
-      <div class="col-2 me-xosm-2">
+      <div class="col-2 me-xosm-2 fatoc">
         <h5>Documentation</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
@@ -525,13 +512,13 @@ var person = {<br>
       
     </div>
 
-    <div class="d-flex justify-content-between py-4 my-4 border-top">
+    <div class="d-flex justify-content-between fpt-4 pb-2 mt-4 border-top">
     <div class="row">
       <a class="ps-3 footer-info dropdown-toggle" data-bs-toggle="collapse" href="#footerinfo" role="button" aria-expanded="false" aria-controls="footerinfo">
       Information
       </a>
-      <div class="ps-3 col-6 collapse" id="footerinfo">
-        <div class="card card-body">
+      <div class="ps-3 pt-2 col-6 collapse" id="footerinfo">
+        <div class="card card-body a">
           <b>Version:</b> <script src="/static/version.js"></script><br>
           <b>Author:</b> Alex Toucan
           <br><br>
@@ -554,5 +541,9 @@ var person = {<br>
 </div>
         </footer>
 </div>
+      <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
     </body>
     </html>

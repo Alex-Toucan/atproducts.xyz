@@ -6013,7 +6013,7 @@ textarea.form-control-lg {
 }
 
 .modal {
-  --bs-modal-zindex: 10005;
+  --bs-modal-zindex: 1055;
   --bs-modal-width: 500px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
@@ -6123,7 +6123,10 @@ textarea.form-control-lg {
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
-  padding: var(--bs-modal-header-padding);
+  padding-top: var(--bs-modal-header-padding);
+  padding-bottom: var(--bs-modal-header-padding);
+  padding-right: var(--bs-modal-header-padding);
+  padding-left: 0;
   border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
   border-top-left-radius: var(--bs-modal-inner-border-radius);
   border-top-right-radius: var(--bs-modal-inner-border-radius);
@@ -6134,7 +6137,7 @@ textarea.form-control-lg {
 }
 
 .modal-title {
-  margin-bottom: 0;
+  margin: 0;
   line-height: var(--bs-modal-title-line-height);
 }
 
@@ -6203,6 +6206,7 @@ textarea.form-control-lg {
 .modal-fullscreen .modal-body {
   overflow-y: auto;
 }
+
 @media (max-width: 575.98px) {
   .modal-fullscreen-sm-down {
     width: 100vw;
@@ -6303,9 +6307,8 @@ textarea.form-control-lg {
     overflow-y: auto;
   }
 }
-
 .tooltip {
-  --bs-tooltip-zindex: 1049;
+  --bs-tooltip-zindex: 1080;
   --bs-tooltip-max-width: 200px;
   --bs-tooltip-padding-x: 0.5rem;
   --bs-tooltip-padding-y: 0.25rem;
@@ -6408,7 +6411,7 @@ textarea.form-control-lg {
 }
 
 .popover {
-  --bs-popover-zindex: 1049;
+  --bs-popover-zindex: 1070;
   --bs-popover-max-width: 276px;
   --bs-popover-font-size: 0.875rem;
   --bs-popover-bg: var(--bs-body-bg);
@@ -7635,7 +7638,7 @@ textarea.form-control-lg {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 1030;
 }
 
 .fixed-bottom {
@@ -8548,8 +8551,7 @@ textarea.form-control-lg {
       padding-left: 0!important;
       margin-right: 0!important;
       margin-left: 0!important;
-      margin-top: 0!important;
-      padding-top: 10px;
+      margin-top: 10px;
    }
 }
 
@@ -9160,34 +9162,6 @@ textarea.form-control-lg {
 
 .fs-6 {
   font-size: 1rem !important;
-}
-
-.fs-7 {
-  font-size: 1.75rem !important;
-}
-
-.fs-8 {
-  font-size: 2rem !important;
-}
-
-.fs-9 {
-  font-size: 2.50rem !important;
-}
-
-.fs-10 {
-  font-size: 3.25rem !important;
-}
-
-.fs-11 {
-  font-size: 4rem !important;
-}
-
-.fs-12 {
-  font-size: 4.75rem !important;
-}
-
-.fs-13 {
-  font-size: 5.50rem !important;
 }
 
 .fst-italic {
@@ -14399,12 +14373,6 @@ textarea.form-control-lg {
   padding-right: 10px !important;
 }
 
-@media (max-width:767.98px) {
-  .disbr {
-    display: none;
-  }
-}
-
 @media (max-width:1000px) {
    .pdont {
       display:none;
@@ -14439,7 +14407,7 @@ textarea.form-control-lg {
 }
 
 @media (max-width:767.98px) {
-   .lrpad li, .lrpad p:not(.modal p, li p), .lrpad a:not(p a, header a, b a, code a, a.back-to-top, a.w-100, .modal a, a.btn, .icon-bar a, li a), .lrpad b:not(p b, a b, code b, .modal b), .lrpad code:not(p code, a code, .modal code, li b), .lrpad img:not(.card img, .modal img), .lrpad pre:not(.modal pre), .lrpad .row:not(.modal .row), .lrpad.card, .lrpad .h1:not(.modal .h1), .lrpad h1:not(.modal h1), .lrpad .h2:not(.modal .h2), .lrpad h2:not(.modal h2), .lrpad .h3:not(.modal .h3), .lrpad h3:not(.modal h3), .lrpad .h4:not(.modal .h4), .lrpad h4:not(.modal h4), .lrpad .h5:not(.modal .h5), .lrpad h5:not(.modal h5), .lrpad .h6:not(.modal .h6), .lrpad h6:not(.modal h6) {
+   .lrpad p, .lrpad img:not(.card img), .lrpad pre, .lrpad.row, .lrpad.card, .lrpad.h1, .lrpad h1, .lrpad.h2, .lrpad h2, .lrpad.h3, .lrpad h3, .lrpad.h4, .lrpad h4, .lrpad.h5, .lrpad h5, .lrpad.h6, .lrpad h6 {
       margin-left: 10px;
       margin-right: 10px;
    }
@@ -14459,6 +14427,14 @@ textarea.form-control-lg {
   margin-right: auto;
 }
 
+@media (max-width: 767.98px) {
+  .atoc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .d {
   text-align: justify;
 }
@@ -14470,93 +14446,43 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 768px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 5%;
         padding-left: 5%;
     }
 }
 
-@media (min-width: 768px) {
-  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn, a.w-100, a.back-to-top) {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
-
 @media (min-width: 1024px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 10%;
         padding-left: 10%;
     }
 }
 
-@media (min-width: 1024px) {
-  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn, a.w-100, a.back-to-top) {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
-
 
 @media (min-width: 1440px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 20%;
         padding-left: 20%;
     }
 }
 
-@media (min-width: 1440px) {
-  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn, a.w-100, a.back-to-top) {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-}
-
 @media (min-width: 2000px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 25%;
         padding-left: 25%;
     }
 }
 
-@media (min-width: 2000px) {
-  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn, a.w-100, a.back-to-top) {
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-}
-
 @media (min-width: 2560px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .prl, p:not(.accordion p, .modal p, .card p, footer p), h1:not(.card h1, footer h1), .h1:not(.card .h1, footer .h1), h2:not(.card h2, footer h2), .h2:not(.card .h2, footer .h2), h3:not(.card h3, footer h3) .h3:not(.card .h3, footer .h3), h4:not(.card h4, footer h4), .h4:not(.card .h4, footer .h4), h5:not(.card h5, footer h5), .h5:not(.card .h5, footer .h5), h6:not(.card h6, footer .h6), .h6:not(.card .h6, footer .h6) {
         padding-right: 33%;
         padding-left: 33%;
     }
 }
 
-@media (min-width: 2560px) {
-  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn, a.w-100, a.back-to-top) {
-    margin-left: 33%;
-    margin-right: 33%;
-  }
-}
-
 .card:not(footer .card), #resources:not(#resources .modal), #menu, .fontrow, #intro, a.back-to-top, .btn {
   text-align: center;
-}
-
-#404 {
-  text-align: center !important;
-}
-
-.modal {
-  text-align: left !important;
-}
-
-@media (max-width:767.98px) {
-  .icon-bar {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
 }
 
 .carousel img {
@@ -14735,7 +14661,7 @@ nav .dropdown-menu .dropdown-item {
     position: fixed;
     display: none;
     right: 30px;
-    bottom: 47.5px;
+    bottom: 30px;
     box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
     z-index: 1050;
 }
@@ -14745,13 +14671,6 @@ nav .dropdown-menu .dropdown-item {
     bottom: 60px !important;
   }
 }
-
-@media (min-width:1079.98px) {
-  .back-to-top {
-    bottom: 30px !important;
-  }
-}
-
 
 [data-bs-theme=light] .back-to-top {
     color: white;
