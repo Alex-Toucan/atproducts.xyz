@@ -14735,7 +14735,7 @@ nav .dropdown-menu .dropdown-item {
     position: fixed;
     display: none;
     right: 30px;
-    bottom: 30px;
+    bottom: 47.5px;
     box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
     z-index: 1050;
 }
@@ -14746,9 +14746,9 @@ nav .dropdown-menu .dropdown-item {
   }
 }
 
-@media (max-width:1079.98px) {
+@media (min-width:1079.98px) {
   .back-to-top {
-    bottom: 47.5px !important;
+    bottom: 30px !important;
   }
 }
 
