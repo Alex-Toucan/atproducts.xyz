@@ -14477,7 +14477,7 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 768px) {
-  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn) {
+  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn, a.w-100) {
     margin-left: 5%;
     margin-right: 5%;
   }
@@ -14491,7 +14491,7 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 1024px) {
-  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn) {
+  .mlr, a.btn:not(modal a.btn, btn-group > :not(.btn-check:first-child) + .btn, a.w-100) {
     margin-left: 10%;
     margin-right: 10%;
   }
