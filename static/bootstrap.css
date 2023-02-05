@@ -14481,7 +14481,7 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 768px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a), .btn-group a {
+  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a) {
     margin-left: 5%;
     margin-right: 5%;
   }
