@@ -14488,14 +14488,8 @@ textarea.form-control-lg {
 }
 
 @media (min-width:768px) {
-  .mlrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    margin-left: 5%;
-  }
-}
-
-@media (min-width:768px) {
-  .mlrr, .btn-group > .btn:nth-child(n+3), .btn-group > :not(.btn-check) + .btn, .btn-group > .btn-group:not(:first-child) > .btn {
-    margin-right: 5%;
+  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
+    padding-left: 5%;
   }
 }
 
@@ -14514,14 +14508,8 @@ textarea.form-control-lg {
 }
 
 @media (min-width:1024px) {
-  .mlrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    margin-left: 10%;
-  }
-}
-
-@media (min-width:1024px) {
-  .mlrr, .btn-group > .btn:nth-child(n+3), .btn-group > :not(.btn-check) + .btn, .btn-group > .btn-group:not(:first-child) > .btn {
-    margin-right: 10%;
+  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
+    padding-left: 10%;
   }
 }
 
@@ -14540,14 +14528,8 @@ textarea.form-control-lg {
 }
 
 @media (min-width:1440px) {
-  .mlrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:1440px) {
-  .mlrr, .btn-group > .btn:nth-child(n+3), .btn-group > :not(.btn-check) + .btn, .btn-group > .btn-group:not(:first-child) > .btn {
-    margin-right: 20%;
+  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
+    padding-left: 20%;
   }
 }
 
@@ -14566,14 +14548,8 @@ textarea.form-control-lg {
 }
 
 @media (min-width:2000px) {
-  .mlrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    margin-left: 25%;
-  }
-}
-
-@media (min-width:2000px) {
-  .mlrr, .btn-group > .btn:nth-child(n+3), .btn-group > :not(.btn-check) + .btn, .btn-group > .btn-group:not(:first-child) > .btn {
-    margin-right: 25%;
+  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
+    paddingh-left: 25%;
   }
 }
 
@@ -14592,14 +14568,8 @@ textarea.form-control-lg {
 }
 
 @media (min-width:2560px) {
-  .mlrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    margin-left: 33%;
-  }
-}
-
-@media (min-width:2560px) {
-  .mlrr, .btn-group > .btn:nth-child(n+3), .btn-group > :not(.btn-check) + .btn, .btn-group > .btn-group:not(:first-child) > .btn {
-    margin-right: 33%;
+  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
+    padding-left: 33%;
   }
 }
 
