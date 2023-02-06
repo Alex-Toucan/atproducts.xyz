@@ -14469,100 +14469,89 @@ textarea.form-control-lg {
   }
 }
 
+.scrollspy {
+  padding: 0!important;
+}
 @media (min-width: 768px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a), code:not(p code, a code, li code, footer code, .scrollspy code), b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b), h1:not(.card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
         padding-right: 5%;
         padding-left: 5%;
     }
 }
-
 @media (min-width: 768px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a) {
+  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
     margin-left: 5%;
     margin-right: 5%;
   }
 }
-
 @media (min-width:768px) {
   .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
     padding-left: 5%;
   }
 }
-
 @media (min-width: 1024px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a), code:not(p code, a code, li code, footer code, .scrollspy code), b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b), h1:not(.card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
         padding-right: 10%;
         padding-left: 10%;
     }
 }
-
 @media (min-width: 1024px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a) {
+  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
     margin-left: 10%;
     margin-right: 10%;
   }
 }
-
 @media (min-width:1024px) {
   .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
     padding-left: 10%;
   }
 }
-
 @media (min-width: 1440px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a), code:not(p code, a code, li code, footer code, .scrollspy code), b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b), h1:not(.card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
         padding-right: 20%;
         padding-left: 20%;
     }
 }
-
 @media (min-width: 1440px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a) {
+  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
     margin-left: 20%;
     margin-right: 20%;
   }
 }
-
 @media (min-width:1440px) {
   .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
     padding-left: 20%;
   }
 }
-
 @media (min-width: 2000px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a), code:not(p code, a code, li code, footer code, .scrollspy code), b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b), h1:not(.card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
         padding-right: 25%;
         padding-left: 25%;
     }
 }
-
 @media (min-width: 2000px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a) {
+  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a, .scrollspy a.btn) {
     margin-left: 25%;
     margin-right: 25%;
   }
 }
-
 @media (min-width:2000px) {
   .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
     paddingh-left: 25%;
   }
 }
-
 @media (min-width: 2560px) {
-   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a), code:not(p code, a code, li code, footer code), b:not(p b, a b, code b, li b, footer b), h1:not(.card h1, footer h1, .plr h1, .modal h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6) {
+   .plr, li:not(header li, footer li), p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p), a:not(p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a), code:not(p code, a code, li code, footer code, .scrollspy code), b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b), h1:not(.card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .h1:not(.card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), h2:not(.card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .h2:not(.card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), h3:not(.card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .h3:not(.card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), h4:not(.card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .h4:not(.card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), h5:not(.card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .h5:not(.card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), h6:not(.card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .h6:not(.card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
         padding-right: 33%;
         padding-left: 33%;
     }
 }
-
 @media (min-width: 2560px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a) {
+  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
     margin-left: 33%;
     margin-right: 33%;
   }
 }
-
 @media (min-width:2560px) {
   .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
     padding-left: 33%;
