@@ -14692,6 +14692,10 @@ html.fixedtopnavimage {
     padding-top: 7.5px;
 }
 
+.title {
+  text-align: center;
+}
+
 img.script {
    border-radius: 15px;
    background: #141414;
