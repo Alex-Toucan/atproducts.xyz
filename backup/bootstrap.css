@@ -14485,7 +14485,7 @@ textarea.form-control-lg {
   }
 }
 @media (min-width:768px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
+  .plrl, .btn:not(.modal .btn), .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
     padding-left: 5%;
   }
 }
@@ -14502,7 +14502,7 @@ textarea.form-control-lg {
   }
 }
 @media (min-width:1024px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
+  .plrl, .btn:not(.modal .btn), .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
     padding-left: 10%;
   }
 }
@@ -14536,8 +14536,8 @@ textarea.form-control-lg {
   }
 }
 @media (min-width:2000px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    paddingh-left: 25%;
+  .plrl, .btn:not(.modal .btn), .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
+   padding-left: 25%;
   }
 }
 @media (min-width: 2560px) {
@@ -14553,7 +14553,7 @@ textarea.form-control-lg {
   }
 }
 @media (min-width:2560px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
+  .plrl, .btn:not(.modal .btn), .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
     padding-left: 33%;
   }
 }
