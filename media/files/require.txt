@@ -5,7 +5,7 @@
 dependabot/pip/media/files/pillow-9.0.1
 Pillow==9.3.0
 browserhistory==0.1.2
-cryptography==3.4.7
+cryptography>=39.0.1
 keyboard==0.13.5
 opencv_python==4.5.3.56
 pynput==1.7.3
