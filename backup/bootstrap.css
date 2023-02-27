@@ -14718,7 +14718,7 @@ html.fixedtopnavimage {
     padding-top: 7.5px;
 }
 
-.title {
+.title:not(.a, .b, .d) {
   text-align: center;
 }
 
