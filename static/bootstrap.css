@@ -14421,14 +14421,12 @@ textarea.form-control-lg {
        display: flex;
        flex-wrap: wrap;
        margin-top: calc(-1 * var(--bs-gutter-y));
-       margin-right: calc(-.5 * var(--bs-gutter-x));
-       margin-left: calc(-.5 * var(--bs-gutter-x));
    }
 }
 
 .dmrow {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 @media (max-width:767.98px) {
