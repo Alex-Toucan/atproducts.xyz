@@ -10407,6 +10407,14 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
+  .w-md-25 {
+    width: 25%;
+  }
+  
+  .w-md-33 {
+    width: 33%;
+  }
+
   .w-md-50 {
    width: 50% !important;
   }
