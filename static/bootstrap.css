@@ -14654,8 +14654,8 @@ textarea.form-control-lg {
     }
 
     .sw-row {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       --bs-gutter-x: 1.5rem;
       --bs-gutter-y: 0;
       display: flex;
