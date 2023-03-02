@@ -14653,15 +14653,16 @@ textarea.form-control-lg {
       padding: 10px;
     }
 
-    .sw-fontrow {
-      margin:10px;
+    .sw-row {
+      margin-left: 10px;
+      margin-right: 10px;
       --bs-gutter-x: 1.5rem;
       --bs-gutter-y: 0;
       display: flex;
       flex-wrap: wrap;
     }
     
-    .sw-fontrow a:hover {
+    .sw-row a:hover {
       color: wheat;
     }
     
