@@ -4904,13 +4904,10 @@ textarea.form-control-lg {
   }
 }
 
-.procard {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @media (min-width: 767.98px) {
   .procard {
+    margin-left: auto;
+    margin-right: auto;
     width: 18rem;
   }
 }
