@@ -14832,10 +14832,6 @@ nav .dropdown-menu .dropdown-item {
   background-color: #bfbfbf;
 }
 
-.back-to-top:has(+ .cookieConsentContainer) {
-		bottom: 225px !important;
-	}
-
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
