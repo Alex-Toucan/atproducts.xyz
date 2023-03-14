@@ -73,4 +73,7 @@
 		left: 0px !important;
 		width: 100%  !important;
 	}
+	.back-to-top:has(+ .cookieConsentContainer) {
+		bottom: 225px !important;
+	}
 }
