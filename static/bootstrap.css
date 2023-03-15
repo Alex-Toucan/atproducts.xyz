@@ -14490,8 +14490,10 @@ textarea.form-control-lg {
   }
 }
 
-.scrollspy {
-  padding: 0!important;
+@media (min-width:767.98px) {
+  .scrollspy {
+    padding: 0!important;
+  }
 }
 
 .modal .btn {
