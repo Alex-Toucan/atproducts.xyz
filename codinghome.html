@@ -146,13 +146,13 @@
 <h2 class="modal-body-title"> Python Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="list-example" class="list-group">
+    <div id="pyblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
       <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
       <a class="list-group-item list-group-item-action" href="#str-3">Strings</a>
       <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#pyblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="com-3 p-1">
 <h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
@@ -222,12 +222,12 @@ print(type(y))</code></p>
 <h2 class="modal-body-title"> C++ Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="list-example" class="list-group">
+    <div id="cppblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#strings-5">Strings</a>
       <a class="list-group-item list-group-item-action" href="#integers-5">Integers and Floating Point Numbers</a>
       <a class="list-group-item list-group-item-action" href="#print-5">Print</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#cppblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="strings-5">
 <h4>Strings</h4>
 <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
@@ -278,14 +278,14 @@ int main()<br>
 <h2 class="modal-body-title"> HTML Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="list-example" class="list-group">
+    <div id="htmlblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#example-1">Example Document</a>
       <a class="list-group-item list-group-item-action" href="#head-1">HTML Headings</a>
       <a class="list-group-item list-group-item-action" href="#text-1">HTML Paragraphs</a>
       <a class="list-group-item list-group-item-action" href="#links-1">HTML Links</a>
       <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#htmlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="example-1">
 <h4>Example Document</h4>
 <code>
@@ -461,7 +461,46 @@ var person = {<br>
   </code></p>
           </div>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+<button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#jb">JavaScript Basics</button><div class="modal fade" id="jb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+<h5 class="modal-title" id="jbt">JavaScript Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
+<i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
+<h2 class="modal-body-title"> JavaScript Basics </h2>
+        <div class="row">
+          <div class="col-4 p-1">
+    <div id="sqlblist" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#table-6">Table Management</a>
+            </div></div><div class="col-8 p-1 scrollspy">
+    <div data-bs-spy="scroll" data-bs-target="#sqlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<div id="table-6">
+<h4>Table Management</h4>
+<p>Create a new Table with Three Columns</p>
+<code>
+CREATE TABLE t (<br>
+     id INT PRIMARY KEY,<br>
+     name VARCHAR NOT NULL,<br>
+     price INT DEFAULT 0<br>
+);<br>
+</code><br>
+<p>Delete the Table from the Database</p>
+<code>DROP TABLE t ;</code><br>
+<p>Add a new Column to the Table</p>
+<code>ALTER TABLE t ADD column;</code><br>
+<p>Drop Column c from the Table</p>
+<code>ALTER TABLE t DROP COLUMN c ;</code><br>
+<p>Add a Constraint</p>
+<code>ALTER TABLE t ADD constraint;</code><br>
+<p>Drop a Constraint</p>
+<code>ALTER TABLE t DROP constraint;</code><br>
+<p>Rename a Table from t1 to t2</p>
+ALTER TABLE t1 RENAME TO t2;</code><br>
+<p>Rename Column c1 to c2</p>
+<code>ALTER TABLE t1 RENAME c1 TO c2 ;</code><br>
+<p>Remove all Data in a Table</p>
+<code>TRUNCATE TABLE t;</code>
 </div>
+          </div>
+          </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+    </div>
           </div> </main>
 <footer>
   <hr>
