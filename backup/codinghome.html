@@ -17,10 +17,10 @@
   <body class="fixedtopnavimage">
   <div id="page">
 <header>
-<nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark shadow-lg">
+<nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark shadow-lg" style="">
   <div class="container-fluid">
     <a class="navbar-brand" href="/"><img src="/media/images/longwhite.png" height="45px" alt="Icon"></a>
-    <button class="navbar-togg   ler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -104,6 +104,8 @@
           <a href="#html">HTML Basics</a>
           <a href="#css">CSS Basics</a>
           <a href="#js">JavaScript Basics</a>       
+          <a href="#sql">SQL Basics</a>
+          <a href="#json">JSON Basics</a>
          </div>
         </div>
 <br> <br>
@@ -455,6 +457,176 @@ var person = {<br>
           </div>
           </div></div></div>
           </div>
+          <div id="sql">
+          <div class="dmrow mlr">
+          <div class="col-4b p-1">
+    <div id="sqlblist" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#query-6">Querying Data from a Table</a>
+      <a class="list-group-item list-group-item-action" href="#mod-6">Modifying Data</a>
+      <a class="list-group-item list-group-item-action" href="#table-6">Table Management</a>
+            </div></div><div class="col-8b p-1">
+    <div data-bs-spy="scroll" data-bs-target="#sqlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<div id="query-6">
+<h4>Querying Data from a Table</h4>
+<p>Query Data in Columns c1, c2 from a Table</p>
+<code>
+SELECT c1, c2 FROM t;<br>
+Code language: SQL (Structured Query Language) (sql)
+</code><br><br>
+<p>Query All Rows and Columns from a Table</p>
+<code>SELECT * FROM t;</code><br><br>
+<p>Query Data and Filter Rows with a Condition</p>
+<code>
+SELECT c1, c2 FROM t<br>
+WHERE condition;
+</code><br><br>
+<p>Query Distinct Rows from a Table</p>
+<code>
+SELECT DISTINCT c1 FROM t<br>
+WHERE condition;
+</code><br><br>
+<p>Sort the Result Set in Ascending or Descending Order</p>
+<code>
+SELECT c1, c2 FROM t<br>
+ORDER BY c1 ASC [DESC];
+</code><br><br>
+<p>Skip Offset of Rows and Return the Next n Rows</p>
+<code>
+SELECT c1, c2 FROM t<br>
+ORDER BY c1<br>
+LIMIT n OFFSET offset;
+</code><br><br>
+<p>Group Rows using an Aggregate Function</p>
+<code>
+SELECT c1, aggregate(c2)<br>
+FROM t<br>
+GROUP BY c1;
+</code><br><br>
+<p>Filter Groups using <b>Having</b> Clause</p>
+<code>
+SELECT c1, aggregate(c2)<br>
+FROM t<br>
+GROUP BY c1<br>
+HAVING condition;
+</code><br><br>
+</div>
+<div id="mod-6">
+<h4>Modifying Data</h4>
+<p>Insert One Row into a Table</p>
+<code>
+INSERT INTO t(column_list)<br>
+VALUES(value_list);
+</code><br><br>
+<p>Insert Multiple Rows into a Table</p>
+<code>
+INSERT INTO t(column_list)<br>
+VALUES (value_list), <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(value_list), …;
+</code><br><br>
+<p>Insert Rows from t2 into t1</p>
+<code>
+INSERT INTO t1(column_list)<br>
+SELECT column_list<br>
+FROM t2;
+</code><br><br>
+<p>Update New Value in the Column c1 for All Rows</p>
+<code>
+UPDATE t<br>
+SET c1 = new_value;
+</code><br><br>
+<p>Update Values in the Column c1, c2 that Match the Condition</p>
+<code>
+UPDATE t
+SET c1 = new_value, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;c2 = new_value<br>
+WHERE condition;
+</code><br><br>
+<p>Delete All Data in a Table</p>
+<code>DELETE FROM t;</code>
+<p>Delete Subset of Rows in a Table</p>
+<code>
+DELETE FROM t<br>
+WHERE condition;
+</code><br><br>
+</div>
+<div id="table-6">
+<h4>Table Management</h4>
+<p>Create a new Table with Three Columns</p>
+<code>
+CREATE TABLE t (<br>
+     id INT PRIMARY KEY,<br>
+     name VARCHAR NOT NULL,<br>
+     price INT DEFAULT 0<br>
+);<br>
+</code><br><br>
+<p>Delete the Table from the Database</p>
+<code>DROP TABLE t ;</code><br><br>
+<p>Add a new Column to the Table</p>
+<code>ALTER TABLE t ADD column;</code><br><br>
+<p>Drop Column c from the Table</p>
+<code>ALTER TABLE t DROP COLUMN c ;</code><br><br>
+<p>Add a Constraint</p>
+<code>ALTER TABLE t ADD constraint;</code><br><br>
+<p>Drop a Constraint</p>
+<code>ALTER TABLE t DROP constraint;</code><br><br>
+<p>Rename a Table from t1 to t2</p>
+<code>ALTER TABLE t1 RENAME TO t2;</code><br><br>
+<p>Rename Column c1 to c2</p>
+<code>ALTER TABLE t1 RENAME c1 TO c2 ;</code><br><br>
+<p>Remove all Data in a Table</p>
+<code>TRUNCATE TABLE t;</code>
+</div>
+          </div></div></div>
+          </div>
+          <div id="json">
+          <h2>JSON Basics</h2>
+          <div class="dmrow mlr">
+          <div class="col-4b p-1">
+    <div id="jsonblist" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#example-7">Example Document</a>
+      <a class="list-group-item list-group-item-action" href="#import-7">Importing JSON</a>
+            </div></div><div class="col-8b p-1">
+    <div data-bs-spy="scroll" data-bs-target="#jsonblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<div id="example-7">
+<h4>Example Document</h4>
+<p>Create a new Table with Three Columns</p>
+<code>
+{<br>
+&nbsp;&nbsp;"foo": "bar",<br>
+&nbsp;&nbsp;"array": [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"foo",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"bar"<br>
+&nbsp;&nbsp;]<br>
+}
+</code><br><br>
+<p>All JSON files are surrounded by { and }, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
+</div>
+<div id="import-7">
+<h4>Importing JSON</h4>
+<table>
+<tbody>
+<tr>
+<td class="border-1">JavaScript</td>
+<td class="border-1"><code>fetch('example.json')</code></td>
+</tr>
+<tr>
+<td class="border-1">Node.js</td>
+<td class="border-1"><code>import('./example.json')</code></td>
+</tr>
+<tr>
+<td class="border-1">TypeScript + Node.js</td>
+  <td class="border-1"><code>import data from 'example.json'</code></td>
+</tr>
+<tr>
+<td class="border-1">Python</td>
+  <td class="border-1"><code>import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+          </div></div></div>
+</div>
+</div>
 </main>
 <footer>
   <hr>
@@ -494,6 +666,7 @@ var person = {<br>
           <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
           <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
           <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-muted">Policies</a></li>
+          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-muted">Licenses</a></li>
         </ul>
       </div>
 
@@ -507,84 +680,9 @@ var person = {<br>
       </a>
       <div class="ps-3 pt-2 col-6 collapse" id="footerinfo">
         <div class="card card-body a">
-          <b>Version:</b> <script src="/static/version.js"></script><br>
+          <b>Version:</b> <script src="/static/version.js"></script>2.13.3 Beta (Last Updated: 03/09/23)<br>
           <b>Author:</b> Alex Toucan
           <br><br>
-          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-          <br>
-          <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p><br>
-          <p>® <script src="/static/year.js"></script> AT Products LLC</p>
-         </div>
-        </div>
-      </div>
-      <ul class="list-unstyled d-flex pe-3">
-        <li class="ms-3"><a class="link-dark" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-        </footer>
-    <footer>
-  <hr>
-  <div class="container-footer">
-  <div class="fmt-5">
-    <div class="row px-xosm-2">
-      <div class="col-2 me-xesm-2">
-       <div class="c">
-         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
-           <br>
-           <h5><a href="/">AT Products LLC</a></h5>
-          </div>
-      </div>
-      <div class="col-2 me-xosm-2 fatoc">
-        <h5>Products</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-muted">Paid Services</a></li>
-          <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-muted">Web Projects</a></li>
-          <li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-muted">SMS Bomb</a></li>
-          <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-muted">Pynx's Projects</a></li>
-        </ul>
-      </div>
-
-      <div class="col-2 me-xosm-2 fatoc">
-        <h5>Communities</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-muted">The Script Community</a></li>
-          <li class="nav-item mb-2"><a href="/ehs" class="nav-link p-0 text-muted">Ethical Hacking Society</a></li>
-          <li class="nav-item mb-2"><a href="/codinghome" class="nav-link p-0 text-muted">CodingHome</a></li>
-          <li class="nav-item mb-2"><a href="/noodle" class="nav-link p-0 text-muted">Noodle Hackerspace</a></li>
-        </ul>
-      </div>
-
-      <div class="col-2 me-xosm-2 fatoc">
-        <h5>Documentation</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
-          <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
-          <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-muted">Policies</a></li>
-        </ul>
-      </div>
-
-      
-    </div>
-
-    <div class="d-flex justify-content-between fpt-4 pb-2 mt-4 border-top">
-    <div class="row">
-      <a class="ps-3 footer-info dropdown-toggle" data-bs-toggle="collapse" href="#footerinfo" role="button" aria-expanded="false" aria-controls="footerinfo">
-      Information
-      </a>
-      <div class="ps-3 pt-2 col-6 collapse" id="footerinfo">
-        <div class="card card-body a">
-          <b>Version:</b> <script src="/static/version.js"></script>2.13.2<br>
-          <b>Author:</b> Alex Toucan
-          <br><br>
-          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-          <br>
-          <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p><br>
           <p>® <script src="/static/year.js"></script>2023 AT Products LLC</p>
          </div>
         </div>
