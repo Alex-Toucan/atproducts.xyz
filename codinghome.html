@@ -453,10 +453,10 @@ Objects — <code>var name = {firstName:"John", lastName:”Doe"}</code> <p></p>
 <p><b>Objects Example</b> <br>
 <code>
 var person = {<br>
- firstName:"John",<br>
- lastName:"Doe",<br>
- age:20,<br>
- nationality:"American"<br>
+&nbsp;firstName:"John",<br>
+&nbsp;lastName:"Doe",<br>
+&nbsp;age:20,<br>
+&nbsp;nationality:"American"<br>
 };
   </code></p>
           </div>
@@ -468,9 +468,94 @@ var person = {<br>
         <div class="row">
           <div class="col-4 p-1">
     <div id="sqlblist" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#query-6">Querying Data from a Table</a>
+      <a class="list-group-item list-group-item-action" href="#mod-6">Modifying Data</a>
       <a class="list-group-item list-group-item-action" href="#table-6">Table Management</a>
             </div></div><div class="col-8 p-1 scrollspy">
     <div data-bs-spy="scroll" data-bs-target="#sqlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<div id="query-6">
+<h4>Querying Data from a Table</h4>
+<p>Query Data in Columns c1, c2 from a Table</p>
+<code>
+SELECT c1, c2 FROM t;<br>
+Code language: SQL (Structured Query Language) (sql)
+</code>
+<p>Query All Rows and Columns from a Table</p>
+<code>SELECT * FROM t;</code>
+<p>Query Data and Filter Rows with a Condition</p>
+<code>
+SELECT c1, c2 FROM t<br>
+WHERE condition;
+</code>
+<p>Query Distinct Rows from a Table</p>
+<code>
+SELECT DISTINCT c1 FROM t<br>
+WHERE condition;
+</code>
+<p>Sort the Result Set in Ascending or Descending Order</p>
+<code>
+SELECT c1, c2 FROM t<br>
+ORDER BY c1 ASC [DESC];
+</code>
+<p>Skip Offset of Rows and Return the Next n Rows</p>
+<code>
+SELECT c1, c2 FROM t<br>
+ORDER BY c1<br>
+LIMIT n OFFSET offset;
+</code>
+<p>Group Rows using an Aggregate Function</p>
+<code>
+SELECT c1, aggregate(c2)<br>
+FROM t<br>
+GROUP BY c1;
+</code>
+<p>Filter Groups using <b>Having</b> Clause</p>
+<code>
+SELECT c1, aggregate(c2)<br>
+FROM t<br>
+GROUP BY c1<br>
+HAVING condition;
+</code>
+</div>
+<div id="mod-6">
+<h4>Modifying Data</h4>
+<p>Insert One Row into a Table</p>
+<code>
+INSERT INTO t(column_list)<br>
+VALUES(value_list);
+</code>
+<p>Insert Multiple Rows into a Table</p>
+<code>
+INSERT INTO t(column_list)<br>
+VALUES (value_list), <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(value_list), …;
+</code>
+<p>Insert Rows from t2 into t1</p>
+<code>
+INSERT INTO t1(column_list)<br>
+SELECT column_list<br>
+FROM t2;
+</code>
+<p>Update New Value in the Column c1 for All Rows</p>
+<code>
+UPDATE t<br>
+SET c1 = new_value;
+</code>
+<p>Update Values in the Column c1, c2 that Match the Condition</p>
+<code>
+UPDATE t
+SET c1 = new_value, 
+&nbsp;&nbsp;&nbsp;&nbsp;c2 = new_value
+WHERE condition;
+</code>
+<p>Delete All Data in a Table</p>
+<code>DELETE FROM t;</code>
+<p>Delete Subset of Rows in a Table</p>
+<code>
+DELETE FROM t<br>
+WHERE condition;
+</code>
+</div>
 <div id="table-6">
 <h4>Table Management</h4>
 <p>Create a new Table with Three Columns</p>
@@ -492,13 +577,60 @@ CREATE TABLE t (<br>
 <p>Drop a Constraint</p>
 <code>ALTER TABLE t DROP constraint;</code><br>
 <p>Rename a Table from t1 to t2</p>
-ALTER TABLE t1 RENAME TO t2;</code><br>
+ALTER TABLE t1 RENAME TO t2;<br>
 <p>Rename Column c1 to c2</p>
 <code>ALTER TABLE t1 RENAME c1 TO c2 ;</code><br>
 <p>Remove all Data in a Table</p>
 <code>TRUNCATE TABLE t;</code>
 </div>
-          </div>
+          </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+          <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#jsob">JSON Basics</button><div class="modal fade" id="josb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+<h5 class="modal-title" id="jsobt">SQL Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
+<i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
+<h2 class="modal-body-title"> JSON Basics </h2>
+        <div class="row">
+          <div class="col-4 p-1">
+    <div id="sqlblist" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#example-7">Example Document</a>
+            </div></div><div class="col-8 p-1 scrollspy">
+    <div data-bs-spy="scroll" data-bs-target="#sqlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<div id="example-7">
+<h4>Example Document</h4>
+<p>Create a new Table with Three Columns</p>
+<code>
+{<br>
+&nbsp;&nbsp;"foo": "bar",<br>
+&nbsp;&nbsp;"array": [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"foo",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"bar"<br>
+&nbsp;&nbsp;]<br>
+}
+</code>
+<p>All JSON files are surrounded by { and }, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
+</div>
+<div id="import-7">
+<h4>Importing JSON</h4>
+<table>
+<tbody>
+<tr>
+<td>JavaScript</td>
+<td><code>fetch('example.json')</code></td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td><code>import('./example.json')</code></td>
+</tr>
+<tr>
+<td>TypeScript + Node.js</td>
+  <td><code>import data from 'example.json'</code></td>
+</tr>
+<tr>
+<td>Python</td>
+  <td><code>import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
     </div>
           </div> </main>
