@@ -479,43 +479,43 @@ var person = {<br>
 <code>
 SELECT c1, c2 FROM t;<br>
 Code language: SQL (Structured Query Language) (sql)
-</code><br>
+</code><br><br>
 <p>Query All Rows and Columns from a Table</p>
-<code>SELECT * FROM t;</code><br>
+<code>SELECT * FROM t;</code><br><br>
 <p>Query Data and Filter Rows with a Condition</p>
 <code>
 SELECT c1, c2 FROM t<br>
 WHERE condition;
-</code><br>
+</code><br><br>
 <p>Query Distinct Rows from a Table</p>
 <code>
 SELECT DISTINCT c1 FROM t<br>
 WHERE condition;
-</code><br>
+</code><br><br>
 <p>Sort the Result Set in Ascending or Descending Order</p>
 <code>
 SELECT c1, c2 FROM t<br>
 ORDER BY c1 ASC [DESC];
-</code><br>
+</code><br><br>
 <p>Skip Offset of Rows and Return the Next n Rows</p>
 <code>
 SELECT c1, c2 FROM t<br>
 ORDER BY c1<br>
 LIMIT n OFFSET offset;
-</code><br>
+</code><br><br>
 <p>Group Rows using an Aggregate Function</p>
 <code>
 SELECT c1, aggregate(c2)<br>
 FROM t<br>
 GROUP BY c1;
-</code><br>
+</code><br><br>
 <p>Filter Groups using <b>Having</b> Clause</p>
 <code>
 SELECT c1, aggregate(c2)<br>
 FROM t<br>
 GROUP BY c1<br>
 HAVING condition;
-</code><br>
+</code><br><br>
 </div>
 <div id="mod-6">
 <h4>Modifying Data</h4>
@@ -523,38 +523,38 @@ HAVING condition;
 <code>
 INSERT INTO t(column_list)<br>
 VALUES(value_list);
-</code><br>
+</code><br><br>
 <p>Insert Multiple Rows into a Table</p>
 <code>
 INSERT INTO t(column_list)<br>
 VALUES (value_list), <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(value_list), …;
-</code><br>
+</code><br><br>
 <p>Insert Rows from t2 into t1</p>
 <code>
 INSERT INTO t1(column_list)<br>
 SELECT column_list<br>
 FROM t2;
-</code><br>
+</code><br><br>
 <p>Update New Value in the Column c1 for All Rows</p>
 <code>
 UPDATE t<br>
 SET c1 = new_value;
-</code><br>
+</code><br><br>
 <p>Update Values in the Column c1, c2 that Match the Condition</p>
 <code>
 UPDATE t
 SET c1 = new_value, <br>
 &nbsp;&nbsp;&nbsp;&nbsp;c2 = new_value<br>
 WHERE condition;
-</code><br>
+</code><br><br>
 <p>Delete All Data in a Table</p>
 <code>DELETE FROM t;</code>
 <p>Delete Subset of Rows in a Table</p>
 <code>
 DELETE FROM t<br>
 WHERE condition;
-</code><br>
+</code><br><br>
 </div>
 <div id="table-6">
 <h4>Table Management</h4>
@@ -565,35 +565,35 @@ CREATE TABLE t (<br>
      name VARCHAR NOT NULL,<br>
      price INT DEFAULT 0<br>
 );<br>
-</code><br>
+</code><br><br>
 <p>Delete the Table from the Database</p>
-<code>DROP TABLE t ;</code><br>
+<code>DROP TABLE t ;</code><br><br>
 <p>Add a new Column to the Table</p>
-<code>ALTER TABLE t ADD column;</code><br>
+<code>ALTER TABLE t ADD column;</code><br><br>
 <p>Drop Column c from the Table</p>
-<code>ALTER TABLE t DROP COLUMN c ;</code><br>
+<code>ALTER TABLE t DROP COLUMN c ;</code><br><br>
 <p>Add a Constraint</p>
-<code>ALTER TABLE t ADD constraint;</code><br>
+<code>ALTER TABLE t ADD constraint;</code><br><br>
 <p>Drop a Constraint</p>
-<code>ALTER TABLE t DROP constraint;</code><br>
+<code>ALTER TABLE t DROP constraint;</code><br><br>
 <p>Rename a Table from t1 to t2</p>
-ALTER TABLE t1 RENAME TO t2;<br>
+<code>ALTER TABLE t1 RENAME TO t2;</code><br><br>
 <p>Rename Column c1 to c2</p>
-<code>ALTER TABLE t1 RENAME c1 TO c2 ;</code><br>
+<code>ALTER TABLE t1 RENAME c1 TO c2 ;</code><br><br>
 <p>Remove all Data in a Table</p>
 <code>TRUNCATE TABLE t;</code>
 </div>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
           <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#jsob">JSON Basics</button><div class="modal fade" id="jsob" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="jsobt">SQL Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
+<h5 class="modal-title" id="jsobt">JSON Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
 <h2 class="modal-body-title"> JSON Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="sqlblist" class="list-group">
+    <div id="jsonblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#example-7">Example Document</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#sqlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#jsonblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="example-7">
 <h4>Example Document</h4>
 <p>Create a new Table with Three Columns</p>
