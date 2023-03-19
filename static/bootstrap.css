@@ -8150,22 +8150,27 @@ textarea.form-control-lg {
 
 .border-1 {
   --bs-border-width: 1px;
+  border-width: 1px !important;
 }
 
 .border-2 {
   --bs-border-width: 2px;
+  border-width: 2px !important;
 }
 
 .border-3 {
   --bs-border-width: 3px;
+  border-width: 3px !important;
 }
 
 .border-4 {
   --bs-border-width: 4px;
+  border-width: 4px !important;
 }
 
 .border-5 {
   --bs-border-width: 5px;
+  border-width: 5px !important;
 }
 
 .border-opacity-10 {
