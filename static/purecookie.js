@@ -77,10 +77,10 @@ function cookieConsent() {
 function purecookieDismiss() {
   setCookie('purecookieDismiss','1',7);
   pureFadeOut("cookieConsentContainer");
-	then {
-  		const element = document.getElementById("cookieConsentContainer");
-  		element.remove()
-	}
+	then(
+          const element = document.getElementById("cookieConsentContainer");
+  	  element.remove()
+	)
 }
 
 window.onload = function() { cookieConsent(); };
