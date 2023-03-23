@@ -14462,8 +14462,8 @@ textarea.form-control-lg {
 
 @media (max-width:767.98ox) {
   .lrpad scrollspy code, .lrpad code:not(p code, a code, .modal code, li code) {
-    padding-left: 10px;
-    padding-right: 10px;
+    left: 10px;
+    right: 10px;
   }
 }
 
