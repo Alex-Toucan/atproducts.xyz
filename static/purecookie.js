@@ -42,9 +42,9 @@ function pureFadeOut(elem){
     } else {
       requestAnimationFrame(fade);
     }
-      then (
+      then {
       element.remove();
-    )
+    }
   })();
 };
 
