@@ -14454,10 +14454,17 @@ textarea.form-control-lg {
 }
 
 @media (max-width:767.98px) {
-   .lrpad li, .lrpad .scrollspy p, .lrpad p:not(.modal p, li p, .card p), .lrpad .scrollspy a, .lrpad a:not(p a, header a, b a, code a, a.back-to-top, a.w-100, .modal a,.icon-bar a, li a, a.list-group-item, .card a), .lrpad .scrollspy b, .lrpad b:not(p b, a b, code b, .modal b), .lrpad scrollspy code, .lrpad code:not(p code, a code, .modal code, li b), .lrpad .scrollspy img, .lrpad img:not(.card img, .modal img), .lrpad .scrollspy pre, .lrpad pre:not(.modal pre), .lrpad .scrollspy .row, .lrpad .row:not(.modal .row), .lrpad .scrollspy .card, .lrpad.card, .lrpad .scrollspy .h1, .lrpad .h1:not(.modal .h1, .card .h1), .lrpad .scrollspy h1, .lrpad h1:not(.modal h1, .card h1), .lrpad .scrollspy .h2, .lrpad .h2:not(.modal .h2, .card .h2), .lrpad .scrollspy h2, .lrpad h2:not(.modal h2, .card h2), .lrpad .scrollspy .h3, .lrpad .h3:not(.modal .h3, .card .h3), .lrpad .scrollspy h3, .lrpad h3:not(.modal h3, .card h3), .lrpad .scrollspy .h4, .lrpad .h4:not(.modal .h4, .card .h4), .lrpad .scrollspy h4, .lrpad h4:not(.modal h4, .card h4), .lrpad .scrollspy .h5, .lrpad .h5:not(.modal .h5, .card .h5), .lrpad .scrollspy h5, .lrpad h5:not(.modal h5, .card h5), .lrpad .scrollspy .h6, .lrpad .h6:not(.modal .h6, .card .h6), .lrpad .scrollspy h6, .lrpad h6:not(.modal h6, .card h6), .lrpad .btn:not(.btn.btn-resource, .w-100 .btn, .btn.w-100) {
+   .lrpad li, .lrpad .scrollspy p, .lrpad p:not(.modal p, li p, .card p), .lrpad .scrollspy a, .lrpad a:not(p a, header a, b a, code a, a.back-to-top, a.w-100, .modal a,.icon-bar a, li a, a.list-group-item, .card a), .lrpad .scrollspy b, .lrpad b:not(p b, a b, code b, .modal b), .lrpad .scrollspy img, .lrpad img:not(.card img, .modal img), .lrpad .scrollspy pre, .lrpad pre:not(.modal pre), .lrpad .scrollspy .row, .lrpad .row:not(.modal .row), .lrpad .scrollspy .card, .lrpad.card, .lrpad .scrollspy .h1, .lrpad .h1:not(.modal .h1, .card .h1), .lrpad .scrollspy h1, .lrpad h1:not(.modal h1, .card h1), .lrpad .scrollspy .h2, .lrpad .h2:not(.modal .h2, .card .h2), .lrpad .scrollspy h2, .lrpad h2:not(.modal h2, .card h2), .lrpad .scrollspy .h3, .lrpad .h3:not(.modal .h3, .card .h3), .lrpad .scrollspy h3, .lrpad h3:not(.modal h3, .card h3), .lrpad .scrollspy .h4, .lrpad .h4:not(.modal .h4, .card .h4), .lrpad .scrollspy h4, .lrpad h4:not(.modal h4, .card h4), .lrpad .scrollspy .h5, .lrpad .h5:not(.modal .h5, .card .h5), .lrpad .scrollspy h5, .lrpad h5:not(.modal h5, .card h5), .lrpad .scrollspy .h6, .lrpad .h6:not(.modal .h6, .card .h6), .lrpad .scrollspy h6, .lrpad h6:not(.modal h6, .card h6), .lrpad .btn:not(.btn.btn-resource, .w-100 .btn, .btn.w-100) {
       margin-left: 10px;
       margin-right: 10px;
    }
+}
+
+@media (max-width:767.98ox) {
+  .lrpad scrollspy code, .lrpad code:not(p code, a code, .modal code, li code) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .a {
