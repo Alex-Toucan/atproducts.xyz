@@ -31,6 +31,7 @@ function pureFadeIn(elem, display){
     }
   })();
 };
+const element = document.getElementById("cookieConsentContainer");
 function pureFadeOut(elem){
   var el = document.getElementById(elem);
   el.style.opacity = 1;
@@ -41,8 +42,9 @@ function pureFadeOut(elem){
     } else {
       requestAnimationFrame(fade);
     }
-      const element = document.getElementById("cookieConsentContainer");
+      then (
       element.remove();
+    )
   })();
 };
 
