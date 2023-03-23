@@ -41,6 +41,8 @@ function pureFadeOut(elem){
     } else {
       requestAnimationFrame(fade);
     }
+      const element = document.getElementById("cookieConsentContainer");
+      element.remove();
   })();
 };
 
@@ -77,10 +79,6 @@ function cookieConsent() {
 function purecookieDismiss() {
   setCookie('purecookieDismiss','1',7);
   pureFadeOut("cookieConsentContainer");
-	then(
-          const element = document.getElementById("cookieConsentContainer");
-  	  element.remove()
-	)
 }
 
 window.onload = function() { cookieConsent(); };
