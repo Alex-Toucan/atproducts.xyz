@@ -13,11 +13,6 @@
     <meta name="description" content="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!">
     <meta name="author" content="Alex Toucan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="/static/scroll.js"></script>
-    <script src="/static/purecookie.js"></script>
-    <script src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
     <div id="page">
@@ -57,6 +52,7 @@
               <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
               <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
               <li><a class="dropdown-item" href="/policies">Policies</a></li>
+              <li><a class="dropdown-item" href="/licenses">Licenses</a></li>
             </ul>
           </li>
         </ul>
@@ -93,7 +89,6 @@
   </div>
 </nav>
     </header>
-      <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
 <main id="flash" class="a lrpad"> <div id="intro">
   <h1 class="title"> Flash Documentation </h1>
   <img src="/media/images/flashdoc.png" width="45%" alt="icon" style="padding-top:5px;" class="mainimg flashimg"> <br> <br>
@@ -119,15 +114,16 @@
           </div> <hr>
 <div id="ai">
         <h2> Adobe AIR </h2>
-  <img src="/media/images/Adobe_air_2015.webp" width="12.5%" alt="AIR logo" style="margin:10px;" class="flash">
+  <img src="/media/images/adobeair.png" width="12.5%" alt="AIR logo" class="flash mlr mb-2">
   <p> In this page, we will go over about Adobe AIR. </p>
   <h4> What is Adobe AIR </h4>
   <p> Adobe AIR (codenamed Apollo) runtime enables developers to use HTML, JavaScript, Adobe Flash software, and ActionScript to build web applications that run as standalone client applications without the constraints of a browser. This supports .AIR files for installation. Adobe AIR's logo history falls under Adobe's Flash Player logo history, having similar logos. Adobe AIR was discontinued the same time that Flash Player was discontinued, January 1st, 2021.</p> 
   <h4> How to use Adobe AIR in 2022 </h4>
-  <p> You can download the most recent version of <a href="/media/files/AdobeAIR-33.1.1.533.exe">Adobe AIR here</a>, or install <a href="http://www.oldversion.com/windows/adobe-air/">older versions</a>.</p>
-</div><hr><div id="al">
+  <p> You can download the most recent version of <a href="/media/files/AdobeAIR.exe">Adobe AIR here</a>, or install <a href="http://www.oldversion.com/windows/adobe-air/">older versions</a>.</p>
+        <p> If you need to uninstall it, open Command Prompt or Run in Windows, use <code>"path to AdobeAIRInstaller.exe -uninstall"</code> and enter. Otherwise, use this <a href="https://support.microsoft.com/en-us/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">Microsoft blog post</a>.</p>
+  </div><hr><div id="al">
 <h2> Adobe AIR Logo History </h2>
-   <div class="dmrow">
+   <div class="dmrow mlr">
           <div class="col-4b p-1">
     <div id="list-example" class="list-group">
           <a class="list-group-item list-group-item-action" href="#a2008">2008</a>
@@ -159,7 +155,7 @@
 
 </div><hr><div id="di">
 <h2> Adobe Director </h2>
-  <img src="/media/images/Adobe_Di.svg.png" width="12.5%" alt="director logo" style="margin:10px;" class="flash">
+  <img src="/media/images/Adobe_Di.svg.png" width="12.5%" alt="director logo" class="flash mlr mb-2">
   <p> In this page, we will go over about Adobe Director. </p>
   <h4> What is Adobe Director </h4>
   <p> Adobe Director is very similar to Adobe Flash Player, but they are both completely different things. Instead of SWF files, it uses DCR files. It can also use Apple Inc's Quicktime, used to support media, and the The 3DO Company's 3DO Console Engine. Adobe Director's last version was 12, being released in 2012. The product would be later discontinued in both February 1st, and March 1st of 2017. </p>
@@ -169,7 +165,7 @@
   <p> You can download the most recent version of <a href="/media/files/Projector Skeleton for Adobe Director 12.0.1.122.zip">Projector Skeleton for Adobe Director here</a>. It will ask you once you open the application, to put in a DCR file. Make sure, if possible, that the plugin is in the same folder (directory) as the DCR file. You can download a <a href="/media/files/anchovies.dcr">example DCR game here</a>.</p>
 </div><hr><div id="dl">
   <h2> Adobe Director Logo History </h2>
-    <div class="dmrow">
+    <div class="dmrow mlr">
           <div class="col-4b p-1">
     <div id="list-example" class="list-group">
           <a href="#mvtitle" class="list-group-item list-group-item-action fw-bolder">Macromind Videoworks</a>
@@ -313,7 +309,7 @@
         <hr>
  <div id="fh">
 <h2> Flash Player's Logo History </h2>
-    <div class="dmrow">
+    <div class="dmrow mlr">
           <div class="col-4b p-1">
     <div id="list-example" class="list-group">
           <a href="#f1996" class="list-group-item list-group-item-action">1996 - 2002</a>
@@ -501,6 +497,7 @@ After that, run a installer from the table of installers depending on your devic
           <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
           <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
           <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-muted">Policies</a></li>
+          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-muted">Licenses</a></li>
         </ul>
       </div>
 
@@ -517,9 +514,6 @@ After that, run a installer from the table of installers depending on your devic
           <b>Version:</b> <script src="/static/version.js"></script><br>
           <b>Author:</b> Alex Toucan
           <br><br>
-          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-          <br>
-          <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p><br>
           <p>® <script src="/static/year.js"></script> AT Products LLC</p>
          </div>
         </div>
@@ -535,7 +529,16 @@ After that, run a installer from the table of installers depending on your devic
   </div>
 </div>
         </footer>
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
 </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="/static/scroll.js"></script>
+    <script src="/static/purecookie.js"></script>
+    <script src="/static/darkmode.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
     </body>
     </html>

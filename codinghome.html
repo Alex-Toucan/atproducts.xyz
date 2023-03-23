@@ -13,11 +13,6 @@
     <meta name="keywords" content="Scripts, viruses, coding,">
     <meta name="author" content="CodingLive">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/static/purecookie.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="/static/scroll.js"></script>
-    <script src="/static/darkmode.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </head>
   <body class="fixedtopnavimage">
      <div id="page">
@@ -57,6 +52,7 @@
               <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
               <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
               <li><a class="dropdown-item" href="/policies">Policies</a></li>
+              <li><a class="dropdown-item" href="/licenses">Licenses</a></li>
             </ul>
           </li>
         </ul>
@@ -93,7 +89,6 @@
   </div>
 </nav>
     </header>
-       <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
        <main id="codinghome" class="a lrpad"> <div id="intro">
     <h1 class="title"> CodingHome </h1>
   <img src="/media/images/codinghome.png">
@@ -106,16 +101,16 @@
 <h2 class="me-md-auto text-starttocenter mb-0">Community Links</h2>
            <br class="disbr">
 <div class="icon-bar fatoc">
-  <a href="https://discord.gg/McV7AKaJ6c" target="_blank" rel="noopener noreferrer" class="link-dark ms-md-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Discord Server Invite"><i class="bi bi-discord"></i></a> 
-  <a href="https://protdos.com" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="ProtDos"><i class="bi bi-bullseye"></i></a> 
-  <a href="https://github.com/protdos" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="GitHub"><i class="bi bi-github"></i></a> 
-  <a href="mailto:contact@protdos.com" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="ProtDos's Email"><i class="bi bi-envelope-fill"></i></a>
-  <a href="http://bit.ly/CodingHome" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Coder's Bot"><i class="bi bi-heart-fill"></i></a> 
+  <a href="https://discord.gg/3WnxVZzXAm" aria-label="Discord Server Invite" target="_blank" rel="noopener noreferrer" class="link-dark ms-md-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Discord Server Invite"><i class="bi bi-discord"></i></a> 
+  <a href="https://protdos.com" aria-label="ProtDos" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="ProtDos"><i class="bi bi-bullseye"></i></a> 
+  <a href="https://github.com/protdos" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="GitHub"><i class="bi bi-github"></i></a> 
+  <a href="mailto:contact@protdos.com" aria-label="ProtDos's Email" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="ProtDos's Email"><i class="bi bi-envelope-fill"></i></a>
 </div></div><hr>
   <div id="resources">
             <h2> Resources </h2>
         <p> What do you want to know about today? </p>
     <a href="/backup/codinghome" class="btn btn-link">View the all laid out format</a> <br> <br>
+    <div class="mlr">
 <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#vm">Viruses &amp; Malware</button><div class="modal fade" id="vm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="vmt">Viruses &amp; Malware</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
@@ -151,13 +146,13 @@
 <h2 class="modal-body-title"> Python Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="list-example" class="list-group">
+    <div id="pyblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
       <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
       <a class="list-group-item list-group-item-action" href="#str-3">Strings</a>
       <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#pyblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="com-3 p-1">
 <h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
@@ -227,12 +222,12 @@ print(type(y))</code></p>
 <h2 class="modal-body-title"> C++ Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="list-example" class="list-group">
+    <div id="cppblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#strings-5">Strings</a>
       <a class="list-group-item list-group-item-action" href="#integers-5">Integers and Floating Point Numbers</a>
       <a class="list-group-item list-group-item-action" href="#print-5">Print</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#cppblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="strings-5">
 <h4>Strings</h4>
 <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
@@ -283,14 +278,14 @@ int main()<br>
 <h2 class="modal-body-title"> HTML Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="list-example" class="list-group">
+    <div id="htmlblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#example-1">Example Document</a>
       <a class="list-group-item list-group-item-action" href="#head-1">HTML Headings</a>
       <a class="list-group-item list-group-item-action" href="#text-1">HTML Paragraphs</a>
       <a class="list-group-item list-group-item-action" href="#links-1">HTML Links</a>
       <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#htmlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="example-1">
 <h4>Example Document</h4>
 <code>
@@ -458,15 +453,186 @@ Objects — <code>var name = {firstName:"John", lastName:”Doe"}</code> <p></p>
 <p><b>Objects Example</b> <br>
 <code>
 var person = {<br>
- firstName:"John",<br>
- lastName:"Doe",<br>
- age:20,<br>
- nationality:"American"<br>
+&nbsp;firstName:"John",<br>
+&nbsp;lastName:"Doe",<br>
+&nbsp;age:20,<br>
+&nbsp;nationality:"American"<br>
 };
   </code></p>
           </div>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
-
+<button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#sqlb">SQL Basics</button><div class="modal fade" id="sqlb" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+<h5 class="modal-title" id="sqlbt">SQL Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
+<i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
+<h2 class="modal-body-title"> SQL Basics </h2>
+        <div class="row">
+          <div class="col-4 p-1">
+    <div id="sqlblist" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#query-6">Querying Data from a Table</a>
+      <a class="list-group-item list-group-item-action" href="#mod-6">Modifying Data</a>
+      <a class="list-group-item list-group-item-action" href="#table-6">Table Management</a>
+            </div></div><div class="col-8 p-1 scrollspy">
+    <div data-bs-spy="scroll" data-bs-target="#sqlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<div id="query-6">
+<h4>Querying Data from a Table</h4>
+<p>Query Data in Columns c1, c2 from a Table</p>
+<code>
+SELECT c1, c2 FROM t;<br>
+Code language: SQL (Structured Query Language) (sql)
+</code><br><br>
+<p>Query All Rows and Columns from a Table</p>
+<code>SELECT * FROM t;</code><br><br>
+<p>Query Data and Filter Rows with a Condition</p>
+<code>
+SELECT c1, c2 FROM t<br>
+WHERE condition;
+</code><br><br>
+<p>Query Distinct Rows from a Table</p>
+<code>
+SELECT DISTINCT c1 FROM t<br>
+WHERE condition;
+</code><br><br>
+<p>Sort the Result Set in Ascending or Descending Order</p>
+<code>
+SELECT c1, c2 FROM t<br>
+ORDER BY c1 ASC [DESC];
+</code><br><br>
+<p>Skip Offset of Rows and Return the Next n Rows</p>
+<code>
+SELECT c1, c2 FROM t<br>
+ORDER BY c1<br>
+LIMIT n OFFSET offset;
+</code><br><br>
+<p>Group Rows using an Aggregate Function</p>
+<code>
+SELECT c1, aggregate(c2)<br>
+FROM t<br>
+GROUP BY c1;
+</code><br><br>
+<p>Filter Groups using <b>Having</b> Clause</p>
+<code>
+SELECT c1, aggregate(c2)<br>
+FROM t<br>
+GROUP BY c1<br>
+HAVING condition;
+</code><br><br>
+</div>
+<div id="mod-6">
+<h4>Modifying Data</h4>
+<p>Insert One Row into a Table</p>
+<code>
+INSERT INTO t(column_list)<br>
+VALUES(value_list);
+</code><br><br>
+<p>Insert Multiple Rows into a Table</p>
+<code>
+INSERT INTO t(column_list)<br>
+VALUES (value_list), <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(value_list), …;
+</code><br><br>
+<p>Insert Rows from t2 into t1</p>
+<code>
+INSERT INTO t1(column_list)<br>
+SELECT column_list<br>
+FROM t2;
+</code><br><br>
+<p>Update New Value in the Column c1 for All Rows</p>
+<code>
+UPDATE t<br>
+SET c1 = new_value;
+</code><br><br>
+<p>Update Values in the Column c1, c2 that Match the Condition</p>
+<code>
+UPDATE t
+SET c1 = new_value, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;c2 = new_value<br>
+WHERE condition;
+</code><br><br>
+<p>Delete All Data in a Table</p>
+<code>DELETE FROM t;</code>
+<p>Delete Subset of Rows in a Table</p>
+<code>
+DELETE FROM t<br>
+WHERE condition;
+</code><br><br>
+</div>
+<div id="table-6">
+<h4>Table Management</h4>
+<p>Create a new Table with Three Columns</p>
+<code>
+CREATE TABLE t (<br>
+     id INT PRIMARY KEY,<br>
+     name VARCHAR NOT NULL,<br>
+     price INT DEFAULT 0<br>
+);<br>
+</code><br><br>
+<p>Delete the Table from the Database</p>
+<code>DROP TABLE t ;</code><br><br>
+<p>Add a new Column to the Table</p>
+<code>ALTER TABLE t ADD column;</code><br><br>
+<p>Drop Column c from the Table</p>
+<code>ALTER TABLE t DROP COLUMN c ;</code><br><br>
+<p>Add a Constraint</p>
+<code>ALTER TABLE t ADD constraint;</code><br><br>
+<p>Drop a Constraint</p>
+<code>ALTER TABLE t DROP constraint;</code><br><br>
+<p>Rename a Table from t1 to t2</p>
+<code>ALTER TABLE t1 RENAME TO t2;</code><br><br>
+<p>Rename Column c1 to c2</p>
+<code>ALTER TABLE t1 RENAME c1 TO c2 ;</code><br><br>
+<p>Remove all Data in a Table</p>
+<code>TRUNCATE TABLE t;</code>
+</div>
+          </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+          <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#jsob">JSON Basics</button><div class="modal fade" id="jsob" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+<h5 class="modal-title" id="jsobt">JSON Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
+<i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
+<h2 class="modal-body-title"> JSON Basics </h2>
+        <div class="row">
+          <div class="col-4 p-1">
+    <div id="jsonblist" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#example-7">Example Document</a>
+      <a class="list-group-item list-group-item-action" href="#import-7">Importing JSON</a>
+            </div></div><div class="col-8 p-1 scrollspy">
+    <div data-bs-spy="scroll" data-bs-target="#jsonblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<div id="example-7">
+<h4>Example Document</h4>
+<code>
+{<br>
+&nbsp;&nbsp;"foo": "bar",<br>
+&nbsp;&nbsp;"array": [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"foo",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"bar"<br>
+&nbsp;&nbsp;]<br>
+}
+</code><br><br>
+<p>All JSON files are surrounded by { and }, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
+</div>
+<div id="import-7">
+<h4>Importing JSON</h4>
+<table>
+<tbody>
+<tr>
+<td class="border-1">JavaScript</td>
+<td class="border-1"><code>fetch('example.json')</code></td>
+</tr>
+<tr>
+<td class="border-1">Node.js</td>
+<td class="border-1"><code>import('./example.json')</code></td>
+</tr>
+<tr>
+<td class="border-1">TypeScript + Node.js</td>
+  <td class="border-1"><code>import data from 'example.json'</code></td>
+</tr>
+<tr>
+<td class="border-1">Python</td>
+  <td class="border-1"><code>import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+          </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+    </div>
           </div> </main>
 <footer>
   <hr>
@@ -506,6 +672,7 @@ var person = {<br>
           <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
           <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
           <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-muted">Policies</a></li>
+          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-muted">Licenses</a></li>
         </ul>
       </div>
 
@@ -522,9 +689,6 @@ var person = {<br>
           <b>Version:</b> <script src="/static/version.js"></script><br>
           <b>Author:</b> Alex Toucan
           <br><br>
-          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-          <br>
-          <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p><br>
           <p>® <script src="/static/year.js"></script> AT Products LLC</p>
          </div>
         </div>
@@ -540,10 +704,16 @@ var person = {<br>
   </div>
 </div>
         </footer>
+              <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
 </div>
-      <script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="/static/scroll.js"></script>
+    <script src="/static/purecookie.js"></script>
+    <script src="/static/darkmode.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
     </body>
     </html>

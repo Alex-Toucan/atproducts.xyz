@@ -9833,6 +9833,22 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 576px) {
+  .w-sm-50 {
+   width: 50% !important;
+  }
+
+  .w-sm-75 {
+    width: 75% !important;
+  }
+
+  .w-sm-100 {
+    width: 100% !important;
+  }
+
+  .w-sm-auto {
+    width: auto !important;
+  }
+  
   .float-sm-start {
     float: left !important;
   }
@@ -10391,6 +10407,22 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
+  .w-md-50 {
+   width: 50% !important;
+  }
+
+  .w-md-75 {
+    width: 75% !important;
+  }
+
+  .w-md-100 {
+    width: 100% !important;
+  }
+
+  .w-md-auto {
+    width: auto !important;
+  }
+  
   .float-md-start {
     float: left !important;
   }
@@ -14686,7 +14718,7 @@ html.fixedtopnavimage {
     padding-top: 7.5px;
 }
 
-.title {
+.title:not(.a, .b, .d) {
   text-align: center;
 }
 

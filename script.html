@@ -13,11 +13,6 @@
     <meta name="keywords" content="Scripts, viruses, coding,">
     <meta name="author" content="nasus">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="/static/scroll.js"></script>
-    <script src="/static/purecookie.js"></script>
-    <script src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
     <header>
@@ -56,6 +51,7 @@
               <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
               <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
               <li><a class="dropdown-item" href="/policies">Policies</a></li>
+              <li><a class="dropdown-item" href="/licenses">Licenses</a></li>
             </ul>
           </li>
         </ul>
@@ -92,7 +88,6 @@
   </div>
 </nav>
     </header>  
-    <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
        <main id="script" class="a lrpad"> <div id="intro">
  <h1 class="title"> The Script Community </h1>
       <img src="/media/images/script.png" width="17.5%" class="script" alt="script icon"> <br> <br>
@@ -105,6 +100,7 @@
         <h2> Resources </h2>
         <p> What do you want to know about today? </p>
         <a href="/backup/script">View the all laid out format</a> <br> <br>
+        <div class="mlr">
         <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#lr">Learning Resources</button><div class="modal fade" id="lr" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="lrt">Learning Resources</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
@@ -118,13 +114,13 @@
 <h2 class="modal-body-title"> Python Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="list-example" class="list-group">
+    <div id="pyblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
       <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
       <a class="list-group-item list-group-item-action" href="#str-3">Strings</a>
       <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#pyblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="com-3">
 <h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
@@ -194,14 +190,14 @@ print(type(y))</code></p>
 <h2 class="modal-body-title"> JavaScript Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="list-example" class="list-group">
+    <div id="jsblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#html-2">Including JavaScript in an HTML Page</a>
       <a class="list-group-item list-group-item-action" href="#call-2">Call an External JavaScript File</a>
       <a class="list-group-item list-group-item-action" href="#com-2">Including Comments</a>
       <a class="list-group-item list-group-item-action" href="#var-2">Variables</a>
       <a class="list-group-item list-group-item-action" href="#data-2">Data Types</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#jsblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="html-2">
 <h4>Including JavaScript in an HTML Page</h4>
 <p><code>&lt;script type="text/javascript"&gt; <br>
@@ -253,14 +249,14 @@ var person = {<br>
 <h2 class="modal-body-title"> HTML Basics </h2>
         <div class="row">
           <div class="col-4 p-1">
-    <div id="list-example" class="list-group">
+    <div id="htmlblist" class="list-group">
       <a class="list-group-item list-group-item-action" href="#example-1">Example Document</a>
       <a class="list-group-item list-group-item-action" href="#text-1">HTML Text</a>
       <a class="list-group-item list-group-item-action" href="#head-1">HTML Heading</a>
       <a class="list-group-item list-group-item-action" href="#link-1">HTML Links</a>
       <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
             </div></div><div class="col-8 p-1 scrollspy">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#htmlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="example-1">
 <h4>Example Document</h4>
 <p><code>
@@ -562,7 +558,7 @@ var person = {<br>
        <p> Section by Nasus </p>
        <p class="mb-1"> <a href="https://www.wireshark.org/#download">Wireshark</a> is a network protocol analyzer used to capture traffic. <br> <br>Putting your adapter in Monitor mode, or RFMON mode, allows a computer with a wireless network interface controller to monitor all traffic received on a wireless channel. Unlike promiscuous mode, which is also used for packet sniffing, monitor mode allows packets to be captured without having to associate with an access point<br> <br> Buy a WiFi Adapter that supports Monitor Mode.
          The most recommended brand is Alfa for WiFi Adapters.</p> <h4> Tools </h4> <p>Alla Network AWUS036NH & Alla Network 1000 mW AWUS036H.</p><p class="mb-0"> <a href="https://www.youtube.com/watch?v=zOYohNOnWp4">Tutorial</a> </p>
-       </p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+       </p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div></div>
     </div></main>
 <footer>
   <hr>
@@ -602,6 +598,7 @@ var person = {<br>
           <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
           <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
           <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-muted">Policies</a></li>
+          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-muted">Licenses</a></li>
         </ul>
       </div>
 
@@ -618,9 +615,6 @@ var person = {<br>
           <b>Version:</b> <script src="/static/version.js"></script><br>
           <b>Author:</b> Alex Toucan
           <br><br>
-          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-          <br>
-          <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p><br>
           <p>® <script src="/static/year.js"></script> AT Products LLC</p>
          </div>
         </div>
@@ -636,6 +630,16 @@ var person = {<br>
   </div>
 </div>
         </footer>
+  <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
         </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="/static/scroll.js"></script>
+    <script src="/static/purecookie.js"></script>
+    <script src="/static/darkmode.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
 </body>
 </html>

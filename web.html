@@ -19,11 +19,6 @@
     <meta name="keywords" content="AT Products, Ethical Hacking Soeciety, The Script Community, AT Products LLC, ATproducts">
     <meta name="author" content="Alex Toucan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="/static/scroll.js"></script>
-    <script src="/static/purecookie.js"></script>
-    <script src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
   <div id="page">
@@ -63,6 +58,7 @@
               <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
               <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
               <li><a class="dropdown-item" href="/policies">Policies</a></li>
+              <li><a class="dropdown-item" href="/licenses">Licenses</a></li>
             </ul>
           </li>
         </ul>
@@ -99,10 +95,9 @@
   </div>
 </nav>
     </header>
-    <a href=5"#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
         <main id="web" class="a lrpad"> 
           <h1 class="title"> Web Projects </h1>
- <div class="prorow">
+ <div class="prorow plr">
   <div class="col-md mt-1 mb-3 m-1">
   <div class="card procard shadow-sm">
     <img class="bg-white card-img-top" src="/media/images/flashdoc.png" alt="Flash Documentation">   
@@ -164,6 +159,7 @@
           <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
           <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
           <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-muted">Policies</a></li>
+          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-muted">Licenses</a></li>
         </ul>
       </div>
 
@@ -180,9 +176,6 @@
           <b>Version:</b> <script src="/static/version.js"></script><br>
           <b>Author:</b> Alex Toucan
           <br><br>
-          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-          <br>
-          <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p><br>
           <p>® <script src="/static/year.js"></script> AT Products LLC</p>
          </div>
         </div>
@@ -198,6 +191,16 @@
   </div>
 </div>
         </footer>
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
 </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="/static/scroll.js"></script>
+    <script src="/static/purecookie.js"></script>
+    <script src="/static/darkmode.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
     </body>
     </html>

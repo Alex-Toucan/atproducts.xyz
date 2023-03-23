@@ -17,11 +17,6 @@
     <meta name="keywords" content="Scripts, viruses, coding,">
     <meta name="author" content="CobraCommander">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script src="/static/scroll.js"></script>
-    <script src="/static/purecookie.js"></script>
-    <script src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
       <div id="page">
@@ -61,6 +56,7 @@
               <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
               <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
               <li><a class="dropdown-item" href="/policies">Policies</a></li>
+              <li><a class="dropdown-item" href="/licenses">Licenses</a></li>
             </ul>
           </li>
         </ul>
@@ -97,7 +93,6 @@
   </div>
 </nav>
     </header>
-         <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
      <main id="ehs" class="a lrpad"> <div id="intro"> 
      <h1 class="title"> Ethical Hacking Society </h1>
       <h3> Disclaimer </h3>
@@ -108,13 +103,14 @@
 <h2 class="me-md-auto text-starttocenter mb-0">Community Links</h2>
            <br class="disbr">
 <div class="icon-bar fatoc">
-  <a href="https://discord.gg/ME8FNjEUfZ" target="_blank" rel="noopener noreferrer" class="link-dark ms-md-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Discord Server Invite"><i class="bi bi-discord"></i></a> 
-  <a href="https://discord.gg/mmgqRBHau6" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="The Anti Furry Clan"><i class="bi bi-discord"></i></a> 
+  <a href="https://discord.gg/ME8FNjEUfZ" aria-label="Discord Server Invite" target="_blank" rel="noopener noreferrer" class="link-dark ms-md-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Discord Server Invite"><i class="bi bi-discord"></i></a> 
+  <a href="https://discord.gg/mmgqRBHau6" aria-label="The Anti-Furry Clan" target="_blank" rel="noopener noreferrer" class="link-dark ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="The Anti Furry Clan"><i class="bi bi-discord"></i></a> 
            </div></div>
         <hr><div id="resources">
                <h2> Resources </h2>
         <p> What do you want to know about today? </p>
         <a href="/backup/ehs" class="btn btn-link">View the all laid out format</a><br><br>
+        <div class="mlr">
         <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#dw">Dark Web</button><div class="modal fade" id="dw" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="dwt">Dark Web</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X button, or the "Close" button to close. Clicking off the pop-up will not work. </i>
@@ -244,7 +240,7 @@
    <p> <b><a href="https://nmap.org/">Nmap</a> on Kali Linux SQL Injection</b> - <code>nmap --script=http-sql-injection &#60;target&#62;</code>
    <p> <b>Ping of Death in “C”</b> - <code>ping <IP Address> -t |65500</code></p>
    <p> <b> Social Engineering</b> - &quot;Spearhead phishing is effective but try something like whaling or watering hole&quot;</p>
-</div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+</div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div></div>
         </div> </main>
 <footer>
   <hr>
@@ -284,6 +280,7 @@
           <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
           <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
           <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-muted">Policies</a></li>
+          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-muted">Licenses</a></li>
         </ul>
       </div>
 
@@ -300,9 +297,6 @@
           <b>Version:</b> <script src="/static/version.js"></script><br>
           <b>Author:</b> Alex Toucan
           <br><br>
-          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-          <br>
-          <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p><br>
           <p>® <script src="/static/year.js"></script> AT Products LLC</p>
          </div>
         </div>
@@ -317,11 +311,17 @@
     </div>
   </div>
 </div>
-        </footer>
+        </footer>      
+     <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
 </div>
-   <script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="/static/scroll.js"></script>
+    <script src="/static/purecookie.js"></script>
+    <script src="/static/darkmode.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
     </body>
     </html>
