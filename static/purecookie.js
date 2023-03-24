@@ -45,7 +45,7 @@ function pureFadeOut(elem){
       setTimeout(() => {
       const element = document.getElementById("cookieConsentContainer");
       element.remove();
-      }, 2500);
+      }, 2000);
   })();
 };
 
