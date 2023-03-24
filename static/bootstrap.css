@@ -14470,7 +14470,7 @@ textarea.form-control-lg {
 }
 
 @media (max-width:767.98px) {
-  .lrpad .btn-group .btn:not (.lrpad .modal .btn-group .btn) {
+  .lrpad .btn-group .btn:not (.lrpad .modal .btn-group .btn, .w-100 .btn, .btn.w-100) {
     margin-left: 10px;
   }
 }
