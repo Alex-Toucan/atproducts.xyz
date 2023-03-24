@@ -42,9 +42,10 @@ function pureFadeOut(elem){
     } else {
       requestAnimationFrame(fade);
     }
-      wait(2500);
+      setTimeout(() => {
       const element = document.getElementById("cookieConsentContainer");
-      element.remove()
+      element.remove();
+      }, 2500);
   })();
 };
 
