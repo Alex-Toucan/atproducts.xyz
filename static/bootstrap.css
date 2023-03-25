@@ -15155,6 +15155,12 @@ nav .dropdown-menu .dropdown-item {
   }
 }
 
+@media (max-width:767.98px) {
+  .d-nba {
+    display: none;
+  }
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
