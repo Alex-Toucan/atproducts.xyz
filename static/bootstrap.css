@@ -15143,6 +15143,18 @@ nav .dropdown-menu .dropdown-item {
   background-color: #bfbfbf;
 }
 
+@media (min-width:767.98px) {
+  .d-nb {
+    display: none;
+  }
+}
+
+@media (max-width:767.98px) {
+  .d-nb {
+    display: block;
+  }
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
