@@ -15167,6 +15167,78 @@ nav .dropdown-menu .dropdown-item {
   }
 }
 
+@media (min-width:1665px) {
+	img.flashdoc {
+		max-width: 700px !important;
+		max-height: 300px !important;
+		width: 700px !important;
+		height: 300px !important;
+	}
+	img.smsbomb {
+		max-width: 411px !important;
+		max-height: 411px !important;
+		width: 411px !important;
+		height: 411px !important;
+	}
+	img.indeximg {
+		max-width: 700px !important;
+		max-height: 224px !important;
+		width: 700px !important;
+		height: 224px !important;
+	}
+}
+
+@media (min-width:2000px) {
+	img.flashdoc {
+		max-width: 1050px !important;
+		max-height: 450px !important;
+		width: 1050px !important;
+		height: 450px !important;
+	}
+	img.smsbomb {
+		max-width: 616.5px !important;
+		max-height: 616.5px !important;
+		width: 616.5px !important;
+		height: 616.5px !important;
+	}
+	img.indeximg {
+		max-width: 1050px !important;
+		max-height: 336px !important;
+		width: 1050px !important;
+		height: 336px !important;
+	}
+}
+
+@media (min-width:2560px) {
+	img.flashdoc {
+		max-width: 1400px !important;
+		max-height: 600px !important;
+		width: 1400px !important;
+		height: 600px !important;
+	}
+	img.smsbomb {
+		max-width: 822px !important;
+		max-height: 822px !important;
+		width: 822px !important;
+		height: 822px !important;
+	}
+	img.indeximg {
+		max-width: 1400px !important;
+		max-height: 448px !important;
+		width: 1400px !important;
+		height: 448px !important;
+	}
+}
+	
+@media (max-width:1665px) {
+	img.smsbomb {
+		width: 25% !important;
+	}
+	img.indeximg, img.flashdoc {
+		width: 45% !important;
+	}
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
