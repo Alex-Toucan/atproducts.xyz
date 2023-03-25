@@ -1190,6 +1190,15 @@ progress {
   }
 }
 
+.sw-col {
+  flex: 1 0 0%;
+}
+
+.sw-col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
 .sw-col-1 {
   flex: 0 0 auto;
   width: 8.33333333%;
