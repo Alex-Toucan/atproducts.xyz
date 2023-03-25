@@ -14799,6 +14799,12 @@ textarea.form-control-lg {
   }
 }
 
+@media (min-width: 767.98px) {
+  .fctoa {
+    text-align: center !important;
+  }
+}
+
 @media (min-width:767.98px) {
   .scrollspy {
     padding: 0!important;
