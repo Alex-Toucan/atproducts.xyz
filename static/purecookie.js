@@ -1,14 +1,14 @@
-var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+var _____WB$wombat$assign$functionalt_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; }; }
 {
-  let window = _____WB$wombat$assign$function_____("window");
-  let self = _____WB$wombat$assign$function_____("self");
-  let document = _____WB$wombat$assign$function_____("document");
-  let location = _____WB$wombat$assign$function_____("location");
-  let top = _____WB$wombat$assign$function_____("top");
-  let parent = _____WB$wombat$assign$function_____("parent");
-  let frames = _____WB$wombat$assign$function_____("frames");
-  let opener = _____WB$wombat$assign$function_____("opener");
+  let window = _____WB$wombat$assign$functionalt_____("window");
+  let self = _____WB$wombat$assign$functionalt_____("self");
+  let document = _____WB$wombat$assign$functionalt_____("document");
+  let location = _____WB$wombat$assign$functionalt_____("location");
+  let top = _____WB$wombat$assign$functionalt_____("top");
+  let parent = _____WB$wombat$assign$functionalt_____("parent");
+  let frames = _____WB$wombat$assign$functionalt_____("frames");
+  let opener = _____WB$wombat$assign$functionalt_____("opener");
 
 // --- Config --- //
 var purecookieTitle = "Cookies."; // Title
@@ -31,6 +31,7 @@ function pureFadeIn(elem, display){
     }
   })();
 };
+	
 function pureFadeOut(elem){
   var el = document.getElementById(elem);
   el.style.opacity = 1;
@@ -41,6 +42,10 @@ function pureFadeOut(elem){
     } else {
       requestAnimationFrame(fade);
     }
+      setTimeout(() => {
+      const element = document.getElementById("cookieConsentContainer");
+      element.remove();
+      }, 1350);
   })();
 };
 
@@ -69,7 +74,7 @@ function eraseCookie(name) {
 
 function cookieConsent() {
   if (!getCookie('purecookieDismiss')) {
-    document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><a href="javascript:location.reload();" onClick="purecookieDismiss();">' + purecookieButton + '</a></div></div>';
+    document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + '</a></div></div>';
 	pureFadeIn("cookieConsentContainer");
   }
 }
