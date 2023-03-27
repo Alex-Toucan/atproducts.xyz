@@ -12,7 +12,7 @@
 	display: none;
 }
 
-.cookieConsentContainer .cookieTitle a {
+.cookieConsentContainer .cookieTitle span {
 	font-family: OpenSans, arial, "sans-serif";
 	color: #FFFFFF;
 	font-size: 22px;
