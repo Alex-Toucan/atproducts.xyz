@@ -8363,6 +8363,34 @@ textarea.form-control-lg {
   --bs-border-opacity: 1;
 }
 
+.position-a {
+	position: absolute !important;
+}
+
+.position-s {
+	position: static !important;
+}
+
+.position-f {
+	position: fixed !important;
+}
+
+.position-r {
+	position: relative !important;
+}
+
+.position-st {
+	position: sticky !important;
+}
+
+.position-i {
+	position: initial !important;
+}
+
+.position-in {
+	position: inherit !important;
+}
+
 .w-25 {
   width: 25% !important;
 }
