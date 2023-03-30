@@ -14751,7 +14751,7 @@ textarea.form-control-lg {
 
 @media (min-width:767.98px) {
    .dmsize {
-      height: 1366px;
+      height: 1366px !important;
    }
 }
 
@@ -14759,6 +14759,7 @@ textarea.form-control-lg {
   margin-top: 0.5rem;
   overflow: auto;
   text-align: left !important;
+  height: 350px;
 }
 
 .basics-scroll {
