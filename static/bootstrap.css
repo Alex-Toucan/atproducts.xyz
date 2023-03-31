@@ -8370,24 +8370,8 @@ textarea.form-control-lg {
   --bs-border-opacity: 1;
 }
 
-.position-a {
-	position: absolute !important;
-}
-
-.position-s {
-	position: static !important;
-}
-
-.position-f {
-	position: fixed !important;
-}
-
 .position-r {
 	position: relative !important;
-}
-
-.position-st {
-	position: sticky !important;
 }
 
 .position-i {
@@ -14845,7 +14829,7 @@ textarea.form-control-lg {
 }
 
 @media (max-width:767.98px) {
-	.lrpad .modal .scrollspy code { 
+	.lrpad .modal .scrollspy code:not (p code) { 
 	  position: relative;
     left: 10px;
     right: 10px;
