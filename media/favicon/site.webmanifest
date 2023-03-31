@@ -1,6 +1,12 @@
 {
     "name": "AT Products LLC",
     "short_name": "AT Products",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "./",
+    "scope": ".",
+    "prefer_related_applications": "false",
     "icons": [
         {
             "src": "/media/favicon/android-chrome-192x192.png",
@@ -18,10 +24,5 @@
           "type": "image/png",
           "purpose": "any maskable"
         }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "start_url": "/",
-    "prefer_related_applications": "false"
+    ]
 }
