@@ -1,5 +1,5 @@
 /*
-Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+            Content-Security-Policy: default-src *; object-src 'none'
                     Referrer-Policy: same-origin
           Strict-Transport-Security: max-age=31536000
              X-Content-Type-Options: nosniff
