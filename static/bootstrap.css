@@ -14845,7 +14845,7 @@ textarea.form-control-lg {
 }
 
 @media (max-width:767.98px) {
-	.lrpad .modal .scrollalt .code { 
+	.lrpad .modal .scrollspy code { 
 	  position: relative;
     left: 10px;
     right: 10px;
