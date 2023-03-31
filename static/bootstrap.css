@@ -1221,9 +1221,19 @@ progress {
   width: 8.33333333%;
 }
 
+.sw-col-15 {
+  flex: 0 0 auto;
+  width: 10%;
+}
+
 .sw-col-2 {
   flex: 0 0 auto;
   width: 16.66666667%;
+}
+
+.sw-col-25 {
+  flex: 0 0 auto;
+  width: 20%;
 }
 
 .sw-col-3 {
@@ -1231,9 +1241,19 @@ progress {
   width: 25%;
 }
 
+.sw-col-35 {
+  flex: 0 0 auto;
+  width: 30%;
+}
+
 .sw-col-4 {
   flex: 0 0 auto;
   width: 33.33333333%;
+}
+
+.sw-col-45 {
+  flex: 0 0 auto;
+  width: 40%;
 }
 
 .sw-col-5 {
@@ -1251,9 +1271,19 @@ progress {
   width: 58.33333333%;
 }
 
+.sw-col-75 {
+  flex: 0 0 auto;
+  width: 60%;
+}
+
 .sw-col-8 {
   flex: 0 0 auto;
   width: 66.66666667%;
+}
+
+.sw-col-85 {
+  flex: 0 0 auto;
+  width: 70%;
 }
 
 .sw-col-9 {
@@ -1261,9 +1291,19 @@ progress {
   width: 75%;
 }
 
+.sw-col-95 {
+  flex: 0 0 auto;
+  width: 80%;
+}
+
 .sw-col-10 {
   flex: 0 0 auto;
   width: 83.33333333%;
+}
+
+.sw-col-105 {
+  flex: 0 0 auto;
+  width: 90%;
 }
 
 .sw-col-11 {
