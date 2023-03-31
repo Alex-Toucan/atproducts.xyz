@@ -6869,12 +6869,12 @@ textarea.form-control-lg {
 }	
 @media (max-width:767.98px) {	
    .carousel-main {	
-      width: 80%;	
+      width: 90%;	
    }	
 }	
 @media (max-width:550px) {	
    .carousel-main {	
-      width: 90%;	
+      width: 95%;	
    }	
 }	
 
