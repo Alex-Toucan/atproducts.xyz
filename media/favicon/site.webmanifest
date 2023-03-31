@@ -11,6 +11,12 @@
             "src": "/media/favicon/favicon.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+          "src": "/media/favicon/iconblack.png",
+          "sizes": "224x224",
+          "type": "image/png",
+          "purpose": "any maskable"
         }
     ],
     "theme_color": "#ffffff",
