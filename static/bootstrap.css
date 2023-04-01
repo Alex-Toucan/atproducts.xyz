@@ -3918,6 +3918,14 @@ textarea.form-control-lg {
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
   border-radius: var(--bs-dropdown-border-radius);
 }
+
+/* Custom dropdown menu settings */
+
+.dropdown-menu.dropdown-menu-specific {
+	--bs-dropdown-min-width: 8rem;
+}
+
+/* End custom dropdown menu settings */
 .dropdown-menu[data-bs-popper] {
   top: 100%;
   left: 0;
@@ -9416,6 +9424,18 @@ textarea.form-control-lg {
 
 .fs-13 {
   font-size: 5.50rem !important;
+}
+
+.fs-14 {
+  font-size: 5.75rem !important;
+}
+
+.fs-15 {
+  font-size: 6rem !important;
+}
+
+.fs-16 {
+  font-size: 6.25rem !important;
 }
 
 /* End custom text size settings */
