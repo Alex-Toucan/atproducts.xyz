@@ -18,7 +18,7 @@
             "type": "image/png"
         },
         {
-          "src": "/media/favicon/iconblack.png",
+          "src": "/media/favicon/android.png",
           "sizes": "200x200",
           "type": "image/png",
           "purpose": "any maskable"
