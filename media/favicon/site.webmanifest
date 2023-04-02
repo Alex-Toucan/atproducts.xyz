@@ -5,7 +5,7 @@
     "background_color": "#ffffff",
     "display": "standalone",
     "start_url": "/",
-    "prefer_related_applications": "false",
+    "prefer_related_applications": false,
     "icons": [
         {
             "src": "/media/favicon/android-chrome-192x192.png",
