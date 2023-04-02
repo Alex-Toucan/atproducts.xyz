@@ -1,5 +1,5 @@
 /*
-Content-Security-Policy: default-src *; object-src 'none'; img-src 'self' data:; script-src 'self' 'nonce-c3VwZHVtYmZ1Y2tlcg==' https://cdn.jsdelivr.net https://code.jquery.com; style-src 'self' 'nonce-c3VwZHVtYmZ1Y2tlcg==' https://cdn.jsdelivr.net https://code.jquery.com
+Content-Security-Policy: default-src *; object-src 'none'; img-src 'self' data:; script-src 'self' 'nonce-c3VwZHVtYmZ1Y2tlcg==' https://cdn.jsdelivr.net https://code.jquery.com; style-src 'self' 'unsafe-hashes' 'nonce-c3VwZHVtYmZ1Y2tlcg==' https://cdn.jsdelivr.net https://code.jquery.com
 Referrer-Policy: same-origin
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 X-Content-Type-Options: nosniff
