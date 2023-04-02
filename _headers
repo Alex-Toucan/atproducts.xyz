@@ -1,5 +1,5 @@
 /*
-Content-Security-Policy: default-src 'unsafe-hashes' 'nonce-c3R1cGlkZnVja2VyaGFja2VyCg==' 'self' https://cdn.jsdelivr.net https://code.jquery.com; img-src 'self' data:
+Content-Security-Policy: default-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://code.jquery.com; style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://code.jquery.com 'unsafe-inline'; img-src 'self' data:
 Referrer-Policy: same-origin
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 X-Content-Type-Options: nosniff
