@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/static/navbutton.css">
     <link rel="stylesheet" href="/static/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="icon" href="/media/images/noodle.webp">
+    <link rel="icon" href="/media/images/noodle.webp"> 
+    <link rel="manifest" href="/media/favicon/site.webmanifest">
     <meta charset="UTF-8">
     <meta name="title" content="Noodle Hackerspace">
     <meta property="og:title" content="Noodle Hackerspace">
@@ -61,7 +62,7 @@
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">Toggle theme</a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;" data-bs-popper="static">
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-specific" aria-labelledby="bd-theme" data-bs-popper="static">
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
                   <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
@@ -213,10 +214,7 @@
     <script src="/static/scroll.js"></script>
     <script src="/static/purecookie.js"></script>
     <script src="/static/darkmode.js"></script>
-    <script>
-      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
+    <script src="/static/enabler.js"></script>
     </body>
     </html>
 
