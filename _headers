@@ -1,5 +1,5 @@
 /*
-Content-Security-Policy: default-src 'self' data:image/svg https://cdn.jsdelivr.net https://code.jquery.com;
+Content-Security-Policy: default-src 'self' data:image/svg+xml,%3csvg https://cdn.jsdelivr.net https://code.jquery.com;
 Referrer-Policy: same-origin
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 X-Content-Type-Options: nosniff
