@@ -1,5 +1,5 @@
 /*
-Content-Security-Policy: default-src 'self' https://cdn.jsdelivr.net https://code.jquery.com; img-src 'self' data:
+Content-Security-Policy: default-src 'unsafe-hashes' 'self' /static/purecookie.js https://cdn.jsdelivr.net https://code.jquery.com; img-src 'self' data:
 Referrer-Policy: same-origin
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 X-Content-Type-Options: nosniff
