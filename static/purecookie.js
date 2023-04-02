@@ -81,7 +81,7 @@ function cookieConsent() {
   }
 }
 	
-var fourofour = document.getElementById('pureCookieDismiss');
+var fourofour = document.querySelector('#pureCookieDismiss');
 
 if(fourofour) {
   fourofour.addEventListener("click", pureCookieDismiss);
