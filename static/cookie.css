@@ -42,7 +42,7 @@
         text-align: left !important;
 }
 
-.cookieConsentContainer .cookieButton a {
+.cookieConsentContainer .cookieButton button {
 	display: inline-block;
 	font-family: OpenSans, arial, "sans-serif";
 	color: #FFFFFF;
@@ -58,12 +58,12 @@
 	text-decoration: none !important;
 }
 
-.cookieConsentContainer .cookieButton a:hover { 
+.cookieConsentContainer .cookieButton button:hover { 
 	cursor: pointer;
 	background: #3E9B67;
 }
 
-.cookieConsentContainer p, .cookieConsentContainer a:not(.cookieButton a) { 
+.cookieConsentContainer p, .cookieConsentContainer a:not(.cookieButton button) { 
 	padding: 0 !important;
 }
 
