@@ -268,6 +268,10 @@ p:not(.accordion-body p:nth-last-of-type(2)) { /* Custom */
   margin-bottom: 1rem;
 }
 
+.accordion-body p:last-child { /* Custom */
+  margin-bottom: 0 !important;
+}
+
 abbr[title] {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
@@ -4427,6 +4431,7 @@ textarea.form-control-lg {
   text-decoration: none;
   background: none;
   border: 0;
+  border-radius: 10px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
