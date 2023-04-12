@@ -36,7 +36,8 @@
           setTheme(theme);
         });
       });
-  };
-})(jQuery);
-
-$(darkmode);
+  }(jQuery);
+  
+  $(darkmode);
+  
+})();
