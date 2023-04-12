@@ -86,7 +86,6 @@ function purecookieDismiss() {
   pureFadeOut("cookieConsentContainer");
 }
 
-window.onload = function() { cookieConsent(); };
-
+window.addEventListener('load', cookieConsent);
 
 }
