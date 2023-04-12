@@ -87,3 +87,5 @@ function purecookieDismiss() {
   setCookie('purecookieDismiss','1',7);
   pureFadeOut("cookieConsentContainer");
 }
+
+}
