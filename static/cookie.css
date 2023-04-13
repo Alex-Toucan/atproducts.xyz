@@ -12,7 +12,7 @@
 	display: none;
 }
 
-.cookieConsentContainer .cookieTitle a {
+.cookieConsentContainer .cookieTitle span {
 	font-family: OpenSans, arial, "sans-serif";
 	color: #FFFFFF;
 	font-size: 22px;
@@ -42,7 +42,7 @@
         text-align: left !important;
 }
 
-.cookieConsentContainer .cookieButton a {
+.cookieConsentContainer .cookieButton button {
 	display: inline-block;
 	font-family: OpenSans, arial, "sans-serif";
 	color: #FFFFFF;
@@ -56,14 +56,15 @@
 	transition: background 0.3s;
 	text-align: left !important;
 	text-decoration: none !important;
+	border: 0 !important;
 }
 
-.cookieConsentContainer .cookieButton a:hover { 
+.cookieConsentContainer .cookieButton button:hover { 
 	cursor: pointer;
 	background: #3E9B67;
 }
 
-.cookieConsentContainer p, .cookieConsentContainer a:not(.cookieButton a) { 
+.cookieConsentContainer p, .cookieConsentContainer a:not(.cookieButton button) { 
 	padding: 0 !important;
 }
 

@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
+    <link rel="manifest" href="/media/favicon/site.webmanifest">
     <meta charset="UTF-8">
     <meta name="title" content="Licenses">
     <meta name="description" content="Licenses of all our resources.">
@@ -64,8 +65,8 @@
         <hr class="m-2 permhr">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
-            <a class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">Toggle theme</a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;" data-bs-popper="static">
+            <a class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" href="#" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">Toggle theme</a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-specific" aria-labelledby="bd-theme" data-bs-popper="static">
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
                   <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
@@ -95,20 +96,20 @@
 </nav>
     </header>
             <main id="licenses" class="a lrpad">
-      <h1 class="title">Licenses</h1> 
+      <div class="h1 title">Licenses</div> 
       <div class="row scrollspy mx-1">
         <div class="border col-md-12">
-          <h2 class="title c">atproducts.xyz License</h2>
+          <div class="h2 title c">atproducts.xyz License</div>
           <p class="c"><i>Note that this license includes a copy of the <a href="https://opensource.org/license/mit/">MIT license</a>.</i></p>
            <object class="w-100" data="/media/txt/license.txt" type="text/plain"><a href="/media/txt/license.txt">No Support?</a></object>
         </div>
         <div class="border col-md-12">
-          <h2 class="title c">Bootstrap & Bootstrap Icons License</h2>
+          <div class="h2 title c">Bootstrap & Bootstrap Icons License</div>
           <p class="c"><i>Note that this license is a direct copy of the <a href="https://opensource.org/license/mit/">MIT license</a>.</i></p>
           <object class="w-100" data="/media/txt/bootstrap.txt" type="text/plain"><a href="https://raw.githubusercontent.com/twbs/bootstrap/v5.3.0-alpha1/LICENSE">No Support?</a></object>
         </div>
         <div class="border col-md-12">
-          <h2 class="title c">JQuery License</h2>
+          <div class="h2 title c">JQuery License</div>
           <br>
           <object class="w-100" data="/media/txt/jquery.txt" type="text/plain"><a href="https://jquery.org/license/">No Support?</a></object>
         </div>
@@ -123,11 +124,11 @@
        <div class="c">
          <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
            <br>
-           <h5><a href="/">AT Products LLC</a></h5>
+           <div class="h5"><a href="/">AT Products LLC</a></div>
           </div>
       </div>
       <div class="col-2 me-xosm-2 fatoc">
-        <h5>Products</h5>
+        <div class="h5">Products</div>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-muted">Paid Services</a></li>
           <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-muted">Web Projects</a></li>
@@ -137,7 +138,7 @@
       </div>
 
       <div class="col-2 me-xosm-2 fatoc">
-        <h5>Communities</h5>
+        <div class="h5">Communities</div>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-muted">The Script Community</a></li>
           <li class="nav-item mb-2"><a href="/ehs" class="nav-link p-0 text-muted">Ethical Hacking Society</a></li>
@@ -147,7 +148,7 @@
       </div>
 
       <div class="col-2 me-xosm-2 fatoc">
-        <h5>Documentation</h5>
+        <div class="h5">Documentation</div>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
           <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
@@ -191,9 +192,6 @@
     <script src="/static/scroll.js"></script>
     <script src="/static/purecookie.js"></script>
     <script src="/static/darkmode.js"></script>
-    <script>
-      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
+    <script src="/static/enabler.js"></script>
 </div></body>
 </html>

@@ -26,9 +26,8 @@
   };
 
   setTheme(getPreferredTheme());
-  
-  window.addEventListener('DOMContentLoaded', () => {
 
+  function darkmode() {
     document.querySelectorAll('[data-bs-theme-value]')
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
@@ -37,5 +36,8 @@
           setTheme(theme);
         });
       });
-  });
+  }(jQuery);
+  
+  $(darkmode);
+  
 })();
