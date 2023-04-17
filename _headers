@@ -2,7 +2,7 @@
 Content-Security-Policy: default-src 'none'; frame-src 'self'; form-action 'self'; base-uri 'self'; manifest-src 'self'; font-src 'self' https://cdn.jsdelivr.net; object-src 'self'; script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://code.jquery.com; style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://code.jquery.com 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'self'
 Permissions-Policy: picture-in-picture 'self'; autoplay 'self'; encrypted-media 'self'; document-domain 'self'
 Referrer-Policy: same-origin
-Strict-Transport-Security: max-age=31536000; includeSubDomains; preload;
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 X-Content-Type-Options: nosniff
 X-Frame-Options: DENY
 X-XSS-Protection: 1; mode=block
