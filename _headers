@@ -1,5 +1,6 @@
 /*
 Content-Security-Policy: default-src 'none'; frame-src 'self'; form-action 'self'; base-uri 'self'; manifest-src 'self'; font-src 'self' https://cdn.jsdelivr.net; object-src 'self'; script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://code.jquery.com; style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://code.jquery.com 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'self'
+Features-Policy: picture-in-picture 'self'; autoplay 'self'; encrypted-media 'self'; document-domain 'self'; fullscreen 'self'; camera 'none'; geolocation 'none'
 Permissions-Policy: picture-in-picture 'self'; autoplay 'self'; encrypted-media 'self'; document-domain 'self'; fullscreen 'self'; camera 'none'; geolocation 'none'
 Referrer-Policy: same-origin
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
