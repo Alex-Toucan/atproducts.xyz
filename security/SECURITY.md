@@ -2,12 +2,7 @@
 
 ## Supported Versions
 
-The security updates supported will be in the chart below.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| Above 2.6.x | :white_check_mark: |
-| Below 2.6.x | ✖️ |
+There is no supported versions due to this project being a website.
 
 ## Reporting a Vulnerability
 
