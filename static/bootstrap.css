@@ -15746,7 +15746,7 @@ img.script {
 }
 
 [data-bs-theme=dark] img.footerimg {
-   content: url(/media/images/shorthwhite.png) !important;
+   content: url(/media/images/shortwhite.png) !important;
 }
 
 [data-bs-theme=dark] img.mainimg {
