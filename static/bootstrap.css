@@ -15735,12 +15735,6 @@ img.script {
    padding: 0px!important;
 }
 
-[data-bs-theme=dark] img.mainimg {
-    border-radius: 15px;
-    background: white;
-    padding: 20px!important;
-}
-
 @media (max-width:424.98px) {
   [data-bs-theme=dark] img.mainimg {
     width: 65%!important;
@@ -15752,15 +15746,11 @@ img.script {
 }
 
 [data-bs-theme=dark] img.footerimg {
-    border-radius: 12.5px;
-    background: white;
-    padding: 7.5px!important;
+   content: url(https://beta.atproducts.xyz/media/images/shorthwhite.png) !important;
 }
 
-@media (max-width:767.98px) {
-  [data-bs-theme=dark] img.footerimg {
-    padding: 9px!important;
-  }
+[data-bs-theme=dark] img.mainimg {
+   content: url(https://beta.atproducts.xyz/media/images/longwhite.png) !important;
 }
 
 .abicon {
