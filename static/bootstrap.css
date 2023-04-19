@@ -15746,11 +15746,11 @@ img.script {
 }
 
 [data-bs-theme=dark] img.footerimg {
-   content: url(https://beta.atproducts.xyz/media/images/shorthwhite.png) !important;
+   content: url(/media/images/shorthwhite.png) !important;
 }
 
 [data-bs-theme=dark] img.mainimg {
-   content: url(https://beta.atproducts.xyz/media/images/longwhite.png) !important;
+   content: url(/media/images/longwhite.png) !important;
 }
 
 .abicon {
