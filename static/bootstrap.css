@@ -15749,8 +15749,14 @@ img.script {
    content: url(/media/images/shortwhite.png) !important;
 }
 
-[data-bs-theme=dark] img.mainimg {
+[data-bs-theme=dark] img.mainimg:not(img.flashimg) {
    content: url(/media/images/longwhite.png) !important;
+}
+
+img.darkimg {
+	border-radius: 15px;
+  background: white;
+  padding: 20px!important;
 }
 
 .abicon {
