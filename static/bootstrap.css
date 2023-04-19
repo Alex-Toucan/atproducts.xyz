@@ -7683,7 +7683,7 @@ textarea.form-control-lg {
 /* Custom link settings */
 
 [data-bs-theme=dark] .link-dark {
-  color: #adb5bd !important;
+  color: var(--bs-body-color) !important;
 }
 [data-bs-theme=dark] .link-dark:hover, .link-dark:focus {
   color: #b5bcc4 !important;
