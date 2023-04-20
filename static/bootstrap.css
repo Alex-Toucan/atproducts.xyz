@@ -381,6 +381,10 @@ pre code {
   color: inherit;
   word-break: normal;
 }
+.preembed {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
 
 code {
   font-size: 0.875em;
