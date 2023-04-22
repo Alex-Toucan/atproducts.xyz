@@ -10,10 +10,8 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
   let frames = _____WB$wombat$assign$function_____("frames");
   let opener = _____WB$wombat$assign$function_____("opener");
 
-window.addEventListener("load", function (scrollload) {
+(function ($) {
     "use strict";
-
-    // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow');
@@ -24,7 +22,10 @@ window.addEventListener("load", function (scrollload) {
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
-    })(jQuery);
-});
-  
+    });
+
+})(jQuery);
+
+
+
 }
