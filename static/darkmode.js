@@ -27,7 +27,7 @@
 
   setTheme(getPreferredTheme());
 
-  function darkmode() {
+  window.addEventListener('load', function darkmode (){
     document.querySelectorAll('[data-bs-theme-value]')
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
@@ -36,8 +36,6 @@
           setTheme(theme);
         });
       });
-  }(jQuery);
-  
-  $(darkmode);
+  });
   
 })();

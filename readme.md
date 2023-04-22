@@ -4,4 +4,4 @@
 <hr>
 AT Products LLC is a company that provides files and <a href="https://atproducts.xyz/paid">other solutions</a> to your problems!
 <hr>
-<h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses">View more information</a>.
+<h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#ours">View more information</a>.
