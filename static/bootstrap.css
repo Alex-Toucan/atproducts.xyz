@@ -890,6 +890,13 @@ progress {
   margin-left: calc(-.5 * var(--bs-gutter-x));
 }
 
+.mediarow {
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+}
+
 .otherrow {
   --bs-gutter-y: 0;
   display: flex;
@@ -966,6 +973,17 @@ progress {
 }
 
 /* Custom "col" settings */
+
+.col-media {
+	flex: 1 0 0%
+}
+
+@media (max-width: 425px) {
+	.col-media {
+		flex: 0 0 auto;
+		width: 25%;
+	}
+}
 
 .col-auto {
   flex: 0 0 auto;
