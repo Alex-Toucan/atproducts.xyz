@@ -15,9 +15,9 @@ while True:
     os.system('cls' if os.name == 'nt' else 'clear')
     # get password
     password = getpass("\n';--have i been pwned?: ")
-    encode = hashlib.sha256(password.encode())
+    encode = hashlib.pbkdf2_hmac(password.encode('utf-8'))
     salt = os.urandom(16)
     hashed_password = hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 100000)
-    pwnd_password = hashlib.sha256(password.encode()).hexdigest()[0:5]
+    pwnd_password = hashlib.pbkdf2_hmac(password.encode('utf-8')).hexdigest()[0:5]
     
     pwn(pwnd_password, hashed_password.hex()[5:])
