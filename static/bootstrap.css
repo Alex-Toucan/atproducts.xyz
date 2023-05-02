@@ -348,7 +348,7 @@ sup {
   top: -0.5em;
 }
 
-a, p, code, b { /* Custo */
+a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 	display: block;
 }
 
@@ -15637,7 +15637,7 @@ textarea.form-control-lg {
 }
 
 .icon-bar a {
-	position: static;
+	position: initial;
 }
 
 @media (max-width:767.98px) {
