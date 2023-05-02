@@ -15637,7 +15637,7 @@ textarea.form-control-lg {
 }
 
 .icon-bar a {
-	position: initial;
+	display: initial;
 }
 
 @media (max-width:767.98px) {
