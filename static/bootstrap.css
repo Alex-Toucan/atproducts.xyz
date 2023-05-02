@@ -348,7 +348,7 @@ sup {
   top: -0.5em;
 }
 
-a, p, code, b {
+a, p, code, b { /* Custo */
 	display: block;
 }
 
@@ -15634,6 +15634,10 @@ textarea.form-control-lg {
 
 .modal {
   text-align: left !important;
+}
+
+a.icon-bar {
+	position: static;
 }
 
 @media (max-width:767.98px) {
