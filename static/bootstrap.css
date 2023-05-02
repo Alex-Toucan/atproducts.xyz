@@ -348,6 +348,10 @@ sup {
   top: -0.5em;
 }
 
+a, p, code, b {
+	display: block;
+}
+
 a {
   color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
   text-decoration: underline;
@@ -15539,7 +15543,7 @@ textarea.form-control-lg {
         padding-right: 5%;
         padding-left: 5%;
     }
-}
+}z
 @media (min-width: 768px) {
   .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
     margin-left: 5%;
