@@ -15799,11 +15799,11 @@ img.darkimg {
   color: #adb5bd;
 }
 
-nav .dropdown-menu, nav .dropdown-menu .dropdown-item
+.dropdown-menu
   padding: var(--bs-border-radius-sm);
 }
 
-nav .dropdown-menu .dropdown-item {
+.dropdown-menu .dropdown-item {
     border-radius: var(--bs-border-radius-sm);
 }
 
