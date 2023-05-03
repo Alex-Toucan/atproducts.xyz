@@ -15799,7 +15799,7 @@ img.darkimg {
   color: #adb5bd;
 }
 
-.dropdown-menu
+.dropdown-menu {
   padding: var(--bs-border-radius-sm);
 }
 
