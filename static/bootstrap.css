@@ -350,6 +350,7 @@ sup {
 
 a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 	display: block;
+	margin-block-start: 0;
 }
 
 a {
