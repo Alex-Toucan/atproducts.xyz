@@ -15653,6 +15653,7 @@ textarea.form-control-lg {
   margin-right: 0 !important;
 }
 
+@media (min-width:767.98px) {
       .padright {
         padding-right: 5px;
       }
@@ -15660,15 +15661,13 @@ textarea.form-control-lg {
       .padleft {
         padding-left: 5px;
       }
+}
       
       @media (max-width:767.98px) {
         .padright {
           padding-left: 10px;
           padding-right: 10px;
         }
-      }
-      
-      @media (max-width:767.98px) {
         .padleft {
           padding-right: 10px;
           padding-left: 10px;
