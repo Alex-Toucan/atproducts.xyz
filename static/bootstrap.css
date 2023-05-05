@@ -906,6 +906,11 @@ progress {
   margin-top: calc(-1 * var(--bs-gutter-y));
 }
 
+.justrow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .otherrow {
   --bs-gutter-y: 0;
   display: flex;
