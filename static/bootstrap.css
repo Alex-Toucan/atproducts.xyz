@@ -211,6 +211,10 @@ hr {
   opacity: 0.25;
 }
 
+.custom-hr {
+	margin: 0;
+}
+
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -5078,6 +5082,12 @@ textarea.form-control-lg {
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+.custom-card-header { /* Custom */
+  margin-bottom: 0;
+  color: var(--bs-card-cap-color);
+  background-color: var(--bs-card-cap-bg);
 }
 .card-header:first-child {
   border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
@@ -15370,6 +15380,10 @@ textarea.form-control-lg {
 }
 
 /* Secondary code */
+
+.border-bottom-custom {
+  border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
 
 @media (min-width:767.98px) {
   .text-starttocenter {
