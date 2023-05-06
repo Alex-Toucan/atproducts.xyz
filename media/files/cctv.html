@@ -1,4 +1,10 @@
+<!doctype html>
+<html>
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://beta.atproducts.xyz/static/bootstrap.css">
+  </head>
+  <body>
 <div class="h4">Needed Items</div><p>A computer with <a href="https://www.Wireshark.org/">Wireshark</a> and <a href="https://www.aircrack-ng.org/">AirCrack</a>, wifi adapter that supports monitoring and some time.</p>
 <div class="h4">Keywords</div><p><code>{ }</code> means commands for terminal. <code>( )</code> Means general stuff.</p>
 <hr class="mlr">
@@ -40,7 +46,7 @@ Look for the Wi-Fi network that you're looking to sniff, and note the channel th
 <code><br><br>
 {{<br><br>
 CH&nbsp;&nbsp;4 ][ Elapsed: 0 s ][ 2018-12-24 02:42<br>
-</code></p><pre class="w-100">
+</code></p><pre class="mlr">
  <table class="table">
 <thead>
   <tr>
@@ -218,7 +224,7 @@ The best way to do this over a Wi-Fi network is to find a piece of traffic to th
 <br><br>
 Looking under the packet information, right-click the &quot;Receiver address&quot; for a packet being sent to the target device, select &quot;Apply as Filter&quot;, and then &quot;Selected&quot;. Now, we should see only packets to the target.</p>
 <div class="h4">Step 6</div>
-</p>
+<p>
 Now that we've isolated the traffic from our target device, we need to generate a four-way handshake by kicking the target computer off the network momentarily while Wireshark is listening. To do this, we can use tool named MDK3, which is able to kick any devices connected to Wi-Fi off and generate a handshake. Highly suggest looking into using MDK3 for Advanced Wi-Fi jamming.
 <br><br>
 Because we already know the channel our Wi-Fi network is on, we can use MDK3 to take out any device operating on that channel. You should not need long to generate a WPA handshake. With &quot;wlan0mon&quot; swapped for the name of your wireless card, and &quot;11&quot; swapped for the channel you're attacking, run the following command in a terminal window to start jamming the network. 
@@ -253,4 +259,5 @@ Click &quot;Close&quot;, and then navigate to the folder you exported the images
 <br><br>
 Finally, click on one of the images to see the image that was intercepted on the way to the target computer. You should see a frame from the video feed!
 </p>
-
+</body>
+</html>
