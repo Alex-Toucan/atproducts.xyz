@@ -1,0 +1,256 @@
+<link rel="stylesheet" href="https://beta.atproducts.xyz/static/bootstrap.css">
+<div class="h4">Needed Items</div><p>A computer with <a href="https://www.Wireshark.org/">Wireshark</a> and <a href="https://www.aircrack-ng.org/">AirCrack</a>, wifi adapter that supports monitoring and some time.</p>
+<div class="h4">Keywords</div><p><code>{ }</code> means commands for terminal. <code>( )</code> Means general stuff.</p>
+<hr class="mlr">
+<p>To make this thing to actually work we will need to use Wireshark to sniff out traffic between our host. Today's goal is to capture unencrypted HTTP traffic coming to the hosts' computer.<br><br>
+First things first, we have to break the encryption of the network. Even if you have the password <b>do not</b> connect it will bring attention to us and opens up more risk of detection. Instead, we can add some Wi-Fi keys we know to Wireshark. To decrypt the data, we sniff without connecting to the network. This means our attack will be mostly passive, leaving very little opportunity for us to be detected.<br><br>
+One serious thing we'll need that is not passive is a Wi-Fi handshake to see the ongoing traffic. Because since Wireshark needs to observe a Wi-Fi handshake to decyrpt subsequent traffic, the computer we're interested in with an awesome filter, capture a four-way WPA handshake, and then decrpyt the data with the password we know.
+<br><br>
+Conditions must be favorable for this attack to have a chance of succeeding. In particular, if the camera does not use a insecure interface, then the data will be encrypted, and we will not be able to see it.
+<br><br>
+If not one is watching the camera feed, or it's not left displaying on a monitor, there will be no insecure traffic to intercept, so we will not see anything. If we cannot kick a client off the network momentarily to generate a four-way handshake, then knowing the password wont do us any good. And finally, if we're out of range of the network, we won't be able to intercept traffic we can't clear.
+<br><br>
+While this may seem like alot of requirements, it's fairly common to be able to do this. If the target has a Wi-Fi security camera and keeps a monitor viewing the display, the Wi-Fi password should be all you really need, aside from a Wi-Fi adapter.
+<br><br>
+Once you're in range and have any operating system loaded up with the required tools, you should be ready. Plug in your adapter, and make sure you have Wireshark installed to begin. If you dont have Wireshark, <code>sudo apt install Wireshark -y</code> or <code>sudo pacman -S Wireshark -y</code>.
+</p>
+<div class="h5">Step 1</div>
+<p>
+To start, you'll need to access the built-in interface on whatever webcam or Wi-Fi security camera you want to intercept. In a browser window on your &quot;host&quot; computer, navigate to the HTTP interface, enter any password required, and the begin viewing the live webcam view.
+<br><br>
+If you need to find your camera on the network, you can run a <a href="https://nmap.org/">Nmap</a> scan to discover different devices on the network running insecure HTTP ports.
+<br><br>
+For this command, you'll need to know the network range. you can find this by typing ifconfig and copying down the IP address assigned to your computer. Then, you can type ipcalc and your IP address to calculate the network range. It should be something like <code>192.168.0.0/24</code>. Run this following command but replace &quot;IP&quot; for your own network range. <code>sudo nmap -p 80,81,8080, 8081 IP</code>
+<br><br>
+This will look for devices with these ports &quot;open&quot;, and when you find one, you can navigate it by typing the IP address and then <code>:81</code> on that IP address. If you want to navigate to port <code>80801</code> type <code>192.168.0.1:8081</code> to your browser window.
+</p>
+<div class="h5">Step 2</div>
+<p>
+You'll need to plug in your Wi-Fi adapter, I prefer the &quot;Alfa AWUSO36NHA&quot;. You'll need to do two things before starting up Wireshark, the first being putting the card into wireless monitor mode, and the second being identifying the channel the router you're targetting is a broadcast on. 
+<br><br>
+To put your card into wireless monitor mode, identify the name of your card by running <code>ifconfig</code> in a terminal window. It should be named something like <code>wlan0</code> or <code>wlan0mon</code>.<br><br>
+Once you've found the name of your wireless card, we'll need to put it into monitor mode. Run the following command in a terminal window, with the name of your card substituted for <code>wlan0</code>.
+<br><br>
+<code>{airmon-ng start wlan0<br>
+  airodump-ng start wlan0mon}
+</code><br><br>
+This will put your card in wireless monitor more, changing the name of the card to add "mon" at the end. It will also start Airodump-ng, which will start scanning for nearby wireless networks. 
+<br><br>
+Look for the Wi-Fi network that you're looking to sniff, and note the channel that it's on. We'll need to switch our card to that channel to intercept the images in Wireshark. The following is a sample output. <b>Some of the output has been converted to a table. It is still a part of the console output.</b>
+<code><br><br>
+{{<br><br>
+CH&nbsp;&nbsp;4 ][ Elapsed: 0 s ][ 2018-12-24 02:42<br>
+</code></p><pre class="w-100">
+ <table class="table">
+<thead>
+  <tr>
+    <th scope="col"h>BSSID</th>
+    <th scope="col">PWR</th>
+    <th scope="col"h>Beacons</th>
+    <th scope="col">#Data,</th>
+    <th scope="col">#/s</th>
+    <th scope="col">CH</th>
+    <th scope="col">MB</th>
+    <th scope="col"h>ENC</th>
+    <th scope="col">CIPHER</th>
+    <th scope="col">AUTH</th>
+    <th scope="col">ESSID</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>C0:8A:DE:39:CD:D9</td>
+    <td>-46</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>130</td>
+    <td>WPA2</td>
+    <td>CCMP</td>
+    <td>MGT</td>
+    <td>TWCWiFi-Passpoint</td>
+  </tr>
+  <tr>
+    <td>C0:8A:DE:F9:CD:D8</td>
+    <td>-47</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>130</td>
+    <td>OPN</td>
+    <td></td>
+    <td></td>
+    <td>TWCWiFi</td>
+  </tr>
+  <tr>
+    <td>C0:8A:DE:B9:CD:D8</td>
+    <td>-46</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>130</td>
+    <td>OPN</td>
+    <td></td>
+    <td></td>
+    <td>SpectrumWiFi</td>
+  </tr>
+  <tr>
+    <td>C0:8A:DE:39:CD:D8</td>
+    <td>-47</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>130</td>
+    <td>OPN</td>
+    <td></td>
+    <td></td>
+    <td>CableWiFi</td>
+  </tr>
+  <tr>
+    <td>78:96:84:00:B5:B0</td>
+    <td>-42</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>130</td>
+    <td>WPA2</td>
+    <td>CCMP</td>
+    <td>PSK</td>
+    <td>The Daily Planet</td>
+  </tr>
+  <tr>
+    <td>00:9C:02:D2:5E:B9</td>
+    <td>-60</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>54e.</td>
+    <td>WPA2</td>
+    <td>CCMP</td>
+    <td>PSK</td>
+    <td>HP-Print-B9-Officejet Pro 8600</td>
+  </tr>
+  <tr>
+    <td>20:10:7A:92:76:43</td>
+    <td>-51</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>130</td>
+    <td>WPA2</td>
+    <td>CCMP</td>
+    <td>PSK</td>
+    <td>SBG6580E8</td>
+  </tr>
+  <tr>
+    <td>DE:F2:86:EC:CA:A0</td>
+    <td>-45</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>11</td>
+    <td>195</td>
+    <td>WPA2</td>
+    <td>CCMP</td>
+    <td>PSK</td>
+    <td>Bourgeois Pig Guest</td>
+  </tr>
+  <tr>
+    <td>D6:04:CD:BD:33:A1</td>
+    <td>-55</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>11</td>
+    <td>130</td>
+    <td>WPA2</td>
+    <td>CCMP</td>
+    <td>PSK</td>
+    <td>DirtyLittleBirdyFeet</td>
+  </tr>
+  <tr>
+    <td>BSSID</td>
+    <td>STATION</td>
+    <td></td>
+    <td>PWR</td>
+    <td>Rate</td>
+    <td>Frames</td>
+    <td>Lost</td>
+    <td></td>
+    <td>CCMP</td>
+    <td>Probe</td>
+    <td></td>
+  </tr>
+</tbody>
+</table></pre><p>
+<code>
+root@kali:~/Desktop#
+<br>
+}}<br><br>
+</code>
+If our target is on channel 11, we'll run the following command to set our card to channel 11.<br><br> 
+<code>(airmon-ng start wlan0mon 11)</code></p>
+<div class="h4">Step 3</div>
+<p>Now that our wireless network adapter is listening on the same channel as the traffic we want to intercept, it's time to start Wireshark. When Wireshark opens, double-click the card you put in monitor mode to start the capture. Our card should now be scanning on the correct channel, but without the network password, we won't be able to see anything. To solve that, we'll need to add some encryption keys to Wireshark. </p>
+<div class="h4">Step 4</div>
+<p>
+To add the encryption keys to Wireshark, click on &quot;Edit&quot; in the menu bar, then &quot;Preferences&quot; to show the preferences menu. Next, select &quot;Protocols&quot; from the sidebar to see a list of protocols that Wireshark can translate.
+<br><br>
+In the Protocols drop-down menu you just opened, you'll want to select <code>IEEE 802.11</code> to show options for decryptiing Wi-Fi. Make sure that the &quot;Enable Decryption&quot; box is checked, and then click the &quot;Edit&quot; button next to &quot;Decryption keys&quot; to open the list of keys Wireshark will try to use to decrypt traffic.
+<br><br>
+Once the WEP and WPA decryption key menu is open, click on the field to the left and select &quot;pa-psw&quot; to add. While we can also add a &quot;wpa-psk&quot; here, we would have to calculate it ourselves, which is more complicated than simply entering the password.
+<br><br>
+For the decryption to work, you must add the key by clicking on the plus <code>(+)</code> icon, and then enter the key in the format <code>(password:networkname)</code> to add to the list.
+<br><br>
+Click &quot;OK&quot; to save the key, and now we should be able to decrypt traffic from his network -- if we can grab a four-way Wi-Fi handshake.</p>
+<div class="h4">Step 5</div>
+<p>
+In our Wireshark capture, we're sure to be seeing a lot of traffic. While we can't yet decrypt it because we don't have a handshake, we can build a filter to make sure we're only seeing traffic to the device we're sniffing.
+<br><br>
+The best way to do this over a Wi-Fi network is to find a piece of traffic to the computer we're looking for, and then make a display filter to show only packets heading to that MAC address. That means that any traffic directed to the target computer will be displayed, and any other network traffic will be ignored.
+<br><br>
+Looking under the packet information, right-click the &quot;Receiver address&quot; for a packet being sent to the target device, select &quot;Apply as Filter&quot;, and then &quot;Selected&quot;. Now, we should see only packets to the target.</p>
+<div class="h4">Step 6</div>
+</p>
+Now that we've isolated the traffic from our target device, we need to generate a four-way handshake by kicking the target computer off the network momentarily while Wireshark is listening. To do this, we can use tool named MDK3, which is able to kick any devices connected to Wi-Fi off and generate a handshake. Highly suggest looking into using MDK3 for Advanced Wi-Fi jamming.
+<br><br>
+Because we already know the channel our Wi-Fi network is on, we can use MDK3 to take out any device operating on that channel. You should not need long to generate a WPA handshake. With &quot;wlan0mon&quot; swapped for the name of your wireless card, and &quot;11&quot; swapped for the channel you're attacking, run the following command in a terminal window to start jamming the network. 
+<code><br><br>
+{
+mdk3 wlan0mon d -c 11
+}
+</code>
+<br><br>
+After a few moments, nearby devices on the network should automatically reconnect, allowing you to intercept the WPA four-way handshake. If you want to make sure you have it, you can open a new terminal and run Airodump-ng to see when you get a WPA handshake. To do so, type:
+<code><br><br>
+{<br>
+airodump-ng wlan0mon 11<br>
+}</code><br>
+<br>
+Substituting &quot;wlan0mon&quot; and &quot;11&quot; for your actuals to watch for WPA handshakes while you run MDK3.
+<br><br>
+Once you see the result above, you've captured a WPA four-way handshake! Make sure to match the MAC address shown with the wireless network you're targetting to avoid a handshake for the wrong network.
+<br><br>
+Now that we have a four-way handshake and have entered the network key, we should have full access to data flowing over the network. While HTTPS is still of the table, we should be able to see raw HTTP just fine.</p>
+<div class="h4">Step 7</div>
+<p>While we've gained access to the network traffic and narrowed it down to the target computer, there may be other traffic that's unrelated and makes it difficult to focus on what we're looking for. To cut through this, we'll add another network filter to show only HTTP traffic flowing through on the network.
+<br><br>
+In the Wireshark main view, type http into the display filter bar.
+</p>
+<div class="h4">Step 8</div><p>
+Now that we can see the HTTP traffic from the web app, we'll need to select the encoded JPEG files in order to turn them into something we can work with. Stop the capture, and then click on &quot;File&quot;, then &quot;Export Objects.&quot; We'll be exploring the HTTP objects we've found, so click on &quot;HTTP&quot; to open the object list.
+</div>
+In the HTTP object list, we'll see a list of HTTP objects we've intercepted. Here we can see the JPEG images we want to decode. You can select one one or all of them, and then clock &quot;Save&quot; or &quot;Save All&quot; and pick a location to export the files to.
+<br><br>
+Click &quot;Close&quot;, and then navigate to the folder you exported the images to. You should see a list of files that Wireshark exported from our capture. This will be more or less depending how long you ran the capture for.
+<br><br>
+Finally, click on one of the images to see the image that was intercepted on the way to the target computer. You should see a frame from the video feed!
+</p>
+
