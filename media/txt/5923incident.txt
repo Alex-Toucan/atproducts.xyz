@@ -1,4 +1,4 @@
-One of our main machines has yesterday (5/8) had a operating system corruption and is currently being recovered. All of our focus is being turned towards it instead of 2.14.2.
+One of our main machines yesterday (5/8) had a operating system corruption and is currently being recovered. All of our focus is being turned towards it instead of 2.14.2.
 
 Currently, the operating system has been reinstalled, the expected time for it to be fully operational may possibly be either the 11th or the 12th of May. Full operation status is expected around the 19th.
 
