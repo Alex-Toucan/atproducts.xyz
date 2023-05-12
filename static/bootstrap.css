@@ -15532,9 +15532,16 @@ textarea.form-control-lg {
   }
 }
 
+@media (min-width: 645.98px) {
+	.custom-lrpad {
+		margin-left: 10px !important; 
+    margin-right: 10px !important;
+	}
+}
+
 @media (max-width:767.98px) {
-   .nolrpadding, .notlrpad li, .notlrpad .scrollspy p, .notlrpad p:not(.modal p, li p, .card p), .notlrpad .scrollspy a:not(p a), .notlrpad a:not(a.sw-feature-box, p a, header a, b a, code a, a.back-to-top, a.w-100, .modal a,.icon-bar a, li a, a.list-group-item, .card a, .btn-group .btn, .w-100.btn), .notlrpad .scrollspy b:not(p b, a b, code b), .notlrpad b:not(p b, a b, code b, .modal b), .notlrpad .scrollspy img, .notlrpad img:not(.card img, .modal img), .notlrpad .scrollspy pre, .notlrpad pre:not(.modal pre), .notlrpad .scrollspy .row, .notlrpad .row:not(.modal .row), .notlrpad .scrollspy .card, .notlrpad.card, .notlrpad .scrollspy .h1, .notlrpad .h1:not(.modal .h1, .card .h1), .notlrpad .scrollspy h1, .notlrpad h1:not(.modal h1, .card h1), .notlrpad .scrollspy .h2, .notlrpad .h2:not(.modal .h2, .card .h2), .notlrpad .scrollspy h2, .notlrpad h2:not(.modal h2, .card h2), .notlrpad .scrollspy .h3, .notlrpad .h3:not(.modal .h3, .card .h3), .notlrpad .scrollspy h3, .notlrpad h3:not(.modal h3, .card h3), .notlrpad .scrollspy .h4, .notlrpad .h4:not(.modal .h4, .card .h4), .notlrpad .scrollspy h4, .notlrpad h4:not(.modal h4, .card h4), .notlrpad .scrollspy .h5, .notlrpad .h5:not(.modal .h5, .card .h5), .notlrpad .scrollspy h5, .notlrpad h5:not(.modal h5, .card h5), .notlrpad .scrollspy .h6, .notlrpad .h6:not(.modal .h6, .card .h6), .notlrpad .scrollspy h6, .notlrpad h6:not(.modal h6, .card h6), .notlrpad .btn:not(.modal .btn, .btn.btn-resource, .w-100 .btn, .btn-group .btn, .w-100.btn) {
-      margin-left: 0 !Important;
+   .nolrpadding {
+	margin-left: 0 !Important;
       margin-right: 0 !important;
    }
 }
