@@ -5031,6 +5031,12 @@ textarea.form-control-lg {
   }
 }
 
+@media (max-width: 767.98px) {
+  .card-width {
+    width: 100%;
+  }
+}
+
 /* End custom card settings */
 
 .card > hr {
