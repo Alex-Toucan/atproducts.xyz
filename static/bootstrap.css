@@ -810,6 +810,11 @@ progress {
   margin-left: calc(var(--bs-gutter-x) * 0.5);
 }
 
+.container {
+  margin-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
 @media (min-width: 645.98px) {
   .container {
     width: 100%;
