@@ -15698,10 +15698,12 @@ textarea.form-control-lg {
 @media (min-width:767.98px) {
       .padright {
         padding-right: 5px;
+				padding-left: 10px;
       }
       
       .padleft {
         padding-left: 5px;
+	      padding-right: 10px;
       }
 }
       
