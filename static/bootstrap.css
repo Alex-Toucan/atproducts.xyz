@@ -809,7 +809,7 @@ progress {
   margin-left: calc(var(--bs-gutter-x) * 0.5);
 }
 
-@media (max-width: 645.98px) {
+@media (min-width: 645.98px) {
   .container {
     width: 100%;
   }
