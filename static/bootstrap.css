@@ -15438,12 +15438,18 @@ textarea.form-control-lg {
   .text-starttocenter {
     text-align: left;
   }
+  .text-endtocenter {
+    text-align: right;
+	}
 }
 
 @media (max-width:767.98px) {
   .text-starttocenter {
     text-align: center;
   }
+	.text-endtocenter {
+		text-align: center;
+	}
 }
 
 @media (max-width:500px) {
