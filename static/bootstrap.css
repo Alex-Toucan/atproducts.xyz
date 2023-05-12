@@ -8805,7 +8805,7 @@ textarea.form-control-lg {
 /* Custom "mt" settings */
 
 @media (max-width:767.98px) {
-   .container, .fmt-0, .fmt-1, .fmt-2, .fmt-3, .fmt-4, .fmt-5 {
+   .fmt-0, .fmt-1, .fmt-2, .fmt-3, .fmt-4, .fmt-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -9087,7 +9087,7 @@ textarea.form-control-lg {
 /* Custom "py" settings */
 
 @media (max-width:767.98px) {
-   .container, .fpy-0, .fpy-1, .fpy-2, .fpy-3, .fpy-4, .fpy-5 {
+   .fpy-0, .fpy-1, .fpy-2, .fpy-3, .fpy-4, .fpy-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -9164,7 +9164,7 @@ textarea.form-control-lg {
 /* Custom "pt" settings */
 
 @media (max-width:767.98px) {
-   .container, .fpt-0, .fpt-1, .fpt-2, .fpt-3, .fpt-4, .fpt-5 {
+   .fpt-0, .fpt-1, .fpt-2, .fpt-3, .fpt-4, .fpt-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
