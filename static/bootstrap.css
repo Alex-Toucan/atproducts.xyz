@@ -797,7 +797,6 @@ progress {
   color: var(--bs-secondary-color);
 }
 
-.container,
 .container-fluid,
 .container-xxl,
 .container-xl,
@@ -806,9 +805,14 @@ progress {
 .container-sm {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  width: 100%;
   margin-right: calc(var(--bs-gutter-x) * 0.5);
   margin-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+@media (max-width: 645.98px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* Custom container settings */
