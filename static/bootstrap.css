@@ -15714,16 +15714,6 @@ textarea.form-control-lg {
       }
 }
       
-      @media (max-width:767.98px) {
-        .padright {
-          padding-left: 10px;
-          padding-right: 10px;
-        }
-        .padleft {
-          padding-right: 10px;
-          padding-left: 10px;
-        }
-      }
 
     .sw-feature-box {
       background-color: grey;
