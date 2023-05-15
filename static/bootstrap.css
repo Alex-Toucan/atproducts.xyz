@@ -15970,6 +15970,13 @@ img.darkimg {
 	    border-bottom: solid 1px #dee2e6;
 }
 
+@media (max-width: 991.98px) {
+	.story-end {
+		display: none;
+	}
+}
+	
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
