@@ -15968,7 +15968,10 @@ img.darkimg {
 
 @media (max-width: 424.98px) {
 	.text-disappear {
-		display: none;
+		display: none !important;
+	}
+	.first-navbar {
+		border-bottom: solid 1px #dee2e6;
 	}
 }
 
