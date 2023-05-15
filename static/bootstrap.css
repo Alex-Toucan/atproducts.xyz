@@ -15946,6 +15946,7 @@ img.darkimg {
 	}
 }
 
+@media (min-width: 767.98px) {
 .bd-toc {
     position: -webkit-sticky;
     position: sticky;
@@ -15954,6 +15955,7 @@ img.darkimg {
     z-index: 2;
     height: calc(100vh - 7rem);
     overflow-y: auto;
+}
 }
 
 .story-top {
