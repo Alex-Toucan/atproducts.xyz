@@ -4616,7 +4616,12 @@ textarea.form-control-lg {
   text-decoration: none;
   white-space: nowrap;
 }
-.navbar-brand:hover, .navbar-brand:focus {
+.navbar-secondary-brand {
+  color: var(--bs-navbar-brand-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.navbar-brand:hover, .navbar-brand:focus, .navbar-secondary-brand:hover, .navbar-secondary-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
 }
 
