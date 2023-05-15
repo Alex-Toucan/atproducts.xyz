@@ -69,22 +69,22 @@
 </nav>
       </header>
     <main>
-      <div class="justrow">
+      <div class="justrow pt-2">
         <div class="col-4b p-1">
     <div id="cctvlist" class="list-group">
       <a class="list-group-item list-group-item-action active" href="#prenote">Prenote</a>
       <a class="list-group-item list-group-item-action" href="#s1">Step 1</a>
       <a class="list-group-item list-group-item-action" href="#s2">Step 2</a>
-      <a class="list-group-item list-group-item-action" href="s3">Step 3</a>
+      <a class="list-group-item list-group-item-action" href="#s3">Step 3</a>
             <a class="list-group-item list-group-item-action" href="#s4">Step 4</a>
       <a class="list-group-item list-group-item-action" href="#s5">Step 5</a>
-      <a class="list-group-item list-group-item-action" href="s6">Step 6</a>
+      <a class="list-group-item list-group-item-action" href="#s6">Step 6</a>
             <a class="list-group-item list-group-item-action" href="#s7">Step 7</a>
       <a class="list-group-item list-group-item-action" href="#s8">Step 8</a>
             </div></div>
         <div class="col-8b p-1">
           <div data-bs-spy="scroll" data-bs-target="#cctvlist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-    <div class="h1 mt-2">CCTV Interception</div>
+    <div class="h1">CCTV Interception</div>
     <div class="h5">By <a href="https://zoomsquad.netlify.app/members/zen">Z3N</a>.</div>
     <hr>
 <div id="prenote">
