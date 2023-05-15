@@ -15973,6 +15973,9 @@ img.darkimg {
 	.first-navbar {
 		border-bottom: solid 1px #dee2e6;
 	}
+	.story-top {
+		margin-top: 71px;
+	}
 }
 
 @media (max-width: 991.98px) {
