@@ -15960,6 +15960,7 @@ img.darkimg {
 
 .story-top {
 	margin-top: 103px;
+        scroll-margin-top: 103px;
 }
 
 .border-fix {
