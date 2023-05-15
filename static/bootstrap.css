@@ -15961,6 +15961,11 @@ img.darkimg {
     height: calc(100vh - 7rem);
     overflow-y: auto;
 }
+
+.border-fix {
+	    border-bottom: solid 1px #dee2e6;
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
