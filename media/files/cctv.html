@@ -1,13 +1,76 @@
 <!doctype html>
 <html>
   <head>
+    <title>CCTV Interception</title>
+    <meta name="title" content="CCTV Interception - AT Products LLC BookViewer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://beta.atproducts.xyz/static/bootstrap.css">
+<link rel="stylesheet" href="/static/bootstrap.css">
+    <link rel="stylesheet" href="/static/cookie.css">
   </head>
-  <body class="lrpad">
+  <body class="container" style="margin-top: 103px;">
+    <header class="fixed-top">
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+<a class="navbar-brand d-inline me-2" href="/">
+    <img src="/media/images/longwhite.png" height="45px" alt="Icon"> <p class="d-inline ms-2">BookViewer</p></a><div class="vr"></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="ms-1 collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/members">Members</a></li>
+          </ul>
+        </li>
+        </ul>
+        <hr class="m-2 permhr">
+        <ul class="navbar-nav">
+                   <li class="nav-item dropdown">
+            <a class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" href="#" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">Toggle theme</a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-specific" aria-labelledby="bd-theme" data-bs-popper="static">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
+                  Light
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-moon-stars-fill"></i>
+                  Dark
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                  <i width="16" height="16" class="bi me-2 opacity-50 theme-icon bi-circle-half"></i>
+                  Auto
+                  <i width="16" height="16" class="bi ms-auto d-none bi-check2"></i>
+                </button>
+              </li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark pt-0 border-fix"><div class="container-fluid">
+  <ol class="breadcrumb m-0">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Members</li>
+  </ol>
+</div>
+</nav>
+      </header>
 <div class="h4">Needed Items</div><p>A computer with <a href="https://www.Wireshark.org/">Wireshark</a> and <a href="https://www.aircrack-ng.org/">AirCrack</a>, wifi adapter that supports monitoring and some time.</p>
 <div class="h4">Keywords</div><p><code>{ }</code> means commands for terminal. <code>( )</code> Means general stuff.</p>
-<hr class="mlr">
+<hr>
 <p>To make this thing to actually work we will need to use Wireshark to sniff out traffic between our host. Today's goal is to capture unencrypted HTTP traffic coming to the hosts' computer.<br><br>
 First things first, we have to break the encryption of the network. Even if you have the password <b>do not</b> connect it will bring attention to us and opens up more risk of detection. Instead, we can add some Wi-Fi keys we know to Wireshark. To decrypt the data, we sniff without connecting to the network. This means our attack will be mostly passive, leaving very little opportunity for us to be detected.<br><br>
 One serious thing we'll need that is not passive is a Wi-Fi handshake to see the ongoing traffic. Because since Wireshark needs to observe a Wi-Fi handshake to decyrpt subsequent traffic, the computer we're interested in with an awesome filter, capture a four-way WPA handshake, and then decrpyt the data with the password we know.
@@ -259,5 +322,11 @@ Click &quot;Close&quot;, and then navigate to the folder you exported the images
 <br><br>
 Finally, click on one of the images to see the image that was intercepted on the way to the target computer. You should see a frame from the video feed!
 </p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="/static/scroll.js"></script>
+    <script src="/static/darkmode.js"></script>
+    <script src="/static/purecookie.js"></script>
+    <script src="/static/enabler.js"></script>
 </body>
 </html>
