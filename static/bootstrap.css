@@ -15976,6 +15976,7 @@ img.darkimg {
 	}
 	.story-top {
 		margin-top: 71px;
+		scroll-margin-top: 71px;
 	}
 }
 
