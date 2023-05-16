@@ -15958,8 +15958,10 @@ img.darkimg {
 }
 }
 
-.story-top {
+body.story-top {
 	margin-top: 103px;
+}
+html.story-top
         scroll-margin-top: 103px;
 }
 
@@ -15974,9 +15976,11 @@ img.darkimg {
 	.first-navbar {
 		border-bottom: solid 1px #dee2e6;
 	}
-	.story-top {
-		margin-top: 71px;
-		scroll-margin-top: 71px;
+	body.story-top {
+		margin-top: 72px;
+	}
+	html.story-top {
+		scroll-margin-top: 72px;
 	}
 }
 
