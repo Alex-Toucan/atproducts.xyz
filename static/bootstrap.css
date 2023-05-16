@@ -15961,7 +15961,7 @@ img.darkimg {
 body.story-top {
 	margin-top: 103px;
 }
-html.story-top
+html.story-top {
         scroll-margin-top: 103px;
 }
 
