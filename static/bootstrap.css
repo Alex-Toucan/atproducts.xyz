@@ -15531,7 +15531,7 @@ textarea.form-control-lg {
 }
 
 @media (max-width: 645.98px) {
-  .lrpadding {
+  .lrpadding, .lrpad {
     margin-left: 10px !important; 
     margin-right: 10px !important;
   }
@@ -15539,8 +15539,8 @@ textarea.form-control-lg {
 
 @media (min-width: 645.98px) {
 	.custom-lrpad {
-		margin-left: 10px !important; 
-    margin-right: 10px !important;
+	margin-left: 10px !important; 
+  	  margin-right: 10px !important;
 	}
 }
 
