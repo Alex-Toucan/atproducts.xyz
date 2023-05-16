@@ -15478,9 +15478,14 @@ textarea.form-control-lg {
 
 .basics-scroll {
     height: 350px;
-    margin-top: 0.5rem;
     overflow: auto;
     text-align: left !important;
+}
+
+@media (max-width:767.98px) {
+	.basics-scroll {
+	    margin-top: 0.5rem;
+	}
 }
 
 @media (min-width: 500px) {
