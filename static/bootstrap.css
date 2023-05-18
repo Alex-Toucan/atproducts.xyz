@@ -121,6 +121,7 @@
   --bs-form-valid-border-color: #198754;
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
+  --bs-breadcrumb-secondary-color: rgba(173, 181, 189, 0.75);
 }
 
 [data-bs-theme=dark] {
@@ -209,6 +210,10 @@ hr {
   border: 0;
   border-top: var(--bs-border-width) solid;
   opacity: 0.25;
+}
+
+.custom-hr {
+	margin: 8px;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -349,7 +354,6 @@ sup {
 }
 
 a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
-	display: block;
 	margin-block-start: 0;
 }
 
@@ -793,20 +797,29 @@ progress {
   color: var(--bs-secondary-color);
 }
 
-.container,
 .container-fluid,
 .container-xxl,
 .container-xl,
 .container-lg,
 .container-md,
 .container-sm {
+  width: 100%;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  margin-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+@media (min-width: 645.98px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* Custom container settings */
@@ -814,6 +827,8 @@ progress {
 @media (min-width: 645.98px) {
   .container-sm, .container {
     max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media (min-width: 768px) {
@@ -900,6 +915,11 @@ progress {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
+}
+
+.justrow {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .otherrow {
@@ -1057,10 +1077,7 @@ progress {
 
 @media (max-width:767.98px) {
    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-     margin-left: auto;
-     margin-right: auto;
      width: 100%;
-     margin-bottom: 10px;
    }
 }
 
@@ -1068,84 +1085,55 @@ progress {
    .col-1b {
     flex: 0 0 auto;
     width: 8.33333333%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-2b {
     flex: 0 0 auto;
     width: 16.66666667%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-3b {
     flex: 0 0 auto;
     width: 25%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-4b {
     flex: 0 0 auto;
     width: 33.33333333%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-5b {
     flex: 0 0 auto;
     width: 41.66666667%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-6b {
     flex: 0 0 auto;
     width: 50%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-7b {
     flex: 0 0 auto;
     width: 58.33333333%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-8b {
     flex: 0 0 auto;
     width: 66.66666667%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-9b {
     flex: 0 0 auto;
     width: 75%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-10b {
     flex: 0 0 auto;
     width: 83.33333333%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-11b {
     flex: 0 0 auto;
     width: 91.66666667%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
    .col-12b {
     flex: 0 0 auto;
     width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
 }
    
 @media (max-width:767.98px) {
    .col-1b, .col-2b, .col-3b, .col-4b, .col-5b, .col-6b, .col-7b, .col-8b, .col-9b, .col-10b, .col-11b, .col-12b {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 10px;
-      padding-right: 10px !important;
-      padding-left: 10px !important;
       width: 100% !important;
    }
 }
@@ -4597,7 +4585,12 @@ textarea.form-control-lg {
   text-decoration: none;
   white-space: nowrap;
 }
-.navbar-brand:hover, .navbar-brand:focus {
+.navbar-secondary-brand {
+  color: var(--bs-navbar-brand-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.navbar-brand:hover, .navbar-brand:focus, .navbar-secondary-brand:hover, .navbar-secondary-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
 }
 
@@ -5022,6 +5015,12 @@ textarea.form-control-lg {
   }
 }
 
+@media (max-width: 767.98px) {
+  .card-width {
+    width: 100%;
+  }
+}
+
 /* End custom card settings */
 
 .card > hr {
@@ -5078,6 +5077,13 @@ textarea.form-control-lg {
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+.custom-card-header { /* Custom */
+  padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+  margin-bottom: 0;
+  color: var(--bs-card-cap-color);
+  background-color: var(--bs-card-cap-bg);
 }
 .card-header:first-child {
   border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
@@ -5334,9 +5340,9 @@ textarea.form-control-lg {
   --bs-breadcrumb-margin-bottom: 1rem;
   --bs-breadcrumb-bg: ;
   --bs-breadcrumb-border-radius: ;
-  --bs-breadcrumb-divider-color: var(--bs-secondary-color);
+  --bs-breadcrumb-divider-color: var(--bs-breadcrumb-secondary-color);
   --bs-breadcrumb-item-padding-x: 0.5rem;
-  --bs-breadcrumb-item-active-color: var(--bs-secondary-color);
+  --bs-breadcrumb-item-active-color: var(--bs-breadcrumb-secondary-color);
   display: flex;
   flex-wrap: wrap;
   padding: var(--bs-breadcrumb-padding-y) var(--bs-breadcrumb-padding-x);
@@ -8783,7 +8789,7 @@ textarea.form-control-lg {
 /* Custom "mt" settings */
 
 @media (max-width:767.98px) {
-   .container, .fmt-0, .fmt-1, .fmt-2, .fmt-3, .fmt-4, .fmt-5 {
+   .fmt-0, .fmt-1, .fmt-2, .fmt-3, .fmt-4, .fmt-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -9065,7 +9071,7 @@ textarea.form-control-lg {
 /* Custom "py" settings */
 
 @media (max-width:767.98px) {
-   .container, .fpy-0, .fpy-1, .fpy-2, .fpy-3, .fpy-4, .fpy-5 {
+   .fpy-0, .fpy-1, .fpy-2, .fpy-3, .fpy-4, .fpy-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -9142,7 +9148,7 @@ textarea.form-control-lg {
 /* Custom "pt" settings */
 
 @media (max-width:767.98px) {
-   .container, .fpt-0, .fpt-1, .fpt-2, .fpt-3, .fpt-4, .fpt-5 {
+   .fpt-0, .fpt-1, .fpt-2, .fpt-3, .fpt-4, .fpt-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -9150,6 +9156,32 @@ textarea.form-control-lg {
       margin-left: 0!important;
       padding-top: 10px;
    }
+}
+
+@media (max-width:767.98px) {
+  .opt-0 {
+    padding-top: 0 !important;
+  }
+
+  .opt-1 {
+    padding-top: 0.25rem !important;
+  }
+
+  .opt-2 {
+    padding-top: 0.5rem !important;
+  }
+
+  .opt-3 {
+    padding-top: 1rem !important;
+  }
+  
+  .opt-4 {
+    padding-top: 1.5rem !important;
+  }
+
+  .opt-5 {
+    padding-top: 3rem !important;
+  }
 }
 
 @media (min-width:767.98px) {
@@ -15371,16 +15403,26 @@ textarea.form-control-lg {
 
 /* Secondary code */
 
+.border-bottom-custom {
+  border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
 @media (min-width:767.98px) {
   .text-starttocenter {
     text-align: left;
   }
+  .text-endtocenter {
+    text-align: right;
+	}
 }
 
 @media (max-width:767.98px) {
   .text-starttocenter {
     text-align: center;
   }
+	.text-endtocenter {
+		text-align: center;
+	}
 }
 
 @media (max-width:500px) {
@@ -15404,9 +15446,14 @@ textarea.form-control-lg {
 
 .basics-scroll {
     height: 350px;
-    margin-top: 0.5rem;
     overflow: auto;
     text-align: left !important;
+}
+
+@media (max-width:767.98px) {
+	.basics-scroll {
+	    margin-top: 0.5rem;
+	}
 }
 
 @media (min-width: 500px) {
@@ -15456,47 +15503,25 @@ textarea.form-control-lg {
    }
 }
 
-@media (min-width: 767.98px) {
-  .lrpad {
-    margin-left: 10px;
-    margin-right: 10px;
+@media (max-width: 645.98px) {
+  .lrpadding, .lrpad {
+    margin-left: 10px !important; 
+    margin-right: 10px !important;
   }
 }
 
-@media (max-width:767.98px) {
-   .lrpadding, .lrpad li, .lrpad .scrollspy p, .lrpad p:not(.modal p, li p, .card p), .lrpad .scrollspy a:not(p a), .lrpad a:not(a.sw-feature-box, p a, header a, b a, code a, a.back-to-top, a.w-100, .icon-bar a, .modal a, li a, a.list-group-item, .card a, .btn-group .btn, .w-100.btn), .lrpad .scrollspy b:not(p b, a b, code b), .lrpad b:not(p b, a b, code b, .modal b), .lrpad .scrollspy img, .lrpad img:not(.card img, .modal img), .lrpad .scrollspy pre, .lrpad pre:not(.modal pre), .lrpad .scrollspy .row, .lrpad .row:not(.modal .row), .lrpad .scrollspy .card, .lrpad.card, .lrpad .scrollspy .h1, .lrpad .h1:not(.modal .h1, .card .h1), .lrpad .scrollspy h1, .lrpad h1:not(.modal h1, .card h1), .lrpad .scrollspy .h2, .lrpad .h2:not(.modal .h2, .card .h2), .lrpad .scrollspy h2, .lrpad h2:not(.modal h2, .card h2), .lrpad .scrollspy .h3, .lrpad .h3:not(.modal .h3, .card .h3), .lrpad .scrollspy h3, .lrpad h3:not(.modal h3, .card h3), .lrpad .scrollspy .h4, .lrpad .h4:not(.modal .h4, .card .h4), .lrpad .scrollspy h4, .lrpad h4:not(.modal h4, .card h4), .lrpad .scrollspy .h5, .lrpad .h5:not(.modal .h5, .card .h5), .lrpad .scrollspy h5, .lrpad h5:not(.modal h5, .card h5), .lrpad .scrollspy .h6, .lrpad .h6:not(.modal .h6, .card .h6), .lrpad .scrollspy h6, .lrpad h6:not(.modal h6, .card h6), .lrpad .btn:not(.modal .btn, .btn.btn-resource, .w-100 .btn, .btn-group .btn, .w-100.btn) {
-      margin-left: 10px;
-      margin-right: 10px;
-   }
+@media (min-width: 645.98px) {
+	.custom-lrpad {
+	margin-left: 10px !important; 
+  	  margin-right: 10px !important;
+	}
 }
 
 @media (max-width:767.98px) {
-   .nolrpadding, .notlrpad li, .notlrpad .scrollspy p, .notlrpad p:not(.modal p, li p, .card p), .notlrpad .scrollspy a:not(p a), .notlrpad a:not(a.sw-feature-box, p a, header a, b a, code a, a.back-to-top, a.w-100, .modal a,.icon-bar a, li a, a.list-group-item, .card a, .btn-group .btn, .w-100.btn), .notlrpad .scrollspy b:not(p b, a b, code b), .notlrpad b:not(p b, a b, code b, .modal b), .notlrpad .scrollspy img, .notlrpad img:not(.card img, .modal img), .notlrpad .scrollspy pre, .notlrpad pre:not(.modal pre), .notlrpad .scrollspy .row, .notlrpad .row:not(.modal .row), .notlrpad .scrollspy .card, .notlrpad.card, .notlrpad .scrollspy .h1, .notlrpad .h1:not(.modal .h1, .card .h1), .notlrpad .scrollspy h1, .notlrpad h1:not(.modal h1, .card h1), .notlrpad .scrollspy .h2, .notlrpad .h2:not(.modal .h2, .card .h2), .notlrpad .scrollspy h2, .notlrpad h2:not(.modal h2, .card h2), .notlrpad .scrollspy .h3, .notlrpad .h3:not(.modal .h3, .card .h3), .notlrpad .scrollspy h3, .notlrpad h3:not(.modal h3, .card h3), .notlrpad .scrollspy .h4, .notlrpad .h4:not(.modal .h4, .card .h4), .notlrpad .scrollspy h4, .notlrpad h4:not(.modal h4, .card h4), .notlrpad .scrollspy .h5, .notlrpad .h5:not(.modal .h5, .card .h5), .notlrpad .scrollspy h5, .notlrpad h5:not(.modal h5, .card h5), .notlrpad .scrollspy .h6, .notlrpad .h6:not(.modal .h6, .card .h6), .notlrpad .scrollspy h6, .notlrpad h6:not(.modal h6, .card h6), .notlrpad .btn:not(.modal .btn, .btn.btn-resource, .w-100 .btn, .btn-group .btn, .w-100.btn) {
-      margin-left: 0 !Important;
+   .nolrpadding {
+	margin-left: 0 !Important;
       margin-right: 0 !important;
    }
-}
-
-@media (max-width:767.98px) {
-  .lrpad scrollspy code:not(p code, a code), .lrpad code:not(p code, a code, .modal code, li code) {
-	  position: relative;
-    left: 10px;
-    right: 10px;
-  }
-}
-
-@media (max-width:767.98px) {
-  .lrpad .btn-group .btn:not (.lrpad .modal .btn-group .btn, .w-100 .btn, .btn.w-100) {
-    margin-left: 10px;
-  }
-}
-
-@media (max-width:767.98px) {
-  .lrpad .modal .scrollspy code:not(p code) { 
-    position: relative;
-    left: 10px;
-    right: 10px;
-	}
 }
 
 .a {
@@ -15540,88 +15565,68 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 768px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 5%;
-        padding-left: 5%;
-    }
-}z
-@media (min-width: 768px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
+   .plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
     margin-left: 5%;
     margin-right: 5%;
   }
-}
-@media (min-width:768px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    padding-left: 5%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 @media (min-width: 1024px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 10%;
-        padding-left: 10%;
-    }
-}
-@media (min-width: 1024px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
-    margin-left: 10%;
-    margin-right: 10%;
+	.plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
+    margin-left: 5%;
+    margin-right: 5%;
   }
-}
-@media (min-width:1024px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    padding-left: 10%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 @media (min-width: 1440px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 20%;
-        padding-left: 20%;
-    }
-}
-@media (min-width: 1440px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
-    margin-left: 20%;
-    margin-right: 20%;
+	.plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
+    margin-left: 5%;
+    margin-right: 5%;
   }
-}
-@media (min-width:1440px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    padding-left: 20%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 @media (min-width: 2000px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 25%;
-        padding-left: 25%;
-    }
-}
-@media (min-width: 2000px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a, .scrollspy a.btn) {
-    margin-left: 25%;
-    margin-right: 25%;
+	.plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
+    margin-left: 5%;
+    margin-right: 5%;
   }
-}
-@media (min-width:2000px) {
-   .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-     padding-left: 25%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 @media (min-width: 2560px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 33%;
-        padding-left: 33%;
-    }
-}
-@media (min-width: 2560px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
-    margin-left: 33%;
-    margin-right: 33%;
+	.plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
+    margin-left: 5%;
+    margin-right: 5%;
   }
-}
-@media (min-width:2560px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    padding-left: 33%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 
@@ -15653,27 +15658,18 @@ textarea.form-control-lg {
   margin-right: 0 !important;
 }
 
+@media (min-width:767.98px) {
       .padright {
         padding-right: 5px;
+				padding-left: 10px;
       }
       
       .padleft {
         padding-left: 5px;
+	      padding-right: 10px;
       }
+}
       
-      @media (max-width:767.98px) {
-        .padright {
-          padding-left: 10px;
-          padding-right: 10px;
-        }
-      }
-      
-      @media (max-width:767.98px) {
-        .padleft {
-          padding-right: 10px;
-          padding-left: 10px;
-        }
-      }
 
     .sw-feature-box {
       background-color: grey;
@@ -15869,16 +15865,10 @@ img.darkimg {
 @media (min-width:767.98px) {
   .d-nb {
     display: none;
-  }
-}
-
-@media (max-width:767.98px) {
+	}
   .d-nb {
     display: block;
-  }
-}
-
-@media (max-width:767.98px) {
+	}
   .d-nba {
     display: none;
   }
@@ -15928,6 +15918,64 @@ img.darkimg {
 		width: 45% !important;
 	}
 }
+
+@media (min-width: 767.98px) {
+.bd-toc {
+    position: -webkit-fixed;
+    position: fixed;
+    top: calc(103px + .75rem);
+    right: 0;
+    z-index: 2;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+}
+}
+
+body.story-top {
+	margin-top: 103px;
+}
+html.story-top {
+        scroll-margin-top: 103px;
+}
+
+.border-fix {
+	    border-bottom: solid 1px #dee2e6;
+}
+
+@media (max-width: 424.98px) {
+	.text-disappear {
+		display: none !important;
+	}
+	.first-navbar {
+		border-bottom: solid 1px #dee2e6;
+	}
+	body.story-top {
+		margin-top: 72px;
+	}
+	html.story-top {
+		scroll-margin-top: 72px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.story-end {
+		display: none;
+	}
+}
+
+@media (min-width: 767.98px) {
+		.story-scroll {
+		height: 350px;
+	}
+	
+}
+
+.proper-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}	
 
 /* End secondary code */
 
