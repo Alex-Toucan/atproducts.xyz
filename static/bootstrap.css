@@ -15980,10 +15980,12 @@ html.story-top {
   height: 350px;
 	margin-bottom: 1rem;
 	border-bottom: solid 1px #dee2e6;
+	width: 100%
 }
 
 .hero-main {
 	background: url('https://ik.imagekit.io/atproductsllc/hero.webp?updatedAt=1684429165846') center center no-repeat;
+	width: 100%
 }
 
 @media (max-width:424.98px) {
