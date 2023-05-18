@@ -15977,6 +15977,23 @@ html.story-top {
     transform: translate(-50%, -50%);
 }	
 
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29kaW5nfGVufDB8fDB8fHww&w=1000&q=80) center center no-repeat;height: 350px;margin-bottom: 1rem;border-bottom: solid 1px #dee2e6;
+}
+
+@media (max-width:767.98px) {
+	.hero {
+		height: 325px;
+	}
+}
+
+.hero-back {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-filter {
+	-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 5px #222);
+}
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
