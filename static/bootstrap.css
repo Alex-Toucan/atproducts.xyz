@@ -15985,7 +15985,8 @@ html.story-top {
 
 .hero-main {
 	background: url('https://ik.imagekit.io/atproductsllc/hero.webp?updatedAt=1684429165846') center center no-repeat;
-	width: 100%
+	width: 100%;
+  background-size: 3840px 1600px;
 }
 
 @media (max-width:424.98px) {
