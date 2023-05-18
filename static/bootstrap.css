@@ -15992,6 +15992,12 @@ html.story-top {
 	}
 }
 
+@media (max-width:767.98px) {
+	.hero {
+		height: 325px;
+	}
+}
+
 .hero-back {
 	background-color: rgba(0, 0, 0, 0.6);
 }
