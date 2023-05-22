@@ -121,6 +121,7 @@
   --bs-form-valid-border-color: #198754;
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
+  --bs-breadcrumb-secondary-color: rgba(173, 181, 189, 0.75);
 }
 
 [data-bs-theme=dark] {
@@ -209,6 +210,10 @@ hr {
   border: 0;
   border-top: var(--bs-border-width) solid;
   opacity: 0.25;
+}
+
+.custom-hr {
+	margin: 8px;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -348,6 +353,10 @@ sup {
   top: -0.5em;
 }
 
+a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
+	margin-block-start: 0;
+}
+
 a {
   color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
   text-decoration: underline;
@@ -380,6 +389,10 @@ pre code {
   font-size: inherit;
   color: inherit;
   word-break: normal;
+}
+.preembed {
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 code {
@@ -784,20 +797,29 @@ progress {
   color: var(--bs-secondary-color);
 }
 
-.container,
 .container-fluid,
 .container-xxl,
 .container-xl,
 .container-lg,
 .container-md,
 .container-sm {
+  width: 100%;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  margin-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+@media (min-width: 645.98px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* Custom container settings */
@@ -805,6 +827,8 @@ progress {
 @media (min-width: 645.98px) {
   .container-sm, .container {
     max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media (min-width: 768px) {
@@ -886,6 +910,18 @@ progress {
   margin-left: calc(-.5 * var(--bs-gutter-x));
 }
 
+.mediarow {
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+}
+
+.justrow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .otherrow {
   --bs-gutter-y: 0;
   display: flex;
@@ -963,6 +999,17 @@ progress {
 
 /* Custom "col" settings */
 
+.col-media {
+	flex: 1 0 0%
+}
+
+@media (max-width: 425px) {
+	.col-media {
+		flex: 0 0 auto;
+		width: 25%;
+	}
+}
+
 .col-auto {
   flex: 0 0 auto;
   width: auto;
@@ -1030,10 +1077,7 @@ progress {
 
 @media (max-width:767.98px) {
    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-     margin-left: auto;
-     margin-right: auto;
      width: 100%;
-     margin-bottom: 10px;
    }
 }
 
@@ -1041,117 +1085,55 @@ progress {
    .col-1b {
     flex: 0 0 auto;
     width: 8.33333333%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-2b {
     flex: 0 0 auto;
     width: 16.66666667%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-3b {
     flex: 0 0 auto;
     width: 25%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-4b {
     flex: 0 0 auto;
     width: 33.33333333%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-5b {
     flex: 0 0 auto;
     width: 41.66666667%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-6b {
     flex: 0 0 auto;
     width: 50%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-7b {
     flex: 0 0 auto;
     width: 58.33333333%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-8b {
     flex: 0 0 auto;
     width: 66.66666667%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-9b {
     flex: 0 0 auto;
     width: 75%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-10b {
     flex: 0 0 auto;
     width: 83.33333333%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-11b {
     flex: 0 0 auto;
     width: 91.66666667%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
-}
-
-@media (min-width:767.98px) {
    .col-12b {
     flex: 0 0 auto;
     width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;
    }
 }
    
 @media (max-width:767.98px) {
    .col-1b, .col-2b, .col-3b, .col-4b, .col-5b, .col-6b, .col-7b, .col-8b, .col-9b, .col-10b, .col-11b, .col-12b {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 10px;
-      padding-right: 10px !important;
-      padding-left: 10px !important;
       width: 100% !important;
    }
 }
@@ -4603,7 +4585,12 @@ textarea.form-control-lg {
   text-decoration: none;
   white-space: nowrap;
 }
-.navbar-brand:hover, .navbar-brand:focus {
+.navbar-secondary-brand {
+  color: var(--bs-navbar-brand-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.navbar-brand:hover, .navbar-brand:focus, .navbar-secondary-brand:hover, .navbar-secondary-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
 }
 
@@ -5028,6 +5015,12 @@ textarea.form-control-lg {
   }
 }
 
+@media (max-width: 767.98px) {
+  .card-width {
+    width: 100%;
+  }
+}
+
 /* End custom card settings */
 
 .card > hr {
@@ -5084,6 +5077,13 @@ textarea.form-control-lg {
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+.custom-card-header { /* Custom */
+  padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+  margin-bottom: 0;
+  color: var(--bs-card-cap-color);
+  background-color: var(--bs-card-cap-bg);
 }
 .card-header:first-child {
   border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
@@ -5340,9 +5340,9 @@ textarea.form-control-lg {
   --bs-breadcrumb-margin-bottom: 1rem;
   --bs-breadcrumb-bg: ;
   --bs-breadcrumb-border-radius: ;
-  --bs-breadcrumb-divider-color: var(--bs-secondary-color);
+  --bs-breadcrumb-divider-color: var(--bs-breadcrumb-secondary-color);
   --bs-breadcrumb-item-padding-x: 0.5rem;
-  --bs-breadcrumb-item-active-color: var(--bs-secondary-color);
+  --bs-breadcrumb-item-active-color: var(--bs-breadcrumb-secondary-color);
   display: flex;
   flex-wrap: wrap;
   padding: var(--bs-breadcrumb-padding-y) var(--bs-breadcrumb-padding-x);
@@ -7716,7 +7716,7 @@ textarea.form-control-lg {
 /* Custom link settings */
 
 [data-bs-theme=dark] .link-dark {
-  color: #adb5bd !important;
+  color: var(--bs-body-color) !important;
 }
 [data-bs-theme=dark] .link-dark:hover, .link-dark:focus {
   color: #b5bcc4 !important;
@@ -8789,7 +8789,7 @@ textarea.form-control-lg {
 /* Custom "mt" settings */
 
 @media (max-width:767.98px) {
-   .container, .fmt-0, .fmt-1, .fmt-2, .fmt-3, .fmt-4, .fmt-5 {
+   .fmt-0, .fmt-1, .fmt-2, .fmt-3, .fmt-4, .fmt-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -9071,7 +9071,7 @@ textarea.form-control-lg {
 /* Custom "py" settings */
 
 @media (max-width:767.98px) {
-   .container, .fpy-0, .fpy-1, .fpy-2, .fpy-3, .fpy-4, .fpy-5 {
+   .fpy-0, .fpy-1, .fpy-2, .fpy-3, .fpy-4, .fpy-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -9148,7 +9148,7 @@ textarea.form-control-lg {
 /* Custom "pt" settings */
 
 @media (max-width:767.98px) {
-   .container, .fpt-0, .fpt-1, .fpt-2, .fpt-3, .fpt-4, .fpt-5 {
+   .fpt-0, .fpt-1, .fpt-2, .fpt-3, .fpt-4, .fpt-5 {
       width: 100%;
       padding-right: 0!important;
       padding-left: 0!important;
@@ -9156,6 +9156,32 @@ textarea.form-control-lg {
       margin-left: 0!important;
       padding-top: 10px;
    }
+}
+
+@media (max-width:767.98px) {
+  .opt-0 {
+    padding-top: 0 !important;
+  }
+
+  .opt-1 {
+    padding-top: 0.25rem !important;
+  }
+
+  .opt-2 {
+    padding-top: 0.5rem !important;
+  }
+
+  .opt-3 {
+    padding-top: 1rem !important;
+  }
+  
+  .opt-4 {
+    padding-top: 1.5rem !important;
+  }
+
+  .opt-5 {
+    padding-top: 3rem !important;
+  }
 }
 
 @media (min-width:767.98px) {
@@ -13566,7 +13592,7 @@ textarea.form-control-lg {
   .ps-xsm-0 {
     padding-left: 0 !important;
   }
-  .ps-sxm-1 {
+  .ps-xsm-1 {
     padding-left: 0.25rem !important;
   }
   .ps-xsm-2 {
@@ -13648,6 +13674,564 @@ textarea.form-control-lg {
     text-align: right !important;
   }
   .text-xsm-center {
+    text-align: center !important;
+  }
+}
+@media (max-width: 768px) {
+  .float-msx-start {
+    float: left !important;
+  }
+  .float-msx-end {
+    float: right !important;
+  }
+  .float-msx-none {
+    float: none !important;
+  }
+  .object-fit-msx-contain {
+    -o-object-fit: contain !important;
+    object-fit: contain !important;
+  }
+  .object-fit-msx-cover {
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+  }
+  .object-fit-msx-fill {
+    -o-object-fit: fill !important;
+    object-fit: fill !important;
+  }
+  .object-fit-msx-scale {
+    -o-object-fit: scale-down !important;
+    object-fit: scale-down !important;
+  }
+  .object-fit-msx-none {
+    -o-object-fit: none !important;
+    object-fit: none !important;
+  }
+  .d-msx-inline {
+    display: inline !important;
+  }
+  .d-msx-inline-block {
+    display: inline-block !important;
+  }
+  .d-msx-block {
+    display: block !important;
+  }
+  .d-msx-grid {
+    display: grid !important;
+  }
+  .d-msx-table {
+    display: table !important;
+  }
+  .d-msx-table-row {
+    display: table-row !important;
+  }
+  .d-msx-table-cell {
+    display: table-cell !important;
+  }
+  .d-msx-flex {
+    display: flex !important;
+  }
+  .d-msx-inline-flex {
+    display: inline-flex !important;
+  }
+  .d-msx-none {
+    display: none !important;
+  }
+  .flex-msx-fill {
+    flex: 1 1 auto !important;
+  }
+  .flex-msx-row {
+    flex-direction: row !important;
+  }
+  .flex-msx-column {
+    flex-direction: column !important;
+  }
+  .flex-msx-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+  .flex-msx-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+  .flex-msx-grow-0 {
+    flex-grow: 0 !important;
+  }
+  .flex-msx-grow-1 {
+    flex-grow: 1 !important;
+  }
+  .flex-msx-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+  .flex-msx-shrink-1 {
+    flex-shrink: 1 !important;
+  }
+  .flex-msx-wrap {
+    flex-wrap: wrap !important;
+  }
+  .flex-msx-nowrap {
+    flex-wrap: nowrap !important;
+  }
+  .flex-msx-wrap-reverse {
+    flex-wrap: wrap-reverse !important;
+  }
+  .justify-content-msx-start {
+    justify-content: flex-start !important;
+  }
+  .justify-content-msx-end {
+    justify-content: flex-end !important;
+  }
+  .justify-content-msx-center {
+    justify-content: center !important;
+  }
+  .justify-content-msx-between {
+    justify-content: space-between !important;
+  }
+  .justify-content-msx-around {
+    justify-content: space-around !important;
+  }
+  .justify-content-msx-evenly {
+    justify-content: space-evenly !important;
+  }
+  .align-items-msx-start {
+    align-items: flex-start !important;
+  }
+  .align-items-msx-end {
+    align-items: flex-end !important;
+  }
+  .align-items-msx-center {
+    align-items: center !important;
+  }
+  .align-items-msx-baseline {
+    align-items: baseline !important;
+  }
+  .align-items-msx-stretch {
+    align-items: stretch !important;
+  }
+  .align-content-msx-start {
+    align-content: flex-start !important;
+  }
+  .align-content-msx-end {
+    align-content: flex-end !important;
+  }
+  .align-content-msx-center {
+    align-content: center !important;
+  }
+  .align-content-msx-between {
+    align-content: space-between !important;
+  }
+  .align-content-msx-around {
+    align-content: space-around !important;
+  }
+  .align-content-msx-stretch {
+    align-content: stretch !important;
+  }
+  .align-self-msx-auto {
+    align-self: auto !important;
+  }
+  .align-self-msx-start {
+    align-self: flex-start !important;
+  }
+  .align-self-msx-end {
+    align-self: flex-end !important;
+  }
+  .align-self-msx-center {
+    align-self: center !important;
+  }
+  .align-self-msx-baseline {
+    align-self: baseline !important;
+  }
+  .align-self-msx-stretch {
+    align-self: stretch !important;
+  }
+  .order-msx-first {
+    order: -1 !important;
+  }
+  .order-msx-0 {
+    order: 0 !important;
+  }
+  .order-msx-1 {
+    order: 1 !important;
+  }
+  .order-msx-2 {
+    order: 2 !important;
+  }
+  .order-msx-3 {
+    order: 3 !important;
+  }
+  .order-msx-4 {
+    order: 4 !important;
+  }
+  .order-msx-5 {
+    order: 5 !important;
+  }
+  .order-msx-last {
+    order: 6 !important;
+  }
+  .m-msx-0 {
+    margin: 0 !important;
+  }
+  .m-msx-1 {
+    margin: 0.25rem !important;
+  }
+  .m-msx-2 {
+    margin: 0.5rem !important;
+  }
+  .m-msx-3 {
+    margin: 1rem !important;
+  }
+  .m-msx-4 {
+    margin: 1.5rem !important;
+  }
+  .m-msx-5 {
+    margin: 3rem !important;
+  }
+  .m-msx-auto {
+    margin: auto !important;
+  }
+  .mx-msx-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .mx-msx-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0.25rem !important;
+  }
+  .mx-msx-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important;
+  }
+  .mx-msx-3 {
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+  }
+  .mx-msx-4 {
+    margin-right: 1.5rem !important;
+    margin-left: 1.5rem !important;
+  }
+  .mx-msx-5 {
+    margin-right: 3rem !important;
+    margin-left: 3rem !important;
+  }
+  .mx-msx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  .my-msx-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .my-msx-1 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .my-msx-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .my-msx-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .my-msx-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .my-msx-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+  .my-msx-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+  .mt-msx-0 {
+    margin-top: 0 !important;
+  }
+  .mt-msx-1 {
+    margin-top: 0.25rem !important;
+  }
+  .mt-msx-2 {
+    margin-top: 0.5rem !important;
+  }
+  .mt-msx-3 {
+    margin-top: 1rem !important;
+  }
+  .mt-msx-4 {
+    margin-top: 1.5rem !important;
+  }
+  .mt-msx-5 {
+    margin-top: 3rem !important;
+  }
+  .mt-msx-auto {
+    margin-top: auto !important;
+  }
+  .me-msx-0 {
+    margin-right: 0 !important;
+  }
+  .me-msx-1 {
+    margin-right: 0.25rem !important;
+  }
+  .me-msx-2 {
+    margin-right: 0.5rem !important;
+  }
+  .me-msx-3 {
+    margin-right: 1rem !important;
+  }
+  .me-msx-4 {
+    margin-right: 1.5rem !important;
+  }
+  .me-msx-5 {
+    margin-right: 3rem !important;
+  }
+  .me-msx-auto {
+    margin-right: auto !important;
+  }
+  .mb-msx-0 {
+    margin-bottom: 0 !important;
+  }
+  .mb-msx-1 {
+    margin-bottom: 0.25rem !important;
+  }
+  .mb-msx-2 {
+    margin-bottom: 0.5rem !important;
+  }
+  .mb-msx-3 {
+    margin-bottom: 1rem !important;
+  }
+  .mb-msx-4 {
+    margin-bottom: 1.5rem !important;
+  }
+  .mb-msx-5 {
+    margin-bottom: 3rem !important;
+  }
+  .mb-msx-auto {
+    margin-bottom: auto !important;
+  }
+  .ms-msx-0 {
+    margin-left: 0 !important;
+  }
+  .ms-msx-1 {
+    margin-left: 0.25rem !important;
+  }
+  .ms-msx-2 {
+    margin-left: 0.5rem !important;
+  }
+  .ms-msx-3 {
+    margin-left: 1rem !important;
+  }
+  .ms-msx-4 {
+    margin-left: 1.5rem !important;
+  }
+  .ms-msx-5 {
+    margin-left: 3rem !important;
+  }
+  .ms-msx-auto {
+    margin-left: auto !important;
+  }
+  .p-msx-0 {
+    padding: 0 !important;
+  }
+  .p-msx-1 {
+    padding: 0.25rem !important;
+  }
+  .p-msx-2 {
+    padding: 0.5rem !important;
+  }
+  .p-msx-3 {
+    padding: 1rem !important;
+  }
+  .p-msx-4 {
+    padding: 1.5rem !important;
+  }
+  .p-msx-5 {
+    padding: 3rem !important;
+  }
+  .px-msx-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .px-msx-1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+  .px-msx-2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+  .px-msx-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  .px-msx-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+  .px-msx-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+  .py-msx-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .py-msx-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+  .py-msx-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  .py-msx-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .py-msx-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  .py-msx-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  .pt-msx-0 {
+    padding-top: 0 !important;
+  }
+  .pt-msx-1 {
+    padding-top: 0.25rem !important;
+  }
+  .pt-msx-2 {
+    padding-top: 0.5rem !important;
+  }
+  .pt-msx-3 {
+    padding-top: 1rem !important;
+  }
+  .pt-msx-4 {
+    padding-top: 1.5rem !important;
+  }
+  .pt-msx-5 {
+    padding-top: 3rem !important;
+  }
+  .pe-msx-0 {
+    padding-right: 0 !important;
+  }
+  .pe-msx-1 {
+    padding-right: 0.25rem !important;
+  }
+  .pe-msx-2 {
+    padding-right: 0.5rem !important;
+  }
+  .pe-msx-3 {
+    padding-right: 1rem !important;
+  }
+  .pe-msx-4 {
+    padding-right: 1.5rem !important;
+  }
+  .pe-msx-5 {
+    padding-right: 3rem !important;
+  }
+  .pb-msx-0 {
+    padding-bottom: 0 !important;
+  }
+  .pb-msx-1 {
+    padding-bottom: 0.25rem !important;
+  }
+  .pb-msx-2 {
+    padding-bottom: 0.5rem !important;
+  }
+  .pb-msx-3 {
+    padding-bottom: 1rem !important;
+  }
+  .pb-msx-4 {
+    padding-bottom: 1.5rem !important;
+  }
+  .pb-msx-5 {
+    padding-bottom: 3rem !important;
+  }
+  .ps-msx-0 {
+    padding-left: 0 !important;
+  }
+  .ps-msx-1 {
+    padding-left: 0.25rem !important;
+  }
+  .ps-msx-2 {
+    padding-left: 0.5rem !important;
+  }
+  .ps-msx-3 {
+    padding-left: 1rem !important;
+  }
+  .ps-msx-4 {
+    padding-left: 1.5rem !important;
+  }
+  .ps-msx-5 {
+    padding-left: 3rem !important;
+  }
+  .gap-msx-0 {
+    gap: 0 !important;
+  }
+  .gap-msx-1 {
+    gap: 0.25rem !important;
+  }
+  .gap-msx-2 {
+    gap: 0.5rem !important;
+  }
+  .gap-msx-3 {
+    gap: 1rem !important;
+  }
+  .gap-msx-4 {
+    gap: 1.5rem !important;
+  }
+  .gap-msx-5 {
+    gap: 3rem !important;
+  }
+  .row-gap-msx-0 {
+    row-gap: 0 !important;
+  }
+  .row-gap-msx-1 {
+    row-gap: 0.25rem !important;
+  }
+  .row-gap-msx-2 {
+    row-gap: 0.5rem !important;
+  }
+  .row-gap-msx-3 {
+    row-gap: 1rem !important;
+  }
+  .row-gap-msx-4 {
+    row-gap: 1.5rem !important;
+  }
+  .row-gap-msx-5 {
+    row-gap: 3rem !important;
+  }
+  .column-gap-msx-0 {
+    -moz-column-gap: 0 !important;
+    column-gap: 0 !important;
+  }
+  .column-gap-msx-1 {
+    -moz-column-gap: 0.25rem !important;
+    column-gap: 0.25rem !important;
+  }
+  .column-gap-msx-2 {
+    -moz-column-gap: 0.5rem !important;
+    column-gap: 0.5rem !important;
+  }
+  .column-gap-msx-3 {
+    -moz-column-gap: 1rem !important;
+    column-gap: 1rem !important;
+  }
+  .column-gap-msx-4 {
+    -moz-column-gap: 1.5rem !important;
+    column-gap: 1.5rem !important;
+  }
+  .column-gap-msx-5 {
+    -moz-column-gap: 3rem !important;
+    column-gap: 3rem !important;
+  }
+  .text-msx-start {
+    text-align: left !important;
+  }
+  .text-msx-end {
+    text-align: right !important;
+  }
+  .text-msx-center {
     text-align: center !important;
   }
 }
@@ -14124,7 +14708,7 @@ textarea.form-control-lg {
   .ps-xosm-0 {
     padding-left: 0 !important;
   }
-  .ps-sxm-1 {
+  .ps-xosm-1 {
     padding-left: 0.25rem !important;
   }
   .ps-xosm-2 {
@@ -14682,7 +15266,7 @@ textarea.form-control-lg {
   .ps-xesm-0 {
     padding-left: 0 !important;
   }
-  .ps-sxm-1 {
+  .ps-xesm-1 {
     padding-left: 0.25rem !important;
   }
   .ps-xesm-2 {
@@ -14819,16 +15403,26 @@ textarea.form-control-lg {
 
 /* Secondary code */
 
+.border-bottom-custom {
+  border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
 @media (min-width:767.98px) {
   .text-starttocenter {
     text-align: left;
   }
+  .text-endtocenter {
+    text-align: right;
+	}
 }
 
 @media (max-width:767.98px) {
   .text-starttocenter {
     text-align: center;
   }
+	.text-endtocenter {
+		text-align: center;
+	}
 }
 
 @media (max-width:500px) {
@@ -14852,9 +15446,14 @@ textarea.form-control-lg {
 
 .basics-scroll {
     height: 350px;
-    margin-top: 0.5rem;
     overflow: auto;
     text-align: left !important;
+}
+
+@media (max-width:767.98px) {
+	.basics-scroll {
+	    margin-top: 0.5rem;
+	}
 }
 
 @media (min-width: 500px) {
@@ -14904,47 +15503,25 @@ textarea.form-control-lg {
    }
 }
 
-@media (min-width: 767.98px) {
-  .lrpad {
-    margin-left: 10px;
-    margin-right: 10px;
+@media (max-width: 645.98px) {
+  .lrpadding, .lrpad {
+    margin-left: 10px !important; 
+    margin-right: 10px !important;
   }
 }
 
-@media (max-width:767.98px) {
-   .lrpadding, .lrpad li, .lrpad .scrollspy p, .lrpad p:not(.modal p, li p, .card p), .lrpad .scrollspy a:not(p a), .lrpad a:not(a.sw-feature-box, p a, header a, b a, code a, a.back-to-top, a.w-100, .modal a,.icon-bar a, li a, a.list-group-item, .card a, .btn-group .btn, .w-100.btn), .lrpad .scrollspy b:not(p b, a b, code b), .lrpad b:not(p b, a b, code b, .modal b), .lrpad .scrollspy img, .lrpad img:not(.card img, .modal img), .lrpad .scrollspy pre, .lrpad pre:not(.modal pre), .lrpad .scrollspy .row, .lrpad .row:not(.modal .row), .lrpad .scrollspy .card, .lrpad.card, .lrpad .scrollspy .h1, .lrpad .h1:not(.modal .h1, .card .h1), .lrpad .scrollspy h1, .lrpad h1:not(.modal h1, .card h1), .lrpad .scrollspy .h2, .lrpad .h2:not(.modal .h2, .card .h2), .lrpad .scrollspy h2, .lrpad h2:not(.modal h2, .card h2), .lrpad .scrollspy .h3, .lrpad .h3:not(.modal .h3, .card .h3), .lrpad .scrollspy h3, .lrpad h3:not(.modal h3, .card h3), .lrpad .scrollspy .h4, .lrpad .h4:not(.modal .h4, .card .h4), .lrpad .scrollspy h4, .lrpad h4:not(.modal h4, .card h4), .lrpad .scrollspy .h5, .lrpad .h5:not(.modal .h5, .card .h5), .lrpad .scrollspy h5, .lrpad h5:not(.modal h5, .card h5), .lrpad .scrollspy .h6, .lrpad .h6:not(.modal .h6, .card .h6), .lrpad .scrollspy h6, .lrpad h6:not(.modal h6, .card h6), .lrpad .btn:not(.modal .btn, .btn.btn-resource, .w-100 .btn, .btn-group .btn, .w-100.btn) {
-      margin-left: 10px;
-      margin-right: 10px;
-   }
+@media (min-width: 645.98px) {
+	.custom-lrpad {
+	margin-left: 10px !important; 
+  	  margin-right: 10px !important;
+	}
 }
 
 @media (max-width:767.98px) {
-   .nolrpadding, .notlrpad li, .notlrpad .scrollspy p, .notlrpad p:not(.modal p, li p, .card p), .notlrpad .scrollspy a:not(p a), .notlrpad a:not(a.sw-feature-box, p a, header a, b a, code a, a.back-to-top, a.w-100, .modal a,.icon-bar a, li a, a.list-group-item, .card a, .btn-group .btn, .w-100.btn), .notlrpad .scrollspy b:not(p b, a b, code b), .notlrpad b:not(p b, a b, code b, .modal b), .notlrpad .scrollspy img, .notlrpad img:not(.card img, .modal img), .notlrpad .scrollspy pre, .notlrpad pre:not(.modal pre), .notlrpad .scrollspy .row, .notlrpad .row:not(.modal .row), .notlrpad .scrollspy .card, .notlrpad.card, .notlrpad .scrollspy .h1, .notlrpad .h1:not(.modal .h1, .card .h1), .notlrpad .scrollspy h1, .notlrpad h1:not(.modal h1, .card h1), .notlrpad .scrollspy .h2, .notlrpad .h2:not(.modal .h2, .card .h2), .notlrpad .scrollspy h2, .notlrpad h2:not(.modal h2, .card h2), .notlrpad .scrollspy .h3, .notlrpad .h3:not(.modal .h3, .card .h3), .notlrpad .scrollspy h3, .notlrpad h3:not(.modal h3, .card h3), .notlrpad .scrollspy .h4, .notlrpad .h4:not(.modal .h4, .card .h4), .notlrpad .scrollspy h4, .notlrpad h4:not(.modal h4, .card h4), .notlrpad .scrollspy .h5, .notlrpad .h5:not(.modal .h5, .card .h5), .notlrpad .scrollspy h5, .notlrpad h5:not(.modal h5, .card h5), .notlrpad .scrollspy .h6, .notlrpad .h6:not(.modal .h6, .card .h6), .notlrpad .scrollspy h6, .notlrpad h6:not(.modal h6, .card h6), .notlrpad .btn:not(.modal .btn, .btn.btn-resource, .w-100 .btn, .btn-group .btn, .w-100.btn) {
-      margin-left: 0 !Important;
+   .nolrpadding {
+	margin-left: 0 !Important;
       margin-right: 0 !important;
    }
-}
-
-@media (max-width:767.98px) {
-  .lrpad scrollspy code:not(p code, a code), .lrpad code:not(p code, a code, .modal code, li code) {
-	  position: relative;
-    left: 10px;
-    right: 10px;
-  }
-}
-
-@media (max-width:767.98px) {
-  .lrpad .btn-group .btn:not (.lrpad .modal .btn-group .btn, .w-100 .btn, .btn.w-100) {
-    margin-left: 10px;
-  }
-}
-
-@media (max-width:767.98px) {
-  .lrpad .modal .scrollspy code:not(p code) { 
-    position: relative;
-    left: 10px;
-    right: 10px;
-	}
 }
 
 .a {
@@ -14988,92 +15565,72 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 768px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 5%;
-        padding-left: 5%;
-    }
-}
-@media (min-width: 768px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
+   .plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
     margin-left: 5%;
     margin-right: 5%;
   }
-}
-@media (min-width:768px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    padding-left: 5%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 @media (min-width: 1024px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 10%;
-        padding-left: 10%;
-    }
-}
-@media (min-width: 1024px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
-    margin-left: 10%;
-    margin-right: 10%;
+	.plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
+    margin-left: 5%;
+    margin-right: 5%;
   }
-}
-@media (min-width:1024px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    padding-left: 10%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 @media (min-width: 1440px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 20%;
-        padding-left: 20%;
-    }
-}
-@media (min-width: 1440px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
-    margin-left: 20%;
-    margin-right: 20%;
+	.plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
+    margin-left: 5%;
+    margin-right: 5%;
   }
-}
-@media (min-width:1440px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    padding-left: 20%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 @media (min-width: 2000px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 25%;
-        padding-left: 25%;
-    }
-}
-@media (min-width: 2000px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a, .scrollspy a.btn) {
-    margin-left: 25%;
-    margin-right: 25%;
+	.plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
+    margin-left: 5%;
+    margin-right: 5%;
   }
-}
-@media (min-width:2000px) {
-   .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-     padding-left: 25%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 @media (min-width: 2560px) {
-   .plr, .plr .scrollspy, li:not(header li, footer li), .plr .scrollspy p, p:not(.accordion p, .modal p, .card p, footer p, .plr p, li p, .scrollspy p, td p), .plr .scrollspy a,  a:not(.modal a, p a, b a, header a, .icon-bar a, a.back-to-top, a.w-100, a.btn, footer a, li a, a.list-group-item, .btn-group a, .scrollspy a, .sw-feature-box, h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, td a), .plr .scrollspy code, code:not(p code, a code, li code, footer code, .scrollspy code, td code), .plr .scrollspy b, b:not(p b, a b, code b, li b, footer b, .scrollspy b, .scrollspy b, td b), .plr .scrollspy h1, h1:not(td h1, .card h1, footer h1, .plr h1, .modal h1, .scrollspy h1), .plr .scrollspy .h1, .h1:not(td .h1, .card .h1, footer .h1, .plr .h1, .modal .h1, .scrollspy .h1), .plr .scrollspy h2, h2:not(td h2, .card h2, footer h2, .plr h2, .modal h2, .scrollspy h2), .plr .scrollspy .h2, .h2:not(td .h2, .card .h2, footer .h2, .plr .h2, .modal .h2, .scrollspy .h2), .plr .scrollspy h3, h3:not(td h3, .card h3, footer h3, .plr h3, .modal h3, .scrollspy h3), .plr .scrollspy .h3, .h3:not(td .h3, .card .h3, footer .h3, .plr .h3, .modal .h3, .scrollspy .h3), .plr .scrollspy h4, h4:not(td h4, .card h4, footer h4, .plr h4, .modal h4, .scrollspy h4), .plr .scrollspy .h4, .h4:not(td .h4, .card .h4, footer .h4, .plr .h4, .modal .h4, .scrollspy .h4), .plr .scrollspy h5, h5:not(td h5, .card h5, footer h5, .plr h5, .modal h5, .scrollspy h5), .plr .scrollspy .h5, .h5:not(td .h5, .card .h5, footer .h5, .plr .h5, .modal .h5, .scrollspy .h5), .plr .scrollspy h6, h6:not(td h6, card h6, footer h6, .plr h6, .modal h6, .scrollspy .h6), .plr .scrollspy .h6, .h6:not(td .h6, .card .h6, footer .h6, .plr .h6, .modal .h6, .scrollspy .h6) {
-        padding-right: 33%;
-        padding-left: 33%;
-    }
-}
-@media (min-width: 2560px) {
-  .mlr, a.btn:not(.modal a.btn, .btn-group, a.w-100, a.back-to-top, .btn-group a.btn, .scrollspy a.btn) {
-    margin-left: 33%;
-    margin-right: 33%;
+	.plr {
+		padding-right: 5%;
+   	padding-left: 5%;
+   }
+  .mlr {
+    margin-left: 5%;
+    margin-right: 5%;
   }
-}
-@media (min-width:2560px) {
-  .plrl, .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn.dropdown-toggle-split:first-child, .btn-group > .btn-group:not(:last-child) > .btn {
-    padding-left: 33%;
+  .plrl {
+		padding-left: 5%;
   }
 }
 
-.card:not(footer .card), #resources:not(#resources .modal), #menu, .fontrow, #intro, a.back-to-top, .btn {
+.calt:not(.modal), .fontrow, a.back-to-top, .btn {
   text-align: center;
 }
 
@@ -15083,6 +15640,10 @@ textarea.form-control-lg {
 
 .modal {
   text-align: left !important;
+}
+
+.icon-bar a {
+	display: inline-block;
 }
 
 @media (max-width:767.98px) {
@@ -15097,27 +15658,18 @@ textarea.form-control-lg {
   margin-right: 0 !important;
 }
 
+@media (min-width:767.98px) {
       .padright {
         padding-right: 5px;
+				padding-left: 10px;
       }
       
       .padleft {
         padding-left: 5px;
+	      padding-right: 10px;
       }
+}
       
-      @media (max-width:767.98px) {
-        .padright {
-          padding-left: 10px;
-          padding-right: 10px;
-        }
-      }
-      
-      @media (max-width:767.98px) {
-        .padleft {
-          padding-right: 10px;
-          padding-left: 10px;
-        }
-      }
 
     .sw-feature-box {
       background-color: grey;
@@ -15166,7 +15718,7 @@ footer p {
   margin-bottom: 0!important;
 }
 
-[data-bs-theme=light] a:hover.footer-info {
+a:hover.footer-info {
   color: #696969;
 }
 
@@ -15210,12 +15762,6 @@ img.script {
    padding: 0px!important;
 }
 
-[data-bs-theme=dark] img.mainimg {
-    border-radius: 15px;
-    background: white;
-    padding: 20px!important;
-}
-
 @media (max-width:424.98px) {
   [data-bs-theme=dark] img.mainimg {
     width: 65%!important;
@@ -15227,15 +15773,17 @@ img.script {
 }
 
 [data-bs-theme=dark] img.footerimg {
-    border-radius: 12.5px;
-    background: white;
-    padding: 7.5px!important;
+   content: url(/media/images/shortwhite.png) !important;
 }
 
-@media (max-width:767.98px) {
-  [data-bs-theme=dark] img.footerimg {
-    padding: 9px!important;
-  }
+[data-bs-theme=dark] img.mainimg:not(img.flashimg) {
+   content: url(/media/images/longwhite.png) !important;
+}
+
+img.darkimg {
+	border-radius: 15px;
+  background: white;
+  padding: 20px!important;
 }
 
 .abicon {
@@ -15248,12 +15796,12 @@ img.script {
   color: #adb5bd;
 }
 
-nav .dropdown-menu {
-  padding: 0.25rem;
+.dropdown-menu {
+  padding: var(--bs-border-radius-sm);
 }
 
-nav .dropdown-menu .dropdown-item {
-    border-radius: 0.25rem;
+.dropdown-menu .dropdown-item {
+    border-radius: var(--bs-border-radius-sm);
 }
 
 .permhr {
@@ -15273,6 +15821,8 @@ nav .dropdown-menu .dropdown-item {
     bottom: 47.5px;
     box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
     z-index: 1050;
+    color: white;
+    background-color: black;
 }
 
 @media (max-width:767.98px) {
@@ -15287,18 +15837,12 @@ nav .dropdown-menu .dropdown-item {
   }
 }
 
-
-[data-bs-theme=light] .back-to-top {
-    color: white;
-    background-color: black;
-}
-
-[data-bs-theme=light] .back-to-top:hover {
+.back-to-top:hover {
   color: white;
   background-color: #262626;
 }
 
-[data-bs-theme=light] .back-to-top:active {
+.back-to-top:active {
   color: white;
   background-color: #404040;
 }
@@ -15321,16 +15865,10 @@ nav .dropdown-menu .dropdown-item {
 @media (min-width:767.98px) {
   .d-nb {
     display: none;
-  }
-}
-
-@media (max-width:767.98px) {
+	}
   .d-nb {
     display: block;
-  }
-}
-
-@media (max-width:767.98px) {
+	}
   .d-nba {
     display: none;
   }
@@ -15379,6 +15917,96 @@ nav .dropdown-menu .dropdown-item {
 	img.indeximg, img.flashdoc {
 		width: 45% !important;
 	}
+}
+
+@media (min-width: 767.98px) {
+.bd-toc {
+    position: -webkit-fixed;
+    position: fixed;
+    top: calc(103px + .75rem);
+    right: 0;
+    z-index: 2;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+}
+}
+
+body.story-top {
+	margin-top: 103px;
+}
+html.story-top {
+        scroll-margin-top: 103px;
+}
+
+.border-fix {
+	    border-bottom: solid 1px #dee2e6;
+}
+
+@media (max-width: 424.98px) {
+	.text-disappear {
+		display: none !important;
+	}
+	.first-navbar {
+		border-bottom: solid 1px #dee2e6;
+	}
+	body.story-top {
+		margin-top: 72px;
+	}
+	html.story-top {
+		scroll-margin-top: 72px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.story-end {
+		display: none;
+	}
+}
+
+@media (min-width: 767.98px) {
+	.story-scroll {
+		height: 350px;
+	}	
+}
+
+.proper-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}	
+
+.hero {
+  height: 350px;
+	margin-bottom: 1rem;
+	border-bottom: solid 1px #dee2e6;
+	width: 100%
+}
+
+.hero-main {
+	background: url('https://ik.imagekit.io/atproductsllc/hero.webp') center center no-repeat;
+	width: 100%;
+  background-size: 3840px 1600px;
+}
+
+@media (max-width:424.98px) {
+	.hero {
+		height: 300px;
+	}
+}
+
+@media (max-width:549.98px) {
+	.hero {
+		height: 325px;
+	}
+}
+
+.hero-back {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-filter {
+	-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 5px #222);
 }
 
 /* End secondary code */
