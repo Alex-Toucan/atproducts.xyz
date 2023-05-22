@@ -178,6 +178,43 @@
   --bs-form-invalid-border-color: #ea868f;
 }
 
+/* First Elements */
+
+.hero {
+  height: 350px;
+	margin-bottom: 1rem;
+	border-bottom: solid 1px #dee2e6;
+	width: 100%
+}
+
+.hero-main {
+	background: url('https://ik.imagekit.io/atproductsllc/hero.webp') center center no-repeat;
+	width: 100%;
+  background-size: 3840px 1600px;
+}
+
+@media (max-width:424.98px) {
+	.hero {
+		height: 300px;
+	}
+}
+
+@media (max-width:549.98px) {
+	.hero {
+		height: 325px;
+	}
+}
+
+.hero-back {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-filter {
+	-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 5px #222);
+}
+
+/* End first elements */
+
 *,
 *::before,
 *::after {
@@ -15975,39 +16012,6 @@ html.story-top {
     left: 50%;
     transform: translate(-50%, -50%);
 }	
-
-.hero {
-  height: 350px;
-	margin-bottom: 1rem;
-	border-bottom: solid 1px #dee2e6;
-	width: 100%
-}
-
-.hero-main {
-	background: url('https://ik.imagekit.io/atproductsllc/hero.webp') center center no-repeat;
-	width: 100%;
-  background-size: 3840px 1600px;
-}
-
-@media (max-width:424.98px) {
-	.hero {
-		height: 300px;
-	}
-}
-
-@media (max-width:549.98px) {
-	.hero {
-		height: 325px;
-	}
-}
-
-.hero-back {
-	background-color: rgba(0, 0, 0, 0.6);
-}
-
-.hero-filter {
-	-webkit-filter: drop-shadow(5px 5px 5px #222);filter: drop-shadow(5px 5px 5px #222);
-}
 
 /* End secondary code */
 
