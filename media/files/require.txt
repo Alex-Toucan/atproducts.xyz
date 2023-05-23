@@ -10,7 +10,6 @@ keyboard==0.13.5
 opencv_python==4.5.3.56
 pynput==1.7.3
 pywin32==301
-requests==2.26.0
 scipy==1.7.1
 sounddevice==0.4.2
 pathlib==1.0.1
