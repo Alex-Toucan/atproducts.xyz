@@ -6908,36 +6908,30 @@ textarea.form-control-lg {
 
 /* Custom carousel settings */	
 .carousel-main {	
-   width: 75%;	
    margin-left: auto;	
    margin-right: auto;	
-   padding-right: 10px;	
-   padding-left: 10px;	
-   background-color: black;
+   background-color: black;	
+   width: 100%;		
 }	
-@media (max-width:2500px) {	
+@media (min-width:645.98px) {	
    .carousel-main {	
-      width: 40%;	
+     padding-right: 0.5rem;	
+     padding-left: 0.5rem;	
+		 padding-top: 0.5rem;
+     margin-right: 10px;
+		 margin-left: 10px;
+		 width: 90%;
+		 border-radius: var(--bs-border-radius) !important;
    }	
 }	
-@media (max-width:1750px) {	
+@media (min-width:1300px) {	
    .carousel-main {	
-      width: 60%;	
+      width: 50%;	
    }	
 }	
-@media (max-width:1300px) {	
+@media (min-width:767.98px) {	
    .carousel-main {	
       width: 70%;	
-   }	
-}	
-@media (max-width:767.98px) {	
-   .carousel-main {	
-      width: 90%;	
-   }	
-}	
-@media (max-width:550px) {	
-   .carousel-main {	
-      width: 95%;	
    }	
 }	
 
