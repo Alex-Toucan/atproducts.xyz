@@ -6907,8 +6907,6 @@ textarea.form-control-lg {
 
 /* Custom carousel settings */	
 .carousel-main {	
-   margin-left: auto;	
-   margin-right: auto;	
    background-color: black;	
    width: 100%;		
 }	
@@ -6917,8 +6915,8 @@ textarea.form-control-lg {
      padding-right: 0.5rem;	
      padding-left: 0.5rem;	
 		 padding-top: 0.5rem;
-     margin-right: 10px;
-		 margin-left: 10px;
+     margin-left: auto;	
+     margin-right: auto;	
 		 width: 90%;
 		 border-radius: var(--bs-border-radius) !important;
    }	
