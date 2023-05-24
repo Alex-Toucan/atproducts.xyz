@@ -226,8 +226,11 @@
   }
 }
 
-body {
+html, body {
   overflow-x: hidden; /* Custom */
+}
+
+body {
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
@@ -15549,7 +15552,7 @@ textarea.form-control-lg {
 	}
 }
 
-@media (max-width:767.98px) {
+@media (max-width:645.98px) {
    .nolrpadding {
 	margin-left: 0 !Important;
       margin-right: 0 !important;
