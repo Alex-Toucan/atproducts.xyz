@@ -187,7 +187,7 @@
 }
 
 .hero-main {
-	background: url('https://ik.imagekit.io/atproductsllc/hero.webp') center center no-repeat;
+	background: url('/media/images/hero.webp') center center no-repeat;
 	width: 100%;
   background-size: 3840px 1600px;
 }
@@ -15964,6 +15964,19 @@ img.darkimg {
     height: calc(100vh - 7rem);
     overflow-y: auto;
 }
+}
+
+@media (max-width: 645.98px) {
+	.hero-drappear {
+		display: none;
+	}
+	.border-custom-fix {
+    border-bottom: solid 1px #dee2e6;
+	}
+}
+
+.hero-drappear {
+  display: initial;
 }
 
 body.story-top {
