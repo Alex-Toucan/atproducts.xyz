@@ -1038,8 +1038,15 @@ progress {
 
 /* Custom "col" settings */
 
-.col-media {
-	flex: 1 0 0%
+.hero-col, .col-media {
+	flex: 1 0 0%;
+}
+
+@media (max-width: 645.98px) {
+	.hero-col {
+		flex: 0 0 0%;
+		width: 100%;
+	}
 }
 
 @media (max-width: 425px) {
