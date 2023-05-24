@@ -190,7 +190,7 @@
 	background: url('/media/images/hero.webp') center center no-repeat;
 	width: 100%;
   background-size: 3840px 1600px;
-	position: initial;
+	position: relative;
 	z-index: 1046;
 }
 
