@@ -15976,7 +15976,7 @@ img.darkimg {
 }
 
 .hero-drappear {
-  display: initial;
+  display: block;
 }
 
 body.story-top {
