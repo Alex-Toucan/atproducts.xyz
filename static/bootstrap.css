@@ -3938,7 +3938,6 @@ textarea.form-control-lg {
 
 .dropdown-menu {
   --bs-dropdown-zindex: 1000;
-/*--bs-dropdown-min-width: 10rem;*/
   --bs-dropdown-min-width: 8rem;
   --bs-dropdown-padding-x: 0;
   --bs-dropdown-padding-y: 0.5rem;
@@ -3968,8 +3967,7 @@ textarea.form-control-lg {
   z-index: var(--bs-dropdown-zindex);
   display: none;
   min-width: var(--bs-dropdown-min-width);
-  /*padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);*/
-	padding: var(--bs-border-radius-sm);
+  padding: var(--bs-border-radius-sm);
   margin: 0;
   font-size: var(--bs-dropdown-font-size);
   color: var(--bs-dropdown-color);
@@ -4178,8 +4176,7 @@ textarea.form-control-lg {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
-/*border-radius: var(--bs-dropdown-item-border-radius, 0);*/
-	border-radius: var(--bs-border-radius-sm);
+  border-radius: var(--bs-border-radius-sm);
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: var(--bs-dropdown-link-hover-color);
