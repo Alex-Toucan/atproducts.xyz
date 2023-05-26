@@ -6974,14 +6974,24 @@ textarea.form-control-lg {
 		 border-radius: var(--bs-border-radius) !important;
    }	
 }	
-@media (min-width:1300px) {	
-   .carousel-main {	
-      width: 50%;	
-   }	
-}	
 @media (min-width:767.98px) {	
    .carousel-main {	
       width: 70%;	
+   }	
+}	
+@media (min-width:1024px) {	
+   .carousel-main {	
+      width: 50%;	
+   }	
+}
+@media (min-width:1440px) {	
+   .carousel-main {	
+      width: 40%;	
+   }	
+}	
+@media (min-width:2000px) {	
+   .carousel-main {	
+      width: 30%;	
    }	
 }	
 
