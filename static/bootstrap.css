@@ -1069,7 +1069,7 @@ progress {
 
 /* Custom "col" settings */
 
-.hero-col, .hero-col-md .col-media {
+.hero-col, .hero-col-md, .col-media {
 	flex: 1 0 0%;
 }
 
