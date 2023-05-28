@@ -184,22 +184,21 @@
   height: 325px;
 	border-bottom: solid 1px #dee2e6;
 	width: 100%;
+	  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;   
+	background-attachment: fixed;
 }
 
 .hero-main {
 	background: url('/media/images/hero.webp') center center;
 	width: 100%;
-  background-size: 3456px 2026px;
 	position: relative;
 	z-index: 1046;
 }
 
 .hero-codinghome {
 	background: url('/media/images/hero-codinghome.webp') center center;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;   
-	background-attachment: fixed;
 	width: 100%;
 	position: relative;
 	z-index: 1046;
