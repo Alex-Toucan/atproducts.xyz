@@ -194,6 +194,14 @@
 	z-index: 1046;
 }
 
+.hero-codinghome {
+	background: url('/media/images/hero.webp') center center no-repeat;
+	width: 100%;
+  background-size: 3840px 1600px;
+	position: relative;
+	z-index: 1046;
+}
+
 @media (max-width:424.98px) {
 	.hero {
 		height: 375px;
