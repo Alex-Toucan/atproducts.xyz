@@ -202,9 +202,9 @@
 	z-index: 1046;
 }
 
-@media (max-width:424.98px) {
-	.hero {
-		height: 375px;
+@media (max-width:767.98px) {
+	.hero-codinghome {
+		height: 425px;
 	}
 }
 
