@@ -192,7 +192,7 @@
 
 .hero-main {
 	background: url('/media/images/hero.webp') center center;
-	width: 100%;
+	background-position: center bottom !important;
 	position: relative;
 	z-index: 1046;
 }
