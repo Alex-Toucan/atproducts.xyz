@@ -204,7 +204,7 @@
 
 @media (max-width:767.98px) {
 	.hero-codinghome {
-		height: 425px;
+		height: 450px !important;
 	}
 }
 
