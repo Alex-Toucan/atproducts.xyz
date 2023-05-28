@@ -196,8 +196,11 @@
 
 .hero-codinghome {
 	background: url('/media/images/hero-codinghome.webp') center center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;   
+	background-attachment: fixed;
 	width: 100%;
-  background-size: 6000px 3376px;
 	position: relative;
 	z-index: 1046;
 }
