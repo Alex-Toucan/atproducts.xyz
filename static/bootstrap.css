@@ -1060,12 +1060,20 @@ progress {
 
 /* Custom "col" settings */
 
-.hero-col, .col-media {
+.hero-col, .hero-col-md .col-media {
 	flex: 1 0 0%;
 }
 
 @media (max-width: 645.98px) {
 	.hero-col {
+		flex: 0 0 0%;
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 767.98px) {
+	.hero-col-md {
 		flex: 0 0 0%;
 		width: 100%;
 	}
