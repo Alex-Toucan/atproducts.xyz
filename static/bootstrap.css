@@ -16621,16 +16621,19 @@ img.darkimg {
 }
 
 @media (max-width: 645.98px) {
-	.hero-drappear {
-		display: none;
-	}
 	.border-custom-fix {
     border-bottom: solid 1px #dee2e6;
 	}
 }
 
+@media (min-width: 645.98px) {
+	.hero-drappear {
+		display: block;
+	}
+}
+
 .hero-drappear {
-  display: block;
+  display: none;
 }
 
 body.story-top {
