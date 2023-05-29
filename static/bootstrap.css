@@ -212,6 +212,13 @@
 }
 
 @media (max-width:645.98px) {
+	.hero-codinghome-backup {
+		height: 475px !important;
+	}
+}
+
+
+@media (max-width:645.98px) {
 	.hero-codinghome {
 		height: 425px !important;
 	}
