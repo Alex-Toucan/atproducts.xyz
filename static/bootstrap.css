@@ -16636,7 +16636,6 @@ img.darkimg {
 	}
 }
 
-
 body.story-top {
 	margin-top: 103px;
 }
@@ -16673,6 +16672,10 @@ html.story-top {
 	.story-scroll {
 		height: 350px;
 	}	
+}
+
+.story-scroll {
+  display: contents;
 }
 
 .proper-center {
