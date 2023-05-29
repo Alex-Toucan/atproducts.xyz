@@ -202,11 +202,18 @@
 	width: 100%;
 	position: relative;
 	z-index: 1046;
+	height: 400px;
 }
 
 @media (max-width:767.98px) {
 	.hero-codinghome-backup {
 		height: 450px !important;
+	}
+}
+
+@media (max-width:645.98px) {
+	.hero-codinghome {
+		height: 425px !important;
 	}
 }
 
