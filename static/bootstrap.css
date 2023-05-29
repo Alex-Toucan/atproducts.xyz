@@ -16620,6 +16620,10 @@ img.darkimg {
 }
 }
 
+.hero-drappear {
+  display: none;
+}
+
 @media (max-width: 645.98px) {
 	.border-custom-fix {
     border-bottom: solid 1px #dee2e6;
@@ -16632,9 +16636,6 @@ img.darkimg {
 	}
 }
 
-.hero-drappear {
-  display: none;
-}
 
 body.story-top {
 	margin-top: 103px;
