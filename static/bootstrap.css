@@ -16709,7 +16709,7 @@ img.darkimg {
 }
 }
 
-@media (min-width: 891.98px) {
+@media (max-width: 891.98px) {
 .bd-toc {
     position: -webkit-fixed;
     position: fixed;
