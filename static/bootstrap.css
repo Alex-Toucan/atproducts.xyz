@@ -4885,6 +4885,14 @@ textarea.form-control-lg {
     padding: 0;
     overflow-y: visible;
   }
+  .container-none {
+    margin-left: initial !important;
+    margin-right: initial !important;
+    width: initial !important;
+	}
+	.m-story-0 {
+		margin: 0;
+	}
 }
 
 @media (max-width: 881.98px) {
