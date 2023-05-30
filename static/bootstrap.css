@@ -4839,6 +4839,54 @@ textarea.form-control-lg {
 
 /* Custom navbar settings */
 
+@media (min-width: 881.98px) {
+  .navbar-expand-story {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-story .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-story .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  .navbar-expand-story .navbar-nav .nav-link {
+    padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+  }
+  .navbar-expand-story .navbar-nav-scroll {
+    overflow: visible;
+  }
+  .navbar-expand-story .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .navbar-expand-story .navbar-toggler {
+    display: none;
+  }
+  .navbar-expand-story .offcanvas {
+    position: static;
+    z-index: auto;
+    flex-grow: 1;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    transform: none !important;
+    transition: none;
+  }
+  .navbar-expand-story .offcanvas .offcanvas-header {
+    display: none;
+  }
+  .navbar-expand-story .offcanvas .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible;
+  }
+}
+
 @media (min-width: 781.98px) {
   .navbar-expand-sm {
     flex-wrap: nowrap;
