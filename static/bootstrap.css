@@ -4893,6 +4893,9 @@ textarea.form-control-lg {
 	.m-story-0 {
 		margin: 0 !important;
 	}
+	.ms-story-1 {
+		margin-left: .25rem !important;
+	}
 }
 
 @media (max-width: 881.98px) {
