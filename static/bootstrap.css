@@ -4839,7 +4839,7 @@ textarea.form-control-lg {
 
 /* Custom navbar settings */
 
-@media (min-width: 881.98px) {
+@media (min-width: 894.98px) {
   .navbar-expand-story {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4898,7 +4898,7 @@ textarea.form-control-lg {
 	}
 }
 
-@media (max-width: 881.98px) {
+@media (max-width: 894.98px) {
   .second-navbar {
     padding: 0;
   }
@@ -16702,6 +16702,18 @@ img.darkimg {
     position: -webkit-fixed;
     position: fixed;
     top: calc(103px + .75rem);
+    right: 0;
+    z-index: 2;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+}
+}
+
+@media (min-width: 891.98px) {
+.bd-toc {
+    position: -webkit-fixed;
+    position: fixed;
+    top: calc(72px + .75rem);
     right: 0;
     z-index: 2;
     height: calc(100vh - 7rem);
