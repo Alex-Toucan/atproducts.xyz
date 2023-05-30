@@ -4887,6 +4887,12 @@ textarea.form-control-lg {
   }
 }
 
+@media (max-width: 881.98px) {
+  .second-navbar {
+    padding: 0;
+  }
+}
+
 @media (min-width: 781.98px) {
   .navbar-expand-sm {
     flex-wrap: nowrap;
@@ -16713,9 +16719,6 @@ img.darkimg {
 @media (max-width: 424.98px) {
 	.text-disappear {
 		display: none !important;
-	}
-	.first-navbar {
-		border-bottom: solid 1px #dee2e6;
 	}
 	.story-top {
 		margin-top: 72px;
