@@ -16639,10 +16639,10 @@ img.darkimg {
 	}
 }
 
-body.story-top {
+.story-top {
 	margin-top: 103px;
 }
-html.story-top {
+.story-top-scroll {
         scroll-margin-top: 103px;
 }
 
@@ -16657,10 +16657,10 @@ html.story-top {
 	.first-navbar {
 		border-bottom: solid 1px #dee2e6;
 	}
-	body.story-top {
+	.story-top {
 		margin-top: 72px;
 	}
-	html.story-top {
+	.story-top-scroll {
 		scroll-margin-top: 72px;
 	}
 }
