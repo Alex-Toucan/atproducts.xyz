@@ -4905,6 +4905,9 @@ textarea.form-control-lg {
   .dropdown-story {
     left: initial;
   }
+	.m-story-2 {
+		margin: .5rem !important;
+	}
 }
 
 @media (min-width: 781.98px) {
