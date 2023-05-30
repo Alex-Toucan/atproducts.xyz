@@ -16410,12 +16410,8 @@ textarea.form-control-lg {
   color: var(--bs-body-color);
     border: none;
     background-color: inherit;
-    margin-bottom: 0.5rem;
+    margin-bottom: initial;
     padding: initial;
-}
-
-header .footer-info {
-	  margin-bottom: initial;
 }
 
 footer p {
