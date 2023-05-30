@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="story-top" lang="en">
+<html lang="en">
   <head>
     <title>CCTV Interception</title>
     <meta name="title" content="CCTV Interception - AT Products LLC BookViewer">
@@ -14,9 +14,9 @@
     <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
         <link rel="manifest" href="/media/favicon/site.webmanifest">
   </head>
-<body class="">
+<body class="story-top">
   <div id="page">
-    <header class="">
+    <header class="fixed-top">
      <nav class="first-navbar navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
 <a class="navbar-brand d-inline me-3" href="/">
@@ -121,10 +121,11 @@
             </div></div>
         <div class="col-8b p-1">
           <div tabindex="0" data-bs-smooth-scroll="true" data-bs-target="#cctvlist" data-bs-spy="scroll" class="story-scroll">
+<div id="intro" class="story-top-scroll">
     <div class="h1">CCTV Interception</div>
-    <div class="h5">By <a href="https://zoomsquad.netlify.app/members/zen">Z3N</a>.</div>
+    <div class="h5">By the <a href="/noodle">Noodle Hackerspace</a>.</div>
     <hr>
-<div id="prenote">
+<div id="prenote" class="story-top-scroll">
   <div class="h2">Prenote</div>
 <div class="h3">Needed Items</div><p>A computer with <a href="https://www.Wireshark.org/">Wireshark</a> and <a href="https://www.aircrack-ng.org/">AirCrack</a>, wifi adapter that supports monitoring and some time.</p>
 <div class="h3">Keywords</div><p><code>{ }</code> means commands for terminal. <code>( )</code> Means general stuff.</p>
@@ -142,7 +143,7 @@ While this may seem like alot of requirements, it's fairly common to be able to 
 Once you're in range and have any operating system loaded up with the required tools, you should be ready. Plug in your adapter, and make sure you have Wireshark installed to begin. If you dont have Wireshark, <code>sudo apt install Wireshark -y</code> or <code>sudo pacman -S Wireshark -y</code>.
 </p>
       </div>
-<div id="s1">
+<div id="s1" class="story-top-scroll">
 <div class="h2">Step 1</div>
 <p>
 To start, you'll need to access the built-in interface on whatever webcam or Wi-Fi security camera you want to intercept. In a browser window on your "host" computer, navigate to the HTTP interface, enter any password required, and the begin viewing the live webcam view.
@@ -154,7 +155,7 @@ For this command, you'll need to know the network range. you can find this by ty
 This will look for devices with these ports "open", and when you find one, you can navigate it by typing the IP address and then <code>:81</code> on that IP address. If you want to navigate to port <code>80801</code> type <code>192.168.0.1:8081</code> to your browser window.
 </p>
         </div>
-<div id="s2">
+<div id="s2" class="story-top-scroll">
 <div class="h2">Step 2</div>
 <p>
 You'll need to plug in your Wi-Fi adapter, I prefer the "Alfa AWUSO36NHA". You'll need to do two things before starting up Wireshark, the first being putting the card into wireless monitor mode, and the second being identifying the channel the router you're targetting is a broadcast on. 
@@ -328,11 +329,11 @@ root@kali:~/Desktop#
 If our target is on channel 11, we'll run the following command to set our card to channel 11.<br><br> 
 <code>(airmon-ng start wlan0mon 11)</code></p>
         </div>
-<div id="s3">
+<div id="s3" class="story-top-scroll">
 <div class="h2">Step 3</div>
 <p>Now that our wireless network adapter is listening on the same channel as the traffic we want to intercept, it's time to start Wireshark. When Wireshark opens, double-click the card you put in monitor mode to start the capture. Our card should now be scanning on the correct channel, but without the network password, we won't be able to see anything. To solve that, we'll need to add some encryption keys to Wireshark. </p>
       </div>
-<div id="s4">
+<div id="s4" class="story-top-scroll">
   <div class="h2">Step 4</div>
 <p>
 To add the encryption keys to Wireshark, click on "Edit" in the menu bar, then "Preferences" to show the preferences menu. Next, select "Protocols" from the sidebar to see a list of protocols that Wireshark can translate.
@@ -345,7 +346,7 @@ For the decryption to work, you must add the key by clicking on the plus <code>(
 <br><br>
 Click "OK" to save the key, and now we should be able to decrypt traffic from his network -- if we can grab a four-way Wi-Fi handshake.</p>
       </div>
-<div id="s5">
+<div id="s5" class="story-top-scroll">
   <div class="h2">Step 5</div>
 <p>
 In our Wireshark capture, we're sure to be seeing a lot of traffic. While we can't yet decrypt it because we don't have a handshake, we can build a filter to make sure we're only seeing traffic to the device we're sniffing.
@@ -354,7 +355,7 @@ The best way to do this over a Wi-Fi network is to find a piece of traffic to th
 <br><br>
 Looking under the packet information, right-click the "Receiver address" for a packet being sent to the target device, select "Apply as Filter", and then "Selected". Now, we should see only packets to the target.</p>
       </div>
-<div id="s6">
+<div id="s6" class="story-top-scroll">
   <div class="h2">Step 6</div>
 <p>
 Now that we've isolated the traffic from our target device, we need to generate a four-way handshake by kicking the target computer off the network momentarily while Wireshark is listening. To do this, we can use tool named MDK3, which is able to kick any devices connected to Wi-Fi off and generate a handshake. Highly suggest looking into using MDK3 for Advanced Wi-Fi jamming.
@@ -378,23 +379,23 @@ Once you see the result above, you've captured a WPA four-way handshake! Make su
 <br><br>
 Now that we have a four-way handshake and have entered the network key, we should have full access to data flowing over the network. While HTTPS is still of the table, we should be able to see raw HTTP just fine.</p>
       </div>
-<div id="s7">
+<div id="s7" class="story-top-scroll">
   <div class="h2">Step 7</div>
 <p>While we've gained access to the network traffic and narrowed it down to the target computer, there may be other traffic that's unrelated and makes it difficult to focus on what we're looking for. To cut through this, we'll add another network filter to show only HTTP traffic flowing through on the network.
 <br><br>
 In the Wireshark main view, type http into the display filter bar.
 </p>
         </div>
-<div id="s8">
+<div id="s8" class="story-top-scroll">
 <div class="h2">Step 8</div><p>
 Now that we can see the HTTP traffic from the web app, we'll need to select the encoded JPEG files in order to turn them into something we can work with. Stop the capture, and then click on "File", then "Export Objects." We'll be exploring the HTTP objects we've found, so click on "HTTP" to open the object list.
-</p></div>
+<br><br>
 In the HTTP object list, we'll see a list of HTTP objects we've intercepted. Here we can see the JPEG images we want to decode. You can select one one or all of them, and then clock "Save" or "Save All" and pick a location to export the files to.
 <br><br>
 Click "Close", and then navigate to the folder you exported the images to. You should see a list of files that Wireshark exported from our capture. This will be more or less depending how long you ran the capture for.
 <br><br>
 Finally, click on one of the images to see the image that was intercepted on the way to the target computer. You should see a frame from the video feed!
-<p></p>
+  </p></div>
       </div></div>
 </main>
     <footer>
