@@ -4891,6 +4891,9 @@ textarea.form-control-lg {
   .second-navbar {
     padding: 0;
   }
+  .pb-story-2 {
+    padding-bottom: 1rem;
+  }
 }
 
 @media (min-width: 781.98px) {
