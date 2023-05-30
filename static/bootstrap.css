@@ -4894,6 +4894,9 @@ textarea.form-control-lg {
   .pb-story-2 {
     padding-bottom: 1rem;
   }
+  .dropdown-story {
+    left: initial;
+  }
 }
 
 @media (min-width: 781.98px) {
