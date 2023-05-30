@@ -4891,7 +4891,7 @@ textarea.form-control-lg {
     width: initial !important;
 	}
 	.m-story-0 {
-		margin: 0;
+		margin: 0 !important;
 	}
 }
 
