@@ -231,6 +231,33 @@
 	}
 }
 
+.hero-noodle {
+	background: url('/media/images/hero-codinghome.webp') center center;
+	width: 100%;
+	position: relative;
+	z-index: 1046;
+	height: 415px;
+}
+
+@media (max-width:767.98px) {
+	.hero-noodle-backup {
+		height: 450px !important;
+	}
+}
+
+@media (max-width:645.98px) {
+	.hero-noodle-backup {
+		height: 475px !important;
+	}
+}
+
+
+@media (max-width:645.98px) {
+	.hero-noodle {
+		height: 450px !important;
+	}
+}
+
 @media (max-width:645.98px) {
 	.hero {
 		height: 350px;
