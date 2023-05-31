@@ -9646,6 +9646,10 @@ textarea.form-control-lg {
   font-size: calc(1.375rem + 1.5vw) !important;
 }
 
+.fs-hero-title {
+	font-size: calc(1.375rem + 1.5vw) !important;
+}
+
 .fs-2 {
   font-size: calc(1.325rem + 0.9vw) !important;
 }
