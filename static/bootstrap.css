@@ -245,13 +245,6 @@
 	}
 }
 
-
-@media (max-width:645.98px) {
-	.hero-noodle {
-		height: 450px !important;
-	}
-}
-
 @media (max-width:645.98px) {
 	.hero {
 		height: 350px;
