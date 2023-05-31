@@ -135,7 +135,7 @@
 <div class="h3">Keywords</div><p><code>{ }</code> means commands for terminal. <code>( )</code> Means general stuff.</p>
 <hr>
 <p>To make this thing to actually work we will need to use Wireshark to sniff out traffic between our host. Today's goal is to capture unencrypted HTTP traffic coming to the hosts' computer.<br><br>
-First things first, we have to break the encryption of the network. Even if you have the password <b>do not</b> connect it will bring attention to us and opens up more risk of detection. Instead, we can add some Wi-Fi keys we know to Wireshark. To decrypt the data, we sniff without connecting to the network. This means our attack will be mostly passive, leaving very little opportunity for us to be detected.<br><br>
+First things first, we have to break the encryption of the network. Even if you have the password, <b>do not</b> connect quite yet, it will bring attention to us and opens up more risk of detection. Instead, we can add some Wi-Fi keys we know to Wireshark. To decrypt the data, we sniff without connecting to the network. This means our attack will be mostly passive, leaving very little opportunity for us to be detected.<br><br>
 One serious thing we'll need that is not passive is a Wi-Fi handshake to see the ongoing traffic. Because since Wireshark needs to observe a Wi-Fi handshake to decyrpt subsequent traffic, the computer we're interested in with an awesome filter, capture a four-way WPA handshake, and then decrpyt the data with the password we know.
 <br><br>
 Conditions must be favorable for this attack to have a chance of succeeding. In particular, if the camera does not use a insecure interface, then the data will be encrypted, and we will not be able to see it.
