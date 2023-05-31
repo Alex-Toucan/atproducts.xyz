@@ -4839,7 +4839,7 @@ textarea.form-control-lg {
 
 /* Custom navbar settings */
 
-  .navbar-expand-story .navbar-nav .breadcrumg {
+  .navbar-expand-story .breadcrumb {
     flex-direction: row !important;
   }
 
