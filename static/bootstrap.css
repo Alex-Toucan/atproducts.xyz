@@ -16773,7 +16773,7 @@ img.darkimg {
 }
 
 .story-scroll {
-  overflow: initial;
+  display: contents;
 }
 
 .proper-center {
