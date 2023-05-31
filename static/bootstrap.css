@@ -187,6 +187,13 @@
 
 /* First Elements */
 
+@media (min-width: 767.98px) {
+	.hero-button-margin {
+		  margin-right: 3rem !important;
+  margin-left: 3rem !important;
+	}
+}
+
 .hero {
   height: 325px;
 	border-bottom: solid 1px #dee2e6;
