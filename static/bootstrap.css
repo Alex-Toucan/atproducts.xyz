@@ -16774,6 +16774,7 @@ img.darkimg {
 
 .story-scroll {
   display: contents;
+	overflow: initial;
 }
 
 .proper-center {
