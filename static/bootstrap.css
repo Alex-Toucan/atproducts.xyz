@@ -236,18 +236,12 @@
 	width: 100%;
 	position: relative;
 	z-index: 1046;
-	height: 415px;
+	height: 300px;
 }
 
 @media (max-width:767.98px) {
 	.hero-noodle-backup {
-		height: 450px !important;
-	}
-}
-
-@media (max-width:645.98px) {
-	.hero-noodle-backup {
-		height: 475px !important;
+		height: 325px !important;
 	}
 }
 
