@@ -16329,6 +16329,9 @@ textarea.form-control-lg {
   .fatoc {
     text-align: center !important;
   }
+  .story-top-body {
+    margin-top: 72px;
+	}
 }
 
 @media (min-width: 767.98px) {
