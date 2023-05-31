@@ -209,7 +209,7 @@
 	width: 100%;
 	position: relative;
 	z-index: 1046;
-	height: 400px;
+	height: 415px;
 }
 
 @media (max-width:767.98px) {
@@ -227,7 +227,7 @@
 
 @media (max-width:645.98px) {
 	.hero-codinghome {
-		height: 425px !important;
+		height: 450px !important;
 	}
 }
 
