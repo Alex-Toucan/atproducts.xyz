@@ -4906,7 +4906,7 @@ textarea.form-control-lg {
     padding-bottom: 1rem;
   }
   .dropdown-story {
-    left: initial;
+    left: initial !important;
   }
 	.m-story-2 {
 		margin: .5rem !important;
@@ -16498,6 +16498,8 @@ textarea.form-control-lg {
     background-color: inherit;
     margin-bottom: initial;
     padding: initial;
+	flex-direction: initial;
+	display: inline !important;
 }
 
 footer p {
