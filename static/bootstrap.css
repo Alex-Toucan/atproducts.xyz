@@ -16709,6 +16709,10 @@ img.darkimg {
     height: calc(100vh - 7rem);
     overflow-y: auto;
 }
+	
+	.story-top-body {
+margin-top: 103px;
+}
 }
 
 @media (min-width: 767.98px) and (max-width: 894.98px) {
@@ -16720,6 +16724,9 @@ img.darkimg {
     z-index: 2;
     height: calc(100vh - 7rem);
     overflow-y: auto;
+}
+.story-top-body {
+margin-top: 72px;
 }
 }
 
@@ -16772,8 +16779,8 @@ img.darkimg {
 	.story-scroll {
 		height: 350px;
 	}	
-	  .story-top-body {
-    margin-top: 72px;
+	.bd-toc {
+		margin-top: initial;
 	}
 }
 
