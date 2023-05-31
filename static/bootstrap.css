@@ -4839,6 +4839,10 @@ textarea.form-control-lg {
 
 /* Custom navbar settings */
 
+  .navbar-expand-story .navbar-nav .breadcrumg {
+    flex-direction: row !important;
+  }
+
 @media (min-width: 894.98px) {
   .navbar-expand-story {
     flex-wrap: nowrap;
