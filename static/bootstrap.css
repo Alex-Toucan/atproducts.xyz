@@ -7161,6 +7161,11 @@ textarea.form-control-lg {
   margin-bottom: 0 !important;
   margin-right: 0 !important;
 }
+
+.carousel-products .carousel-control-prev,
+.carousel-products .carousel-control-next {
+	width: 10%;
+}
 /* End custom carousel settings */
 
 .spinner-grow,
