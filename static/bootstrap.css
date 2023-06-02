@@ -7968,6 +7968,25 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
 }
 
+.link-footer {
+  color: RGBA(var(--bs-dark-rgb, var(--bs-link-opacity, 1)));
+  -webkit-text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
+  text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
+}
+.link-footer:hover, .link-footer:focus {
+  color: RGBA(26, 30, 33, var(--bs-link-opacity, 1));
+  -webkit-text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
+  text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
+}
+
+[data-bs-theme=dark] .link-footer {
+  color: var(--bs-body-color) !important;
+}
+[data-bs-theme=dark] .link-footer:hover, .link-footer:focus {
+  color: #b5bcc4 !important;
+}
+
+
 /* End custom link settings */
 
 .link-body-emphasis {
