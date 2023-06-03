@@ -5,11 +5,17 @@
         window.tallest; //create variable to make note of the tallest slide
         
         function normalizeHeights() {
-            jQuery('.carousel-inner .carousel-item').each(function() { //add heights to array
+            jQuery('#carousel-products .carousel-inner .carousel-item').each(function() { //add heights to array
+                window.heights.push(jQuery(this).outerHeight());
+            });
+            jQuery('#carousel-allies .carousel-inner .carousel-item').each(function() { //add heights to array
                 window.heights.push(jQuery(this).outerHeight());
             });
             window.tallest = Math.max.apply(null, window.heights); //cache largest value
-            jQuery('.carousel-inner .carousel-item').each(function() {
+            jQuery('#carousel-products .carousel-inner .carousel-item').each(function() {
+                jQuery(this).css('min-height',tallest + 'px');
+            });
+            JQuery('#carousel-allies .carousel-inner .carousel-item').each(function() {
                 jQuery(this).css('min-height',tallest + 'px');
             });
         }
@@ -18,7 +24,10 @@
         jQuery(window).on('resize orientationchange', function () {
             
             window.tallest = 0, window.heights.length = 0; //reset vars
-            jQuery('.carousel-inner .carousel-item').each(function() {
+            jQuery('#carousel-products .carousel-inner .carousel-item').each(function() {
+                jQuery(this).css('min-height','0'); //reset min-height
+            }); 
+            jQuery('#carousel-allies .carousel-inner .carousel-item').each(function() {
                 jQuery(this).css('min-height','0'); //reset min-height
             }); 
             
