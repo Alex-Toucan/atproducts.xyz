@@ -7101,14 +7101,14 @@ textarea.form-control-lg {
   color: #000;
 }
 
-[data-bs-theme=dark] .carousel-switch .carousel-control-prev-icon,
-[data-bs-theme=dark] .carousel-switch .carousel-control-next-icon {
+[data-bs-theme=light] .carousel-switch .carousel-control-prev-icon,
+[data-bs-theme=light] .carousel-switch .carousel-control-next-icon {
   filter: invert(1) grayscale(100);
 }
-[data-bs-theme=dark] .carousel-switch .carousel-indicators [data-bs-target] {
+[data-bs-theme=light] .carousel-switch .carousel-indicators [data-bs-target] {
   background-color: #000;
 }
-[data-bs-theme=dark] .carousel-switch .carousel-caption {
+[data-bs-theme=light] .carousel-switch .carousel-caption {
   color: #000;
 }
 
