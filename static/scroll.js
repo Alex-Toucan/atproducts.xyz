@@ -37,11 +37,11 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
         window.tallest; //create variable to make note of the tallest slide
         
         function normalizeHeights() {
-            jQuery('.parab .carousel-inner .carousel-item').each(function() { //add heights to array
+            jQuery('.carousel-products .carousel-inner .carousel-item').each(function() { //add heights to array
                 window.heights.push(jQuery(this).outerHeight());
             });
             window.tallest = Math.max.apply(null, window.heights); //cache largest value
-            jQuery('.parab .carousel-inner .carousel-item').each(function() {
+            jQuery('.carousel-products .carousel-inner .carousel-item').each(function() {
                 jQuery(this).css('min-height',tallest + 'px');
             });
         }
@@ -50,7 +50,7 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
         jQuery(window).on('resize orientationchange', function () {
             
             window.tallest = 0, window.heights.length = 0; //reset vars
-            jQuery('.parab .carousel-inner .carousel-item').each(function() {
+            jQuery('.carousel-products .carousel-inner .carousel-item').each(function() {
                 jQuery(this).css('min-height','0'); //reset min-height
             }); 
             
