@@ -8743,7 +8743,13 @@ textarea.form-control-lg {
   --bs-border-width: 5px;	
   border-width: 5px !important;	
 }
-
+.border-5 {	
+  --bs-border-width: 5px;	
+  border-width: 5px !important;	
+}
+.border-solid {	
+  border-style: solid;
+}
 /* End custom border settings */
 
 .border-opacity-10 {
