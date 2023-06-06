@@ -17283,11 +17283,6 @@ img.darkimg {
     background-color: black;
 }
 
-@media (max-width:767.98px) {
-  .back-to-top {
-    bottom: 60px !important;
-  }
-}
 
 @media (min-width:1079.98px) {
   .back-to-top {
@@ -17330,6 +17325,12 @@ img.darkimg {
   .d-nba {
     display: none;
   }
+		.story-scroll {
+		height: 350px;
+	}	
+	.bd-toc {
+		margin-top: initial;
+	}
 }
 
 @media (min-width:1665px) {
@@ -17445,21 +17446,30 @@ margin-top: 72px;
 	.story-top-scroll {
 		scroll-margin-top: 72px;
 	}
-}
-
-@media (max-width: 894.98px) {
 	.story-end {
 		display: none;
 	}
 }
 
-@media (min-width: 767.98px) {
-	.story-scroll {
-		height: 350px;
-	}	
-	.bd-toc {
-		margin-top: initial;
+@media (max-width:767.98px) {
+  .back-to-top {
+    bottom: 60px !important;
+  }
+	.tab-content {
+		height: 15rem !important;
 	}
+}
+
+.tab-link {
+    flex-grow: 1 !important;
+    justify-content: flex-end !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.tab-pane {
+	display: flex !important;
+  flex-direction: column !important;
 }
 
 .story-scroll {
@@ -17472,7 +17482,7 @@ margin-top: 72px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}	
+}
 
 /* End secondary code */
 
