@@ -17470,6 +17470,7 @@ margin-top: 72px;
 .tab-pane {
 	display: flex !important;
   flex-direction: column !important;
+	height: 100% !important;
 }
 
 .story-scroll {
