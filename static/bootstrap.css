@@ -17460,18 +17460,7 @@ margin-top: 72px;
 	}
 }
 
-.tab-link {
-    flex-grow: 1 !important;
-    justify-content: flex-end !important;
-    display: flex !important;
-    flex-direction: column !important;
-}
 
-.tab-pane {
-	display: flex !important;
-  flex-direction: column !important;
-	height: 100% !important;
-}
 
 .story-scroll {
   display: contents;
