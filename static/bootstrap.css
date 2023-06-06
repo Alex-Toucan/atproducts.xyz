@@ -17460,7 +17460,9 @@ margin-top: 72px;
 	}
 }
 
-
+.tab-pane {
+	height: 100%;
+}
 
 .story-scroll {
   display: contents;
