@@ -17477,6 +17477,8 @@ margin-top: 72px;
 }
 
 .tab-link {
+	position: sticky;
+    top: 100%;
 }
 
 /* End secondary code */
