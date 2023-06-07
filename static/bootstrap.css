@@ -17462,8 +17462,6 @@ margin-top: 72px;
 
 .tab-pane {
 	height: 100%;
-	    display: table;
-    width: 100%;
 }
 
 .story-scroll {
@@ -17479,9 +17477,6 @@ margin-top: 72px;
 }
 
 .tab-link {
-	    bottom: 0;
-    position: absolute;
-    left: 0;
 }
 
 /* End secondary code */
