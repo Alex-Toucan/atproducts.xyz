@@ -1,0 +1,39 @@
+body {
+  background-color:#ab0000
+}
+
+
+p {
+  color: black;
+  font-family: verdana;
+  text-align: center;
+}
+h1 {
+  font-weight: bold;
+  font-family: verdana;
+  text-align: center;
+}
+h2 {
+  font-weight: bold;
+  font-family: verdana;
+  text-align: center;
+}
+a {
+  font-family: verdana;
+  text-align: center;
+}
+h4 {
+  font-weight: bold;
+  font-family: verdana;
+  text-align: center;
+}
+h6 {
+  font-weight: bold;
+  font-family: verdana;
+  text-align: center;
+}
+h3 {
+  font-weight: bold;
+  font-family: verdana;
+  text-align: center;
+}
