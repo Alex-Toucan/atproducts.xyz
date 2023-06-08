@@ -212,11 +212,11 @@
 }
 
 .hero-script {
-	background: url('/media/images/hero-codinghome.webp') center center;
+	background: url('/media/images/hero-script.webp') center center;
 	width: 100%;
 	position: relative;
 	z-index: 1046;
-	height: 375px;
+	height: 275px;
 }
 
 @media (max-width:767.98px) {
