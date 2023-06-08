@@ -211,6 +211,14 @@
 	height: 415px;
 }
 
+.hero-ehs {
+	background: url('/media/images/hero-codinghome.webp') center center;
+	width: 100%;
+	position: relative;
+	z-index: 1046;
+	height: 400px;
+}
+
 .hero-script {
 	background: url('/media/images/hero-script.webp') center center;
 	width: 100%;
@@ -222,6 +230,9 @@
 @media (max-width:767.98px) {
 	.hero-codinghome-backup {
 		height: 450px !important;
+	}
+		.hero-ehs-backup {
+		height: 425px !important;
 	}
 	.hero-button-margin {
   	margin-right: 3rem !important;
