@@ -212,7 +212,7 @@
 	height: 300px;
 }
 
-.hero-script {
+.hero-script, .hero-script-backup {
 	background: url('/media/images/hero-script.webp');
 	height: 325px;
 }
@@ -251,7 +251,7 @@
 	}
 }
 
-.hero-noodle {
+.hero-noodle, .hero-noodle-backup {
 	background: url('/media/images/hero-noodle.webp') center bottom;
 	height: 300px;
 } 
