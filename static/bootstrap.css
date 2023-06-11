@@ -1193,6 +1193,13 @@ progress {
 }
 
 @media (min-width:767.98px) {
+   .col-b {
+     flex: 1 0 0%;
+	 }
+	 .col-autob {
+  	flex: 0 0 auto;
+  	width: auto;
+	 }
    .col-1b {
     flex: 0 0 auto;
     width: 8.33333333%;
@@ -1243,10 +1250,8 @@ progress {
    }
 }
    
-@media (max-width:767.98px) {
-   .col-1b, .col-2b, .col-3b, .col-4b, .col-5b, .col-6b, .col-7b, .col-8b, .col-9b, .col-10b, .col-11b, .col-12b {
-      width: 100% !important;
-   }
+.col-1b, .col-2b, .col-3b, .col-4b, .col-5b, .col-6b, .col-7b, .col-8b, .col-9b, .col-10b, .col-11b, .col-12b {
+  width: 100% !important;
 }
 
 @media (min-width: 700px) {
