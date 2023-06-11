@@ -1,6 +1,6 @@
 $(function () {
     $('.carousel-main').carousel({
-        pause: "false";
+        pause: "false"
     });
     
     $('.playButton').click(function () {
