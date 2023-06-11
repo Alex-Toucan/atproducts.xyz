@@ -10,3 +10,4 @@ $(function () {
     $('.pauseButton').click(function () {
         $('.carousel-main').carousel('pause');
     });
+});
