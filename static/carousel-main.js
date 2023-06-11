@@ -1,7 +1,6 @@
 $(function () {
     $('.carousel-main').carousel({
-        interval:2000,
-        pause: "false"
+        pause: "false";
     });
     
     $('.playButton').click(function () {
@@ -11,3 +10,4 @@ $(function () {
         $('.carousel-main').carousel('pause');
     });
 });
+
