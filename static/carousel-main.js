@@ -4,9 +4,9 @@ $(function () {
         pause: "false"
     });
     
-    $('.carousel-main').click(function () {
+    $('.playButton').click(function () {
         $('.carousel-main').carousel('cycle');
     });
-    $('#pauseButton').click(function () {
+    $('.pauseButton').click(function () {
         $('.carousel-main').carousel('pause');
     });
