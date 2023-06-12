@@ -6380,6 +6380,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 
+.modal, .modal-open {
+  padding: 0 !important;
+}
+
 .modal-dialog {
   position: relative;
   width: auto;
