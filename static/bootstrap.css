@@ -7139,8 +7139,6 @@ textarea.form-control-lg {
 }	
 @media (min-width:645.98px) {	
    .carousel-main {	
-     margin-left: auto;	
-     margin-right: auto;	
 		 width: 90%;
 		 border-radius: var(--bs-border-radius) !important;
    }	
