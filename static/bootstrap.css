@@ -17945,6 +17945,11 @@ textarea.form-control-lg {
   .text-light-center {
     text-align: center !important;
   }
+  .index-border {
+	 --bs-border-width: 2.5px;	
+    border-width: 2.5px !important;	
+		border-style: solid;
+	}
 }
 @media (min-width: 1200px) {
   .fs-1 {
