@@ -3541,7 +3541,7 @@ textarea.form-control-lg {
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check-dark:checked {
+.btn-check-dark:checked + .btn {
   border-color: rgb(173, 181, 189) !important;
 }
 .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
