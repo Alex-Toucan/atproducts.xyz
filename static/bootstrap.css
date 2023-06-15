@@ -17949,6 +17949,7 @@ textarea.form-control-lg {
 	 --bs-border-width: 2.5px;	
     border-width: 2.5px !important;	
 		border-style: solid;
+	  border-color: var(--bs-light-border-subtle) !important;
 	}
 }
 @media (min-width: 1200px) {
