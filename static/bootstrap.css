@@ -17384,6 +17384,12 @@ textarea.form-control-lg {
   .text-dark-center {
     text-align: center !important;
   }
+	  .index-border {
+	 --bs-border-width: 2.5px;	
+    border-width: 2.5px !important;	
+		border-style: solid;
+	  border-color: var(--bs-light-border-subtle) !important;
+	}
 }
 [data-bs-theme=light] {
   .float-light-start {
@@ -17945,12 +17951,6 @@ textarea.form-control-lg {
   .text-light-center {
     text-align: center !important;
   }
-  .index-border {
-	 --bs-border-width: 2.5px;	
-    border-width: 2.5px !important;	
-		border-style: solid;
-	  border-color: var(--bs-light-border-subtle) !important;
-	}
 }
 @media (min-width: 1200px) {
   .fs-1 {
