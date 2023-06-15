@@ -3541,6 +3541,9 @@ textarea.form-control-lg {
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
+.btn-check-dark:checked + .btn, :not(.btn-check-dark) {
+  border-color: rgb(173, 181, 189) !important;
+}
 .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
@@ -7136,9 +7139,6 @@ textarea.form-control-lg {
 }	
 @media (min-width:645.98px) {	
    .carousel-main {	
-     padding-right: 0.5rem;	
-     padding-left: 0.5rem;	
-		 padding-top: 0.5rem;
      margin-left: auto;	
      margin-right: auto;	
 		 width: 90%;
