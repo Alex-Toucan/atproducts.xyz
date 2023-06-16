@@ -197,6 +197,16 @@
   background-repeat: no-repeat !important;   
 }
 
+@media (max-width: 767.98px) {
+.hero-pynx {
+    height: 775px;
+}
+}
+.hero-pynx {
+    background: url(/media/images/hero-codinghome.webp);
+    height: 400px;
+}
+
 .hero-main {
 	background: url('/media/images/hero.webp');
 	  height: 325px;
