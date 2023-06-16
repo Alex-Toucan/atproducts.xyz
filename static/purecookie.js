@@ -2,7 +2,7 @@
 var purecookieTitle = "Cookies."; // Title
 var purecookieDesc = "By using this website, you automatically accept that we use cookies."; // Description
 var purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookiepolicy link
-var purecookieHeader = 'You must click &quot;Understood&quot; and reload the page for the color themes to be enabled.'
+var purecookieHeader = 'You must click &quot;Understood&quot; and reload the page for the color themes to be enabled.' // Color Modes message
 var purecookieButton = "Understood"; // Button text
 // ---        --- //
 
