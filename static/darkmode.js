@@ -27,7 +27,7 @@
 
   setTheme(getPreferredTheme());
 
-  window.addEventListener('load', function darkmode, false (){
+  window.addEventListener('load', function darkmode (){
     document.querySelectorAll('[data-bs-theme-value]')
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
