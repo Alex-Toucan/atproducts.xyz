@@ -3,13 +3,16 @@
 	width: 350px;
 	min-height: 20px;
 	box-sizing: border-box;
-	padding: 30px 30px 30px 30px;
 	background: #232323;
 	overflow: hidden;
 	position: fixed;
         bottom: 30px;
 	left: 30px;
 	display: none;
+}
+
+.cookieContent {
+		padding: 30px 30px 30px 30px;
 }
 
 .cookieConsentContainer .cookieTitle span {
