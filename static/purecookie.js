@@ -2,6 +2,7 @@
 var purecookieTitle = "Cookies."; // Title
 var purecookieDesc = "By using this website, you automatically accept that we use cookies."; // Description
 var purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookiepolicy link
+var purecookieHeader = 'You must click &quot;Understood&quot; and reload the page for the color themes to be enabled.'
 var purecookieButton = "Understood"; // Button text
 // ---        --- //
 
@@ -64,7 +65,7 @@ function eraseCookie(name) {
 	
 window.addEventListener('load', function cookieConsent (){
   if (!getCookie('purecookieDismiss')) {
-    document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
+    document.querySelector('div#page').innerHTML += '<div class="cookieHeader"><strong>' + purecookieHeader + '</strong></div> <div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
 	pureFadeIn("cookieConsentContainer");
   }
 });
