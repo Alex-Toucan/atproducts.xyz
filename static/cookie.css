@@ -11,6 +11,10 @@
 	display: none;
 }
 
+.cookieHeader {
+	background-color: black;
+	padding: 1rem;
+
 .cookieContent {
 		padding: 30px 30px 30px 30px;
 }
