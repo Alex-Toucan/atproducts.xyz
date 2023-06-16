@@ -1,8 +1,19 @@
+var _____WB$wombat$assign$functionalt_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; }; }
+{
+  let window = _____WB$wombat$assign$functionalt_____("window");
+  let self = _____WB$wombat$assign$functionalt_____("self");
+  let document = _____WB$wombat$assign$functionalt_____("document");
+  let location = _____WB$wombat$assign$functionalt_____("location");
+  let top = _____WB$wombat$assign$functionalt_____("top");
+  let parent = _____WB$wombat$assign$functionalt_____("parent");
+  let frames = _____WB$wombat$assign$functionalt_____("frames");
+  let opener = _____WB$wombat$assign$functionalt_____("opener");
+
 // --- Config --- //
 var purecookieTitle = "Cookies."; // Title
 var purecookieDesc = "By using this website, you automatically accept that we use cookies."; // Description
 var purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookiepolicy link
-var purecookieHeader = 'You must click &quot;Understood&quot; and reload the page for the color themes to be enabled.' // Color Modes message
 var purecookieButton = "Understood"; // Button text
 // ---        --- //
 
@@ -62,15 +73,19 @@ function getCookie(name) {
 function eraseCookie(name) {
     document.cookie = name+'=; Max-Age=-99999999;';
 }
-	
-window.addEventListener('DOMContentLoaded', function cookieConsent (){
+
+function cookieConsent() {
   if (!getCookie('purecookieDismiss')) {
-    document.querySelector('div#page').innerHTML +=  '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieHeader"><strong>' + purecookieHeader + '</strong></div><div class="cookieContent"><div class="cookieTitle"><span>' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div></div>';
+    document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
 	pureFadeIn("cookieConsentContainer");
   }
-});
+}
 
 function purecookieDismiss() {
   setCookie('purecookieDismiss','1',7);
   pureFadeOut("cookieConsentContainer");
+}
+
+$(cookieConsent);
+
 }
