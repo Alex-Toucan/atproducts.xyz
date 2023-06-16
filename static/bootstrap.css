@@ -199,11 +199,11 @@
 
 @media (max-width: 767.98px) {
 .hero-pynx {
-    height: 775px;
+    height: 775px !important;
 }
 }
 .hero-pynx {
-    background: url(/media/images/hero-codinghome.webp);
+    background: url(/media/images/hero-ehs.webp);
     height: 400px;
 }
 
