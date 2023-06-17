@@ -197,9 +197,9 @@
   background-repeat: no-repeat !important;   
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 449.98px) {
 .hero-pynx {
-    height: 775px !important;
+    height: 800px !important;
 }
 }
 .hero-pynx {
@@ -233,6 +233,9 @@
 } 
 
 @media (max-width:767.98px) {
+	.hero-pynx {
+    height: 775px !important;
+}
 	.hero-codinghome-backup {
 		height: 450px !important;
 	}
