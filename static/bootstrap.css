@@ -197,18 +197,15 @@
   background-repeat: no-repeat !important;   
 }
 
-@media (max-width: 449.98px) {
-.hero-pynx {
-    height: 800px !important;
-}
-}
 .hero-pynx {
     background: url(/media/images/hero-ehs.webp);
-	height: 400px;
 }
 .hero-web {
     background: url(/media/images/hero-web.webp);
-height: 525px;
+}
+
+.hero-pynx, .hero-web {
+	position: initial;
 }
 
 .hero-main {
@@ -237,12 +234,6 @@ height: 525px;
 } 
 
 @media (max-width:767.98px) {
-	.hero-web {
-		height: 850px !important;
-	}
-	.hero-pynx {
-    height: 775px !important;
-}
 	.hero-codinghome-backup {
 		height: 450px !important;
 	}
