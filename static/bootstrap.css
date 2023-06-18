@@ -5275,16 +5275,16 @@ textarea.form-control-lg {
   }
 }
 
+.permcard {
+	width: 100%;
+}
+
 @media (min-width: 424.98px) {
 	.permcard {
 	    margin-left: auto;
     margin-right: auto;
-    width: 18rem;
+    width: 18rem !important;
 }
-}
-
-.permcard {
-	width: 100%;
 }
 
 @media (max-width: 767.98px) {
