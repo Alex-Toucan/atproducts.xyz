@@ -208,6 +208,14 @@
 	position: initial;
 }
 
+.hero.hero-pynx, .hero.hero-web {
+	border-bottom: none !important;
+}
+
+.hero-pynx .hero-back, .hero-web .hero-back {
+		border-bottom: solid 1px #dee2e6;
+}
+
 .hero-main {
 	background: url('/media/images/hero.webp');
 	  height: 325px;
