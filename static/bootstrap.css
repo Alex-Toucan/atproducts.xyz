@@ -204,7 +204,12 @@
 }
 .hero-pynx {
     background: url(/media/images/hero-ehs.webp);
-    height: 400px;
+}
+.hero-web {
+    background: url(/media/images/hero-web.webp);
+}
+.hero-web, .hero-pynx {
+	 height: 400px;
 }
 
 .hero-main {
