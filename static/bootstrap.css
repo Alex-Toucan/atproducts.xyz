@@ -195,10 +195,6 @@
   background-position: center center !important;
   background-repeat: no-repeat !important;   
 }
-}
-
-
-
 
 .hero-back {
 		border-bottom: solid 1px #dee2e6;
@@ -207,6 +203,10 @@
 
 .hero-web {
     background: url('/media/images/hero-web.webp');
+}
+
+.hero-flash {
+    background: url('/media/images/hero-flash.webp');
 }
 
 .hero-main {
