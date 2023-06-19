@@ -220,11 +220,11 @@
 	background: url('/media/images/hero-ehs.webp');
 }
 
-.hero-script, .hero-script-backup {
+.hero-script {
 	background: url('/media/images/hero-script.webp');
 }
 
-.hero-noodle, .hero-noodle-backup {
+.hero-noodle {
 	background: url('/media/images/hero-noodle.webp');
 } 
 
