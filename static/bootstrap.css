@@ -198,14 +198,15 @@
 }
 
 
-.hero-web {
-    background: url('/media/images/hero-web.webp');
-}
 
 
 .hero-back {
 		border-bottom: solid 1px #dee2e6;
 		background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-web {
+    background: url('/media/images/hero-web.webp');
 }
 
 .hero-main {
