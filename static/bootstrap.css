@@ -244,6 +244,13 @@
 	}
 }
 
+@media (max-width:1439.98px) {
+	.hero-button-margin {
+  	margin-right: 2rem !important;
+  	margin-left: 2rem !important;
+	}
+}
+
 /* End first elements */
 
 *,
