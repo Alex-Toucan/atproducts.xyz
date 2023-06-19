@@ -197,11 +197,9 @@
 }
 }
 
-.hero-pynx {
-    background: url(/media/images/hero-ehs.webp);
-}
+
 .hero-web {
-    background: url(/media/images/hero-web.webp);
+    background: url('/media/images/hero-web.webp');
 }
 
 
@@ -214,11 +212,11 @@
 	background: url('/media/images/hero.webp');
 }
 
-.hero-codinghome, .hero-codinghome-backup {
+.hero-codinghome  {
 	background: url('/media/images/hero-codinghome.webp');
 }
 
-.hero-ehs, .hero-ehs-backup {
+.hero-ehs, .hero-pynx {
 	background: url('/media/images/hero-ehs.webp');
 }
 
