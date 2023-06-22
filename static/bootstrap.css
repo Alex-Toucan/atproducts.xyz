@@ -244,7 +244,7 @@
 }
 
 @media (max-width:1699.98px) {
-	.hero-button-margin:not(.hero-noodle-backup .hero-button-margin) {
+	.hero-button-margin {
   	margin-right: 2rem !important;
   	margin-left: 2rem !important;
 	}
