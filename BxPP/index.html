@@ -3,7 +3,6 @@
   <head>
     <title>BxPP</title>
     <link rel="stylesheet" href="/static/cookie.css">
-    <link rel="stylesheet" href="/static/navbutton.css">
     <link rel="stylesheet" href="/static/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
@@ -12,12 +11,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
     <link rel="manifest" href="/media/favicon/site.webmanifest">
+            <link rel="preload" as="style" href="/static/bootstrap.css">
+    <link rel="preload" as="image" href="/media/images/hero-ehs.webp">
     <meta charset="UTF-8">
     <meta name="title" content="BxPP">
     <meta name="description" content="BxPP programming language.">
     <meta name="keywords" content="BxPP, AT Products LLC">
     <meta name="author" content="PynxTech">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
     <div id="page">
@@ -93,7 +95,39 @@
     </div>
   </div>
 </nav>
-      </header>
+             </header>
+         <div id="intro" class="hero hero-ehs text-center">
+        <div class="hero-back h-100 p-2 position-relative">
+         <div class="w-100 align-items-center d-flex justify-content-center my-4 text-center">
+            <div class="text-white hero-filter">
+             <div class="h1">BxPP Programming Language</div>
+              <p class="fs-4 m-3">Made by <a href="https://pynxtech.pynxthegoat.repl.co/" class="m-0">Pynx Technologies</a>; a Python Programming Language.</p>
+              <div class="mx-auto justify-content-between" id="links">
+<div class="herorow-md hero-button-margin">
+  <a href="#downloads" class="btn btn-primary hero-col-md">Downloads</a>
+                <div class="mx-1 my-2"></div><a href="https://github.com/Discordmodsbers/BxPP/" class="btn btn-secondary hero-col-md">Source Code</a><div class="mx-1 my-2"></div>
+<div class="dropdown hero-col-md">
+  <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
+    Navigation
+  </button>
+  <ul class="dropdown-menu w-100">
+    <li><a class="dropdown-item" href="#general-info">General Information</a></li>
+       <li><a class="dropdown-item" href="#requirements">Requirements</a></li>
+         <li><a class="dropdown-item" href="#versions">Versions</a></li>
+           <li><a class="dropdown-item" href="#downloads">Downloads</a></li>
+  </ul>
+</div>
+  </div>
+</div><hr class="mx-mmd-4 opacity-75"><div class="d-md-flex mt-3 justify-content-between container" id="links">
+<div class="h2 me-md-auto text-starttocenter mb-0">Contact Us</div>
+           <br class="disbr">
+<div class="icon-bar fatoc">
+  <a href="https://www.instagram.com/fisted.mp3" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="link-hero ms-md-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram"><i class="bi bi-instagram"></i></a><a href="mailto:support@atproducts.xyz" aria-label="Our Support Email" target="_blank" rel="noopener noreferrer" class="link-hero ms-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Our Support Email"><i class="bi bi-envelope-fill"></i></a>  
+</div></div>
+</div>
+      </div>
+    </div>
+         </div>
             <main id="bxpp" class="a container lrpad"><div id="intro" class="calt">
       <div class="h1 title">BxPP Programming Language</div> 
               <div class="h3">Made by <a href="https://pynxtech.pynxthegoat.repl.co/" class="m-0">Pynx Technologies</a></div>
@@ -185,11 +219,11 @@ OR<br>
         </div>
       </div>
       <ul class="list-unstyled d-flex pe-3">
-        <li class="ms-3"><a class="link-dark" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope-fill"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
       </ul>
     </div>
   </div>
@@ -201,7 +235,6 @@ OR<br>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="/static/scroll.js"></script>
     <script src="/static/purecookie.js"></script>
-    <script src="/static/darkmode.js"></script>
     <script src="/static/enabler.js"></script>
   </body>
 </html>
