@@ -18153,6 +18153,7 @@ textarea.form-control-lg {
   .fatoc {
     text-align: center !important;
 }
+}
 
 .modal .btn {
   padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x) !important;
