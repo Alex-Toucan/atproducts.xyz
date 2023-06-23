@@ -18284,7 +18284,7 @@ textarea.form-control-lg {
     }
 
 .sw-link {
-	      color: white;
+	      color: white !important;
 }
 
     .sw-row {
@@ -18297,7 +18297,7 @@ textarea.form-control-lg {
     }
     
     .sw-link:hover {
-      color: wheat;
+      color: wheat !important;
     }
     
     .sw-row .sw-feature-box:first-child {
