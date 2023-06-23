@@ -18277,7 +18277,7 @@ textarea.form-control-lg {
 }
       
 
-    a.sw-feature-box, button.sw-feature-box {
+    div.sw-feature-box, a.sw-feature-box, button.sw-feature-box {
       background-color: grey;
       color: white;
       padding: 10px;
