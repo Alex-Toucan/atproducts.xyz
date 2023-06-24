@@ -18296,7 +18296,7 @@ textarea.form-control-lg {
       flex-wrap: wrap;
     }
     
-    .sw-link:hover {
+    .sw-link:hover, .sw-link:active, .sw-link:focus {
       color: wheat !important;
     }
     
