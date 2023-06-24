@@ -4781,8 +4781,8 @@ textarea.form-control-lg {
 .navbar-nav .dropdown-menu {
   position: static;
 }
-.navbar-expand-story .breadcrumb .dropdown-menu { /* Custom */
-	position: initial !important;
+.breadcrumb .dropdown-menu { /* Custom */
+	position: absolute !important;
 }
 .navbar-text {
   padding-top: 0.5rem;
