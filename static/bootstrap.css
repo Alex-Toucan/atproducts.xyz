@@ -4781,7 +4781,7 @@ textarea.form-control-lg {
 .navbar-nav .dropdown-menu {
   position: static;
 }
-.navbar-expand-story .dropdown-menu { /* Custom */
+.navbar-expand-story .breadcrumb .dropdown-menu { /* Custom */
 	position: initial !important;
 }
 .navbar-text {
