@@ -4781,7 +4781,9 @@ textarea.form-control-lg {
 .navbar-nav .dropdown-menu {
   position: static;
 }
-
+.navbar-expand-story .dropdown-menu { /* Custom */
+	position: initial;
+}
 .navbar-text {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
