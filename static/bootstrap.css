@@ -4782,7 +4782,7 @@ textarea.form-control-lg {
   position: static;
 }
 .navbar-expand-story .dropdown-menu { /* Custom */
-	position: initial;
+	position: initial !important;
 }
 .navbar-text {
   padding-top: 0.5rem;
