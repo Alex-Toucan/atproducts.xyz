@@ -4914,7 +4914,7 @@ textarea.form-control-lg {
 	}
 }
 
-@media (max-width: 894.98px) {
+@media (max-width: 900.98px) {
   .second-navbar {
     padding: 0;
   }
@@ -18474,9 +18474,6 @@ img.darkimg {
 }
 
 @media (min-width:767.98px) {
-  .d-nb {
-    display: none;
-	}
   .d-nb {
     display: block;
 	}
