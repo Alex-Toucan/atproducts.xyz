@@ -18583,7 +18583,7 @@ margin-top: 72px;
 	margin-top: 103px;
 }
 .story-top-scroll {
-        scroll-padding-top: 103px;
+        scroll-margin-top: 103px;
 }
 
 .border-fix {
@@ -18598,7 +18598,7 @@ margin-top: 72px;
 		margin-top: 72px;
 	}
 	.story-top-scroll {
-		scroll-padding-top: 72px;
+		scroll-margin-top: 72px;
 	}
 	.story-end {
 		display: none;
