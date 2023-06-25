@@ -18634,6 +18634,10 @@ margin-top: 72px;
 	}
 }
 
+.breadcrumb .dropdown-menu { /* Custom */
+	position: absolute !important;
+}
+
 /* End secondary code */
 
 /*# sourceMappingURL=bootstrap.css.map */
