@@ -195,49 +195,62 @@
   background-position: center center !important;
   background-repeat: no-repeat !important;   
 }
+
 .hero-back {
 		border-bottom: solid 1px #dee2e6;
 		background-color: rgba(0, 0, 0, 0.6);
 }
+
 .hero-web {
     background: url('/media/images/hero-web.webp');
 }
+
 .hero-flash {
     background: url('/media/images/hero-flash.webp');
 }
+
 .hero-main {
 	background: url('/media/images/hero.webp');
 }
+
 .hero-codinghome  {
 	background: url('/media/images/hero-codinghome.webp');
 }
+
 .hero-ehs {
 	background: url('/media/images/hero-ehs.webp');
 }
+
 .hero-script {
 	background: url('/media/images/hero-script.webp');
 }
+
 .hero-noodle {
 	background: url('/media/images/hero-noodle.webp');
 } 
+
 .hero-sms {
 	background: url('/media/images/hero-sms.webp');
 }
+
 .hero-mdickie {
 	background: url('/media/images/hero-mdickie.webp');
 } 
+
 @media (max-width:767.98px) {
 	.hero-button-margin {
   	margin-right: 3rem !important;
   	margin-left: 3rem !important;
 	}
 }
+
 @media (max-width:1199.98px) {
 	.hero-button-margin:not(.hero-noodle-backup .hero-button-margin) {
   	margin-right: 2.5rem !important;
   	margin-left: 2.5rem !important;
 	}
 }
+
 @media (max-width:1699.98px) {
 	.hero-button-margin {
   	margin-right: 2rem !important;
@@ -4776,7 +4789,9 @@ textarea.form-control-lg {
 .navbar-nav .dropdown-menu {
   position: static;
 }
-
+.breadcrumb .dropdown-menu { /* Custom */
+	position: absolute !important;
+}
 .navbar-text {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -4840,7 +4855,7 @@ textarea.form-control-lg {
     flex-direction: row !important;
   }
 
-@media (min-width: 901.98px) {
+@media (min-width: 900.98px) {
   .navbar-expand-story {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4899,7 +4914,7 @@ textarea.form-control-lg {
 	}
 }
 
-@media (max-width: 901.98px) {
+@media (max-width: 900.98px) {
   .second-navbar {
     padding: 0;
   }
@@ -5253,6 +5268,18 @@ textarea.form-control-lg {
     margin-right: auto;
     width: 18rem;
   }
+}
+
+.permcard {
+	width: 100%;
+}
+
+@media (min-width: 424.98px) {
+	.permcard {
+	    margin-left: auto;
+    margin-right: auto;
+    width: 18rem !important;
+}
 }
 
 @media (max-width: 767.98px) {
@@ -18135,7 +18162,7 @@ textarea.form-control-lg {
 @media (max-width: 767.98px) {
   .fatoc {
     text-align: center !important;
-  }
+}
 }
 
 .modal .btn {
@@ -18143,6 +18170,9 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 767.98px) {
+	.bd-toc {
+		margin-top: 0 !important;
+	}
   .fctoa {
     text-align: center !important;
   }
@@ -18257,27 +18287,29 @@ textarea.form-control-lg {
 }
       
 
-  .sw-feature-box {	
-      background-color: grey;	
-      padding: 10px;	
-			border: 1px solid black;	
-    }	
-.sw-link {	
-	      color: white !important;	
-}	
-    .sw-row {	
-      margin-top: 10px;	
-      margin-bottom: 10px;	
-      --bs-gutter-x: 1.5rem;	
-      --bs-gutter-y: 0;	
-      display: flex;	
-      flex-wrap: wrap;	
-    }	
-    	
-    .sw-link:hover, .sw-link:active, .sw-link:focus {	
-      color: wheat !important;	
+    .sw-feature-box {
+      background-color: grey;
+      padding: 10px;
+			border: 1px solid black;
     }
 
+.sw-link {
+	      color: white !important;
+}
+
+    .sw-row {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .sw-link:hover, .sw-link:active, .sw-link:focus {
+      color: wheat !important;
+    }
+    
     .sw-row .sw-feature-box:first-child {
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
@@ -18505,7 +18537,6 @@ img.darkimg {
 .bd-toc {
     position: -webkit-fixed;
     position: fixed;
-    top: calc(103px + .75rem);
     right: 0;
     z-index: 2;
     height: calc(100vh - 7rem);
@@ -18559,7 +18590,7 @@ margin-top: 72px;
 	    border-bottom: solid 1px #dee2e6;
 }
 
-@media (max-width: 901.98px) {
+@media (max-width: 900.98px) {
 	.text-disappear {
 		display: none !important;
 	}
@@ -18589,14 +18620,7 @@ margin-top: 72px;
 
 .story-scroll {
   display: contents;
-	overflow: initial;
-}
-
-.proper-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	overflow: initial !important;
 }
 
 .tab-link {
@@ -18632,10 +18656,6 @@ margin-top: 72px;
 	.products-4 img {
 		max-width: 125px;
 	}
-}
-
-.breadcrumb .dropdown-menu { /* Custom */
-	position: absolute !important;
 }
 
 /* End secondary code */
