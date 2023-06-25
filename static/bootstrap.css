@@ -18536,7 +18536,7 @@ img.darkimg {
 	}
 }
 
-@media (min-width: 894.98px) {
+@media (min-width: 901.98px) {
 .bd-toc {
     position: -webkit-fixed;
     position: fixed;
@@ -18551,7 +18551,7 @@ margin-top: 103px;
 }
 }
 
-@media (min-width: 767.98px) and (max-width: 894.98px) {
+@media (min-width: 767.98px) and (max-width: 901.98px) {
 .bd-toc {
     position: -webkit-fixed;
     position: fixed;
@@ -18586,7 +18586,7 @@ margin-top: 72px;
 	margin-top: 103px;
 }
 .story-top-scroll {
-        scroll-margin-top: 103px;
+        scroll-padding-top: 103px;
 }
 
 .border-fix {
@@ -18601,7 +18601,7 @@ margin-top: 72px;
 		margin-top: 72px;
 	}
 	.story-top-scroll {
-		scroll-margin-top: 72px;
+		scroll-padding-top: 72px;
 	}
 	.story-end {
 		display: none;
@@ -18623,7 +18623,7 @@ margin-top: 72px;
 
 .story-scroll {
   display: contents;
-	overflow: initial;
+	overflow: initial !important;
 }
 
 .tab-link {
