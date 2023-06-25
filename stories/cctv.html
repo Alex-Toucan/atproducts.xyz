@@ -15,7 +15,7 @@
         <link rel="manifest" href="/media/favicon/site.webmanifest">
         <script src="/static/darkmode.js"></script>
   </head>
-<body tabindex="0" data-bs-smooth-scroll="true" data-bs-target="#cctvlist" data-bs-spy="scroll" class="story-scroll">
+<body>
   <div id="page">
     <header class="fixed-top">
      <nav class="first-navbar navbar navbar-expand-story bg-dark navbar-dark pb-0">
@@ -92,7 +92,7 @@
   </div>
 </nav>
     <nav class="pb-2 navbar navbar-expand-story bg-dark navbar-dark pt-0 border-fix second-navbar"><div class="container-fluid">
-      <div class="navbar-collapse collapse" id="collapsibleNavbar" style="">
+      <div class="navbar-collapse collapse" id="collapsibleNavbar">
         <hr class="permhr m-story-2 m-story-0">
   <ol class="navbar-nav breadcrumb m-0 pb-story-2">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -110,7 +110,7 @@
       </div>
 </nav>
       </header>
-    <main>
+    <main id="cctv">
         <div class="bd-toc col-4b p-1 story-top">
     <div id="cctvlist" class="list-group">
       <a class="list-group-item list-group-item-action active" href="#prenote">Prenote</a>
@@ -123,13 +123,13 @@
             <a class="list-group-item list-group-item-action" href="#s7">Step 7</a>
       <a class="list-group-item list-group-item-action" href="#s8">Step 8</a>
             </div></div>
-        <div class="col-8b p-1 story-top-body">
+        <div class="col-8b p-1 story-top-body story-scroll" tabindex="0" data-bs-smooth-scroll="true" data-bs-target="#cctvlist" data-bs-spy="scroll">
 <div id="intro" class="story-top-scroll">
     <div class="h1">CCTV Interception</div>
     <div class="h5">By the <a href="/noodle">Noodle Hackerspace</a>.</div>
     <hr>
             </div>
-<div id="prenote" class="story-top-scroll">
+<div id="prenote">
   <div class="h2">Prenote</div>
 <div class="h3">Needed Items</div><p>A computer with <a href="https://www.Wireshark.org/">Wireshark</a> and <a href="https://www.aircrack-ng.org/">AirCrack</a>, wifi adapter that supports monitoring and some time.</p>
 <div class="h3">Keywords</div><p><code>{ }</code> means commands for terminal. <code>( )</code> Means general stuff.</p>
