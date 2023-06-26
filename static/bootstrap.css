@@ -18480,9 +18480,6 @@ img.darkimg {
   .d-nba {
     display: none;
   }
-		.story-scroll {
-		height:  flex: 1 1 auto;
-	}	
 	.bd-toc {
 		margin-top: initial;
 	}
@@ -18606,6 +18603,14 @@ margin-top: 72px;
 }
 
 @media (max-width:767.98px) {
+			.story-scroll {
+		height:  flex: 1 1 auto;
+	}	
+	.story-row {
+		  display: flex;
+  flex-flow: column;
+  height: 100%;
+	}
   .back-to-top {
     bottom: 60px !important;
   }
