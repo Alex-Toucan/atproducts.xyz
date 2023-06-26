@@ -18481,7 +18481,7 @@ img.darkimg {
     display: none;
   }
 		.story-scroll {
-		height: 350px;
+		height:  flex: 1 1 auto;
 	}	
 	.bd-toc {
 		margin-top: initial;
@@ -18616,11 +18616,6 @@ margin-top: 72px;
 
 .tab-pane {
 	height: 100%;
-}
-
-.story-scroll {
-  display: contents;
-	overflow: initial !important;
 }
 
 .tab-link {
