@@ -18602,11 +18602,14 @@ margin-top: 72px;
 	}
 }
 
-@media (max-width:767.98px) {
-			.story-scroll {
+@media (max-width:767.98px) and (max-height: 719.98px) {
+				.story-scroll {
 height: calc(100vh - 448px);
 				
 	}
+}
+
+@media (max-width:767.98px) {
   .back-to-top {
     bottom: 60px !important;
   }
