@@ -167,14 +167,14 @@ You'll need to plug in your Wi-Fi adapter, I prefer the "Alfa AWUSO36NHA". You'l
 To put your card into wireless monitor mode, identify the name of your card by running <code>ifconfig</code> in a terminal window. It should be named something like <code>wlan0</code> or <code>wlan0mon</code>.<br><br>
 Once you've found the name of your wireless card, we'll need to put it into monitor mode. Run the following command in a terminal window, with the name of your card substituted for <code>wlan0</code>.
 <br><br>
-<code>{airmon-ng start wlan0<br>
-  airodump-ng start wlan0mon}
+<code>airmon-ng start wlan0<br>
+  airodump-ng start wlan0mon
 </code><br><br>
 This will put your card in wireless monitor more, changing the name of the card to add "mon" at the end. It will also start Airodump-ng, which will start scanning for nearby wireless networks. 
 <br><br>
 Look for the Wi-Fi network that you're looking to sniff, and note the channel that it's on. We'll need to switch our card to that channel to intercept the images in Wireshark. The following is a sample output. <b>Some of the output has been converted to a table. It is still a part of the console output.</b>
 <code><br><br>
-{{<br><br>
+<br><br>
 CH&nbsp;&nbsp;4 ][ Elapsed: 0 s ][ 2018-12-24 02:42<br>
 </code></p><pre> <table class="table">
 <thead>
@@ -328,10 +328,10 @@ CH&nbsp;&nbsp;4 ][ Elapsed: 0 s ][ 2018-12-24 02:42<br>
 <code>
 root@kali:~/Desktop#
 <br>
-}}<br><br>
+<br><br>
 </code>
 If our target is on channel 11, we'll run the following command to set our card to channel 11.<br><br> 
-<code>(airmon-ng start wlan0mon 11)</code></p>
+<code>airmon-ng start wlan0mon 11</code></p>
         </div>
 <div id="s3" class="story-top-scroll">
 <div class="h2">Step 3</div>
@@ -348,7 +348,7 @@ Once the WEP and WPA decryption key menu is open, click on the field to the left
 <br><br>
 For the decryption to work, you must add the key by clicking on the plus <code>(+)</code> icon, and then enter the key in the format <code>(password:networkname)</code> to add to the list.
 <br><br>
-Click "OK" to save the key, and now we should be able to decrypt traffic from his network -- if we can grab a four-way Wi-Fi handshake.</p>
+Click "OK" to save the key, and now we should be able to decrypt traffic from his network, if we can grab a four-way Wi-Fi handshake.</p>
       </div>
 <div id="s5" class="story-top-scroll">
   <div class="h2">Step 5</div>
