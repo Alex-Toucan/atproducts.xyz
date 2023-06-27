@@ -14,4 +14,4 @@ AT Products LLC, otherwise known as AT Products, is a informative technology com
 The "AT" in AT Products does stand for Alex Toucan.
 <hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#ours">View more information</a>.
-<h6>Last Recorded Version: 2.15-alpha3</h6>
+<h6>Last Recorded Version: 2.15-beta1</h6>
