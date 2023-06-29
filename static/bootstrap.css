@@ -1103,14 +1103,6 @@ progress {
 	flex: 1 0 0%;
 }
 
-@media (min-width: 767.98px) {
-	.col-media {
-		flex: 0 0 0%;
-		margin-left: 0.5rem;
-    margin-right: 0.5rem;
-	}
-}
-
 @media (max-width: 645.98px) {
 	.hero-col {
 		flex: 0 0 0%;
@@ -1120,6 +1112,11 @@ progress {
 
 
 @media (max-width: 767.98px) {
+		.col-media {
+		flex: 0 0 0%;
+		margin-left: 0.5rem;
+    margin-right: 0.5rem;
+	}
 	.hero-col-md {
 		flex: 0 0 0%;
 		width: 100%;
