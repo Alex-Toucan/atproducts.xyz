@@ -3,18 +3,20 @@
   <head>
     <title>Paid Services</title> 
     <link rel="stylesheet" href="/static/cookie.css">
-    <link rel="stylesheet" href="/static/navbutton.css">
     <link rel="stylesheet" href="/static/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
     <link rel="manifest" href="/media/favicon/site.webmanifest">
+        <link rel="preload" as="style" href="/static/bootstrap.css">
+    <link rel="preload" as="image" href="/media/images/hero-web.webp">
     <meta name="title" content="Paid Services - AT Products LLC">
     <meta name="description" content="Get stuff done with AT Products!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
       <div id="page">
@@ -91,23 +93,37 @@
   </div>
 </nav>
     </header>
-  <main id="paid" class="calt container lrpad">
-    <div class="h1 title"> Paid Services </div>
+   <div id="intro" class="hero hero-web text-center">
+        <div class="hero-back h-100 p-2 position-relative">
+         <div class="w-100 align-items-center d-flex justify-content-center my-4 text-center">
+            <div class="text-white hero-filter">
+        <div class="h1">Paid Services</div>
+              <p class="fs-4 m-3">Get stuff done with AT Products LLC; our digital services will help you create your own services! </p>
+              <div class="mx-auto justify-content-between container" id="links">
+<div class="herorow-md hero-button-margin">
+  <a href="/paidterms" class="btn btn-secondary hero-col-md">Paid Services & Website Creation Policies and Terms</a>
+  </div>
+</div>
+          
+      </div>
+    </div>
+      </div></div>
+       <main id="paid" class="mt-3 c container">
     <div class="price-row row-cols-1">
-      <div class="col-md-6 padright">
-        <div class="card mb-4 mb-md-2 rounded-3 shadow-sm">
+      <div class="col-md padright mb-4 mb-md-2">
+        <div class="card h-md-100 rounded-3 shadow-sm">
           <div class="card-header py-3">
             <div class="h4 my-0 fw-normal">Website Design</div>
           </div>
           <div class="card-body">
             <div class="h1 card-title pricing-card-title">$20-250</div>
             <p class="list-unstyled mt-3 mb-4">Your website can have HTML5 & CSS3, Bootstrap v5, responsive layout, and will be compatible with all browsers!</p>
-            <a type="button" class="w-100 btn btn-lg btn-primary" href="mailto:support@atproducts.xyz">Contact us</a>
+            <a type="button" class="tab-link w-100 btn btn-lg btn-primary" href="mailto:support@atproducts.xyz">Contact us</a>
           </div>
         </div>
       </div>
-      <div class="col-md-6 padleft">
-        <div class="card mb-4 mb-md-2 rounded-3 shadow-sm">
+      <div class="col-md padleft  mb-4 mb-md-2">
+        <div class="card h-md-100  rounded-3 shadow-sm">
           <div class="card-header py-3">
             <div class="h4 my-0 fw-normal">Website Maintaining</div>
           </div>
@@ -115,24 +131,24 @@
             <div class="h1 card-title pricing-card-title">$1-75<small class="text-muted fw-light">/week or month</small></div>
             <p class="mt-2 text-muted fw-light fs-5"><b>$1-50/week or month</b> with the &quot;Website Design&quot; package.</p>
             <p class="list-unstyled mt-3 mb-4">Keep your website up with our services!</p>
-            <a type="button" class="w-100 btn btn-lg btn-primary" href="mailto:support@atproducts.xyz">Contact us</a>
+            <a type="button" class="tab-link w-100 btn btn-lg btn-primary" href="mailto:support@atproducts.xyz">Contact us</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="card mb-3 shadow-sm custom-lrpad">
+    <div class="card mb-3 shadow-sm">
       <div class="">
           <div class="justrow">
             <div class="col-4 custom-card-header">
                 <div class="m-1 h4 fw-normal c">Donation Box</div><hr class="custom-hr">
-<p class="mt-1 vertical-align">If you like to donate without buying our packages, you can do so here!</p>
+<p class="mb-0 mt-1 vertical-align">If you would like to donate without buying our packages, you can do so here!</p>
             </div>
-            <div class="col-8 p-1 pt-2 opt-4 mb-0 c">
-            <p><b>CashApp:</b> $ATProducts</p>
+            <div class="col-8 p-1 py-2 mb-0 c">
+            <p class="mb-0"><b>CashApp:</b> $ATProducts</p>
           </div>
         </div>
     </div></div>
-    <p> We only accept CashApp. Contact <a href="mailto:support@atproducts.xyz">our support line</a>, and we can figure something out. </p>
+    <p> We only accept CashApp. Contact <a href="mailto:support@atproducts.xyz">our support line</a>, and we can figure something out. <a href="/paidterms">Terms may apply.</a></p>
 </main>
 <footer>
   <hr>
@@ -194,11 +210,11 @@
         </div>
       </div>
       <ul class="list-unstyled d-flex pe-3">
-        <li class="ms-3"><a class="link-dark" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope"></i></a></li>
-        <li class="ms-3"><a class="link-dark" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope-fill"></i></a></li>
+        <li class="ms-3"><a class="link-footer" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
       </ul>
     </div>
   </div>
@@ -207,10 +223,9 @@
     <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
 </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="/static/scroll.js"></script>
     <script src="/static/purecookie.js"></script>
-    <script src="/static/darkmode.js"></script>
     <script src="/static/enabler.js"></script>
     </body>
     </html>
