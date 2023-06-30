@@ -18637,13 +18637,13 @@ height: calc(100vh - 448px);
 	position: sticky;
     top: 100%;
 }
-
-.products-2 img, .products-3 img, .products-4 img {
+.products-3 img, .products-4 img {
 	width: 25%;
 }
 
 .products-2 img {
   max-width: 150px;
+	width: 40%
 }
 
 .products-3 img {
@@ -18656,7 +18656,7 @@ height: calc(100vh - 448px);
 
 @media (max-width:767.98px) {
 	.products-2 img {
-		width: 33.33%;
+		width: 50%;
 		max-width: 200px;
 	}
 	.products-3 img {
