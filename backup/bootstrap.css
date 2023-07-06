@@ -9921,7 +9921,7 @@ textarea.form-control-lg {
   text-transform: capitalize !important;
 }
 
-.text-wrap {
+.text-wrap, .text-wrap .dropdown-item {
   white-space: normal !important;
 }
 
