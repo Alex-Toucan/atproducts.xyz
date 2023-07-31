@@ -6408,8 +6408,8 @@ textarea.form-control-lg {
   outline: 0;
 }
 
-.modal, .modal-open {
-  padding: 0 !important;
+.modal, .modal-open, .modal-open .navbar {
+  padding-right: 0 !important;
 }
 
 .modal-dialog {
