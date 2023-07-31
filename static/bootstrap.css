@@ -1005,7 +1005,7 @@ progress {
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-	margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-.5 * var(--bs-gutter-x));
   margin-left: calc(-.5 * var(--bs-gutter-x));
 }
@@ -1015,45 +1015,6 @@ progress {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-}
-
-.justrow {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.otherrow {
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-	margin-top: calc(-1 * var(--bs-gutter-y));
-}
-
-@media (min-width:767.98px) {
-  .prorow {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-    margin-top: var(--bs-gutter-y);
-  }
-}
-
-@media (min-width:700px) {
-  .fontrow {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1*var(--bs-gutter-y));
-    margin-right: calc(-.5*var(--bs-gutter-x));
-    margin-left: calc(-.5*var(--bs-gutter-x));
-  }
 }
 
 /* End custom row settings */
@@ -17207,10 +17168,6 @@ textarea.form-control-lg {
   .plrl {
 		padding-left: 5%;
   }
-}
-
-.calt:not(.modal), .fontrow, a.back-to-top, .btn {
-  text-align: center;
 }
 
 #404 {
