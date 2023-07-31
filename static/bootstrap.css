@@ -1099,7 +1099,7 @@ progress {
 
 /* Custom "col" settings */
 
-.hero-col, .hero-col-md, .col-media {
+.hero-col, .hero-col-md {
 	flex: 1 0 0%;
 }
 
@@ -1108,30 +1108,13 @@ progress {
 		flex: 0 0 0%;
 		width: 100%;
 	}
-			.col-media {
-		flex: 0 0 0%;
-		margin-left: 0.5rem;
-    margin-right: 0.5rem;
-	}
 }
 
 
 @media (max-width: 767.98px) {
-		.col-media {
-		flex: 0 0 0%;
-		margin-left: 0.25rem;
-    margin-right: 0.25rem;
-	}
 	.hero-col-md {
 		flex: 0 0 0%;
 		width: 100%;
-	}
-}
-
-@media (max-width: 425px) {
-	.col-media {
-		flex: 0 0 auto;
-		width: 25%;
 	}
 }
 
@@ -1198,69 +1181,6 @@ progress {
 .col-12 {
   flex: 0 0 auto;
   width: 100%;
-}
-
-@media (max-width:767.98px) {
-   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-     width: 100%;
-   }
-}
-
-@media (min-width:767.98px) {
-   .col-1b {
-    flex: 0 0 auto;
-    width: 8.33333333%;
-   }
-   .col-2b {
-    flex: 0 0 auto;
-    width: 16.66666667%;
-   }
-   .col-3b {
-    flex: 0 0 auto;
-    width: 25%;
-   }
-   .col-4b {
-    flex: 0 0 auto;
-    width: 33.33333333%;
-   }
-   .col-5b {
-    flex: 0 0 auto;
-    width: 41.66666667%;
-   }
-   .col-6b {
-    flex: 0 0 auto;
-    width: 50%;
-   }
-   .col-7b {
-    flex: 0 0 auto;
-    width: 58.33333333%;
-   }
-   .col-8b {
-    flex: 0 0 auto;
-    width: 66.66666667%;
-   }
-   .col-9b {
-    flex: 0 0 auto;
-    width: 75%;
-   }
-   .col-10b {
-    flex: 0 0 auto;
-    width: 83.33333333%;
-   }
-   .col-11b {
-    flex: 0 0 auto;
-    width: 91.66666667%;
-   }
-   .col-12b {
-    flex: 0 0 auto;
-    width: 100%;
-   }
-}
-   
-@media (max-width:767.98px) {
-   .col-1b, .col-2b, .col-3b, .col-4b, .col-5b, .col-6b, .col-7b, .col-8b, .col-9b, .col-10b, .col-11b, .col-12b {
-      width: 100% !important;
-   }
 }
 
 @media (min-width: 700px) {
@@ -9126,56 +9046,6 @@ textarea.form-control-lg {
   margin-bottom: auto !important;
 }
 
-/* Custom "mt" settings */
-
-@media (max-width:767.98px) {
-   .fmt-0, .fmt-1, .fmt-2, .fmt-3, .fmt-4, .fmt-5 {
-      width: 100%;
-      padding-right: 0!important;
-      padding-left: 0!important;
-      margin-right: 0!important;
-      margin-left: 0!important;
-      margin-top: 0!important;
-      padding-top: 10px;
-   }
-}
-
-@media (min-width: 767.98px) {
-  .fmt-0 {
-    margin-top: 0 !important;
-  }
-
-  .fmt-1 {
-    margin-top: 0.25rem !important;
-  }
-
-  .fmt-2 {
-    margin-top: 0.5rem !important;
-  }
-
-  .fmt-3 {
-    margin-top: 1rem !important;
-  }
-
-  .fmt-4 {
-    margin-top: 1.5rem !important;
-  }
-
-  .fmt-5 {
-    margin-top: 3rem !important;
-  }
-
-  .fmt-auto {
-    margin-top: auto !important;
-  }
-}
-
-.mt-0 {
-  margin-top: 0 !important;
-}
-
-/* End custom "mt" settings */
-
 .mt-0 {
   margin-top: 0 !important;
 }
@@ -9342,117 +9212,6 @@ textarea.form-control-lg {
   padding-left: 3rem !important;
 }
 
-/* Custom padding percentage settings */
-
-@media (min-width:767.98px) {
-  .pcp-1 {
-    padding-left: 8.33333333%;
-    padding-right: 8.33333333%;
-  }
-
-  .pcp-2 {
-    padding-left: 16.66666667%;
-    padding-right: 16.66666667%;
-  }
-
-  .pcp-3 {
-    padding-left: 25%;
-    padding-right: 25%;
-  }
-
-  .pcp-4 {
-    padding-left: 33.33333333%;
-    padding-right: 33.33333333%;
-  }
-
-  .pcp-5 {
-    padding-left: 41.66666667%;
-    padding-right: 41.66666667%;
-  }
-
-  .pcp-6 {
-    padding-left: 50%;
-    padding-right: 50%;
-  }
-
-  .pcp-7 {
-    padding-left: 58.33333333%;
-    padding-right: 58.33333333%;
-  }
-
-  .pcp-8 {
-    padding-left: 66.66666667%;
-    padding-right: 66.66666667%;
-  }
-
-  .pcp-9 {
-    padding-left: 75%;
-    padding-right: 75%;
-  }
-
-  .pcp-10 {
-    padding-left: 83.33333333%;
-    padding-right: 83.33333333%;
-  }
-
-  .pcp-11 {
-    padding-left: 91.66666667%;
-    padding-right: 91.66666667%;
-  }
-
-  .pcp-12 {
-    padding-left: 100%;
-    padding-right: 100%;
-  }
-}
-
-/* End custom padding percentage settings */
-
-/* Custom "py" settings */
-
-@media (max-width:767.98px) {
-   .fpy-0, .fpy-1, .fpy-2, .fpy-3, .fpy-4, .fpy-5 {
-      width: 100%;
-      padding-right: 0!important;
-      padding-left: 0!important;
-      margin-right: 0!important;
-      margin-left: 0!important;
-      padding-top: 10px;
-   }
-}
-
-@media (min-width:767.98px) {
-  .fpy-0 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  .fpy-1 {
-    padding-top: 0.25rem !important;
-    padding-bottom: 0.25rem !important;
-  }
-
-  .fpy-2 {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
-
-  .fpy-3 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-  }
-
-  .fpy-4 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-
-  .fpy-5 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
-}
-
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -9483,73 +9242,6 @@ textarea.form-control-lg {
   padding-bottom: 3rem !important;
 }
 
-/* End custom "py" settings */
-
-/* Custom "pt" settings */
-
-@media (max-width:767.98px) {
-   .fpt-0, .fpt-1, .fpt-2, .fpt-3, .fpt-4, .fpt-5 {
-      width: 100%;
-      padding-right: 0!important;
-      padding-left: 0!important;
-      margin-right: 0!important;
-      margin-left: 0!important;
-      padding-top: 10px;
-   }
-}
-
-@media (max-width:767.98px) {
-  .opt-0 {
-    padding-top: 0 !important;
-  }
-
-  .opt-1 {
-    padding-top: 0.25rem !important;
-  }
-
-  .opt-2 {
-    padding-top: 0.5rem !important;
-  }
-
-  .opt-3 {
-    padding-top: 1rem !important;
-  }
-  
-  .opt-4 {
-    padding-top: 1.5rem !important;
-  }
-
-  .opt-5 {
-    padding-top: 3rem !important;
-  }
-}
-
-@media (min-width:767.98px) {
-  .fpt-0 {
-    padding-top: 0 !important;
-  }
-
-  .fpt-1 {
-    padding-top: 0.25rem !important;
-  }
-
-  .fpt-2 {
-    padding-top: 0.5rem !important;
-  }
-
-  .fpt-3 {
-    padding-top: 1rem !important;
-  }
-  
-  .fpt-4 {
-    padding-top: 1.5rem !important;
-  }
-
-  .fpt-5 {
-    padding-top: 3rem !important;
-  }
-}
-
 .pt-0 {
   padding-top: 0 !important;
 }
@@ -9573,8 +9265,6 @@ textarea.form-control-lg {
 .pt-5 {
   padding-top: 3rem !important;
 }
-
-/* End custom "pt" settings */
 
 .pe-0 {
   padding-right: 0 !important;
@@ -9623,36 +9313,6 @@ textarea.form-control-lg {
 .pb-5 {
   padding-bottom: 3rem !important;
 }
-
-/* Custom "ps" settings */
-
-@media (min-width:767.98px) {
-  .ops-0 {
-    padding-left: 0 !important;
-  }
-
-  .ops-1 {
-    padding-left: 0.25rem !important;
-  }
-
-  .ops-2 {
-    padding-left: 0.5rem !important;
-  }
-
-  .ops-3 {
-    padding-left: 1rem !important;
-  }
-
-  .ops-4 {
-    padding-left: 1.5rem !important;
-  }
-
-  .ops-5 {
-    padding-left: 3rem !important;
-   }
-}
-
-/* End custom "ps" settings */
 
 .ps-0 {
   padding-left: 0 !important;
