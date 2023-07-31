@@ -17392,12 +17392,6 @@ img.darkimg {
 }
 
 @media (min-width:767.98px) {
-  .d-nb {
-    display: block;
-	}
-  .d-nba {
-    display: none;
-  }
 	.bd-toc {
 		margin-top: initial;
 	}
