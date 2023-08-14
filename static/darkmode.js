@@ -27,6 +27,14 @@
 
   setTheme(getPreferredTheme());
 
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    const storedTheme = getStoredTheme();
+    if (storedTheme !== 'light' && storedTheme !== 'dark') {
+      setTheme(getPreferredTheme());
+    };
+  });
+
+
   window.addEventListener('load', function darkmode (){
     document.querySelectorAll('[data-bs-theme-value]')
       .forEach(toggle => {
