@@ -29,14 +29,15 @@
 
   const showActiveTheme = (theme, focus = false) => {
     const themeSwitcher = document.querySelector('#bd-theme')
-
-    if (!themeSwitcher) {
-      return
-    }
-
     const themeSwitcherText = document.querySelector('#bd-theme-text')
     const activeThemeIcon = document.querySelector('.theme-icon-active i')
     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+
+    // Check if the themeSwitcher element exists
+    if (!themeSwitcher || !themeSwitcherText || !activeThemeIcon || !btnToActive) {
+      return
+    }
+
     const svgOfActiveBtn = btnToActive.querySelector('i').getAttribute('class')
 
     for (const element of document.querySelectorAll('[data-bs-theme-value]')) {
@@ -56,7 +57,7 @@
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (storedTheme !== 'light' || storedTheme !== 'dark') {
+    if (storedTheme !== 'light' && storedTheme !== 'dark') { // Use "&&" instead of "||"
       setTheme(getPreferredTheme())
     }
   })
@@ -73,4 +74,4 @@
       })
     }
   })
-})()
+})();
