@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="/media/favicon/iconembed.png">
     <script>
-      /*!
+/*!
  * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under the Creative Commons Attribution 3.0 Unported License.
@@ -30,11 +30,9 @@
 (() => {
   'use strict'
 
-  const getStoredTheme = () => localStorage.getItem('theme')
-  const setStoredTheme = theme => localStorage.setItem('theme', theme)
+  const storedTheme = localStorage.getItem('theme')
 
   const getPreferredTheme = () => {
-    const storedTheme = getStoredTheme()
     if (storedTheme) {
       return storedTheme
     }
@@ -42,7 +40,7 @@
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
 
-  const setTheme = theme => {
+  const setTheme = function (theme) {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute('data-bs-theme', 'dark')
     } else {
@@ -60,18 +58,18 @@
     }
 
     const themeSwitcherText = document.querySelector('#bd-theme-text')
-    const activeThemeIcon = document.querySelector('.theme-icon-active use')
+    const activeThemeIcon = document.querySelector('.theme-icon-active i')
     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-    const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
+    const svgOfActiveBtn = btnToActive.querySelector('i').getAttribute('class')
 
-    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+    for (const element of document.querySelectorAll('[data-bs-theme-value]')) {
       element.classList.remove('active')
       element.setAttribute('aria-pressed', 'false')
-    })
+    }
 
     btnToActive.classList.add('active')
     btnToActive.setAttribute('aria-pressed', 'true')
-    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+    activeThemeIcon.setAttribute('class', svgOfActiveBtn)
     const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
     themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
 
@@ -81,8 +79,7 @@
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    const storedTheme = getStoredTheme()
-    if (storedTheme !== 'light' && storedTheme !== 'dark') {
+    if (storedTheme !== 'light' || storedTheme !== 'dark') {
       setTheme(getPreferredTheme())
     }
   })
@@ -90,15 +87,14 @@
   window.addEventListener('DOMContentLoaded', () => {
     showActiveTheme(getPreferredTheme())
 
-    document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          setStoredTheme(theme)
-          setTheme(theme)
-          showActiveTheme(theme, true)
-        })
+    for (const toggle of document.querySelectorAll('[data-bs-theme-value]')) {
+      toggle.addEventListener('click', () => {
+        const theme = toggle.getAttribute('data-bs-theme-value')
+        localStorage.setItem('theme', theme)
+        setTheme(theme)
+        showActiveTheme(theme, true)
       })
+    }
   })
 })()
     </script>
@@ -108,6 +104,9 @@
     height: 1em;
     vertical-align: -0.125em;
     fill: currentcolor;
+}
+      .dropdown-menu li+li {
+    margin-top: 0.125rem;
 }
     </style>
   </head>
@@ -155,35 +154,37 @@
         </ul>
         <hr class="m-2 permhr">
         <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (dark)">
-              <svg class="bi my-1 theme-icon-active"><use href="bootstrap-icons.svg#moon-stars-fill"></use></svg>
-              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+<li class="nav-item dropdown">
+        <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+          <span class="theme-icon-active">
+            <i class="my-1"></i>
+          </span>
+          <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-specific" aria-labelledby="bd-theme-text">
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="false">
+              <i class="bi bi-sun-fill fa-sun me-2"></i>
+              Light
+              <i class="bi bi-check2 ms-auto d-none"></i>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="bootstrap-icons.svg#sun-fill"></use></svg>
-                  Light
-                  <svg class="bi ms-auto d-none"><use href="bootstrap-icons.svg#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="bootstrap-icons.svg#moon-stars-fill"></use></svg>
-                  Dark
-                  <svg class="bi ms-auto d-none"><use href="bootstrap-icons.svg#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="bootstrap-icons.svg#circle-half"></use></svg>
-                  Auto
-                  <svg class="bi ms-auto d-none"><use href="bootstrap-icons.svg#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
           </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+              <i class="bi bi-moon-stars-fill me-2"></i>
+              Dark
+              <i class="bi bi-check2 ms-auto d-none"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+              <i class="bi bi-circle-half me-2"></i>
+              Auto
+              <i class="bi bi-check2 ms-auto d-none"></i>
+            </button>
+          </li>
+        </ul>
+      </li>
       </ul>
     </div>
   </div>
