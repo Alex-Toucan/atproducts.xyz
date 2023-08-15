@@ -11800,7 +11800,7 @@ textarea.form-control-lg {
     text-align: center !important;
   }
 }
-@media (min-width: 781.98px) {
+@media (max-width: 781.98px) {
   .w-custom-25 {	
     width: 25%;	
   }	
