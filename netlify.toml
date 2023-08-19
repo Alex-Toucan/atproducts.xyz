@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/"
+  from = "/*"
   to = "https://backup.atproducts.xyz/maintenance"
   status = 301
   force = true
