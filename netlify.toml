@@ -40,4 +40,4 @@
       encrypted-media=(self), 
       interest-cohort=(), 
       user-id=()'''
-    Referrer-Policy: same-origin
+    Referrer-Policy = "same-origin"
