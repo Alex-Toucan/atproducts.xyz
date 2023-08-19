@@ -28,7 +28,7 @@
       img-src 'self' data: https://*.cloudfront.net; f
       rame-ancestors 'self'
     Features-Policy = "document-domain 'self';"
-    Permissions-Policy: '''
+    Permissions-Policy = '''
       fullscreen=(self), 
       geolocation=(), 
       camera=(), 
