@@ -27,7 +27,7 @@
       script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://*.cloudfront.net; 
       style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://*.cloudfront.net 'unsafe-inline'; 
       img-src 'self' data: https://*.cloudfront.net;
-      frame-ancestors 'self'''
+      frame-ancestors 'self' '''
     Features-Policy = "document-domain 'self';"
     Permissions-Policy = '''
       fullscreen=(self), 
