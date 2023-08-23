@@ -27,8 +27,8 @@
         if (prefersReducedMotion) {
             $('html, body').scrollTop(0);
         } else {
-            // Otherwise, scroll smoothly with the specified animation
-            $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+            // Otherwise, scroll smoothly with linear easing
+            $('html, body').animate({scrollTop: 0}, 1500, 'linear');
         }
         return false;
     });
