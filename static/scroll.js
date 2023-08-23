@@ -1,14 +1,35 @@
 (function ($) {
     "use strict";
+    
+    // Check if the user prefers reduced motion
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
+        // If user prefers reduced motion, instantly show or hide the button
+        if (prefersReducedMotion) {
+            if ($(this).scrollTop() > 100) {
+                $('.back-to-top').show();
+            } else {
+                $('.back-to-top').hide();
+            }
         } else {
-            $('.back-to-top').fadeOut('slow');
+            // Otherwise, fade in/out the button as before
+            if ($(this).scrollTop() > 100) {
+                $('.back-to-top').fadeIn('slow');
+            } else {
+                $('.back-to-top').fadeOut('slow');
+            }
         }
     });
+    
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        // If user prefers reduced motion, scroll instantly without animation
+        if (prefersReducedMotion) {
+            $('html, body').scrollTop(0);
+        } else {
+            // Otherwise, scroll smoothly with the specified animation
+            $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        }
         return false;
     });
 
