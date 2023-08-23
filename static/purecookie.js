@@ -5,39 +5,53 @@ var purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener n
 var purecookieButton = "Understood"; // Button text
 // ---        --- //
 
-
-function pureFadeIn(elem, display){
+function pureFadeIn(elem, display) {
   var el = document.getElementById(elem);
-  el.style.opacity = 0;
+  el.style.opacity = 1; // Start with full opacity
+  
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // If user prefers reduced motion, set opacity to 1 and display element immediately
+    el.style.opacity = 1;
+    el.style.display = display || "block";
+    return;
+  }
+
   el.style.display = display || "block";
 
   (function fade() {
     var val = parseFloat(el.style.opacity);
-    if (!((val += .02) > 1)) {
+    if (!((val += 0.02) > 1)) {
       el.style.opacity = val;
       requestAnimationFrame(fade);
     }
   })();
-};
-	
-function pureFadeOut(elem){
+}
+
+function pureFadeOut(elem) {
   var el = document.getElementById(elem);
   el.style.opacity = 1;
 
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // If user prefers reduced motion, hide the element immediately
+    el.style.display = "none";
+    return;
+  }
+
   (function fade() {
-    if ((el.style.opacity -= .02) < 0) {
+    if ((el.style.opacity -= 0.02) < 0) {
       el.style.display = "none";
     } else {
       requestAnimationFrame(fade);
     }
-      setTimeout(() => {
+
+    setTimeout(() => {
       var theelement = document.querySelector('#cookieConsentContainer');
-     		if (theelement) {
-      		theelement.remove();
-      	};
-      }, 1350);
+      if (theelement) {
+        theelement.remove();
+      }
+    }, 1350);
   })();
-};
+}
 
 function setCookie(name,value,days) {
     var expires = "";
