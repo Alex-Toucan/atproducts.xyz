@@ -4088,6 +4088,52 @@ textarea.form-control-lg {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  @keyframes slideIn {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slideIn {
+    0% {
+      -webkit-transform: translateY(0);
+      opacity: 1;
+    }
+
+    100% {
+      -webkit-transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pageslideIn {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes pageslideIn {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 .dropdown-menu {
   -webkit-animation-name: pageslideIn;
   animation-name: pageslideIn;
