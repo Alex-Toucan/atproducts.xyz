@@ -21,3 +21,16 @@
             }
         }
     });
+    
+    $('.back-to-top').click(function () {
+        // If user prefers reduced motion, scroll instantly without animation
+        if (prefersReducedMotion) {
+            $('html, body').scrollTop(0);
+        } else {
+            // Otherwise, scroll smoothly with linear easing
+            $('html, body').animate({scrollTop: 0}, 1500, 'linear');
+        }
+        return false;
+    });
+
+})(jQuery);
