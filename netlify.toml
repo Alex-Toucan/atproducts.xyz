@@ -39,5 +39,5 @@
       fullscreen=(self), 
       autoplay=(self), 
       encrypted-media=(self), 
-      interest-cohort=(), '''
+      interest-cohort=() '''
     Referrer-Policy = "same-origin"
