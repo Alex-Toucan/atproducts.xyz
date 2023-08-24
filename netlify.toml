@@ -39,6 +39,5 @@
       fullscreen=(self), 
       autoplay=(self), 
       encrypted-media=(self), 
-      interest-cohort=(), 
-      user-id=()'''
+      interest-cohort=(), '''
     Referrer-Policy = "same-origin"
