@@ -17025,21 +17025,16 @@ textarea.form-control-lg {
 }
 
 @media (min-width:767.98px) {
-  .text-starttocenter {
+  .text-centertostart {
     text-align: left;
   }
-  .text-endtocenter {
+  .text-centertoend {
     text-align: right;
 	}
 }
 
-@media (max-width:767.98px) {
-  .text-starttocenter {
-    text-align: center;
-  }
-	.text-endtocenter {
-		text-align: center;
-	}
+.text-centertostart, .text-centertoend {
+	text-align: center;
 }
 
 @media (max-width:500px) {
