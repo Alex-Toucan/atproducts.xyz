@@ -17026,10 +17026,10 @@ textarea.form-control-lg {
 
 @media (min-width:767.98px) {
   .text-centertostart {
-    text-align: left;
+    text-align: left !important;
   }
   .text-centertoend {
-    text-align: right;
+    text-align: right !important;
 	}
 }
 
