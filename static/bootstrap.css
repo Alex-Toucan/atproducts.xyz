@@ -9423,6 +9423,7 @@ textarea.form-control-lg {
 
 .text-wrap, .text-wrap .dropdown-item {
   white-space: normal !important;
+  word-break: break-all;
 }
 
 .text-nowrap {
