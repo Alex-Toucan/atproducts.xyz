@@ -131,7 +131,7 @@
   --bs-breakpoint-xxl: 1400px;
 }
 
-[data-bs-theme=dark] {
+[data-bs-theme=dark], .hero {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
   --bs-body-color-rgb: 222, 226, 230;
