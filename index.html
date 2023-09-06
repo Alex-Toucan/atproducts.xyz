@@ -181,30 +181,19 @@
           <p> The "AT" in AT Products does stand for Alex Toucan. </p>
 </div>
 <hr>
-                          <div id="products">
+                    <div id="products">
 <div class="h2">Products</div>
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="products-1" data-bs-toggle="tab" data-bs-target="#products-1-pane" type="button" role="tab" aria-controls="products-1-pane" aria-selected="true">Home</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="products-2" data-bs-toggle="tab" data-bs-target="#products-2-pane" type="button" role="tab" aria-controls="products-2-pane" aria-selected="false">Profile</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="products-3" data-bs-toggle="tab" data-bs-target="#products-3-pane" type="button" role="tab" aria-controls="products-3-pane" aria-selected="false">Contact</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="products-4" data-bs-toggle="tab" data-bs-target="#products-4-pane" type="button" role="tab" aria-controls="products-4-pane" aria-selected="false">Profile</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="products-5" data-bs-toggle="tab" data-bs-target="#products-5-pane" type="button" role="tab" aria-controls="products-5-pane" aria-selected="false">Contact</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="products-6" data-bs-toggle="tab" data-bs-target="#products-6-pane" type="button" role="tab" aria-controls="products-6-pane" aria-selected="false">Profile</button>
-  </li>
-</ul>
-<div class="tab-content col-md c" id="products-tabContent">
-<div class="products-1 tab-pane fade" id="products-1" role="tabpanel" aria-labelledby="products-1-pane" tabindex="0">
+<div class="border-1 border-solid rounded-2 p-1"> <div class="d-md-flex">
+  <div class="nav flex-column nav-pills col-md-4 me-md-1" id="products-tab" role="tablist" aria-orientation="vertical">
+    <button class="nav-link active" id="products-1-tab" data-bs-toggle="pill" data-bs-target="#products-1" type="button" role="tab" aria-controls="products-1" aria-selected="true">Paid Services</button>
+    <button class="nav-link" id="products-2-tab" data-bs-toggle="pill" data-bs-target="#products-2" type="button" role="tab" aria-controls="products-2" aria-selected="false" tabindex="-1">Flash Documentation</button>
+    
+    <button class="nav-link" id="products-3-tab" data-bs-toggle="pill" data-bs-target="#products-3" type="button" role="tab" aria-controls="products-3" aria-selected="false" tabindex="-1">MDickie Projects</button>
+    <button class="nav-link" id="products-4-tab" data-bs-toggle="pill" data-bs-target="#products-4" type="button" role="tab" aria-controls="products-4" aria-selected="false" tabindex="-1">SMS Bomb</button>
+  <button class="nav-link" id="products-5-tab" data-bs-toggle="pill" data-bs-target="#products-5" type="button" role="tab" aria-controls="products-5" aria-selected="false" tabindex="-1">Pynx's Projects</button>
+    <button class="nav-link" id="products-6-tab" data-bs-toggle="pill" data-bs-target="#products-6" type="button" role="tab" aria-controls="products-6" aria-selected="false" tabindex="-1">Public Archive</button></div>
+  <div class="vr disbr me-1"></div><hr class="opacity-100 my-1 d-md-none"><div class="tab-content col-md c" id="products-tabContent">
+<div class="products-1 tab-pane fade active show" id="products-1" role="tabpanel" aria-labelledby="products-1-tab" tabindex="0">
         <div class="h2 card-title mb-2">Paid Services</div>
         <p>View our Paid Services!</p>
   <p>Current primary services are Website Design and Website Hosting.</p>
@@ -212,33 +201,34 @@
           <a href="/paid" class="btn btn-primary w-100">Visit</a>
   </div>
   </div>    
-<div class="products-2 tab-pane fade" id="products-2" role="tabpanel" aria-labelledby="products-2-pane tabindex="0"><div class="bg-white rounded-2 mb-2"><img class=" rounded-2" src="/media/images/flashdoc.webp" alt="Flash Documentation"></div><div class="h2 card-title">Flash Documentation</div><p class="mb-0">Here are some things about Adobe Flash!</p>
+<div class="products-2 tab-pane fade " id="products-2" role="tabpanel" aria-labelledby="products-2-tab" tabindex="0"><div class="bg-white rounded-2 mb-2"><img class=" rounded-2" src="/media/images/flashdoc.webp" alt="Flash Documentation"></div><div class="h2 card-title">Flash Documentation</div><p class="mb-0">Here are some things about Adobe Flash!</p>
 <div class="tab-link">
     <a href="/flash" class="btn btn-primary w-100 mb-2">Visit</a><a href="/backup/flash" class="btn btn-secondary w-100">Visit the all laid out version</a>
 </div></div>
 
-<div class="products-3 tab-pane fade" id="products-3" role="tabpanel" aria-labelledby="products-3-pane" tabindex="0"><div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/mdickiepro.webp" alt="MDickie Projects"></div><div class="h2 card-title">MDickie Projects</div><p class="mb-0">This is a fanmade site about what has MDickie developed since the 1990s!</p>
+<div class="products-3 tab-pane fade" id="products-3" role="tabpanel" aria-labelledby="products-3-tab" tabindex="0"><div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/mdickiepro.webp" alt="MDickie Projects"></div><div class="h2 card-title">MDickie Projects</div><p class="mb-0">This is a fanmade site about what has MDickie developed since the 1990s!</p>
 <div class="tab-link">
     <a href="/mdickie" class="btn btn-primary w-100">Visit</a>
 </div></div>
-<div class="products-4 tab-pane fade" id="products-4" role="tabpanel" aria-labelledby="products-4-pane" tabindex="0"><div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/ya.png" alt="SMS Bomb"></div>
+<div class="products-4 tab-pane fade" id="products-4" role="tabpanel" aria-labelledby="products-4-tab" tabindex="0"><div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/ya.png" alt="SMS Bomb"></div>
   <div class="h2 card-title">SMS Bomb</div><p class="mb-0">This is for Android Devices. You can SMS bomb your friends!</p>
 <div class="tab-link">
     <a href="/sms" class="btn btn-primary w-100">Visit</a>
 </div></div>
-  <div class="products-5 tab-pane fade" id="products-5" role="tabpanel" aria-labelledby="products-5-pane" tabindex="0">
+  <div class="products-5 tab-pane fade" id="products-5" role="tabpanel" aria-labelledby="products-5-tab" tabindex="0">
     <div class="h2 card-title mb-2">Pynx's Projects</div>
     <p class="mb-0">Partnered with PynxTech, we released these projects!</p>
     <div class="tab-link">
     <a href="/pynx" class="btn btn-primary w-100">Visit</a>
   </div></div>
-  <div class="products-6 tab-pane fade active show" id="products-6" role="tabpanel" aria-labelledby="products-6-pane" tabindex="0">
+  <div class="products-6 tab-pane fade" id="products-6" role="tabpanel" aria-labelledby="products-6-tab" tabindex="0">
     <div class="h2 card-title mb-2">Public Archive</div>
     <p class="mb-0">View most of our old versions here!</p>
       <div class="tab-link">
     <a href="/backup/old" class="btn btn-primary w-100">Visit</a>
   </div></div></div>
-                          </div><hr><div id="allies">
+</div></div>
+                    </div><hr><div id="allies">
 <div class="h2">Allies</div>
 <div class="bg-dark index-border p-light-1 rounded-2 text-white">
   <div class="d-md-flex flex-row">
