@@ -22,11 +22,11 @@
       form-action 'self'; 
       base-uri 'self'; 
       manifest-src 'self'; 
-      font-src 'self' https://cdn.jsdelivr.net https://*.cloudfront.net; 
+      font-src 'self' https://cdn.jsdelivr.net; 
       object-src 'self'; 
-      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://*.cloudfront.net; 
-      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://*.cloudfront.net 'unsafe-inline'; 
-      img-src 'self' data: https://*.cloudfront.net;
+      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net; 
+      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net 'unsafe-inline'; 
+      img-src 'self' data:;
       frame-ancestors 'self' '''
     Features-Policy = "document-domain 'self';"
     Permissions-Policy = '''
