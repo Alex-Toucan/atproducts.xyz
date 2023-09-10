@@ -237,27 +237,6 @@
 	background: url('/media/images/hero-mdickie.webp');
 } 
 
-@media (max-width:767.98px) {
-	.hero-button-margin {
-  	margin-right: 3rem !important;
-  	margin-left: 3rem !important;
-	}
-}
-
-@media (max-width:1199.98px) {
-	.hero-button-margin:not(.hero-noodle-backup .hero-button-margin) {
-  	margin-right: 2.5rem !important;
-  	margin-left: 2.5rem !important;
-	}
-}
-
-@media (max-width:1699.98px) {
-	.hero-button-margin {
-  	margin-right: 2rem !important;
-  	margin-left: 2rem !important;
-	}
-}
-
 /* End first elements */
 
 *,
@@ -1059,25 +1038,6 @@ progress {
 }
 
 /* Custom "col" settings */
-
-.hero-col, .hero-col-md {
-	flex: 1 0 0%;
-}
-
-@media (max-width: 645.98px) {
-	.hero-col {
-		flex: 0 0 0%;
-		width: 100%;
-	}
-}
-
-
-@media (max-width: 767.98px) {
-	.hero-col-md {
-		flex: 0 0 0%;
-		width: 100%;
-	}
-}
 
 .col-auto {
   flex: 0 0 auto;
@@ -17137,28 +17097,6 @@ textarea.form-control-lg {
    }
 }
 
-.a {
-  text-align: left;
-}
-
-.b {
-  text-align: right;
-}
-
-.c {
-  text-align: center;
-}
-
-.d {
-  text-align: justify;
-}
-
-@media (max-width: 767.98px) {
-  .fatoc {
-    text-align: center !important;
-}
-}
-
 .modal .btn {
   padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x) !important;
 }
@@ -17167,79 +17105,6 @@ textarea.form-control-lg {
 	.bd-toc {
 		margin-top: 0 !important;
 	}
-  .fctoa {
-    text-align: center !important;
-  }
-		.custom-md-lrpad {
-	margin-left: 10px !important; 
-  	  margin-right: 10px !important;
-	}
-  .scrollspy {
-    padding: 0!important;
-  }
-   .plr {
-		padding-right: 5%;
-   	padding-left: 5%;
-   }
-  .mlr {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .plrl {
-		padding-left: 5%;
-  }
-}
-@media (min-width: 1024px) {
-	.plr {
-		padding-right: 5%;
-   	padding-left: 5%;
-   }
-  .mlr {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .plrl {
-		padding-left: 5%;
-  }
-}
-@media (min-width: 1440px) {
-	.plr {
-		padding-right: 5%;
-   	padding-left: 5%;
-   }
-  .mlr {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .plrl {
-		padding-left: 5%;
-  }
-}
-@media (min-width: 2000px) {
-	.plr {
-		padding-right: 5%;
-   	padding-left: 5%;
-   }
-  .mlr {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .plrl {
-		padding-left: 5%;
-  }
-}
-@media (min-width: 2560px) {
-	.plr {
-		padding-right: 5%;
-   	padding-left: 5%;
-   }
-  .mlr {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .plrl {
-		padding-left: 5%;
-  }
 }
 
 #404 {
