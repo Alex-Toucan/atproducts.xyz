@@ -17247,12 +17247,8 @@ img.script {
   margin-bottom: 10px;
 }
 
-[data-bs-theme=dark] img.footerimg {
-   content: url(/media/images/shortwhite.png) !important;
-}
-
-[data-bs-theme=dark] img.mainimg:not(img.flashimg) {
-   content: url(/media/images/longwhite.png) !important;
+[data-bs-theme=dark] img.footerimg, [data-bs-theme=dark] img.mainimg:not(img.flashimg) {
+   filter: invert(1);
 }
 
 img.darkimg {
