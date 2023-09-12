@@ -61,7 +61,7 @@
     }
   })
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('loaded', () => {
     showActiveTheme(getPreferredTheme())
 
     for (const toggle of document.querySelectorAll('[data-bs-theme-value]')) {
