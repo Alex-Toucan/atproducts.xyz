@@ -17151,35 +17151,8 @@ textarea.form-control-lg {
 .sw-link {
 	      color: white !important;
 }
-
-    .sw-row {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      --bs-gutter-x: 1.5rem;
-      --bs-gutter-y: 0;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    
     .sw-link:hover, .sw-link:active, .sw-link:focus {
       color: wheat !important;
-    }
-    
-    .sw-row .sw-feature-box:first-child {
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-      border: 1px solid black;
-    }
-      
-    .sw-row .sw-feature-box:last-child {
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-      border: 1px solid black;
-    }
-    
-    .bone {
-      border: 1px solid black;
-      border-radius: 10px;
     }
 
 .footer-info {
@@ -17225,50 +17198,8 @@ html.fixedtopnavimage {
     padding-top: 7.5px;
 }
 
-img.script {
-   border-radius: 15px;
-   background: #141414;
-   padding: 20px!important;
-}
-
-[data-bs-theme=dark] img.script {
-   border-radius: 0;
-   background: 0;
-   padding: 0px!important;
-}
-
-@media (max-width:424.98px) {
-  [data-bs-theme=dark] img.mainimg {
-    width: 65%!important;
-  }
-}
-
-[data-bs-theme=dark] img.flashimg {
-  margin-bottom: 10px;
-}
-
-[data-bs-theme=dark] img.footerimg, [data-bs-theme=dark] img.mainimg:not(img.flashimg) {
+[data-bs-theme=dark] img.footerimg {
    filter: invert(1);
-}
-
-img.darkimg {
-	border-radius: 15px;
-  background: white;
-  padding: 20px!important;
-}
-
-.abicon {
-  font-size: 3em;
-  line-height: 100%;
-  color: #212529;
-}
-
-[data-bs-theme=dark] .abicon {
-  color: #adb5bd;
-}
-
-.darkicon {
-  color: #adb5bd;
 }
 
 .permhr {
@@ -17327,51 +17258,6 @@ img.darkimg {
 @media (min-width:767.98px) {
 	.bd-toc {
 		margin-top: initial;
-	}
-}
-
-@media (min-width:1665px) {
-	img.flashdoc {
-		width: 700px !important;
-	}
-	img.smsbomb {
-		width: 411px !important;
-	}
-	img.indeximg {
-		width: 700px !important;
-	}
-}
-
-@media (min-width:2000px) {
-	img.flashdoc {
-		width: 1050px !important;
-	}
-	img.smsbomb {
-		width: 616.5px !important;
-	}
-	img.indeximg {
-		width: 1050px !important;
-	}
-}
-
-@media (min-width:2560px) {
-	img.flashdoc {
-		width: 1400px !important;
-	}
-	img.smsbomb {
-		width: 822px !important;
-	}
-	img.indeximg {
-		width: 1400px !important;
-	}
-}
-	
-@media (max-width:1665px) {
-	img.smsbomb {
-		width: 25% !important;
-	}
-	img.indeximg, img.flashdoc {
-		width: 45% !important;
 	}
 }
 
