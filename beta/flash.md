@@ -1,4 +1,4 @@
-###[DOWNLOAD ORIGINAL VERSION](https://archive.org/details/Bobsaver)
+### [DOWNLOAD ORIGINAL VERSION](https://archive.org/details/Bobsaver)
 
 Getting this version of the screensaver to run isn't that complicated, but getting it to act like one is a pretty lengthy task for a screensaver IMO.
 
