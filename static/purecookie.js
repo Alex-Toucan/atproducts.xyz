@@ -1,5 +1,6 @@
 // --- Config --- //
 var purecookieTitle = "Cookies."; // Title
+var purecookieIcon = '<i class="bi bi-cookie me-2"></i>'
 var purecookieDesc = "By using this website, you automatically accept that we use cookies."; // Description
 var purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookiepolicy link
 var purecookieButton = "Understood"; // Button text
@@ -62,9 +63,9 @@ function eraseCookie(name) {
     document.cookie = name+'=; Max-Age=-99999999;';
 }
 	
-window.addEventListener('loaded', function cookieConsent (){
+window.addEventListener('load', function cookieConsent (){
   if (!getCookie('purecookieDismiss')) {
-    document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
+    document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieIcon + ' ' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
 	pureFadeIn("cookieConsentContainer");
   }
 });

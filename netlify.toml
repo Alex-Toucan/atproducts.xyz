@@ -12,6 +12,8 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1"
     X-Content-Type-Options = "nosniff"
+    Cache-Control = '''
+      max-age=31536000'''
     Strict-Transport-Security = '''
       max-age=31536000; 
       includeSubDomains; 
@@ -22,11 +24,11 @@
       form-action 'self'; 
       base-uri 'self'; 
       manifest-src 'self'; 
-      font-src 'self' https://cdn.jsdelivr.net https://*.cloudfront.net; 
+      font-src 'self' https://cdn.jsdelivr.net; 
       object-src 'self'; 
-      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://*.cloudfront.net; 
-      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://*.cloudfront.net 'unsafe-inline'; 
-      img-src 'self' data: https://*.cloudfront.net;
+      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net; 
+      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net 'unsafe-inline'; 
+      img-src 'self' data:;
       frame-ancestors 'self' '''
     Features-Policy = "document-domain 'self';"
     Permissions-Policy = '''
@@ -39,6 +41,5 @@
       fullscreen=(self), 
       autoplay=(self), 
       encrypted-media=(self), 
-      interest-cohort=(), 
-      user-id=()'''
+      interest-cohort=() '''
     Referrer-Policy = "same-origin"
