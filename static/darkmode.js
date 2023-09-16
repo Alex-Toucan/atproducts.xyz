@@ -61,7 +61,7 @@
     }
   })
 
-  $(function() {
+  function themeShow() {
     showActiveTheme(getPreferredTheme())
 
     for (const toggle of document.querySelectorAll('[data-bs-theme-value]')) {
@@ -73,4 +73,6 @@
       })
     }
   });
+
+  $(document).ready(themeShow);
 })(jQuery)
