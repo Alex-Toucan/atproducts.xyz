@@ -73,7 +73,7 @@ function cookieConsent() {
 if (document.readyState !== "loading") {
     cookieConsent();
 } else {
-    document.addEventListener("load", cookieConsent);
+    document.addEventListener("DOMContentLoaded", cookieConsent);
 }
 
 function purecookieDismiss() {
