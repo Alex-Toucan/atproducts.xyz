@@ -71,12 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 }, { once: true });
 
-if (document.readyState !== "loading") {
-    cookieConsent();
-} else {
-    document.addEventListener("DOMContentLoaded", cookieConsent);
-}
-
 function purecookieDismiss() {
   setCookie('purecookieDismiss','1',7);
   pureFadeOut("cookieConsentContainer");
