@@ -44,20 +44,21 @@ $(document).ready(function() {
     // Add click event handlers to timeline buttons
     for (let i = 1; i <= 4; i++) {
         $(`#history-${i}`).click(function() {
-            if (i !== activeYear) {
-                if (i < activeYear) {
-                    // Clicking on years behind the active year, remove btn-primary
-                    for (let j = i + 1; j <= activeYear; j++) {
-                        $(`#history-${j}`).removeClass("btn-primary").addClass("btn-secondary");
-                    }
-                } else {
-                    // Clicking on a future year, remove btn-secondary
-                    for (let j = activeYear + 1; j <= i; j++) {
-                        $(`#history-${j}`).removeClass("btn-secondary").addClass("btn-primary");
-                    }
+            if (i == activeYear) return;
+
+            if (i < activeYear) {
+                // Clicking on years behind the active year, remove btn-primary
+                for (let j = i + 1; j <= activeYear; j++) {
+                    $(`#history-${j}`).removeClass("btn-primary").addClass("btn-secondary");
                 }
-                updateTimeline(i);
+            } else {
+                // Clicking on a future year, remove btn-secondary
+                for (let j = activeYear + 1; j <= i; j++) {
+                    $(`#history-${j}`).removeClass("btn-secondary").addClass("btn-primary");
+                }
             }
+            
+            updateTimeline(i);
         });
     }
 
