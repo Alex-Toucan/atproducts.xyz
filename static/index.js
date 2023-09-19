@@ -46,6 +46,9 @@ $(document).ready(function() {
         $(`#history-${i}`).click(function() {
             if (i !== activeYear) {
                 updateTimeline(i);
+            } else if (i < activeYear) {
+                // Clicking on years behind the active year, remove btn-primary
+                $(`#history-${i}`).removeClass("btn-primary");
             }
         });
     }
