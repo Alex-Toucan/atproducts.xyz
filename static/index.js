@@ -33,7 +33,7 @@ $(document).ready(function() {
     // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
     for (let i = 1; i <= 4; i++) {
-        if (i < activeYear) {
+        if (i <= activeYear) {
             $(`#history-${i}`).addClass("btn-primary");
         }
     }
@@ -52,7 +52,7 @@ $(document).ready(function() {
     function updateTimeline(year) {
         // Remove the "active" class and change to "btn-primary" class from all buttons
         for (let i = 1; i <= 4; i++) {
-            $(`#history-${i}`).removeClass("active btn-primary").addClass("btn-secondary");
+            $(`#history-${i}`).removeClass("active").removeClass("btn-primary").addClass("btn-secondary");
         }
 
         // Add the "active" class and change to "btn-primary" class to the selected button
