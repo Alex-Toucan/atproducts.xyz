@@ -13,7 +13,7 @@
     X-XSS-Protection = "1"
     X-Content-Type-Options = "nosniff"
     Cache-Control = '''
-      max-age=31536000'''
+      max-age=6000'''
     Strict-Transport-Security = '''
       max-age=31536000; 
       includeSubDomains; 
