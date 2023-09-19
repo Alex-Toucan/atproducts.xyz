@@ -42,4 +42,5 @@
       autoplay=(self), 
       encrypted-media=(self), 
       interest-cohort=() '''
-    Referrer-Policy = "same-origin"
+    Referrer-Policy = "strict-origin"
+    Access-Control-Allow-Origin = *
