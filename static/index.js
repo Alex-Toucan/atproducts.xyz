@@ -48,7 +48,7 @@ $(document).ready(function() {
                 if (i < activeYear) {
                     // Clicking on years behind the active year, remove btn-primary
                     for (let j = i + 1; j <= activeYear; j++) {
-                        $(`#history-${j}`).removeClass("btn-primary");
+                        $(`#history-${j}`).removeClass("btn-primary").addClass("btn-secondary");
                     }
                 }
                 updateTimeline(i);
