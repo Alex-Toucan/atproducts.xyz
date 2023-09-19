@@ -50,6 +50,11 @@ $(document).ready(function() {
                     for (let j = i + 1; j <= activeYear; j++) {
                         $(`#history-${j}`).removeClass("btn-primary").addClass("btn-secondary");
                     }
+                } else {
+                    // Clicking on a future year, remove btn-secondary
+                    for (let j = activeYear + 1; j <= i; j++) {
+                        $(`#history-${j}`).removeClass("btn-secondary").addClass("btn-primary");
+                    }
                 }
                 updateTimeline(i);
             }
