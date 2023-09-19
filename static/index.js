@@ -29,29 +29,35 @@ $(function () {
     };
 });
 
-// Get references to the progress bar and buttons
-const progressBar = document.getElementById('history-progress');
-const buttons = document.querySelectorAll('[id^=history-]');
+$(document).ready(function() {
+    // Initialize the active button
+    let activeYear = 1;
+    updateTimeline(activeYear);
 
-// Add a click event listener to each button
-buttons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    // Calculate the width for the progress bar based on the button index
-    const width = (index / (buttons.length - 1)) * 100;
-    
-    // Update the progress bar width and aria-valuenow attribute
-    progressBar.style.width = width + '%';
-    progressBar.setAttribute('aria-valuenow', width);
-    
-    // Update the active button styling
-    buttons.forEach((btn, btnIndex) => {
-      if (btnIndex <= index) {
-        btn.classList.add('btn-primary');
-        btn.classList.remove('btn-secondary');
-      } else {
-        btn.classList.remove('btn-primary');
-        btn.classList.add('btn-secondary');
-      }
-    });
-  });
+    // Add click event handlers to timeline buttons
+    for (let i = 1; i <= 4; i++) {
+        $(`#history-${i}`).click(function() {
+            if (i !== activeYear) {
+                updateTimeline(i);
+            }
+        });
+    }
+
+    // Function to update the timeline based on the selected year
+    function updateTimeline(year) {
+        // Remove the "active" class from all buttons
+        for (let i = 1; i <= 4; i++) {
+            $(`#history-${i}`).removeClass("active");
+        }
+
+        // Add the "active" class to the selected button
+        $(`#history-${year}`).addClass("active");
+
+        // Update the progress bar width
+        const progressBarWidth = (year - 1) * 33.33333333;
+        $("#history-progress").css("width", `${progressBarWidth}%`);
+
+        // Update the active year
+        activeYear = year;
+    }
 });
