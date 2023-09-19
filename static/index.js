@@ -30,8 +30,13 @@ $(function () {
 });
 
 $(document).ready(function() {
-    // Initialize the active button
+    // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
+    for (let i = 1; i <= 4; i++) {
+        if (i < activeYear) {
+            $(`#history-${i}`).addClass("btn-primary");
+        }
+    }
     updateTimeline(activeYear);
 
     // Add click event handlers to timeline buttons
