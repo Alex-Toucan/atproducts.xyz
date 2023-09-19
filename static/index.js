@@ -28,3 +28,22 @@ $(function () {
 			  pauseButton.checked = false;
     };
 });
+
+const progressBar = document.getElementById('history-progress');
+const buttons = document.querySelectorAll('[id^=history-]');
+
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    const width = (index / (buttons.length - 1)) * 100;
+      
+    progressBar.style.width = width + '%';
+    progressBar.setAttribute('aria-valuenow', width);
+      
+    buttons.forEach((btn) => {
+      btn.classList.remove('btn-primary', 'btn-secondary');
+      if (btn === button) {
+        btn.classList.add(index < 2 ? 'btn-primary' : 'btn-secondary');
+      }
+    });
+  });
+});
