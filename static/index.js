@@ -45,13 +45,13 @@ $(document).ready(function() {
 
     // Function to update the timeline based on the selected year
     function updateTimeline(year) {
-        // Remove the "active" class and add "btn-primary" class to all buttons
+        // Remove the "active" class and change to "btn-primary" class from all buttons
         for (let i = 1; i <= 4; i++) {
             $(`#history-${i}`).removeClass("active btn-primary").addClass("btn-secondary");
         }
 
         // Add the "active" class and change to "btn-primary" class to the selected button
-        $(`#history-${year}`).addClass("active btn-primary");
+        $(`#history-${year}`).addClass("active btn-primary").removeClass("btn-secondary");
 
         // Update the progress bar width
         const progressBarWidth = (year - 1) * 33.33333333;
