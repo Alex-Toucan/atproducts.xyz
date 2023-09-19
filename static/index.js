@@ -34,7 +34,9 @@ $(document).ready(function() {
     let activeYear = 1;
     for (let i = 1; i <= 4; i++) {
         if (i <= activeYear) {
-            $(`#history-${i}`).addClass("btn-primary");
+            $(`#history-${i}`).addClass("btn-primary").removeClass("btn-secondary");
+        } else {
+            $(`#history-${i}`).addClass("btn-secondary").removeClass("btn-primary");
         }
     }
     updateTimeline(activeYear);
@@ -50,9 +52,9 @@ $(document).ready(function() {
 
     // Function to update the timeline based on the selected year
     function updateTimeline(year) {
-        // Remove the "active" class and change to "btn-primary" class from all buttons
+        // Remove the "active" class from all buttons
         for (let i = 1; i <= 4; i++) {
-            $(`#history-${i}`).removeClass("active").removeClass("btn-primary").addClass("btn-secondary");
+            $(`#history-${i}`).removeClass("active");
         }
 
         // Add the "active" class and change to "btn-primary" class to the selected button
