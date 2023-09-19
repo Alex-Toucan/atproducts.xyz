@@ -45,10 +45,13 @@ $(document).ready(function() {
     for (let i = 1; i <= 4; i++) {
         $(`#history-${i}`).click(function() {
             if (i !== activeYear) {
+                if (i < activeYear) {
+                    // Clicking on years behind the active year, remove btn-primary
+                    for (let j = i + 1; j <= activeYear; j++) {
+                        $(`#history-${j}`).removeClass("btn-primary");
+                    }
+                }
                 updateTimeline(i);
-            } else if (i < activeYear) {
-                // Clicking on years behind the active year, remove btn-primary
-                $(`#history-${i}`).removeClass("btn-primary");
             }
         });
     }
