@@ -43,4 +43,3 @@
       encrypted-media=(self),
       interest-cohort=() '''
     Referrer-Policy = "strict-origin"
-    Access-Control-Allow-Origin = "true"
