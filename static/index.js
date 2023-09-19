@@ -29,20 +29,28 @@ $(function () {
     };
 });
 
+// Get references to the progress bar and buttons
 const progressBar = document.getElementById('history-progress');
 const buttons = document.querySelectorAll('[id^=history-]');
 
+// Add a click event listener to each button
 buttons.forEach((button, index) => {
   button.addEventListener('click', () => {
+    // Calculate the width for the progress bar based on the button index
     const width = (index / (buttons.length - 1)) * 100;
-      
+    
+    // Update the progress bar width and aria-valuenow attribute
     progressBar.style.width = width + '%';
     progressBar.setAttribute('aria-valuenow', width);
-      
-    buttons.forEach((btn) => {
-      btn.classList.remove('btn-primary', 'btn-secondary');
-      if (btn === button) {
-        btn.classList.add(index < 2 ? 'btn-primary' : 'btn-secondary');
+    
+    // Update the active button styling
+    buttons.forEach((btn, btnIndex) => {
+      if (btnIndex <= index) {
+        btn.classList.add('btn-primary');
+        btn.classList.remove('btn-secondary');
+      } else {
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-secondary');
       }
     });
   });
