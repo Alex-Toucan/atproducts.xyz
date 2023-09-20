@@ -1,3 +1,0 @@
-Ping of Death in "C"
-
-ping <IP Address> -t |65500
