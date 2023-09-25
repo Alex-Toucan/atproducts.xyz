@@ -132,7 +132,7 @@
   --bs-breakpoint-xxl: 1400px;
 }
 
-[data-bs-theme=dark], .hero {
+[data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
   --bs-body-color-rgb: 222, 226, 230;
@@ -17366,7 +17366,7 @@ height: calc(100vh - 448px);
   .back-to-top {
     bottom: 60px !important;
   }
-	.tab-content {
+	.products-tabContent {
 		height: 15rem !important;
 	}
 }
@@ -17412,6 +17412,12 @@ height: calc(100vh - 448px);
 
 .dropdown-menu li+li {
     margin-top: 0.125rem;
+}
+.products-border {
+  	 --bs-border-width: 2.5px;	
+    border-width: 2.5px !important;	
+		border-style: solid;
+	  border-color: var(--bs-light-border-subtle) !important;
 }
 
 /* End secondary code */
