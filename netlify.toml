@@ -40,6 +40,6 @@
       payment=(), 
       fullscreen=(self), 
       autoplay=(self), 
-      encrypted-media=(self),
+      encrypted-media=(self), 
       interest-cohort=() '''
     Referrer-Policy = "strict-origin"
