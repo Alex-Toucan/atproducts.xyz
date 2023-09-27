@@ -39,14 +39,16 @@ $(document).ready(function() {
     for (let i = 1; i <= 4; i++) {
         $(`#history-${i}`).click(function() {
             if (i == activeYear) return;
-            
+
             updateTimeline(i);
         });
 
-        // Add keydown event listener for Enter key when button is focused
+        // Add keydown event listener for arrow keys when button is focused
         $(`#history-${i}`).keydown(function(e) {
-            if (e.key === "Enter") {
-                updateTimeline(i);
+            if (e.key === "ArrowLeft" && i > 1) {
+                updateTimeline(i - 1);
+            } else if (e.key === "ArrowRight" && i < 4) {
+                updateTimeline(i + 1);
             }
         });
     }
