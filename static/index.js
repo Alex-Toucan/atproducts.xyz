@@ -29,72 +29,72 @@ $(function () {
     };
 });
 
-$(document).ready(function() {
-    // Initialize the active button and set btn-primary for past years
-    let activeYear = 1;
-    for (let i = 1; i <= 4; i++) {
-        if (i <= activeYear) {
-            $(`#history-${i}`).addClass("btn-primary").removeClass("btn-secondary");
+$(document).ready(function () {
+  // Initialize the active button and set btn-primary for past years
+  let activeYear = 1;
+  for (let i = 1; i <= 4; i++) {
+    if (i <= activeYear) {
+      $(`#history-${i}`).addClass("btn-primary").removeClass("btn-secondary");
+    } else {
+      $(`#history-${i}`).addClass("btn-secondary").removeClass("btn-primary");
+    }
+  }
+  updateTimeline(activeYear);
+
+  // Add click event handlers to timeline buttons
+  for (let i = 1; i <= 4; i++) {
+    $(`#history-${i}`).click(function () {
+      if (i !== activeYear) {
+        if (i < activeYear) {
+          // Clicking on years behind the active year, remove btn-primary
+          for (let j = i + 1; j <= activeYear; j++) {
+            $(`#history-${j}`).removeClass("btn-primary").addClass("btn-secondary");
+          }
         } else {
-            $(`#history-${i}`).addClass("btn-secondary").removeClass("btn-primary");
+          // Clicking on a future year, remove btn-secondary
+          for (let j = activeYear + 1; j <= i; j++) {
+            $(`#history-${j}`).removeClass("btn-secondary").addClass("btn-primary");
+          }
         }
-    }
-    updateTimeline(activeYear);
-
-    // Add click event handlers to timeline buttons
-    for (let i = 1; i <= 4; i++) {
-        $(`#history-${i}`).click(function() {
-            if (i !== activeYear) {
-                if (i < activeYear) {
-                    // Clicking on years behind the active year, remove btn-primary
-                    for (let j = i + 1; j <= activeYear; j++) {
-                        $(`#history-${j}`).removeClass("btn-primary").addClass("btn-secondary");
-                    }
-                } else {
-                    // Clicking on a future year, remove btn-secondary
-                    for (let j = activeYear + 1; j <= i; j++) {
-                        $(`#history-${j}`).removeClass("btn-secondary").addClass("btn-primary");
-                    }
-                }
-                updateTimeline(i);
-            }
-        });
-    }
-
-    // Add keyboard event listener for arrow keys
-    $(document).keydown(function(e) {
-        if (e.which === 37) {
-            // Left arrow key
-            navigateTimeline(-1);
-        } else if (e.which === 39) {
-            // Right arrow key
-            navigateTimeline(1);
-        }
+        updateTimeline(i);
+      }
     });
+  }
 
-    // Function to update the timeline based on the selected year
-    function updateTimeline(year) {
-        // Remove the "active" class from all buttons
-        for (let i = 1; i <= 4; i++) {
-            $(`#history-${i}`).removeClass("active");
-        }
+  // Add keyboard event listener for arrow keys
+  $(document).keydown(function (e) {
+    if (e.which === 37) {
+      // Left arrow key
+      navigateTimeline(-1);
+    } else if (e.which === 39) {
+      // Right arrow key
+      navigateTimeline(1);
+    }
+  });
 
-        // Add the "active" class and change to "btn-primary" class to the selected button
-        $(`#history-${year}`).addClass("active btn-primary").removeClass("btn-secondary");
-
-        // Update the progress bar width
-        const progressBarWidth = (year - 1) * 33.33333333;
-        $("#history-progress").css("width", `${progressBarWidth}%`);
-
-        // Update the active year
-        activeYear = year;
+  // Function to update the timeline based on the selected year
+  function updateTimeline(year) {
+    // Remove the "active" class from all buttons
+    for (let i = 1; i <= 4; i++) {
+      $(`#history-${i}`).removeClass("active");
     }
 
-    // Function to navigate the timeline using arrow keys
-    function navigateTimeline(direction) {
-        const newYear = Math.min(Math.max(activeYear + direction, 1), 4);
-        if (newYear !== activeYear) {
-            updateTimeline(newYear);
-        }
+    // Add the "active" class and change to "btn-primary" class to the selected button
+    $(`#history-${year}`).addClass("active btn-primary").removeClass("btn-secondary");
+
+    // Update the progress bar width
+    const progressBarWidth = (year - 1) * 33.33333333;
+    $("#history-progress").css("width", `${progressBarWidth}%`);
+
+    // Update the active year
+    activeYear = year;
+  }
+
+  // Function to navigate the timeline using arrow keys
+  function navigateTimeline(direction) {
+    const newYear = Math.min(Math.max(activeYear + direction, 1), 4);
+    if (newYear !== activeYear) {
+      updateTimeline(newYear);
     }
+  }
 });
