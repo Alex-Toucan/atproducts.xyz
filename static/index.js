@@ -69,7 +69,8 @@ $(document).ready(function() {
 
         // If the update is from arrow keys, then update the active tab
         if (fromArrowKey) {
-            $(".tab-pane").removeClass("active show");
+            // Remove the "active" class from the previously active tab
+            $(".tab-pane.active").removeClass("active");
 
             // Show the active tab pane after the transition is complete
             $(`#history-${year}-pane`).addClass("active show").one('shown.bs.tab', function () {
@@ -79,4 +80,3 @@ $(document).ready(function() {
         }
     }
 });
-
