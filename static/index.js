@@ -39,17 +39,8 @@ $(document).ready(function() {
     for (let i = 1; i <= 4; i++) {
         $(`#history-${i}`).click(function() {
             if (i == activeYear) return;
-
+            
             updateTimeline(i);
-        });
-
-        // Add keydown event listener for arrow keys when button is focused
-        $(`#history-${i}`).keydown(function(e) {
-            if (e.key === "ArrowLeft" && i > 1) {
-                updateTimeline(i - 1);
-            } else if (e.key === "ArrowRight" && i < 4) {
-                updateTimeline(i + 1);
-            }
         });
     }
 
@@ -59,6 +50,7 @@ $(document).ready(function() {
         for (let i = 1; i <= 4; i++) {
             $(`#history-${i}`).toggleClass("active", i == year).toggleClass("btn-secondary", i > year).toggleClass("btn-primary", i <= year);
         }
+
 
         // Update the progress bar width
         const progressBarWidth = (year - 1) * 33.33333333;
