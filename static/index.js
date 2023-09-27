@@ -66,5 +66,11 @@ $(document).ready(function() {
 
         // Update the active year
         activeYear = year;
+
+        // Hide all tab panes
+        $(".tab-pane").removeClass("active show");
+
+        // Show the active tab pane
+        $(`#history-${year}-pane`).addClass("active show");
     }
 });
