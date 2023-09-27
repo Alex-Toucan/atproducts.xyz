@@ -54,7 +54,7 @@ $(document).ready(function() {
     }
 
     // Function to update the timeline based on the selected year
-    function updateTimeline(year) {
+    function updateTimeline(year, fromArrowKey = false) {
         // Remove the "active" class from all buttons
         for (let i = 1; i <= 4; i++) {
             $(`#history-${i}`).removeClass("active").toggleClass("btn-secondary", i > year).toggleClass("btn-primary", i <= year);
@@ -67,13 +67,16 @@ $(document).ready(function() {
         // Update the active year
         activeYear = year;
 
-        // Hide all tab panes
-        $(".tab-pane").removeClass("active show");
+        // If the update is from arrow keys, then update the active tab
+        if (fromArrowKey) {
+            $(".tab-pane").removeClass("active show");
 
-        // Show the active tab pane after the transition is complete
-        $(`#history-${year}-pane`).addClass("active show").one('shown.bs.tab', function () {
-            // Add the "active" class after the transition
-            $(`#history-${year}`).addClass("active");
-        });
+            // Show the active tab pane after the transition is complete
+            $(`#history-${year}-pane`).addClass("active show").one('shown.bs.tab', function () {
+                // Add the "active" class after the transition
+                $(`#history-${year}`).addClass("active");
+            });
+        }
     }
 });
+
