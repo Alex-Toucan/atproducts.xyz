@@ -84,8 +84,12 @@ $(document).ready(function() {
         // Remove the "active" class from all buttons
         for (let i = 1; i <= 4; i++) {
             $(`#history-${i}`).toggleClass("active", i == year).toggleClass("btn-secondary", i > year).toggleClass("btn-primary", i <= year);
-            $(`#history-${i}-pane`).toggleClass(["show", "active"], i == year);
+            $(`#history-${i}-pane`).toggleClass("active", i == year).removeClass("show");
         }
+
+        setTimeout(() => {
+            $(`#history-${year}-pane`).addClass("show");  
+        }, 50);
 
         // Update the progress bar width
         const progressBarWidth = (year - 1) * 33.33333333;
