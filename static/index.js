@@ -36,13 +36,7 @@ $(document).ready(function() {
     updateTimeline(activeYear);
 
     // Add click event handlers to timeline buttons
-    for (let i = 1; i <= 4; i++) {
-        $(`#history-${i}`).click(function() {
-            if (i == activeYear) return;
-            
-            updateTimeline(i);
-        });
-    }
+    for (let i = 1; i <= 4; i++) $(`#history-${i}`).click(() => updateTimeline(i));
 
     const debounce = 500;
     let isDebounced = false;
@@ -80,6 +74,8 @@ $(document).ready(function() {
     function updateTimeline(year) {
         // Make sure year is within the min and max
         year = Math.min(Math.max(year, 1), 4);
+
+        if(year == activeYear) return;
 
         // Remove the "active" class from all buttons
         for (let i = 1; i <= 4; i++) {
