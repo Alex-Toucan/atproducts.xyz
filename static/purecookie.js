@@ -1,17 +1,6 @@
-var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
-{
-  let window = _____WB$wombat$assign$function_____("window");
-  let self = _____WB$wombat$assign$function_____("self");
-  let document = _____WB$wombat$assign$function_____("document");
-  let location = _____WB$wombat$assign$function_____("location");
-  let top = _____WB$wombat$assign$function_____("top");
-  let parent = _____WB$wombat$assign$function_____("parent");
-  let frames = _____WB$wombat$assign$function_____("frames");
-  let opener = _____WB$wombat$assign$function_____("opener");
-
 // --- Config --- //
 var purecookieTitle = "Cookies."; // Title
+var purecookieIcon = '<i class="bi bi-cookie me-2"></i>' // Cookie icon
 var purecookieDesc = "By using this website, you automatically accept that we use cookies."; // Description
 var purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookiepolicy link
 var purecookieButton = "Understood"; // Button text
@@ -31,6 +20,7 @@ function pureFadeIn(elem, display){
     }
   })();
 };
+	
 function pureFadeOut(elem){
   var el = document.getElementById(elem);
   el.style.opacity = 1;
@@ -41,6 +31,12 @@ function pureFadeOut(elem){
     } else {
       requestAnimationFrame(fade);
     }
+      setTimeout(() => {
+      var theelement = document.querySelector('#cookieConsentContainer');
+     		if (theelement) {
+      		theelement.remove();
+      	};
+      }, 1350);
   })();
 };
 
@@ -67,19 +63,14 @@ function eraseCookie(name) {
     document.cookie = name+'=; Max-Age=-99999999;';
 }
 
-function cookieConsent() {
-  if (!getCookie('purecookieDismiss')) {
-    document.body.innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + '</a></div></div>';
-	pureFadeIn("cookieConsentContainer");
-  }
-}
+document.addEventListener('DOMContentLoaded', () => {
+      if (!getCookie('purecookieDismiss')) {
+        document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieIcon + '' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
+    	pureFadeIn("cookieConsentContainer");
+      }
+});
 
 function purecookieDismiss() {
   setCookie('purecookieDismiss','1',7);
   pureFadeOut("cookieConsentContainer");
-}
-
-window.onload = function() { cookieConsent(); };
-
-
 }
