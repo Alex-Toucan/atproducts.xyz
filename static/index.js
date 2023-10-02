@@ -1,3 +1,4 @@
+
 var playButton = document.querySelector(".playButton");
 var pauseButton = document.querySelector(".pauseButton");
 var nextButton = document.querySelector(".carousel-control-next");
