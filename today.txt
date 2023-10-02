@@ -1,7 +1,0 @@
-## Learn C
-[LearnC.net](https://www.learnc.net/c-tutorial/)
-[LearnC.org](https://www.learn-c.org/en)
-## [Pacman Tips and Tricks - Official](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans))
-Firstly linking to **Removing unused packages** section.
-
-tomorrow's work
