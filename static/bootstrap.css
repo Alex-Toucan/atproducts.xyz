@@ -17979,9 +17979,6 @@ height: calc(100vh - 448px);
 .dropdown-menu li+li {
     margin-top: 0.125rem;
 }
-.navbar .dropdown-menu .active .bi {
-    display: block !important;
-}
 .products-border {
   	 --bs-border-width: 2.5px;	
     border-width: 2.5px !important;	
