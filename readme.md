@@ -1,11 +1,12 @@
 <div align="center">
   <h1> AT Products LLC </h1>
 <p>
-  <a href="#">
     <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love">
-  </a>   <a href="https://opensource.org/licenses/MIT" target="_blank">
+      <a href="https://opensource.org/licenses/MIT" target="_blank">
     <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License">
-  </a> <a href="https://app.netlify.com/sites/atproducts/deploys"><img src="https://api.netlify.com/api/v1/badges/faf5f3b5-bf03-457d-9deb-dbfc4d3b55ee/deploy-status" alt="Netlify"></a>
+  </a>
+   <img src="https://github.com/Alex-Toucan/atproducts.xyz/workflows/CodeQL/badge.svg" alt="CodeQL">
+  <a href="https://app.netlify.com/sites/atproducts/deploys"><img src="https://api.netlify.com/api/v1/badges/faf5f3b5-bf03-457d-9deb-dbfc4d3b55ee/deploy-status" alt="Netlify"></a>
 </p>
  <a href="https://getbootstrap.com"><img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"></a> 
   <a href="https://jquery.com/" target="_blank">
@@ -23,8 +24,11 @@
 <p>Secondary Weather Account: <a href="https://twitter.com/ATPWeather">ATPWeather</a></p>
 <hr>
 <h2>About Us</h2>
-AT Products LLC, otherwise known as AT Products, is a informative technology company that is based in the United States that provides files, that contains resources to cybersecurity and malware, and <a href="https://atproducts.xyz/paid">other solutions</a> to your problems!<br><br>
+AT Products LLC, otherwise known as AT Products, is an informative technology company that is based in the United States that provides files, that contains resources for cybersecurity and malware, and <a href="https://atproducts.xyz/paid">other solutions</a> to your problems!<br><br>
 The "AT" in AT Products does stand for Alex Toucan.
 <hr>
+<h2>Gallery</h2>
+<img src="https://beta.atproducts.xyz/media/slideshow/-wc8z3g.jpg" alt="banner">
+<hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#ours">View more information</a>.
-<h6>Last Recorded Version: 2.16.1</h6>
+<h6>Last Recorded Version: 2.16.1.1</h6>
