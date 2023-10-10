@@ -15,7 +15,7 @@ def welcome(plainput):
     exec(dat)
     sys.exit()
 
-def adiosmotherfucker():
+def goodbye():
     print("\nYou are not authorized to use this program\nhasta la vista, baby")
     sys.exit()
 
@@ -25,4 +25,4 @@ while True:
     if hashedinput == passwrd:
         welcome(plainput)
     else:
-        adiosmotherfucker()
+        goodbye()
