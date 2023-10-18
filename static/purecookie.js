@@ -63,14 +63,12 @@ function eraseCookie(name) {
     document.cookie = name+'=; Max-Age=-99999999;';
 }
 
-document.onreadystatechange = function () {
-    if (document.readyState === 'complete') {
-        if (!getCookie('purecookieDismiss')) {
-            document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieIcon + '' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
-            pureFadeIn("cookieConsentContainer");
-        }
-    }
-};
+document.addEventListener('DOMContentLoaded', () => {
+      if (!getCookie('purecookieDismiss')) {
+        document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieIcon + '' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
+    	pureFadeIn("cookieConsentContainer");
+      }
+});
 
 function purecookieDismiss() {
   setCookie('purecookieDismiss','1',7);
