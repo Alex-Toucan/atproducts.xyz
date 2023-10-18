@@ -1,5 +1,6 @@
 <div align="center">
-  <h1> AT Products LLC </h1>
+  <img src="/media/images/readmeicon.png" width="50%" alt="icon">
+<br><br>
 <p>
     <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love">
       <a href="https://opensource.org/licenses/MIT" target="_blank">
