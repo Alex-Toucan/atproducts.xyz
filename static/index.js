@@ -6,76 +6,46 @@ var previousButton = document.querySelector(".carousel-control-prev");
 var carouselMain = document.querySelector(".carousel-main");
 var slidebtn = document.querySelectorAll(".slidebtn");
 
-$(function () {
-    $(carouselMain).carousel({
-        pause: "false",
-			  cycle: "true",
-			  interval: 10000
-    });
-    
-    $(playButton).click(function () {
-        $(carouselMain).carousel('cycle');
-    });
-    $(pauseButton).click(function () {
-        $(carouselMain).carousel('pause');
-    });
-	
-		$(nextButton).click(handleButton);
-    $(previousButton).click(handleButton);
-    $(slidebtn).click(handleButton);
-	
-    function handleButton() {
-        playButton.checked = true;
-			  pauseButton.checked = false;
-    };
-});
-
-
 $(document).ready(function() {
     // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
-    let isDebounced = false;
-    const debounceTime = 500;
 
     updateTimeline(activeYear);
+
+    let isDebounced = false;
+    let debounceTimeout;
 
     // Add click event handlers to timeline buttons
     for (let i = 1; i <= 4; i++) {
         $(`#history-${i}`).click(() => {
             if (!isDebounced) {
-                isDebounced = true;
                 updateTimeline(i);
-                setTimeout(() => {
-                    isDebounced = false;
-                }, debounceTime);
+                debounceEvent();
             }
         });
     }
 
     document.addEventListener("keydown", event => {
-        if (isDebounced) return;
-
-        switch (event.code) {
-            case "ArrowLeft":
-                updateTimeline(activeYear - 1);
-                isDebounced = true;
-                setTimeout(() => {
-                    isDebounced = false;
-                }, debounceTime);
-                break;
-        
-            case "ArrowRight":
-                updateTimeline(activeYear + 1);
-                isDebounced = true;
-                setTimeout(() => {
-                    isDebounced = false;
-                }, debounceTime);
-                break;
-
-            default:
-                return;
+        if (!isDebounced) {
+            switch (event.code) {
+                case "ArrowLeft":
+                    updateTimeline(activeYear - 1);
+                    break;
+                
+                case "ArrowRight":
+                    updateTimeline(activeYear + 1);
+                    break;
+            }
+            debounceEvent();
         }
     });
+
+    function debounceEvent() {
+        isDebounced = true;
+        debounceTimeout = setTimeout(() => {
+            isDebounced = false;
+        }, 500); // Adjust the debounce time as needed
+    }
 
     // Function to update the timeline based on the selected year
     function updateTimeline(year) {
@@ -103,3 +73,12 @@ $(document).ready(function() {
     }
 });
 
+// Handle the cookie consent when the document is fully loaded
+document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+        if (!getCookie('purecookieDismiss')) {
+            document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieIcon + '' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
+            pureFadeIn("cookieConsentContainer");
+        }
+    }
+};
