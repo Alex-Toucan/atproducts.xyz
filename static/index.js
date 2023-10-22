@@ -63,7 +63,7 @@ $(document).ready(function() {
                     isDebounced = false;
                 }, debounceTime);
                 break;
-
+        
             case "ArrowRight":
                 updateTimeline(activeYear + 1);
                 isDebounced = true;
@@ -91,7 +91,7 @@ $(document).ready(function() {
         }
 
         setTimeout(() => {
-            $(`#history-${year}-pane`).addClass("show");
+            $(`#history-${year}-pane`).addClass("show");  
         }, 50);
 
         // Update the progress bar width
@@ -102,3 +102,4 @@ $(document).ready(function() {
         activeYear = year;
     }
 });
+
