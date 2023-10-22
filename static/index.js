@@ -32,20 +32,23 @@ $(function () {
 
 
 $(document).ready(function() {
+    // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
+    let isDebounced = false;
+    const debounceTime = 500;
 
     updateTimeline(activeYear);
-
-    const debounce = 500;
-    let isDebounced = false;
-    let debounceTimeout;
 
     // Add click event handlers to timeline buttons
     for (let i = 1; i <= 4; i++) {
         $(`#history-${i}`).click(() => {
-            if (isDebounced) return;
-            updateTimeline(i);
-            debounceTimeout = setTimeout(() => isDebounced = false, debounce);
+            if (!isDebounced) {
+                isDebounced = true;
+                updateTimeline(i);
+                setTimeout(() => {
+                    isDebounced = false;
+                }, debounceTime);
+            }
         });
     }
 
@@ -55,18 +58,23 @@ $(document).ready(function() {
         switch (event.code) {
             case "ArrowLeft":
                 updateTimeline(activeYear - 1);
+                isDebounced = true;
+                setTimeout(() => {
+                    isDebounced = false;
+                }, debounceTime);
                 break;
-        
+
             case "ArrowRight":
                 updateTimeline(activeYear + 1);
+                isDebounced = true;
+                setTimeout(() => {
+                    isDebounced = false;
+                }, debounceTime);
                 break;
 
             default:
                 return;
         }
-
-        isDebounced = true;
-        debounceTimeout = setTimeout(() => isDebounced = false, debounce);
     });
 
     // Function to update the timeline based on the selected year
@@ -83,7 +91,7 @@ $(document).ready(function() {
         }
 
         setTimeout(() => {
-            $(`#history-${year}-pane`).addClass("show");  
+            $(`#history-${year}-pane`).addClass("show");
         }, 50);
 
         // Update the progress bar width
