@@ -30,7 +30,7 @@ $(function () {
     };
 });
 
-$(document).ready(function() {
+function timeline() {
     // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
 
@@ -95,4 +95,4 @@ $(document).ready(function() {
         // Update the active year
         activeYear = year;
     }
-});
+};
