@@ -30,7 +30,7 @@ $(function () {
     };
 });
 
-$(function () {
+$(document).ready(function() {
     // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
 
