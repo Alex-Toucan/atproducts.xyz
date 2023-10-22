@@ -32,20 +32,25 @@ $(function () {
 
 
 $(document).ready(function() {
-    // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
 
     updateTimeline(activeYear);
-
-    // Add click event handlers to timeline buttons
-    for (let i = 1; i <= 4; i++) $(`#history-${i}`).click(() => updateTimeline(i));
 
     const debounce = 500;
     let isDebounced = false;
     let debounceTimeout;
 
+    // Add click event handlers to timeline buttons
+    for (let i = 1; i <= 4; i++) {
+        $(`#history-${i}`).click(() => {
+            if (isDebounced) return;
+            updateTimeline(i);
+            debounceTimeout = setTimeout(() => isDebounced = false, debounce);
+        });
+    }
+
     document.addEventListener("keydown", event => {
-        if(isDebounced) return;
+        if (isDebounced) return;
 
         switch (event.code) {
             case "ArrowLeft":
@@ -64,25 +69,17 @@ $(document).ready(function() {
         debounceTimeout = setTimeout(() => isDebounced = false, debounce);
     });
 
-    document.addEventListener("keyup", event => {
-        if(event.code != "ArrowLeft" && event.code != "ArrowRight") return;
-        if(!debounceTimeout) return;
-
-        debounceTimeout = clearTimeout(debounceTimeout);
-        isDebounced = false;
-    });
-
     // Function to update the timeline based on the selected year
     function updateTimeline(year) {
         // Make sure year is within the min and max
         year = Math.min(Math.max(year, 1), 4);
 
-        if(year == activeYear) return;
+        if (year === activeYear) return;
 
         // Remove the "active" class from all buttons
         for (let i = 1; i <= 4; i++) {
-            $(`#history-${i}`).toggleClass("active", i == year).toggleClass("btn-secondary", i > year).toggleClass("btn-primary", i <= year);
-            $(`#history-${i}-pane`).toggleClass("active", i == year).removeClass("show");
+            $(`#history-${i}`).toggleClass("active", i === year).toggleClass("btn-secondary", i > year).toggleClass("btn-primary", i <= year);
+            $(`#history-${i}-pane`).toggleClass("active", i === year).removeClass("show");
         }
 
         setTimeout(() => {
