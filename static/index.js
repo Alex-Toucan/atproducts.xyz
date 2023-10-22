@@ -30,31 +30,28 @@ $(function () {
     };
 });
 
-$(document).ready(function() {
-    // Your code to run after the DOM is loaded
 
+$(document).ready(function() {
     // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
 
     updateTimeline(activeYear);
 
     // Add click event handlers to timeline buttons
-    for (let i = 1; i <= 4; i++) {
-        $(`#history-${i}`).click(() => updateTimeline(i));
-    }
+    for (let i = 1; i <= 4; i++) $(`#history-${i}`).click(() => updateTimeline(i));
 
     const debounce = 500;
     let isDebounced = false;
     let debounceTimeout;
 
     document.addEventListener("keydown", event => {
-        if (isDebounced) return;
+        if(isDebounced) return;
 
         switch (event.code) {
             case "ArrowLeft":
                 updateTimeline(activeYear - 1);
                 break;
-
+        
             case "ArrowRight":
                 updateTimeline(activeYear + 1);
                 break;
@@ -68,8 +65,8 @@ $(document).ready(function() {
     });
 
     document.addEventListener("keyup", event => {
-        if (event.code != "ArrowLeft" && event.code != "ArrowRight") return;
-        if (!debounceTimeout) return;
+        if(event.code != "ArrowLeft" && event.code != "ArrowRight") return;
+        if(!debounceTimeout) return;
 
         debounceTimeout = clearTimeout(debounceTimeout);
         isDebounced = false;
@@ -80,7 +77,7 @@ $(document).ready(function() {
         // Make sure year is within the min and max
         year = Math.min(Math.max(year, 1), 4);
 
-        if (year == activeYear) return;
+        if(year == activeYear) return;
 
         // Remove the "active" class from all buttons
         for (let i = 1; i <= 4; i++) {
@@ -89,7 +86,7 @@ $(document).ready(function() {
         }
 
         setTimeout(() => {
-            $(`#history-${year}-pane`).addClass("show");
+            $(`#history-${year}-pane`).addClass("show");  
         }, 50);
 
         // Update the progress bar width
