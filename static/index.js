@@ -30,7 +30,7 @@ $(function () {
     };
 });
 
-$(document).ready(function() {
+$(function () {
     // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
 
@@ -96,13 +96,3 @@ $(document).ready(function() {
         activeYear = year;
     }
 });
-
-// Handle the cookie consent when the document is fully loaded
-document.onreadystatechange = function () {
-    if (document.readyState === 'complete') {
-        if (!getCookie('purecookieDismiss')) {
-            document.querySelector('div#page').innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieIcon + '' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>';
-            pureFadeIn("cookieConsentContainer");
-        }
-    }
-};
