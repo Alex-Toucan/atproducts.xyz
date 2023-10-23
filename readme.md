@@ -1,6 +1,5 @@
 <div align="center">
-  <a href="https://atproducts.xyz"><img src="/media/images/readmeicon.png" width="50%" alt="icon"></a>
-<br><br>
+<h1>AT Products LLC</h1>
 <p>
     <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love">
       <a href="https://opensource.org/licenses/MIT" target="_blank">
