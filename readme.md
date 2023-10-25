@@ -17,7 +17,7 @@
   <a href="https://atproducts.xyz">atproducts.xyz</a></div>
 <hr>
 <h2>Contact Links</h2>
-<p>Discord: @alextoucan</p>
+<p>Discord: <a href="https://discord.com/users/905434578926313512">@alextoucan</a></p>
 <p>Twitter: <a href="https://twitter.com/ATProductsLLC">ATProductsLLC</a></p>
 <p>YouTube: <a href="https://youtube.com/c/AlexToucanAT">Alex Toucan -AT-</a></p>
 <p>Email: <a href="mailto:support@atproducts.xyz">support@atproducts.xyz</a></p>
