@@ -4,7 +4,6 @@ var nextButton = document.querySelector(".carousel-control-next");
 var previousButton = document.querySelector(".carousel-control-prev");
 var carouselMain = document.querySelector(".carousel-main");
 var slidebtn = document.querySelectorAll(".slidebtn");
-
 $(function () {
     $(carouselMain).carousel({
         pause: "false",
