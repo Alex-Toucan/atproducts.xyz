@@ -4,7 +4,12 @@ $(document).ready(function() {
         const query = $(this).val().toLowerCase();
         const content = $("#content").text().toLowerCase();
 
-        const results = content.match(new RegExp(query, "g"));
+        const results = [];
+
+        // Search for the query within the content
+        if (content.indexOf(query) !== -1) {
+            results.push(query);
+        }
 
         // Display the search results
         displayResults(results);
@@ -16,7 +21,7 @@ $(document).ready(function() {
 
         searchResults.empty();
 
-        if (results) {
+        if (results.length > 0) {
             results.forEach(function(result) {
                 searchResults.append("<li>" + result + "</li>");
             });
