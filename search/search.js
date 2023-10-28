@@ -1,6 +1,9 @@
 $(document).ready(function() {
     // Get the content to be searched
     const content = $("#content").text().toLowerCase();
+    
+    // Split the content into words
+    const words = content.split(/\s+/);
 
     // Handle the input event in the search bar
     $("#searchInput").on("input", function() {
@@ -8,13 +11,12 @@ $(document).ready(function() {
         const results = [];
 
         if (query) {
-            // Use regular expression to match whole words
-            const regExp = new RegExp("\\b" + query + "\\b", "g");
-            const matches = content.match(regExp);
-
-            if (matches) {
-                results.push(...matches);
-            }
+            // Use a loop to search for words that contain the query
+            words.forEach(function(word) {
+                if (word.includes(query)) {
+                    results.push(word);
+                }
+            });
         }
 
         // Display the search results
