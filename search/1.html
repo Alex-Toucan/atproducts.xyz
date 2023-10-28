@@ -26,8 +26,10 @@
 </div>
           <div class="container">
       <div class="my-5">
-    <input type="text" id="search" class="form-control" placeholder="Search...">
-    <div id="results"></div>
+<div id="search">
+    <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+    <ul id="searchResults"></ul>
+</div>
 </div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -41,31 +43,7 @@
     <script src="/static/scroll.js"></script>
     <script src="/static/purecookie.js"></script>
     <script src="/static/enabler.js"></script>
-  <script id="search-javascript">
-    $(document).ready(function() {
-        // Get the data you want to search through (e.g., a list of items).
-        var data = ["Item 1", "Item 2", "Item 3", "Item 4"];
-
-        // Function to update the search results.
-        function updateResults(query) {
-            var results = data.filter(function(item) {
-                return item.toLowerCase().includes(query.toLowerCase());
-            });
-
-            var resultsHtml = "";
-            for (var i = 0; i < results.length; i++) {
-                resultsHtml += '<p>' + results[i] + '</p>';
-            }
-
-            $("#results").html(resultsHtml);
-        }
-
-        // Listen for input changes in the search bar.
-        $("#search").on("input", function() {
-            var query = $(this).val();
-            updateResults(query);
-        });
-    });
+<script src="/search/search.js"></script>
 </script>
 </body>
 </html>
