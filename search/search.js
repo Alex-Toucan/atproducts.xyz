@@ -14,8 +14,9 @@ $(document).ready(function() {
     function displayResults(results) {
         const searchResults = $("#searchResults");
 
+        searchResults.empty();
+
         if (results) {
-            searchResults.empty();
             results.forEach(function(result) {
                 searchResults.append("<li>" + result + "</li>");
             });
