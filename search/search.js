@@ -1,23 +1,10 @@
 $(document).ready(function() {
-    // Get the content to be searched
-    const content = $("#content").text().toLowerCase();
-    
-    // Split the content into words
-    const words = content.split(/\s+/);
-
     // Handle the input event in the search bar
     $("#searchInput").on("input", function() {
         const query = $(this).val().toLowerCase();
-        const results = [];
+        const content = $("#content").text().toLowerCase();
 
-        if (query) {
-            // Use a loop to search for words that contain the query
-            words.forEach(function(word) {
-                if (word.includes(query)) {
-                    results.push(word);
-                }
-            });
-        }
+        const results = content.match(new RegExp(query, "g"));
 
         // Display the search results
         displayResults(results);
@@ -27,7 +14,7 @@ $(document).ready(function() {
     function displayResults(results) {
         const searchResults = $("#searchResults");
 
-        if (results.length > 0) {
+        if (results) {
             searchResults.empty();
             results.forEach(function(result) {
                 searchResults.append("<li>" + result + "</li>");
