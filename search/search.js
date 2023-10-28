@@ -1,22 +1,20 @@
-// Function to perform the search on the current page
 function performSearch(query) {
     query = query.toLowerCase();
     const results = [];
 
-    // Get all the text content on the page
-    const pageText = $("body").text().toLowerCase();
+    // Get all the text nodes on the page
+    const textNodes = getTextNodesIn(document.body);
 
-    // Find all occurrences of the query in the page text
-    const matches = pageText.match(new RegExp(query, "g"));
-
-    if (matches) {
-        results.push(...matches);
-    }
+    textNodes.forEach(function(node) {
+        const text = node.textContent.toLowerCase();
+        if (text.includes(query)) {
+            results.push(text);
+        }
+    });
 
     return results;
 }
 
-// Function to update the search results list
 function updateSearchResults(results) {
     const resultsList = $("#search-results");
     resultsList.empty();
@@ -28,6 +26,19 @@ function updateSearchResults(results) {
             resultsList.append("<li>" + result + "</li>");
         });
     }
+}
+
+function getTextNodesIn(element) {
+    const textNodes = [];
+    if (element.nodeType === 3) {
+        textNodes.push(element);
+    } else {
+        const children = element.childNodes;
+        for (let i = 0; i < children.length; i++) {
+            textNodes.push(...getTextNodesIn(children[i]));
+        }
+    }
+    return textNodes;
 }
 
 $(document).ready(function() {
