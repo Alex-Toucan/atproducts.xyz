@@ -14,22 +14,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:image" content="/media/favicon/iconembed.png">
         <script src="/static/darkmode.js"></script>
-        <style>
-            /* Optional CSS for styling */
-#content {
-    margin: 20px 0;
-}
-
-#searchResults {
-    list-style: none;
-    padding: 0;
-}
-
-#searchResults li {
-    margin: 5px 0;
-}
-
-            </style>
         </head>
     <style>
         li.icon{display:flex;align-items:center;}
@@ -43,9 +27,17 @@
           <div class="container">
       <div class="my-5">
 <div id="search">
-    <input type="text" id="searchInput" class="form-control" placeholder="Search...">
-    <ul id="searchResults"></ul>
+        <div class="form-group">
+            <input type="text" class="form-control" id="search" placeholder="Search...">
+        </div>
 </div>
+            <ul id="content" class="list-group">
+            <li class="list-group-item">Apple</li>
+            <li class="list-group-item">Banana</li>
+            <li class="list-group-item">Cherry</li>
+            <li class="list-group-item">Grapes</li>
+            <li class="list-group-item">Orange</li>
+        </ul>
 </div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
