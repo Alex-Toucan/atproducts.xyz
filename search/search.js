@@ -1,4 +1,3 @@
-// Wait for the page to load before running the script
 $(document).ready(function() {
     // Get the content to be searched
     const content = $("#content").text().toLowerCase();
@@ -9,13 +8,13 @@ $(document).ready(function() {
         const results = [];
 
         if (query) {
-            // Split the content into words and search for matches
-            const words = content.split(' ');
-            words.forEach(function(word) {
-                if (word.includes(query)) {
-                    results.push(word);
-                }
-            });
+            // Use regular expression to match whole words
+            const regExp = new RegExp("\\b" + query + "\\b", "g");
+            const matches = content.match(regExp);
+
+            if (matches) {
+                results.push(...matches);
+            }
         }
 
         // Display the search results
