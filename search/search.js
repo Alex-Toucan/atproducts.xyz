@@ -28,16 +28,14 @@ function updateSearchResults(results) {
     }
 }
 
-function getTextNodesIn(element) {
+function getTextNodesIn(elements) {
     const textNodes = [];
-    if (element.nodeType === 3) {
-        textNodes.push(element);
-    } else if (element.nodeType === 1 && element.nodeName !== 'SCRIPT') {
-        const children = element.childNodes;
-        for (let i = 0; i < children.length; i++) {
-            textNodes.push(...getTextNodesIn(children[i]));
+    elements.forEach(element => {
+        const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
         }
-    }
+    });
     return textNodes;
 }
 
