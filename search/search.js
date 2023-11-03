@@ -1,7 +1,7 @@
 function performSearch(query) {
     query = query.toLowerCase();
     const results = [];
-    const textNodes = getTextNodesIn(document.querySelector(".searchable"));
+    const textNodes = getTextNodesIn(document.body);
     textNodes.forEach(function(node) {
         const text = node.textContent.toLowerCase();
         if (text.includes(query)) {
