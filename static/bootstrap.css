@@ -17806,12 +17806,9 @@ html.fixedtopnavimage {
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 
-[data-bs-theme=dark] img.footerimg {
-   filter: invert(1);
-}
-
+[data-bs-theme=dark] img.footerimg, 
 [data-bs-theme=dark] img.headerimg {
-   content: url(/media/images/longwhite.png) !important;
+   filter: invert(1);
 }
 
 .permhr {
