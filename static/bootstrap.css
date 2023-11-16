@@ -17795,8 +17795,23 @@ html.fixedtopnavimage {
     padding-top: 7.5px;
 }
 
+.main-navbar {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+
+[data-bs-theme=dark] .main-navbar {
+--bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
 [data-bs-theme=dark] img.footerimg {
    filter: invert(1);
+}
+
+[data-bs-theme=dark] img.headerimg {
+   content: url(/media/images/longwhite.png) !important;
 }
 
 .permhr {
