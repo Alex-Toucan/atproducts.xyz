@@ -20,9 +20,8 @@
   const setTheme = function (theme) {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute('data-bs-theme', 'dark')
-    }
-    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      document.documentElement.setAttribute('data-bs-theme', 'light') /* Please note this is custom to "'light'" instead of "theme" because our site uses color mode dependent features, otherwise redirect yourself to https://2-16-1-2.atproducts.xyz/static/darkmode.js */
+    } else {
+      document.documentElement.setAttribute('data-bs-theme', theme)
     }
   }
 
