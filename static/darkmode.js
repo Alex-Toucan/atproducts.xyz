@@ -21,7 +21,7 @@
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute('data-bs-theme', 'dark')
     } else {
-      document.documentElement.setAttribute('data-bs-theme', 'light') /* Please note this is custom to "'light'" instead of "theme" because our site uses color mode dependent feature, otherwise redirect yourself to https://2-16-1-2.atproducts.xyz/static/darkmode.js */
+      document.documentElement.setAttribute('data-bs-theme', 'light') /* Please note this is custom to "'light'" instead of "theme" because our site uses color mode dependent features, otherwise redirect yourself to https://2-16-1-2.atproducts.xyz/static/darkmode.js */
     }
   }
 
