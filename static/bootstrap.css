@@ -9417,10 +9417,13 @@ textarea.form-control-lg {
   text-transform: capitalize !important;
 }
 
-.text-wrap, .text-wrap .dropdown-item {
+.text-wrap
   white-space: normal !important;
   word-break: break-all;
 }
+
+.white-space-normal, .white-space-normal .dropdown-item {
+  white-space: normal !important;
 
 .text-nowrap {
   white-space: nowrap !important;
