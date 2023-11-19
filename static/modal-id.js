@@ -1,20 +1,20 @@
-// Function to check the hash and show dynamic content in the modal
-function checkHashForModal() {
-  var hash = window.location.hash.substring(1);
+window.onload = function() {
+  // Get the hash value from the URL
+  var hash = window.location.hash;
 
-  if (hash !== '') {
-    $('#modalTitle').text("Modal Title for ID: " + hash); // Set the modal title
-    $('#modalContent').text("Dynamic content for ID: " + hash); // Set the modal content
-    $('#dynamicModal').modal('show'); // Show the modal
+  // Check if the hash exists
+  if (hash) {
+    // Extract the ID from the hash
+    var id = hash.substring(1); // Remove the '#' symbol
+
+    // Find the element by the extracted ID
+    var targetElement = document.getElementById(id);
+
+    // Check if the element exists and if it's a modal
+    if (targetElement && targetElement.classList.contains('modal')) {
+      // Show the modal
+      var modal = new bootstrap.Modal(targetElement);
+      modal.show();
+    }
   }
-}
-
-// Run the function when the page loads
-$(document).ready(function() {
-  checkHashForModal();
-
-  // Check for hash changes
-  $(window).on('hashchange', function() {
-    checkHashForModal();
-  });
-});
+};
