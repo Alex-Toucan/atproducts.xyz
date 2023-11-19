@@ -22,7 +22,13 @@ window.addEventListener('hashchange', function() {
       // Show the modal
       var modal = new bootstrap.Modal(targetElement);
       modal.show();
+
+      // Add 'modal-open' class to the body tag
+      document.body.classList.add('modal-open');
     }
+  } else {
+    // Remove 'modal-open' class from the body tag if no hash is present
+    document.body.classList.remove('modal-open');
   }
 });
 
@@ -35,6 +41,9 @@ window.onload = function() {
     if (targetElement && targetElement.classList.contains('modal')) {
       var modal = new bootstrap.Modal(targetElement);
       modal.show();
+
+      // Add 'modal-open' class to the body tag on initial load
+      document.body.classList.add('modal-open');
     }
   }
 };
