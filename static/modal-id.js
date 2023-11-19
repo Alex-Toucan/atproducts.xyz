@@ -1,4 +1,11 @@
 window.addEventListener('hashchange', function() {
+  // Close any open modal if present
+  var openModal = document.querySelector('.modal.show');
+  if (openModal) {
+    var modalInstance = bootstrap.Modal.getInstance(openModal);
+    modalInstance.hide();
+  }
+
   // Get the updated hash value from the URL
   var hash = window.location.hash;
 
