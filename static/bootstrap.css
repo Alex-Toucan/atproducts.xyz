@@ -9424,6 +9424,7 @@ textarea.form-control-lg {
 
 .white-space-normal, .white-space-normal .dropdown-item {
   white-space: normal !important;
+}
 
 .text-nowrap {
   white-space: nowrap !important;
