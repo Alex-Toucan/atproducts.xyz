@@ -7,8 +7,10 @@ window.onload = function() {
     if (modal) {
       const $modal = $(`#${hash}`);
 
-      if (!$modal.hasClass('show')) {
-        $modal.modal('show'); // Show the modal
+      if ($modal.hasClass('modal')) {
+        if (!$modal.hasClass('show')) {
+          $modal.modal('show'); // Show the modal
+        }
       }
     }
   }
