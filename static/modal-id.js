@@ -1,4 +1,4 @@
-window.addEventListener('hashchange', function() {
+window.addEventListener('hashchange', function(event) {
   // Close any open modal if present
   var openModal = document.querySelector('.modal.show');
   if (openModal) {
@@ -30,6 +30,8 @@ window.addEventListener('hashchange', function() {
     // Remove 'modal-open' class from the body tag if no hash is present
     document.body.classList.remove('modal-open');
   }
+
+  event.stopPropagation(); // Stop event propagation
 });
 
 // Initial check on page load
@@ -47,3 +49,10 @@ window.onload = function() {
     }
   }
 };
+
+// Prevent modal closing when clicking inside the modal content
+document.querySelectorAll('.modal').forEach(function(modal) {
+  modal.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+});
