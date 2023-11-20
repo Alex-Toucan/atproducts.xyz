@@ -16,14 +16,6 @@ window.onload = function() {
 
                 modalElement.classList.add('show'); // Show the new modal
                 document.body.classList.add('modal-open'); // Add class to body
-
-                // Prevent links within the modal from closing it
-                let modalLinks = modalElement.querySelectorAll('a');
-                modalLinks.forEach(link => {
-                    link.addEventListener('click', function(event) {
-                        event.stopPropagation();
-                    });
-                });
             }
         }
     }
