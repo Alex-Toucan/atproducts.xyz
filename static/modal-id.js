@@ -12,25 +12,28 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// Your existing code for handling hash changes
-window.addEventListener('hashchange', function() {
-  var openModal = document.querySelector('.modal.show');
-  if (openModal) {
-    var modalInstance = bootstrap.Modal.getInstance(openModal);
-    modalInstance.hide();
-  }
-
-  var hash = window.location.hash;
-  if (hash) {
-    var id = hash.substring(1);
+// Event listener for clicks on links
+document.addEventListener('click', function(event) {
+  if (event.target.tagName === 'A') {
+    var href = event.target.getAttribute('href');
+    var id = href.substring(1); // Extract ID from href
     var targetElement = document.getElementById(id);
+    
     if (targetElement && targetElement.classList.contains('modal')) {
+      // Prevent default navigation behavior when clicking a link with an ID
+      event.preventDefault();
+
+      var openModal = document.querySelector('.modal.show');
+      if (openModal) {
+        var modalInstance = bootstrap.Modal.getInstance(openModal);
+        modalInstance.hide();
+        document.body.classList.remove('modal-open');
+      }
+
       var modal = new bootstrap.Modal(targetElement);
       modal.show();
       document.body.classList.add('modal-open');
     }
-  } else {
-    document.body.classList.remove('modal-open');
   }
 });
 
@@ -47,3 +50,26 @@ window.onload = function() {
     }
   }
 };
+
+// Your existing code for handling hash changes
+window.addEventListener('hashchange', function() {
+  var openModal = document.querySelector('.modal.show');
+  if (openModal) {
+    var modalInstance = bootstrap.Modal.getInstance(openModal);
+    modalInstance.hide();
+    document.body.classList.remove('modal-open');
+  }
+
+  var hash = window.location.hash;
+  if (hash) {
+    var id = hash.substring(1);
+    var targetElement = document.getElementById(id);
+    if (targetElement && targetElement.classList.contains('modal')) {
+      var modal = new bootstrap.Modal(targetElement);
+      modal.show();
+      document.body.classList.add('modal-open');
+    }
+  } else {
+    document.body.classList.remove('modal-open');
+  }
+});
