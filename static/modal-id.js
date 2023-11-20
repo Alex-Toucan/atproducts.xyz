@@ -3,7 +3,7 @@ window.onload = function() {
     function checkModalIdInURL() {
         let url = window.location.href;
         let modalId = url.split('#')[1]; // Get the modal ID from the URL
-
+        
         if (modalId) {
             let modalElement = document.getElementById(modalId);
 
@@ -16,9 +16,14 @@ window.onload = function() {
 
                 modalElement.classList.add('show'); // Show the new modal
                 document.body.classList.add('modal-open'); // Add class to body
-            } else {
-                // If the hash doesn't match any modal IDs, keep the current modal open (if any)
-                // This section can be adjusted based on specific behavior requirements
+
+                // Prevent links within the modal from closing it
+                let modalLinks = modalElement.querySelectorAll('a');
+                modalLinks.forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        event.stopPropagation();
+                    });
+                });
             }
         }
     }
