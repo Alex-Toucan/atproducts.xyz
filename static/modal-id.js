@@ -17,7 +17,8 @@ window.onload = function() {
                 modalElement.classList.add('show'); // Show the new modal
                 document.body.classList.add('modal-open'); // Add class to body
             } else {
-                // If the hash doesn't match any modal IDs, do nothing
+                // If the hash doesn't match any modal IDs, keep the current modal open (if any)
+                // This section can be adjusted based on specific behavior requirements
             }
         }
     }
