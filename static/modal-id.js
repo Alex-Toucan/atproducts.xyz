@@ -8,14 +8,14 @@ window.onload = function() {
       const $modal = $(`#${hash}`);
 
       if (!$modal.hasClass('show')) {
-        $modal.modal('toggle'); // Toggle the modal visibility
+        $modal.modal('show'); // Show the modal
       }
     }
   }
 
   // Function to close any currently open modal
   function closeModal() {
-    $('#myModal').modal('hide'); // Hide the modal
+    $('.modal').modal('hide'); // Hide any open modal
   }
 
   // Event listener for hash changes to open the modal
