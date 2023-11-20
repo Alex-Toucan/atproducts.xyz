@@ -10,12 +10,6 @@ window.onload = function() {
       if (!$modal.hasClass('show')) {
         $modal.modal('show'); // Show the modal
       }
-    } else {
-      const targetElement = document.getElementById(hash); // Find the element by ID
-
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to the element smoothly
-      }
     }
   }
 
@@ -24,26 +18,31 @@ window.onload = function() {
     $('.modal').modal('hide'); // Hide any open modal
   }
 
-  // Event listener for hash changes to open the modal or scroll to the section
-  window.addEventListener('hashchange', function() {
-    closeModal(); // Close any open modal before opening a new one
-    openModalFromURL(); // Open the modal from the URL hash or scroll to the section
-  });
+  // Function to handle scrolling and update the URL hash for non-modal IDs
+  function handleScroll() {
+    const sections = document.querySelectorAll('[id]:not(.modal)'); // Select all non-modal sections with an ID
+    const scrollPosition = window.scrollY;
 
-  openModalFromURL(); // Call the function when the page loads
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 50; // Adjust scroll position as needed
 
-  // Function to prevent closing modal when clicking on ID links within the modal
-  function preventModalCloseOnInternalLinks() {
-    $('.modal').on('click', 'a[href^="#"]', function(e) {
-      const hash = $(this).attr('href').substring(1); // Get the href hash value
-      const target = document.getElementById(hash); // Find the element by ID
-
-      if (!$(target).closest('.modal').length) {
-        e.preventDefault(); // Prevent the default link behavior
-        window.location.hash = hash; // Change the URL hash without closing the modal
+      if (scrollPosition >= sectionTop) {
+        const hash = section.getAttribute('id');
+        if (hash !== window.location.hash.substring(1)) {
+          history.replaceState(null, null, `#${hash}`); // Update the URL hash without triggering hashchange
+        }
       }
     });
   }
 
-  preventModalCloseOnInternalLinks(); // Call the function to prevent modal close on internal links
+  // Event listener for hash changes to open the modal
+  window.addEventListener('hashchange', function() {
+    closeModal(); // Close any open modal before opening a new one
+    openModalFromURL(); // Open the modal from the URL hash
+  });
+
+  // Event listener for scroll to update URL for non-modal IDs
+  window.addEventListener('scroll', handleScroll);
+
+  openModalFromURL(); // Call the function when the page loads
 };
