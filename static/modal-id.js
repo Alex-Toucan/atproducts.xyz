@@ -5,13 +5,25 @@ window.onload = function() {
     const modal = document.getElementById(hash); // Find the modal by ID
 
     if (modal) {
-      $('body').addClass('modal-open'); // Add the modal-open class to the body
-      $(`#${hash}`).modal('show'); // Show the modal
+      const $modal = $(`#${hash}`);
+
+      if (!$modal.hasClass('show')) {
+        $modal.modal('toggle'); // Toggle the modal visibility
+        $('.modal-backdrop').remove(); // Remove any existing backdrop
+      }
     }
   }
 
+  // Function to close any currently open modal
+  function closeModal() {
+    $('#myModal').modal('hide'); // Hide the modal
+  }
+
   // Event listener for hash changes to open the modal
-  window.addEventListener('hashchange', openModalFromURL);
+  window.addEventListener('hashchange', function() {
+    closeModal(); // Close any open modal before opening a new one
+    openModalFromURL(); // Open the modal from the URL hash
+  });
 
   openModalFromURL(); // Call the function when the page loads
 
