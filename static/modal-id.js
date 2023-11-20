@@ -16,27 +16,15 @@ window.onload = function() {
 
                 modalElement.classList.add('show'); // Show the new modal
                 document.body.classList.add('modal-open'); // Add class to body
-
-                // Get all links inside the modal
-                let modalLinks = modalElement.querySelectorAll('a');
-                modalLinks.forEach(link => {
-                    // Add an event listener to prevent link clicks from closing the modal
-                    link.addEventListener('click', function(event) {
-                        event.stopPropagation(); // Prevent the click event from bubbling up
-                    });
-                });
             }
         }
     }
 
-    // Function to check the modal on hashchange event
-    function checkModalOnHashChange() {
+    // Function to handle hash change events
+    window.addEventListener('hashchange', function() {
         checkModalIdInURL();
-    }
+    });
 
     // Check if there's a modal ID in the URL when the page loads
     checkModalIdInURL();
-
-    // Handle hash changes to check the modal
-    window.addEventListener('hashchange', checkModalOnHashChange);
 };
