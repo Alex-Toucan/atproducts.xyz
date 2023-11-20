@@ -1,4 +1,7 @@
 window.onload = function() {
+  // Variable to track if the hash change is due to modal interaction
+  let isModalChange = false;
+
   // Function to open the modal if the URL contains a modal ID
   function openModalFromURL() {
     const hash = window.location.hash.substring(1); // Get the hash from the URL
@@ -9,15 +12,18 @@ window.onload = function() {
 
       if ($modal.hasClass('modal')) {
         if (!$modal.hasClass('show')) {
+          isModalChange = true; // Set flag to true to indicate modal change
           $modal.modal('show'); // Show the modal
         }
       }
     } else {
       const targetElement = document.getElementById(hash); // Find the element by ID
 
-      if (targetElement) {
+      if (targetElement && !isModalChange) {
         targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to the element smoothly
       }
+
+      isModalChange = false; // Reset the flag
     }
   }
 
