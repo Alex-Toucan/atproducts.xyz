@@ -16,21 +16,16 @@ window.onload = function() {
   // Open modal on page load if hash present
   openModalFromHash();
 
-  // Handle clicks on links within modals
-  $('.modal').on('click', 'a[href^="#"]', function(e) {
+  // Handle clicks on links within modals and URL hash changes
+  $(document).on('click', 'a[href^="#"]', function(e) {
     const hash = $(this).attr('href');
     const targetModal = $(hash);
-    if (targetModal.length && targetModal.hasClass('modal')) {
+    const modal = $(hash);
+
+    if (modal.length && modal.hasClass('modal')) {
       e.preventDefault();
       window.location.hash = hash;
-    }
-  });
-
-  // Handle case when ID in URL doesn't match a modal
-  $(document).on('click', 'a[href^="#"]', function() {
-    const hash = $(this).attr('href');
-    const modal = $(hash);
-    if (!modal.length || !modal.hasClass('modal')) {
+    } else if (!modal.length || !modal.hasClass('modal')) {
       window.location.hash = ''; // Clear hash to close modal
     }
   });
