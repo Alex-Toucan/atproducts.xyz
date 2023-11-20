@@ -1,10 +1,10 @@
-window.onload = function() {
+$(document).ready(function() {
   // Function to check if the hash matches any modal and open it
   function openModalFromHash() {
     const hash = window.location.hash;
     if (hash !== '') {
-      const modal = document.querySelector(hash);
-      if (modal && modal.classList.contains('modal')) {
+      const modal = $(hash);
+      if (modal.length && modal.hasClass('modal')) {
         $('.modal').modal('hide'); // Close any open modal
         $('body').addClass('modal-open');
         $(hash).modal('show');
@@ -13,7 +13,7 @@ window.onload = function() {
   }
 
   // Event listener for hash changes
-  window.addEventListener('hashchange', openModalFromHash);
+  $(window).on('hashchange', openModalFromHash);
 
   // Open modal on page load if hash present
   openModalFromHash();
@@ -30,4 +30,4 @@ window.onload = function() {
       window.location.hash = ''; // Clear hash to close modal
     }
   });
-};
+});
