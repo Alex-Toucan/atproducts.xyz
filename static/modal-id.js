@@ -1,29 +1,21 @@
 window.onload = function() {
-  // Variable to track if the hash change is due to modal interaction
-  let isModalChange = false;
-
   // Function to open the modal if the URL contains a modal ID
   function openModalFromURL() {
     const hash = window.location.hash.substring(1); // Get the hash from the URL
-    const modal = document.getElementById(hash); // Find the modal by ID
 
-    if (modal) {
+    const modal = document.getElementById(hash); // Find the modal by ID
+    if (modal && $(modal).hasClass('modal')) {
       const $modal = $(`#${hash}`);
 
-      if ($modal.hasClass('modal')) {
-        if (!$modal.hasClass('show')) {
-          isModalChange = true; // Set flag to true to indicate modal change
-          $modal.modal('show'); // Show the modal
-        }
+      if (!$modal.hasClass('show')) {
+        $modal.modal('show'); // Show the modal
       }
     } else {
       const targetElement = document.getElementById(hash); // Find the element by ID
 
-      if (targetElement && !isModalChange) {
+      if (targetElement) {
         targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to the element smoothly
       }
-
-      isModalChange = false; // Reset the flag
     }
   }
 
@@ -32,10 +24,10 @@ window.onload = function() {
     $('.modal').modal('hide'); // Hide any open modal
   }
 
-  // Event listener for hash changes to open the modal
+  // Event listener for hash changes to open the modal or scroll to the section
   window.addEventListener('hashchange', function() {
     closeModal(); // Close any open modal before opening a new one
-    openModalFromURL(); // Open the modal from the URL hash
+    openModalFromURL(); // Open the modal from the URL hash or scroll to the section
   });
 
   openModalFromURL(); // Call the function when the page loads
