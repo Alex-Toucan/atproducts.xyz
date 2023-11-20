@@ -15,9 +15,21 @@ window.addEventListener('hashchange', function() {
       var modal = new bootstrap.Modal(targetElement);
       modal.show();
       document.body.classList.add('modal-open');
+
+      // Prevent links within this modal from closing it if their ID doesn't match any modal IDs
+      var modalLinks = targetElement.querySelectorAll('a');
+      modalLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          var linkId = event.target.getAttribute('id');
+          var isModalId = document.getElementById(linkId);
+
+          if (!isModalId || !isModalId.classList.contains('modal')) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+        });
+      });
     } else {
-      // If the hash doesn't match any modal IDs, maintain the current modal state
-      // This ensures it doesn't interfere with other modals
       var modalToKeepOpen = document.querySelector('.modal.show');
       if (modalToKeepOpen) {
         document.body.classList.add('modal-open');
@@ -39,13 +51,20 @@ window.onload = function() {
       var modal = new bootstrap.Modal(targetElement);
       modal.show();
       document.body.classList.add('modal-open');
+
+      // Prevent links within this modal from closing it if their ID doesn't match any modal IDs
+      var modalLinks = targetElement.querySelectorAll('a');
+      modalLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          var linkId = event.target.getAttribute('id');
+          var isModalId = document.getElementById(linkId);
+
+          if (!isModalId || !isModalId.classList.contains('modal')) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+        });
+      });
     }
   }
 };
-
-// Prevent links within modals from closing them
-document.querySelectorAll('.modal a').forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevent the click event from bubbling up
-  });
-});
