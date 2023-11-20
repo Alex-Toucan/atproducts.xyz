@@ -21,8 +21,9 @@ window.onload = function() {
       const hash = $(this).attr('href').substring(1); // Get the href hash value
       const target = document.getElementById(hash); // Find the element by ID
 
-      if (target && !$(target).hasClass('modal')) {
-        e.stopPropagation(); // Prevent modal from closing
+      if (!$(target).closest('.modal').length) {
+        e.preventDefault(); // Prevent the default link behavior
+        window.location.hash = hash; // Change the URL hash without closing the modal
       }
     });
   }
