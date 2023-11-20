@@ -2,11 +2,13 @@ window.onload = function() {
   // Function to check if the hash matches any modal and open it
   function openModalFromHash() {
     const hash = window.location.hash;
-    const modal = document.querySelector(hash);
-    if (modal && modal.classList.contains('modal')) {
-      $('.modal').modal('hide'); // Close any open modal
-      $('body').addClass('modal-open');
-      $(hash).modal('show');
+    if (hash !== '') {
+      const modal = document.querySelector(hash);
+      if (modal && modal.classList.contains('modal')) {
+        $('.modal').modal('hide'); // Close any open modal
+        $('body').addClass('modal-open');
+        $(hash).modal('show');
+      }
     }
   }
 
@@ -19,7 +21,6 @@ window.onload = function() {
   // Handle clicks on links within modals and URL hash changes
   $(document).on('click', 'a[href^="#"]', function(e) {
     const hash = $(this).attr('href');
-    const targetModal = $(hash);
     const modal = $(hash);
 
     if (modal.length && modal.hasClass('modal')) {
