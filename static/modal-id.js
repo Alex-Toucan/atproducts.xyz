@@ -1,70 +1,31 @@
-window.addEventListener('hashchange', function() {
-  var hash = window.location.hash;
-
-  var openModal = document.querySelector('.modal.show');
-  if (openModal) {
-    var modalInstance = bootstrap.Modal.getInstance(openModal);
-    modalInstance.hide();
-  }
-
-  if (hash) {
-    var id = hash.substring(1);
-    var targetElement = document.getElementById(id);
-
-    if (targetElement && targetElement.classList.contains('modal')) {
-      var modal = new bootstrap.Modal(targetElement);
-      modal.show();
-      document.body.classList.add('modal-open');
-
-      // Prevent links within this modal from closing it if their ID doesn't match any modal IDs
-      var modalLinks = targetElement.querySelectorAll('a');
-      modalLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-          var linkId = event.target.getAttribute('id');
-          var isModalId = document.getElementById(linkId);
-
-          if (!isModalId || !isModalId.classList.contains('modal')) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-        });
-      });
-    } else {
-      var modalToKeepOpen = document.querySelector('.modal.show');
-      if (modalToKeepOpen) {
-        document.body.classList.add('modal-open');
-      } else {
-        document.body.classList.remove('modal-open');
-      }
-    }
-  } else {
-    document.body.classList.remove('modal-open');
-  }
-});
-
 window.onload = function() {
-  var hash = window.location.hash;
-  if (hash) {
-    var id = hash.substring(1);
-    var targetElement = document.getElementById(id);
-    if (targetElement && targetElement.classList.contains('modal')) {
-      var modal = new bootstrap.Modal(targetElement);
-      modal.show();
-      document.body.classList.add('modal-open');
+  // Function to open the modal if the URL contains a modal ID
+  function openModalFromURL() {
+    const hash = window.location.hash.substring(1); // Get the hash from the URL
+    const modal = document.getElementById(hash); // Find the modal by ID
 
-      // Prevent links within this modal from closing it if their ID doesn't match any modal IDs
-      var modalLinks = targetElement.querySelectorAll('a');
-      modalLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-          var linkId = event.target.getAttribute('id');
-          var isModalId = document.getElementById(linkId);
-
-          if (!isModalId || !isModalId.classList.contains('modal')) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-        });
-      });
+    if (modal) {
+      $('body').addClass('modal-open'); // Add the modal-open class to the body
+      $(`#${hash}`).modal('show'); // Show the modal
     }
   }
+
+  // Event listener for hash changes to open the modal
+  window.addEventListener('hashchange', openModalFromURL);
+
+  openModalFromURL(); // Call the function when the page loads
+
+  // Function to prevent closing modal when clicking on ID links within the modal
+  function preventModalCloseOnInternalLinks() {
+    $('.modal').on('click', 'a[href^="#"]', function(e) {
+      const hash = $(this).attr('href').substring(1); // Get the href hash value
+      const target = document.getElementById(hash); // Find the element by ID
+
+      if (target && !$(target).hasClass('modal')) {
+        e.stopPropagation(); // Prevent modal from closing
+      }
+    });
+  }
+
+  preventModalCloseOnInternalLinks(); // Call the function to prevent modal close on internal links
 };
