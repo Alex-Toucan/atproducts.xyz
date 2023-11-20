@@ -25,6 +25,14 @@ window.addEventListener('hashchange', function() {
 
       // Add 'modal-open' class to the body tag
       document.body.classList.add('modal-open');
+
+      // Prevent links within the modal from closing it
+      var modalLinks = targetElement.querySelectorAll('a');
+      modalLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          event.stopPropagation(); // Prevent the click event from bubbling up
+        });
+      });
     }
   } else {
     // Remove 'modal-open' class from the body tag if no hash is present
@@ -44,6 +52,14 @@ window.onload = function() {
 
       // Add 'modal-open' class to the body tag on initial load
       document.body.classList.add('modal-open');
+
+      // Prevent links within the modal from closing it
+      var modalLinks = targetElement.querySelectorAll('a');
+      modalLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          event.stopPropagation(); // Prevent the click event from bubbling up
+        });
+      });
     }
   }
 };
