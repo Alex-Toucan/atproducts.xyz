@@ -12,6 +12,12 @@ window.onload = function() {
           $modal.modal('show'); // Show the modal
         }
       }
+    } else {
+      const targetElement = document.getElementById(hash); // Find the element by ID
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to the element smoothly
+      }
     }
   }
 
