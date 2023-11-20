@@ -1,75 +1,30 @@
-// Event listener for close buttons within modals
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('modal-close')) {
-    var openModal = document.querySelector('.modal.show');
-    if (openModal) {
-      var modalInstance = bootstrap.Modal.getInstance(openModal);
-      modalInstance.hide();
-
-      // Remove 'modal-open' class when a modal is closed via close button
-      document.body.classList.remove('modal-open');
-    }
-  }
-});
-
-// Event listener for clicks on links
-document.addEventListener('click', function(event) {
-  if (event.target.tagName === 'A') {
-    var href = event.target.getAttribute('href');
-    var id = href.substring(1); // Extract ID from href
-    var targetElement = document.getElementById(id);
-    
-    if (targetElement && targetElement.classList.contains('modal')) {
-      // Prevent default navigation behavior when clicking a link with an ID
-      event.preventDefault();
-
-      var openModal = document.querySelector('.modal.show');
-      if (openModal) {
-        var modalInstance = bootstrap.Modal.getInstance(openModal);
-        modalInstance.hide();
-        document.body.classList.remove('modal-open');
-      }
-
-      var modal = new bootstrap.Modal(targetElement);
-      modal.show();
-      document.body.classList.add('modal-open');
-    }
-  }
-});
-
-// Your existing code for initial check on page load
 window.onload = function() {
-  var hash = window.location.hash;
-  if (hash) {
-    var id = hash.substring(1);
-    var targetElement = document.getElementById(id);
-    if (targetElement && targetElement.classList.contains('modal')) {
-      var modal = new bootstrap.Modal(targetElement);
-      modal.show();
-      document.body.classList.add('modal-open');
+    // Function to check if the current URL contains a modal ID
+    function checkModalIdInURL() {
+        let url = window.location.href;
+        let modalId = url.split('#')[1]; // Get the modal ID from the URL
+        
+        if (modalId) {
+            let modalElement = document.getElementById(modalId);
+
+            if (modalElement && modalElement.classList.contains('modal')) {
+                let openModal = document.querySelector('.modal.show');
+                if (openModal) {
+                    openModal.classList.remove('show'); // Close the current open modal
+                    document.body.classList.remove('modal-open'); // Remove class from body
+                }
+
+                modalElement.classList.add('show'); // Show the new modal
+                document.body.classList.add('modal-open'); // Add class to body
+            }
+        }
     }
-  }
+
+    // Function to handle hash change events
+    window.addEventListener('hashchange', function() {
+        checkModalIdInURL();
+    });
+
+    // Check if there's a modal ID in the URL when the page loads
+    checkModalIdInURL();
 };
-
-// Your existing code for handling hash changes
-window.addEventListener('hashchange', function() {
-  var openModal = document.querySelector('.modal.show');
-  if (openModal) {
-    var modalInstance = bootstrap.Modal.getInstance(openModal);
-    modalInstance.hide();
-    document.body.classList.remove('modal-open');
-  }
-
-  var hash = window.location.hash;
-  if (hash) {
-    var id = hash.substring(1);
-    var targetElement = document.getElementById(id);
-    if (targetElement && targetElement.classList.contains('modal')) {
-      var modal = new bootstrap.Modal(targetElement);
-      modal.show();
-      document.body.classList.add('modal-open');
-    }
-  } else {
-    document.body.classList.remove('modal-open');
-  }
-});
