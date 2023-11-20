@@ -9,7 +9,6 @@ window.onload = function() {
 
       if (!$modal.hasClass('show')) {
         $modal.modal('toggle'); // Toggle the modal visibility
-        $('.modal-backdrop').remove(); // Remove any existing backdrop
       }
     }
   }
