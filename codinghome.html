@@ -563,12 +563,12 @@ print(type(y))</code></p>
         <div class="d-md-flex">
           <div class="col-md-4 mt-1 mb-2 pe-md-1">
     <div id="cppblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#strings-5">Strings</a>
-      <a class="list-group-item list-group-item-action" href="#integers-5">Integers and Floating Point Numbers</a>
-      <a class="list-group-item list-group-item-action" href="#print-5">Print</a>
+      <a class="list-group-item list-group-item-action" href="#strings-4">Strings</a>
+      <a class="list-group-item list-group-item-action" href="#integers-4">Integers and Floating Point Numbers</a>
+      <a class="list-group-item list-group-item-action" href="#print-4">Print</a>
             </div></div><div class="col-md my-1 mb-1">
 <div data-bs-spy="scroll" data-bs-target="#cppblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="strings-5">
+<div id="strings-4">
 <h4>Strings</h4>
 <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
 <p><code>
@@ -581,7 +581,7 @@ int main()<br>
 }
   </code></p>
 </div>
-<div id="integers-5">
+<div id="integers-4">
 <h4>Integers and Floating Point Numbers</h4>
 <p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple.</p>
 <p><code>
@@ -595,7 +595,7 @@ int main()<br>
 }
       </code></p>
 </div>
-<div id="print-5">
+<div id="print-4">
 <h4>Print</h4>
           <p> Printing an output to the terminal/console or whatever you want to call it. </p>
 <p><code>
@@ -762,16 +762,17 @@ commenHere = True<br>
 <div class="d-md-flex">
           <div class="col-md-4 mt-1 mb-2 pe-md-1">
     <div id="cssblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#example-4">Example Document</a>
-      <a class="list-group-item list-group-item-action" href="#rules-4">CSS Rulesets</a>
-      <a class="list-group-item list-group-item-action" href="#text-4">Text Elements</a>
-      <a class="list-group-item list-group-item-action" href="#pad-4">Padding Elements</a>
-      <a class="list-group-item list-group-item-action" href="#color-4">Color Elements</a>
-      <a class="list-group-item list-group-item-action" href="#com-4">Comments</a>
-            <a class="list-group-item list-group-item-action" href="#eci-4">Extra: Centering Images</a>
+      <a class="list-group-item list-group-item-action" href="#example-5">Example Document</a>
+      <a class="list-group-item list-group-item-action" href="#rules-5">CSS Rulesets</a>
+      <a class="list-group-item list-group-item-action" href="#classes-5">Classes</a>
+      <a class="list-group-item list-group-item-action" href="#text-5">Text Elements</a>
+      <a class="list-group-item list-group-item-action" href="#pad-5">Padding Elements</a>
+      <a class="list-group-item list-group-item-action" href="#color-5">Color Elements</a>
+      <a class="list-group-item list-group-item-action" href="#com-5">Comments</a>
+            <a class="list-group-item list-group-item-action" href="#eci-5">Extra: Centering Images</a>
             </div></div><div class="col-md my-1 mb-1">
 <div data-bs-spy="scroll" data-bs-target="#cssblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="example-4">
+<div id="example-5">
 <h4>Example Document</h4>
 <code>
 h1 {<br>
@@ -784,12 +785,12 @@ h1 {<br>
 <code>&lt;p style="font-size:10px"&gt;</code>
 <p>To put CSS files in HTML, use... <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
 </div>
-<div id="rules-4">
+<div id="rules-5">
 <h4>CSS Rulesets</h4>
 <p>
-</p><div class="d-flex"><div class="col-2"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p { </code></div></div></div>
-<div class="d-flex"><div class="col-2"><p>Property</p></div><div class="col"><div class="me-auto"><code class="position-static">&nbsp;&nbsp;color: red; </code></div></div></div>
-<div class="d-flex"><div class="col-2"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">}</code></div></div></div>  
+</p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p { </code></div></div></div>
+<div class="d-flex"><div class="col-4"><p>Property</p></div><div class="col"><div class="me-auto"><code class="position-static">&nbsp;&nbsp;color: red; </code></div></div></div>
+<div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">}</code></div></div></div>  
 <p></p>
 <p><b>Properties</b> - With these, you can style a HTML element, like for example; color. <br>
 <b>Property Value</b> - This chooses one of the possible options for a given property, like red for color.</p>
@@ -805,7 +806,16 @@ h1, h4, h6, h2 {<br>
 &nbsp;&nbsp;color: red;<br>
 }</code></p>
 </div>
-<div id="text-4">
+        <div id="classes-5">
+        <h4>Classes</h4>
+        <p>Think of classes like custom HTML elements, they can be applied in html like <code>&lt;p class="text-red"&gt;</code></p>
+        <p>Classes begin with a dot or period (.) to begin the selector.</p>
+        <code>
+.text-red{<br>
+&nbsp;&nbsp;color: red;<br>
+}</code>
+      </div>
+<div id="text-5">
 <h4>Text Elements</h4><p>
 <code>font-size: 10px;</code> - Text size, can be in pixels.<br>
 <code>font-family: verdana;</code> - Fonts<br>
@@ -813,7 +823,7 @@ h1, h4, h6, h2 {<br>
 <code>text-shadow: 3px black</code> - Shadow of text. Can be in pixels and colors.
 </p>
 </div>
-<div id="pad-4">
+<div id="pad-5">
 <h4>Padding Elements</h4>
 <p>
 <code>padding-top: 50px;</code> - Separation. Can be top, left, right, and the bottom in pixels.<br>
@@ -822,12 +832,12 @@ h1, h4, h6, h2 {<br>
 <code>border-style: dotted;</code> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
 <code>width=500px;</code> - Width of the element. Can be pixels or percentages.</p>
 </div>
-<div id="color-4">
+<div id="color-5">
 <h4>Color Elements</h4>
 <p><code>color: red;</code> - Color of the element, can be hexadecimal, or RGB.<br>
 <code>background-color: white;</code> - Background color of the element.</p>
 </div>
-<div id="com-4">
+<div id="com-5">
   <h4>Comments</h4>
 <p>Comments are commonly used to explain the code, and may help when you edit the source code at a later date, and are ignored by browsers.
 <br><br>
@@ -838,7 +848,7 @@ A CSS comment starts with <code>/*</code> and ends with <code>*/</code>, and no 
 a multi-line<br>
     comment */</code></p>
         </div>
-<div id="eci-4">
+<div id="eci-5">
 <h4>Extra: Centering Images</h4>
 <code>img {<br>
 &nbsp;&nbsp;margin: 0 auto;<br>
