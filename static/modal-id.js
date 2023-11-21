@@ -13,10 +13,16 @@ $(document).ready(function() {
   }
 
   // Event listener for hash changes
-  $(window).on('hashchange', openModalFromHash);
+  $(window).on('hashchange', function() {
+    if ($('.modal.show').length === 0) {
+      openModalFromHash();
+    }
+  });
 
   // Open modal on page load if hash present
-  openModalFromHash();
+  if ($('.modal.show').length === 0) {
+    openModalFromHash();
+  }
 
   // Handle clicks on links within modals and URL hash changes
   $(document).on('click', 'a[href^="#"]', function(e) {
@@ -28,7 +34,7 @@ $(document).ready(function() {
     } else if (modal.length && modal.hasClass('modal') && !modal.hasClass('show')) {
       e.preventDefault();
       window.location.hash = hash;
-    } else {
+    } else if (!modal.length || !modal.hasClass('modal')) {
       window.location.hash = ''; // Clear hash to close modal
     }
   });
