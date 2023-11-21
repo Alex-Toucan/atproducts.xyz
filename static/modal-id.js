@@ -26,8 +26,16 @@ $(document).ready(function() {
     if (modal.length && modal.hasClass('modal')) {
       e.preventDefault();
       window.location.hash = hash;
-    } else if (!modal.length || !modal.hasClass('modal')) {
-      window.location.hash = ''; // Clear hash to close modal
-    }
+    } // Else removed
+  });
+
+  // Add modal-open class to body when modal is shown
+  $(document).on('shown.bs.modal', '.modal', function() {
+    $('body').addClass('modal-open');
+  });
+
+  // Remove modal-open class from body when modal is hidden
+  $(document).on('hidden.bs.modal', '.modal', function() {
+    $('body').removeClass('modal-open');
   });
 });
