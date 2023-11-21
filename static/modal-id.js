@@ -4,10 +4,10 @@ $(document).ready(function() {
     const hash = window.location.hash;
     if (hash !== '') {
       const modal = $(hash);
-      if (modal.length && modal.hasClass('modal')) {
+      if (modal.length && modal.hasClass('modal') && !modal.hasClass('show')) {
         $('.modal').modal('hide'); // Close any open modal
         $('body').addClass('modal-open');
-        $(hash).modal('show');
+        modal.modal('show');
       }
     }
   }
@@ -23,10 +23,14 @@ $(document).ready(function() {
     const hash = $(this).attr('href');
     const modal = $(hash);
 
-    if (modal.length && modal.hasClass('modal')) {
+    if (modal.length && modal.hasClass('modal') && modal.hasClass('show')) {
+      e.preventDefault();
+    } else if (modal.length && modal.hasClass('modal') && !modal.hasClass('show')) {
       e.preventDefault();
       window.location.hash = hash;
-    } // Else removed
+    } else {
+      window.location.hash = ''; // Clear hash to close modal
+    }
   });
 
   // Add modal-open class to body when modal is shown
