@@ -204,6 +204,10 @@
 		background-color: rgba(0, 0, 0, 0.6);
 }
 
+.hero-filter {
+  filter: drop-shadow(2px 4px 6px black)
+}
+
 .hero-web {
     background: url('/media/images/hero-web.webp');
 }
