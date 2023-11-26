@@ -2,7 +2,7 @@ $(document).ready(function() {
   // Function to open the accordion based on hash change and scroll to it
   function openAccordionFromHash() {
     var hash = window.location.hash;
-    if (hash !== '') {
+    if (hash !== '' && $('.modal.show').length === 0) {
       var $accordionSection = $(hash);
       if ($accordionSection.length && $accordionSection.hasClass('accordion-collapse') && !$accordionSection.hasClass('show')) {
         $('.accordion-collapse').removeClass('show'); // Close all accordion sections
@@ -29,4 +29,17 @@ $(document).ready(function() {
 
   // Initial execution to open accordion based on hash
   openAccordionFromHash();
+
+  // Prevent scrolling when a modal is open
+  $(document).on('show.bs.modal', '.modal', function() {
+    if (!$('body').hasClass('modal-open')) {
+      /* nothing here */
+    }
+    else {
+      var $heading = $(this).find('.accordion-button'); // Find the accordion button within the modal
+      if ($heading.length) {
+        var offset = $heading.offset().top - 100; // Adjust the offset as needed
+      }
+    }
+  });
 });
