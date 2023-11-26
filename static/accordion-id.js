@@ -7,7 +7,8 @@ $(document).ready(function() {
       $('.accordion-button').addClass('collapsed').attr('aria-expanded', 'false'); // Reset all accordion buttons
 
       $(hash).addClass('show'); // Open the accordion section corresponding to the hash
-      $(hash + 'Heading').find('.accordion-button').removeClass('collapsed').attr('aria-expanded', 'true'); // Update attributes for the specific accordion button
+      var $heading = $(hash).prev('.accordion-header');
+      $heading.find('.accordion-button').removeClass('collapsed').attr('aria-expanded', 'true'); // Update attributes for the specific accordion button
 
       // Scroll to the opened accordion section with an offset from the top
       var offsetTop = $(hash).offset().top;
