@@ -5,12 +5,10 @@ $(document).ready(function() {
     if (hash !== '') {
       $('.accordion-collapse').removeClass('show'); // Close all accordion sections
       $(hash).addClass('show'); // Open the accordion section corresponding to the hash
-      
-      // Scroll to the opened accordion section
-      var accordionSection = $(hash)[0];
-      if (accordionSection) {
-        accordionSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+
+      // Scroll to the opened accordion section with an offset from the top
+      var offsetTop = $(hash).offset().top;
+      $('html, body').animate({ scrollTop: offsetTop - 50 }, 'slow');
     }
   }
 
