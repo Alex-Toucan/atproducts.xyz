@@ -43,16 +43,4 @@ $(document).ready(function() {
   // Initial execution to open accordion based on hash
   openAccordionFromHash();
 
-  // Prevent scrolling when a modal is open
-  $(document).on('show.bs.modal', '.modal', function() {
-    if (!$('body').hasClass('modal-open')) {
-      /* nothing here */
-    }
-    else {
-      var $heading = $(this).find('.accordion-button'); // Find the accordion button within the modal
-      if ($heading.length) {
-        var offset = $heading.offset().top - 100; // Adjust the offset as needed
-      }
-    }
-  });
 });
