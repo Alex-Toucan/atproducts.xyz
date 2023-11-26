@@ -41,9 +41,7 @@ $(document).ready(function() {
   }, 1000); // Adjust delay as needed (milliseconds)
 
   // Initial execution to open accordion based on hash
-  $(window).on('hashchange', function() {
     openAccordionFromHash();
-  });
 
   // Prevent scrolling when a modal is open
   $(document).on('show.bs.modal', '.modal', function() {
