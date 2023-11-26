@@ -1,11 +1,16 @@
 $(document).ready(function() {
-  // Function to open the accordion based on hash change
+  // Function to open the accordion based on hash change and scroll to it
   function openAccordionFromHash() {
     var hash = window.location.hash;
     if (hash !== '') {
-      $('.accordion-button').addClass('collapsed');
-      $('.accordion-collapse').removeClass('show');
-      $(hash).collapse('show');
+      $('.accordion-collapse').removeClass('show'); // Close all accordion sections
+      $(hash).addClass('show'); // Open the accordion section corresponding to the hash
+      
+      // Scroll to the opened accordion section
+      var accordionSection = document.querySelector(hash);
+      if (accordionSection) {
+        accordionSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }
 
