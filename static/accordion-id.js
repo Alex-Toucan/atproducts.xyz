@@ -1,13 +1,13 @@
 $(document).ready(function() {
-  function openAccordionFromHash() {
+  function openElementFromHash() {
     const hash = window.location.hash;
-    if (hash !== '' && hash.startsWith('#accordion')) {
-      const accordionId = hash.substr(1);
-      $(accordionId).collapse('show');
+    if (hash !== '') {
+      const elementId = hash.substr(1);
+      $(`#${elementId}`).show(); // Show the element directly
     }
   }
 
-  openAccordionFromHash();
+  openElementFromHash();
 
-  $(window).on('hashchange', openAccordionFromHash);
+  $(window).on('hashchange', openElementFromHash);
 });
