@@ -41,7 +41,7 @@ $(document).ready(function() {
       if (accordionItem.length) {
         const accordionOffset = accordionItem.offset().top - 50; // Adjust the offset as needed
         if ($(window).scrollTop() > 100 && $(window).scrollTop() < accordionOffset) {
-          $('html, body').stop().animate({
+          $('html, body').animate({
             scrollTop: accordionOffset
           }, 500);
         }
@@ -52,14 +52,9 @@ $(document).ready(function() {
   // Detect user-initiated scroll
   $(window).on('wheel', function() {
     isUserScrolling = true;
-  });
-
-  // Reset user scroll flag after a short delay to allow automated scrolling
-  $(window).on('scroll', function() {
-    clearTimeout($.data(this, 'scrollTimer'));
-    $.data(this, 'scrollTimer', setTimeout(function() {
+    setTimeout(function() {
       isUserScrolling = false;
-    }, 250));
+    }, 100);
   });
 
   // Reset padding-right for .navbar when accordion is fully shown
