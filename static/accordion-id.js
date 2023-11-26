@@ -5,6 +5,14 @@ $(document).ready(function() {
     if (hash !== '' && hash.startsWith('#accordion')) {
       const accordionId = hash.substr(1);
       $(accordionId).collapse('show');
+
+      // Check if the accordion is inside a modal and open the modal if necessary
+      const modal = $(accordionId).closest('.modal');
+      if (modal.length && !modal.hasClass('show')) {
+        $('.modal').modal('hide'); // Close any open modal
+        $('body').addClass('modal-open');
+        modal.modal('show');
+      }
     }
   }
 
