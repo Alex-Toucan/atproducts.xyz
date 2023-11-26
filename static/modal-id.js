@@ -48,4 +48,19 @@ $(document).ready(function() {
   $(document).on('hidden.bs.modal', '.modal', function() {
     $('body').removeClass('modal-open');
   });
+
+  // Function to open accordion based on ID from hash
+  function openAccordionFromHash() {
+    const hash = window.location.hash;
+    if (hash !== '' && hash.startsWith('#accordion')) {
+      const accordionId = hash.substr(1);
+      $(accordionId).collapse('show');
+    }
+  }
+
+  // Open accordion on page load if hash present
+  openAccordionFromHash();
+
+  // Event listener for hash changes to open accordion based on hash
+  $(window).on('hashchange', openAccordionFromHash);
 });
