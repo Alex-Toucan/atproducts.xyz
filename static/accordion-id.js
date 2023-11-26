@@ -7,7 +7,7 @@ $(document).ready(function() {
       $(hash).addClass('show'); // Open the accordion section corresponding to the hash
       
       // Scroll to the opened accordion section
-      var accordionSection = document.querySelector(hash);
+      var accordionSection = $(hash)[0];
       if (accordionSection) {
         accordionSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
