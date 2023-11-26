@@ -15,16 +15,12 @@ $(document).ready(function() {
           const element = document.getElementById(targetId);
           console.log('Element:', element);
 
-          // Scroll to the element with padding and animation
+          // Scroll to the element's section with padding and animation
           if (element) {
             const paddingTop = 150; // 150px
-            const targetOffset = $(element).offset().top;
-            const scrollPosition = targetOffset - $(window).scrollTop();
-            const adjustedScroll = scrollPosition - paddingTop;
-            const finalScroll = $(window).scrollTop() + adjustedScroll;
-            
+            const sectionTop = accordion.offset().top - paddingTop;
             $('html, body').animate({
-              scrollTop: finalScroll
+              scrollTop: sectionTop
             }, 800);
           }
         }
