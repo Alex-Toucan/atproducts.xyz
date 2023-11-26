@@ -1,52 +1,38 @@
-$(document).ready(function() {
-  // Function to open the accordion based on hash change and scroll to it
-  function openAccordionFromHash() {
-    var hash = window.location.hash;
-    if (hash !== '' && $('.modal.show').length === 0) {
-      var $accordionSection = $(hash);
-      if ($accordionSection.length && $accordionSection.hasClass('accordion-collapse') && !$accordionSection.hasClass('show')) {
-        // Check if the accordion is within a modal
-        var $modal = $accordionSection.closest('.modal');
-        if ($modal.length && !$modal.hasClass('show')) {
-          // If the accordion is within a closed modal, open the modal first
-          $modal.modal('show');
-        }
+  // Function to toggle accordion based on ID
+  function toggleAccordion(id) {
+    const accordion = document.getElementById(id);
+    if (!accordion) return;
 
-        $('.accordion-collapse').removeClass('show'); // Close all accordion sections
-        $('.accordion-button').addClass('collapsed').attr('aria-expanded', 'false'); // Reset all accordion buttons
-
-        $accordionSection.addClass('show'); // Open the accordion section corresponding to the hash
-        var $heading = $accordionSection.closest('.accordion-item').find('.accordion-button');
-
-        if ($heading.length) {
-          $heading.removeClass('collapsed').attr('aria-expanded', 'true'); // Update attributes for the specific accordion button
-
-          // Scroll to the opened accordion section with an offset above the button
-          var offset = $heading.offset().top - 100; // Adjust the offset as needed
-          $('html, body').animate({ scrollTop: offset }, 'slow');
-        }
+    const allAccordions = document.querySelectorAll('.accordion');
+    allAccordions.forEach(item => {
+      if (item.id === id) {
+        item.classList.toggle('active');
+      } else {
+        item.classList.remove('active');
       }
+    });
+
+    // Scroll to the accordion if it's not in a modal
+    if (!isInModal(accordion)) {
+      accordion.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
-  // Function to handle hash change event
-  $(window).on('hashchange', function() {
-    openAccordionFromHash();
-  });
-
-  // Initial execution to open accordion based on hash
-  openAccordionFromHash();
-
-  // Prevent scrolling when a modal is open
-  $(document).on('show.bs.modal', '.modal', function() {
-    if ($('body').hasClass('modal-open')) {
-      // This is the section that prevents scrolling when a modal is open
-      // Here, you can perform actions related to preventing scrolling
-      var $heading = $(this).find('.accordion-button'); // Find the accordion button within the modal
-      if ($heading.length) {
-        var offset = $heading.offset().top - 100; // Adjust the offset as needed
-        $('html, body').animate({ scrollTop: offset }, 'slow');
+  // Function to check if the accordion is inside a modal
+  function isInModal(element) {
+    while (element) {
+      if (element.classList.contains('modal')) {
+        return true;
       }
+      element = element.parentElement;
     }
-  });
-});
+    return false;
+  }
+
+  // Handle opening accordion based on URL hash (assuming hash corresponds to accordion ID)
+  window.onload = function () {
+    const hash = window.location.hash.substring(1); // get the hash excluding the '#'
+    if (hash) {
+      toggleAccordion(hash);
+    }
+  };
