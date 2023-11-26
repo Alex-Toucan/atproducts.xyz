@@ -29,13 +29,44 @@ $(document).ready(function() {
     }
   }
 
+  // Function to handle text parameter in the URL and open accordion if needed
+  // Function to handle text parameter in the URL and open accordion if needed
+  function handleTextParameter() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var searchText = urlParams.get("text");
+    
+    if (searchText) {
+      // Your logic to handle the text parameter
+      // This is a placeholder logic, you can replace this with your specific functionality
+      console.log("Search text found:", searchText);
+    
+    // Simulated logic: Search for the text in accordion content
+      $('.accordion-body').each(function() {
+        var accordionText = $(this).text().toLowerCase();
+        if (accordionText.includes(searchText.toLowerCase())) {
+          // If the text is found, log a message or perform any action you require
+          console.log("Accordion contains text:", searchText);
+          // Additionally, you can open the accordion here if necessary
+          // Add logic to open the accordion section based on the found text
+          // Example: $(this).closest('.accordion-collapse').addClass('show');
+        }
+      });
+
+      // Call the accordion opening function after handling the text parameter
+      openAccordionFromHash();
+    }
+  }
+
+  // Call the function to handle text parameter in the URL
+  handleTextParameter();
+
   // Function to handle hash change event
   $(window).on('hashchange', function() {
     openAccordionFromHash();
   });
 
-  // Initial execution to open accordion based on hash
-  openAccordionFromHash();
+  // Call function to handle text parameter in the URL
+  handleTextParameter();
 
   // Prevent scrolling when a modal is open
   $(document).on('show.bs.modal', '.modal', function() {
