@@ -14,9 +14,11 @@ $(document).ready(function() {
           const element = document.getElementById(hash.substring(1));
           console.log('Element:', element);
 
+          // Scroll to the element with animation
           if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            console.log('Scrolled to element');
+            $('html, body').animate({
+              scrollTop: $(element).offset().top
+            }, 800);
           }
         }
       }
@@ -25,28 +27,4 @@ $(document).ready(function() {
 
   $(window).on('hashchange', openAccordionFromHash);
   openAccordionFromHash();
-
-  $(document).on('click', '.accordion-button', function() {
-    const $heading = $(this);
-    const hash = $heading.attr('id');
-    const element = document.getElementById(hash);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-
-  // Modified scrolling function for class .scrollTo
-  $(".scrollTo").on('click', function (e) {
-    e.preventDefault();
-    var targetId = $(this).data('target'); // Assuming the target ID is stored in a data attribute
-    
-    if (targetId) {
-      var targetElement = $('#' + targetId);
-      if (targetElement.length) {
-        $('html, body').animate({
-          scrollTop: targetElement.offset().top
-        }, 2000);
-      }
-    }
-  });
 });
