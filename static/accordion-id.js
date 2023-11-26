@@ -12,7 +12,7 @@ $(document).ready(function() {
           if ($heading.length) {
             $heading.removeClass('collapsed').attr('aria-expanded', 'true');
             const offset = $heading.offset().top - 100;
-            $('html, body').animate({ scrollTop: offset }, 'slow');
+            $('html, body').animate({ scrollTop: offset }, 'fast'); // Adjust scrolling speed
           }
         }
       }
@@ -31,7 +31,7 @@ $(document).ready(function() {
     if ($heading.length) {
       $heading.removeClass('collapsed').attr('aria-expanded', 'true');
       const offset = $heading.offset().top - 100;
-      $('html, body').animate({ scrollTop: offset }, 'slow');
+      $('html, body').animate({ scrollTop: offset }, 'fast'); // Adjust scrolling speed
     }
   });
 
@@ -44,20 +44,18 @@ $(document).ready(function() {
         $('html, body').scrollTop(accordionOffset);
       }
     }
+
+    // Detect user-initiated scroll and handle interruption
+    const scrollTop = $(this).scrollTop();
+    const accordionTop = $('.accordion-item').offset().top;
+
+    if (scrollTop < accordionTop && scrollTop > 100) {
+      $('html, body').stop();
+    }
   });
 
   // Reset padding-right for .navbar when accordion is fully shown
   $(document).on('shown.bs.collapse', '.collapse', function() {
     // ... (existing actions after accordion shown remains unchanged)
-  });
-
-  // Detect user-initiated scroll and handle interruption
-  let lastScrollTop = 0;
-  $(window).on('scroll', function() {
-    const st = $(this).scrollTop();
-    if (st > lastScrollTop) {
-      $('html, body').stop();
-    }
-    lastScrollTop = st <= 0 ? 0 : st;
   });
 });
