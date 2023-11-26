@@ -8,13 +8,9 @@ $(document).ready(function() {
         if (!accordion.hasClass('show')) {
           $('.collapse.show').collapse('hide'); // Hide any open accordion
           accordion.collapse('show');
-          const $heading = $('[href="' + hash + '"]');
-          if ($heading.length) {
-            $heading.removeClass('collapsed').attr('aria-expanded', 'true');
-            const element = document.getElementById(hash.substring(1)); // Get the element by ID
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-            }
+          const element = document.getElementById(hash.substring(1)); // Get the element by ID
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
           }
         }
       }
@@ -32,16 +28,11 @@ $(document).ready(function() {
     const $heading = $(this);
     if ($heading.length) {
       $heading.removeClass('collapsed').attr('aria-expanded', 'true');
-      const hash = $heading.attr('href');
-      const element = document.getElementById(hash.substring(1)); // Get the element by ID
+      const hash = $heading.attr('id'); // Get the ID of the clicked element
+      const element = document.getElementById(hash); // Get the element by ID
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  });
-
-  // Reset padding-right for .navbar when accordion is fully shown
-  $(document).on('shown.bs.collapse', '.collapse', function() {
-    // ... (existing actions after accordion shown remains unchanged)
   });
 });
