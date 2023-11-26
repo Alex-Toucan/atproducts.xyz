@@ -37,9 +37,14 @@ $(document).ready(function() {
     if ($(this).scrollTop() > 100) {
       const accordionItem = $('.accordion-item');
       if (accordionItem.length) {
-        $('html, body').animate({
-          scrollTop: accordionItem.offset().top - 100 // Adjust the offset as needed
-        }, 500);
+        const accordionOffset = accordionItem.offset().top - 50; // Adjust the offset as needed
+        if ($(window).scrollTop() < accordionOffset) {
+          $('html, body').animate({
+            scrollTop: accordionOffset
+          }, 500);
+        } else {
+          $(window).off('scroll'); // Stop the scroll event once the accordion is reached
+        }
       }
     }
   });
