@@ -3,18 +3,22 @@ $(document).ready(function() {
   function openAccordionFromHash() {
     var hash = window.location.hash;
     if (hash !== '') {
-      $('.accordion-collapse').removeClass('show'); // Close all accordion sections
-      $('.accordion-button').addClass('collapsed').attr('aria-expanded', 'false'); // Reset all accordion buttons
+      var $accordionSection = $(hash);
+      if ($accordionSection.length && $accordionSection.hasClass('accordion-collapse') && !$accordionSection.hasClass('show')) {
+        $('.accordion-collapse').removeClass('show'); // Close all accordion sections
+        $('.accordion-button').addClass('collapsed').attr('aria-expanded', 'false'); // Reset all accordion buttons
 
-      $(hash).addClass('show'); // Open the accordion section corresponding to the hash
-      var $heading = $(hash).prev('.accordion-header');
-      $heading.find('.accordion-button').removeClass('collapsed').attr('aria-expanded', 'true'); // Update attributes for the specific accordion button
+        $accordionSection.addClass('show'); // Open the accordion section corresponding to the hash
+        var $heading = $accordionSection.closest('.accordion-item').find('.accordion-button');
 
-      // Scroll to the opened accordion section with an offset above the button
-      var buttonTop = $heading.offset().top;
-      var offset = buttonTop - 100; // Adjust the offset as needed
+        if ($heading.length) {
+          $heading.removeClass('collapsed').attr('aria-expanded', 'true'); // Update attributes for the specific accordion button
 
-      $('html, body').animate({ scrollTop: offset }, 'slow');
+          // Scroll to the opened accordion section with an offset above the button
+          var offset = $heading.offset().top - 100; // Adjust the offset as needed
+          $('html, body').animate({ scrollTop: offset }, 'slow');
+        }
+      }
     }
   }
 
