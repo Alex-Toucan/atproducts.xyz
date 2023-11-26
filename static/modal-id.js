@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   if ($('.modal.show').length === 0) {
     openModalFromHash();
-  });
+  }
 
   $(document).on('click', 'a[href^="#"]', function(e) {
     const hash = $(this).attr('href');
