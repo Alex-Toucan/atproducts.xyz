@@ -12,10 +12,13 @@ $(document).ready(function() {
           $('.collapse.show').collapse('hide');
           accordion.collapse('show');
 
-          if (document.getElementById(targetId)) {
+          const currentSection = $('.collapse.show');
+          const targetSection = accordion;
+
+          if (currentSection.length && targetSection.length) {
             const paddingTop = 150; // 150px
-            const currentSectionTop = $('.collapse.show').offset().top;
-            const targetSectionTop = accordion.offset().top - paddingTop;
+            const currentSectionTop = currentSection.offset().top || 0;
+            const targetSectionTop = targetSection.offset().top - paddingTop;
             const scrollDifference = targetSectionTop - currentSectionTop;
 
             $('html, body').animate({
