@@ -32,6 +32,19 @@ $(document).ready(function() {
     }
   });
 
+  // Scroll to accordion item when page scrolls above 100px
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      const accordionItem = $('.accordion-item');
+      if (accordionItem.length) {
+        $('html, body').animate({
+          scrollTop: accordionItem.offset().top - 100 // Adjust the offset as needed
+        }, 500);
+      }
+    }
+  });
+
+  // Reset padding-right for .navbar when accordion is fully shown
   $(document).on('shown.bs.collapse', '.collapse', function() {
     // Perform additional actions after the accordion is fully shown if needed
   });
