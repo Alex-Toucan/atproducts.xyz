@@ -1,37 +1,51 @@
 $(document).ready(function() {
-  // Function to check if the hash matches any accordion and open it
   function openAccordionFromHash() {
     const hash = window.location.hash;
+    console.log('Hash:', hash);
+
     if (hash !== '') {
       const accordion = $(hash);
+      console.log('Accordion:', accordion);
+
       if (accordion.length && accordion.hasClass('collapse')) {
         if (!accordion.hasClass('show')) {
-          $('.collapse.show').collapse('hide'); // Hide any open accordion
+          $('.collapse.show').collapse('hide');
           accordion.collapse('show');
-          const element = document.getElementById(hash.substring(1)); // Get the element by ID
+          const element = document.getElementById(hash.substring(1));
+          console.log('Element:', element);
+
           if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            element.scrollIntoView({ behavior: 'smooth' });
+            console.log('Scrolled to element');
           }
         }
       }
     }
   }
 
-  // Event listener for hash changes to open accordion
   $(window).on('hashchange', openAccordionFromHash);
-
-  // Open accordion on page load if hash present
   openAccordionFromHash();
 
-  // Handle clicks on accordion headers and scroll to the clicked element
   $(document).on('click', '.accordion-button', function() {
     const $heading = $(this);
-    if ($heading.length) {
-      $heading.removeClass('collapsed').attr('aria-expanded', 'true');
-      const hash = $heading.attr('id'); // Get the ID of the clicked element
-      const element = document.getElementById(hash); // Get the element by ID
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const hash = $heading.attr('id');
+    const element = document.getElementById(hash);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  // Modified scrolling function for class .scrollTo
+  $(".scrollTo").on('click', function (e) {
+    e.preventDefault();
+    var targetId = $(this).data('target'); // Assuming the target ID is stored in a data attribute
+    
+    if (targetId) {
+      var targetElement = $('#' + targetId);
+      if (targetElement.length) {
+        $('html, body').animate({
+          scrollTop: targetElement.offset().top
+        }, 2000);
       }
     }
   });
