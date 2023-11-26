@@ -6,22 +6,21 @@ $(document).ready(function() {
       const targetId = hash.substring(1); // Remove '#' from the hash
 
       const accordion = $('#' + targetId); // Use the ID directly
+      console.log('Accordion:', accordion);
 
       if (accordion.length && accordion.hasClass('collapse')) {
         if (!accordion.hasClass('show')) {
           $('.collapse.show').collapse('hide');
           accordion.collapse('show');
+          const element = document.getElementById(targetId);
+          console.log('Element:', element);
 
-          const currentSection = $('.collapse.show');
-          const targetSection = accordion;
-
-          if (currentSection.length && targetSection.length) {
+          // Scroll to the element's section with padding and animation
+          if (element) {
             const paddingTop = 150; // 150px
-            const currentSectionTop = currentSection.offset().top;
-            const targetSectionTop = targetSection.offset().top - paddingTop;
-
+            const sectionTop = accordion.offset().top - paddingTop;
             $('html, body').animate({
-              scrollTop: $(window).scrollTop() + (targetSectionTop - currentSectionTop)
+              scrollTop: sectionTop
             }, 800);
           }
         }
