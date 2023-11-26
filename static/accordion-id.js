@@ -14,10 +14,11 @@ $(document).ready(function() {
           const element = document.getElementById(hash.substring(1));
           console.log('Element:', element);
 
-          // Scroll to the element with animation
+          // Scroll to the element with padding and animation
           if (element) {
+            const paddingTop = 200; // 200px
             $('html, body').animate({
-              scrollTop: $(element).offset().top
+              scrollTop: $(element).offset().top - paddingTop
             }, 800);
           }
         }
