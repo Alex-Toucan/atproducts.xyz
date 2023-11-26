@@ -18,13 +18,9 @@ $(document).ready(function() {
 
         if ($heading.length) {
           $heading.removeClass('collapsed').attr('aria-expanded', 'true');
-          if (!$('body').hasClass('modal-open')) {
-            /* nothing here */
-           }
-           else {
-            var offset = $heading.offset().top - 100;
-            $('html, body').animate({ scrollTop: offset }, 'slow');
-          }
+
+          var offset = $heading.offset().top - 100;
+          $('html, body').animate({ scrollTop: offset }, 'slow');
         }
       }
     }
@@ -37,4 +33,18 @@ $(document).ready(function() {
 
   // Initial execution to open accordion based on hash
   openAccordionFromHash();
+
+  // Prevent scrolling when a modal is open
+  $(document).on('show.bs.modal', '.modal', function() {
+    if (!$('body').hasClass('modal-open')) {
+      // Scroll logic or adjustments if needed
+    }
+    else {
+      var $heading = $(this).find('.accordion-button');
+      if ($heading.length) {
+        var offset = $heading.offset().top - 100;
+        $('html, body').animate({ scrollTop: offset }, 'slow');
+      }
+    }
+  });
 });
