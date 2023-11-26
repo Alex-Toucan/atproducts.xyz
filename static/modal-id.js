@@ -1,4 +1,4 @@
-  $(document).ready(function() {
+$(document).ready(function() {
   // Function to check if the hash matches any modal and open it
   function openModalFromHash() {
     const hash = window.location.hash;
@@ -7,6 +7,7 @@
       if (modal.length && modal.hasClass('modal') && !modal.hasClass('show')) {
         $('.modal').modal('hide'); // Close any open modal
         $('body').addClass('modal-open').css('padding-right', '0!important');
+        $('.navbar').css('padding-right', '0!important'); // Adjust padding-right for .navbar
         modal.modal('show');
       }
     }
@@ -22,7 +23,6 @@
   $(document).on('click', 'a[href^="#"]', function(e) {
     const hash = $(this).attr('href');
     const modal = $(hash);
-
     if (modal.length && modal.hasClass('modal') && modal.hasClass('show')) {
       e.preventDefault();
     } else if (modal.length && modal.hasClass('modal') && !modal.hasClass('show')) {
@@ -33,23 +33,15 @@
     }
   });
 
-  // Add modal-open class to body when modal is shown
-  $(document).on('shown.bs.modal', '.modal', function() {
-    $('body').addClass('modal-open');
-  });
-
-  // Remove modal-open class from body when modal is hidden
-  $(document).on('hidden.bs.modal', '.modal', function() {
-    $('body').removeClass('modal-open');
-  });
-
-  // Add modal-open class to body when modal is shown
+  // Add modal-open class to body and adjust padding-right for .navbar when modal is shown
   $(document).on('shown.bs.modal', '.modal', function() {
     $('body').addClass('modal-open').css('padding-right', '0!important');
+    $('.navbar').css('padding-right', '0!important');
   });
 
-  // Remove modal-open class from body when modal is hidden
+  // Remove modal-open class from body and reset padding-right for .navbar when modal is hidden
   $(document).on('hidden.bs.modal', '.modal', function() {
     $('body').removeClass('modal-open').css('padding-right', '');
+    $('.navbar').css('padding-right', '');
   });
 });
