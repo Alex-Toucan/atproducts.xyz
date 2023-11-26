@@ -10,7 +10,7 @@ $(document).ready(function() {
           accordion.collapse('show');
           const element = document.getElementById(hash.substring(1)); // Get the element by ID
           if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         }
       }
@@ -23,7 +23,7 @@ $(document).ready(function() {
   // Open accordion on page load if hash present
   openAccordionFromHash();
 
-  // Handle clicks on accordion headers and URL hash changes
+  // Handle clicks on accordion headers and scroll to the clicked element
   $(document).on('click', '.accordion-button', function() {
     const $heading = $(this);
     if ($heading.length) {
@@ -31,7 +31,7 @@ $(document).ready(function() {
       const hash = $heading.attr('id'); // Get the ID of the clicked element
       const element = document.getElementById(hash); // Get the element by ID
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   });
