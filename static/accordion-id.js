@@ -26,22 +26,22 @@ $(document).ready(function() {
       }
     }
   }
+  
+  function changeAccordionIDs($modal) {
+    if ($modal) {
+      $modal.find('.accordion-collapse').each(function(index) {
+        var newID = 'accordionItem_' + index;
+        $(this).attr('id', newID);
+        // Update the button aria-controls attribute with the new ID
+        var $button = $(this).prev('.accordion-button');
+        $button.attr('aria-controls', newID);
+      });
+    }
+  }
 
-  // Override the specific part of modal-id.js script
-  var modalIdHashChangeHandler = function() {
-    openAccordionFromHash(); // Call the accordion function on hash change
-  };
-
-  // Disable modal-id.js hashchange handler temporarily
-  $(window).off('hashchange', modalIdHashChangeHandler);
-
-  // Enable modal-id.js hashchange handler again after a brief delay
-  setTimeout(function() {
-    $(window).on('hashchange', modalIdHashChangeHandler);
-  }, 1000); // Adjust delay as needed (milliseconds)
-
-  // Initial execution to open accordion based on hash
+  $(window).on('hashchange', function() {
     openAccordionFromHash();
+  });
 
   // Prevent scrolling when a modal is open
   $(document).on('show.bs.modal', '.modal', function() {
