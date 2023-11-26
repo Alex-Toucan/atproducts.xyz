@@ -17,12 +17,11 @@ $(document).ready(function() {
 
           if (currentSection.length && targetSection.length) {
             const paddingTop = 150; // 150px
-            const currentSectionTop = currentSection.offset().top || 0;
+            const currentSectionTop = currentSection.offset().top;
             const targetSectionTop = targetSection.offset().top - paddingTop;
-            const scrollDifference = targetSectionTop - currentSectionTop;
 
             $('html, body').animate({
-              scrollTop: $(window).scrollTop() + scrollDifference
+              scrollTop: $(window).scrollTop() + (targetSectionTop - currentSectionTop)
             }, 800);
           }
         }
