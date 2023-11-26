@@ -16,7 +16,7 @@ $(document).ready(function() {
 
           // Scroll to the element with padding and animation
           if (element) {
-            const paddingTop = 50; // 50px
+            const paddingTop = 100;
             $('html, body').animate({
               scrollTop: $(element).offset().top - paddingTop
             }, 800);
