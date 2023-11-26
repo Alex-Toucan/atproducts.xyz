@@ -10,9 +10,11 @@ $(document).ready(function() {
       var $heading = $(hash).prev('.accordion-header');
       $heading.find('.accordion-button').removeClass('collapsed').attr('aria-expanded', 'true'); // Update attributes for the specific accordion button
 
-      // Scroll to the opened accordion section with an offset from the top
-      var offsetTop = $(hash).offset().top;
-      $('html, body').animate({ scrollTop: offsetTop - 50 }, 'slow');
+      // Scroll to the opened accordion section with an offset above the button
+      var buttonTop = $heading.offset().top;
+      var offset = buttonTop - 100; // Adjust the offset as needed
+
+      $('html, body').animate({ scrollTop: offset }, 'slow');
     }
   }
 
