@@ -1,4 +1,4 @@
-$(document).ready(function() {
+  $(document).ready(function() {
   // Function to check if the hash matches any modal and open it
   function openModalFromHash() {
     const hash = window.location.hash;
@@ -6,7 +6,7 @@ $(document).ready(function() {
       const modal = $(hash);
       if (modal.length && modal.hasClass('modal') && !modal.hasClass('show')) {
         $('.modal').modal('hide'); // Close any open modal
-        $('body').addClass('modal-open');
+        $('body').addClass('modal-open').css('padding-right', '0!important');
         modal.modal('show');
       }
     }
@@ -41,5 +41,15 @@ $(document).ready(function() {
   // Remove modal-open class from body when modal is hidden
   $(document).on('hidden.bs.modal', '.modal', function() {
     $('body').removeClass('modal-open');
+  });
+
+  // Add modal-open class to body when modal is shown
+  $(document).on('shown.bs.modal', '.modal', function() {
+    $('body').addClass('modal-open').css('padding-right', '0!important');
+  });
+
+  // Remove modal-open class from body when modal is hidden
+  $(document).on('hidden.bs.modal', '.modal', function() {
+    $('body').removeClass('modal-open').css('padding-right', '');
   });
 });
