@@ -57,9 +57,6 @@ $(document).ready(function() {
     }
   }
 
-  // Call the function to handle text parameter in the URL
-  handleTextParameter();
-
   // Function to handle hash change event
   $(window).on('hashchange', function() {
     openAccordionFromHash();
