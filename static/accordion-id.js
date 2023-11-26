@@ -4,11 +4,10 @@ $(document).ready(function() {
     const hash = window.location.hash;
     if (hash !== '') {
       const accordion = $(hash);
-      if (accordion.length && accordion.hasClass('accordion')) {
-        const parentCollapse = accordion.closest('.collapse');
-        if (parentCollapse.length && !parentCollapse.hasClass('show')) {
-          $('.collapse.show').removeClass('show'); // Close any open accordion
-          parentCollapse.addClass('show').prev('.accordion-header').find('.accordion-button').attr('aria-expanded', 'true');
+      if (accordion.length && accordion.hasClass('collapse')) {
+        if (!accordion.hasClass('show')) {
+          $('.collapse.show').collapse('hide'); // Hide any open accordion
+          accordion.collapse('show');
         }
       }
     }
@@ -22,7 +21,7 @@ $(document).ready(function() {
 
   // Handle clicks on accordion headers and URL hash changes
   $(document).on('click', '.accordion-button', function() {
-    const accordion = $(this).closest('.accordion');
+    const accordion = $(this).closest('.accordion-header').next('.collapse');
     if (accordion.length) {
       const hash = '#' + accordion.attr('id');
       if (window.location.hash !== hash) {
@@ -31,5 +30,9 @@ $(document).ready(function() {
         window.location.hash = ''; // Clear hash to close accordion
       }
     }
+  });
+
+  $(document).on('shown.bs.collapse', '.collapse', function() {
+    // Perform additional actions after the accordion is fully shown if needed
   });
 });
