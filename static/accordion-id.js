@@ -22,7 +22,18 @@ $(document).ready(function() {
           var offset = $heading.offset().top - 100;
           $('html, body').animate({ scrollTop: offset }, 'slow');
         }
+        changeAccordionIDs($modal); // Change accordion IDs within the modal after it's shown
       }
+    }
+  }
+
+  // Function to change accordion IDs within the modal
+  function changeAccordionIDs($modal) {
+    if ($modal) {
+      $modal.find('.accordion-collapse').each(function(index) {
+        var newID = 'accordionItem_' + index;
+        $(this).attr('id', newID);
+      });
     }
   }
 
@@ -38,8 +49,7 @@ $(document).ready(function() {
   $(document).on('show.bs.modal', '.modal', function() {
     if (!$('body').hasClass('modal-open')) {
       // Scroll logic or adjustments if needed
-    }
-    else {
+    } else {
       var $heading = $(this).find('.accordion-button');
       if ($heading.length) {
         var offset = $heading.offset().top - 100;
