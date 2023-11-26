@@ -11,8 +11,10 @@ $(document).ready(function() {
           const $heading = $('[href="' + hash + '"]');
           if ($heading.length) {
             $heading.removeClass('collapsed').attr('aria-expanded', 'true');
-            const offset = $heading.offset().top - 100;
-            $('html, body').animate({ scrollTop: offset }, 'fast'); // Adjust scrolling speed
+            const element = document.getElementById(hash.substring(1)); // Get the element by ID
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
           }
         }
       }
@@ -30,27 +32,11 @@ $(document).ready(function() {
     const $heading = $(this);
     if ($heading.length) {
       $heading.removeClass('collapsed').attr('aria-expanded', 'true');
-      const offset = $heading.offset().top - 100;
-      $('html, body').animate({ scrollTop: offset }, 'fast'); // Adjust scrolling speed
-    }
-  });
-
-  // Scroll to accordion item when page scrolls above 100px
-  $(window).on('scroll', function() {
-    const accordionItem = $('.accordion-item');
-    if (accordionItem.length) {
-      const accordionOffset = accordionItem.offset().top - 100; // Adjust the offset as needed
-      if ($(window).scrollTop() > 100 && $(window).scrollTop() < accordionOffset) {
-        $('html, body').scrollTop(accordionOffset);
+      const hash = $heading.attr('href');
+      const element = document.getElementById(hash.substring(1)); // Get the element by ID
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
       }
-    }
-
-    // Detect user-initiated scroll and handle interruption
-    const scrollTop = $(this).scrollTop();
-    const accordionTop = $('.accordion-item').offset().top;
-
-    if (scrollTop < accordionTop && scrollTop > 100) {
-      $('html, body').stop();
     }
   });
 
