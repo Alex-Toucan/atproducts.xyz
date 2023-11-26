@@ -5,6 +5,13 @@ $(document).ready(function() {
     if (hash !== '' && $('.modal.show').length === 0) {
       var $accordionSection = $(hash);
       if ($accordionSection.length && $accordionSection.hasClass('accordion-collapse') && !$accordionSection.hasClass('show')) {
+        // Check if the accordion is within a modal
+        var $modal = $accordionSection.closest('.modal');
+        if ($modal.length && !$modal.hasClass('show')) {
+          // If the accordion is within a closed modal, open the modal first
+          $modal.modal('show');
+        }
+
         $('.accordion-collapse').removeClass('show'); // Close all accordion sections
         $('.accordion-button').addClass('collapsed').attr('aria-expanded', 'false'); // Reset all accordion buttons
 
