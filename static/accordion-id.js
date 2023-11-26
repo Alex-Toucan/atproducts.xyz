@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  let isUserScrolling = false;
+
   // Function to check if the hash matches any accordion and open it
   function openAccordionFromHash() {
     const hash = window.location.hash;
@@ -33,20 +35,31 @@ $(document).ready(function() {
   });
 
   // Scroll to accordion item when page scrolls above 100px
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
+  $(window).on('scroll', function() {
+    if (!isUserScrolling) {
       const accordionItem = $('.accordion-item');
       if (accordionItem.length) {
         const accordionOffset = accordionItem.offset().top - 50; // Adjust the offset as needed
-        if ($(window).scrollTop() < accordionOffset) {
-          $('html, body').animate({
+        if ($(window).scrollTop() > 100 && $(window).scrollTop() < accordionOffset) {
+          $('html, body').stop().animate({
             scrollTop: accordionOffset
           }, 500);
-        } else {
-          $(window).off('scroll'); // Stop the scroll event once the accordion is reached
         }
       }
     }
+  });
+
+  // Detect user-initiated scroll
+  $(window).on('wheel', function() {
+    isUserScrolling = true;
+  });
+
+  // Reset user scroll flag after a short delay to allow automated scrolling
+  $(window).on('scroll', function() {
+    clearTimeout($.data(this, 'scrollTimer'));
+    $.data(this, 'scrollTimer', setTimeout(function() {
+      isUserScrolling = false;
+    }, 250));
   });
 
   // Reset padding-right for .navbar when accordion is fully shown
