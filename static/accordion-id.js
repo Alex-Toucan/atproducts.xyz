@@ -18,8 +18,9 @@ $(document).ready(function() {
           // Scroll to the element with padding and animation
           if (element) {
             const paddingTop = 150; // 150px
+            const targetOffset = $(element).offset().top - paddingTop;
             $('html, body').animate({
-              scrollTop: $(element).offset().top - paddingTop
+              scrollTop: targetOffset
             }, 800);
           }
         }
