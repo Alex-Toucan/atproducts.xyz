@@ -9,6 +9,7 @@
         <link rel="preload" as="style" href="/static/bootstrap.css">
     <link rel="preload" as="image" href="/media/images/hero-ehs.webp">
     <link rel="manifest" href="/media/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta charset="UTF-8">
     <meta name="title" content="Pynx's Projects">
     <meta name="description" content="View Pynx's projects.">
@@ -16,14 +17,15 @@
     <meta name="author" content="Alex Toucan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:image" content="/media/images/pynx.png">
+        <meta name="msapplication-TileColor" content="#da532c">
           <script src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
   <div id="page">
 <header>
-<nav class="navbar navbar-expand-sm fixed-top bg-dark shadow-lg" data-bs-theme="dark">
+<nav class="navbar navbar-expand-sm fixed-top main-navbar shadow-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><img src="/media/images/longwhite.png" height="45px" alt="Icon"></a>
+    <a class="navbar-brand" href="/"><img src="/media/images/longblack.png" height="45px" alt="Icon" class="headerimg"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -100,14 +102,15 @@
 <strong>It seems like you don't have JavaScript enabled!</strong> For color modes, accordions, scrollspies, tab panes, dropdowns, popovers, and much more, you'll need JavaScript to work! We do not have fallbacks, so please enable JavaScript or <a href="https://github.com/Alex-Toucan/atproducts.xyz">view the source code to read the information</a>.
 </div>
         </noscript>
-    <main id="pynx" class="text-center"> <div class="hero hero-ehs">
+    <main id="pynx" class="text-center"> <div class="hero hero-ehs" data-bs-theme="dark">
     <div class="hero-back h-100">
-          <div class="h1 display-3 fw-bold title"> Pynx's Projects </div>
+      <div class="hero-filter">
+          <h1 class="display-3 fw-bold title"> Pynx's Projects </h1>
  <div class="d-lg-flex mx-mmd-2">
   <div class="col-lg mt-1 mb-3 m-1">
   <div class="card calt permcard shadow-sm h-100">
     <div class="card-body">
-      <div class="h2 card-title">BxPP</div>
+      <h2 class="card-title">BxPP</h2>
       <p class="card-text">A custom Python programming language!</p>
       <a href="/bxpp" class="btn btn-primary w-100 tab-link">Visit</a>
     </div>
@@ -116,7 +119,7 @@
      <div class="col-lg mt-1 mb-3 m-1">
   <div class="card calt permcard shadow-sm h-100">
     <div class="card-body">
-      <div class="h2 card-title">Inferno</div>
+      <h2 class="card-title">Inferno</h2>
       <p class="card-text">Inferno is a very malicious ransomware executable that is relentless.</p>
       <a href="/inferno" class="btn btn-primary w-100 tab-link">Visit</a>
     </div>
@@ -126,12 +129,12 @@
   <div class="card calt permcard shadow-sm h-100">
   <div class="bg-white card-img-top"><img src="/media/images/noodle.webp" alt="Noodle Hackerspace" width="25%" class="py-1"></div>
       <div class="card-body">
-      <div class="h2 card-title">Noodle Hackerspace</div>
+      <h2 class="card-title">Noodle Hackerspace</h2>
       <p class="card-text">This community contains Pynx's code samples.</p>
       <a href="/noodle" class="btn btn-primary w-100 tab-link">Visit</a>
     </div>
   </div>
-</div>
+</div></div>
 </div></div></div>
 </main>
 <footer>
@@ -142,36 +145,36 @@
        <div class="text-center">
          <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
            <br>
-           <div class="h5"><a href="/">AT Products LLC</a></div>
+           <h5><a href="/">AT Products LLC</a></h5>
           </div>
       </div>
       <div class="col-md-2 me-md-2 text-centertostart">
-        <div class="h5">Products</div>
+        <h5>Products</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-muted">Paid Services</a></li>
-          <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-muted">Web Projects</a></li>
-          <li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-muted">SMS Bomb</a></li>
-          <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-muted">Pynx's Projects</a></li>
+          <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-body-secondary">Paid Services</a></li>
+          <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-body-secondary">Web Projects</a></li>
+          <li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-body-secondary">SMS Bomb</a></li>
+          <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-body-secondary">Pynx's Projects</a></li>
         </ul>
       </div>
 
       <div class="col-md-2 me-md-2 text-centertostart">
-        <div class="h5">Communities</div>
+        <h5>Communities</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-muted">The Script Community</a></li>
-          <li class="nav-item mb-2"><a href="/ehs" class="nav-link p-0 text-muted">Ethical Hacking Society</a></li>
-          <li class="nav-item mb-2"><a href="/codinghome" class="nav-link p-0 text-muted">CodingHome</a></li>
-          <li class="nav-item mb-2"><a href="/noodle" class="nav-link p-0 text-muted">Noodle Hackerspace</a></li>
+          <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-body-secondary">The Script Community</a></li>
+          <li class="nav-item mb-2"><a href="/ehs" class="nav-link p-0 text-body-secondary">Ethical Hacking Society</a></li>
+          <li class="nav-item mb-2"><a href="/codinghome" class="nav-link p-0 text-body-secondary">CodingHome</a></li>
+          <li class="nav-item mb-2"><a href="/noodle" class="nav-link p-0 text-body-secondary">Noodle Hackerspace</a></li>
         </ul>
       </div>
 
       <div class="col-md-2 me-md-2 text-centertostart">
-        <div class="h5">Documentation</div>
+        <h5>Documentation</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
-          <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
-          <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-muted">Policies</a></li>
-          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-muted">Licenses</a></li>
+          <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
+          <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-body-secondary">Discord Rules</a></li>
+          <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-body-secondary">Policies</a></li>
+          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-body-secondary">Licenses</a></li>
         </ul>
       </div>
 
@@ -179,7 +182,7 @@
     </div>
 
     <div class="d-flex justify-content-between pt-3 pb-2 mt-4 border-top">
-    <div class="row">
+    <div class="d-md-flex">
       <a class="ps-3 footer-info dropdown-toggle" data-bs-toggle="collapse" href="#footerinfo" role="button" aria-expanded="false" aria-controls="footerinfo">
       Information
       </a>

@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
     <link rel="manifest" href="/media/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
                 <link rel="preload" as="style" href="/static/bootstrap.css">
     <link rel="preload" as="image" href="/media/images/hero-web.webp">
     <meta charset="UTF-8">
@@ -20,14 +21,15 @@
     <meta name="author" content="Alex Toucan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="/media/favicon/iconembed.png">
+        <meta name="msapplication-TileColor" content="#da532c">
     <script src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
  <div id="page">
 <header>
-<nav class="navbar navbar-expand-sm fixed-top bg-dark shadow-lg" data-bs-theme="dark">
+<nav class="navbar navbar-expand-sm fixed-top main-navbar shadow-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><img src="/media/images/longwhite.png" height="45px" alt="Icon"></a>
+    <a class="navbar-brand" href="/"><img src="/media/images/longblack.png" height="45px" alt="Icon" class="headerimg"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -106,8 +108,8 @@
 </div>
         </noscript>
        <div class="hero hero-web mb-mmd-3" data-bs-theme="dark"><div class="hero-back"><div class="text-white py-466"><div class="container col-md-8">
-<div class="lh-1 fs-16 h1 display-3 fw-bold">404</div>
-<p class="fs-5 text-muted"> Oops, seems like you hit the wrong page, as the HTML error 404 means that the file you attempted to reach was not found/invalid. Either, check the URL bar to see if there's a spelling mistake or redirect to the previous page. </p>
+<h1 class="lh-1 fs-16 display-3 fw-bold">404</h1>
+<p class="fs-5 text-body-secondary"> Oops, seems like you hit the wrong page, as the HTML error 404 means that the file you attempted to reach was not found/invalid. Either, check the URL bar to see if there's a spelling mistake or redirect to the previous page. </p>
 <div class="container d-md-flex d-grid gap-2 hero-button-margin">
    <input class="btn btn-primary w-100 col-md" type="button" value="Return" id="404btn" aria-label="Return">
   <a href="/" class="btn btn-secondary col-md">Index Page</a>
@@ -122,36 +124,36 @@
        <div class="text-center">
          <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
            <br>
-           <div class="h5"><a href="/">AT Products LLC</a></div>
+           <h5><a href="/">AT Products LLC</a></h5>
           </div>
       </div>
       <div class="col-md-2 me-md-2 text-centertostart">
-        <div class="h5">Products</div>
+        <h5>Products</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-muted">Paid Services</a></li>
-          <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-muted">Web Projects</a></li>
-          <li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-muted">SMS Bomb</a></li>
-          <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-muted">Pynx's Projects</a></li>
+          <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-body-secondary">Paid Services</a></li>
+          <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-body-secondary">Web Projects</a></li>
+          <li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-body-secondary">SMS Bomb</a></li>
+          <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-body-secondary">Pynx's Projects</a></li>
         </ul>
       </div>
 
       <div class="col-md-2 me-md-2 text-centertostart">
-        <div class="h5">Communities</div>
+        <h5>Communities</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-muted">The Script Community</a></li>
-          <li class="nav-item mb-2"><a href="/ehs" class="nav-link p-0 text-muted">Ethical Hacking Society</a></li>
-          <li class="nav-item mb-2"><a href="/codinghome" class="nav-link p-0 text-muted">CodingHome</a></li>
-          <li class="nav-item mb-2"><a href="/noodle" class="nav-link p-0 text-muted">Noodle Hackerspace</a></li>
+          <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-body-secondary">The Script Community</a></li>
+          <li class="nav-item mb-2"><a href="/ehs" class="nav-link p-0 text-body-secondary">Ethical Hacking Society</a></li>
+          <li class="nav-item mb-2"><a href="/codinghome" class="nav-link p-0 text-body-secondary">CodingHome</a></li>
+          <li class="nav-item mb-2"><a href="/noodle" class="nav-link p-0 text-body-secondary">Noodle Hackerspace</a></li>
         </ul>
       </div>
 
       <div class="col-md-2 me-md-2 text-centertostart">
-        <div class="h5">Documentation</div>
+        <h5>Documentation</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-muted">Terms of Service</a></li>
-          <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-muted">Discord Rules</a></li>
-          <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-muted">Policies</a></li>
-          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-muted">Licenses</a></li>
+          <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
+          <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-body-secondary">Discord Rules</a></li>
+          <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-body-secondary">Policies</a></li>
+          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-body-secondary">Licenses</a></li>
         </ul>
       </div>
 
@@ -159,7 +161,7 @@
     </div>
 
     <div class="d-flex justify-content-between pt-3 pb-2 mt-4 border-top">
-    <div class="d-flex">
+    <div class="d-md-flex">
       <a class="ps-3 footer-info dropdown-toggle" data-bs-toggle="collapse" href="#footerinfo" role="button" aria-expanded="false" aria-controls="footerinfo">
       Information
       </a>

@@ -18,10 +18,10 @@
 <body>
   <div id="page">
     <header class="fixed-top">
-     <nav class="first-navbar navbar navbar-expand-story bg-dark pb-0" data-bs-theme="dark">
+     <nav class="first-navbar navbar navbar-expand-story main-navbar pb-0">
   <div class="container-fluid">
 <a class="navbar-brand d-inline me-3" href="/">
-    <img src="/media/images/longwhite.png" height="45px" alt="Icon"> <p class="text-disappear d-inline ms-2 align-middle">BookViewer</p></a>
+    <img src="/media/images/longblack.png" height="45px" alt="Icon" class="headerimg"> <p class="text-disappear d-inline ms-2 align-middle">BookViewer</p></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation" aria-expanded="true">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -132,14 +132,14 @@
             </div></div>
         <div class="col-md-10 p-1 pt-mmd-2 px-mmd-2 story-top-scroll story-top-body story-scroll" tabindex="0" data-bs-smooth-scroll="true" data-bs-target="#cctvlist" data-bs-spy="scroll">
 <div id="intro" class="story-top-scroll">
-    <div class="h1">CCTV Interception</div>
-    <div class="h5">By the <a href="/noodle">Noodle Hackerspace</a>.</div>
+    <h1>CCTV Interception</h1>
+    <h5>By the <a href="/noodle">Noodle Hackerspace</a>.</h5>
     <hr>
             </div>
 <div id="prenote">
-  <div class="h2">Prenote</div>
-<div class="h3">Needed Items</div><p>A computer with <a href="https://www.Wireshark.org/">Wireshark</a> and <a href="https://www.aircrack-ng.org/">AirCrack</a>, wifi adapter that supports monitoring and some time.</p>
-<div class="h3">Keywords</div><p><code>{ }</code> means commands for terminal. <code>( )</code> Means general stuff.</p>
+  <h2>Prenote</h2>
+<h3>Needed Items</h3><p>A computer with <a href="https://www.Wireshark.org/">Wireshark</a> and <a href="https://www.aircrack-ng.org/">AirCrack</a>, wifi adapter that supports monitoring and some time.</p>
+<h3>Keywords</h3><p><code>{ }</code> means commands for terminal. <code>( )</code> Means general stuff.</p>
 <hr>
 <p>To make this thing to actually work we will need to use Wireshark to sniff out traffic between our host. Today's goal is to capture unencrypted HTTP traffic coming to the hosts' computer.<br><br>
 First things first, we have to break the encryption of the network. Even if you have the password, <b>do not</b> connect quite yet, it will bring attention to us and opens up more risk of detection. Instead, we can add some Wi-Fi keys we know to Wireshark. To decrypt the data, we sniff without connecting to the network. This means our attack will be mostly passive, leaving very little opportunity for us to be detected.<br><br>
@@ -155,7 +155,7 @@ Once you're in range and have any operating system loaded up with the required t
 </p>
       </div>
 <div id="s1" class="story-top-scroll">
-<div class="h2">Step 1</div>
+<h2>Step 1</h2>
 <p>
 To start, you'll need to access the built-in interface on whatever webcam or Wi-Fi security camera you want to intercept. In a browser window on your "host" computer, navigate to the HTTP interface, enter any password required, and the begin viewing the live webcam view.
 <br><br>
@@ -167,7 +167,7 @@ This will look for devices with these ports "open", and when you find one, you c
 </p>
         </div>
 <div id="s2" class="story-top-scroll">
-<div class="h2">Step 2</div>
+<h2>Step 2</h2>
 <p>
 You'll need to plug in your Wi-Fi adapter, I prefer the "Alfa AWUSO36NHA". You'll need to do two things before starting up Wireshark, the first being putting the card into wireless monitor mode, and the second being identifying the channel the router you're targetting is a broadcast on. 
 <br><br>
@@ -341,11 +341,11 @@ If our target is on channel 11, we'll run the following command to set our card 
 <code>airmon-ng start wlan0mon 11</code></p>
         </div>
 <div id="s3" class="story-top-scroll">
-<div class="h2">Step 3</div>
+<h2>Step 3</h2>
 <p>Now that our wireless network adapter is listening on the same channel as the traffic we want to intercept, it's time to start Wireshark. When Wireshark opens, double-click the card you put in monitor mode to start the capture. Our card should now be scanning on the correct channel, but without the network password, we won't be able to see anything. To solve that, we'll need to add some encryption keys to Wireshark. </p>
       </div>
 <div id="s4" class="story-top-scroll">
-  <div class="h2">Step 4</div>
+  <h2>Step 4</h2>
 <p>
 To add the encryption keys to Wireshark, click on "Edit" in the menu bar, then "Preferences" to show the preferences menu. Next, select "Protocols" from the sidebar to see a list of protocols that Wireshark can translate.
 <br><br>
@@ -358,7 +358,7 @@ For the decryption to work, you must add the key by clicking on the plus <code>(
 Click "OK" to save the key, and now we should be able to decrypt traffic from his network, if we can grab a four-way Wi-Fi handshake.</p>
       </div>
 <div id="s5" class="story-top-scroll">
-  <div class="h2">Step 5</div>
+  <h2>Step 5</h2>
 <p>
 In our Wireshark capture, we're sure to be seeing a lot of traffic. While we can't yet decrypt it because we don't have a handshake, we can build a filter to make sure we're only seeing traffic to the device we're sniffing.
 <br><br>
@@ -367,7 +367,7 @@ The best way to do this over a Wi-Fi network is to find a piece of traffic to th
 Looking under the packet information, right-click the "Receiver address" for a packet being sent to the target device, select "Apply as Filter", and then "Selected". Now, we should see only packets to the target.</p>
       </div>
 <div id="s6" class="story-top-scroll">
-  <div class="h2">Step 6</div>
+  <h2>Step 6</h2>
 <p>
 Now that we've isolated the traffic from our target device, we need to generate a four-way handshake by kicking the target computer off the network momentarily while Wireshark is listening. To do this, we can use tool named MDK3, which is able to kick any devices connected to Wi-Fi off and generate a handshake. Highly suggest looking into using MDK3 for Advanced Wi-Fi jamming.
 <br><br>
@@ -391,14 +391,14 @@ Once you see the result above, you've captured a WPA four-way handshake! Make su
 Now that we have a four-way handshake and have entered the network key, we should have full access to data flowing over the network. While HTTPS is still of the table, we should be able to see raw HTTP just fine.</p>
       </div>
 <div id="s7" class="story-top-scroll">
-  <div class="h2">Step 7</div>
+  <h2>Step 7</h2>
 <p>While we've gained access to the network traffic and narrowed it down to the target computer, there may be other traffic that's unrelated and makes it difficult to focus on what we're looking for. To cut through this, we'll add another network filter to show only HTTP traffic flowing through on the network.
 <br><br>
 In the Wireshark main view, type http into the display filter bar.
 </p>
         </div>
 <div id="s8" class="story-top-scroll">
-<div class="h2">Step 8</div><p>
+<h2>Step 8</h2><p>
 Now that we can see the HTTP traffic from the web app, we'll need to select the encoded JPEG files in order to turn them into something we can work with. Stop the capture, and then click on "File", then "Export Objects." We'll be exploring the HTTP objects we've found, so click on "HTTP" to open the object list.
 <br><br>
 In the HTTP object list, we'll see a list of HTTP objects we've intercepted. Here we can see the JPEG images we want to decode. You can select one one or all of them, and then clock "Save" or "Save All" and pick a location to export the files to.

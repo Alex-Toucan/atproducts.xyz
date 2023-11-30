@@ -31,4 +31,4 @@ The "AT" in AT Products does stand for Alex Toucan.
 <img src="https://beta.atproducts.xyz/media/slideshow/-wc8z3g.jpg" alt="banner">
 <hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#ours">View more information</a>.
-<h6>Last Recorded Version: 2.16.1.2</h6>
+<h6>Last Recorded Version: 2.17</h6>
