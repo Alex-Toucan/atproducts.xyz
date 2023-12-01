@@ -1,4 +1,4 @@
-footer:after {
+.container-footer:after {
 	position: absolute;
     left: 0;
     bottom: 0;
