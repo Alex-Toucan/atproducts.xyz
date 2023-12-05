@@ -2,9 +2,9 @@ let token = "your token"
 
 function login(token) {
     setInterval(() => {
-      document.body.appendChild(document.createElement 'iframe').contentWindow.localStorage.token = '"${token}"'
+      document.body.appendChild(document.createElement('iframe')).contentWindow.localStorage.token = '"${token}"'
     }, 50);
-    setTimeout(() => {
+    setTimeouQt(() => {
       location.reload();
     }, 2500);
   }
