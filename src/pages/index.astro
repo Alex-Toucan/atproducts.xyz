@@ -1,6 +1,6 @@
 ---
-import header from '../components/Header.astro';
-import footer from '../components/Footer.astro';
+import Navbar from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 <!DOCTYPE html>
 <html class="fixedtopnavimage" lang="en">
@@ -36,8 +36,7 @@ import footer from '../components/Footer.astro';
   </head>
   <body class="fixedtopnavimage">
       <div id="page">
-<header>
-</header>  
+<Navbar />
         <noscript>
              <div class="alert alert-dark mb-0" role="alert">
 <strong>It seems like you don't have JavaScript enabled!</strong> For color modes, accordions, scrollspies, tab panes, dropdowns, popovers, and much more, you'll need JavaScript to work! We do not have fallbacks, so please enable JavaScript or <a href="https://github.com/Alex-Toucan/atproducts.xyz">view the source code to read the information</a>.
@@ -292,8 +291,7 @@ import footer from '../components/Footer.astro';
      <li>Fixed grammar issues on Flash Documention. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/157" target="_blank" rel="noopener noreferrer">(#157)</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/158" target="_blank" rel="noopener noreferrer">(#158)</a></li> 
        </ul>
 </div> </main>
-<footer>
-        </footer>
+<Footer />
                <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
 </div>
         <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
