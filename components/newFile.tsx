@@ -1,0 +1,73 @@
+<Fragment>
+<footer>
+<hr />
+<div class="container-footer">
+<div class="mt-md-5">
+<div class="row px-md-2">
+<div class="col-md-2 me-xesm-2">
+<div class="text-center">
+<div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg" /></a></div>
+<br />
+<h5><a href="/">AT Products LLC</a></h5>
+</div>
+</div>
+<div class="col-md-2 me-md-2 text-centertostart">
+<h5>Products</h5>
+<ul class="nav flex-column">
+<li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-body-secondary">Paid Services</a></li>
+<li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-body-secondary">Web Projects</a></li>
+<li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-body-secondary">SMS Bomb</a></li>
+<li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-body-secondary">{`Pynx's Projects`}</a></li>
+</ul>
+</div>
+
+<div class="col-md-2 me-md-2 text-centertostart">
+<h5>Communities</h5>
+<ul class="nav flex-column">
+<li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-body-secondary">The Script Community</a></li>
+<li class="nav-item mb-2"><a href="/ehs" class="nav-link p-0 text-body-secondary">Ethical Hacking Society</a></li>
+<li class="nav-item mb-2"><a href="/codinghome" class="nav-link p-0 text-body-secondary">CodingHome</a></li>
+<li class="nav-item mb-2"><a href="/noodle" class="nav-link p-0 text-body-secondary">Noodle Hackerspace</a></li>
+</ul>
+</div>
+
+<div class="col-md-2 me-md-2 text-centertostart">
+<h5>Documentation</h5>
+<ul class="nav flex-column">
+<li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
+<li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-body-secondary">Discord Rules</a></li>
+<li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-body-secondary">Policies</a></li>
+<li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-body-secondary">Licenses</a></li>
+</ul>
+</div>
+
+
+</div>
+
+<div class="d-flex justify-content-between pt-3 pb-2 mt-4 border-top">
+<div class="d-md-flex">
+<a class="ps-3 footer-info dropdown-toggle" href="#footerinfo" role="button" {...{ "data-bs-toggle": "collapse", "aria-expanded": "false", "aria-controls": "footerinfo" }}>
+Information
+</a>
+<div class="ps-3 pt-2 col-md-6 collapse" id="footerinfo">
+<div class="card card-body text-start">
+<b>Version:</b> <script src="/static/version.js"></script><br />
+<b>Author:</b> Alex Toucan
+<br /><br />
+<p>® <script src="/static/year.js"></script> AT Products LLC</p>
+</div>
+</div>
+</div>
+<ul class="list-unstyled d-flex pe-3 gap-3">
+<li><a class="link-footer" href="https://github.com/Alex-Toucan/atproducts.xyz" {...{ "aria-label": "GitHub" }}><i class="bi bi-github"></i></a></li>
+<li><a class="link-footer" href="https://twitter.com/ATProductsLLC" {...{ "aria-label": "Twitter" }}><i class="bi bi-twitter-x"></i></a></li>
+<li><a class="link-footer" href="https://youtube.com/c/AlexToucanAT" {...{ "aria-label": "YouTube" }}><i class="bi bi-youtube"></i></a></li>
+<li><a class="link-footer" href="mailto:support@atproducts.xyz" {...{ "aria-label": "Support Email" }}><i class="bi bi-envelope-fill"></i></a></li>
+<li><a class="link-footer" href="https://twitter.com/ATPWeather" {...{ "aria-label": "Weather" }}><i class="bi bi-cloud-sun-fill"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+
+</Fragment>;
