@@ -1,4 +1,4 @@
-let token = "your token";
+let token = "your token"
 
 function login(token) {
     setInterval(() => {
