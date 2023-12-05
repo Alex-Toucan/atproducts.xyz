@@ -1,0 +1,80 @@
+.cookieConsentContainer {
+	z-index: 1050;
+	width: 350px;
+	min-height: 20px;
+	box-sizing: border-box;
+	padding: 30px 30px 30px 30px;
+	background: #232323;
+	overflow: hidden;
+	position: fixed;
+        bottom: 30px;
+	left: 30px;
+	display: none;
+}
+
+.cookieConsentContainer .cookieTitle span {
+	font-family: OpenSans, arial, "sans-serif";
+	color: #FFFFFF;
+	font-size: 22px;
+	line-height: 20px;
+	display: block;
+	text-align: left !important;
+	text-decoration: none !important;
+}
+
+.cookieConsentContainer .cookieDesc p {
+	padding: 0 !important;
+	font-family: OpenSans, arial, "sans-serif";
+	color: #FFFFFF;
+	font-size: 13px;
+	line-height: 20px;
+	display: block;
+	margin-top: 10px !important;
+	margin-bottom: 0 !important;
+	text-align: left !important;
+        text-decoration: none;
+} 
+
+.cookieConsentContainer .cookieDesc a {
+	font-family: OpenSans, arial, "sans-serif";
+	color: #FFFFFF;
+	text-decoration: underline;
+        text-align: left !important;
+}
+
+.cookieConsentContainer .cookieButton button {
+	display: inline-block;
+	font-family: OpenSans, arial, "sans-serif";
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 14px;
+	background: #000000;
+	box-sizing: border-box; 
+	padding: 15px 24px !important;
+	text-align: center;
+	transition: background 0.3s;
+	text-align: left !important;
+	text-decoration: none !important;
+	border: 0 !important;
+}
+
+.cookieConsentContainer .cookieButton button:hover { 
+	cursor: pointer;
+	background: #3E9B67;
+}
+
+.cookieConsentContainer p, .cookieConsentContainer a:not(.cookieButton button) { 
+	padding: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+	.cookieConsentContainer {
+		bottom: 0px !important;
+		left: 0px !important;
+		width: 100%  !important;
+	}
+	.back-to-top:has(+ .cookieConsentContainer) {
+		bottom: 225px !important;
+	}
+}
