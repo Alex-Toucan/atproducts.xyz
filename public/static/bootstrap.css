@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*!
- * Bootstrap  v5.3.1 (https://getbootstrap.com/)
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -1049,7 +1048,10 @@ progress {
 .row-cols-6 > * {
   flex: 0 0 auto;
   width: 16.66666667%;
+}
+
 /* Custom "col" settings */
+
 .col-auto {
   flex: 0 0 auto;
   width: auto;
@@ -2242,8 +2244,11 @@ progress {
 .table-dark {
   --bs-table-color: #fff;
   --bs-table-bg: #212529;
-  --bs-table-border-color: #373b3e;
+  --bs-table-border-color: #4d5154;
+  --bs-table-striped-bg: #2c3034;
+  --bs-table-striped-color: #fff;
   --bs-table-active-bg: #373b3e;
+  --bs-table-active-color: #fff;
   --bs-table-hover-bg: #323539;
   --bs-table-hover-color: #fff;
   color: var(--bs-table-color);
@@ -2759,8 +2764,11 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-	-moz-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #0d6efd;
   border: 0;
+  border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -8260,7 +8268,7 @@ textarea.form-control-lg {
 }
 
 .position-inherit {
-  position: inherit !important;
+  position: inherit+ !important;
 }
 
 .position-absolute {
@@ -9413,7 +9421,7 @@ textarea.form-control-lg {
   text-transform: capitalize !important;
 }
 
-.text-wrap {
+.text-wrap
   white-space: normal !important;
   word-break: break-all;
 }
