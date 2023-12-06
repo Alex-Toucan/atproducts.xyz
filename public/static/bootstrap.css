@@ -9421,7 +9421,7 @@ textarea.form-control-lg {
   text-transform: capitalize !important;
 }
 
-.text-wrap
+.text-wrap {
   white-space: normal !important;
   word-break: break-all;
 }
