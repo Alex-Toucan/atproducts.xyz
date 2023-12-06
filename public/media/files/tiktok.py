@@ -1,1 +1,8 @@
-import requests;print("+")if requests.get(f"https://www.tiktok.com/@{input('')}").status_code==200 else print("-") 
+import requests
+
+username = input("Enter TikTok username: ")
+response = requests.get(f"https://www.tiktok.com/@{username}")
+if response.status_code == 200:
+    print("+")
+else:
+    print("-")

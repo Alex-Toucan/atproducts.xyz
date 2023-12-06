@@ -1,3 +1,14 @@
+.container-footer:after {
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: url(/media/images/shortwhite.png) bottom center/contain no-repeat;
+    opacity: 0.75;
+}
+
 .cookieConsentContainer {
 	z-index: 1050;
 	width: 350px;

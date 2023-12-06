@@ -4,6 +4,7 @@
     "theme_color": "#212529",
     "background_color": "#ffffff",
     "display": "standalone",
+    "id": "2.17",
     "start_url": "/",
     "prefer_related_applications": false,
     "icons": [

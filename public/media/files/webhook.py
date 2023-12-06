@@ -1,2 +1,2 @@
 import requests
-requests.delete("webhook link") 
+requests.delete("webhook link")

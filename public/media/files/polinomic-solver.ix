@@ -1,0 +1,103 @@
+; 
+; axe +bixe' ... => input
+; 
+
+(var sine #(if (div? % PI) 0 (sin %)))
+(var cosine #(if (= (/ PI 2) (abs (rem % PI))) 0 (cos %)))
+
+(var complex (fn a bi {:real a  :imaginary bi} ))
+(var complex-polar (fn r theta {:dist r  :theta theta} ))
+
+
+
+(function to-polar complex-num
+  (when (= [0 0] (vals complex-num)) (return (complex-polar 0 0)))
+  (let py-th (fn a b (sqrt (+ (** a 2) (** b 2))))
+       atan-branch (fn [x -sign] (+ (atan x) (if -sign PI 0))))
+  (complex-polar (.. py-th (vals complex-num)) (atan-branch [(.. / (-> complex-num vals reverse)) (neg? (:real complex-num))])))
+
+(function to-cartesian complex-num
+  (let r (:dist complex-num)
+       theta (:theta complex-num))
+  (complex (* r (cosine theta)) (* r (sine theta)) )) 
+
+(function to-complex n
+  (if (substr? "i" n) (complex 0 (to-num (trunc 1 n))) (complex (to-num n) 0)))
+
+(function +complex (complex (reduce + (map :real args)) (reduce + (map :imaginary args))))
+
+(function *complex
+  (let polar-args (map to-polar args))
+  (to-cartesian (complex-polar (reduce * (map :dist polar-args)) (reduce + (map :theta polar-args)))))
+
+(function fact n (if (= n 1) 1 (* n (fact (dec n)))))
+
+(function choose n k (when (or (= n k) (zero? k)) (return 1)) (/ (fact n) (* (fact k) (fact (- n k) ) ) ))
+
+(function bincoefs n (map @(choose n) (range (inc n)) ) )
+
+(function fact-upto ldn n (if (= n ldn) 1 (* n (fact (dec n)))))
+
+(var interexps (comp inc range #(map vec % (reverse %)))
+     choose-upto (fn n r (/ (fact-upto (inc r) n) (fact-upto 1 r) ) ))
+
+(function **complex-nexp z nz
+  (let [n _ ] (vals nz) 
+      bincoefs (bincoefs n)
+      nexps (interexps n)
+      [a ib] (vals z)
+      un-ss-coefs (reverse (map * bincoefs (map (fn [aexp ibexp] (* (** a aexp) (** ib ibexp))) nexps)))
+      skip-after-each (fn a b l ((comp @(skip a) @(skip-each b)) l))
+      real-sum (.. + (skip-each 3 un-ss-coefs) (map neg (skip-after-each 2 3 un-ss-coefs)) 0 0)
+      img-sum (.. + (skip-after-each 1 3 un-ss-coefs) (map neg (skip-after-each 3 3 un-ss-coefs)) 0 0))
+  (complex real-sum img-sum))
+
+(function neg-complex z
+  (.. complex (map neg (vals z))))
+
+(function inv-complex z
+  (let [dist theta] (vals (to-polar z)))
+  (to-cartesian (complex-polar (/ 1 dist) (neg theta))))
+
+(function -complex z1 z2
+  (+complex z1 (neg-complex z2)))
+
+(function /complex z1 z2
+  (*complex z1 (inv-complex z2)))
+
+(function normalize [[a b] has-x]
+  (var [c d] (map #((empty? %) null %) [a b]))
+  [(or c "1") (or d (has-x "1" "0"))])
+
+(function digits mon
+  (let has-x (substr? "x" mon)
+       start-x (starts? "x" mon))
+  (match [has-x start-x]
+         [true false]  [(split "x" mon) has-x]
+         [true true] [["" (replace "x" "" mon)] has-x]
+         [false false] [[mon ""] has-x]))
+
+(function func-mon-eval [a b] x
+  (*complex a (**complex-nexp x b)))
+
+(function dfunc-mon-eval [a b] x
+  (let cond-dec (fn [c d] (complex (or (== c 0) (dec c)) d)))
+  (*complex a b (**complex-nexp x (cond-dec (vals b)))))
+
+(function func-eval features x
+  (reduce +complex (map #(func-mon-eval % x) features)))
+
+(function dfunc-eval features x
+  (reduce +complex (map #(dfunc-mon-eval % x) features)))
+
+(function newton-method fun dfun
+  (let zn (complex (rand-int -20 20) (rand-int -20 20)))
+      (reductions #(-complex % (/complex (fun %) (dfun %))) zn (range 15)))
+
+(var preprocess (comp (replace "i" "1i") (replace "+" " ")  (replace "-" " -") (rreplace "-\s+" "-") (split " ") (remove empty?)))
+(function solver expr 
+  (let mons (preprocess expr)
+       features (map #(map to-complex (normalize (digits %))) mons)
+       [resol imsol] (vals (-1 (newton-method @(func-eval features) @(dfunc-eval features)))))
+  (str "Re: " resol " , Im: " imsol))
+
