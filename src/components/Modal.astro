@@ -1,4 +1,4 @@
-<astro:template title={title} id={id}>
+<astro:template title={title} id={id} content={content}>
   <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target={`#${id}`}>{title}</button>
 
   <div class="modal fade" id={id} data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby={`${id}-title`} aria-hidden="true">
@@ -11,7 +11,8 @@
         <div class="modal-body">
           <i>To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work.</i>
           <h2 class="modal-body-title">{title}</h2>
-          <!-- Additional content here -->
+            {content}
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
