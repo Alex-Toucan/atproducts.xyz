@@ -52,24 +52,26 @@ const renderIconLinks = (count) => {
 
 return (
   <div id={`intro-${id}`} className={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
-    <div className="hero-back h-100 p-3 position-relative">
-      <div className="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
-        <div className="text-white">
-          <div>
-            <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
-            <h1 className="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">{title}</h1>
+  <div className="hero-back h-100 p-3 position-relative">
+    <div className="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
+      <div className="text-white">
+        <div>
+          {/* Image and title */}
+          <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
+          <h1 className="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">{title}</h1>
+        </div>
+        <p className="fs-4 m-3 text-body-secondary">{description}</p>
+        <div className="mx-auto justify-content-between container" id="links">
+          <div className="d-md-flex d-grid gap-2">
+            <a href={primaryHref} className="btn btn-primary col-md">{primaryText}</a> {renderSecondaryButtons()}
           </div>
-          <p className="fs-4 m-3 text-body-secondary">{description}</p>
-          <div className="mx-auto justify-content-between container" id="links">
-            <div className="d-md-flex d-grid gap-2">
-              <a href={primaryHref} className="btn btn-primary col-md">{primaryText}</a> {renderSecondaryButtons()}
-            </div>
-            <div id="icons" className="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2">
-              {renderIconLinks(numLinks)}
-            </div>
+          <div id="icons" className="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2">
+            {renderIconLinks(4)} {/* Pass the user input number here */}
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 );
