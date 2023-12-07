@@ -31,12 +31,28 @@ const renderIconLinks = (numLinks) => {
   return iconLinks;
 };
 
-const renderSecondaryButtons = () => {
-  if (!secondaryHref || !secondaryText || secondaryHref.length !== secondaryText.length) return null;
+const renderIconLinks = (numLinks) => {
+  const iconLinks = [];
 
-  return secondaryHref.map((href, index) => (
-    <a href={href} class="btn btn-secondary col-md">{secondaryText[index]}</a>
-  ));
+  for (let i = 1; i <= numLinks; i++) {
+    iconLinks.push(
+      <a
+        href={Astro.props[`href${i}`]}
+        aria-label={Astro.props[`desc${i}`]}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link-hero fs-7"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        data-bs-title={Astro.props[`desc${i}`]}
+        key={i}
+      >
+        <i class={`bi bi-${Astro.props[`icon${i}`]}`}></i>
+      </a>
+    );
+  }
+
+  return iconLinks;
 };
 ---
 
