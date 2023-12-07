@@ -22,32 +22,18 @@ const renderIconLinks = (numLinks) => {
     const icon = Astro.props[`icon${i}`];
 
     iconLinks.push(
-      <a> href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc}</a>
-  <i class={`bi bi-${icon}`}></i>
-</a>
-    );
-  }
-
-  return iconLinks;
-};
-
-const renderIconLinks = (numLinks) => {
-  const iconLinks = [];
-
-  for (let i = 1; i <= numLinks; i++) {
-    iconLinks.push(
       <a
-        href={Astro.props[`href${i}`]}
-        aria-label={Astro.props[`desc${i}`]}
+        href={href}
+        aria-label={desc}
         target="_blank"
         rel="noopener noreferrer"
         class="link-hero fs-7"
         data-bs-toggle="tooltip"
         data-bs-placement="bottom"
-        data-bs-title={Astro.props[`desc${i}`]}
+        data-bs-title={desc}
         key={i}
       >
-        <i class={`bi bi-${Astro.props[`icon${i}`]}`}></i>
+        <i class={`bi bi-${icon}`}></i>
       </a>
     );
   }
@@ -55,7 +41,6 @@ const renderIconLinks = (numLinks) => {
   return iconLinks;
 };
 ---
-
 <div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
   <div class="hero-back h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
