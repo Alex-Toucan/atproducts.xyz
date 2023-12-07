@@ -29,23 +29,23 @@ const renderIconLinks = (count) => {
     const desc = `{desc${numLinks}}`;
     const icon = `{icon${numLinks}}`;
     iconLinks.push(
-      <a
-        href={href}
-        aria-label={desc}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="link-hero fs-7"
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        data-bs-title={desc}
-      >
-        <i class={`bi bi-${icon}`}></i>
-      </a>
+      <Fragment key={i}>
+        <a
+          href={href}
+          aria-label={desc}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-hero fs-7"
+          data-bs-toggle="tooltip"
+          data-bs-placement="bottom"
+          data-bs-title={desc}
+        >
+          <i class={`bi bi-${icon}`}></i>
+        </a>
+      </Fragment>
     );
   }
-  return iconLinks.map((link, index) => (
-    <Fragment key={index}>{link}</Fragment>
-  ));
+  return iconLinks;
 }
 
 return (
@@ -54,7 +54,6 @@ return (
       <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
         <div class="text-white">
           <div>
-            {/* Image and title */}
             <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
             <h1 class="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">{title}</h1>
           </div>
@@ -64,7 +63,7 @@ return (
               <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a> {renderSecondaryButtons()}
             </div>
             <div id="icons" class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2">
-              {renderIconLinks(4)} {/* Pass the user input number here */}
+              {renderIconLinks(numLinks)}
             </div>
           </div>
         </div>
