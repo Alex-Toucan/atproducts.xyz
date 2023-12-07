@@ -61,7 +61,7 @@ const href4 = 'mailto:contact@protdos.com';
   <a href={href2} aria-label={desc2} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc2}><i class={`bi bi-${icon2}`}></i></a> 
   <a href={href3} aria-label={desc3} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc3}><i class={`bi bi-${icon3}`}></i></a>
   <a href={href4} aria-label={desc4} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc4}><i class={`bi bi-${icon4}`}></i></a> 
-  <a href={href5} aria-label={desc5} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc5}><i class={`bi bi-${icon5}`}></i></a> </div></div>
+ </div></div>
 </div></div>
 </div>
       </div>
@@ -74,7 +74,7 @@ const href4 = 'mailto:contact@protdos.com';
   <div id="resources">
             <h2> Resources </h2>
         <p> What do you want to know about today? </p>
-<Modal title="Resources" id="resources-alt" content="
+<Modal title="Resources" id="resources-alt" content={`
 <div class="my-2 text-center">
           <div class="d-flex flex-wrap row-cols-3 rounded-2 overflow-hidden text-white">
             <b class="col-12 py-2 bg-secondary">Contributors</b>
@@ -351,7 +351,7 @@ const href4 = 'mailto:contact@protdos.com';
     </div>
   </div>
 </div>
-"/>
+`}/>
 <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#files">Viruses &amp; Malware</button><div class="modal fade" id="files" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
 <h5 class="modal-title" id="files-title">Viruses &amp; Malware</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
 <i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
@@ -513,10 +513,10 @@ print(type(y))</code></p>
 #include &lt;ostream&gt;<br>
 #include &lt;string&gt;<br><br><br>
 int main()<br>
-{<br>
+&#123;<br>
     // Declare a string variable<br>
     std::string str = "codinghome";<br>
-}
+&#125;
   </code></p>
 </div>
 <div id="integers-4">
@@ -525,12 +525,12 @@ int main()<br>
 <p><code>
 #include &lt;iostream&gt;<br><br>
 int main()<br>
-{<br>
+&#123;<br>
     // Declare an integer variable<br>
     int num = 10;<br><br>
     // Declare a floating-point variable<br>
     float fnum = 10.5;<br>
-}
+&#125;
       </code></p>
 </div>
 <div id="print-4">
@@ -539,14 +539,14 @@ int main()<br>
 <p><code>
 #include &lt;iostream&gt;<br><br>
 int main()<br>
-{<br>
+&#123;<br>
 &nbsp;&nbsp;// Declare an integer variable<br>
 &nbsp;&nbsp;int num = 10;<br><br>
 &nbsp;&nbsp;// Declare a floating-point variable<br>
 &nbsp;&nbsp;float fnum = 10.5;<br><br>
 &nbsp;&nbsp;std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl;  // &lt;-- Prints the integer Variable (Variable num)
 &nbsp;&nbsp;std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point Variable(Variable fnum)
-}
+&#125;
   </code></p>
 </div>
 </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
@@ -627,13 +627,13 @@ countIns x = length . filter (== x)
 </div>
 <div id="com-3">
 <h4>Comments</h4>
-<p>In-line comments are made with <code>--</code> and block comments with <code>{- -}</code>:</p>
+<p>In-line comments are made with <code>--</code> and block comments with <code>&#123;- -&#125;</code>:</p>
 <code>
 -- inline<br>
 commentHere = False<br>
-{- block<br>
+&#123;- block<br>
 commenHere = True<br>
--}
+-&#125;
 </code>
 </div>
           </div></div>
@@ -713,12 +713,12 @@ commenHere = True<br>
 <div id="example-5">
 <h4>Example Document</h4>
 <code>
-h1 {<br>
+h1 &#123;<br>
 &nbsp;&nbsp;color: black;   <br>
 &nbsp;&nbsp;text-align: center; <br>
 &nbsp;&nbsp;font-size: 26px;<br>
 &nbsp;&nbsp;font-family: verdana;<br>
-} 
+&#125; 
 </code><br><br>
 <code>&lt;p style="font-size:10px"&gt;</code>
 <p>To put CSS files in HTML, use... <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
@@ -726,32 +726,32 @@ h1 {<br>
 <div id="rules-5">
 <h4>CSS Rulesets</h4>
 <p>
-</p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p { </code></div></div></div>
+</p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p &#123; </code></div></div></div>
 <div class="d-flex"><div class="col-4"><p>Property</p></div><div class="col"><div class="me-auto"><code class="position-static">&nbsp;&nbsp;color: red; </code></div></div></div>
-<div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">}</code></div></div></div>  
+<div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">&#125;</code></div></div></div>  
 <p></p>
 <p><b>Properties</b> - With these, you can style a HTML element, like for example; color. <br>
 <b>Property Value</b> - This chooses one of the possible options for a given property, like red for color.</p>
   <p>
-You can also write CSS like <code>html{color:red;}</code>
+You can also write CSS like <code>html&#123;color:red;&#125;</code>
 <br>
 You can also put styles in HTML elements. <code>&lt;h1 style="font-color:white;"&gt;</code>
 <br>
 You can also select multiple elements at once like...
 <br>
 <code>
-h1, h4, h6, h2 {<br>
+h1, h4, h6, h2 &#123;<br>
 &nbsp;&nbsp;color: red;<br>
-}</code></p>
+&#125;</code></p>
 </div>
         <div id="classes-5">
         <h4>Classes</h4>
         <p>Think of classes like custom HTML elements, they can be applied in html like <code>&lt;p class="text-red"&gt;</code></p>
         <p>Classes begin with a dot or period (.) to begin the selector.</p>
         <code>
-.text-red{<br>
+.text-red&#123;<br>
 &nbsp;&nbsp;color: red;<br>
-}</code>
+&#125;</code>
       </div>
 <div id="text-5">
 <h4>Text Elements</h4><p>
@@ -788,10 +788,10 @@ a multi-line<br>
         </div>
 <div id="eci-5">
 <h4>Extra: Centering Images</h4>
-<code>img {<br>
+<code>img &#123;<br>
 &nbsp;&nbsp;margin: 0 auto;<br>
 &nbsp;&nbsp;display: block;<br>
-}</code>
+&#125;</code>
   </div>
   </div></div></div>
   </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
@@ -841,15 +841,15 @@ Text (strings) — <code>var a = "init"</code><br>
 Operations — <code>var b = 1 + 2 + 3</code><br>
 True or fase statements — <code>var c = true</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
-Objects — <code>var name = {firstName:"John", lastName:”Doe"}</code> <p></p>
+Objects — <code>var name = &#123;firstName:"John", lastName:”Doe"&#125;</code> <p></p>
 <p><b>Objects Example</b> <br>
 <code>
-var person = {<br>
+var person = &#123;<br>
 &nbsp;&nbsp;firstName:"John",<br>
 &nbsp;&nbsp;lastName:"Doe",<br>
 &nbsp;&nbsp;age:20,<br>
 &nbsp;&nbsp;nationality:"American"<br>
-};
+&#125;
   </code></p>
           </div>
           </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
@@ -990,15 +990,15 @@ CREATE TABLE t (<br>
 <div id="example-8">
 <h4>Example Document</h4>
 <code>
-{<br>
+&#123;<br>
 &nbsp;&nbsp;"foo": "bar",<br>
 &nbsp;&nbsp;"array": [<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"foo",<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"bar"<br>
 &nbsp;&nbsp;]<br>
-}
+&#125;
 </code><br><br>
-<p>All JSON files are surrounded by { and }, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
+<p>All JSON files are surrounded by &#123; and &#125;, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
 </div>
 <div id="import-8">
 <h4>Importing JSON</h4>
