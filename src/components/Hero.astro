@@ -34,7 +34,7 @@ const renderIconLinks = (count) => {
       </a>`
     );
   }
-  return iconLinks.map(tag => tag); // Returning the array of strings
+  return iconLinks.map(tag => <Fragment>{tag}</Fragment>); // Using longhand Fragment syntax
 }
 
 return (
