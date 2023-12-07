@@ -1,4 +1,3 @@
-// ModalComponent.jsx
 import React from 'react';
 
 const Modal = ({ id, title, content }) => {
