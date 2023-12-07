@@ -19,19 +19,22 @@ const renderSecondaryButtons = () => {
   if (!secondaryHref || !secondaryText || secondaryHref.length !== secondaryText.length) return null;
 
   return secondaryHref.map((href, index) => (
-    <a href={href} className="btn btn-secondary col-md">{secondaryText[index]}</a>
+    <a href={href} className="btn btn-secondary col-md" key={index}>
+      {secondaryText[index]}
+    </a>
   ));
 }
 
-const renderIconLinks = (count) => {
+const renderIconLinks = () => {
   const iconLinks = [];
-  for (let i = 1; i <= count; i++) {
-    numLinks++;
-    const href = `{href${numLinks}}`;
-    const desc = `{desc${numLinks}}`;
-    const icon = `{icon${numLinks}}`;
+  for (let i = 1; i <= numLinks; i++) {
+    const href = `{href${i}}`;
+    const desc = `{desc${i}}`;
+    const icon = `{icon${i}}`;
     iconLinks.push(
-      <Fragment key={i}>
+      React.createElement(
+        React.Fragment,
+        { key: i },
         <a
           href={href}
           aria-label={desc}
@@ -44,7 +47,7 @@ const renderIconLinks = (count) => {
         >
           <i className={`bi bi-${icon}`}></i>
         </a>
-      </Fragment>
+      )
     );
   }
   return iconLinks;
@@ -52,26 +55,25 @@ const renderIconLinks = (count) => {
 
 return (
   <div id="intro" className={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
-  <div className="hero-back h-100 p-3 position-relative">
-    <div className="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
-      <div className="text-white">
-        <div>
-          {/* Image and title */}
-          <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
-          <h1 className="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">{title}</h1>
-        </div>
-        <p className="fs-4 m-3 text-body-secondary">{description}</p>
-        <div className="mx-auto justify-content-between container" id="links">
-          <div className="d-md-flex d-grid gap-2">
-            <a href={primaryHref} className="btn btn-primary col-md">{primaryText}</a> {renderSecondaryButtons()}
+    <div className="hero-back h-100 p-3 position-relative">
+      <div className="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
+        <div className="text-white">
+          <div>
+            {/* Image and title */}
+            <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
+            <h1 className="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">{title}</h1>
           </div>
-          <div id="icons" className="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2">
-            {renderIconLinks(4)} {/* Pass the user input number here */}
+          <p className="fs-4 m-3 text-body-secondary">{description}</p>
+          <div className="mx-auto justify-content-between container" id="links">
+            <div className="d-md-flex d-grid gap-2">
+              <a href={primaryHref} className="btn btn-primary col-md">{primaryText}</a> {renderSecondaryButtons()}
+            </div>
+            <div id="icons" className="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2">
+              {renderIconLinks()}
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 );
