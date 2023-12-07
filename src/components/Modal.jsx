@@ -18,7 +18,7 @@ const Modal = ({ id, title, content }) => {
             <div className="modal-body">
               <i>To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work.</i>
               <h2 className="modal-body-title">{title}</h2>
-              {content}
+              <div dangerouslySetInnerHTML={{ __html: content }} />
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
