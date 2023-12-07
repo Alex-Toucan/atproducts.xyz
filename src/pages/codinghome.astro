@@ -1,4 +1,5 @@
 ---
+import Hero   from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Modal  from '../components/Modal.astro';
@@ -45,28 +46,7 @@ const href4 = 'mailto:contact@protdos.com';
 <strong>It seems like you don't have JavaScript enabled!</strong> For color modes, accordions, scrollspies, tab panes, dropdowns, popovers, and much more, you'll need JavaScript to work! We do not have fallbacks, so please enable JavaScript or <a href="https://github.com/Alex-Toucan/atproducts.xyz">view the source code to read the information</a>.
 </div>
         </noscript>
-        <div id="intro" class="hero hero-codinghome text-center mb-3" data-bs-theme="dark">
-        <div class="hero-back h-100 p-3 position-relative">
-         <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
-            <div class="text-white">
-             <div>    <img src="/media/images/codinghome.webp" width="15%" alt="icon" style="min-width: 150px;"><h1 class="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">CodingHome</h1></div>
-              <p class="fs-4 m-3 text-body-secondary">CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together.</p>
-          <div class="mx-auto justify-content-between container" id="links">
-<div class="d-md-flex d-grid gap-2">
-  <a href="https://discord.gg/pgGfhDVrmS" class="btn btn-primary col-md">Discord Server Invite</a>
-  <a href="/backup/codinghome" class="btn btn-secondary col-md">View the all laid out format</a>
-  </div>
-<div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2">
-  <a href={href1} aria-label={desc1} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc1}><i class={`bi bi-${icon1}`}></i></a> 
-  <a href={href2} aria-label={desc2} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc2}><i class={`bi bi-${icon2}`}></i></a> 
-  <a href={href3} aria-label={desc3} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc3}><i class={`bi bi-${icon3}`}></i></a>
-  <a href={href4} aria-label={desc4} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc4}><i class={`bi bi-${icon4}`}></i></a> 
- </div></div>
-</div></div>
-</div>
-      </div>
-    </div>
-  </div>
+<Hero id="codinghome" title="CodingHome" description="CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together." primaryHref="https://discord.gg/pgGfhDVrmS" primaryText="Discord Server Invite" secondaryHref="/backup/codinghome" secondaryText="View the all laid out format" imageSrc="/media/images/codinghome.webp" imageWidth="15%" minImageWidth="150px" numLinks="4" />
      <main id="codinghome" class="text-center container">
        <div id="disclaimer">
          <h2> Disclaimer </h2><p> We do not take responsibility for any damage, or legal issues, done with these files here at AT Products LLC, Ethical Hacking Society, CodingHome, CodingHome, or Noodle Hackerspace.      <br><br>
