@@ -14,7 +14,6 @@ const {
   } = Astro.props;
 
 const renderIconLinks = (numLinks) => {
-const renderIconLinks = (numLinks) => {
   const iconLinks = [];
 
   for (let i = 1; i <= numLinks; i++) {
@@ -39,7 +38,7 @@ const renderIconLinks = (numLinks) => {
     );
   }
 
-  return iconLinks;
+  return <>{iconLinks}</>; // Return the array of links wrapped in a fragment
 };
 
 const renderSecondaryButtons = () => {
