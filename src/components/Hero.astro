@@ -22,7 +22,7 @@ const renderIconLinks = (numLinks) => {
     const icon = Astro.props[`icon${i}`];
 
     iconLinks.push(
-      <a
+      <a set:html="
         href={href}  
         aria-label={desc}
         target="_blank"
@@ -31,6 +31,7 @@ const renderIconLinks = (numLinks) => {
         data-bs-toggle="tooltip"
         data-bs-placement="bottom"
         data-bs-title={desc}
+      "
       >
   <i class={`bi bi-${icon}`}></i>
 </a>
