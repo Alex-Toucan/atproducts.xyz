@@ -17,28 +17,32 @@ const renderIconLinks = (numLinks) => {
   const iconLinks = [];
 
   for (let i = 1; i <= numLinks; i++) {
-    const href = Astro.props[`href${i}`];
-    const desc = Astro.props[`desc${i}`];
-    const icon = Astro.props[`icon${i}`];
-
     iconLinks.push(
       <a
-        href={href}
-        aria-label={desc}
+        href={Astro.props[`href${i}`]}
+        aria-label={Astro.props[`desc${i}`]}
         target="_blank"
         rel="noopener noreferrer"
         class="link-hero fs-7"
         data-bs-toggle="tooltip"
         data-bs-placement="bottom"
-        data-bs-title={desc}
+        data-bs-title={Astro.props[`desc${i}`]}
         key={i}
       >
-        <i class={`bi bi-${icon}`}></i>
+        <i class={`bi bi-${Astro.props[`icon${i}`]}`}></i>
       </a>
     );
   }
 
   return iconLinks;
+};
+
+const renderSecondaryButtons = () => {
+  if (!secondaryHref || !secondaryText || secondaryHref.length !== secondaryText.length) return null;
+
+  return secondaryHref.map((href, index) => (
+    <a href={href} class="btn btn-secondary col-md">{secondaryText[index]}</a>
+  ));
 };
 ---
 <div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
