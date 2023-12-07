@@ -14,22 +14,27 @@ const {
   } = Astro.props;
 
 const renderIconLinks = (numLinks) => {
+const renderIconLinks = (numLinks) => {
   const iconLinks = [];
 
   for (let i = 1; i <= numLinks; i++) {
+    const href = Astro.props[`href${i}`];
+    const desc = Astro.props[`desc${i}`];
+    const icon = Astro.props[`icon${i}`];
+
     iconLinks.push(
       <a
-        href={Astro.props[`href${i}`]}
-        aria-label={Astro.props[`desc${i}`]}
+        href={href}
+        aria-label={desc}
         target="_blank"
         rel="noopener noreferrer"
-        class="link-hero fs-7"
+        className="link-hero fs-7"
         data-bs-toggle="tooltip"
         data-bs-placement="bottom"
-        data-bs-title={Astro.props[`desc${i}`]}
+        data-bs-title={desc}
         key={i}
       >
-        <i class={`bi bi-${Astro.props[`icon${i}`]}`}></i>
+        <i className={`bi bi-${icon}`}></i>
       </a>
     );
   }
