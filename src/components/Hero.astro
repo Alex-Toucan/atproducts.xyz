@@ -29,12 +29,23 @@ const renderIconLinks = (count) => {
     const desc = `{desc${numLinks}}`;
     const icon = `{icon${numLinks}}`;
     iconLinks.push(
-      `<a href=${href} aria-label=${desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title=${desc}>
-        <i class={"bi bi-" + ${icon}}></i>
-      </a>`
+      <a
+        href={href}
+        aria-label={desc}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link-hero fs-7"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        data-bs-title={desc}
+      >
+        <i class={`bi bi-${icon}`}></i>
+      </a>
     );
   }
-  return iconLinks.map(tag => <Fragment>{tag}</Fragment>); // Using longhand Fragment syntax
+  return iconLinks.map((link, index) => (
+    <Fragment key={index}>{link}</Fragment>
+  ));
 }
 
 return (
