@@ -34,7 +34,7 @@ const renderIconLinks = (count) => {
       </a>`
     );
   }
-  return iconLinks;
+  return iconLinks.map(tag => tag); // Returning the array of strings
 }
 
 return (
