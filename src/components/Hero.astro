@@ -1,46 +1,77 @@
-const Hero = ({ id, title, primaryHref, primaryText, secondaryHref, secondaryText, imageSrc, imageWidth, minImageWidth, numLinks, /* other props */ }) => {
-    const renderSecondaryButtons = () => {
-        if (!secondaryHref || !secondaryText || secondaryHref.length !== secondaryText.length) return null;
+---
+const {
+  id,
+  title,
+  description,
+  primaryHref,
+  primaryText,
+  secondaryHref,
+  secondaryText,
+  imageSrc,
+  imageWidth,
+  minImageWidth,
+  numLinks
+  } = Astro.props;
 
-        return secondaryHref.map((href, index) => (
-            <a href={href} className="btn btn-secondary col-md" key={index}>{secondaryText[index]}</a>
-        ));
-    };
-
-    const renderIconLinks = (id) => {
-        const iconLinks = [];
-        for (let i = 1; i <= numLinks; i++) {
-            const href = `href${i}`;
-            const icon = `icon${i}`;
-            const link = `<a href={${href}} target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title=''><i class={'bi bi-' + ${icon}}></i></a>`;
-            iconLinks.push(link);
-        }
-        return iconLinks;
-    };
-
+const renderSecondaryButton = () => {
+  if (secondaryHref && secondaryText) {
     return (
-        <div id={`intro-${id}`} className={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
-            <div className="hero-back h-100 p-3 position-relative">
-                <div className="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
-                    <div className="text-white">
-                        <div>
-                            {/* Image and title */}
-                            <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
-                            <h1 className="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">{title}</h1>
-                        </div>
-                        <div className="mx-auto justify-content-between container" id={`links-${id}`}>
-                            <div className="d-md-flex d-grid gap-2">
-                                <a href={primaryHref} className="btn btn-primary col-md">{primaryText}</a> {renderSecondaryButtons()}
-                            </div>
-                            <div className="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id={`icons-${id}`}>
-                                {renderIconLinks(id).map((link, index) => (
-                                    <div key={index} dangerouslySetInnerHTML={{ __html: link }} />
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
     );
+  }
+  return null; // If no secondary button data is provided, return null or an empty element
 };
+
+
+const renderIconLinks = (numLinks) => {
+  const iconLinks = [];
+
+  for (let i = 1; i <= numLinks; i++) {
+    const href = Astro.props[`href${i}`];
+    const desc = Astro.props[`desc${i}`];
+    const icon = Astro.props[`icon${i}`];
+
+iconLinks.push(
+  <div key={i}>
+    <a
+      href={href}
+      aria-label={desc}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="link-hero fs-7"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      data-bs-title={desc}
+      // Use 'as any' to bypass TypeScript error
+      {...{ className: "link-hero fs-7" }}
+    >
+      <i className={`bi bi-${icon}`}></i>
+    </a>
+  </div>
+);
+
+  return iconLinks;
+};
+---
+<div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
+  <div class="hero-back h-100 p-3 position-relative">
+    <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
+      <div class="text-white">
+        <div>
+          <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
+          <h1 class="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">{title}</h1>
+        </div>
+        <p class="fs-4 m-3 text-body-secondary">{description}</p>
+        <div class="mx-auto justify-content-between container" id="links">
+          <div class="d-md-flex d-grid gap-2">
+            <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
+            {renderSecondaryButton()}
+          </div>
+          <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
+            {renderIconLinks(numLinks)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
