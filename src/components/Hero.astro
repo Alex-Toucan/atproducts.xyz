@@ -21,7 +21,7 @@ const renderIconLinks = (numLinks) => {
     const desc = Astro.props[`desc${i}`];
     const icon = Astro.props[`icon${i}`];
 
-    iconLinks.push(
+    const link = (
       <a
         href={href}
         aria-label={desc}
@@ -36,9 +36,11 @@ const renderIconLinks = (numLinks) => {
         <i className={`bi bi-${icon}`}></i>
       </a>
     );
+
+    iconLinks.push(link);
   }
 
-  return <>{iconLinks}</>; // Return the array of links wrapped in a fragment
+  return iconLinks.map((link, index) => <React.Fragment key={index}>{link}</React.Fragment>);
 };
 
 const renderSecondaryButtons = () => {
