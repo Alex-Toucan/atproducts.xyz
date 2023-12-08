@@ -21,18 +21,17 @@ const renderSecondaryButton = () => {
 };
 
 const renderIconLinks = () => {
-  const iconLinks = [];
+  let iconLinks = '';
   for (let i = 1; i <= numLinks; i++) {
     const href = `href${i}`;
     const icon = `icon${i}`;
-    const link = `<a href="${Astro.props[href]}" target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title=''><i class={'bi bi-' + Astro.props[icon]}></i></a>`;
-    iconLinks.push(link);
+    iconLinks += `<a href="${Astro.props[href]}" target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title=''><i class={'bi bi-' + Astro.props[icon]}></i></a>`;
   }
-  return iconLinks.join(''); // Return a concatenated string of HTML links
+  return iconLinks;
 };
 ---
 
-<div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
+<div id={`intro-${id}`} class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
   <div class="hero-back h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
       <div class="text-white">
@@ -44,10 +43,14 @@ const renderIconLinks = () => {
         <div class="mx-auto justify-content-between container" id="links">
           <div class="d-md-flex d-grid gap-2">
             <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
-            <div dangerouslySetInnerHTML={{ __html: renderSecondaryButton() }}></div>
+            <div dangerouslySetInnerHTML={{ __html: renderSecondaryButton() }}>
+              {renderSecondaryButton}
+            </div>
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-            <div dangerouslySetInnerHTML={{ __html: renderIconLinks() }}></div>
+            <div dangerouslySetInnerHTML={{ __html: renderIconLinks() }}>
+              {renderIconLinks}
+            </div>
           </div>
         </div>
       </div>
