@@ -8,7 +8,6 @@ function iconrender() {
         );
   };  
   return null;
-  );
 }
 
 render(iconrender);
