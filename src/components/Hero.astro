@@ -31,19 +31,20 @@ const {
             )}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-            {Array.from({ length: numLinks }, (_, i) => {
-              const href = `href${i + 1}`;
-              const icon = `icon${i + 1}`;
-              const desc = `desc${i + 1}`;
-              if (Astro.props[href] && Astro.props[icon] && Astro.props[desc]) {
-                return (
-                  <a href={Astro.props[href]} target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title={Astro.props[desc]}>
-                    <i class={`bi bi-${Astro.props[icon]}`}></i>
-                  </a>
-                );
-              }
-              return null;
-            })}
+            {icons.map(({ icon, desc, href }, index) => (
+            <a
+              href={href}
+              target='_blank'
+              rel='noopener noreferrer'
+              class='link-hero fs-7'
+              data-bs-toggle='tooltip'
+              data-bs-placement='bottom'
+              data-bs-title={desc}
+              key={index}
+            >
+              <i class={`bi bi-${icon}`}></i>
+            </a>
+          ))}
           </div>
         </div>
       </div>
