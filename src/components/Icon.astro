@@ -1,22 +1,25 @@
 <:astro>
 export default function IconRender({ href, icon, desc }) {
-  {#script}
+  const renderIcon = () => {
     if (href) {
       const iconelement = `bi bi-${icon}`;
-      $$render`
+      return (
         <a
-          href=${href}
+          href={href}
           target="_blank"
           rel="noopener noreferrer"
           class="link-hero fs-7"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          data-bs-title=${desc}
+          data-bs-title={desc}
         >
-          <i class=${iconelement}></i>
+          <i class={iconelement}></i>
         </a>
-      `;
+      );
     }
-  {/script}
+    return null;
+  };
+
+  return renderIcon();
 }
 </:astro>
