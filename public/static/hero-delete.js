@@ -6,10 +6,10 @@ $(document).ready(function() {
     }
   });
 
-  // Remove undefined icon elements
+  // Remove link-hero elements with no href attribute
   $('.link-hero.fs-7').each(function() {
-    const iconClass = $(this).find('i').attr('class');
-    if (iconClass && iconClass.includes('bi-undefined')) {
+    const href = $(this).attr('href');
+    if (!href) {
       $(this).remove();
     }
   });
