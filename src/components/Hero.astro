@@ -34,11 +34,11 @@ const {
               const href = `href${i + 1}`;
               const icon = `icon${i + 1}`;
               const desc = `desc${i + 1}`;
-              return (
+              return Astro.props[href] && Astro.props[icon] && Astro.props[desc] ? (
                 <a href={Astro.props[href]} target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title={Astro.props[desc]}>
                   <i class={`bi bi-${Astro.props[icon]}`}></i>
                 </a>
-              );
+              ) : null;
             })}
           </div>
         </div>
