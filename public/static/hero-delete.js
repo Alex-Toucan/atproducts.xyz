@@ -1,4 +1,23 @@
-// Assuming you have fetched 'icons' and 'dropdownItems' from an API or another source
+const dropdownItems = [
+  { navigationdesc: iddesc1, navigationlink: idhref1 },
+  { navigationdesc: iddesc2, navigationlink: idhref2 },
+  { navigationdesc: iddesc3, navigationlink: idhref3 },
+  { navigationdesc: iddesc4, navigationlink: idhref4 },
+  { navigationdesc: iddesc5, navigationlink: idhref5 },
+  { navigationdesc: iddesc6, navigationlink: idhref6 },
+  { navigationdesc: iddesc7, navigationlink: idhref7 },
+  { navigationdesc: iddesc8, navigationlink: idhref8 },
+  { navigationdesc: iddesc9, navigationlink: idhref9 },
+  { navigationdesc: iddesc10, navigationlink: idhref10 },
+];
+
+const icons = [
+  { icon: icon1, desc: desc1, href: href1 },
+  { icon: icon2, desc: desc2, href: href2 },
+  { icon: icon3, desc: desc3, href: href3 },
+  { icon: icon4, desc: desc4, href: href4 },
+  { icon: icon5, desc: desc5, href: href5 }
+];
 
 // Fetching the lengths of the arrays
 const numItems = Math.min(dropdownItems.length, 10); // Set the number of items you want in the dropdown, up to a maximum of 10
