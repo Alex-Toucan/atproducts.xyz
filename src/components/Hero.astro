@@ -44,12 +44,12 @@ const renderIconLinks = () => {
           <div class="d-md-flex d-grid gap-2">
             <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
             <div dangerouslySetInnerHTML={{ __html: renderSecondaryButton() }}>
-              {renderSecondaryButton}
+              {renderSecondaryButton()}
             </div>
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
             <div dangerouslySetInnerHTML={{ __html: renderIconLinks() }}>
-              {renderIconLinks}
+              {renderIconLinks()}
             </div>
           </div>
         </div>
