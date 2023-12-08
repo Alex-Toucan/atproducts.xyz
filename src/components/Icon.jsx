@@ -1,5 +1,4 @@
-<:astro>
-  export default function Icon({ href, icon, desc }) {
+export default function Icon({ href, icon, desc }) {
     {#if href && icon && desc}
       return (
         <a href={href} target='_blank' rel='noopener noreferrer' class='link-hero fs-7'>
@@ -9,5 +8,4 @@
       );
     {/if}
     return null;
-  }
-</:astro>
+}
