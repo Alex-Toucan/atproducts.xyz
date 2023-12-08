@@ -69,26 +69,8 @@ const dropdownItems = [
   { navigationdesc: iddesc10, navigationlink: idhref10 }
 ];
 
-<!-- Render the icons -->
-{icons.slice(0, Math.min(icons.length, 10)).map(({ icon, desc, href }, index) => (
-  <a
-    href={href}
-    target='_blank'
-    rel='noopener noreferrer'
-    class='link-hero fs-7'
-    data-bs-toggle='tooltip'
-    data-bs-placement='bottom'
-    data-bs-title={desc}
-    key={index}
-  >
-    <i class={`bi bi-${icon}`}></i>
-  </a>
-))}
-
-<!-- Render the dropdown items -->
-{dropdownItems.slice(0, Math.min(dropdownItems.length, 10)).map(({ navigationdesc, navigationlink }, index) => (
-  <li key={index}><a class="dropdown-item" href={navigationlink}>{navigationdesc}</a></li>
-))}
+const filteredIcons = icons.filter(({ icon, desc, href }) => icon && desc && href);
+const filteredDropdownItems = dropdownItems.filter(({ navigationdesc, navigationlink }) => navigationdesc && navigationlink);
 
 ---
 
