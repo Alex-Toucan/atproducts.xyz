@@ -9,7 +9,7 @@ $(document).ready(function() {
   // Remove undefined icon elements
   $('.link-hero.fs-7').each(function() {
     const iconClass = $(this).find('i').attr('class');
-    if (iconClass.includes('bi-undefined')) {
+    if (iconClass && iconClass.includes('bi-undefined')) {
       $(this).remove();
     }
   });
