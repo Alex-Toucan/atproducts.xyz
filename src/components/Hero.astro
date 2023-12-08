@@ -13,7 +13,7 @@ const {
 } = Astro.props;
 ---
 
-<div id="intro" class="hero text-center mb-3" data-bs-theme="dark">
+<div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
   <div class="hero-back h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
       <div class="text-white">
@@ -34,11 +34,14 @@ const {
               const href = `href${i + 1}`;
               const icon = `icon${i + 1}`;
               const desc = `desc${i + 1}`;
-              return Astro.props[href] && Astro.props[icon] && Astro.props[desc] ? (
-                <a href={Astro.props[href]} target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title={Astro.props[desc]}>
-                  <i class={`bi bi-${Astro.props[icon]}`}></i>
-                </a>
-              ) : null;
+              if (Astro.props[href] && Astro.props[icon] && Astro.props[desc]) {
+                return (
+                  <a href={Astro.props[href]} target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title={Astro.props[desc]}>
+                    <i class={`bi bi-${Astro.props[icon]}`}></i>
+                  </a>
+                );
+              }
+              return null;
             })}
           </div>
         </div>
