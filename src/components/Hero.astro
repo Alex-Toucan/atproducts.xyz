@@ -34,25 +34,29 @@ const renderIconLinks = (id) => {
     return iconLinks;
 };
 ---
-<div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
+const heroContent = `
   <div class="hero-back h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
       <div class="text-white">
         <div>
-          <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
-          <h1 class="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">{title}</h1>
+          <img src=${imageSrc} width=${imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
+          <h1 class="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">${title}</h1>
         </div>
-        <p class="fs-4 m-3 text-body-secondary">{description}</p>
+        <p class="fs-4 m-3 text-body-secondary">${description}</p>
         <div class="mx-auto justify-content-between container" id="links">
           <div class="d-md-flex d-grid gap-2">
-            <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
-            {renderSecondaryButton()}
+            <a href=${primaryHref} class="btn btn-primary col-md">${primaryText}</a>
+            ${renderSecondaryButton()}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-            {renderIconLinks(numLinks)}
+            ${renderIconLinks(numLinks)}
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+`;
+
+return (
+  <div id={`intro-${id}`} class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark" dangerouslySetInnerHTML={{ __html: heroContent }}></div>
+);
