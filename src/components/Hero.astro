@@ -57,8 +57,6 @@ const icons = [
   { icon: icon5, desc: desc5, href: href5 }
 ];
 
-const filteredIcons = icons.filter(({ href }) => href).slice(0, numLinks);
-
 const dropdownItems = [
   { navigationDesc: iddesc1, navigationLink: idhref1 },
   { navigationDesc: iddesc2, navigationLink: idhref2 },
@@ -71,10 +69,6 @@ const dropdownItems = [
   { navigationDesc: iddesc9, navigationLink: idhref9 },
   { navigationDesc: iddesc10, navigationLink: idhref10 }
 ];
-
-const filteredDropdownItems = dropdownItems
-  .filter(({ navigationDesc, navigationLink }) => navigationDesc && navigationLink)
-  .slice(0, numItems);
 ---
 
 <div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
