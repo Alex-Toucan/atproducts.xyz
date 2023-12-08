@@ -1,6 +1,7 @@
 ---
 const {
   title,
+  description,
   primaryHref,
   primaryText,
   secondaryHref,
@@ -20,11 +21,12 @@ const {
           <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} />
           <h1 class="display-3 fw-bold mt-mmd-2 ps-md-3 d-block d-md-inline align-middle">{title}</h1>
         </div>
+        <p class="fs-4 m-3 text-body-secondary">{description}</p>
         <div class="mx-auto justify-content-between container" id="links">
           <div class="d-md-flex d-grid gap-2">
             <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
             {secondaryHref && secondaryText && (
-              <div id="secondaryButton" dangerouslySetInnerHTML={{ __html: `<a href="${secondaryHref}" class="btn btn-secondary col-md">${secondaryText}</a>` }} />
+              <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
             )}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
@@ -33,7 +35,9 @@ const {
               const icon = `icon${i + 1}`;
               const desc = `desc${i + 1}`;
               return (
-                <a href={Astro.props[href]} target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title={Astro.props[desc]}><i class={'bi bi-' + Astro.props[icon]}></i></a>
+                <a href={Astro.props[href]} target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title={Astro.props[desc]}>
+                  <i class={`bi bi-${Astro.props[icon]}`}></i>
+                </a>
               );
             })}
           </div>
