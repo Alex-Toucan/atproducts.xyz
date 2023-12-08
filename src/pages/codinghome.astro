@@ -4,18 +4,14 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Modal  from '../components/Modal.astro';
 
-const icon1 = 'discord';
-const desc1 = 'Discord';
-const href1 = 'https://discord.gg/pgGfhDVrmS';
-const icon2 = 'bullseye';
-const desc2 = 'ProtDos';
-const href2 = 'https://protdos.com/';
-const icon3 = 'github';
-const desc3 = 'GitHub';
-const href3 = 'https://github.com/protdos';
-const icon4 = 'envelope-fill';
-const desc4 = 'ProtDos&lsquo; Email';
-const href4 = 'mailto:contact@protdos.com';
+<script context="module">
+  export const icons = [
+    { icon: 'discord', desc: 'Discord', href: 'https://discord.gg/pgGfhDVrmS' },
+    { icon: 'bullseye', desc: 'ProtDos', href: 'https://protdos.com/' },
+    { icon: 'github', desc: 'GitHub', href: 'https://github.com/protdos' },
+    { icon: 'envelope-fill', desc: 'ProtDos‘ Email', href: 'mailto:contact@protdos.com' }
+  ];
+</script>
 ---
 
 <!DOCTYPE html>
