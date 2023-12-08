@@ -28,11 +28,11 @@ const renderIconLinks = () => {
     const link = `<a href="${Astro.props[href]}" target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title=''><i class={'bi bi-' + Astro.props[icon]}></i></a>`;
     iconLinks.push(link);
   }
-  return iconLinks.join('');
+  return iconLinks.join(''); // Return a concatenated string of HTML links
 };
 ---
 
-<div id={`intro-${id}`} class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
+<div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
   <div class="hero-back h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
       <div class="text-white">
