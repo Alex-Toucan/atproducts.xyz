@@ -1,22 +1,6 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-
-const icon1 = 'github';
-const desc1 = 'Github';
-const href1 = 'https://github.com/Alex-Toucan/atproducts.xyz';
-const icon2 = 'twitter-x';
-const desc2 = 'Twitter / X';
-const href2 = 'https://twitter.com/ATProductsLLC';
-const icon3 = 'youtube';
-const desc3 = 'YouTube';
-const href3 = 'https://youtube.com/c/AlexToucanAT';
-const icon4 = 'envelope-fill';
-const desc4 = 'Support Email';
-const href4 = 'mailto:support@atproducts.xyz';
-const icon5 = 'cloud-sun-fill';
-const desc5 = 'Weather';
-const href5 = 'https://twitter.com/ATPWeather';
 ---
 <!DOCTYPE html>
 <html class="fixedtopnavimage" lang="en">
@@ -66,38 +50,9 @@ const href5 = 'https://twitter.com/ATPWeather';
 </a>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-     <div id="intro" class="hero hero-main text-center" data-bs-theme="dark">
-        <div class="hero-back h-100 p-3 position-relative">
-         <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
-            <div class="text-white">
-        <h1 class="display-3 fw-bold">AT Products LLC</h1>
-            <p class="fs-4 m-3 text-body-secondary">The company that provides web solutions to your web problems!</p>
-              <div class="mx-auto justify-content-between container" id="links">
-<div class="d-md-flex d-grid gap-2">
-  <a href="/paid" class="btn btn-primary col-md w-100">Paid Services</a>
-  <div class="dropdown col-md">
-  <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
-    Navigation
-  </button>
-  <ul class="dropdown-menu w-100 text-wrap">
-    <li><a class="dropdown-item" href="#general-info">General Information</a></li>
-    <li><a class="dropdown-item" href="#products">Products</a></li>
-    <li><a class="dropdown-item" href="#allies">Allies</a></li>
-    <li><a class="dropdown-item" href="#credits">Credits</a></li>
-    <li><a class="dropdown-item" href="#history">History</a></li>
-    <li><a class="dropdown-item" href="#what-new">What's New?</a></li>
-  </ul>
-</div></div>
-<div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2">
-  <a href={href1} aria-label={desc1} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc1}><i class={`bi bi-${icon1}`}></i></a> 
-  <a href={href2} aria-label={desc2} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc2}><i class={`bi bi-${icon2}`}></i></a> 
-  <a href={href3} aria-label={desc3} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc3}><i class={`bi bi-${icon3}`}></i></a>
-  <a href={href4} aria-label={desc4} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc4}><i class={`bi bi-${icon4}`}></i></a> 
-  <a href={href5} aria-label={desc5} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc5}><i class={`bi bi-${icon5}`}></i></a> </div></div>
-</div>
-      </div>
-    </div>
-  </div>
+<Hero id="main" title="AT Products LLC" description="The company that provides web solutions to your web problems!" primaryHref="/paid" primaryText="Paid Services" numLinks="5" 
+icon1="github" desc1="Github" href1="https://github.com/Alex-Toucan/atproducts.xyz" icon2="twitter-x" desc2="Twitter / X" href2="https://twitter.com/ATProductsLLC"icon3="youtube" desc3="YouTube" href3="https://youtube.com/c/AlexToucanAT" icon4="envelope-fill" desc4="Support Email" href4="mailto:support@atproducts.xyz" icon5="cloud-sun-fill" desc5="Weather" href5="https://twitter.com/ATPWeather"
+idhref1="#general-info" iddesc1="General Information" idhref2="#products" iddesc2="Products" idhref3="#allies" iddesc3="Allies" idhref4="#credits" iddesc4="Credits" idhref5="#history" iddesc5="History" idhref6="#what-new" iddesc6="What&lsquo;s New?"/>
 <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow nolrpadding container-sm mt-xmd-2 mb-2 pointer-event" data-bs-ride="carousel"><div class="pt-xmd-2 px-xmd-2">
 <div class="carousel-inner">
         <div class="carousel-item active">
