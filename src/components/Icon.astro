@@ -1,19 +1,18 @@
 <:astro>
 export default function IconRender({ href, icon, desc }) {
-  return (
-    {#if href}
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="link-hero fs-7"
-        data-bs-toggle="tooltip"
-        data-bs-placement="bottom"
-        data-bs-title={desc}
-      >
-        <i class={`bi bi-${icon}`}></i>
-      </a>
-    {/if}
-  );
+  {#if href}
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-hero fs-7"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      data-bs-title={desc}
+    >
+      <i class={`bi bi-${icon}`}></i>
+    </a>
+  {/if}
+  <!-- You can add any other logic or elements here -->
 }
 </:astro>
