@@ -10,5 +10,4 @@ function iconrender() {
   return null;
 }
 
-render(iconrender);
 export default iconrender;
