@@ -29,6 +29,7 @@ const {
 } = Astro.props;
 ---
 
+
 <div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
   <div class="hero-back h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
@@ -43,6 +44,29 @@ const {
             <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
             {secondaryHref && secondaryText && (
               <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
+            )}
+            {iddesc1 && idhref1 && (
+            <div class="dropdown col-md">
+              <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
+                Navigation
+              </button>
+              <ul class="dropdown-menu w-100 white-space-normal">
+                {[
+                  { navigationdesc: iddesc1, navigationlink: idhref1 },
+                  { navigationdesc: iddesc2, navigationlink: idhref2 },
+                  { navigationdesc: iddesc3, navigationlink: idhref3 },
+                  { navigationdesc: iddesc4, navigationlink: idhref4 },
+                  { navigationdesc: iddesc5, navigationlink: idhref5 },
+                  { navigationdesc: iddesc6, navigationlink: idhref6 },
+                  { navigationdesc: iddesc7, navigationlink: idhref7 },
+                  { navigationdesc: iddesc8, navigationlink: idhref8 },
+                  { navigationdesc: iddesc9, navigationlink: idhref9 },
+                  { navigationdesc: iddesc10, navigationlink: idhref10 },
+                ].map(({ navigationdesc, navigationlink }, index) => (
+                  <li key={index}><a class="dropdown-item" href={navigationlink}>{navigationdesc}</a></li>
+                ))}
+              </ul>
+            </div>
             )}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
@@ -72,4 +96,3 @@ const {
     </div>
   </div>
 </div>
-
