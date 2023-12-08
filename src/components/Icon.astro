@@ -1,14 +1,12 @@
----
-
----
-
 <:astro>
   export default function Icon({ href, icon, desc }) {
     return (
-      <a href={href} target='_blank' rel='noopener noreferrer' class='link-hero fs-7'>
-        <i class={`bi bi-${icon}`}></i>
-        <span>{desc}</span>
-      </a>
+      {#if href && icon && desc}
+        <a href={href} target='_blank' rel='noopener noreferrer' class='link-hero fs-7'>
+          <i class={`bi bi-${icon}`}></i>
+          <span>{desc}</span>
+        </a>
+      {/if}
     );
   }
 </:astro>
