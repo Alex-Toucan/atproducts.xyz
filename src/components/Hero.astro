@@ -94,33 +94,32 @@ const dropdownItems = [
                 Navigation
               </button>
               <ul class="dropdown-menu w-100 white-space-normal">
-
-              // Filter out items where both navigationDesc and navigationLink are undefined or empty
-              const filteredDropdownItems = dropdownItems.filter(
-                ({ navigationDesc, navigationLink }) => navigationDesc && navigationLink
-              );
-
-              // Render the dropdown items
-              {filteredDropdownItems
-                // Slice to render a maximum of 10 items
-                .slice(0, 10)
-                .map(({ navigationDesc, navigationLink }, index) => (
-                  <li key={index}>
-                    <a class="dropdown-item" href={navigationlink}>{navigationdesc}</a>
-                  </li>
+            {[
+                  { navigationdesc: iddesc1, navigationlink: idhref1 },
+                  { navigationdesc: iddesc2, navigationlink: idhref2 },
+                  { navigationdesc: iddesc3, navigationlink: idhref3 },
+                  { navigationdesc: iddesc4, navigationlink: idhref4 },
+                  { navigationdesc: iddesc5, navigationlink: idhref5 },
+                  { navigationdesc: iddesc6, navigationlink: idhref6 },
+                  { navigationdesc: iddesc7, navigationlink: idhref7 },
+                  { navigationdesc: iddesc8, navigationlink: idhref8 },
+                  { navigationdesc: iddesc9, navigationlink: idhref9 },
+                  { navigationdesc: iddesc10, navigationlink: idhref10 },
+                ].map(({ navigationdesc, navigationlink }, index) => (
+                  <li key={index}><a class="dropdown-item" href={navigationlink}>{navigationdesc}</a></li>
                 ))}
-
               </ul>
             </div>
             )}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-              {icons
-              // Filter out objects where href is undefined or empty
-              .filter(({ href }) => href)
-              // Slice to render a maximum of 10 items
-              .slice(0, 10)
-              .map(({ icon, desc, href }, index) => (
+                          {[
+              { icon: icon1, desc: desc1, href: href1 },
+              { icon: icon2, desc: desc2, href: href2 },
+              { icon: icon3, desc: desc3, href: href3 },
+              { icon: icon4, desc: desc4, href: href4 },
+              { icon: icon5, desc: desc5, href: href5 }
+            ].map(({ icon, desc, href }, index) => (
               <a
                 href={href}
                 target='_blank'
@@ -131,9 +130,9 @@ const dropdownItems = [
                 data-bs-title={desc}
                 key={index}
               >
-              <i class={`bi bi-${icon}`}></i>
+                <i class={`bi bi-${icon}`}></i>
               </a>
-              ))}
+            ))}
           </div>
         </div>
       </div>
