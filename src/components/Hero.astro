@@ -1,4 +1,6 @@
 ---
+import Icon from '../components/Icon.astro';
+
 const {
   id,
   title,
@@ -10,23 +12,7 @@ const {
   imageSrc,
   imageWidth,
   minImageWidth,
-  numLinks,
   numItems,
-  href1,
-  href2,
-  href3,
-  href4,
-  href5,
-  icon1,
-  icon2,
-  icon3,
-  icon4,
-  icon5,
-  desc1,
-  desc2,
-  desc3,
-  desc4,
-  desc5, 
   idhref1,
   idhref2,
   idhref3,
@@ -48,14 +34,6 @@ const {
   iddesc9,
   iddesc10,
 } = Astro.props;
-
-const icons = [
-  { icon: icon1, desc: desc1, href: href1 },
-  { icon: icon2, desc: desc2, href: href2 },
-  { icon: icon3, desc: desc3, href: href3 },
-  { icon: icon4, desc: desc4, href: href4 },
-  { icon: icon5, desc: desc5, href: href5 }
-];
 
 const dropdownItems = [
   { navigationDesc: iddesc1, navigationLink: idhref1 },
@@ -113,27 +91,16 @@ const dropdownItems = [
             )}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-                          {[
-              { icon: icon1, desc: desc1, href: href1 },
-              { icon: icon2, desc: desc2, href: href2 },
-              { icon: icon3, desc: desc3, href: href3 },
-              { icon: icon4, desc: desc4, href: href4 },
-              { icon: icon5, desc: desc5, href: href5 }
-            ].map(({ icon, desc, href }, index) => (
-              <a
-                href={href}
-                target='_blank'
-                rel='noopener noreferrer'
-                class='link-hero fs-7'
-                data-bs-toggle='tooltip'
-                data-bs-placement='bottom'
-                data-bs-title={desc}
-                key={index}
-              >
-                <i class={`bi bi-${icon}`}></i>
-              </a>
-            ))}
-          </div>
+    <!-- Rendering icons based on the count -->
+    {#each [1...validIconCount] as index}
+      <Icon
+        icon={get(`icon${index}`)}
+        desc={get(`desc${index}`)}
+        href={get(`href${index}`)}
+        key={index}
+      />
+    {/each}
+  </div>
         </div>
       </div>
     </div>
