@@ -1,4 +1,4 @@
-render(); {
+function iconrender(); {
   const icon = ({ href, icon, desc });
   return (
       {href && icon && desc ? (
@@ -11,3 +11,5 @@ render(); {
     </div>
   );
 }
+
+render(iconrender);
