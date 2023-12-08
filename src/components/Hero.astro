@@ -60,20 +60,20 @@ const icons = [
 const filteredIcons = icons.filter(({ href }) => href).slice(0, numLinks);
 
 const dropdownItems = [
-  { navigationdesc: iddesc1, navigationlink: idhref1 },
-  { navigationdesc: iddesc2, navigationlink: idhref2 },
-  { navigationdesc: iddesc3, navigationlink: idhref3 },
-  { navigationdesc: iddesc4, navigationlink: idhref4 },
-  { navigationdesc: iddesc5, navigationlink: idhref5 },
-  { navigationdesc: iddesc6, navigationlink: idhref6 },
-  { navigationdesc: iddesc7, navigationlink: idhref7 },
-  { navigationdesc: iddesc8, navigationlink: idhref8 },
-  { navigationdesc: iddesc9, navigationlink: idhref9 },
-  { navigationdesc: iddesc10, navigationlink: idhref10 }
+  { navigationDesc: iddesc1, navigationLink: idhref1 },
+  { navigationDesc: iddesc2, navigationLink: idhref2 },
+  { navigationDesc: iddesc3, navigationLink: idhref3 },
+  { navigationDesc: iddesc4, navigationLink: idhref4 },
+  { navigationDesc: iddesc5, navigationLink: idhref5 },
+  { navigationDesc: iddesc6, navigationLink: idhref6 },
+  { navigationDesc: iddesc7, navigationLink: idhref7 },
+  { navigationDesc: iddesc8, navigationLink: idhref8 },
+  { navigationDesc: iddesc9, navigationLink: idhref9 },
+  { navigationDesc: iddesc10, navigationLink: idhref10 }
 ];
 
 const filteredDropdownItems = dropdownItems
-  .filter(({ navigationdesc, navigationlink }) => navigationdesc && navigationlink)
+  .filter(({ navigationDesc, navigationLink }) => navigationDesc && navigationLink)
   .slice(0, numItems);
 ---
 
@@ -101,16 +101,16 @@ const filteredDropdownItems = dropdownItems
               </button>
               <ul class="dropdown-menu w-100 white-space-normal">
 
-              // Filter out items where both navigationdesc and navigationlink are undefined or empty
+              // Filter out items where both navigationDesc and navigationLink are undefined or empty
               const filteredDropdownItems = dropdownItems.filter(
-                ({ navigationdesc, navigationlink }) => navigationdesc && navigationlink
+                ({ navigationDesc, navigationLink }) => navigationDesc && navigationLink
               );
 
               // Render the dropdown items
               {filteredDropdownItems
                 // Slice to render a maximum of 10 items
                 .slice(0, 10)
-                .map(({ navigationdesc, navigationlink }, index) => (
+                .map(({ navigationDesc, navigationLink }, index) => (
                   <li key={index}>
                     <a class="dropdown-item" href={navigationlink}>{navigationdesc}</a>
                   </li>
