@@ -16,7 +16,7 @@ const {
 const renderSecondaryButton = () => {
   if (secondaryHref && secondaryText) {
     return (
-      <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
+    `<a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>`
     );
   }
   return null; // If no secondary button data is provided, return null or an empty element
