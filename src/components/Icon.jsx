@@ -11,3 +11,4 @@ function iconrender() {
 }
 
 render(iconrender);
+export default iconrender;
