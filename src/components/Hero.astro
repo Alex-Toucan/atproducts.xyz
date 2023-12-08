@@ -11,6 +11,7 @@ const {
   imageWidth,
   minImageWidth,
   numLinks,
+  numItems,
   href1,
   href2,
   href3,
@@ -56,6 +57,8 @@ const icons = [
   { icon: icon5, desc: desc5, href: href5 }
 ];
 
+const filteredIcons = icons.filter(({ href }) => href).slice(0, numLinks);
+
 const dropdownItems = [
   { navigationdesc: iddesc1, navigationlink: idhref1 },
   { navigationdesc: iddesc2, navigationlink: idhref2 },
@@ -69,9 +72,9 @@ const dropdownItems = [
   { navigationdesc: iddesc10, navigationlink: idhref10 }
 ];
 
-const filteredIcons = icons.filter(({ icon, desc, href }) => icon && desc && href);
-const filteredDropdownItems = dropdownItems.filter(({ navigationdesc, navigationlink }) => navigationdesc && navigationlink);
-
+const filteredDropdownItems = dropdownItems
+  .filter(({ navigationdesc, navigationlink }) => navigationdesc && navigationlink)
+  .slice(0, numItems);
 ---
 
 <div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
