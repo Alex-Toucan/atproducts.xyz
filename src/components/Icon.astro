@@ -1,7 +1,8 @@
 <:astro>
 export default function IconRender({ href, icon, desc }) {
-  {#if href}
-    let iconelement = `bi bi-${icon}`;
+  {
+    href &&
+    (let iconelement = `bi bi-${icon}`;
     return (
       <a
         href={href}
@@ -14,6 +15,6 @@ export default function IconRender({ href, icon, desc }) {
       >
         <i class={iconelement}></i>
       </a>
-    );
-  {/if}
+    ));
+  }
 </:astro>
