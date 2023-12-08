@@ -23,34 +23,15 @@ const renderSecondaryButton = () => {
 };
 
 
-const renderIconLinks = (numLinks) => {
-  const iconLinks = [];
-
-  for (let i = 1; i <= numLinks; i++) {
-    const href = Astro.props[`href${i}`];
-    const desc = Astro.props[`desc${i}`];
-    const icon = Astro.props[`icon${i}`];
-
-iconLinks.push(
-  <div key={i}>
-    <a
-      href={href}
-      aria-label={desc}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="link-hero fs-7"
-      data-bs-toggle="tooltip"
-      data-bs-placement="bottom"
-      data-bs-title={desc}
-      // Use 'as any' to bypass TypeScript error
-      {...{ className: "link-hero fs-7" }}
-    >
-      <i className={`bi bi-${icon}`}></i>
-    </a>
-  </div>
-);
-
-  return iconLinks;
+const renderIconLinks = (id) => {
+    const iconLinks = [];
+    for (let i = 1; i <= numLinks; i++) {
+        const href = `href${i}`;
+        const icon = `icon${i}`;
+        const link = `<a href={${href}} target='_blank' rel='noopener noreferrer' class='link-hero fs-7' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title=''><i class={'bi bi-' + ${icon}}></i></a>`;
+        iconLinks.push(link);
+        }
+    return iconLinks;
 };
 ---
 <div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
