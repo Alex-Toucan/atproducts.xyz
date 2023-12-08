@@ -1,4 +1,4 @@
-render() {
+render(); {
   const icon = ({ href, icon, desc });
   return (
       {href && icon && desc ? (
