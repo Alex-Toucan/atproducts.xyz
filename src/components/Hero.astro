@@ -47,6 +47,49 @@ const {
   iddesc9,
   iddesc10,
 } = Astro.props;
+
+const icons = [
+  { icon: icon1, desc: desc1, href: href1 },
+  { icon: icon2, desc: desc2, href: href2 },
+  { icon: icon3, desc: desc3, href: href3 },
+  { icon: icon4, desc: desc4, href: href4 },
+  { icon: icon5, desc: desc5, href: href5 }
+];
+
+const dropdownItems = [
+  { navigationdesc: iddesc1, navigationlink: idhref1 },
+  { navigationdesc: iddesc2, navigationlink: idhref2 },
+  { navigationdesc: iddesc3, navigationlink: idhref3 },
+  { navigationdesc: iddesc4, navigationlink: idhref4 },
+  { navigationdesc: iddesc5, navigationlink: idhref5 },
+  { navigationdesc: iddesc6, navigationlink: idhref6 },
+  { navigationdesc: iddesc7, navigationlink: idhref7 },
+  { navigationdesc: iddesc8, navigationlink: idhref8 },
+  { navigationdesc: iddesc9, navigationlink: idhref9 },
+  { navigationdesc: iddesc10, navigationlink: idhref10 }
+];
+
+<!-- Render the icons -->
+{icons.slice(0, Math.min(icons.length, 10)).map(({ icon, desc, href }, index) => (
+  <a
+    href={href}
+    target='_blank'
+    rel='noopener noreferrer'
+    class='link-hero fs-7'
+    data-bs-toggle='tooltip'
+    data-bs-placement='bottom'
+    data-bs-title={desc}
+    key={index}
+  >
+    <i class={`bi bi-${icon}`}></i>
+  </a>
+))}
+
+<!-- Render the dropdown items -->
+{dropdownItems.slice(0, Math.min(dropdownItems.length, 10)).map(({ navigationdesc, navigationlink }, index) => (
+  <li key={index}><a class="dropdown-item" href={navigationlink}>{navigationdesc}</a></li>
+))}
+
 ---
 
 <div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
@@ -72,18 +115,7 @@ const {
                 Navigation
               </button>
               <ul class="dropdown-menu w-100 white-space-normal">
-                {[
-                  { navigationdesc: iddesc1, navigationlink: idhref1 },
-                  { navigationdesc: iddesc2, navigationlink: idhref2 },
-                  { navigationdesc: iddesc3, navigationlink: idhref3 },
-                  { navigationdesc: iddesc4, navigationlink: idhref4 },
-                  { navigationdesc: iddesc5, navigationlink: idhref5 },
-                  { navigationdesc: iddesc6, navigationlink: idhref6 },
-                  { navigationdesc: iddesc7, navigationlink: idhref7 },
-                  { navigationdesc: iddesc8, navigationlink: idhref8 },
-                  { navigationdesc: iddesc9, navigationlink: idhref9 },
-                  { navigationdesc: iddesc10, navigationlink: idhref10 },
-                ].map(({ navigationdesc, navigationlink }, index) => (
+                {dropdownItems.map(({ navigationdesc, navigationlink }, index) => (
                   <li key={index}><a class="dropdown-item" href={navigationlink}>{navigationdesc}</a></li>
                 ))}
               </ul>
@@ -91,24 +123,18 @@ const {
             )}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-            {[
-              { icon: icon1, desc: desc1, href: href1 },
-              { icon: icon2, desc: desc2, href: href2 },
-              { icon: icon3, desc: desc3, href: href3 },
-              { icon: icon4, desc: desc4, href: href4 },
-              { icon: icon5, desc: desc5, href: href5 }
-            ].map(({ icon, desc, href }, index) => (
-              <a
-                href={href}
-                target='_blank'
-                rel='noopener noreferrer'
-                class='link-hero fs-7'
-                data-bs-toggle='tooltip'
-                data-bs-placement='bottom'
-                data-bs-title={desc}
-                key={index}
-              >
-                <i class={`bi bi-${icon}`}></i>
+            {icons.map(({ icon, desc, href }, index) => (
+            <a
+              href={href}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='link-hero fs-7'
+              data-bs-toggle='tooltip'
+              data-bs-placement='bottom'
+              data-bs-title={desc}
+              key={index}
+            >
+              <i className={`bi bi-${icon}`}></i>
               </a>
             ))}
           </div>
@@ -117,24 +143,3 @@ const {
     </div>
   </div>
 </div>
-
-<!-- Render the icons -->
-{icons.slice(0, Math.min(icons.length, 10)).map(({ icon, desc, href }, index) => (
-  <a
-    href={href}
-    target='_blank'
-    rel='noopener noreferrer'
-    class='link-hero fs-7'
-    data-bs-toggle='tooltip'
-    data-bs-placement='bottom'
-    data-bs-title={desc}
-    key={index}
-  >
-    <i class={`bi bi-${icon}`}></i>
-  </a>
-))}
-
-<!-- Render the dropdown items -->
-{dropdownItems.slice(0, Math.min(dropdownItems.length, 10)).map(({ navigationdesc, navigationlink }, index) => (
-  <li key={index}><a class="dropdown-item" href={navigationlink}>{navigationdesc}</a></li>
-))}
