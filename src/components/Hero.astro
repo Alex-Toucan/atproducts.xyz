@@ -115,28 +115,46 @@ const dropdownItems = [
                 Navigation
               </button>
               <ul class="dropdown-menu w-100 white-space-normal">
-                {dropdownItems.map(({ navigationdesc, navigationlink }, index) => (
-                  <li key={index}><a class="dropdown-item" href={navigationlink}>{navigationdesc}</a></li>
+
+              // Filter out items where both navigationdesc and navigationlink are undefined or empty
+              const filteredDropdownItems = dropdownItems.filter(
+                ({ navigationdesc, navigationlink }) => navigationdesc && navigationlink
+              );
+
+              // Render the dropdown items
+              {filteredDropdownItems
+                // Slice to render a maximum of 10 items
+                .slice(0, 10)
+                .map(({ navigationdesc, navigationlink }, index) => (
+                  <li key={index}>
+                    <a class="dropdown-item" href={navigationlink}>{navigationdesc}</a>
+                  </li>
                 ))}
+
               </ul>
             </div>
             )}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-            {icons.map(({ icon, desc, href }, index) => (
-            <a
-              href={href}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='link-hero fs-7'
-              data-bs-toggle='tooltip'
-              data-bs-placement='bottom'
-              data-bs-title={desc}
-              key={index}
-            >
-              <i className={`bi bi-${icon}`}></i>
+              {icons
+              // Filter out objects where href is undefined or empty
+              .filter(({ href }) => href)
+              // Slice to render a maximum of 10 items
+              .slice(0, 10)
+              .map(({ icon, desc, href }, index) => (
+              <a
+                href={href}
+                target='_blank'
+                rel='noopener noreferrer'
+                class='link-hero fs-7'
+                data-bs-toggle='tooltip'
+                data-bs-placement='bottom'
+                data-bs-title={desc}
+                key={index}
+              >
+              <i class={`bi bi-${icon}`}></i>
               </a>
-            ))}
+              ))}
           </div>
         </div>
       </div>
