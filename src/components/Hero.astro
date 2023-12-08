@@ -91,15 +91,7 @@ const dropdownItems = [
             )}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-    <!-- Rendering icons based on the count -->
-    {#each [1...validIconCount] as index}
-      <Icon
-        icon={get(`icon${index}`)}
-        desc={get(`desc${index}`)}
-        href={get(`href${index}`)}
-        key={index}
-      />
-    {/each}
+         <Icon />
   </div>
         </div>
       </div>
