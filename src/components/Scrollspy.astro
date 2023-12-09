@@ -1,0 +1,18 @@
+---
+const { id, content } = Astro.props;
+---
+
+<div class="d-md-flex">
+    <div class="col-md-4 mt-1 mb-2 pe-md-1">
+        <div id={id} class="list-group">
+            {scrollcontent && scrollcontent.map(({ name, href }, index) => (
+            <a class="list-group-item list-group-item-action" href={href}>{name}</a>
+            ))}
+        </div>
+    </div>
+    <div class="col-md my-1 mb-1">
+        <div data-bs-spy="scroll" data-bs-target={`#${id}`} data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+            <div set:html={ content } />
+        </div>
+    </div>
+</div>
