@@ -89,12 +89,6 @@ const dropdownItems = [
             </div>
             )}
           </div>
-          <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-<:props>
-  import Icon from '../components/Icon.astro'
-  const { icons } = Astro.props;
-</:props>
-
 <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
     {icons && icons.map(({ name, desc, href }, index) => (
     <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc} key={index}>
