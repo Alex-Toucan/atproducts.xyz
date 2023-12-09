@@ -12,7 +12,9 @@ export default function IconRender({ href, icon, desc }) {
       data-bs-placement={shouldRender ? "bottom" : undefined}
       data-bs-title={shouldRender ? desc : undefined}
     >
-      {shouldRender && <i class={`bi bi-${icon}`}></i>}
+      {shouldRender && (
+        <i class={`bi bi-${icon}`}></i>
+      )}
     </a>
   );
 }
