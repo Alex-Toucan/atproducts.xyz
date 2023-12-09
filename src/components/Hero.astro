@@ -10,42 +10,9 @@ const {
   imageSrc,
   imageWidth,
   minImageWidth,
-  numItems,
-  idhref1,
-  idhref2,
-  idhref3,
-  idhref4,
-  idhref5,
-  idhref6,
-  idhref8,
-  idhref7,
-  idhref9,
-  idhref10,
-  iddesc1,
-  iddesc2,
-  iddesc3,
-  iddesc4,
-  iddesc5,
-  iddesc6,
-  iddesc7,
-  iddesc8,
-  iddesc9,
-  iddesc10,
-  icons
+  icons,
+  dropdownItems 
 } = Astro.props;
-
-const dropdownItems = [
-  { navigationDesc: iddesc1, navigationLink: idhref1 },
-  { navigationDesc: iddesc2, navigationLink: idhref2 },
-  { navigationDesc: iddesc3, navigationLink: idhref3 },
-  { navigationDesc: iddesc4, navigationLink: idhref4 },
-  { navigationDesc: iddesc5, navigationLink: idhref5 },
-  { navigationDesc: iddesc6, navigationLink: idhref6 },
-  { navigationDesc: iddesc7, navigationLink: idhref7 },
-  { navigationDesc: iddesc8, navigationLink: idhref8 },
-  { navigationDesc: iddesc9, navigationLink: idhref9 },
-  { navigationDesc: iddesc10, navigationLink: idhref10 }
-];
 ---
 
 <div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
@@ -65,34 +32,25 @@ const dropdownItems = [
             {secondaryHref && secondaryText && (
               <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
             )}
-            {iddesc1 && idhref1 && (
-            <div class="dropdown col-md">
-              <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
-                Navigation
-              </button>
-              <ul class="dropdown-menu w-100 white-space-normal">
-            {[
-                  { navigationdesc: iddesc1, navigationlink: idhref1 },
-                  { navigationdesc: iddesc2, navigationlink: idhref2 },
-                  { navigationdesc: iddesc3, navigationlink: idhref3 },
-                  { navigationdesc: iddesc4, navigationlink: idhref4 },
-                  { navigationdesc: iddesc5, navigationlink: idhref5 },
-                  { navigationdesc: iddesc6, navigationlink: idhref6 },
-                  { navigationdesc: iddesc7, navigationlink: idhref7 },
-                  { navigationdesc: iddesc8, navigationlink: idhref8 },
-                  { navigationdesc: iddesc9, navigationlink: idhref9 },
-                  { navigationdesc: iddesc10, navigationlink: idhref10 },
-                ].map(({ navigationdesc, navigationlink }, index) => (
-                  <li key={index}><a class="dropdown-item" href={navigationlink}>{navigationdesc}</a></li>
-                ))}
-              </ul>
-            </div>
-            )}
+            {dropdownItems && (
+  <div class="dropdown col-md">
+    <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
+      Navigation
+    </button>
+    <ul class="dropdown-menu w-100 white-space-normal">
+      {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
+        <li key={index}>
+          <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
           </div>
 <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-    {icons && icons.map(({ name, desc, href }, index) => (
+    {icons && icons.map(({ icon, desc, href }, index) => (
     <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc} key={index}>
-      <i class={`bi bi-${name}`}></i>
+      <i class={`bi bi-${icon}`}></i>
     </a>
   ))}
 </div>
