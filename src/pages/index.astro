@@ -1,6 +1,5 @@
 ---
 import Hero   from '../components/Hero.astro';
-import Icon   from '../components/Icon.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -54,13 +53,14 @@ import Footer from '../components/Footer.astro';
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <Hero id="main" title="AT Products LLC" description="The company that provides web solutions to your web problems!" primaryHref="/paid" primaryText="Paid Services" 
-numItems="6" idhref1="#general-info" iddesc1="General Information" idhref2="#products" iddesc2="Products" idhref3="#allies" iddesc3="Allies" idhref4="#credits" iddesc4="Credits" idhref5="#history" iddesc5="History" idhref6="#what-new" iddesc6="What&lsquo;s New?">
-<Icon icon1="github" desc1="Github" href1="https://github.com/Alex-Toucan/atproducts.xyz" />
-<Icon icon2="twitter-x" desc2="Twitter / X" href2="https://twitter.com/ATProductsLLC" />
-<Icon icon3="youtube" desc3="YouTube" href3="https://youtube.com/c/AlexToucanAT"  />
-<Icon icon4="envelope-fill" desc4="Support Email" href4="mailto:support@atproducts.xyz" />
-<Icon icon5="cloud-sun-fill" desc5="Weather" href5="https://twitter.com/ATPWeather" />
-</Hero>
+numItems="6" idhref1="#general-info" iddesc1="General Information" idhref2="#products" iddesc2="Products" idhref3="#allies" iddesc3="Allies" idhref4="#credits" iddesc4="Credits" idhref5="#history" iddesc5="History" idhref6="#what-new" iddesc6="What&lsquo;s New?"
+icons={[
+  { name: "github", desc: "Github", href: "https://github.com/Alex-Toucan/atproducts.xyz" },
+  { name: "twitter-x", desc: "Twitter / X", href: "https://twitter.com/ATProductsLLC" },
+  { name: "youtube", desc: "YouTube", href: "https://youtube.com/c/AlexToucanAT" },
+  { name: "envelope-fill", desc: "Support Email", href: "mailto:support@atproducts.xyz" },
+  { name: "cloud-sun-fill", desc: "Weather", href: "https://twitter.com/ATPWeather" },
+]} />
 <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow nolrpadding container-sm mt-xmd-2 mb-2 pointer-event" data-bs-ride="carousel"><div class="pt-xmd-2 px-xmd-2">
 <div class="carousel-inner">
         <div class="carousel-item active">
