@@ -1,6 +1,6 @@
 <:astro>
 export default function IconRender({ href, icon, desc }) {
-  const shouldRender = !!href;
+  let shouldRender = !!href;
 
   return (
     <a
