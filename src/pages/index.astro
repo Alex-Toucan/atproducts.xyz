@@ -53,7 +53,14 @@ import Footer from '../components/Footer.astro';
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <Hero id="main" title="AT Products LLC" description="The company that provides web solutions to your web problems!" primaryHref="/paid" primaryText="Paid Services" 
-numItems="6" idhref1="#general-info" iddesc1="General Information" idhref2="#products" iddesc2="Products" idhref3="#allies" iddesc3="Allies" idhref4="#credits" iddesc4="Credits" idhref5="#history" iddesc5="History" idhref6="#what-new" iddesc6="What&lsquo;s New?"
+const dropdownItems = [
+  { navigationDesc: "General Information", navigationLink: "#general-info" },
+  { navigationDesc: "Products", navigationLink: "#products" },
+  { navigationDesc: "Allies", navigationLink: "#allies" },
+  { navigationDesc: "Credits", navigationLink: "#credits" },
+  { navigationDesc: "History", navigationLink: "#history" },
+  { navigationDesc: "What's New?", navigationLink: "#what-new" },
+];
 icons={[
   { name: "github", desc: "Github", href: "https://github.com/Alex-Toucan/atproducts.xyz" },
   { name: "twitter-x", desc: "Twitter / X", href: "https://twitter.com/ATProductsLLC" },
