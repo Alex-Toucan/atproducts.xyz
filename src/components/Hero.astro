@@ -31,6 +31,7 @@ const {
   iddesc8,
   iddesc9,
   iddesc10,
+  icons
 } = Astro.props;
 
 const dropdownItems = [
@@ -95,8 +96,10 @@ const dropdownItems = [
 </:props>
 
 <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-  {icons && icons.map(({ name, desc, href }, index) => (
-    <Icon name={name} desc={desc} href={href} key={index} />
+    {icons && icons.map(({ name, desc, href }, index) => (
+    <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc} key={index}>
+      <i class={`bi bi-${name}`}></i>
+    </a>
   ))}
 </div>
 
