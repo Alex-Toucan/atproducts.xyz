@@ -52,22 +52,28 @@ import Footer from '../components/Footer.astro';
 </a>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-<Hero id="main" title="AT Products LLC" description="The company that provides web solutions to your web problems!" primaryHref="/paid" primaryText="Paid Services" 
-const dropdownItems = [
-  { navigationDesc: "General Information", navigationLink: "#general-info" },
-  { navigationDesc: "Products", navigationLink: "#products" },
-  { navigationDesc: "Allies", navigationLink: "#allies" },
-  { navigationDesc: "Credits", navigationLink: "#credits" },
-  { navigationDesc: "History", navigationLink: "#history" },
-  { navigationDesc: "What's New?", navigationLink: "#what-new" },
-];
-icons={[
-  { name: "github", desc: "Github", href: "https://github.com/Alex-Toucan/atproducts.xyz" },
-  { name: "twitter-x", desc: "Twitter / X", href: "https://twitter.com/ATProductsLLC" },
-  { name: "youtube", desc: "YouTube", href: "https://youtube.com/c/AlexToucanAT" },
-  { name: "envelope-fill", desc: "Support Email", href: "mailto:support@atproducts.xyz" },
-  { name: "cloud-sun-fill", desc: "Weather", href: "https://twitter.com/ATPWeather" },
-]} />
+<Hero
+  id="main"
+  title="AT Products LLC"
+  description="The company that provides web solutions to your web problems!"
+  primaryHref="/paid"
+  primaryText="Paid Services"
+  dropdownItems={[
+    { navigationDesc: "General Information", navigationLink: "#general-info" },
+    { navigationDesc: "Products", navigationLink: "#products" },
+    { navigationDesc: "Allies", navigationLink: "#allies" },
+    { navigationDesc: "Credits", navigationLink: "#credits" },
+    { navigationDesc: "History", navigationLink: "#history" },
+    { navigationDesc: "What's New?", navigationLink: "#what-new" },
+  ]}
+  icons={[
+    { name: "github", desc: "Github", href: "https://github.com/Alex-Toucan/atproducts.xyz" },
+    { name: "twitter-x", desc: "Twitter / X", href: "https://twitter.com/ATProductsLLC" },
+    { name: "youtube", desc: "YouTube", href: "https://youtube.com/c/AlexToucanAT" },
+    { name: "envelope-fill", desc: "Support Email", href: "mailto:support@atproducts.xyz" },
+    { name: "cloud-sun-fill", desc: "Weather", href: "https://twitter.com/ATPWeather" },
+  ]}
+/>
 <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow nolrpadding container-sm mt-xmd-2 mb-2 pointer-event" data-bs-ride="carousel"><div class="pt-xmd-2 px-xmd-2">
 <div class="carousel-inner">
         <div class="carousel-item active">
