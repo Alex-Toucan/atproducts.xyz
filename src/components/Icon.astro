@@ -1,21 +1,17 @@
-<:astro>
-export default function IconRender({ href, icon, desc }) {
-  let shouldRender = !!href;
+<!-- Icon.astro -->
+<:props>
+  import { name, desc, href } from '@astro/props'
 
-  return (
-    <a
-      href={shouldRender ? href : undefined}
-      target={shouldRender ? "_blank" : undefined}
-      rel={shouldRender ? "noopener noreferrer" : undefined}
-      class={shouldRender ? "link-hero fs-7" : undefined}
-      data-bs-toggle={shouldRender ? "tooltip" : undefined}
-      data-bs-placement={shouldRender ? "bottom" : undefined}
-      data-bs-title={shouldRender ? desc : undefined}
-    >
-      {shouldRender && (
-        <i class={`bi bi-${icon}`}></i>
-      )}
-    </a>
-  );
-}
-</:astro>
+  // Define a function to render icons dynamically based on the 'name' prop
+  function renderIcon(name) {
+    // Here, you can use the 'name' prop to decide which icon to render
+    // Return the appropriate icon component based on the 'name'
+    return <YourIconComponent name={name} />;
+  }
+</:props>
+
+<div class="icon">
+  {renderIcon(name)} {/* Rendering the icon based on the 'name' prop */}
+  <p>{desc}</p>
+  <a href={href}>{desc}</a>
+</div>
