@@ -6,7 +6,7 @@ import Modal     from     '../components/Modal.astro';
 import Scrollspy from '../components/Scrollspy.astro';
 
 import Accordion      from      '../components/accordion/Accordion.astro';
-import Accordion-Item from '../components/accordion/Accordion-item.astro';
+import AccordionItem from '../components/accordion/AccordionItem.astro';
 ---
 
 <!DOCTYPE html>
@@ -66,7 +66,7 @@ icons={[
         </div>
         <p class="my-3">Please note that if a link is a <a href="#" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German.</p>
         <Accordion parent="resourcesAccordion">
-          <Accordion-Item id="learningresources" name="Learning Resources" content={'
+          <AccordionItem id="learningresources" name="Learning Resources" content={'
                 <h4>Learning Resources</h4>
                 <p>
                   <a href="https://w3schools.com/">W3Schools</a>
@@ -164,7 +164,7 @@ icons={[
                   There are outdated files on the source, if you need to, use the updated files of the <a href="/media/files/csharpsaltpepper.1.cs">first code block</a> and the <a href="/media/files/csharpsaltpepper.2.cs">second code block</a>.
                 </p>
           '} />
-<Accordion-Item id="otherresources" name="Other Resources" content={'
+<AccordionItem id="otherresources" name="Other Resources" content={'
       <h4>Other Resources</h4>
       <p>
         <a href="https://www.datensen.com/blog/">Data Management Blog</a>
@@ -220,7 +220,7 @@ icons={[
 
 <p><a href="https://www.youtube.com/watch?v=MDSscZjzXb4">Much more in this video</a></p>
  '} />
-   <Accordion-Item id="youtubecreators" name="YouTube Creators" content={'
+   <AccordionItem id="youtubecreators" name="YouTube Creators" content={'
         <h4>YouTube Creators</h4>
 <h5>C#</h5>
 <p>
@@ -263,7 +263,7 @@ icons={[
 <a href="https://www.devas.life/effective-neovim-setup-for-web-development-towards-2024/">Takuya Matsuyama</a>
 </p>
   '} />
-   <Accordion-Item id="hackingresources" name="Hacking Resources" content={''
+   <AccordionItem id="hackingresources" name="Hacking Resources" content={''
         <h4>Hacking Resources</h4>
                   <h5>Network Attack</h5>
         <p>
@@ -277,7 +277,7 @@ icons={[
         </p>
 
   '} />
-  <Accordion-Item id="downloadableresources" name="Downloadable Resources">
+  <AccordionItem id="downloadableresources" name="Downloadable Resources">
         <h4>Downloadable Resources</h4>
          <div class="my-1">
         <h4>1,000 I.T books!</h4>
