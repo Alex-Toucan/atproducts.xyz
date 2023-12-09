@@ -1,6 +1,5 @@
 ---
 import Hero   from '../components/Hero.astro';
-import Icon   from '../components/Icon.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Modal  from '../components/Modal.astro';
@@ -34,12 +33,15 @@ import Modal  from '../components/Modal.astro';
 <strong>It seems like you don't have JavaScript enabled!</strong> For color modes, accordions, scrollspies, tab panes, dropdowns, popovers, and much more, you'll need JavaScript to work! We do not have fallbacks, so please enable JavaScript or <a href="https://github.com/Alex-Toucan/atproducts.xyz">view the source code to read the information</a>.
 </div>
         </noscript>
-<Hero id="codinghome" title="CodingHome" description="CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together." primaryHref="https://discord.gg/pgGfhDVrmS" primaryText="Discord Server Invite" secondaryHref="/backup/codinghome" secondaryText="View the all laid out format" imageSrc="/media/images/codinghome.webp" imageWidth="15%" minImageWidth="150px">
-<Icon icon="discord" desc="Discord" href="https://discord.gg/pgGfhDVrmS" />
-<Icon icon="bullseye" desc="ProtDos" href="https://protdos.com/" />
-<Icon icon="github" desc="GitHub" href="https://github.com/protdos" />
-<Icon icon="envelope-fill" desc="ProtDos&lsquo; Email" href="mailto:contact@protdos.com"/>
-</Hero>
+<Hero id="codinghome" title="CodingHome" description="CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together." primaryHref="https://discord.gg/pgGfhDVrmS" primaryText="Discord Server Invite" secondaryHref="/backup/codinghome" secondaryText="View the all laid out format" imageSrc="/media/images/codinghome.webp" imageWidth="15%" minImageWidth="150px"
+icons={[
+    { name: "discord", desc: "Discord", href: "https://discord.gg/pgGfhDVrmS" },
+    { name: "bullseye", desc: "ProtDos", href: "https://protdos.com/" },
+    { name: "github", desc: "GitHub", href: "https://github.com/protdos" },
+    { name: "envelope-fill", desc: "ProtDos' Email", href: "mailto:contact@protdos.com" },
+    // Add more icons in a similar format if needed
+  ]}
+/>
      <main id="codinghome" class="text-center container">
        <div id="disclaimer">
          <h2> Disclaimer </h2><p> We do not take responsibility for any damage, or legal issues, done with these files here at AT Products LLC, Ethical Hacking Society, CodingHome, CodingHome, or Noodle Hackerspace.      <br><br>
