@@ -1,5 +1,5 @@
 <!-- Icon.astro -->
-<:props>
+<Fragment props>
   import { name, desc, href } from '@astro/props'
 
   // Define a function to render icons dynamically based on the 'name' prop
@@ -8,10 +8,4 @@
     // Return the appropriate icon component based on the 'name'
     return <YourIconComponent name={name} />;
   }
-</:props>
-
-<div class="icon">
-  {renderIcon(name)} {/* Rendering the icon based on the 'name' prop */}
-  <p>{desc}</p>
-  <a href={href}>{desc}</a>
-</div>
+</Fragment>
