@@ -1,6 +1,4 @@
 ---
-import Icon from '../components/Icon.astro';
-
 const {
   id,
   title,
@@ -91,10 +89,17 @@ const dropdownItems = [
             )}
           </div>
           <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-           {icons && icons.map(({ name, desc, href }, index) => (
+<:props>
+  import Icon from '../components/Icon.astro'
+  const { icons } = Astro.props;
+</:props>
+
+<div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
+  {icons && icons.map(({ name, desc, href }, index) => (
     <Icon name={name} desc={desc} href={href} key={index} />
   ))}
-  </div>
+</div>
+
         </div>
       </div>
     </div>
