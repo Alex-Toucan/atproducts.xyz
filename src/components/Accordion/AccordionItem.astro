@@ -10,7 +10,7 @@ const { id, name, accordionContent } = Astro.props;
     </h2>
     <div id={id} class="accordion-collapse collapse" data-bs-parent={parent}>
       <div class="accordion-body">
-        <div set:html={ content } />
+        { content }
       </div>
     </div>
 </div>
