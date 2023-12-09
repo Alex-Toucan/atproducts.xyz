@@ -47,7 +47,8 @@ const {
   </div>
 )}
           </div>
-<div class="mt-2 p-1 bg-dark rounded-2" id="icons">
+
+<div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
   {icons && icons.map(({ icon, desc, href }, index) => (
     <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc} key={index}>
       <i class={`bi bi-${icon}`}></i>
