@@ -1,8 +1,12 @@
 ---
-import Hero   from '../components/Hero.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import Modal  from '../components/Modal.astro';
+import Hero      from      '../components/Hero.astro';
+import Navbar    from    '../components/Navbar.astro';
+import Footer    from    '../components/Footer.astro';
+import Modal     from     '../components/Modal.astro';
+import Scrollspy from '../components/Scrollspy.astro';
+
+import Accordion      from      '../components/accordion/Accordion.astro';
+import Accordion-Item from '../components/accordion/Accordion-item.astro';
 ---
 
 <!DOCTYPE html>
@@ -61,15 +65,8 @@ icons={[
           </div>
         </div>
         <p class="my-3">Please note that if a link is a <a href="#" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German.</p>
-        <div class="accordion" id="resourcesAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#learningresources" aria-expanded="false" aria-controls="learningresources">
-                Learning Resources
-              </button>
-            </h2>
-            <div id="learningresources" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-              <div class="accordion-body">
+        <Accordion parent="resourcesAccordion">
+          <Accordion-Item id="learningresources" name="Learning Resources" content={'
                 <h4>Learning Resources</h4>
                 <p>
                   <a href="https://w3schools.com/">W3Schools</a>
@@ -166,17 +163,8 @@ icons={[
                 <p>
                   There are outdated files on the source, if you need to, use the updated files of the <a href="/media/files/csharpsaltpepper.1.cs">first code block</a> and the <a href="/media/files/csharpsaltpepper.2.cs">second code block</a>.
                 </p>
-              </div>
-            </div>
-          </div>
-<div class="accordion-item">
-  <h2 class="accordion-header">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#otherresources" aria-expanded="false" aria-controls="otherresources">
-      Other Resources
-    </button>
-  </h2>
-  <div id="otherresources" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-    <div class="accordion-body">
+          '} />
+<Accordion-Item id="otherresources" name="Other Resources" content={'
       <h4>Other Resources</h4>
       <p>
         <a href="https://www.datensen.com/blog/">Data Management Blog</a>
@@ -231,17 +219,8 @@ icons={[
 <a href="https://drive.google.com/drive/folders/18-9X13abayITCKmToARWDljynvMzBXob">Fake Nitro Links</a></p>
 
 <p><a href="https://www.youtube.com/watch?v=MDSscZjzXb4">Much more in this video</a></p>
-      </div>
-    </div>
-  </div>
-   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#youtubecreators" aria-expanded="false" aria-controls="youtubecreators">
-        YouTube Creators
-      </button>
-    </h2>
-    <div id="youtubecreators" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-      <div class="accordion-body">
+ '} />
+   <Accordion-Item id="youtubecreators" name="YouTube Creators" content={'
         <h4>YouTube Creators</h4>
 <h5>C#</h5>
 <p>
@@ -283,17 +262,8 @@ icons={[
         <p>
 <a href="https://www.devas.life/effective-neovim-setup-for-web-development-towards-2024/">Takuya Matsuyama</a>
 </p>
-        </div>
-    </div>
-  </div>
-      <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hackingresources" aria-expanded="false" aria-controls="hackingresources">
-        Hacking Resources
-      </button>
-    </h2>
-    <div id="hackingresources" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-      <div class="accordion-body">
+  '} />
+   <Accordion-Item id="hackingresources" name="Hacking Resources" content={''
         <h4>Hacking Resources</h4>
                   <h5>Network Attack</h5>
         <p>
@@ -305,26 +275,15 @@ icons={[
         <a href="https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi">Old-Fashioned</a>
           <a href="https://www.youtube.com/playlist?list=PLDQaRcbiSnqF5U8ffMgZzS7fq1rHUI3Q8">Modern</a>
         </p>
-        </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#downloadableresources" aria-expanded="false" aria-controls="downloadableresources">
-        Downloadable Resources
-      </button>
-    </h2>
-    <div id="downloadableresources" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-      <div class="accordion-body">
+
+  '} />
+  <Accordion-Item id="downloadableresources" name="Downloadable Resources">
         <h4>Downloadable Resources</h4>
          <div class="my-1">
         <h4>1,000 I.T books!</h4>
         <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1F7D5c30nP-y_Q7SFqoRTRvJ7tl0UcY3q">View</a>
-    </div>
-      </div>
-    </div>
-  </div>
-</div>
+  '} />
+</Accordion>
 `}/>
 <Modal title="Viruses &amp; Malware" id="files" content={`
     <p> <a href="/media/files/Meme_Coin.ZIP" download>Meme_Coin (ZIP)</a> <a href="/media/files/Meme_coin_miner.exe" download>Meme_Coin (EXE)</a> 
@@ -384,15 +343,14 @@ icons={[
       <p> <a class="link-danger" href="https://protdos.github.io/vpnchecker">vpnchecker Website</a></p>
 `}/>
 <Modal title="Python Basics" id="py" content={`
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="pyblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
-      <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
-      <a class="list-group-item list-group-item-action" href="#str-3">Strings</a>
-      <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
-            </div></div><div class="col-md my-1 mb-1">
-    <div data-bs-spy="scroll" data-bs-target="#pyblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+<Scrollspy id="pyblist" 
+scrollcontent={[
+    { name: "Comments", href: "#com3" },
+    { name: "Data Types", href: "#data-3" },
+    { name: "Strings", href: "#str-3" },
+    { name: "Numbers", href: "#num-3" },
+]}
+content={'
 <div id="com-3">
 <h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
@@ -454,7 +412,7 @@ print(type(y))</code></p>
 <p>Float is a number, positive or negative, containing one or more decimals.</p>
 <p>Both strings and numbers are built-in data types.</p>
 </div>
-          </div></div></div>
+'}
 `}/>
 <Modal title="C++ Basics" id="cpp" content={`
         <div class="d-md-flex">
