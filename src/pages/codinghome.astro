@@ -44,7 +44,7 @@ icons={[
   <div id="resources">
             <h2> Resources </h2>
         <p> What do you want to know about today? </p>
-<Modal title="Resources" id="resources-alt" content={`
+<Modal title="Resources" id="resources-alt"><div slot="content">
 <div class="my-2 text-center">
           <div class="d-flex flex-wrap row-cols-3 rounded-2 overflow-hidden text-white">
             <b class="col-12 py-2 bg-secondary">Contributors</b>
@@ -321,8 +321,8 @@ icons={[
     </div>
   </div>
 </div>
-`}/>
-<Modal title="Viruses &amp; Malware" id="files" content={`
+</div></Modal>
+<Modal title="Viruses &amp; Malware" id="files"><div slot="content">
     <p> <a href="/media/files/Meme_Coin.ZIP" download>Meme_Coin (ZIP)</a> <a href="/media/files/Meme_coin_miner.exe" download>Meme_Coin (EXE)</a> 
         <a href="/media/files/My_App.zip" download>My_App (ZIP)</a> <a href="/media/files/Myballzhert.zip" download>Myballzhert (ZIP)</a> by Dream3456789 (Password: "mysubsarethebest")</p>
     <p> <a href="/media/files/KILL_SWITCH.bat" download>USB &amp; Internet Disabler (BAT)</a> <a href="/media/files/UN_KILL.bat" download>Unkill Tool for Disabler (BAT)</a> by CodingLive </p> 
@@ -332,8 +332,8 @@ icons={[
    <p> <a href="/media/files/BFF_DoS.exe" download>BFF_DoS (EXE)</a> 
        <a href="/media/files/Code.txt" download>Code (TXT)</a> <a href="/media/files/baby.bat" download>Baby (BAT)</a>
      <a href="/media/files/BabyCodes.txt" download>BabyCodes (TXT)</a> by Corrupt Assassin </p>
-`}/>
-<Modal title="Code Samples" id="code" content={`
+</div></Modal>
+<Modal title="Code Samples" id="code"><div slot="content">
 <p> <a href="https://github.com/FordArthur/insitucs">Insitux Compiler</a> <a href="https://github.com/FordArthur/chess-ix">Chess I (Insitux)</a> <a href="/media/files/chess.ix" download>Chess II (Insitux)</a> <a href="https://github.com/FordArthur/ballistics-ix">Ballstics I (Insitux)</a> <a href="https://github.com/FordArthur/Insitux-math-libs">Math Libs for Insitux</a> <a href="https://github.com/FordArthur/svelte-app">svelte-app</a> <a href="/media/files/RosettaCode.ix" download>Rosetta Code (Insitux)</a> <a href="/media/files/polinomic-solver.ix" download>Polinomic Solver (Insitux)</a> <a href="/media/files/ambiguous-operator.ix" download>Ambiguous Operator (Insitux)</a> <a href="/media/files/rockpaperscissors.ix" download>Rock Paper Scissors (Insitux)</a> <a href="/media/files/rockalfordscissors.py" download>Rock Paper Scissors (Python)</a> by Al-Ford Arthur</p>    <p> <a href="/media/files/rockpaperscissors.py" download>Rock Paper Scissors (Python)</a> by Sezieru</p>
                             <p> <a href="https://github.com/Savageboitim13/UMS-WF/">UMS-WF</a> <a href="https://github.com/Savageboitim13/Principles-CSharp">Principles for C# & Java</a> by venenjean</p>    
      <p><a href="https://github.com/phunanon/ip3">IP3</a> by Patrick</p>
@@ -366,8 +366,8 @@ icons={[
    <p> <a href="https://github.com/ProtDos/VanishGuide">VanishGuide</a> 
       <a class="link-danger" href="https://github.com/ProtDos/discord-phishing-links">Discord Phishing Links</a> 
          <a class="link-danger" href="https://github.com/ProtDos/IP-Address-List">IP Address List</a> by CodingLive</p>
-`}/>
-<Modal title="Apps &amp; Software" id="app" content={`
+</div></Modal>
+<Modal title="Apps &amp; Software" id="app"><div slot="content">
 <p> <a href="/media/files/sms_bomb.apk" download>SMS Bomb (APK)</a> by CodingLive</p>
       <h4>Encochat by CodingLive</h4>
       <p> <a href="https://github.com/ProtDos/encochat">Encochat v1</a> </p>
@@ -378,8 +378,8 @@ icons={[
       <h4>vpnchecker by CodingLive</h4>
          <p> <a href="https://github.com/ProtDos/vpnchecker">vpnchecker</a> (<a href="https://github.com/ProtDos/vpnchecker/archive/refs/heads/main.zip">HTML | ZIP</a>)
       <p> <a class="link-danger" href="https://protdos.github.io/vpnchecker">vpnchecker Website</a></p>
-`}/>
-<Modal title="Python Basics" id="py" content={`
+</div></Modal>
+<Modal title="Python Basics" id="py"><div slot="content">
 <Scrollspy id="py-basics-list"
 scrollcontent={[
   { name: "Comments", href: "#com-3" },
@@ -387,7 +387,7 @@ scrollcontent={[
   { name: "Strings", href: "#str-3" },
   { name: "Numbers", href: "#num-3" },
 ]}
-content={'
+><div slot="scrollspy-content">
 <div id="com-3">
 <h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
@@ -443,16 +443,16 @@ print(type(y))</code></p>
 <p>Float is a number, positive or negative, containing one or more decimals.</p>
 <p>Both strings and numbers are built-in data types.</p>
 </div>
-'}/>
-`}/>
-<Modal title="C++ Basics" id="cpp" content={`
+</div></Scrollspy>
+</div></Modal>
+<Modal title="C++ Basics" id="cpp"><div slot="content">
 <Scrollspy id="cpp-basics-list"
 scrollcontent={[
   { name: "Strings", href: "#str-4" },
   { name: "Integers", href: "#integers-4" },
   { name: "Print", href: "#print-4" },
 ]}
-content={'
+><div slot="scrollspy-content">
  <div id="strings-4">
 <h4>Strings</h4>
 <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
@@ -460,10 +460,10 @@ content={'
 #include &lt;ostream&gt;<br>
 #include &lt;string&gt;<br><br><br>
 int main()<br>
-&#123;<br>
+&lbrace;<br>
     // Declare a string variable<br>
     std::string str = "codinghome";<br>
-&#125;
+&rbrace;
   </code></p>
 </div>
 <div id="integers-4">
@@ -472,12 +472,12 @@ int main()<br>
 <p><code>
 #include &lt;iostream&gt;<br><br>
 int main()<br>
-&#123;<br>
+&lbrace;<br>
     // Declare an integer variable<br>
     int num = 10;<br><br>
     // Declare a floating-point variable<br>
     float fnum = 10.5;<br>
-&#125;
+&rbrace;
       </code></p>
 </div>
 <div id="print-4">
@@ -486,19 +486,19 @@ int main()<br>
 <p><code>
 #include &lt;iostream&gt;<br><br>
 int main()<br>
-{<br>
+&lbrace;<br>
 &nbsp;&nbsp;// Declare an integer variable<br>
 &nbsp;&nbsp;int num = 10;<br><br>
 &nbsp;&nbsp;// Declare a floating-point variable<br>
 &nbsp;&nbsp;float fnum = 10.5;<br><br>
 &nbsp;&nbsp;std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl;  // &lt;-- Prints the integer Variable (Variable num)
 &nbsp;&nbsp;std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point Variable(Variable fnum)
-}
+&rbrace;
   </code></p>
 </div>
-'}/>
-`}/>
-<Modal title="Haskell Basics" id="hs" content={`
+</div></Scrollspy>
+</div></Modal>
+<Modal title="Haskell Basics" id="hs"><div slot="content">
 <Scrollspy id="hs-basics-list"
 scrollcontent={[
   { name: "Data Types", href: "#data-5" },
@@ -507,7 +507,7 @@ scrollcontent={[
   { name: "Functional Principles", href: "#fpr-5" },
   { name: "Comments", href: "#com-5" },
 ]}
-content={'
+><div slot="scrollspy-content">
 <div id="data-5">
 <h4>Data Types</h4>
 <p>In Haskell, types are how you describe the data your program will work with. Types can be simple, like:</p>
@@ -571,19 +571,19 @@ countIns x = length . filter (== x)
 </div>
 <div id="com-5">
 <h4>Comments</h4>
-<p>In-line comments are made with <code>--</code> and block comments with <code>{- -}</code>:</p>
+<p>In-line comments are made with <code>--</code> and block comments with <code>&lbrace;- -&rbrace;</code>:</p>
 <code>
 -- inline<br>
 commentHere = False<br>
-{- block<br>
+&lbrace;- block<br>
 commenHere = True<br>
--}
+-&rbrace;
 </code>
 </div>
 
-        '}/>
-`}/>
-<Modal title="HTML Basics" id="html" content={`
+        </div></Scrollspy>
+</div></Modal>
+<Modal title="HTML Basics" id="html"><div slot="content">
 <Scrollspy id="html-basics-list"
 scrollcontent={[
   { name: "Example Document", href: "#example-6" },
@@ -592,7 +592,7 @@ scrollcontent={[
   { name: "HTML Links", href: "#links-6" },
   { name: "HTML Images", href: "#img-6" },
 ]}
-content={'
+><div slot="scrollspy-content">
 <div id="example-6">
 <h4>Example Document</h4>
 <code>
@@ -629,9 +629,9 @@ content={'
 <p>HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width, and height are provided as attributes:<br>
 <code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code></p>
 </div>
-  '}/>
-  `}/>
-<Modal title="CSS Basics" id="css" content={`
+  </div></Scrollspy>
+  </div></Modal>
+<Modal title="CSS Basics" id="css"><div slot="content">
   <div class="my-3">
 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>
     </div>
@@ -643,19 +643,19 @@ scrollcontent={[
   { name: "Text Elements", href: "#text-7" },
   { name: "Padding Elements", href: "#pad-7" },
   { name: "Color Elements", href: "#color-7" },
-  { name: "Comments", href: "#com-7 },
+  { name: "Comments", href: "#com-7" },
   { name: "Extra: Centering Images", href: "#eci-7" },
 ]}
-content={'
+><div slot="scrollspy-content">
 <div id="example-7">
 <h4>Example Document</h4>
 <code>
-h1 &#123;<br>
+h1 &lbrace;<br>
 &nbsp;&nbsp;color: black;   <br>
 &nbsp;&nbsp;text-align: center; <br>
 &nbsp;&nbsp;font-size: 26px;<br>
 &nbsp;&nbsp;font-family: verdana;<br>
-&#125;
+&rbrace;
 </code><br><br>
 <code>&lt;p style="font-size:10px"&gt;</code>
 <p>To put CSS files in HTML, use... <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
@@ -663,32 +663,32 @@ h1 &#123;<br>
 <div id="rules-7">
 <h4>CSS Rulesets</h4>
 <p>
-</p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p { </code></div></div></div>
+</p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p &lbrace; </code></div></div></div>
 <div class="d-flex"><div class="col-4"><p>Property</p></div><div class="col"><div class="me-auto"><code class="position-static">&nbsp;&nbsp;color: red; </code></div></div></div>
-<div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">}</code></div></div></div>  
+<div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">&rbrace;</code></div></div></div>  
 <p></p>
 <p><b>Properties</b> - With these, you can style a HTML element, like for example; color. <br>
 <b>Property Value</b> - This chooses one of the possible options for a given property, like red for color.</p>
   <p>
-You can also write CSS like <code>html&#123;color:red;&#125;</code>
+You can also write CSS like <code>html&lbrace;color:red;&rbrace;</code>
 <br>
 You can also put styles in HTML elements. <code>&lt;h1 style="font-color:white;"&gt;</code>
 <br>
 You can also select multiple elements at once like...
 <br>
 <code>
-h1, h4, h6, h2 &#123;<br>
+h1, h4, h6, h2 &lbrace;<br>
 &nbsp;&nbsp;color: red;<br>
-&#125;</code></p>
+&rbrace;</code></p>
 </div>
         <div id="classes-7">
         <h4>Classes</h4>
         <p>Think of classes like custom HTML elements, they can be applied in html like <code>&lt;p class="text-red"&gt;</code></p>
         <p>Classes begin with a dot or period (.) to begin the selector.</p>
         <code>
-.text-red &#123;<br>
+.text-red &lbrace;<br>
 &nbsp;&nbsp;color: red;<br>
-&#125;</code>
+&rbrace;</code>
       </div>
 <div id="text-7">
 <h4>Text Elements</h4><p>
@@ -725,14 +725,14 @@ a multi-line<br>
         </div>
 <div id="eci-7">
 <h4>Extra: Centering Images</h4>
-<code>img {<br>
+<code>img &lbrace;<br>
 &nbsp;&nbsp;margin: 0 auto;<br>
 &nbsp;&nbsp;display: block;<br>
-}</code>
+&rbrace;</code>
   </div>
-'}/>
- `}/>
-<Modal title="JavaScript Basics" id="js" content={`
+</div></Scrollspy>
+ </div></Modal>
+<Modal title="JavaScript Basics" id="js"><div slot="content">
 <Scrollspy id="js-basics-list"
 scrollcontent={[
   { name: "Including JavaScript in an HTML Page", href: "#html-8" },
@@ -741,7 +741,7 @@ scrollcontent={[
   { name: "Variables", href: "#var-8" },
   { name: "Data Types", href: "data-8" },
 ]}
-content={'
+><div slot="scrollspy-content">
  <div id="html-8">
 <h4>Including JavaScript in an HTML Page</h4>
 <p><code>&lt;script type="text/javascript"&gt; <br>
@@ -776,12 +776,12 @@ Operations — <code>var b = 1 + 2 + 3</code><br>
 True or fase statements — <code>var c = true</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
-Objects — <code>var name = &#123;firstName: "John", lastName: "Doe"&#125;</code>
+Objects — <code>var name = &lbrace;firstName: "John", lastName: "Doe"&rbrace;</code>
 </p>
 
 <p><b>Objects Example</b> <br>
   <pre>
-var person = &#123;
+var person = &lbrace;
   <br>
 &nbsp;&nbsp;firstName: "John",<br>
 &nbsp;&nbsp;lastName: "Doe",<br>
@@ -791,16 +791,16 @@ var person = &#123;
   </pre>
 </p>
           </div>
-'}/>
-`}/>
-<Modal title="SQL Basics" id="sql" content={`
+</div></Scrollspy>
+</div></Modal>
+<Modal title="SQL Basics" id="sql"><div slot="content">
 <Scrollspy id="sql-basics-list"
 scrollcontent={[
   { name: "Querying Data from a Tablem", href: "#query-9" },
   { name: "Modifying Data", href: "#mod-9" },
   { name: "Table Management", href: "#table-9" },
 ]}
-content={'
+><div slot="scrollspy-content">
 <div id="query-9">
 <h4>Querying Data from a Table</h4>
 <p>Query Data in Columns c1, c2 from a Table</p>
@@ -911,27 +911,27 @@ CREATE TABLE t (<br>
 <p>Remove all Data in a Table</p>
 <code>TRUNCATE TABLE t;</code>
 </div>
-'}/>
-`}/>
-<Modal title="JSON Basics" id="json" content={`
+</div></Scrollspy>
+</div></Modal>
+<Modal title="JSON Basics" id="json"><div slot="content">
 <Scrollspy id="json-basics-list"
 scrollcontent={[
   { name: "Example Documents", href: "#example-10" },
   { name: "Importing JSON", href: "#import-10" },
 ]}
-content={'
+><div slot="scrollspy-content">
 <div id="example-10">
 <h4>Example Document</h4>
 <code>
-{<br>
+&lbrace;<br>
 &nbsp;&nbsp;"foo": "bar",<br>
 &nbsp;&nbsp;"array": [<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"foo",<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"bar"<br>
 &nbsp;&nbsp;]<br>
-}
+&rbrace;
 </code><br><br>
-<p>All JSON files are surrounded by { and }, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
+<p>All JSON files are surrounded by &lbrace; and &rbrace;, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
 </div>
 <div id="import-10">
 <h4>Importing JSON</h4>
@@ -956,8 +956,8 @@ content={'
 </tbody>
 </table>
 </div>
-'};/>
-`}/>
+</div></Scrollspy>
+</div></Modal>
 </main>
 <Footer />
               <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="display: none;"><i class="bi bi-caret-up-fill"></i></a>
