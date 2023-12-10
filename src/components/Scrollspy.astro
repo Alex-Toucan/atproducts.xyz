@@ -1,5 +1,5 @@
 ---
-const { id, content } = Astro.props;
+const { id } = Astro.props;
 ---
 
 <div class="d-md-flex">
@@ -12,7 +12,7 @@ const { id, content } = Astro.props;
     </div>
     <div class="col-md my-1 mb-1">
         <div data-bs-spy="scroll" data-bs-target={`#${id}`} data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-            <div set:html={ content } />
+            <slot name="scrollspy-content" />
         </div>
     </div>
 </div>
