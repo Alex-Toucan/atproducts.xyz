@@ -380,7 +380,7 @@ icons={[
       <p> <a class="link-danger" href="https://protdos.github.io/vpnchecker">vpnchecker Website</a></p>
 `}/>
 <Modal title="Python Basics" id="py" content={`
-<Scrollspy id="pyblist"
+<Scrollspy id="py-basics-list"
 scrollcontent={[
   { name: "Comments", href: "#com-3" },
   { name: "Data Types", href: "#data-3" },
@@ -388,19 +388,9 @@ scrollcontent={[
   { name: "Numbers", href: "#num-3" },
 ]}
 content={'
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="pyblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
-      <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
-      <a class="list-group-item list-group-item-action" href="#str-3">Strings</a>
-      <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
-            </div></div><div class="col-md my-1 mb-1">
-    <div data-bs-spy="scroll" data-bs-target="#pyblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
 <div id="com-3">
 <h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
-py <br>
 # This is a comment
 </code></p>
 </div>
@@ -418,7 +408,6 @@ Binary Types: <code>bytes, bytearray, memoryview</code></p>
 <p>We will go more in-depth on some of these types in the next few paragraphs.</p>
 <p>You can print the data type of a variable with the type() function:<br>
 <code>
-py <br>
 x = 5 <br>
 print(type(x))
 </code></p>
@@ -427,7 +416,6 @@ print(type(x))
 <h4>Strings</h4>
 <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
 <code>
-py <br>
 x = "hello" <br>
 y = 'hello' <br>
 # single quotations and double quotation marks are the same<br>
@@ -435,23 +423,20 @@ x == y # returns True
 </code><p></p>
 <p>You can assign a multiline string to a variable by using three quotes:<br>
 <code>
-py <br>
 x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
 </code></p>
 <p>You can check the length of a string using the len() function:
-<code>py<br>
+<code>
 x = "hello"<br>
 print(len(text)) # returns 5<br></code></p>
 </div>
 <div id="num-3">
 <h4>Numbers</h4>
 <p>There are 2 primary, <code>int</code> and <code>float</code></p><p><code>
-py<br>
 x = 2 # int<br>
 y = 2.8 # float
 </code></p>
 <p>To verify the type of an object in Python, use the type() function:<code>
-py<br>
 print(type(x))<br>
 print(type(y))</code></p>
 <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
@@ -461,25 +446,24 @@ print(type(y))</code></p>
 '}/>
 `}/>
 <Modal title="C++ Basics" id="cpp" content={`
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="cppblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#strings-4">Strings</a>
-      <a class="list-group-item list-group-item-action" href="#integers-4">Integers and Floating Point Numbers</a>
-      <a class="list-group-item list-group-item-action" href="#print-4">Print</a>
-            </div></div><div class="col-md my-1 mb-1">
-<div data-bs-spy="scroll" data-bs-target="#cppblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="strings-4">
+<Scrollspy id="cpp-basics-list"
+scrollcontent={[
+  { name: "Strings", href: "#str-4" },
+  { name: "Integers", href: "#integers-4" },
+  { name: "Print", href: "#print-4" },
+]}
+content={'
+ <div id="strings-4">
 <h4>Strings</h4>
 <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
 <p><code>
 #include &lt;ostream&gt;<br>
 #include &lt;string&gt;<br><br><br>
 int main()<br>
-{{{<br>
+&#123;<br>
     // Declare a string variable<br>
     std::string str = "codinghome";<br>
-}}}
+&#125;
   </code></p>
 </div>
 <div id="integers-4">
@@ -488,12 +472,12 @@ int main()<br>
 <p><code>
 #include &lt;iostream&gt;<br><br>
 int main()<br>
-{{{<br>
+&#123;<br>
     // Declare an integer variable<br>
     int num = 10;<br><br>
     // Declare a floating-point variable<br>
     float fnum = 10.5;<br>
-}}}
+&#125;
       </code></p>
 </div>
 <div id="print-4">
@@ -502,29 +486,29 @@ int main()<br>
 <p><code>
 #include &lt;iostream&gt;<br><br>
 int main()<br>
-{{{<br>
+{<br>
 &nbsp;&nbsp;// Declare an integer variable<br>
 &nbsp;&nbsp;int num = 10;<br><br>
 &nbsp;&nbsp;// Declare a floating-point variable<br>
 &nbsp;&nbsp;float fnum = 10.5;<br><br>
 &nbsp;&nbsp;std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl;  // &lt;-- Prints the integer Variable (Variable num)
 &nbsp;&nbsp;std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point Variable(Variable fnum)
-}}}
+}
   </code></p>
-</div></div></div></div>
+</div>
+'}/>
 `}/>
 <Modal title="Haskell Basics" id="hs" content={`
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="hsblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
-      <a class="list-group-item list-group-item-action" href="#ftd-3">Function Type Declaration</a>
-      <a class="list-group-item list-group-item-action" href="#fde-3">Function Definition</a>
-      <a class="list-group-item list-group-item-action" href="#fpr-3">Functional Principles</a>
-      <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
-            </div></div><div class="col-md my-1 mb-1">
-    <div data-bs-spy="scroll" data-bs-target="#hsblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="data-3">
+<Scrollspy id="hs-basics-list"
+scrollcontent={[
+  { name: "Data Types", href: "#data-5" },
+  { name: "Function Type Declartion", href: "#ftd-5" },
+  { name: "Function Defintion", href: "#fde-5" },
+  { name: "Functional Principles", href: "#fpr-5" },
+  { name: "Comments", href: "#com-5" },
+]}
+content={'
+<div id="data-5">
 <h4>Data Types</h4>
 <p>In Haskell, types are how you describe the data your program will work with. Types can be simple, like:</p>
 <ul>
@@ -541,7 +525,7 @@ int main()<br>
   <li>Just a : Maybe monad with the <code>Just</code> option</li>
 </ul>
 </div>
-<div id="ftd-3">
+<div id="ftd-5">
 <h4>Function Type Declaration</h4>
 <p>Haskell's functions will usually have 2 parts: a type declaration, and the implementation of the function itself  (the type part can also be inferred):</p>
 <code>
@@ -563,7 +547,7 @@ countIns x = length . filter (== x) <br>
   <li>-&gt; : used for actually declaring the type of the function (in the above example, we see the first argument is <code>a</code>, a general, comparable type, then a list of as and then finally it outputs an <code>Int</code>eger)</li>
 </ul>
 </div>
-<div id="fde-3">
+<div id="fde-5">
 <h4>Function Definition</h4>
 <p>Functions are defined like: <code>functionName argument(s) = expression</code>. Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
 <code>
@@ -575,7 +559,7 @@ countIns x = length . filter (== x)
 </code>
 </div>
 
-<div id="fpr-3">
+<div id="fpr-5">
 <h4>Functional Principles</h4>
 <p>Haskell restricts to the functional paradigm, meaning Haskell enforces:</p>
 <ul>
@@ -585,32 +569,31 @@ countIns x = length . filter (== x)
   <li><b>Disciplined state </b> trying to minimize the use of mutable state and trying to make it local when possible.</li>
 </ul>
 </div>
-<div id="com-3">
+<div id="com-5">
 <h4>Comments</h4>
-<p>In-line comments are made with <code>--</code> and block comments with <code>{{{- -}}}</code>:</p>
+<p>In-line comments are made with <code>--</code> and block comments with <code>{- -}</code>:</p>
 <code>
 -- inline<br>
 commentHere = False<br>
-{{{- block<br>
+{- block<br>
 commenHere = True<br>
--}}}
+-}
 </code>
 </div>
-          </div></div>
-        </div>
+
+        '}/>
 `}/>
 <Modal title="HTML Basics" id="html" content={`
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="htmlblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#example-1">Example Document</a>
-      <a class="list-group-item list-group-item-action" href="#head-1">HTML Headings</a>
-      <a class="list-group-item list-group-item-action" href="#text-1">HTML Paragraphs</a>
-      <a class="list-group-item list-group-item-action" href="#links-1">HTML Links</a>
-      <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
-            </div></div><div class="col-md my-1 mb-1">
-   <div data-bs-spy="scroll" data-bs-target="#htmlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="example-1">
+<Scrollspy id="html-basics-list"
+scrollcontent={[
+  { name: "Example Document", href: "#example-6" },
+  { name: "HTML Headings", href: "#head-6" },
+  { name: "HTML Paragraphs", href: "#text-6" },
+  { name: "HTML Links", href: "#links-6" },
+  { name: "HTML Images", href: "#img-6" },
+]}
+content={'
+<div id="example-6">
 <h4>Example Document</h4>
 <code>
 &lt;!DOCTYPE html&gt;<br>
@@ -623,91 +606,91 @@ commenHere = True<br>
 </code><br>
 <p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags). The <code>&lt;!DOCTYPE&gt;</code> declaration is not case sensitive. </p>
 </div>
-<div id="head-1">
+<div id="head-6">
 <h4>HTML Headings</h4>
 <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.
 <code>&lt;h1&gt;</code>defines the most important heading. <code>&lt;h6&gt;</code> defines the least important heading:<br>
 <code>&lt;h1&gt;Big&lt;/h1&gt;</code> <br>
 <code>&lt;h6&gt;Small&lt;/h6&gt;</code> </p>
 </div>
-<div id="text-1">
+<div id="text-6">
 <h4>HTML Paragraphs</h4>
 <p>HTML paragraphs are defined with the &lt;p&gt; tag:<code><br>
 &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
 &lt;p&gt;This is another paragraph.&lt;/p&gt;</code></p>
 </div>
-<div id="links-1">
+<div id="links-6">
 <h4>HTML Links</h4>
 <p>HTML links are defined with the &lt;a&gt; tag:<br>
 <code>&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;</code></p>
 </div>
-<div id="img-1">
+<div id="img-6">
 <h4>HTML Images</h4>
 <p>HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width, and height are provided as attributes:<br>
 <code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code></p>
-</div></div></div></div>
-     `}/>
+</div>
+  '}/>
+  `}/>
 <Modal title="CSS Basics" id="css" content={`
   <div class="my-3">
 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>
     </div>
-<div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="cssblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#example-5">Example Document</a>
-      <a class="list-group-item list-group-item-action" href="#rules-5">CSS Rulesets</a>
-      <a class="list-group-item list-group-item-action" href="#classes-5">Classes</a>
-      <a class="list-group-item list-group-item-action" href="#text-5">Text Elements</a>
-      <a class="list-group-item list-group-item-action" href="#pad-5">Padding Elements</a>
-      <a class="list-group-item list-group-item-action" href="#color-5">Color Elements</a>
-      <a class="list-group-item list-group-item-action" href="#com-5">Comments</a>
-            <a class="list-group-item list-group-item-action" href="#eci-5">Extra: Centering Images</a>
-            </div></div><div class="col-md my-1 mb-1">
-<div data-bs-spy="scroll" data-bs-target="#cssblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="example-5">
+<Scrollspy id="css-basics-list"
+scrollcontent={[
+  { name: "Example Document", href: "#example-7" },
+  { name: "CSS Rulesets", href: "#rules-7" },
+  { name: "Classes", href: "#classes-7" },
+  { name: "Text Elements", href: "#text-7" },
+  { name: "Padding Elements", href: "#pad-7" },
+  { name: "Color Elements", href: "#color-7" },
+  { name: "Comments", href: "#com-7 },
+  { name: "Extra: Centering Images", href: "#eci-7" },
+]}
+content={'
+<div id="example-7">
 <h4>Example Document</h4>
 <code>
-h1 {{{<br>
+h1 &#123;<br>
 &nbsp;&nbsp;color: black;   <br>
 &nbsp;&nbsp;text-align: center; <br>
 &nbsp;&nbsp;font-size: 26px;<br>
 &nbsp;&nbsp;font-family: verdana;<br>
-}}} 
+&#125;
 </code><br><br>
 <code>&lt;p style="font-size:10px"&gt;</code>
 <p>To put CSS files in HTML, use... <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
 </div>
-<div id="rules-5">
+<div id="rules-7">
 <h4>CSS Rulesets</h4>
 <p>
-</p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p {{{ </code></div></div></div>
+</p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p { </code></div></div></div>
 <div class="d-flex"><div class="col-4"><p>Property</p></div><div class="col"><div class="me-auto"><code class="position-static">&nbsp;&nbsp;color: red; </code></div></div></div>
-<div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">}}}</code></div></div></div>  
+<div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">}</code></div></div></div>  
 <p></p>
 <p><b>Properties</b> - With these, you can style a HTML element, like for example; color. <br>
 <b>Property Value</b> - This chooses one of the possible options for a given property, like red for color.</p>
   <p>
-You can also write CSS like <code>html{{{color:red;}}}</code>
+You can also write CSS like <code>html&#123;color:red;&#125;</code>
 <br>
 You can also put styles in HTML elements. <code>&lt;h1 style="font-color:white;"&gt;</code>
 <br>
 You can also select multiple elements at once like...
 <br>
 <code>
-h1, h4, h6, h2 {{{<br>
+h1, h4, h6, h2 &#123;<br>
 &nbsp;&nbsp;color: red;<br>
-}}}</code></p>
+&#125;</code></p>
 </div>
-        <div id="classes-5">
+        <div id="classes-7">
         <h4>Classes</h4>
         <p>Think of classes like custom HTML elements, they can be applied in html like <code>&lt;p class="text-red"&gt;</code></p>
         <p>Classes begin with a dot or period (.) to begin the selector.</p>
         <code>
-.text-red{{{<br>
+.text-red &#123;<br>
 &nbsp;&nbsp;color: red;<br>
-}}}</code>
+&#125;</code>
       </div>
-<div id="text-5">
+<div id="text-7">
 <h4>Text Elements</h4><p>
 <code>font-size: 10px;</code> - Text size, can be in pixels.<br>
 <code>font-family: verdana;</code> - Fonts<br>
@@ -715,7 +698,7 @@ h1, h4, h6, h2 {{{<br>
 <code>text-shadow: 3px black</code> - Shadow of text. Can be in pixels and colors.
 </p>
 </div>
-<div id="pad-5">
+<div id="pad-7">
 <h4>Padding Elements</h4>
 <p>
 <code>padding-top: 50px;</code> - Separation. It can be top, left, right, and bottom in pixels.<br>
@@ -724,12 +707,12 @@ h1, h4, h6, h2 {{{<br>
 <code>border-style: dotted;</code> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
 <code>width=500px;</code> - Width of the element. It can be pixels or percentages.</p>
 </div>
-<div id="color-5">
+<div id="color-7">
 <h4>Color Elements</h4>
 <p><code>color: red;</code> - The color of the element, can be hexadecimal, or RGB.<br>
 <code>background-color: white;</code> - Background color of the element.</p>
 </div>
-<div id="com-5">
+<div id="com-7">
   <h4>Comments</h4>
 <p>Comments are commonly used to explain the code and may help when you edit the source code later and are ignored by browsers.
 <br><br>
@@ -740,42 +723,41 @@ A CSS comment starts with <code>/*</code> and ends with <code>*/</code>, and no 
 a multi-line<br>
     comment */</code></p>
         </div>
-<div id="eci-5">
+<div id="eci-7">
 <h4>Extra: Centering Images</h4>
-<code>img {{{<br>
+<code>img {<br>
 &nbsp;&nbsp;margin: 0 auto;<br>
 &nbsp;&nbsp;display: block;<br>
-}}}</code>
+}</code>
   </div>
-  </div></div></div>
+'}/>
  `}/>
 <Modal title="JavaScript Basics" id="js" content={`
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="jsblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#html-2">Including JavaScript in an HTML Page</a>
-      <a class="list-group-item list-group-item-action" href="#call-2">Call an External JavaScript File</a>
-      <a class="list-group-item list-group-item-action" href="#com-2">Including Comments</a>
-      <a class="list-group-item list-group-item-action" href="#var-2">Variables</a>
-      <a class="list-group-item list-group-item-action" href="#data-2">Data Types</a>
-            </div></div><div class="col-md my-1 mb-1">
-<div data-bs-spy="scroll" data-bs-target="#jsblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="html-2">
+<Scrollspy id="js-basics-list"
+scrollcontent={[
+  { name: "Including JavaScript in an HTML Page", href: "#html-8" },
+  { name: "Call an External JavaScript File", href: "#call-8" },
+  { name: "Including Comments", href: "#com-8" },
+  { name: "Variables", href: "#var-8" },
+  { name: "Data Types", href: "data-8" },
+]}
+content={'
+ <div id="html-8">
 <h4>Including JavaScript in an HTML Page</h4>
 <p><code>&lt;script type="text/javascript"&gt; <br>
  //JS code goes here <br>
 &lt;/script&gt; </code></p>
 </div>
-<div id="call-2">
+<div id="call-8">
 <h4>Call an External JavaScript File</h4>
      <p> <code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code></p>
 </div>
-<div id="com-2">
+<div id="com-8">
 <h4>Including Comments</h4>
 <p>Single line comments - <code>// Comment</code> <br>
 Multi-line comments - <code>/* comment here */</code></p>
 </div>
-<div id="var-2">
+<div id="var-8">
 <h4>Variables</h4>
 <p>
 <code>var, const, let</code><br>
@@ -784,7 +766,7 @@ Multi-line comments - <code>/* comment here */</code></p>
 <code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
 </p>
 </div>
-<div id="data-2">
+<div id="data-8">
 <h4>Data Types</h4>
 <p>
 Numbers — <code>var age = 23</code> <br>
@@ -794,33 +776,32 @@ Operations — <code>var b = 1 + 2 + 3</code><br>
 True or fase statements — <code>var c = true</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
-Objects — <code>var name = {firstName: "${nameObj.firstName}", lastName: "${nameObj.lastName}"}</code>
+Objects — <code>var name = &#123;firstName: "John", lastName: "Doe"&#125;</code>
 </p>
 
 <p><b>Objects Example</b> <br>
-  <code>
-var person = {
-  firstName: "${personObj.firstName}",
-  lastName: "${personObj.lastName}",
-  age: ${personObj.age},
-  nationality: "${personObj.nationality}"
-}
-  </code>
+  <pre>
+var person = &#123;
+  <br>
+&nbsp;&nbsp;firstName: "John",<br>
+&nbsp;&nbsp;lastName: "Doe",<br>
+&nbsp;&nbsp;age: 20,<br>
+&nbsp;&nbsp;nationality: "American"<br>
+&125;
+  </pre>
 </p>
-          </dfghyx iv>
-          </div></div>
-</div>
+          </div>
+'}/>
 `}/>
 <Modal title="SQL Basics" id="sql" content={`
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="sqlblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#query-6">Querying Data from a Table</a>
-      <a class="list-group-item list-group-item-action" href="#mod-6">Modifying Data</a>
-      <a class="list-group-item list-group-item-action" href="#table-6">Table Management</a>
-            </div></div><div class="col-md my-1 mb-1">
-<div data-bs-spy="scroll" data-bs-target="#sqlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="query-6">
+<Scrollspy id="sql-basics-list"
+scrollcontent={[
+  { name: "Querying Data from a Tablem", href: "#query-9" },
+  { name: "Modifying Data", href: "#mod-9" },
+  { name: "Table Management", href: "#table-9" },
+]}
+content={'
+<div id="query-9">
 <h4>Querying Data from a Table</h4>
 <p>Query Data in Columns c1, c2 from a Table</p>
 <code>
@@ -864,7 +845,7 @@ GROUP BY c1<br>
 HAVING condition;
 </code><br><br>
 </div>
-<div id="mod-6">
+<div id="mod-9">
 <h4>Modifying Data</h4>
 <p>Insert One Row into a Table</p>
 <code>
@@ -903,7 +884,7 @@ DELETE FROM t<br>
 WHERE condition;
 </code><br><br>
 </div>
-<div id="table-6">
+<div id="table-9">
 <h4>Table Management</h4>
 <p>Create a new Table with Three Columns</p>
 <code>
@@ -930,30 +911,29 @@ CREATE TABLE t (<br>
 <p>Remove all Data in a Table</p>
 <code>TRUNCATE TABLE t;</code>
 </div>
-          </div></div></div>
+'}/>
 `}/>
 <Modal title="JSON Basics" id="json" content={`
-<div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="jsonblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#example-8">Example Document</a>
-      <a class="list-group-item list-group-item-action" href="#import-8">Importing JSON</a>
-            </div></div><div class="col-md my-1 mb-1">
-   <div data-bs-spy="scroll" data-bs-target="#jsonblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="example-8">
+<Scrollspy id="json-basics-list"
+scrollcontent={[
+  { name: "Example Documents", href: "#example-10" },
+  { name: "Importing JSON", href: "#import-10" },
+]}
+content={'
+<div id="example-10">
 <h4>Example Document</h4>
 <code>
-{{{<br>
+{<br>
 &nbsp;&nbsp;"foo": "bar",<br>
 &nbsp;&nbsp;"array": [<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"foo",<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"bar"<br>
 &nbsp;&nbsp;]<br>
-}}}
+}
 </code><br><br>
-<p>All JSON files are surrounded by {{{ and }}}, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
+<p>All JSON files are surrounded by { and }, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
 </div>
-<div id="import-8">
+<div id="import-10">
 <h4>Importing JSON</h4>
 <table>
 <tbody>
@@ -976,7 +956,7 @@ CREATE TABLE t (<br>
 </tbody>
 </table>
 </div>
-          </div></div></div>
+'};/>
 `}/>
 </main>
 <Footer />
@@ -990,16 +970,6 @@ CREATE TABLE t (<br>
       <script is:inline src="/static/enabler.js"></script>
           <script is:inline src="/static/modal-id.js"></script>
       <script is:inline src="/static/accordion-id.js"></script>
-
-      <script>
-        const nameObj = { firstName: "John", lastName: "Doe" };
-        const personObj = {
-          firstName: "John",
-          lastName: "Doe",
-          age: 20,
-          nationality: "American"
-        };
-      </script>
     </body>
     </html>
 
