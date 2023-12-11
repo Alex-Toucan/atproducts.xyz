@@ -3,6 +3,7 @@ import Hero   from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Modal  from '../components/Modal.astro';
+import Scrollspy from '../components/Scrollspy.astro'
 ---
 
 
@@ -47,39 +48,28 @@ import Modal  from '../components/Modal.astro';
         <h2> Resources </h2>
         <p> What do you want to know about today? </p>
         <div>
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#learn">Learning Resources</button><div class="modal fade" id="learn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="learn-title">Learning Resources</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Learning Resources </h2>
+<Modal title="Learning Resources" id="learn"><div slot="content">
 <p><a href="https://www.youtube.com/watch?v=3Kq1MIfTWCE">Hacking Course - Network Penetration Testing</a> <a href="https://hackthebox.com/">HackTheBox</a> <a href="https://tryhackme.com/">TryHackMe</a> <a href="https://github.com/yeahhub/Hacking-Security-Ebooks">E-Books</a> <a href="https://www.kali.org/tools">Library of tools from Kali Linux OS</a> <a href="https://www.w3schools.com/python/default.asp">W3schools</a> <a href="https://www.freecodecamp.org/">freeCodeCamp</a> <a href="https://www.codecademy.com/">CodeAcademy</a> <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc">Course 1</a> <a href="https://www.youtube.com/watch?v=rfscVS0vtbw&t=9695s">Course 2</a> </p>
-         </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
-   <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#links">Links</button><div class="modal fade" id="links" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="links-title">Links</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Links </h2>
+</div></Modal>
+<Modal title="Links" id="Links"><div slot="content">
 <p><a href="https://www.virustotal.com/">Detect Malware</a> <a href="https://github.com/malwaredllc/byob">Exploitation Framework</a> </p>
-          </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
-<button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#py">Python Basics</button><div class="modal fade" id="py" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="py-title">Python Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Python Basics </h2>
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="pyblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#com-3">Comments</a>
-      <a class="list-group-item list-group-item-action" href="#data-3">Data Types</a>
-      <a class="list-group-item list-group-item-action" href="#str-3">Strings</a>
-      <a class="list-group-item list-group-item-action" href="#num-3">Numbers</a>
-            </div></div><div class="col-md my-1 mb-1">
-    <div data-bs-spy="scroll" data-bs-target="#pyblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="com-3">
+</div></Modal>
+<Modal title="Python Basics" id="py"><div slot="content">    
+<Scrollspy id="py-basics-list"
+scrollcontent={[
+  { name: "Comments", href: "#com-1" },
+  { name: "Data Types", href: "#data-1" },
+  { name: "Strings", href: "#str-1" },
+  { name: "Numbers", href: "#num-1" },
+]}
+><div slot="scrollspy-content">
+<div id="com-1">
 <h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
-py <br>
 # This is a comment
 </code></p>
 </div>
-<div id="data-3">
+<div id="data-1">
 <h4>Data Types</h4>
 <p>Variables can store data of different types, and different types can do different things.</p>
 <p>Python has the following data types built-in by default, in these categories:<br>
@@ -93,16 +83,14 @@ Binary Types: <code>bytes, bytearray, memoryview</code></p>
 <p>We will go more in-depth on some of these types in the next few paragraphs.</p>
 <p>You can print the data type of a variable with the type() function:<br>
 <code>
-py <br>
 x = 5 <br>
 print(type(x))
 </code></p>
 </div>
-<div id="str-3">
+<div id="str-1">
 <h4>Strings</h4>
 <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
 <code>
-py <br>
 x = "hello" <br>
 y = 'hello' <br>
 # single quotations and double quotation marks are the same<br>
@@ -110,7 +98,6 @@ x == y # returns True
 </code><p></p>
 <p>You can assign a multiline string to a variable by using three quotes:<br>
 <code>
-py <br>
 x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
 </code></p>
 <p>You can check the length of a string using the len() function:
@@ -118,7 +105,7 @@ x = """The FitnessGram Pacer test is a multistage aerobic capacity test that pro
 x = "hello"<br>
 print(len(text)) # returns 5<br></code></p>
 </div>
-<div id="num-3">
+<div id="num-1">
 <h4>Numbers</h4>
 <p>There are 2 primary, <code>int</code> and <code>float</code></p><p><code>
 py<br>
@@ -132,23 +119,18 @@ print(type(y))</code></p>
 <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
 <p>Float is a number, positive or negative, containing one or more decimals.</p>
 <p>Both strings and numbers are built-in data types.</p>
-</div>
-          </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
-        
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#js">JavaScript Basics</button><div class="modal fade" id="js" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="js-title">JavaScript Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> JavaScript Basics </h2>
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="jsblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#html-2">Including JavaScript in an HTML Page</a>
-      <a class="list-group-item list-group-item-action" href="#call-2">Call an External JavaScript File</a>
-      <a class="list-group-item list-group-item-action" href="#com-2">Including Comments</a>
-      <a class="list-group-item list-group-item-action" href="#var-2">Variables</a>
-      <a class="list-group-item list-group-item-action" href="#data-2">Data Types</a>
-            </div></div><div class="col-md my-1 mb-1">
-    <div data-bs-spy="scroll" data-bs-target="#jsblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
+</div></Scrollspy>
+</div></Modal>
+<Modal title="JavaScript Basics" id="js"><div slot="content">
+<Scrollspy id="js-basics-list"
+scrollcontent={[
+  { name: "Including JavaScript in an HTML Page", href: "#html-2" },
+  { name: "Call an External JavaScript File", href: "#call-2" },
+  { name: "Including Comments", href: "#com-2" },
+  { name: "Variables", href: "#var-2" },
+  { name: "Data Types", href: "data-2" },
+]}
+>
 <div id="html-2">
 <h4>Including JavaScript in an HTML Page</h4>
 <p><code>&lt;script type="text/javascript"&gt; <br>
@@ -181,34 +163,30 @@ Text (strings) — <code>var a = "init"</code><br>
 Operations — <code>var b = 1 + 2 + 3</code><br>
 True or fase statements — <code>var c = true</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
-Objects — <code>var name = {firstName:"John", lastName:”Doe"}</code></p>
+Objects — <code>var name = &lbrace;firstName&colon;"John", lastName&colon;”Doe"&rbrace;</code></p>
 <p><b>Objects Example</b> <br>
 <code>
-var person = {<br>
-&nbsp;&nbsp;firstName:"John",<br>
-&nbsp;&nbsp;lastName:"Doe",<br>
-&nbsp;&nbsp;age:20,<br>
-&nbsp;&nbsp;nationality:"American"<br>
-};
+var person = &lbrace;<br>
+&nbsp;&nbsp;firstName&colon;"John",<br>
+&nbsp;&nbsp;lastName&colon;"Doe",<br>
+&nbsp;&nbsp;age&colon;20,<br>
+&nbsp;&nbsp;nationality&colon;"American"<br>
+&rbrace;;
   </code></p>
           </div>
-          </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
-        
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#html">HTML Basics</button><div class="modal fade" id="html" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="html-basic">HTML Basics</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> HTML Basics </h2>
-        <div class="d-md-flex">
-          <div class="col-md-4 mt-1 mb-2 pe-md-1">
-    <div id="htmlblist" class="list-group">
-      <a class="list-group-item list-group-item-action" href="#example-1">Example Document</a>
-      <a class="list-group-item list-group-item-action" href="#text-1">HTML Text</a>
-      <a class="list-group-item list-group-item-action" href="#head-1">HTML Heading</a>
-      <a class="list-group-item list-group-item-action" href="#link-1">HTML Links</a>
-      <a class="list-group-item list-group-item-action" href="#img-1">HTML Images</a>
-            </div></div><div class="col-md my-1 mb-1">
-    <div data-bs-spy="scroll" data-bs-target="#htmlblist" data-bs-smooth-scroll="true" class="basics-scroll" tabindex="0">
-<div id="example-1">
+</div></Scrollspy>
+</div></Modal>
+        <Modal title="HTML Basics" id="html"><div slot="content">
+<Scrollspy id="html-basics-list"
+scrollcontent={[
+  { name: "Example Document", href: "#example-3" },
+  { name: "HTML Headings", href: "#head-3" },
+  { name: "HTML Paragraphs", href: "#text-3" },
+  { name: "HTML Links", href: "#links-3" },
+  { name: "HTML Images", href: "#img-3" },
+]}
+><div slot="scrollspy-content">
+<div id="example-3">
 <h4>Example Document</h4>
 <p><code>
 &lt;!DOCTYPE HTML&gt; <br>
@@ -226,45 +204,38 @@ var person = {<br>
 <p>We got to first lay down the very first thing to know. The <code>&lt;!DOCTYPE html&gt;</code> tag represents the Document Type and helps some browsers display correctly with your website, must only be used once. Some elements do need a closing tag, like <code>&lt;/center&gt;</code>.</p>
 <p>The <code>&lt;head&gt;</code> tag is needed to represent the head of the website. The <code>&lt;body&gt;</code> tag is the same thing, but it's the body.</p>
 </div>
-<div id="text-1">
+<div id="text-3">
 <h4>HTML Text</h4>
 <p>Some elements are meant to show text like <code>&lt;text&gt;</code>, and <code>&lt;p&gt;</code>.</p>
 <p><code>&lt;p&gt; This is text &lt;/p&gt;</code></p>
 </div>
-<div id="head-1">
+<div id="head-3">
 <h4>HTML Headings</h4>
 <p>The <code>&lt;h&gt;</code> tag has 6 different sizes, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.</p>
 <p>1 is the hugest, to 6 is the smallest.</p>
 <p><code>&lt;h1&gt; This is a heading &lt;/h1&gt;</code></p>
 </div>
-<div id="link-1">
+<div id="link-3">
 <h4>HTML Links</h4>
 <p>The <code>&lt;a&gt;</code> is a text element to represent links. Once clicked on the hyperlink, will redirect the user to a new link.</p>
 <p><code>&lt;a href="atproducts.tk"&gt;Example Website&lt;/a&gt;</code></p>
 </div>
-<div id="img-1">
+<div id="img-3">
 <h4>HTML Images</h4>
 <p>The <code>&lt;img&gt;</code> tag is to show a image. The width or height description can be used by pixels or percentages by displays. The <code>alt</code> tag shows up when the image doesn't load or can't load, it shows the description.</p>
 <p><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></p>
           </div>
-          </div></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
-        
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#osint">OSINT</button><div class="modal fade" id="osint" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="osint-title">OSINT</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> OSINT </h2>
+</div></Scrollspy>
+</div></Modal>
+ <Modal title="OSINT" id="osint"><div slot="content">
 <div class="my-3">
   <a href="https://osint.org" target="_blank" rel="noreferrer noopener" class="btn btn-info">OSINT.org</a>
     </div>
      <p> Section by Nasus </p>
      <p> Open source intelligence (OSINT) is the practice of collecting information from published or otherwise publicly available sources. This can be used to learn more about your targets </p>
      <p><a href="http://www.tineye.com/">Reverse Image Lookup</a> <a href="https://www.macvendorlookup.com/">Mac Address Lookup</a> <a href="http://exifdata.com/">EXIF Data</a> <a href="https://haveibeenpwned.com/">Database Lookup</a> <a href="https://whatismyipaddress.com/ip-lookup">IP Lookup</a> <a href="https://archive.org/index.php">Archive.org</a></p>
-         </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
-        
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#dos">Denial of Service</button><div class="modal fade" id="dos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="dos-title">Denial of Service</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Denial of Service </h2>
+         </div></Modal>
+<Modal title="Denial of Service" id="dos"><div slot="content">
     <div class="my-3">
         <a href="https://hackcontrol.org/blog/ddos-attacks/" target="_blank" rel="noreferrer noopener" class="btn btn-info">Hackcontrol.org</a>
     </div>
@@ -274,42 +245,29 @@ var person = {<br>
      <p> A denial-of-service (DoS) attack is a type of cyber attack in which a malicious actor aims to render a computer or other device unavailable to its intended users by interrupting the device's normal functioning. DoS attacks typically function by overwhelming or flooding a targeted machine with requests until normal traffic is unable to be processed, resulting in denial-of-service to addition users. A DoS attack is characterized by using a single computer to launch the attack.
        <br> <br> 
        A distributed denial-of-service (DDoS) attack is a type of DoS attack that comes from many distributed sources, such as a botnet DDoS attack. </p> <br> <a href="/media/files/http.py" download> Website HTTP Flooder </a> 
-</div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
-        
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#password">Passwords</button><div class="modal fade" id="password" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="password-title">Passwords</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Passwords </h2>
+</div></Modal>
+<Modal title="Passwords" id="password"><div slot="content">
      <p> A password, sometimes called a passcode, is secret data, typically a string of characters, usually used to confirm a user's identity. 
        <br> <br>
        A strong password should be minimum 8 characters long and consist of lowercase, uppercase, numbers and symbols </p> <br>
      <p> <a href="/media/files/passwordgenerator.py" download>Password Generator (Python)</a> <a href="/media/files/pwned.py" download>haveibeenpwned (Python | Request)</a> by Nasus </p>
      <p> Nasus hasn't made a cracker yet, so he recommends <a href="https://github.com/vanhauser-thc/thc-hydra">Vanhauser's</a>, and <a href="https://github.com/openwall/john">Openwall's</a>. </p>
-</div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+</div></Modal>
         
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#id">ID Creation Time</button><div class="modal fade" id="id" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="id-title">ID Creation Time</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> ID Creation Time </h2>
+<Modal title="ID Creation Time" id="id"><div slot="content">
      <p>Channels, users, servers and categories have IDs also known as snowflakes. You can easily calculate when that item was created. </p>
      <p> <a href="/media/files/idcheck.py" download>ID Creation Time (Python)</a> by Nasus </p>
-  </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  </div></Modal>
         
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#log">Keylogging</button><div class="modal fade" id="log" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="log-title">Keylogging</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Keylogging </h2>
+<Modal title="Keylogging" id="key"><div slot="content">
      <p> Keystroke logging, often referred to as keylogging or keyboard capturing, is the action of recording the keys struck on a keyboard, typically covertly, so that a person using the keyboard is unaware that their actions are being monitored. Data can then be retrieved by the person operating the logging program. </p> 
      <br> <p> <a href="/media/files/keylogger.py" download>Keylogger (Python | pynput)</a> by Nasus</p>
      <br>
      <h4> CУБΞЯC's Recommendations </h4>
      <p> <a href="/media/files/AdvKeylogger.py" download>Advanced Key Logger (Python)</a> <a href="/media/files/Decryptor.py" download>Decryptor (Python)</a> <a href="/media/files/require.txt" download>Requirements (TXT)</a> all by CУБΞЯC. </p>
-</div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+</div></Modal>
         
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#to">Nitrologging | Tokenlogging</button><div class="modal fade" id="to" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="tot">Nitrologging | Tokenlogging</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Nitrologging | Tokenlogging </h2>
+<Modal title="Nitrologging | Tokenlogging" id="logging"><div slot="content">
      <p> Try these links from CУБΞЯC and Nasus </p>
     <p><a href="https://github.com/Delgan/loguru">Delgan</a>
        <a href="https://github.com/metachris/logzero">MetaChris</a>
@@ -317,12 +275,9 @@ var person = {<br>
        <a href="https://github.com/Its-Vichy/Batched-Grabber">It's Vichy</a>
        <a href="https://github.com/KLDiscord/JustaGrabber">KLDiscord</a>
        <a href="https://github.com/Monst3red/Discord-Ethereum-Grabber">Monst3red</a> <a href="https://github.com/Alphalius/Discord-RAGE">Alphalius's Rage</a> <a href="https://github.com/billythegoat356/Riot"> BillyTheGoat356's Riot</a> <a href="https://github.com/billythegoat356/Plague">BillyTheGoat356's Plague</a> <a href="https://github.com/billythegoat356/Rage">BillyTheGoat356's Rage</a> <a href="https://github.com/NotSaksh/Discord-Server-Cloner">NotSaksh</a> <a href="https://github.com/ecriminal/Exploit-Discord-Cache-System-PoC">ECriminal</a> <a href="https://github.com/verlox/Discord-QR-Token-Logger">Verlox</a> <a href="https://github.com/KanekiWeb/Powerfull-Token-Stealer">KanekiWeb</a> <br> <br> <a href="https://github.com/WCBandit/Intersel">Discord Injector (WCBandit)</a> <a href="https://github.com/ZaikoARG/TokenGuard">Discord Token Stealer Malware Protection (ZaikoARD)</a> <a href="https://github.com/uvipen/ASCII-generator">Uvipen's ASCII Generator</a> </p>
-         </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+         </div></Modal>
         
-<button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#other">Other Scripts</button><div class="modal fade" id="other" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="other-title">Other Scripts</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Other Scripts </h2>  
+<Modal title="Other Scripts" id="other"><div slot="content">
     <div class="accordion" id="osacc">
   <div class="accordion-item">
     <h2 class="accordion-header" id="ngott">
@@ -370,12 +325,9 @@ var person = {<br>
       </div>
     </div>
   </div></div>
-       </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>        
+       </div></Modal>        
         
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#phishing">Phishing</button><div class="modal fade" id="phishing" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="phishing-title">Phishing</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Phishing </h2>
+<Modal title="Phishing" id="phishing"><div slot="content">
     <div class="my-3">
       <div class="btn-group">
        <a href="https://www.i-techsupport.com/everything-you-need-to-know-about-phishing-attacks/" target="_blank" rel="noreferrer noopener" class="btn btn-info mb-1">Techsupport.com</a>
@@ -469,12 +421,9 @@ var person = {<br>
         </div>
       </div>
     </div>
-  </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+  </div></Modal>
         
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#google">Google Dorking</button><div class="modal fade" id="google" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="google-title">Google Dorking</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Google Dorking </h2>
+ <Modal title="Google Dorking" id="google"><div slot="content">
      <p> Google hacking, also named Google dorking, is a hacker technique that uses Google Search and other Google applications to find security holes in the configuration and computer code that websites are using. Google dorking could also be used for <a href="#os" data-bs-dismiss="modal" data-bs-toggle="modal" role="button">OSINT (Open Source Intelligence)</a>.
        This can be used to find information that was made public on accident. You can find more information about your targets this way. This can be very entertaining: finding public cameras, password lists, peoples files and passwords, gov documents, admin panels, and much more.
      </p>
@@ -498,12 +447,9 @@ var person = {<br>
        <br><br><code>ethical hacking site:drive.google.com</code> - Find free courses 
        <br><br><code>index of software-name</code> - Find free software <br> <br>
        <code>ext:log “Software: Microsoft Internet Information Services *.*”</code> - Microsoft ISS server logs (online activity)
-        </p></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+        </p></div></Modal>
         
-        <button type="button" class="btn btn-dl btn-resource" data-bs-toggle="modal" data-bs-target="#wifi">Wi-Fi Hacking</button><div class="modal fade" id="wifi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header">
-<h5 class="modal-title" id="wifi-title">Wi-Fi Hacking</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">
-<i> To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work. </i>
-<h2 class="modal-body-title"> Wi-Fi Hacking </h2>
+<Modal title="Wi-Fi Hacking" id="wifi"><div slot="content">
     <div class="my-3">
 <a href="https://www.wireshark.org/" target="_blank" rel="noreferrer noopener" class="btn btn-info">Wireshark</a>
     </div>
@@ -515,78 +461,10 @@ var person = {<br>
           <a class="icon-link icon-link-hover" href="https://www.youtube.com/watch?v=zOYohNOnWp4">Tutorial<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
 </svg></a> </p>
-      </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div></div>
-    </div></main>
-<footer>
-  <hr>
-  <div class="container-footer">
-  <div class="mt-md-5">
-    <div class="row px-md-2">
-      <div class="col-md-2 me-xesm-2">
-       <div class="text-center">
-         <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
-           <br>
-           <h5><a href="/">AT Products LLC</a></h5>
-          </div>
-      </div>
-      <div class="col-md-2 me-md-2 text-centertostart">
-        <h5>Products</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-body-secondary">Paid Services</a></li>
-          <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-body-secondary">Web Projects</a></li>
-          <li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-body-secondary">SMS Bomb</a></li>
-          <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-body-secondary">Pynx's Projects</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-2 me-md-2 text-centertostart">
-        <h5>Communities</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-body-secondary">The Script Community</a></li>
-          <li class="nav-item mb-2"><a href="/ehs" class="nav-link p-0 text-body-secondary">Ethical Hacking Society</a></li>
-          <li class="nav-item mb-2"><a href="/codinghome" class="nav-link p-0 text-body-secondary">CodingHome</a></li>
-          <li class="nav-item mb-2"><a href="/noodle" class="nav-link p-0 text-body-secondary">Noodle Hackerspace</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-2 me-md-2 text-centertostart">
-        <h5>Documentation</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
-          <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-body-secondary">Discord Rules</a></li>
-          <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-body-secondary">Policies</a></li>
-          <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-body-secondary">Licenses</a></li>
-        </ul>
-      </div>
-
-      
-    </div>
-
-    <div class="d-flex justify-content-between pt-3 pb-2 mt-4 border-top">
-    <div class="d-md-flex">
-      <a class="ps-3 footer-info dropdown-toggle" data-bs-toggle="collapse" href="#footerinfo" role="button" aria-expanded="false" aria-controls="footerinfo">
-      Information
-      </a>
-      <div class="ps-3 pt-2 col-md-6 collapse" id="footerinfo">
-        <div class="card card-body text-start">
-          <b>Version:</b> <script is:inline src="/static/version.js"></script><br>
-          <b>Author:</b> Alex Toucan
-          <br><br>
-          <p>® <script is:inline src="/static/year.js"></script> AT Products LLC</p>
-         </div>
-        </div>
-      </div>
-      <ul class="list-unstyled d-flex pe-3 gap-3">
-        <li><a class="link-footer" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
-        <li><a class="link-footer" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a></li>
-        <li><a class="link-footer" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-        <li><a class="link-footer" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope-fill"></i></a></li>
-        <li><a class="link-footer" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
-      </ul>
-    </div>
-  </div>
+      </div></Modal>
 </div>
-        </footer>
+    </div></main>
+<Footer />
   <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
         </div>
     <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
