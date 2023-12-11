@@ -55,8 +55,44 @@ icons={[
             { name: "Data Types", href: "data-8" },
           ]}
           >
-<div slot="scrollspy-content" is:raw>
-&lbrace; Example&colon; &rbrace;
+<div slot="scrollspy-content">
+<div id="call-2">
+<h4>Call an External JavaScript File</h4>
+     <p> <code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code></p>
+</div>
+<div id="com-2">
+<h4>Including Comments</h4>
+<p>Single line comments - <code>// Comment</code> <br>
+Multi-line comments - <code>/* comment here */</code></p>
+</div>
+<div id="var-2">
+<h4>Variables</h4>
+<p>
+<code>var, const, let</code><br>
+<code>var</code> — The most common variable. Can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
+<code>const</code> — Can not be reassigned and not accessible before they appear within the code.<br>
+<code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
+</p>
+</div>
+<div id="data-2">
+<h4>Data Types</h4>
+Numbers — <code>var age = 23</code> <br>
+Variables — <code>var x</code><br>
+Text (strings) — <code>var a = "init"</code><br>
+Operations — <code>var b = 1 + 2 + 3</code><br>
+True or fase statements — <code>var c = true</code><br>
+Constant numbers — <code>const PI = 3.14</code><br>
+Objects — <code>var name = &lbrace;firstName:"John", lastName:”Doe"&rbrace;</code> <p></p>
+<p><b>Objects Example</b> <br>
+<code>
+var person = &lbrace;<br>
+&nbsp;&nbsp;firstName&colon;"John",<br>
+&nbsp;&nbsp;lastName:"Doe",<br>
+&nbsp;&nbsp;age:20,<br>
+&nbsp;&nbsp;nationality:"American"<br>
+&rbrace;;
+  </code></p>
+          </div>
 </div>
           </Scrollspy>
           </div></Modal>
