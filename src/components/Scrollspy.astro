@@ -5,7 +5,7 @@ const { id, scrollcontent, additionalClasses, otherClass } = Astro.props;
 <div class="d-md-flex">
     <div class="col-md-4 mt-1 mb-2 pe-md-1">
         <div id={id} class="list-group">
-            {scrollcontent && scrollcontent.map(({ name, href }, index) => (
+            {scrollcontent && scrollcontent.map(({ name, href, additionalClasses }, index) => (
             <a class={`list-group-item list-group-item-action ${additionalClasses}`} href={href}>{name}</a>
             ))}
         </div>
