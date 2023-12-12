@@ -9,6 +9,7 @@ const {
   secondaryText,
   imageSrc,
   imageWidth,
+  imageClasses,
   minImageWidth,
   icons,
   dropdownItems 
@@ -21,14 +22,16 @@ const {
       <div class="text-white">
         <div>
           {imageSrc && (
-            <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class="pe-md-3 rounded-2 " />
+            <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} />
           )}
           <h1 class="display-3 fw-bold mt-mmd-2 d-block d-md-inline align-middle">{title}</h1>
         </div>
         <p class="fs-4 m-3 text-body-secondary">{description}</p>
         <div class="mx-auto justify-content-between container" id="links">
           <div class="d-md-flex d-grid gap-2">
+            {primaryHref && primaryText && (
             <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
+            )}
             {secondaryHref && secondaryText && (
               <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
             )}
@@ -45,9 +48,9 @@ const {
       ))}
     </ul>
   </div>
-)}
+)};
           </div>
-
+{icons && (
 <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
   {icons && icons.map(({ icon, desc, href }, index) => (
     <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc} key={index}>
@@ -55,6 +58,7 @@ const {
     </a>
   ))}
 </div>
+)}
 
         </div>
       </div>
