@@ -57,15 +57,8 @@ icons={[
           </div>
         </div>
         <p class="my-3">Please note that if a link is a <a href="#" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German.</p>
-        <div class="accordion" id="resourcesAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#learningresources" aria-expanded="false" aria-controls="learningresources">
-                Learning Resources
-              </button>
-            </h2>
-            <div id="learningresources" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-              <div class="accordion-body">
+       <Accordion parent="resourcesAccordion"><div slot="accordion-content">
+         <AccordionItem title="Learning Resources" id="learningresources"><div slot="accordion-item-content">
                 <h4>Learning Resources</h4>
                 <p>
                   <a href="https://w3schools.com/">W3Schools</a>
@@ -162,17 +155,8 @@ icons={[
                 <p>
                   There are outdated files on the source, if you need to, use the updated files of the <a href="/media/files/csharpsaltpepper.1.cs">first code block</a> and the <a href="/media/files/csharpsaltpepper.2.cs">second code block</a>.
                 </p>
-              </div>
-            </div>
-          </div>
-<div class="accordion-item">
-  <h2 class="accordion-header">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#otherresources" aria-expanded="false" aria-controls="otherresources">
-      Other Resources
-    </button>
-  </h2>
-  <div id="otherresources" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-    <div class="accordion-body">
+</div></AccordionItem>
+<AccordionItem title="Other Resources" id="otherresources"><div slot="accordion-item-content">
       <h4>Other Resources</h4>
       <p>
         <a href="https://www.datensen.com/blog/">Data Management Blog</a>
@@ -228,8 +212,7 @@ icons={[
 
 <p><a href="https://www.youtube.com/watch?v=MDSscZjzXb4">Much more in this video</a></p>
       </div>
-    </div>
-  </div>
+</AccordionItem>
    <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#youtubecreators" aria-expanded="false" aria-controls="youtubecreators">
