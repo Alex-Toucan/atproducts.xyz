@@ -1,3 +1,4 @@
+
 ---
 import Hero      from '../components/Hero.astro';
 import Navbar    from '../components/Navbar.astro';
@@ -59,8 +60,9 @@ icons={[
           </div>
         </div>
         <p class="my-3">Please note that if a link is a <a href="#" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German.</p>
-       <Accordion parent="resourcesAccordion"><div slot="accordion-content">
-         <AccordionItem title="Learning Resources" id="learningresources" parent={parent}><div slot="accordion-item-content">
+       <Accordion parent="resourcesAccordion">
+  <template slot="accordion-content" let-parent={parent}>
+         <AccordionItem title="Learning Resources" id="learningresources" parent={parent1}><div slot="accordion-item-content">
                 <h4>Learning Resources</h4>
                 <p>
                   <a href="https://w3schools.com/">W3Schools</a>
@@ -304,8 +306,8 @@ icons={[
     </div>
       </div>
     </div>
-  </div>
 </div>
+</template><Accordion>
 </div></Modal>
 <Modal title="Viruses &amp; Malware" id="files"><div slot="content">
     <p> <a href="/media/files/Meme_Coin.ZIP" download>Meme_Coin (ZIP)</a> <a href="/media/files/Meme_coin_miner.exe" download>Meme_Coin (EXE)</a> 
