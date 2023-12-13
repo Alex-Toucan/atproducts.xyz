@@ -8,7 +8,7 @@ const { id, title } = Astro.props;
         {title}
       </button>
     </h2>
-    <div id={id} class="accordion-collapse collapse" data-bs-parent={`#${@this.parent}`}>
+    <div id={id} class="accordion-collapse collapse" data-bs-parent={`#${parent}`}>
       <div class="accordion-body">
         <slot name="accordion-item-content" />
       </div>
