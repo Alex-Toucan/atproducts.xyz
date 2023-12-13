@@ -3,5 +3,5 @@ const { parent } = Astro.props;
 ---
 
 <div class="accordion" id={parent}>
-  <slot name="accordion-content" />
+  <slot name="accordion-content" let-parent={parent} />
 </div>
