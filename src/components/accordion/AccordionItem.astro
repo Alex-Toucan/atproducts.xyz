@@ -2,7 +2,8 @@
 const { title, id, parent } = Astro.props;
 ---
 
-  <div class="accordion-item">
+<div class="accordion-item">
+  <template #default let-parent>
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${id}`} aria-expanded="false" aria-controls={id}>
         {title}
@@ -13,4 +14,5 @@ const { title, id, parent } = Astro.props;
         <slot name="accordion-item-content" />
       </div>
     </div>
-  </div>
+  </template>
+</div>
