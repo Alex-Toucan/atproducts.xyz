@@ -10,7 +10,7 @@ const { id, title } = Astro.props;
     </h2>
     <div id={id} class="accordion-collapse collapse" data-bs-parent={`#${parent}`}>
       <div class="accordion-body">
-        <slot name="scrollspy-item-content" />
+        <slot name="accordion-item-content" />
       </div>
     </div>
   </div>
