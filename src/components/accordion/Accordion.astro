@@ -1,7 +1,7 @@
 ---
-const { accordionid } = Astro.props;
+const { parent } = Astro.props;
 ---
 
 <div class="accordion" id={parent}>
-  <slot name="accordion-content" let-parent={parent} />
+  <slot name="accordion-content" parent={parent} />
 </div>
