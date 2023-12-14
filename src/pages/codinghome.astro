@@ -61,8 +61,8 @@ icons={[
         </div>
         <p class="my-3">Please note that if a link is a <a href="#" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German.</p>
        <Accordion parent="resourcesAccordion">
-  <template slot="accordion-content" let-parent={parent}>
-         <AccordionItem title="Learning Resources" id="learningresources" parent={parent}><div slot="accordion-item-content">
+  <template slot="accordion-content">
+         <AccordionItem title="Learning Resources" id="learningresources" parent="resourcesAccordion"><div slot="accordion-item-content">
                 <h4>Learning Resources</h4>
                 <p>
                   <a href="https://w3schools.com/">W3Schools</a>
@@ -160,7 +160,7 @@ icons={[
                   There are outdated files on the source, if you need to, use the updated files of the <a href="/media/files/csharpsaltpepper.1.cs">first code block</a> and the <a href="/media/files/csharpsaltpepper.2.cs">second code block</a>.
                 </p>
 </div></AccordionItem>
-<AccordionItem title="Other Resources" id="otherresources" parent={accordionid}><div slot="accordion-item-content">
+<AccordionItem title="Other Resources" id="otherresources" parent="resourcesAccordion"><div slot="accordion-item-content">
       <h4>Other Resources</h4>
       <p>
         <a href="https://www.datensen.com/blog/">Data Management Blog</a>
@@ -215,16 +215,8 @@ icons={[
 <a href="https://drive.google.com/drive/folders/18-9X13abayITCKmToARWDljynvMzBXob">Fake Nitro Links</a></p>
 
 <p><a href="https://www.youtube.com/watch?v=MDSscZjzXb4">Much more in this video</a></p>
-      </div>
-</AccordionItem>
-   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#youtubecreators" aria-expanded="false" aria-controls="youtubecreators">
-        YouTube Creators
-      </button>
-    </h2>
-    <div id="youtubecreators" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-      <div class="accordion-body">
+</div></AccordionItem>
+<AccordionItem title="YouTube Creators" id="youtubecreators" parent="resourcesAccordion"><div slot="accordion-item-content">
         <h4>YouTube Creators</h4>
 <h5>C#</h5>
 <p>
@@ -266,17 +258,8 @@ icons={[
         <p>
 <a href="https://www.devas.life/effective-neovim-setup-for-web-development-towards-2024/">Takuya Matsuyama</a>
 </p>
-        </div>
-    </div>
-  </div>
-      <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hackingresources" aria-expanded="false" aria-controls="hackingresources">
-        Hacking Resources
-      </button>
-    </h2>
-    <div id="hackingresources" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-      <div class="accordion-body">
+ </div></AccordionItem>
+<AccordionItem title="Hacking Resources" id="hackingresources" parent="resourcesAccordion"><div slot="accordion-item-content">
         <h4>Hacking Resources</h4>
                   <h5>Network Attack</h5>
         <p>
@@ -288,25 +271,13 @@ icons={[
         <a href="https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi">Old-Fashioned</a>
           <a href="https://www.youtube.com/playlist?list=PLDQaRcbiSnqF5U8ffMgZzS7fq1rHUI3Q8">Modern</a>
         </p>
-        </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#downloadableresources" aria-expanded="false" aria-controls="downloadableresources">
-        Downloadable Resources
-      </button>
-    </h2>
-    <div id="downloadableresources" class="accordion-collapse collapse" data-bs-parent="#resourcesAccordion">
-      <div class="accordion-body">
+  </div></AccordionItem>
+<AccordionItem title="Downloadable Resources" id="downloadableresources" parent="resourcesAccordion"><div slot="accordion-item-content">
         <h4>Downloadable Resources</h4>
          <div class="my-1">
         <h4>1,000 I.T books!</h4>
         <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1F7D5c30nP-y_Q7SFqoRTRvJ7tl0UcY3q">View</a>
-    </div>
-      </div>
-    </div>
-</div>
+    </div></AccordionItem>
 </template><Accordion>
 </div></Modal>
 <Modal title="Viruses &amp; Malware" id="files"><div slot="content">
