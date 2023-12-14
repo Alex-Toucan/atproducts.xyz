@@ -3398,7 +3398,7 @@ textarea.form-control-lg {
 
 /* Custom "btn" settings */
 
-[data-bs-theme=light] .btn-dl {
+.btn-dl {
   --bs-btn-color: #fff;
   --bs-btn-bg: #212529;
   --bs-btn-border-color: #212529;
