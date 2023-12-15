@@ -8,7 +8,6 @@ const { id, title, cardLinks } = Astro.props;
       <h1 class="display-3 fw-bold title">{title}</h1>
       <div class="d-md-flex mx-mmd-2">
         {cardLinks && (
-          <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
             {cardLinks.map(({ cardTitle, cardDescription, cardImage, cardHref, secondaryHref }, index) => (
               <div class="col-md mt-1 mb-3 m-1">
                 <div class="card c permcard shadow-sm h-100">
@@ -28,7 +27,6 @@ const { id, title, cardLinks } = Astro.props;
                 </div>
               </div>
             ))}
-          </div>
         )}
       </div>
     </div>
