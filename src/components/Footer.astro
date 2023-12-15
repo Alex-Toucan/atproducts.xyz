@@ -1,8 +1,8 @@
 ---
-
+const { hr } = Astro.props;
 ---
 <footer>
-  <hr>
+  {hr !== 'none' && <hr>}
   <div class="container-footer">
   <div class="mt-md-5">
     <div class="row px-md-2">
