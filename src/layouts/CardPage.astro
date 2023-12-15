@@ -12,7 +12,7 @@ const { id, title, cardLinks } = Astro.props;
             <div class="card text-center permcard shadow-sm h-100">
               {cardImage && (
                 <div class="bg-white card-img-top">
-                  <img src={cardImage} alt={cardTitle} class={`bg-white card-img-top ${additionalImageClasses}`} width={cardWidth}>
+                  <img src={cardImage} alt={cardTitle} class={additionalImageClasses} width={cardWidth}>
                 </div>
               )}
               <div class="card-body">
