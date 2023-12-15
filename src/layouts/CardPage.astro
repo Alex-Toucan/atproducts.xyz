@@ -11,7 +11,9 @@ const { id, title, cardLinks } = Astro.props;
           <div class="col-md mt-1 mb-3 m-1" key={index}>
             <div class="card text-center permcard shadow-sm h-100">
               {cardImage && (
-                <img src={cardImage} alt={cardTitle} class={`bg-white card-img-top ${additionalImageClasses}`} width={cardWidth}>
+                <div class="bg-white card-img-top">
+                  <img src={cardImage} alt={cardTitle} class={`bg-white card-img-top ${additionalImageClasses}`} width={cardWidth}>
+                </div>
               )}
               <div class="card-body">
                 <h2 class="card-title">{cardTitle}</h2>
