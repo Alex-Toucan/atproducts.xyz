@@ -19,7 +19,7 @@ import BackToTop from '../components/BackToTop.astro';
     <link rel="manifest" href="/media/favicon/site.webmanifest">
     <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="title" content="Contact Form">
-    <meta name="description" content="Tired of emails! Use this contact form for AT Products LLC instead!">
+    <meta name="description" content="Tired of emails clients? Use this contact form for AT Products LLC instead!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="/media/favicon/iconembed.png">
         <meta name="msapplication-TileColor" content="#da532c">
@@ -30,13 +30,17 @@ import BackToTop from '../components/BackToTop.astro';
 <Navbar />
     <main id="form" class="container">
     <h1>Contact Form</h1>
-    <p>If you don't wanna email us due to reasons, you can use our contact form instead.</p>
+    <p>If you don't wanna email us on your email client, use this instead. We'll reach out to your email provided.</p>
 <form
   name="contact"
   action="/form/success"
   method="POST"
   data-netlify="true"
 class>
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
 <div class="mb-3">
   <label for="nameInput" class="form-label">Name</label>
   <input name="name" class="form-control" id="nameInput" placeholder="John Doe">
