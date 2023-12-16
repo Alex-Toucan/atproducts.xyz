@@ -192,34 +192,21 @@ import BackToTop from '../components/BackToTop.astro';
   <hr class="m-2 d-md-none">
 <div class="p-2 text-mmd-center"><a href="https://pynxtech.pynxthegoat.repl.co/"><img src="/media/images/pynx.webp" alt="PynxTech" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2"><div class="d-inline">PynxTech</div></a> has contributed to our website and is willing to protect our website as well.</div>
   <hr class="m-2">
-                              <div class="accordion m-2" id="creditsAccordion" data-bs-theme="dark">
-  <div class="accordion-item text-white">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#creditsOne" aria-expanded="false" aria-controls="creditsOne">
-        Other Credits
-      </button>
-    </h2>
-    <div id="creditsOne" class="accordion-collapse collapse">
+   <Accordion parent="resourcesAccordion" additionalClasses="m-2">
+  <div slot="accordion-content">
+         <AccordionItem title="Other Credits" id="creditsOne" parent="resourcesAccordion" additionalClasses="text-white"><div slot="accordion-item-content">
       <div class="p-2 text-mmd-center d-block">
 <p class="mb-0"><a href="https://uigradients.com/">uiGradients</a> for providing gradients for the carousel images when I'm lazy to do it myself.</p>      </div>
     </div>
-  </div>
-  <div class="accordion-item text-white">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#creditsTwo" aria-expanded="false" aria-controls="creditsTwo">
-       Older Credits
-      </button>
-    </h2>
-    <div id="creditsTwo" class="accordion-collapse collapse">
+  </div></AccordionItem>
+<AccordionItem title="Older Credits" id="creditTwo" parent="resourcesAccordion" additionalClasses="text-white"><div slot="accordion-item-content">
       <div class="p-2 text-mmd-center">
-<div class="p-2"><p><a href="https://w3schools.com"><img src="/media/images/w3schools.webp" alt="W3Schools" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">W3Schools</div></a> has provided the former navigation buttons.</p></div>
+<div class="p-2"><p class="d-inline"><a href="https://w3schools.com"><img src="/media/images/w3schools.webp" alt="W3Schools" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">W3Schools</a> has provided the former navigation buttons.</p></div></div>
 <div class="mb-md-2"></div><hr class="m-2 d-md-none">
-        <div class="p-2"><p><a href="https://tinkercad.com"><img src="/media/images/tinkercad.webp" alt="TinkerCAD" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">TinkerCAD</div></a> has provided their 3D building tool to build our past logo.</p></div>
+        <div class="p-2"><p class="d-inline"><a href="https://tinkercad.com"><img src="/media/images/tinkercad.webp" alt="TinkerCAD" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">TinkerCAD</a> has provided their 3D building tool to build our past logo.</p></div></div>
       </div>
-    </div>
-  </div>
-</div>
-                            
+</div></AccordionItem>
+</div></Accordion>
                             </div></div><hr>
 <div id="history">
 <h2> History </h2>
