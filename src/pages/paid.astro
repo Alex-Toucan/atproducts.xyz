@@ -1,0 +1,76 @@
+---
+import Hero      from '../components/Hero.astro';
+import Navbar    from '../components/Navbar.astro';
+import Footer    from '../components/Footer.astro';
+import FirstPaidCard from '../components/secondary/FirstPaidCard.astro';
+import SecondPaidCard from '../components/secondary/SecondPaidCard.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+
+<!DOCTYPE html>
+<html class="fixedtopnavimage" lang="en">
+  <head>
+    <title>Paid Services</title> 
+    <link rel="stylesheet" href="/static/cookie.css">
+    <link rel="stylesheet" href="/static/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
+    <link rel="manifest" href="/media/favicon/site.webmanifest">
+        <link rel="preload" as="style" href="/static/bootstrap.css">
+    <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="preload" as="image" href="/media/images/hero-web.webp">
+    <meta name="title" content="Paid Services - AT Products LLC">
+    <meta name="description" content="Get stuff done with AT Products!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta property="og:image" content="/media/favicon/iconembed.png">
+     <script is:inline src="/static/darkmode.js"></script>
+  </head>
+  <body class="fixedtopnavimage">
+      <div id="page">
+<Navbar />
+<Hero id="web" title="Paid Services" description="Get stuff done with AT Products LLC; our digital services will help you create your own services!" secondaryHref="/paidterms" secondaryText="Paid Services & Website Creation Policies and Terms" />
+       <main id="paid" class="text-center container">
+         <figure class="my-4">
+            <blockquote class="blockquote">
+              <p>"Where innovation meets quality. Experience the difference with our cutting-edge technology, impeccable craftsmanship, and unwavering commitment to customer satisfaction. Elevate your expectations and unlock a world of possibilities with AT Products LLC."</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+             <cite title="Quote Source"> JSman255 from <a href="https://deltasoftai.com">Deltasoft</a>.</cite>
+            </figcaption>
+          </figure>
+<div class="d-md-flex d-grid gap-3 flex-wrap row-cols-2-md mb-3">
+      <div class="col-md">
+        <FirstPaidCard title="Website Design" price="$20-500*" description="Your website can have HTML5 &amp; CSS3, Bootstrap v5, responsive layout, and will be compatible with all browsers with the Website Design package! (Estimates will be provided)" btnhref="mailto@support.atproducts.xyz" btntext="Contact us" footertext="* Prices may be raised dependent on the requested project, these are not guaranteed prices." />
+      </div>
+      <div class="col-md">
+      <FirstPaidCard title="Website Hosting" price="$1-75*<small class="text-body-secondary fw-light">/week or month</small>"  secondaryprice="<b>$1-50/week or month</b> with the &quot;Website Design&quot; package." description="Keep your website up with our services! This package includes security certificate renewals." btnhref="mailto@support.atproducts.xyz" btntext="Contact us" footertext="* These are not guaranteed prices." />
+      </div>
+      <SecondPaidCard title="Other Services" description="These are other services that we offer as secondary services." btnhref="mailto@support.atproducts.xyz" btntext="Contact us"   footertext="* These are not guaranteed prices.">
+      <div slot="paid-card-content">
+      <p class="mb-0"><b>Website Maintenance:</b> Price varies (Min: $10, max: $250)*; this package will help your site become more up-to-date and fixes bugs if needed. Note that you do not need a primary package before buying this.</p>
+      </div>
+      </SecondPaidCard>
+      <SecondPaidCard title="Donation Box" description="If you would like to donate without buying our packages, you can do so here!"/>
+      <div slot="paid-card-content">
+      <p class="mb-0"><b>CashApp:</b> $ATProductsLLC</p>
+      </div>
+      </SecondPaidCard>
+   </div>
+         <p> We only accept CashApp. Contact <a href="mailto:support@atproducts.xyz">our support line</a>, and we can figure something out. <a href="/paidterms">Terms may apply</a>.</p>
+</main>
+<Footer />
+<BackToTop />
+</div>
+      <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+     <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
+    <script is:inline src="/static/scroll.js"></script>
+    <script is:inline src="/static/purecookie.js"></script>
+    <script is:inline src="/static/enabler.js"></script>
+    </body>
+    </html>
