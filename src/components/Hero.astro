@@ -11,12 +11,13 @@ const {
   imageWidth,
   imageClasses,
   minImageWidth,
+  additionalClasses,
   icons,
   dropdownItems 
 } = Astro.props;
 ---
 
-<div id="intro" class={`hero hero-${id} text-center mb-3`} data-bs-theme="dark">
+<div id="intro" class={`hero hero-${id} text-center mb-3 ${additionalClasses}`} data-bs-theme="dark">
   <div class="hero-back h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
       <div class="text-white">
