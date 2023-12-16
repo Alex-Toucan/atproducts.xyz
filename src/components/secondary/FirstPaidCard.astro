@@ -7,12 +7,12 @@ const { title, price, secondaryprice, description, btnhref, btntext, footertext 
     <h3 class="my-0 fw-normal">{title}</h3>
   </div>
   <div class="card-body">
-    <h1 class="card-title pricing-card-title">{price}</h1>
+    <h1 class="card-title pricing-card-title" innerHTML={footertext}>{price}</h1>
     {secondaryprice && (
-        <p class="mt-2 text-body-secondary fw-light fs-5">{secondaryprice}</p>
+        <p class="mt-2 text-body-secondary fw-light fs-5" innerHTML={footertext}>{secondaryprice}</p>
     )}
     <p class="list-unstyled mt-3 mb-4">{description}</p>
     <a type="button" class="tab-link w-100 btn btn-lg btn-primary" href={btnhref}>{btntext}</a>
   </div>
-  <div class="card-footer text-body-secondary">{footertext}</div>
+  <div class="card-footer text-body-secondary" innerHTML={footertext}>{footertext}</div>
 </div>
