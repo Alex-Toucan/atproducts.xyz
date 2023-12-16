@@ -1,0 +1,58 @@
+---
+const {
+  title,
+  description,
+  primaryHref,
+  primaryText,
+  secondaryHref,
+  secondaryText,
+  dropdownItems 
+} = Astro.props;
+---
+
+<div id="intro" class={`hero hero-ehs text-center ${marginBottom === 'false' ? '' : 'mb-3'}`} data-bs-theme="dark">
+  <div class="hero-back h-100 p-3 position-relative">
+    <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
+      <div class="text-white">
+        <div>
+          {title && (
+            <h1 class="display-3 fw-bold">{title}</h1>
+          )}
+        </div>
+        <p class="fs-4 m-3 text-body-secondary" set:html={description}></p>
+        <div class="mx-auto justify-content-between container" id="links">
+          <div class="d-md-flex d-grid gap-2">
+            {primaryHref && primaryText && (
+            <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
+            )}
+            {secondaryHref && secondaryText && (
+              <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
+            )}
+{dropdownItems && (
+  <div class="dropdown col-md">
+    <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
+      Navigation
+    </button>
+    <ul class="dropdown-menu w-100 white-space-normal">
+      {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
+        <li key={index}>
+          <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+          </div>
+          <hr class="mx-mmd-4 opacity-75">
+<div class="d-md-flex mt-3 justify-content-between container" id="links">
+<h2 class="me-md-auto text-centertostart mb-0">Contact Us</h2>
+           <br class="disbr">
+<div class="d-flex justify-content-center gap-3">
+  <a href="https://www.instagram.com/fisted.mp3" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="link-hero ms-md-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram"><i class="bi bi-instagram"></i></a><a href="mailto:support@atproducts.xyz" aria-label="Our Support Email" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Our Support Email"><i class="bi bi-envelope-fill"></i></a>  
+</div></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
