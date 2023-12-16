@@ -1,0 +1,109 @@
+---
+import HeroPynx      from '../../components/secondary/HeroPynx.astro';
+import Navbar    from '../../components/Navbar.astro';
+import Footer    from '../../components/Footer.astro';
+import BackToTop from ../'../components/BackToTop.astro';
+---
+
+
+<!DOCTYPE HTML>
+<html class="fixedtopnavimage" lang="en">
+  <head>
+    <title>BxPP</title>
+    <link rel="stylesheet" href="/static/cookie.css">
+    <link rel="stylesheet" href="/static/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
+    <link rel="manifest" href="/media/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+            <link rel="preload" as="style" href="/static/bootstrap.css">
+    <link rel="preload" as="image" href="/media/images/hero-ehs.webp">
+    <meta charset="UTF-8">
+    <meta name="title" content="BxPP">
+    <meta name="description" content="BxPP; a Python programming language.">
+    <meta name="keywords" content="BxPP, AT Products LLC">
+    <meta name="author" content="PynxTech">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="msapplication-TileColor" content="#da532c">
+    <script is:inline src="/static/darkmode.js"></script>
+  </head>
+  <body class="fixedtopnavimage">
+    <div id="page">
+ <Navbar />
+ <HeroPynx
+  title="Inferno Ransomware"
+  description="Made by <a href='https://pynxtech.pynxthegoat.repl.co/' class='m-0'>Pynx Technologies</a>&semi; a Python / C++ ransomware <b>that could lock up systems!"
+  primaryHref="#downloads"
+  primaryText="Downloads"
+  secondaryHref="https://github.com/Discordmodsbers/BxPP/"
+  secondaryText="Source Code"
+  dropdownItems={[
+  { navigationDesc: "General Information", navigationLink: "#general-info" },
+  { navigationDesc: "Installation", navigationLink: "#install" },
+  { navigationDesc: "Downloads", navigationLink: "#downloads" },
+    ]}
+/>
+         <div id="intro" class="hero hero-ehs text-center" data-bs-theme="dark">
+         <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
+            <div class="text-white">
+             <h1 class="display-3 fw-bold">BxPP Programming Language</h1>
+              <p class="fs-4 m-3 text-body-secondary">Made by <a href="https://pynxtech.pynxthegoat.repl.co/" class="m-0">Pynx Technologies</a>; a Python Programming Language.</p>
+              <div class="mx-auto justify-content-between container" id="links">
+<div class="d-md-flex d-grid gap-2">
+  <a href="#downloads" class="btn btn-primary col-md">Downloads</a>
+                <a href="https://github.com/Discordmodsbers/BxPP/" class="btn btn-secondary col-md">Source Code</a>
+<div class="dropdown col-md">
+  <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
+    Navigation
+  </button>
+  <ul class="dropdown-menu w-100 text-wrap">
+    <li><a class="dropdown-item" href="#general-info">General Information</a></li>
+       <li><a class="dropdown-item" href="#install">Installation</a></li>
+           <li><a class="dropdown-item" href="#downloads">Downloads</a></li>
+  </ul>
+</div>
+  </div>
+</div><hr class="mx-mmd-4 opacity-75"><div class="d-md-flex mt-3 justify-content-between container" id="links">
+<h2 class="me-md-auto text-centertostart mb-0">Contact Us</h2>
+           <br class="disbr">
+<div class="d-flex justify-content-center gap-3">
+  <a href="https://www.instagram.com/fisted.mp3" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="link-hero ms-md-3 fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram"><i class="bi bi-instagram"></i></a><a href="mailto:support@atproducts.xyz" aria-label="Our Support Email" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Our Support Email"><i class="bi bi-envelope-fill"></i></a>  
+</div></div>
+</div>
+      </div>
+    </div>
+         </div>
+            <main id="bxpp" class="container mt-3">
+              <div id="general-info">
+      <h2> General Information </h2>
+                <p> BxPP, made by <a href="https://pynxtech.pynxthegoat.repl.co/">Pynx Technologies</a>, is a custom Python programming language.</p><br>
+      <p><b>Version:</b> 3.0<br>
+      <b>Platforms:</b> Linux & Windows
+              </div><hr><div id="install">
+      <h2> Installation </h2>
+<p><code>
+  sudo python3 setup.py</code><br>
+OR<br>
+<code>run setup.exe
+  </code></p>
+              </div><hr><div id="downloads">
+      <h2>Downloads</h2>
+                <a href="setup.py" download>Setup File (Python)</a>
+                <a href="BxPP.py" download>Main File (Python)</a>
+      <a href="https://github.com/Discordmodsbers/BxPP/archive/refs/heads/main.zip" download>ZIP Download (Linux & Windows)</a>
+              </div></main>
+<Footer />
+<BackToTop />
+    </div>
+        <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
+    <script is:inline src="/static/scroll.js"></script>
+    <script is:inline src="/static/purecookie.js"></script>
+    <script is:inline src="/static/enabler.js"></script>
+  </body>
+</html>
