@@ -2,17 +2,17 @@
 const { title, price, secondaryprice, description, btnhref, btntext, footertext } = Astro.props;
 ---
 
-  <div className="card h-md-100 rounded-3 shadow-sm">
-    <div className="card-header py-3">
-      <h3 className="my-0 fw-normal">{title}</h3>
+  <div class="card h-md-100 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+      <h3 class="my-0 fw-normal">{title}</h3>
     </div>
-    <div className="card-body">
-      <h1 className="card-title pricing-card-title" set:html={price}></h1>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title" set:html={price}></h1>
       {secondaryprice && (
-        <p className="mt-2 text-body-secondary fw-light fs-5" set:html={secondaryprice}></p>
+        <p class="mt-2 text-body-secondary fw-light fs-5" set:html={secondaryprice}></p>
       )}
-      <p className="list-unstyled mt-3 mb-4">{description}</p>
-      <a className="tab-link w-100 btn btn-lg btn-primary" href={btnhref}>{btntext}</a>
+      <p class="list-unstyled mt-3 mb-4">{description}</p>
+      <a class="tab-link w-100 btn btn-lg btn-primary" href={btnhref}>{btntext}</a>
     </div>
-    <div className="card-footer text-body-secondary" set:html={footertext}></div>
+    <div class="card-footer text-body-secondary" set:html={footertext}></div>
   </div>
