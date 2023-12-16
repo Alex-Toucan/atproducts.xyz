@@ -11,12 +11,12 @@ const { title, id, parent, additionalClasses, bodyVisible } = Astro.props;
   <div id={id} class={`accordion-collapse collapse ${bodyVisible !== 'none' ? 'show' : ''}`} data-bs-parent={`#${parent}`}>
     {bodyVisible !== 'none' ? (
       /* If bodyVisible is not 'none' */
-      `<div class="accordion-body">
+      <div class="accordion-body">
         <slot name="accordion-item-content" />
-      </div>`
+      </div>
     ) : (
       /* If bodyVisible is 'none' */
-      `<slot name="accordion-item-content" />`
+      <slot name="accordion-item-content" />
     )}
   </div>
 </div>
