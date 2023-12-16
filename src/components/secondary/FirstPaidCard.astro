@@ -2,17 +2,17 @@
 const { title, price, secondaryprice, description, btnhref, btntext, footertext } = Astro.props;
 ---
 
-<div class="card h-md-100 rounded-3 shadow-sm">
-  <div class="card-header py-3">
-    <h3 class="my-0 fw-normal">{title}</h3>
+<div className="card h-md-100 rounded-3 shadow-sm">
+  <div className="card-header py-3">
+    <h3 className="my-0 fw-normal">{title}</h3>
   </div>
-  <div class="card-body">
-    <h1 class="card-title pricing-card-title" innerHTML={footertext}>{price}</h1>
+  <div className="card-body">
+    <h1 className="card-title pricing-card-title" dangerouslySetInnerHTML={{ __html: price }} />
     {secondaryprice && (
-        <p class="mt-2 text-body-secondary fw-light fs-5" innerHTML={footertext}>{secondaryprice}</p>
+      <p className="mt-2 text-body-secondary fw-light fs-5" dangerouslySetInnerHTML={{ __html: secondaryprice }} />
     )}
-    <p class="list-unstyled mt-3 mb-4">{description}</p>
-    <a type="button" class="tab-link w-100 btn btn-lg btn-primary" href={btnhref}>{btntext}</a>
+    <p className="list-unstyled mt-3 mb-4">{description}</p>
+    <a className="tab-link w-100 btn btn-lg btn-primary" href={btnhref}>{btntext}</a>
   </div>
-  <div class="card-footer text-body-secondary" innerHTML={footertext}>{footertext}</div>
+  <div className="card-footer text-body-secondary" dangerouslySetInnerHTML={{ __html: footertext }} />
 </div>
