@@ -29,7 +29,7 @@ import BackToTop from '../../components/BackToTop.astro';
       <div id="page">
 <Navbar />
     <main id="form" class="container">
-    <h1>Contact Form</h1>
+    <h1 class="title">Contact Form</h1>
     <p>If you don't wanna email us on your email client, use this instead. We'll reach out to your email provided.</p>
 <form
   name="contact"
@@ -38,15 +38,15 @@ import BackToTop from '../../components/BackToTop.astro';
   data-netlify="true"
 class>
   <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <label for="exampleFormControlInput1" class="form-label fw-bold">Email address</label>
   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 </div>
 <div class="mb-3">
-  <label for="nameInput" class="form-label">Name</label>
+  <label for="nameInput" class="form-label fw-bold">Name</label>
   <input name="name" class="form-control" id="nameInput" placeholder="John Doe">
 </div>
 <div class="mb-3">
-  <label for="textareaInput" class="form-label">Example textarea</label>
+  <label for="textareaInput" class="form-label fw-bold">Information to Send</label>
   <textarea class="form-control" id="textareaInput" rows="3"></textarea>
 </div>
 </form>
