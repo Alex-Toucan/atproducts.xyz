@@ -345,7 +345,7 @@ scrollcontent={[
   { name: "Strings", href: "#str-3" },
   { name: "Numbers", href: "#num-3" },
 ]}
-><div slot="scrollspy-content">
+><Fragment slot="scrollspy-content">
 <div id="com-3">
 <h4>Comments</h4>
 <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br><code>
@@ -401,7 +401,7 @@ print(type(y))</code></p>
 <p>Float is a number, positive or negative, containing one or more decimals.</p>
 <p>Both strings and numbers are built-in data types.</p>
 </div>
-</div></Scrollspy>
+</Fragment></Scrollspy>
 </Fragment></Modal>
 <Modal title="C++ Basics" id="cpp"><Fragment slot="modal-content">
 <Scrollspy id="cpp-basics-list"
@@ -410,7 +410,7 @@ scrollcontent={[
   { name: "Integers", href: "#integers-4" },
   { name: "Print", href: "#print-4" },
 ]}
-><div slot="scrollspy-content">
+><Fragment slot="scrollspy-content">
  <div id="strings-4">
 <h4>Strings</h4>
 <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
@@ -456,7 +456,7 @@ int main()
 &rbrace;
   </code></p>
 </div>
-</div></Scrollspy>
+</Fragment></Scrollspy>
 </Fragment></Modal>
 <Modal title="Haskell Basics" id="hs"><Fragment slot="modal-content">
 <Scrollspy id="hs-basics-list"
@@ -467,7 +467,7 @@ scrollcontent={[
   { name: "Functional Principles", href: "#fpr-5" },
   { name: "Comments", href: "#com-5" },
 ]}
-><div slot="scrollspy-content">
+><Fragment slot="scrollspy-content">
 <div id="data-5">
 <h4>Data Types</h4>
 <p>In Haskell, types are how you describe the data your program will work with. Types can be simple, like:</p>
@@ -541,7 +541,7 @@ commenHere = True
 </code>
 </div>
 
-        </div></Scrollspy>
+        </Fragment></Scrollspy>
 </Fragment></Modal>
 <Modal title="HTML Basics" id="html"><Fragment slot="modal-content">
 <Scrollspy id="html-basics-list"
@@ -552,7 +552,7 @@ scrollcontent={[
   { name: "HTML Links", href: "#links-6" },
   { name: "HTML Images", href: "#img-6" },
 ]}
-><div slot="scrollspy-content">
+><Fragment slot="scrollspy-content">
 <div id="example-6">
 <h4>Example Document</h4>
 <code>
@@ -589,7 +589,7 @@ scrollcontent={[
 <p>HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width, and height are provided as attributes:<br>
 <code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code></p>
 </div>
-  </div></Scrollspy>
+  </Fragment></Scrollspy>
   </Fragment></Modal>
 <Modal title="CSS Basics" id="css"><Fragment slot="modal-content">
   <div class="my-3">
@@ -606,7 +606,7 @@ scrollcontent={[
   { name: "Comments", href: "#com-7" },
   { name: "Extra: Centering Images", href: "#eci-7" },
 ]}
-><div slot="scrollspy-content">
+><Fragment slot="scrollspy-content">
 <div id="example-7">
 <h4>Example Document</h4>
 <code>
@@ -690,7 +690,7 @@ a multi-line<br>
 &nbsp;&nbsp;display&colon; block;
 &rbrace;</code>
   </div>
-</div></Scrollspy>
+</Fragment></Scrollspy>
  </Fragment></Modal>
 <Modal title="JavaScript Basics" id="js"><Fragment slot="modal-content">
 <Scrollspy id="js-basics-list"
@@ -701,7 +701,7 @@ scrollcontent={[
   { name: "Variables", href: "#var-8" },
   { name: "Data Types", href: "data-8" },
 ]}
-><div slot="scrollspy-content">
+><Fragment slot="scrollspy-content">
  <div id="html-8">
 <h4>Including JavaScript in an HTML Page</h4>
 <p><code>&lt;script type="text/javascript"&gt; <br>
@@ -750,7 +750,7 @@ var person = &lbrace;
   </pre>
 </p>
           </div>
-</div></Scrollspy>
+</Fragment></Scrollspy>
 </Fragment></Modal>
 <Modal title="SQL Basics" id="sql"><Fragment slot="modal-content">
 <Scrollspy id="sql-basics-list"
@@ -759,7 +759,7 @@ scrollcontent={[
   { name: "Modifying Data", href: "#mod-9" },
   { name: "Table Management", href: "#table-9" },
 ]}
-><div slot="scrollspy-content">
+><Fragment slot="scrollspy-content">
 <div id="query-9">
 <h4>Querying Data from a Table</h4>
 <p>Query Data in Columns c1, c2 from a Table</p>
@@ -870,7 +870,7 @@ CREATE TABLE t (<br>
 <p>Remove all Data in a Table</p>
 <code>TRUNCATE TABLE t;</code>
 </div>
-</div></Scrollspy>
+</Fragment></Scrollspy>
 </Fragment></Modal>
 <Modal title="JSON Basics" id="json"><Fragment slot="modal-content">
 <Scrollspy id="json-basics-list"
@@ -878,7 +878,7 @@ scrollcontent={[
   { name: "Example Documents", href: "#example-10" },
   { name: "Importing JSON", href: "#import-10" },
 ]}
-><div slot="scrollspy-content">
+><Fragment slot="scrollspy-content">
 <div id="example-10">
 <h4>Example Document</h4>
 <code>
@@ -915,7 +915,7 @@ scrollcontent={[
 </tbody>
 </table>
 </div>
-</div></Scrollspy>
+</Fragment></Scrollspy>
 </Fragment></Modal>
 </main>
 <Footer />
