@@ -47,7 +47,7 @@ icons={[
   <div id="resources">
             <h2> Resources </h2>
         <p> What do you want to know about today? </p>
-<Modal title="Resources" id="resources-alt"><div slot="content">
+<Modal title="Resources" id="resources-alt"><Fragment slot="modal-content">
 <div class="my-2 text-center">
           <div class="d-flex flex-wrap row-cols-3 rounded-2 overflow-hidden text-white">
             <b class="col-12 py-2 bg-secondary">Contributors</b>
@@ -61,8 +61,8 @@ icons={[
         </div>
         <p class="my-3">Please note that if a link is a <a href="#" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German.</p>
        <Accordion parent="resourcesAccordion">
-  <div slot="accordion-content">
-         <AccordionItem title="Learning Resources" id="learningresources" parent="resourcesAccordion"><div slot="accordion-item-content">
+  <Fragment slot="accordion-content">
+         <AccordionItem title="Learning Resources" id="learningresources" parent="resourcesAccordion"><Fragment slot="accordion-item-content">
                 <h4>Learning Resources</h4>
                 <p>
                   <a href="https://w3schools.com/">W3Schools</a>
@@ -159,8 +159,8 @@ icons={[
                 <p>
                   There are outdated files on the source, if you need to, use the updated files of the <a href="/media/files/csharpsaltpepper.1.cs">first code block</a> and the <a href="/media/files/csharpsaltpepper.2.cs">second code block</a>.
                 </p>
-</div></AccordionItem>
-<AccordionItem title="Other Resources" id="otherresources" parent="resourcesAccordion"><div slot="accordion-item-content">
+</Fragment></AccordionItem>
+<AccordionItem title="Other Resources" id="otherresources" parent="resourcesAccordion"><Fragment slot="accordion-item-content">
       <h4>Other Resources</h4>
       <p>
         <a href="https://www.datensen.com/blog/">Data Management Blog</a>
@@ -215,8 +215,8 @@ icons={[
 <a href="https://drive.google.com/drive/folders/18-9X13abayITCKmToARWDljynvMzBXob">Fake Nitro Links</a></p>
 
 <p><a href="https://www.youtube.com/watch?v=MDSscZjzXb4">Much more in this video</a></p>
-</div></AccordionItem>
-<AccordionItem title="YouTube Creators" id="youtubecreators" parent="resourcesAccordion"><div slot="accordion-item-content">
+</Fragment></AccordionItem>
+<AccordionItem title="YouTube Creators" id="youtubecreators" parent="resourcesAccordion"><Fragment slot="accordion-item-content">
         <h4>YouTube Creators</h4>
 <h5>C#</h5>
 <p>
@@ -258,8 +258,8 @@ icons={[
         <p>
 <a href="https://www.devas.life/effective-neovim-setup-for-web-development-towards-2024/">Takuya Matsuyama</a>
 </p>
- </div></AccordionItem>
-<AccordionItem title="Hacking Resources" id="hackingresources" parent="resourcesAccordion"><div slot="accordion-item-content">
+ </Fragment></AccordionItem>
+<AccordionItem title="Hacking Resources" id="hackingresources" parent="resourcesAccordion"><Fragment slot="accordion-item-content">
         <h4>Hacking Resources</h4>
                   <h5>Network Attack</h5>
         <p>
@@ -271,16 +271,16 @@ icons={[
         <a href="https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi">Old-Fashioned</a>
           <a href="https://www.youtube.com/playlist?list=PLDQaRcbiSnqF5U8ffMgZzS7fq1rHUI3Q8">Modern</a>
         </p>
-  </div></AccordionItem>
-<AccordionItem title="Downloadable Resources" id="downloadableresources" parent="resourcesAccordion"><div slot="accordion-item-content">
+  </Fragment></AccordionItem>
+<AccordionItem title="Downloadable Resources" id="downloadableresources" parent="resourcesAccordion"><Fragment slot="accordion-item-content">
         <h4>Downloadable Resources</h4>
          <div class="my-1">
         <h4>1,000 I.T books!</h4>
         <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1F7D5c30nP-y_Q7SFqoRTRvJ7tl0UcY3q">View</a>
-    </div></AccordionItem>
+    </Fragment></AccordionItem>
 </div><Accordion>
-</div></Modal>
-<Modal title="Viruses &amp; Malware" id="files"><div slot="content">
+</Fragment></Modal>
+<Modal title="Viruses &amp; Malware" id="files"><Fragment slot="modal-content">
     <p> <a href="/media/files/Meme_Coin.ZIP" download>Meme_Coin (ZIP)</a> <a href="/media/files/Meme_coin_miner.exe" download>Meme_Coin (EXE)</a> 
         <a href="/media/files/My_App.zip" download>My_App (ZIP)</a> <a href="/media/files/Myballzhert.zip" download>Myballzhert (ZIP)</a> by Dream3456789 (Password: "mysubsarethebest")</p>
     <p> <a href="/media/files/KILL_SWITCH.bat" download>USB &amp; Internet Disabler (BAT)</a> <a href="/media/files/UN_KILL.bat" download>Unkill Tool for Disabler (BAT)</a> by CodingLive </p> 
@@ -290,8 +290,8 @@ icons={[
    <p> <a href="/media/files/BFF_DoS.exe" download>BFF_DoS (EXE)</a> 
        <a href="/media/files/Code.txt" download>Code (TXT)</a> <a href="/media/files/baby.bat" download>Baby (BAT)</a>
      <a href="/media/files/BabyCodes.txt" download>BabyCodes (TXT)</a> by Corrupt Assassin </p>
-</div></Modal>
-<Modal title="Code Samples" id="code"><div slot="content">
+</Fragment></Modal>
+<Modal title="Code Samples" id="code"><Fragment slot="modal-content">
 <p> <a href="https://github.com/FordArthur/insitucs">Insitux Compiler</a> <a href="https://github.com/FordArthur/chess-ix">Chess I (Insitux)</a> <a href="/media/files/chess.ix" download>Chess II (Insitux)</a> <a href="https://github.com/FordArthur/ballistics-ix">Ballstics I (Insitux)</a> <a href="https://github.com/FordArthur/Insitux-math-libs">Math Libs for Insitux</a> <a href="https://github.com/FordArthur/svelte-app">svelte-app</a> <a href="/media/files/RosettaCode.ix" download>Rosetta Code (Insitux)</a> <a href="/media/files/polinomic-solver.ix" download>Polinomic Solver (Insitux)</a> <a href="/media/files/ambiguous-operator.ix" download>Ambiguous Operator (Insitux)</a> <a href="/media/files/rockpaperscissors.ix" download>Rock Paper Scissors (Insitux)</a> <a href="/media/files/rockalfordscissors.py" download>Rock Paper Scissors (Python)</a> by Al-Ford Arthur</p>    <p> <a href="/media/files/rockpaperscissors.py" download>Rock Paper Scissors (Python)</a> by Sezieru</p>
                             <p> <a href="https://github.com/Savageboitim13/UMS-WF/">UMS-WF</a> <a href="https://github.com/Savageboitim13/Principles-CSharp">Principles for C# & Java</a> by venenjean</p>    
      <p><a href="https://github.com/phunanon/ip3">IP3</a> by Patrick</p>
@@ -324,8 +324,8 @@ icons={[
    <p> <a href="https://github.com/ProtDos/VanishGuide">VanishGuide</a> 
       <a class="link-danger" href="https://github.com/ProtDos/discord-phishing-links">Discord Phishing Links</a> 
          <a class="link-danger" href="https://github.com/ProtDos/IP-Address-List">IP Address List</a> by CodingLive</p>
-</div></Modal>
-<Modal title="Apps &amp; Software" id="app"><div slot="content">
+</Fragment></Modal>
+<Modal title="Apps &amp; Software" id="app"><Fragment slot="modal-content">
 <p> <a href="/media/files/sms_bomb.apk" download>SMS Bomb (APK)</a> by CodingLive</p>
       <h4>Encochat by CodingLive</h4>
       <p> <a href="https://github.com/ProtDos/encochat">Encochat v1</a> </p>
@@ -336,8 +336,8 @@ icons={[
       <h4>vpnchecker by CodingLive</h4>
          <p> <a href="https://github.com/ProtDos/vpnchecker">vpnchecker</a> (<a href="https://github.com/ProtDos/vpnchecker/archive/refs/heads/main.zip">HTML | ZIP</a>)
       <p> <a class="link-danger" href="https://protdos.github.io/vpnchecker">vpnchecker Website</a></p>
-</div></Modal>
-<Modal title="Python Basics" id="py"><div slot="content">
+</Fragment></Modal>
+<Modal title="Python Basics" id="py"><Fragment slot="modal-content">
 <Scrollspy id="py-basics-list"
 scrollcontent={[
   { name: "Comments", href: "#com-3" },
@@ -402,8 +402,8 @@ print(type(y))</code></p>
 <p>Both strings and numbers are built-in data types.</p>
 </div>
 </div></Scrollspy>
-</div></Modal>
-<Modal title="C++ Basics" id="cpp"><div slot="content">
+</Fragment></Modal>
+<Modal title="C++ Basics" id="cpp"><Fragment slot="modal-content">
 <Scrollspy id="cpp-basics-list"
 scrollcontent={[
   { name: "Strings", href: "#str-4" },
@@ -457,8 +457,8 @@ int main()
   </code></p>
 </div>
 </div></Scrollspy>
-</div></Modal>
-<Modal title="Haskell Basics" id="hs"><div slot="content">
+</Fragment></Modal>
+<Modal title="Haskell Basics" id="hs"><Fragment slot="modal-content">
 <Scrollspy id="hs-basics-list"
 scrollcontent={[
   { name: "Data Types", href: "#data-5" },
@@ -542,8 +542,8 @@ commenHere = True
 </div>
 
         </div></Scrollspy>
-</div></Modal>
-<Modal title="HTML Basics" id="html"><div slot="content">
+</Fragment></Modal>
+<Modal title="HTML Basics" id="html"><Fragment slot="modal-content">
 <Scrollspy id="html-basics-list"
 scrollcontent={[
   { name: "Example Document", href: "#example-6" },
@@ -590,8 +590,8 @@ scrollcontent={[
 <code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code></p>
 </div>
   </div></Scrollspy>
-  </div></Modal>
-<Modal title="CSS Basics" id="css"><div slot="content">
+  </Fragment></Modal>
+<Modal title="CSS Basics" id="css"><Fragment slot="modal-content">
   <div class="my-3">
 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>
     </div>
@@ -691,8 +691,8 @@ a multi-line<br>
 &rbrace;</code>
   </div>
 </div></Scrollspy>
- </div></Modal>
-<Modal title="JavaScript Basics" id="js"><div slot="content">
+ </Fragment></Modal>
+<Modal title="JavaScript Basics" id="js"><Fragment slot="modal-content">
 <Scrollspy id="js-basics-list"
 scrollcontent={[
   { name: "Including JavaScript in an HTML Page", href: "#html-8" },
@@ -751,8 +751,8 @@ var person = &lbrace;
 </p>
           </div>
 </div></Scrollspy>
-</div></Modal>
-<Modal title="SQL Basics" id="sql"><div slot="content">
+</Fragment></Modal>
+<Modal title="SQL Basics" id="sql"><Fragment slot="modal-content">
 <Scrollspy id="sql-basics-list"
 scrollcontent={[
   { name: "Querying Data from a Tablem", href: "#query-9" },
@@ -871,8 +871,8 @@ CREATE TABLE t (<br>
 <code>TRUNCATE TABLE t;</code>
 </div>
 </div></Scrollspy>
-</div></Modal>
-<Modal title="JSON Basics" id="json"><div slot="content">
+</Fragment></Modal>
+<Modal title="JSON Basics" id="json"><Fragment slot="modal-content">
 <Scrollspy id="json-basics-list"
 scrollcontent={[
   { name: "Example Documents", href: "#example-10" },
@@ -916,7 +916,7 @@ scrollcontent={[
 </table>
 </div>
 </div></Scrollspy>
-</div></Modal>
+</Fragment></Modal>
 </main>
 <Footer />
               <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="display: none;"><i class="bi bi-caret-up-fill"></i></a>
