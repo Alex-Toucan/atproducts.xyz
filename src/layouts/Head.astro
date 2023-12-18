@@ -26,7 +26,7 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
       {icon ?
         <Fragment>
           <link rel="icon" href={`/media/images/${icon}`}>
-          <meta property="og:image" content={icon}>
+          <meta property="og:image" content={`/media/images/${icon}`}>
         </Fragment>
         :
         <Fragment>
