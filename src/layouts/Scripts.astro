@@ -1,18 +1,18 @@
 ---
 const { modal, accordion } = Astro.props;
 ---
-<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
-<script src="/static/scroll.js"></script>
-<script src="/static/purecookie.js"></script>
-<script src="/static/enabler.js"></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
+<script is:inline src="/static/scroll.js"></script>
+<script is:inline src="/static/purecookie.js"></script>
+<script is:inline src="/static/enabler.js"></script>
 {modal && (
-  <script src="/static/modal-id.js"></script>
-  <script src="/static/accordion-id.js"></script>
+  <script is:inline src="/static/modal-id.js"></script>
+  <script is:inline src="/static/accordion-id.js"></script>
 )} 
 {accordion && (
-  <script src="/static/accordion-id.js"></script>
+  <script is:inline src="/static/accordion-id.js"></script>
 )}    
 </body>
 </html>
