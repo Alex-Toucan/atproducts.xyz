@@ -1,4 +1,6 @@
 ---
+import Head from '../layouts/Head.astro';
+import Scripts from '../layouts/Scripts.astro';
 import Hero   from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -7,27 +9,7 @@ import Scrollspy from '../components/Scrollspy.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<!DOCTYPE html>
-<html class="fixedtopnavimage" lang="en">
-  <head>
-    <title>Flash Documentation</title>
-    <link rel="stylesheet" href="/static/cookie.css">
-    <link rel="stylesheet" href="/static/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="icon" type="image/png" href="/media/images/Adobe_Flash_Player_32.svg.png">
-    <link rel="manifest" href="/media/favicon/site.webmanifest">
-            <link rel="preload" as="style" href="/static/bootstrap.css">
-    <link rel="preload" as="image" href="/media/images/hero-flash.webp">
-    <meta charset="UTF-8">
-    <meta name="title" content="Flash Documentation">
-    <meta name="description" content="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!">
-    <meta name="author" content="Alex Toucan">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="/media/images/Adobe_Flash_Player_32.svg.png">
-    <script is:inline src="/static/darkmode.js"></script>
-  </head>
-  <body class="fixedtopnavimage">
-    <div id="page">
+<Head title="Flash Documentation" heroid="flash" icon="Adobe_Flash_Player_32.svg.png" description="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!" keywords="Flash Documentation, AT Products" author="Alex Toucan" />
     <Navbar />
         <Hero id="flash" description="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!" secondaryHref="/backup/flash" secondaryText="View the all laid out format" imageSrc="/media/images/flashdoc.webp" imageWidth="50%" minImageWidth="250px" imageClasses="bg-light p-1 bg-opacity-50 rounded-2"/>
        <main id="flash" class="text-center container">
@@ -488,16 +470,6 @@ If you wanna support high quality games, you can so on <a href="https://store.st
       </div>
        </main>
 <Footer />
-      <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
+<BackToTop />
 </div>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-     <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
-        <script is:inline src="/static/modal-id.js"></script>
-    <script is:inline src="/static/accordion-id.js"></script>
-    <script is:inline src="/static/scroll.js"></script>
-    <script is:inline src="/static/purecookie.js"></script>
-    <script is:inline src="/static/darkmode.js"></script>
-    <script is:inline src="/static/enabler.js"></script>
-    </body>
-    </html>
+<Scripts />

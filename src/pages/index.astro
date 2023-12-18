@@ -1,5 +1,6 @@
 ---
 import Head from '../layouts/Head.astro';
+import Scripts from '../layouts/Scripts.astro';
 import Hero   from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -9,8 +10,8 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 ---
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-  { bulletinImage: "REVIEWYEAR1.webp" },
-  { bulletinImage: "REVIEWYEAR2.webp" },
+  { bulletinImage: "CHRISTMAS.webp" },
+  { bulletinImage: "REVIEWYEAR.webp" },
   { bulletinImage: "1ER-21701-1-011024.webp" },
   { bulletinImage: "1ER-21701-2-011024.webp" },
   { bulletinImage: "1ER-21701-3-011024.webp" },
@@ -244,14 +245,6 @@ bulletin={[
        </ul>
 </div> </main>
 <Footer />
-               <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
+<BackToTop />
 </div>
-        <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
-    <script is:inline src="/static/scroll.js"></script>
-    <script is:inline src="/static/purecookie.js"></script>
-    <script is:inline src="/static/enabler.js"></script>
-      <script is:inline src="/static/index.js"></script>
-    </body>
-</html>
+<Scripts />

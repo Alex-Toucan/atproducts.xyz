@@ -10,41 +10,43 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
       <link rel="preload" as="style" href="/static/bootstrap.css">
       {heroid ?
-        <Fragment>
+        <>
         <link rel="preload" as="image" href={`/media/images/hero=${heroid}.webp`}>
-        </Fragment>
+        </>
         :
-        <Fragment>
+        <>
         <link rel="preload" as="image" href={`/media/images/hero.webp`}>
-        </Fragment>
+        </>
       }
-      {bulletin && bulletin.map(({ bulletinImage }, index) => (
-        bulletinImage ? (
-            <link key={index} rel="preload" as="image" href={`/media/slideshow/${bulletinImage}`} />
-        ) : null
-      ))}
-      <!-- Using a traditional if/else for icon handling -->
-<Fragment>
-  {(() => {
-    if (icon) {
-      return (
-        <Fragment>
-          <link rel="icon" href={`/media/images/${icon}`} />
-          <meta property="og:image" content={`/media/images/${icon}`} />
-        </Fragment>
-      );
-    } else {
-      return (
-        <Fragment>
-          <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png" />
-          <!-- Other default icon links -->
-          <meta property="og:image" content="/media/favicon/iconembed.png" />
-          <meta name="msapplication-TileColor" content="#da532c" />
-        </Fragment>
-      );
-    }
-  })()}
-</Fragment>
+      {bulletin && (
+        <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
+          {bulletin && bulletin.map(({ bulletinImage }, index) => (
+          <link rel="preload" as="image" href={`/media/slideshow/${bulletinImage}`}>
+          ))}
+        </div>
+      )}
+      <link rel="preload" as="image" href="/media/slideshow/NEWLOGO.webp">
+      <link rel="preload" as="image" href="/media/slideshow/DELTASOFT.webp">
+      <link rel="preload" as="image" href="/media/slideshow/1ER-217-1-112923.webp">
+      <link rel="preload" as="image" href="/media/slideshow/1ER-217-2-112923.webp">
+      <link rel="preload" as="image" href="/media/slideshow/1ER-217-3-112923.webp">
+      {icon ?
+        <>
+          <link rel="icon" href="/media/images/{icon}">
+          <meta property="og:image" content={icon}>
+        </>
+        :
+        <>
+          <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
+          <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
+          <link rel="icon" type="image/png" href="/media/favicon/android-chrome-192x192.png">
+          <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+          <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+          <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+          <meta property="og:image" content="/media/favicon/iconembed.png">
+          <meta name="msapplication-TileColor" content="#da532c">
+        </>
+      }    
       <link rel="manifest" href="/media/favicon/site.webmanifest">
       <meta charset="UTF-8">
       <meta name="title" content={title}>
@@ -56,7 +58,7 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
         <meta name="author" content={author}>
       )}
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <Fragment set:html={additionalContent} />
+      {additionalContent}
       <script src="/static/darkmode.js" is:inline></script>
   </head>
   <body class="fixedtopnavimage">

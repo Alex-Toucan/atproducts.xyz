@@ -2,7 +2,9 @@
 const {
   id,
   title,
+  titleClasses,
   description,
+  errorButton,
   primaryHref,
   primaryText,
   secondaryHref,
@@ -26,12 +28,15 @@ const {
             <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} />
           )}
           {title && (
-            <h1 class="display-3 fw-bold mt-mmd-2 d-block d-md-inline align-middle">{title}</h1>
+            <h1 class={`display-3 fw-bold mt-mmd-2 d-block d-md-inline align-middle ${titleClasses}`}>{title}</h1>
           )}
         </div>
         <p class="fs-4 m-3 text-body-secondary">{description}</p>
         <div class="mx-auto justify-content-between container" id="links">
           <div class="d-md-flex d-grid gap-2">
+            {errorButton && (
+              <Fragment set:html={errorButton} />
+            )}
             {primaryHref && primaryText && (
             <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
             )}

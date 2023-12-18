@@ -1,0 +1,25 @@
+---
+import Head from '../layouts/Head.astro';
+import Scripts from '../layouts/Scripts.astro';
+import Hero     from '../components/Hero.astro';
+import Navbar    from '../components/Navbar.astro';
+import Footer    from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+
+<Head title="Error 404" heroid="web" description="The content the publisher attempted to share, doesn't exist. This is a 404 page after all..." author="Alex Toucan" />
+<Navbar />
+     <main id="404" class="text-center">
+         <Hero
+         title="404"
+         titleClasses="lh-1 fs-16"
+         description="Oops, seems like you hit the wrong page, as the HTML error 404 means that the file you attempted to reach was not found/invalid. Either, check the URL bar to see if there's a spelling mistake or redirect to the previous page."
+         errorButton="<input class='btn btn-primary w-100 col-md' type='button' value='Return' id='404btn' aria-label='Return'>"
+         secondaryHref="/"
+         secondaryText="Index Page"
+       />
+</main>
+<Footer hr="none"/>
+<BackToTop />
+</div>
+<Scripts />
