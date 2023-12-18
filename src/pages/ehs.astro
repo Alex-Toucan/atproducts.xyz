@@ -1,4 +1,5 @@
 ---
+import Head from '../layouts/Head.astro';
 import Hero   from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -7,33 +8,7 @@ import BackToTop from '../components/BackToTop.astro';
 ---
 
 <!DOCTYPE html>
-<html class="fixedtopnavimage" lang="en">
-   <head>
-    <title>Ethical Hacking Society</title>
-    <link rel="stylesheet" href="/static/cookie.css">
-    <link rel="stylesheet" href="/static/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
-          <link rel="preload" as="style" href="/static/bootstrap.css">
-    <link rel="preload" as="image" href="/media/images/hero-ehs.webp">
-    <link rel="manifest" href="/media/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta charset="UTF-8">
-    <meta name="title" content="Ethical Hacking Society">
-    <meta name="description" content="The Ethical Hacking Society is about ethical hacking as a whole.">
-    <meta name="keywords" content="Scripts, viruses, coding,">
-    <meta name="author" content="CobraCommander">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta property="og:image" content="/media/favicon/iconembed.png">
-          <meta name="msapplication-TileColor" content="#da532c">
-       <script is:inline src="/static/darkmode.js"></script>
-  </head>
-  <body class="fixedtopnavimage">
-      <div id="page">
+<Head title="Ethical Hacking Society" heroid="ehs" description="The Ethical Hacking Society is about ethical hacking as a whole." keyword="scripts, viruses, coding," author="CobraCommander" />
 <Navbar />
         <Hero id="ehs" title="Ethical Hacking Society" description="The Ethical Hacking Society is about ethical hacking as a whole." primaryHref="https://discord.gg/yCnteHexEs" primaryText="Discord Server Invite" secondaryHref="/backup/ehs" secondaryText="View the all laid out format"
 icons={[
@@ -138,7 +113,7 @@ icons={[
    <p> <b> Social Engineering</b> - &quot;Spearhead phishing is effective but try something like whaling or watering hole&quot;</p>
 </div></Modal>
         </div> </main>
-<Footer />  
+<Footer author="CobraCommander & Alex Toucan"/>  
      <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="bi bi-caret-up-fill"></i></a>
 </div>
     <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

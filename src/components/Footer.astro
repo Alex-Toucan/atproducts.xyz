@@ -1,5 +1,5 @@
 ---
-const { hr } = Astro.props;
+const { author, hr } = Astro.props;
 ---
 <footer>
   {hr !== 'none' && <hr>}
@@ -54,7 +54,15 @@ const { hr } = Astro.props;
       <div class="ps-3 pt-2 col-md-6 collapse" id="footerinfo">
         <div class="card card-body text-start">
           <b>Version:</b> <script is:inline src="/static/version.js"></script><br>
-          <b>Author:</b> Alex Toucan
+          {author ?
+            <>
+              <b>Author:</b> {author}
+            </>
+            :
+            <>
+             <b>Author:</b> Alex Toucan
+            </>
+          }    
           <br><br>
           <p>® <script is:inline src="/static/year.js"></script> AT Products LLC</p>
          </div>
