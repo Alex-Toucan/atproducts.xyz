@@ -10,13 +10,13 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
       <link rel="preload" as="style" href="/static/bootstrap.css">
       {heroid ?
-        <>
+        <Fragment>
         <link rel="preload" as="image" href={`/media/images/hero=${heroid}.webp`}>
-        </>
+        </Fragment>
         :
-        <>
+        <Fragment>
         <link rel="preload" as="image" href={`/media/images/hero.webp`}>
-        </>
+        </Fragment>
       }
       <link rel="preload" as="image" href={`/media/images/hero=${heroid}.webp`}>
       {bulletin && (
@@ -32,12 +32,12 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
       <link rel="preload" as="image" href="/media/slideshow/1ER-217-2-112923.webp">
       <link rel="preload" as="image" href="/media/slideshow/1ER-217-3-112923.webp">
       {icon ?
-        <>
+        <Fragment>
           <link rel="icon" href="/media/images/{icon}">
           <meta property="og:image" content={icon}>
-        </>
+        </Fragment>
         :
-        <>
+        <Fragment>
           <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
           <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
           <link rel="icon" type="image/png" href="/media/favicon/android-chrome-192x192.png">
@@ -46,7 +46,7 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
           <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
           <meta property="og:image" content="/media/favicon/iconembed.png">
           <meta name="msapplication-TileColor" content="#da532c">
-        </>
+        </Fragment>
       }    
       <link rel="manifest" href="/media/favicon/site.webmanifest">
       <meta charset="UTF-8">
@@ -59,7 +59,7 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
         <meta name="author" content={author}>
       )}
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      {additionalContent}
+      <Fragment set:html={additionalContent} />
       <script src="/static/darkmode.js" is:inline></script>
   </head>
   <body class="fixedtopnavimage">
