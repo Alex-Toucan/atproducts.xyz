@@ -17889,7 +17889,7 @@ html.fixedtopnavimage {
 }
 	
 	.story-top-body {
-margin-top: 103px;
+margin-top: 25px;
 }
 }
 
@@ -17925,10 +17925,10 @@ margin-top: 72px;
 }
 
 .story-top {
-	margin-top: 103px;
+	margin-top: 25px;
 }
 .story-top-scroll {
-        scroll-margin-top: 103px;
+        scroll-margin-top: 25px;
 }
 
 .border-fix {
@@ -17938,9 +17938,6 @@ margin-top: 72px;
 @media (max-width: 900.98px) {
 	.text-disappear {
 		display: none !important;
-	}
-	.story-top {
-		margin-top: 72px;
 	}
 	.story-top-scroll {
 		scroll-margin-top: 72px;
