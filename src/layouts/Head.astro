@@ -52,7 +52,7 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
         <meta name="author" content={author}>
       )}
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      {additionalContent}
+      <Fragment set:html={additionalContent}>
       <script src="/static/darkmode.js" is:inline></script>
   </head>
   <body class="fixedtopnavimage">
