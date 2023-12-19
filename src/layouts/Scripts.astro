@@ -1,5 +1,5 @@
 ---
-const { modal, accordion } = Astro.props;
+const { 404, modal, accordion } = Astro.props;
 ---
 <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script is:inline src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
@@ -13,6 +13,9 @@ const { modal, accordion } = Astro.props;
 )} 
 {accordion && (
   <script is:inline src="/static/accordion-id.js"></script>
+)}    
+{404 && (
+  <script is:inline src="/static/404.js"></script>
 )}    
 </body>
 </html>
