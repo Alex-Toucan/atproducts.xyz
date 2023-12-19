@@ -1,0 +1,35 @@
+---
+const { id, title, breadcrumbcontent, scrollcontent } = Astro.props;
+---
+<header>
+<nav class="pb-2 navbar navbar-expand-story bg-dark navbar-dark pt-0 border-fix second-navbar"><div class="container-fluid">
+      <div class="navbar-collapse collapse" id="collapsibleNavbar">
+        <hr class="permhr m-story-2 m-story-0">
+  <ol class="navbar-nav breadcrumb m-0 pb-story-2">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/noodle">Noodle Hackerspace</a>
+    <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show">
+  </a>
+  <ul class="dropdown-menu dropdown-story" data-bs-popper="static">
+        {breadcrumbcontent && breadcrumbcontent.map(({ name, href }, index) => (
+                <li><a class="dropdown-item" href={href}>{name}</a></li>
+            ))}
+  </ul></div>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">CCTV Interception</li>
+  </ol>
+</div>
+      </div>
+</nav>
+      </header>
+    <main id={id}>
+        <div class="bd-toc col-md-2 p-1 story-top">
+    <div id={`${id}-list`} class="list-group">
+            {scrollcontent && scrollcontent.map(({ name, href, additionalClasses }, index) => (
+            <a class={`list-group-item list-group-item-action ${additionalClasses}`} href={href}>{name}</a>
+            ))}
+        </div>
+</div>
+        <div class="col-md-10 p-1 pt-mmd-2 px-mmd-2 story-top-scroll story-top-body story-scroll" tabindex="0" data-bs-smooth-scroll="true" data-bs-target="#cctvlist" data-bs-spy="scroll">
+<slot name="scrollspy-content" class="story-top-scroll"/ >
+</div>
