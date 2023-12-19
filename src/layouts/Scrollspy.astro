@@ -1,6 +1,7 @@
 ---
 const { id, title, breadcrumbcontent, scrollcontent } = Astro.props;
 ---
+
 <header>
 <nav class="pb-2 navbar navbar-expand-story bg-dark navbar-dark pt-0 border-fix second-navbar"><div class="container-fluid">
       <div class="navbar-collapse collapse" id="collapsibleNavbar">
@@ -11,9 +12,12 @@ const { id, title, breadcrumbcontent, scrollcontent } = Astro.props;
     <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show">
   </a>
   <ul class="dropdown-menu dropdown-story" data-bs-popper="static">
-        {breadcrumbcontent && breadcrumbcontent.map(({ name, href }, index) => (
-                <li><a class="dropdown-item" href={href}>{name}</a></li>
-            ))}
+        {breadcrumbcontent && breadcrumbcontent.map(({ name, href, name2, href,2 }, index) => (
+                <li><a class="dropdown-item" href={href}>{name}</a>
+        {name2 && href2 && (<a class="dropdown-item" href={href2}>{name2}</a>)}
+       </li>
+            
+))}
   </ul></div>
     </li>
     <li class="breadcrumb-item active" aria-current="page">CCTV Interception</li>
