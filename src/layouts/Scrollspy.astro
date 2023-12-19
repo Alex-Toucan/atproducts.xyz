@@ -104,7 +104,7 @@ const { id, title, breadcrumbcontent, scrollcontent } = Astro.props;
 <noscript> <div class="alert alert-dark mb-0" role="alert"> <strong>It seems like you don't have JavaScript enabled!</strong> For color modes, accordions, scrollspies, tab panes, dropdowns, popovers, and much more, you'll need JavaScript to work! We do not have fallbacks, so please enable JavaScript or <a href="https://github.com/Alex-Toucan/atproducts.xyz">view the source code to read the information</a>.
 </div> </noscript>
     <main id={id}>
-        <div class="bd-toc col-md-2 p-1 story-top">
+        <div class="bd-toc col-md-2 p-1 story-top-buttons">
     <div id={`${id}-list`} class="list-group">
             {scrollcontent && scrollcontent.map(({ name, href, additionalClasses }, index) => (
             <a class={`list-group-item list-group-item-action ${additionalClasses}`} href={href}>{name}</a>
