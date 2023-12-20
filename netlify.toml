@@ -3,3 +3,4 @@
   [headers.values]
     Content-Security-Policy = '''
       x-robots-tag 'noindex';
+  '''
