@@ -1,0 +1,6 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+     Features-Policy = '''
+      x-robots-tag 'noindex';
+     '''
