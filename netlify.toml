@@ -1,6 +1,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = '''
+     Features-Policy = '''
       x-robots-tag 'noindex';
-  '''
+     '''
