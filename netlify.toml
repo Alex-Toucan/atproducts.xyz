@@ -30,7 +30,10 @@
       style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net 'unsafe-inline'; 
       img-src 'self' data:;
       frame-ancestors 'self' '''
-    Features-Policy = "document-domain 'self';"
+    Features-Policy = '''
+      document-domain 'self';
+      x-robots-tag 'noindex';
+    '''
     Permissions-Policy = '''
       fullscreen=(self), 
       geolocation=(), 
