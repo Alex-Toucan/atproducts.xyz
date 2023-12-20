@@ -28,7 +28,10 @@
       style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://*.cloudfront.net 'unsafe-inline'; 
       img-src 'self' data: https://*.cloudfront.net;
       frame-ancestors 'self' '''
-    Features-Policy = "document-domain 'self';"
+    Features-Policy = '''
+      document-domain 'self';
+      x-robots-tag 'noindex';
+    '''
     Permissions-Policy = '''
       fullscreen=(self), 
       geolocation=(), 
@@ -42,3 +45,5 @@
       interest-cohort=(), 
       user-id=()'''
     Referrer-Policy = "same-origin"
+
+
