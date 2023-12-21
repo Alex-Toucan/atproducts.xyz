@@ -8195,36 +8195,36 @@ textarea.form-control-lg {
 
 [data-bs-theme=dark] {
 	.main-navbar.shadow {
-	  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
+	  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15);
 	}
 
 	.main-navbar.shadow-sm {
-	  box-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
+	  box-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15);
 	}
 
 	.main-navbar.shadow-lg {
-	  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
+	  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15);
 	}
 	
 	.main-navbar.shadow-xlg {
-	  box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
+	  box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15);
 	}
 }
 
 .main-navbar.shadow {  
-	box-shadow: 0 0.125rem 0.5rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15) !important;
+	box-shadow: 0 0.125rem 0.5rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15);
 }
 
 .main-navbar.shadow-sm {
-  box-shadow: 0 0.125rem 0.0625rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15) !important;
+  box-shadow: 0 0.125rem 0.0625rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15);
 }
 
 .main-navbar.shadow-lg {
-	 box-shadow: 0 0.25rem 1rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15) !important;
+	 box-shadow: 0 0.25rem 1rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15);
 }
 	
 .main-navbar.shadow-xlg {
-	 box-shadow: 0 0.5rem 3rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15) !important;
+	 box-shadow: 0 0.5rem 3rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15);
 }
 
 .focus-ring-primary {
@@ -17806,12 +17806,14 @@ html.fixedtopnavimage {
 .main-navbar {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+	box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
 }
 
 
 [data-bs-theme=dark] .main-navbar {
 --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  box-shadow: 0 .5rem 1rem rgba(255,255,255,.15),inset 0-1px 0 rgba(0,0,0,.15)!important
 }
 
 [data-bs-theme=dark] img.footerimg, 
