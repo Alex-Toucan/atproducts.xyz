@@ -1,11 +1,19 @@
+# Enable if maintenance mode.
+# [[redirects]]
+#   from = "/*"
+#   to = "https://backup.atproducts.xyz/maintenance"
+#   status = 301
+#   force = true
+#   conditions = {Language = ["en"], Country = ["US"]}
+
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1"
     X-Content-Type-Options = "nosniff"
-    Cache-Control = '''
-      max-age=6000'''
+#   Cache-Control = '''
+#     max-age=6000'''
     Strict-Transport-Security = '''
       max-age=31536000; 
       includeSubDomains; 
