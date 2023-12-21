@@ -1,11 +1,3 @@
-# Enable if maintenance mode.
-# [[redirects]]
-#   from = "/*"
-#   to = "https://backup.atproducts.xyz/maintenance"
-#   status = 301
-#   force = true
-#   conditions = {Language = ["en"], Country = ["US"]}
-
 [[headers]]
   for = "/*"
   [headers.values]
