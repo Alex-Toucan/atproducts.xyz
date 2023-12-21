@@ -1,5 +1,5 @@
 ---
-const { fourofour, modal, accordion, scrollspy } = Astro.props;
+const { fourofour, index, modal, accordion, scrollspy } = Astro.props;
 ---
 <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script is:inline src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
@@ -21,6 +21,9 @@ const { fourofour, modal, accordion, scrollspy } = Astro.props;
 )} 
 {fourofour && (
   <script is:inline src="/static/404.js"></script>
+)}    
+{index && (
+  <script is:inline src="/static/index.js"></script>
 )}    
 </body>
 </html>
