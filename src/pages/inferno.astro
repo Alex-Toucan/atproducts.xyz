@@ -1,0 +1,50 @@
+---
+import Head from '../layouts/Head.astro';
+import Scripts from '../layouts/Scripts.astro';
+import HeroPynx      from '../components/secondary/HeroPynx.astro';
+import Navbar    from '../components/Navbar.astro';
+import Footer    from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+
+<Head title="Inferno" heroid="ehs" description="Inferno is a very malicious ransomware, used for education purposes executable that is relentless." keywords="Inferno, BxPP, AT Products LLC" author="Alex Toucan & Pynx" />
+<Navbar />
+<HeroPynx
+  title="Inferno Ransomware"
+  description="Made by <a href='https://pynxtech.pynxthegoat.repl.co/' class='m-0'>Pynx Technologies</a>&semi; a Python / C++ ransomware <b>that could lock up systems!</b>"
+  primaryHref="#downloads"
+  primaryText="Downloads"
+  secondaryHref="https://github.com/Discordmodsbers/inferno"
+  secondaryText="Source Code"
+  dropdownItems={[
+  { navigationDesc: "General Information", navigationLink: "#general-info" },
+  { navigationDesc: "Requirements", navigationLink: "#requirements" },
+  { navigationDesc: "Versions", navigationLink: "#versions" },
+  { navigationDesc: "Downloads", navigationLink: "#downloads" },
+    ]}
+/>
+            <main id="inferno" class="container">
+              <div id="disclaimer">
+              <h2> Disclaimer </h2>
+              <p> Inferno is very dangerous. This will lock up systems, and may be even tied to <a href="/backup/script#phishing">Phishing</a>. Use a virtual machine, and never open these files on your physical machine. As a pre-caution, download them on your VM.</p>
+              </div>
+      <hr>
+              <div id="general-info">
+      <h2> General Information </h2>
+                <p> Inferno, made by <a href="https://pynxtech.pynxthegoat.repl.co/">Pynx Technologies</a>, is a very malicious ransomware executable that is relentless. It has webservers to attack your victim. This ransomware also has a update function, included in either version.</p>
+              </div><hr><div id="requirements">
+              <h2> Requirements </h2>
+      <p><b>Python (for both the Python and C++ Versions of Inferno) Version:</b> <a href="https://www.python.org/downloads/release/python-3111/">3.11</a></p>
+              
+               </div><hr><div id="versions">
+<h2> Versions </h2>
+              <p> There are two versions, the C++ version, and the Python Version. The C++ version is completely free and can be downloaded <a href="#downloads">here</a>. The Python version costs 5 dollars (USD), and can be bought by contacting <a href="https://instagram.com/fisted.mp3?igshid=Yzg5MTU1MDY">fisted.mp3 (Pynx/Knox) on Instagram</a>.</p>
+              </div><hr><div id="downloads">
+      <h2>Downloads</h2>
+      <p><a href="https://github.com/Discordmodsbers/inferno/archive/refs/heads/main.zip" download>C++ Version</a></p>
+              <p> Note that the C++ version is in a Python file, to help it compile. </p>
+              </div></main>
+<Footer author="Alex Toucan & Pynx"/>
+<BackToTop />
+</div>
+<Scripts />

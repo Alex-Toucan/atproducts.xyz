@@ -1,0 +1,37 @@
+HTML Basics
+
+We gotta first lay down the very first thing to know. The <!DOCTYPE html> tag represents the Document Type and helps some browsers display correctly with your website, must only be used once. Some elements do need closing tag, like </center>.
+
+
+The <head> tag is needed to represent the head of the website. The <body> tag is the same thing, but it's the body.
+
+
+HTML Basic Text
+Some elements are meant to show text like <text>, and <p>.
+
+
+<p> This is text <p>
+
+
+HTML Headings
+The <h> tag has 6 different sizes, from <h1> to <h6>.
+
+1 is the hugest, to 6 is the smallest.
+
+
+<h1> This is a heading </h1>
+
+
+HTML Links
+The <a> is a text element to represent links. Once clicked on the hyperlink, will redirect the user to a new link.
+
+
+<a href="atproducts.tk">Example Website</a>
+
+
+HTML Images
+The <img> tag is to show a image. The width or height description can be used by pixels or percentages by displays. The alt tag shows up when the image doesn't load or can't load, it shows the description.
+
+
+<img src="at.png" width="99.99% alt="Example Image">
+

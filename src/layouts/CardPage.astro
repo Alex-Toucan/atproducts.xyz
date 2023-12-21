@@ -1,0 +1,34 @@
+---
+const { id, title, cardLinks } = Astro.props;
+---
+
+<div class={`hero hero-${id}`} data-bs-theme="dark">
+  <div class="hero-back h-100">
+    <div class="hero-filter">
+      <h1 class="display-3 fw-bold title">{title}</h1>
+      <div class="d-md-flex mx-mmd-2">
+        {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, secondaryHref, additionalImageClasses }, index) => (
+          <div class="col-md mt-1 mb-3 m-1" key={index}>
+            <div class="card text-center permcard shadow-sm h-100">
+              {cardImage && (
+                <div class="bg-white card-img-top">
+                  <img src={cardImage} alt={cardTitle} class={additionalImageClasses} width="100%">
+                </div>
+              )}
+              <div class="card-body">
+                <h2 class="card-title">{cardTitle}</h2>
+                <p class="card-text">{cardDescription}</p>
+                <div class="tab-link d-grid gap-2">
+                  <a href={cardHref} class="btn btn-primary w-100">Visit</a>
+                  {secondaryHref && (
+                    <a href={secondaryHref} class="btn btn-secondary w-100">Visit the all laid out version</a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

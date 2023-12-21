@@ -1,0 +1,38 @@
+---
+import Head from '../../layouts/Head.astro';
+import Scripts from '../../layouts/Scripts.astro';
+import Navbar    from '../../components/Navbar.astro';
+import Footer    from '../../components/Footer.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<Head title="Contact Form" description="If you don't wanna email us on your email client, use this instead. We'll reach out to your email provided." author="Alex Toucan"/>
+<Navbar />
+    <main id="form" class="container">
+    <h1 class="title">Contact Form</h1>
+    <p>If you don't wanna email us on your email client, use this instead. We'll reach out to your email provided.</p>
+<form
+  name="contact"
+  action="/form/success"
+  method="POST"
+  data-netlify="true"
+class>
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label fw-bold">Email address</label>
+  <input name="Email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="nameInput" class="form-label fw-bold">Name</label>
+  <input name="name" class="form-control" id="nameInput" placeholder="John Doe">
+</div>
+<div class="mb-3">
+  <label for="textareaInput" class="form-label fw-bold">Information to Send</label>
+  <textarea name="Text" class="form-control" id="textareaInput" rows="3"></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Send</button>
+</form>
+</main>
+<Footer />
+<BackToTop />
+</div>
+<Scripts />

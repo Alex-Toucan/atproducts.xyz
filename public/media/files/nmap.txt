@@ -1,0 +1,5 @@
+Use nmap on Kali Linux. 
+
+https://nmap.org/
+
+nmap --script=http-sql-injection <target>

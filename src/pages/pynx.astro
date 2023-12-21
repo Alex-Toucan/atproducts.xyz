@@ -1,0 +1,22 @@
+---
+import Head from '../layouts/Head.astro';
+import Scripts from '../layouts/Scripts.astro';
+import CardPage  from '../layouts/CardPage.astro';
+import Navbar    from '../components/Navbar.astro';
+import Footer    from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+<Head title="Pynx's Projects" heroid="ehs" description="View Pynx's projects." keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan & Pynx"/>
+<Navbar />
+        <main id="pynx" class="text-center"> 
+        <CardPage id="ehs" title="Pynx's Projects" 
+        cardLinks={[
+         { cardTitle: "BxPP", cardDescription: "A custom Python programming language!", cardHref: "/bxpp" },
+         { cardTitle: "Inferno", cardDescription: "Inferno is a very malicious ransomware executable that is relentless.", cardHref: "/inferno" },
+         { cardTitle: "Noodle Hackerspace", cardDescription: "This community contains Pynx's code samples.", cardImage: "/media/images/noodle.webp", cardHref: "/noodle", secondaryHref: "/backup/noodle", additionalImageClasses: "w-25 py-1" },
+         ]} />
+        </main>
+<Footer author="Alex Toucan & Pynx" hr="none" />
+<BackToTop />
+</div>
+<Scripts />
