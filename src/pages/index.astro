@@ -12,6 +12,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 bulletin={[
   { bulletinImage: "CHRISTMAS.webp" },
   { bulletinImage: "REVIEWYEAR.webp" },
+  { bulletinImage: "1ER-21711-1-122123.webp" },
   { bulletinImage: "1ER-2171-1-122023.webp" },
   { bulletinImage: "1ER-2171-2-122023.webp" },
 ]} />
@@ -56,6 +57,9 @@ You can now view 2.17.1 patch notes!
           <div class="carousel-item">
       <img src="/media/slideshow/REVIEWYEAR.webp" class="d-block w-100" alt="Year in Review for 2023">
     </div>
+          <div class="carousel-item">
+      <img src="/media/slideshow/1ER-21711-1-122123.webp" class="d-block w-100" alt="2.17.1.1 Preview">
+    </div>
       <div class="carousel-item">
       <img src="/media/slideshow/1ER-2171-1-122023.webp" class="d-block w-100" alt="2.17.1 Preview">
     </div>
@@ -70,6 +74,7 @@ You can now view 2.17.1 patch notes!
   <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
       <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
           <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
+          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
   </div><button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
@@ -214,20 +219,26 @@ You can now view 2.17.1 patch notes!
 </div><hr>
 <div id="what-new">
   <h2> What's New? </h2>
-  <p><b> Released on:</b> December 20th, 2023.<br>
-  <b>ATP Database:</b> 2.17.1
+  <p><b> Released on:</b> December 21th, 2023.<br>
+  <b>ATP Database:</b> 2.17.1.1
+<p>
+<b><a href="https://2-17-1.atproducts.xyz#what-new">Previous Update's Changelog</a></b>
+</p>
   </p>
 <b>Added</b>
   <ul>
-             <li>Added the Astro Framework; our new way of compiling. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/169" target="_blank" rel="noopener noreferrer">(#169)</a></li> 
-      <li>Added the Contact Form page within the person icon under footers. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/169" target="_blank" rel="noopener noreferrer">(#169)</a></li> 
-     <li>Added a new secondary paid service; email creation. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/169" target="_blank" rel="noopener noreferrer">(#169)</a></li> 
-         </ul>
+             <li>Added astro-compress (a package to minify our code). <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/180" target="_blank" rel="noopener noreferrer">(#180)</a></li> 
+</ul>
+<b>Changed</b>
+<ul>
+           <li>Updated the CodingHome logo. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/180" target="_blank" rel="noopener noreferrer">(#180)</a></li> 
+           <li>All questions in the contact page are now required. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/180" target="_blank" rel="noopener noreferrer">(#180)</a></li> 
+
+</ul>
   <b>Bug Fixes</b>
   <ul>
-             <li>Fixed BxPP’s incorrectly rendered hero. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/169" target="_blank" rel="noopener noreferrer">(#169)</a></li> 
-     <li>Fixed Noodle Hackerspace’s invalid IDs. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/169" target="_blank" rel="noopener noreferrer">(#169)</a></li> 
-          </ul>
+             <li>Fixed index.js (our carousel functions and history tab) not rendering. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/180" target="_blank" rel="noopener noreferrer">(#180)</a></li> 
+               </ul>
 </div> </main>
 <Footer />
 <BackToTop />
