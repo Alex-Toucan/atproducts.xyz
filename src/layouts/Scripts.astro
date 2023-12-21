@@ -22,5 +22,8 @@ const { fourofour, modal, accordion, scrollspy } = Astro.props;
 {fourofour && (
   <script is:inline src="/static/404.js"></script>
 )}    
+{index && (
+  <script is:inline src="/static/index.js"></script>
+)}    
 </body>
 </html>
