@@ -1,0 +1,5 @@
+Root Password Phishing
+
+- Start a ncat listener
+- Localhost on port 666 and 
+- The password entered will be sent to it

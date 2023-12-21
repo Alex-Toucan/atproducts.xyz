@@ -1,0 +1,66 @@
+ISRG Root X1
+
+Version: V3
+Serial Number: 008210cfb0d240e3594463e0bb63828b00
+Signature Algorithm: sha256RSA
+Signature Hash Algorithm: sha256
+Issuer: CN = ISRG Root X1 O = Internet Security Research Group C = US
+Valid From: Thursday, June 4, 2015 6:04:38 AM
+Valid To: Monday, June 4, 2035 6:04:38 AM
+Subject: CN = ISRG Root X1 O = Internet Security Research Group C = US
+Public Key (RSA 4096 Bits): 30 82 02 0a 02 82 02 01 00 ad e8 24 73 f4 14 37 f3 9b 9e 2b 57 28 1c 87 be dc b7 df 38 90 8c 6e 3c e6 57 a0 78 f7 75 c2 a2 fe f5 6a 6e f6 00 4f 28 db de 68 86 6c 44 93 b6 b1 63 fd 14 12 6b bf 1f d2 ea 31 9b 21 7e d1 33 3c ba 48 f5 dd 79 df b3 b8 ff 12 f1 21 9a 4b c1 8a 86 71 69 4a 66 66 6c 8f 7e 3c 70 bf ad 29 22 06 f3 e4 c0 e6 80 ae e2 4b 8f b7 99 7e 94 03 9f d3 47 97 7c 99 48 23 53 e8 38 ae 4f 0a 6f 83 2e d1 49 57 8c 80 74 b6 da 2f d0 38 8d 7b 03 70 21 1b 75 f2 30 3c fa 8f ae dd da 63 ab eb 16 4f c2 8e 11 4b 7e cf 0b e8 ff b5 77 2e f4 b2 7b 4a e0 4c 12 25 0c 70 8d 03 29 a0 e1 53 24 ec 13 d9 ee 19 bf 10 b3 4a 8c 3f 89 a3 61 51 de ac 87 07 94 f4 63 71 ec 2e e2 6f 5b 98 81 e1 89 5c 34 79 6c 76 ef 3b 90 62 79 e6 db a4 9a 2f 26 c5 d0 10 e1 0e de d9 10 8e 16 fb b7 f7 a8 f7 c7 e5 02 07 98 8f 36 08 95 e7 e2 37 96 0d 36 75 9e fb 0e 72 b1 1d 9b bc 03 f9 49 05 d8 81 dd 05 b4 2a d6 41 e9 ac 01 76 95 0a 0f d8 df d5 bd 12 1f 35 2f 28 17 6c d2 98 c1 a8 09 64 77 6e 47 37 ba ce ac 59 5e 68 9d 7f 72 d6 89 c5 06 41 29 3e 59 3e dd 26 f5 24 c9 11 a7 5a a3 4c 40 1f 46 a1 99 b5 a7 3a 51 6e 86 3b 9e 7d 72 a7 12 05 78 59 ed 3e 51 78 15 0b 03 8f 8d d0 2f 05 b2 3e 7b 4a 1c 4b 73 05 12 fc c6 ea e0 50 13 7c 43 93 74 b3 ca 74 e7 8e 1f 01 08 d0 30 d4 5b 71 36 b4 07 ba c1 30 30 5c 48 b7 82 3b 98 a6 7d 60 8a a2 a3 29 82 cc ba bd 83 04 1b a2 83 03 41 a1 d6 05 f1 1b c2 b6 f0 a8 7c 86 3b 46 a8 48 2a 88 dc 76 9a 76 bf 1f 6a a5 3d 19 8f eb 38 f3 64 de c8 2b 0d 0a 28 ff f7 db e2 15 42 d4 22 d0 27 5d e1 79 fe 18 e7 70 88 ad 4e e6 d9 8b 3a c6 dd 27 51 6e ff bc 64 f5 33 43 4f 02 03 01 00 01
+Public Key Parameters: 05 00
+Subject Key Identifier: 79b459e67bb6e5e40173800888c81a58f6e99b6e
+Key Usage: 79b459e67bb6e5e40173800888c81a58f6e99b6e
+Basic Constraints: Subject Type=CA Path Length Constraint=None
+Thumbprint: cabd2a79a1076a31f21d253635cb039d4329a5e8
+Friendly Name: ISRG Root X1
+Enhanced Key Usage: Client Authentication Server Authentication
+
+R3
+
+Version: V3
+Serial Number: 00912b084acf0c18a753f6d62e25a75f5a
+Signature Algorithm: sha256RSA
+Signature Hash Algorithm: sha256
+Issuer: CN = ISRG Root X1 O = Internet Security Research Group C = US
+Valid From: Thursday, September 3, 2020 7:00:00 PM
+Valid To: Monday, September 15, 2025 11:00:00 AM
+Subject: CN = R3 Root X1 O = Let's Encrypt C = US
+Public Key (RSA 2048 Bits): 30 82 01 0a 02 82 01 01 00 bb 02 15 28 cc f6 a0 94 d3 0f 12 ec 8d 55 92 c3 f8 82 f1 99 a6 7a 42 88 a7 5d 26 aa b5 2b b9 c5 4c b1 af 8e 6b f9 75 c8 a3 d7 0f 47 94 14 55 35 57 8c 9e a8 a2 39 19 f5 82 3c 42 a9 4e 6e f5 3b c3 2e db 8d c0 b0 5c f3 59 38 e7 ed cf 69 f0 5a 0b 1b be c0 94 24 25 87 fa 37 71 b3 13 e7 1c ac e1 9b ef db e4 3b 45 52 45 96 a9 c1 53 ce 34 c8 52 ee b5 ae ed 8f de 60 70 e2 a5 54 ab b6 6d 0e 97 a5 40 34 6b 2b d3 bc 66 eb 66 34 7c fa 6b 8b 8f 57 29 99 f8 30 17 5d ba 72 6f fb 81 c5 ad d2 86 58 3d 17 c7 e7 09 bb f1 2b f7 86 dc c1 da 71 5d d4 46 e3 cc ad 25 c1 88 bc 60 67 75 66 b3 f1 18 f7 a2 5c e6 53 ff 3a 88 b6 47 a5 ff 13 18 ea 98 09 77 3f 9d 53 f9 cf 01 e5 f5 a6 70 17 14 af 63 a4 ff 99 b3 93 9d dc 53 a7 06 fe 48 85 1d a1 69 ae 25 75 bb 13 cc 52 03 f5 ed 51 a1 8b db 15 02 03 01 00 01
+Public Key Parameters: 05 00
+Subject Key Identifier: 79b459e67bb6e5e40173800888c81a58f6e99b6e
+Key Usage: Digital Signature, Certificate Signing, Off-line CRL Signing, CRL Signing (86)
+Basic Constraints: Subject Type=CA Path Length Constraint=0
+Thumbprint: a053375bfe84e8b748782c7cee15827a6af5a405
+Enhanced Key Usage: Client Authentication (1.3.6.1.5.5.7.3.2) Server Authentication (1.3.6.1.5.5.7.3.1)
+CRL Distribution Points: [1]CRL Distribution Point Distribution Point Name: Full Name: URL=http://x1.c.lencr.org/
+Certificate Policies: [1]Certificate Policy: Policy Identifier=2.23.140.1.2.1 [2]Certificate Policy: Policy Identifier=1.3.6.1.4.1.44947.1.1.1
+Subject Key Identifier: 142eb317b75856cbae500940e61faf9d8b14c2c6
+Authority Key Identifier: KeyID=79b459e67bb6e5e40173800888c81a58f6e99b6e
+Authority Information Access: [1]Authority Info Access Access Method=Certification Authority Issuer (1.3.6.1.5.5.7.48.2) Alternative Name: URL=http://x1.i.lencr.org/
+
+*.atproducts.xyz
+
+Version: Version 3
+Serial Number: 04:42:2D:5C:D8:B5:DB:31:6F:1B:11:15:52:D9:85:1F:B2:00
+Certificate Signature Algorithm: PKCS #1 SHA-256 With RSA Encryption
+Issuer: CN = R3 O = Let's Encrypt C = US
+Valid From: 11/24/22, 12:31:41 PM CST
+Valid To: 2/22/23, 12:31:40 PM CST
+Subject: CN = *.atproducts.xyz
+Subject Public Key Algorithm: Elliptic Curve Public Key
+Subject's Public Key: 00 04 48 EC 51 A4 5D A0 22 CB 11 62 1C E5 06 F5 ED 6B F5 6C 03 F0 F6 B5 C3 B0 E6 01 B7 DB FD E1 27 78 1C 63 C1 06 87 97 BA C2 92 D6 AE 3F B0 59 E8 4E 4B 8A 2F 73 01 BC 0A DF 36 2A F8 23 C0 D3 A9 F7
+Certificate Key Usage: Critical Signing
+Extended Key Usage: Not Critical TLS WWW Server Authentication (OID.1.3.6.1.5.5.7.3.1) TLS WWW Client Authentication (OID.1.3.6.1.5.5.7.3.2)
+Certificate Basic Constraints: Critical Is not a Certification Authority
+Certificate Subject Key ID: Not Critical Key ID: 80 AC 7F E7 52 47 7A 39 13 C2 60 C5 DA 87 5E 5D DD E9 7D DF
+Certificate Authority Key ID: Not Critical Key ID: 14 2E B3 17 B7 58 56 CB AE 50 09 40 E6 1F AF 9D 8B 14 C2 C6
+Authority Information Access: Not Critical OCSP Responder: URI: http://r3.o.lencr.org CA Issuers: URI: http://r3.i.lencr.org/
+Certificate Subject Alternative Name: Not Critical DNS Name: *.atproducts.xyz DNS Name: atproducts.xyz
+Certificate Policies: Not Critical OID.2.23.140.1.2.1 OID.1.3.6.1.4.1.44947.1.1.1: Certification Practice Statement Pointer:    http://cps.letsencrypt.org
+OID.1.3.6.1.4.1.11129.2.4.2: Not Critical 04 81 F0 00 EE 00 75 00 7A 32 8C 54 D8 B7 2D B6 20 EA 38 E0 52 1E E9 84 16 70 32 13 85 4D 3B D2 2B C1 3A 57 A3 52 EB 52 00 00 01 84 AB 1F D8 06 00 00 04 03 00 46 30 44 02 20 04 17 3E FC 30 59 A2 A7 D7 82 11 C1 DD 13 17 77 C6 AE C2 64 4F 18 66 D6 05 00 53 43 CB 8F 26 AB 02 20 41 84 1B 2E 52 30 00 F1 50 66 96 CF 1C D5 3C C2 40 F5 7F 2B E0 82 F6 88 80 D0 F0 A5 00 B0 04 1E 00 75 00 AD F7 BE FA 7C FF 10 C8 8B 9D 3D 9C 1E 3E 18 6A B4 67 29 5D CF B1 0C 24 CA 85 86 34 EB DC 82 8A 00 00 01 84 AB 1F D8 10 00 00 04 03 00 46 30 44 02 20 0A 1A 34 B5 5B 7F 77 83 37 BA DD F4 06 EE 55 77 2C 35 41 23 BA 2F 8B B5 33 7D E4 AB 45 61 66 37 02 20 2B 76 F9 42 20 C9 2D C4 FC 02 FD E0 83 30 79 22 1C 53 1F 8F A6 61 DE E9 C8 64 B1 AB 54 E9 5F 42
+Certificate Signature Algorithm: PKCS #1 SHA-256 With RSA Encryption
+Certificate Signature Value: 12 AD C1 7A C8 25 75 4B 33 69 07 9F B6 42 49 2E C5 70 97 FC 03 68 35 29 82 48 6D 89 8B D5 F6 4C C7 7F B9 FA D3 8D 5E 1F 93 0A 6F 9B 21 33 7D 33 C0 8C 5A 6B 6B 78 A4 5C 69 1C 77 6E F4 D3 03 15 C9 05 21 0B 3C 53 B2 B2 31 FB 93 49 CB 7A 3A 70 29 26 6F 78 E8 B4 3E 0D 6C 66 88 8F 93 CB 0A 79 F1 4E 36 3F DF 21 80 41 5E 7A D9 7D 16 EA 6D 69 26 C0 63 BB 5D AD 4F 37 07 59 36 06 0A F0 2A E8 B2 E5 A8 D4 A9 C9 DC 84 C0 8B 91 AE E7 D8 69 10 B6 06 BA 2E 57 5C 72 99 19 FA 70 2B BB B0 ED 90 61 67 76 35 74 E4 47 A5 E6 31 5A FF 45 AE D4 56 82 12 3E 99 86 03 55 23 09 A9 FE 97 0F 5C 12 CC 92 F9 BA FC AC 30 7F 97 B2 1F 1C 04 4C 39 DB FA C0 5B 8A 54 63 EA 8B F7 27 CF 55 50 21 66 CF DB 50 1E 34 4B DC B9 A3 DB BB 96 B2 F4 A4 88 BC 78 79 6C 0F 6E 3C 72 DA 06 1B 3B E8 85 17 40 77 C5
+SHA-256 Fingerprint: A3 74 DC EC 78 48 58 EA 89 29 4C B7 19 4F 9F B5 22 D8 26 49 75 1E 9D F5 DC 8F 79 13 B0 41 92 C4
+SHA-1 Fingerprint: AA 8C 14 B1 0C A5 1B 1B E9 BB B2 AC 39 18 AE 24 CC 82 0F 78

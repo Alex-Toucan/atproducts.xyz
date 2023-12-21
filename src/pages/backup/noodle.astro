@@ -1,0 +1,66 @@
+---
+import Head      from '../../layouts/Head.astro';
+import Scripts from '../../layouts/Scripts.astro';
+import Hero      from '../../components/Hero.astro';
+import Navbar    from '../../components/Navbar.astro';
+import Footer    from '../../components/Footer.astro';
+import Scrollspy from '../../components/Scrollspy.astro';
+import Accordion from '../../components/accordion/Accordion.astro';
+import AccordionItem from '../../components/accordion/AccordionItem.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<Head title="Noodle Hackerspace" heroid="noodle" icon="noodle.webp" description="Noodle Hackerspace is a community of resources!" keywords="Scripts, viruses, coding," author="Alex Toucan & Pynx"/>
+<Navbar />
+<div class="alert alert-dark mb-0" role="alert">
+  This is an inactive community. Expect no new sections or changes without special exceptions.
+</div>
+<Hero id="noodle" title="Noodle Hackerspace" description="Noodle Hackerspace is the community of physical and digital hacking resources!" primaryHref="https://pynxtech.pynxthegoat.repl.co/" primaryText="Pynx Technologies" secondaryHref="/backup/noodle" secondaryText="View the all laid out format" imageSrc="/media/images/noodle.webp" imageWidth="15%" minImageWidth="150px" imageClasses="pe-md-3 rounded-2"
+icons={[
+    { icon: "discord", desc: "Discord Server Invite", href: "https://discord.gg/r7qVKedjwR" },
+    { icon: "twitter", desc: "Twitter", href: "https://twitter.com/Aquoz_co" },
+    { icon: "bullseye", desc: "Pynx Technologies", href: "https://pynxtech.pynxthegoat.repl.co/" },
+    { icon: "heart-fill", desc: "Tokyo Chat", href: "https://tokyochat.pynxthegoat.repl.co/" },
+  ]},
+dropdownItems = {[
+  { navigationDesc: "Pynx Technologies", navigationLink: "#pynx" },
+  { navigationDesc: "Stories", navigationLink: "#stories" },
+  { navigationDesc: "Viruses & Malware", navigationLink: "#files" },
+  { navigationDesc: "Apps & Software", navigationLink: "#app" },
+]}
+/>
+<main id="noodle" class="container">
+    <div id="disclaimer">
+      <h2> Disclaimer </h2>
+     <p> We do not take responsibility for any damage, or legal issues, done with these files here at AT Products LLC, Ethical Hacking Society, The Script Community, CodingHome, or Noodle Hackerspace.      <br><br>
+        Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM.<br><br>If it's an APK file, use an emulator.<br><br><a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a><br><a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a></p>
+    </div> <hr>
+        <div id="disclaim">
+    <p> Scroll past the following section to see about this community. </p></div>
+  <hr>
+        <div id="pynx">
+      <h2> Pynx Technologies </h2>
+      <p><a href="https://pynxtech.pynxthegoat.repl.co/">Pynx Technologies</a> is a company that has cybersecurity tools, pentesting tools, etc. It sells at the moment 
+        SSkullzv2 and Skullzv3.</p>
+    </div> <hr>
+  <div id="stories">
+  <h2> Stories </h2>
+        <p><a href="/stories/cctv">CCTV Interception</a></p>
+  </div> <hr>
+    <div id="files">
+          <h2> Viruses &amp; Malware </h2>
+      <p> <a href="/media/files/root.sh" download="">Root Password Phishing (Bash)</a> <a href="/media/files/alias.sh">Alias Command Version</a> <a href="/media/files/instruct.txt">Instructions</a> by Lynx </p>
+      <p> <a href="/media/files/login.py" download="">Example Login Program (Python)</a>, (Password is "password"), by Lynx </p>
+      <p> <a href="/media/files/Cerbios.py" download="">Cerbios Ransomware (Python)</a> by Pynx </p>
+      <p> <a href="/media/files/sshbrute-main.zip" download="">SSH Brute (Python | ZIP)</a> by Pynx </p>
+      <p>
+    </p></div><hr>
+    <div id="app">
+    <h2> Apps &amp; Software </h2>
+        <p> <a href="https://tokyochat.pynxthegoat.repl.co/">Tokyo Chat</a> by Pynx </p>
+            </div>
+   </main>
+<Footer />
+<BackToTop />
+</div>
+<Scripts accordion="true"/>

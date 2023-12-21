@@ -1,0 +1,24 @@
+---
+const { id, scrollcontent, additionalClasses, otherClass } = Astro.props;
+---
+
+<div class="d-md-flex">
+    <div class="col-md-4 mt-1 mb-2 pe-md-1">
+        <div id={id} class="list-group">
+            {scrollcontent && scrollcontent.map(({ name, href, additionalClasses }, index) => (
+            <a class={`list-group-item list-group-item-action ${additionalClasses}`} href={href}>{name}</a>
+            ))}
+        </div>
+    </div>
+    <div class="col-md my-1 mb-1">
+        <div
+  data-bs-spy="scroll"
+  data-bs-target={`#${id}`}
+  data-bs-smooth-scroll="true"
+  class={otherClass === "dmsize" ? "dmsize" : "basics-scroll"}
+  tabindex="0"
+>
+            <slot name="scrollspy-content" />
+        </div>
+    </div>
+</div>

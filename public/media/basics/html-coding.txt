@@ -1,0 +1,63 @@
+HTML Basics
+Example document:
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>My first Heading</h1>
+
+<p>My first paragraph</p>
+
+</body>
+
+</html>
+
+
+
+The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly.
+
+It must only appear once, at the top of the page (before any HTML tags).
+
+The <!DOCTYPE> declaration is not case sensitive.
+
+
+HTML Headings
+HTML headings are defined with the <h1> to <h6> tags.
+
+<h1> defines the most important heading. <h6> defines the least important heading:
+
+
+<h1>Big</h1>
+
+<h6>Small</h6>
+
+
+
+HTML Paragraphs
+HTML paragraphs are defined with the <p> tag:
+
+
+<p>This is a paragraph.</p>
+
+<p>This is another paragraph.</p>
+
+
+
+HTML Links
+HTML links are defined with the <a> tag:
+
+<a href="https://example.com">This is a link</a>
+
+
+
+HTML Images
+HTML images are defined with the <img> tag.
+
+The source file (src), alternative text (alt), width, and height are provided as attributes:
+
+
+<img src="example.jpg" alt="example.com" width="104" height="142">
+

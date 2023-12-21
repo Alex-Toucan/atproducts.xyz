@@ -1,0 +1,500 @@
+---
+import Head      from '../../layouts/Head.astro';
+import Scripts from '../../layouts/Scripts.astro';
+import Hero      from '../../components/Hero.astro';
+import Navbar    from '../../components/Navbar.astro';
+import Footer    from '../../components/Footer.astro';
+import Scrollspy from '../../components/Scrollspy.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<Head title="Flash Documentation" heroid="flash" icon="Adobe_Flash_Player_32.svg.png" description="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!" keywords="Flash Documentation, AT Products" author="Alex Toucan" />
+    <Navbar />
+        <Hero id="flash" description="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!" secondaryHref="/backup/flash" secondaryText="View the all laid out format" imageSrc="/media/images/flashdoc.webp" imageWidth="50%" minImageWidth="250px" imageClasses="bg-light p-1 bg-opacity-50 rounded-2"
+        dropdownItems={[
+  { navigationDesc: "Learning Resources", navigationLink: "#learn" },
+  { navigationDesc: "Links", navigationLink: "#links" },
+  { navigationDesc: "Python Basics", navigationLink: "#py" },
+  { navigationDesc: "JavaScript Basics", navigationLink: "#js" },
+  { navigationDesc: "HTML Basics", navigationLink: "#html" },
+  { navigationDesc: "OSINT", navigationLink: "#osint" },
+  { navigationDesc: "Denial of Service", navigationLink: "#dos" },
+  { navigationDesc: "Passwords", navigationLink: "#password" },
+  { navigationDesc: "ID Creation Time", navigationLink: "#id" },
+  { navigationDesc: "Keylogging", navigationLink: "#key" },
+  { navigationDesc: "Nitrologging | Tokenlogging", navigationLink: "#logging" },
+  { navigationDesc: "Other Scripts", navigationLink: "#other" },
+  { navigationDesc: "Phishing", navigationLink: "#phishing" },
+  { navigationDesc: "Google Dorking", navigationLink: "#google" },
+  { navigationDesc: "Wi-Fi Hacking", navigationLink: "#wifi" },
+]}
+/>
+<main id="flash" class="container">
+    <div id="ai">
+            <h2> Adobe AIR </h2>
+    <figure class="figure">
+    <img src="/media/images/adobeair.png" width="12.5%" alt="AIR logo" class="flash">
+      <figcaption class="figure-caption mt-1">Adobe AIR Logo</figcaption>
+    </figure>
+      <p> On this page, we will review Adobe AIR. </p>
+      <h3> What is Adobe AIR </h3>
+      <p> Adobe AIR (codenamed Apollo) runtime enables developers to use HTML, JavaScript, Adobe Flash software, and ActionScript to build web applications that run as standalone client applications without the constraints of a browser. This supports AIR files for installation. Adobe AIR's logo history falls under Adobe's Flash Player logo history, having similar logos. Adobe AIR was discontinued at the same time that Flash Player was discontinued, on January 1st, 2021.</p> 
+      <h3> How to use Adobe AIR in 2022 </h3>
+      <p> You can download the most recent version of <a href="/media/files/AdobeAIR.exe">Adobe AIR here</a>, or install <a href="http://www.oldversion.com/windows/adobe-air/">older versions</a>.</p>
+            <p> If you need to uninstall it, open Command Prompt or Run in Windows, use <code>path to AdobeAIRInstaller.exe -uninstall</code> and enter. Otherwise, use this <a href="https://support.microsoft.com/en-us/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">Microsoft blog post</a>.</p>
+        </div><hr><div id="al">
+    <h2> Adobe AIR Logo History </h2>
+    <Scrollspy id="air-list"
+    scrollcontent={[
+      { name: "2008", href: "#a2008" },
+      { name: "2010", href: "#a2010" },
+      { name: "2013", href: "#a2013" },
+      { name: "2015", href: "#a2015" },
+    ]}
+    ><Fragment slot="scrollspy-content">
+      <div id="a2008">
+      <p> 2008 - 2010 </p>
+      <img src="/media/images/Adobe_air_2008.webp" width="200" height="200" alt="2008-2010">
+      </div>
+      <br> <br> <br>
+      <div id="a2010">
+      <p> 2010 - 2013 </p>
+      <img src="/media/images/Adobe_air_2010.webp" width="200" height="200" alt="2010-2013">
+          </div>
+      <br> <br> <br>
+      <div id="a2013">
+      <p> 2013 - 2015 </p>
+      <img src="/media/images/Adobe_air_2013.webp" width="200" height="200" alt="2013-2015">
+      </div>
+      <div id="a2015">
+      <br> <br> <br>
+      <p> 2015 - Present </p>
+      <img src="/media/images/Adobe_air_2015.webp" width="200" height="200" alt="2015-now"> <br> 
+      <img src="/media/images/24406.png" width="200" height="200" alt="2015-now installer"> <br>
+      <p> Installer </p>
+      </div>
+    </Fragment></Scrollspy>
+    
+    </div><hr><div id="di">
+    <h2> Adobe Director </h2>
+    <figure class="figure">
+      <img src="/media/images/Adobe_Di.svg.png" width="12.5%" alt="Director Logo" class="flashimg">
+      <figcaption class="figure-caption mt-1">Adobe Director Logo</figcaption>
+    </figure>
+      <p> On this page, we will review Adobe Director. </p>
+      <h3> What is Adobe Director </h3>
+      <p> Adobe Director is very similar to Adobe Flash Player, but they are both completely different things. Instead of SWF files, it uses DCR files. It can also use Apple Inc.'s Quicktime, used to support media, and the 3DO Company's 3DO Console Engine. Adobe Director's last version was 12, released on February 11th, 2013. The product would be later discontinued in a range from February 1st to March 14th of 2017. </p>
+    <h3> Plug-ins </h3>
+    <p> One of the few differences between Director and Flash is that Director supports plug-ins or Xtras. This is possible by a tool named Adobe Director's XDK (Xtra Development Kit), which is a C++ SDK. With each new version, new changes are important for these plug-ins.  </p>
+      <h3> How to use Adobe Director after 2017 </h3>
+      <p> Adobe Director has standalone apps that have DCR files pre-loaded (<a href="/media/files/spongebob-example.zip" download="">example</a>).
+      </p><p> You can download the most recent version of <a href="/media/files/Projector Skeleton for Adobe Director 12.0.1.122.zip" download="">Projector Skeleton for Adobe Director here</a> for using DCR files onto a Windows app. It will ask you once you open the application, to put in a DCR file. Make sure that the plugin is in the same folder (directory) as the DCR file. You can download a <a href="/media/files/anchovies.dcr">example DCR game here</a>.</p>
+    <p>If you have issues about 16-bit apps with Director, you may <a href="https://github.com/otya128/winevdm#readme">view how to run them on Windows 10 or above</a>.</p>
+    </div><hr><div id="dl">
+      <h2> Adobe Director Logo History </h2>
+      <Scrollspy id="dir-list"
+      scrollcontent={[
+        { name: "Macromind Videoworks", href: "#mvtitle", additionalClasses: "fw-bolder" },
+        { name: "Version 1 (1985)", href: "#d1985" },
+        { name: "Version 2 (1987)", href: "#d1987" },
+        { name: "Macromind Director", href: "#mdtitle", additionalClasses: "fw-bolder" },
+        { name: "Version 1 (1989)", href: "#d1989" },
+        { name: "Version 2 (1990)", href: "#d1990" },
+        { name: "Version 3 (1991)", href: "#d1991" },
+        { name: "Version 3.1 (1992)", href: "#d1992" },
+        { name: "Macromedia Director", href: "#matitle", additionalClasses: "fw-bolder" },
+        { name: "Version 3.1.3 (1993)", href: "#d1993" },
+        { name: "Version 4 (1994)", href: "#d1994" },
+        { name: "Version 5 (1996)", href: "#d1996" },
+        { name: "Version 6 (1997)", href: "#d1997" },
+        { name: "Version 7 (1998)", href: "#d1998" },
+        { name: "Version 8 (2000)", href: "#d2000" },
+        { name: "Version 8.5 (2001)", href: "#d2001" },
+        { name: "Versions 9 - 10 (2002)", href: "#d2002" },
+        { name: "Adobe Director", href: "#aetitle", additionalClasses: "fw-bolder" },
+        { name: "Version 11 (2007)", href: "#d2007" },
+        { name: "Version 11.5 (2008)", href: "#d2008" },
+        { name: "Version 12 (2010)", href: "#d2010" },
+      ]}
+      otherClass="dmsize"><Fragment slot="scrollspy-content">
+    <div id="videoworks">
+      <h4 id="mvtitle"> Macromind Videoworks </h4>
+      <div id="d1985">
+      <p> 1985 - 1987 </p>
+      <p> Version 1 </p>
+      <img src="/media/images/MacromindVideoworks_1.webp" width="200" height="200" alt="1985-1987 | version 1"> <br> <br>
+      <img src="/media/images/bannerMacromindVideoworks_1.webp" alt=" 1985-1987 | version 1">
+      </div>
+      <br> <br> <br>
+      <div id="d1987">
+      <p> 1987 - 1989 </p>
+      <p> Version 2 </p>
+      <img src="/media/images/MacromediaVideoworks_2.webp" width="200" height="200" alt="1987-1989 | version 2">
+        </div> </div>
+      <hr>
+      <div id="director">
+      <h4 id="mdtitle"> Macromind Director </h4>
+      <div id="d1989">
+      <p> 1989 - 1990 </p>
+      <p> Version 1 </p>
+      <img src="/media/images/MacromindDirector_1.webp" width="200" height="137" alt="1989-1990 | version 1">
+      </div>
+      <br> <br> <br>
+      <div id="d1990">
+      <p> 1990 - 1991 </p>
+      <p> Version 2 </p>
+      <img src="/media/images/MacromindDirector_2.webp" width="200" height="205" alt="1990-1991 | version 2">
+      </div>
+      <br> <br> <br>
+      <div id="d1991">
+      <p> 1991 - 1992 </p>
+      <p> Version 3 </p>
+      <img src="/media/images/MacromindDirector_3.webp" width="200" height="223" alt="1991-1992 | version 3">
+      </div>
+      <br> <br> <br>
+      <div id="d1992">
+      <p> 1992 - 1993 </p>
+      <p> Version 3.1 </p>
+      <img src="/media/images/Director31.webp" width="200" height="224" alt="1992-1993 | version 3.1">
+      </div> </div>
+      <hr>
+      <div id="macromedia">
+      <h4 id="matitle"> Macromedia Director </h4>
+      <div id="d1993">
+      <p> 1993 - 1994 </p>
+      <p> Version 3.1.3 </p>
+      <img src="/media/images/MacromediaDirector_3.1.3.webp" width="200" height="224" alt="1993-1994 | version 3.1.3">
+      </div>
+      <br> <br> <br>
+      <div id="d1994">
+      <p> 1994 - 1996 </p>
+      <p> Version 4 </p>
+      <img src="/media/images/Director4.webp" width="200" height="200" alt="1994-1996 | version 4 icon"> <br> <br>
+      <img src="/media/images/Macromedia_Director_4banner.webp" width="200" height="118" alt="1994-1996 | version 4 banner">
+      </div>
+      <br> <br> <br>
+      <div id="d1996">
+      <p> 1996 - 1997 </p>
+      <p> Version 5 </p>
+      <img src="/media/images/Macromedia_Director_5_icon.webp" width="200" height="195" alt="1996-1997 | version 5 icon"> <br> <br>
+      <img src="/media/images/Macromedia_Director_5banner.webp" width="200" height="123" alt="1996-1997 | version 5 banner">
+      </div>
+      <br> <br> <br>
+      <div id="d1997">
+      <p> 1997 - 1998 </p>
+      <p> Version 6 </p>
+      <img src="/media/images/Macromedia_Director_6_icon.webp" width="200" height="180" alt="1997-1998 | version 6 banner"> <br> <br>
+      <img src="/media/images/Macromedia_Director_6banner.webp" width="200" height="146" alt="1997-1998 | version 6 banner">
+      </div>
+      <br> <br> <br>
+      <div id="d1998">
+      <p> 1998 - 2000 </p>
+      <p> Version 7 </p>
+      <img src="/media/images/Macromedia_Director_7_icon.webp" width="200" height="195" alt="1998-2000 | version 7 banner"> <br> <br>
+      <img src="/media/images/Macromedia_Director_7banner.webp" width="200" height="107" alt="1998-2000 | version 7 banner">
+      </div>
+      <br> <br> <br>
+      <div id="d2000">
+      <p> 2000 - 2001 </p>
+      <p> Version 8 </p>
+      <img src="/media/images/Macromedia_Director_8_icon.webp" width="200" height="195" alt="2000-2001 | version 8 banner"> <br> <br>
+      <img src="/media/images/Macromedia_Director_8icon.webp" width="200" height="81" alt="2000-2001 | version 8 banner">
+      </div>
+      <br> <br> <br>
+      <div id="d2001">
+      <p> 2001 - 2002 </p>
+      <p> Version 8.5 </p>
+      <img src="/media/images/Macromedia_Director_8.5.webp" width="200" height="55" alt="2001-2002 | version 8.5 banner">
+      </div>
+      <br> <br> <br>
+      <div id="d2002">
+      <p> 2002 - 2007 </p>
+      <p> Versions 9-10 </p>
+      <img src="/media/images/Macromedia_Director_9-10.webp" width="200" height="200" alt="2002-2007 | versions 9-10 icon">
+        </div> </div>
+      <hr>
+      <div id="adobe">
+      <h4 id="aetitle"> Adobe Director </h4>
+      <div id="d2007">
+      <p> 2007 - 2008 </p>
+      <p> Version 11 </p>
+      <img src="/media/images/Adobe_Director_11.png" width="200" height="200" alt="2007-2008 | version 11 icon">
+        </div>
+        <br> <br> <br>
+        <div id="d2008">
+      <p> 2008 - 2010 </p>
+      <p> Version 11.5 </p>
+      <img src="/media/images/Adobe_Director_11.5.webp" width="200" height="200" alt="2008-2010 | version 11.5 icon">
+        </div>
+      <br> <br> <br>
+        <div id="d2010">
+      <p> 2010 - 2012 </p>
+      <p> Version 12 </p>
+      <img src="/media/images/Adobe_Di.svg.png" width="200" height="200" alt="2010-2012 | version 12 icon">
+        </div> </div>
+      </Fragment></Scrollspy>
+    </div>
+            <hr>
+    <div id="sw">
+    <h2> Adobe Shockwave </h2>
+    <figure class="figure">
+      <img src="/media/images/Shockwave.png" width="12.5%" alt="Shockwave Logo" class="flash">
+      <figcaption class="figure-caption mt-1">Adobe Shockwave Logo</figcaption>
+    </figure>
+      <p> On this page, we will go over Adobe Shockwave.</p>
+      <h3> What is Adobe Shockwave </h3>
+      <p>Adobe Shockwave is mostly Adobe Director, however, it's a browser plug-in like Adobe Flash. It also supports DIR, DCR, DXR files. It can also help companies build multimedia apps. The latest version is 12.3.5.205 released on April 9th, 2019. Adobe discontinued Shockwave on the same day.</p>
+      <h3> How to use Adobe Shockwave after 2019 </h3>
+    <p>There's a <a href="/media/files/Shockwave_Installer_Full.exe" download="">full version</a> and a <a href="/media/files/Shockwave_Installer_Slim.exe" download="">slim version</a> you can install (recommended to have Windows Vista or 7). These versions are both 12.3.5.205. If you need older versions, <a href="http://www.oldversion.com/windows/adobe-shockwave/">click here</a>.
+      
+    </p></div>
+             <hr>
+             <div id="sl">
+      <h2> Adobe Shockwave Logo History </h2>
+      <Scrollspy id="sho-list"
+      scrollcontent={[
+        { name: "Macromedia Player", href: "#mptitle", additionalClasses: "fw-bolder" },
+        { name: "199? - 1995", href: "#s199u" },
+        { name: "Macromedia Shockwave", href: "#mstitle", additionalClasses: "fw-bolder" },
+        { name: "1995 - 1997", href: "#s1995" },
+        { name: "1997 - 2005", href: "#s1997" },
+        { name: "Adobe Shockwave", href: "#astitle", additionalClasses: "fw-bolder" },
+        { name: "2005 - 2011", href: "#s2005" },
+        { name: "2011 - 2013", href: "#s2011" },
+        { name: "2013 - 2015", href: "#s2013" },
+        { name: "2015 - Now", href: "#s2015" },
+      ]}      
+       ><Fragment slot="scrollspy-content">
+<div id="player">
+  <h4 id="mptitle"> Macromedia Player </h4>
+  <div id="s199u">
+  <p>199? - 1995</p>
+  <img src="/media/images/Macromedia_Player.webp" width="207" height="77" alt="199?-1995">  
+  
+  </div>
+</div><hr><h4 id="mstitle"> Macromedia Shockwave </h4><div id="shockwave"><div id="s1995">
+  <p>1995 - 1997</p>
+  
+  <img src="/media/images/Macromedia_Shockwave.webp" width="200" height="200" alt="1995-1997">  
+  
+  </div><br><br><br><div id="s1997">
+  <p>1997 - 2005</p>
+  
+  <img src="/media/images/Macromedia_Shockwave_Enabled.webp" width="200" height="200" alt="1997-2005">  
+  
+  </div><hr><div id="adobeshockwave"><h4 id="astitle"> Adobe Shockwave </h4><div id="s2005">
+  <p>2005 - 2011</p>
+  
+  <img src="/media/images/Adobe_Shockwave.webp" width="200" height="116" alt="2005 - 2011">  
+  
+  </div><br><br><br><div id="s2011">
+  <p>2011 - 2013</p>
+  
+  <img src="/media/images/2011-shock.webp" width="200" height="190" alt="2011-2013">  
+  
+  </div><br><br><br><div id="s2013">
+  <p>2013 - 2015</p>
+  
+  <img src="/media/images/Flash_Shockwave.svg" width="200" height="200" alt="2013-2015">  
+  
+  </div><br><br><br><div id="s2015">
+  <p>2015 - Now</p>
+  
+  <img src="/media/images/Shockwave.png" width="200px" height="195px" alt="2015-Now">  
+  
+  </div></div>
+</Fragment></Scrollspy>
+    </div>
+             <hr>
+             <div id="fh">
+    <h2> Flash Player's Logo History </h2>
+    <Scrollspy id="fla-list"
+    scrollcontent={[
+      { name: "1996 - 2002", href: "#f1996" },
+      { name: "2002 - 2006", href: "#f2002" },
+      { name: "2006 - 2008", href: "#f2006" },
+      { name: "2008 - 2010", href: "#f2008" },
+      { name: "2010 - 2013", href: "#f2010" },
+      { name: "2013 - 2015", href: "#f2013" },
+      { name: "2015 - 2020", href: "#f2015" },
+    ]}
+    ><Fragment slot="scrollspy-content">
+  <div id="f1996">
+    <p> 1996 - 2002 </p>
+    <p> Versions 1 - 5 </p>
+    <img src="/media/images/Macromedia_Flash_Player.png" width="200" height="200" alt="1996-2002 | versions 1-5"> <br> <br>
+    <img src="/media/images/Logo_macromedia_flash_player_logo_1996-2002.jpg" alt="1996-2002 | versions 1-5 banner">
+    </div>
+    <br> <br> <br>
+    <div id="f2002">
+    <p> 2002 - 2006 </p>
+    <p> Versions 6 - 8 </p>
+    <img src="/media/images/Fl-player6.png" width="200" height="200" alt="2002-2006 | versions 6-8"> <br> <br>
+    <img src="/media/images/Logo_macromedia_flash_player.jpg" width="107.34" height="120" alt="2002-2006 | versions 6-8 alt">
+    <img src="/media/images/Logo_flash_player_mx_120x120.gif" alt="2002-2006 | versions 6-8 alt (gif)">
+    </div>
+    <br> <br> <br>
+    <div id="f2006">
+    <p> 2006 - 2008 </p>
+    <p> Versions 8.5 - 9 </p>
+    <img src="/media/images/FlashPlayer_2006.png" width="200" height="200" alt="2006-2008 | versions 8.5-9">
+    </div>
+    <br> <br> <br>
+    <div id="f2008">
+    <p> 2008 - 2010 </p>
+    <p> Version 10 </p>
+    <img src="/media/images/Flash-10.png" width="200" height="200" alt="2008-2010 | versions 10">
+    </div>
+    <br> <br> <br>
+    <div id="f2010">
+    <p> 2010 - 2013 </p>
+    <p> Versions 11 - 11.9 </p>
+    <img src="/media/images/Adobe_Flash_Player_SVG.png" width="200" height="200" alt="2010-2013 | versions 11-11.9">
+    </div>
+    <br> <br> <br>
+    <div id="f2013">
+    <p> 2013 - 2015 </p>
+    <p> Versions 12 - 17 </p>
+    <img src="/media/images/FlashPlayer_2013.png" width="200" height="200" alt="2013-2015 | versions 12-17">
+    </div>
+    <br> <br> <br>
+    <div id="f2015">
+    <p> 2015 - 2020 </p>
+    <p> Versions 18 - 32; 50 (Enterprise) </p>
+    <img src="/media/images/Adobe_Flash_Player_32.svg.png" width="200" height="200" alt="2015-2020 | versions 18-32; 50"> <br> <br>
+    <img src="/media/images/Flash_box.png" alt="2015-2020 | versions 18-32; 50 installer"> <br>
+      <p> Installer </p>
+    </div>
+  </Fragment></Scrollspy>
+    </div>
+    <hr> <div id="ft">
+    <h2> How to use Flash after 2021 </h2>
+      <p> If you wanna use Flash in a browser or in an app, follow these instructions. </p>
+      <h3> Browser Installation </h3>
+      <p>
+    If there is Flash Player already installed, use the <a href="/media/files/uninstall_flash_player%20(Step%201).exe">Uninstaller for Windows</a>, otherwise use the <a href="/media/files/uninstall_flash_player.dmg">Uninstaller for Mac OS X - 10.6 or higher</a>, or the <a href="/media/files/uninstall_flash_player_osx_10.4">Uninstaller for Mac OS X - 10.4 &amp; 10.5</a>.
+    <br> <br>
+    After that, run an installer from the table of installers depending on your device with the version you want. The versions suffixed with “pep” are PPAPI (WebKit and Blink), the ones with “ax” are ActiveX (Trident and EdgeHTML) and the ones without suffix are NPAPI (Gecko and Goanna). Follow the instructions on the installer that you chose. Reminder that most major browsers such as Google Chrome, FireFox and many more, will no longer accept any flash version.
+    <br> <br>
+        Next, find a browser that allows Flash plug-ins, you can visit <a href="#br">this page</a> to find some. 
+    </p><div class="d-flex flex-wrap row-cols-3">
+        <div class="col">
+            <p class="m-0 p-0"><b>Windows</b></p>
+            <p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_win.exe" download="">win</a></p><p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_winpep.exe" download="">winpep</a></p><p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_winax.exe" download="">winax</a></p>
+        </div>
+    <div class="col">
+            <p class="m-0 p-0"><b>Macintosh</b></p>
+            <p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_mac.dmg" download="">mac</a></p><p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_macpep.dmg" download="">macpep</a></p>
+        </div><div class="col">
+            <p class="m-0 p-0"><b>Linux i386</b></p>
+            <p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_linux.i386.tar.gz" download="">linux</a></p><p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_linuxpep.i386.tar.gz" download="">linuxpep</a></p></div>
+        <div class="col">
+    
+        </div>
+    <div class="col">
+            <p class="m-0 p-0"><b>Macintosh (pkg)</b></p>
+            <p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_mac_pkg.dmg" download="">mac</a></p><p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_macpep_pkg.dmg" download="">macpep</a></p>
+        </div><div class="col">
+            <p class="m-0 p-0"><b>Linux x86_64</b></p>
+            <p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_linux.x86_64.tar.gz" download="">linux</a></p><p class="m-0 p-0"><a href="/media/files/flashplayer32_0r0_371_linuxpep.x86_64.tar.gz" download="">linuxpep</a></p>
+        </div>
+    </div>
+      <br>
+     <h3> App/SWF Installation </h3>
+    <p> In the "SWF Installation", an <a href="/media/files/flashplayer_32_sa.exe">already installed app</a> is waiting for you. However, you'll need a SWF file (Shockwave Flash) to run. I left a <a href="/media/files/flash_cmpunk.swf">SWF game here</a> for you to try out.
+      </p>
+    </div><hr><div id="oc">
+    <h2> How to fix the "missing Flash.ocx" error after Windows 2000 </h2>
+      <p>
+        If you are having errors that say cannot create, or find <code>flash.ocx</code>, follow these steps.
+      <br> <br>
+    1.  If you haven't installed Flash Player yet, please <a href="#ft">click here</a>.
+      <br> <br>
+    2. Find in Windows Explorer: <code>C:\Windows\SysWOW64\Macromed\Flash</code>, and find the file <code>Flash.ocx</code> (may look different depending on which version flash is). If you can't find it, look in instead: <code>C:\Windows\System32\Macromed\Flash</code>, <code>System32</code>, or <code>SysWOW64</code>.
+           <br>
+        a. If you still can't find <code>Flash.ocx</code> anywhere, you may have to <a href="/media/files/flash32_32_0_0_371.ocx" download="">download it</a>, then put it in <code>C:\Windows\SysWOW64\Macromed\Flash</code>.
+      <br> <br>
+    3. Copy the file, then rename said copied file to <code>flash.ocx</code>, <b>DO NOT RENAME OR MOVE THE ORIGINAL FILE</b>, and paste it in both: <code>System32</code> and/or <code>SysWOW64</code>. [The <code>flash.ocx</code> file should look like <code>flashversion.ocx</code> (for example <code>flash9.ocx</code>) ]
+      <br> <br>
+        Try the program, or screensaver, out now to see if it works. </p>
+    </div><hr><div id="am">
+    <h2> AMD GPU Fix for Flash Player </h2>
+      <p> Thanks to <a href="https://www.reddit.com/user/Djracem">Djracem on Reddit</a> for contributing to this page.</p>
+      <p> AMD adrenalin drivers 22.5.2, and later, are causing Flash to only display a colored background associated with the background of Flash Player. To not roll back pre-22.5.2, disable "Hardware Accel" on Macromed\Flash and on mms.cfg. Run, and make sure Command Prompt is ran as administrator, and then copy the Batchfile code below.
+      <br> <code>mkdir "%WINDIR% \SysWoW64\Macromed\Flash" <br>
+        NUL &amp; echo DisableHardwareAcceleration "WINDIR% \SysWoW64\Macromed\Flash\mms.cfg"</code></p>
+          </div><hr><div id="br">
+      <h2> Browsers that support the Flash Player plug-in </h2>
+      <p> To use <a href="#ft">a working version of Flash Player</a>, you would have to find browsers that support the Flash Player plug-in. But since the Flash shutdown of 2021, major browsers like Chrome, Edge, Firefox, and more does not support the flash player plug-in. You can see some of the browsers that support the plug-in here.</p>
+      <a href="https://basilisk-browser.org/" target="_blank" rel="noopener noreferrer">Basilisk</a> <br>
+      <a href="https://www.waterfox.net/" target="_blank" rel="noopener noreferrer">Waterfox</a> <br>
+      <a href="https://www.palemoon.org/" target="_blank" rel="noopener noreferrer">Pale Moon</a> <br>
+      <a href="https://www.mypal-browser.org/" target="_blank" rel="noopener noreferrer">Mypal</a> <br>
+      <a href="http://kmeleonbrowser.org/" target="_blank" rel="noopener noreferrer">K-Meleon</a> <br>
+      <a href="https://www.opera.com/">Opera</a><br>
+      <h3> Android Browsers </h3>
+      <a href="https://play.google.com/store/apps/details?id=mobi.browser.flashfox&amp;hl=en_IN" target="_blank" rel="noopener noreferrer">FlashFox</a> <br>
+      <a href="https://play.google.com/store/apps/details?id=com.kiwibrowser.browser&amp;hl=en_IN" target="_blank" rel="noopener noreferrer">Kiwi Browser</a> <br>
+      <a href="https://play.google.com/store/apps/details?id=mobi.mgeek.TunnyBrowser&amp;hl=en_IN" target="_blank" rel="noopener noreferrer">Dolphin Browser</a> <br>
+      <a href="https://play.google.com/store/apps/details?id=com.cloudmosa.puffinFree&amp;hl=en_IN" target="_blank" rel="noopener noreferrer">Puffin</a> <br>
+      <a href="https://play.google.com/store/apps/details?id=com.opera.browser&amp;hl=en_IN" target="_blank" rel="noopener noreferrer">Opera</a>
+          </div><hr><div id="ao">
+      <h2> Flash Player for Android </h2>
+      <p> Adobe AIR and Adobe Flash Player for Android are no longer supported. You can download them using these APK files and make it work in 2022.</p>
+      <a href="/media/files/com.adobe.flashplayer-11.1.115.81-11111508.apk" download="">Adobe Flash Player for Android (v11)</a> <br>
+      <a href="/media/files/com.adobe.air.apk" download="">Adobe AIR</a>
+          </div><hr><div id="tf">
+          <h2> Tools for Flash Player </h2>
+      <p> These tools can be used for Flash Player. </p>
+      <a href="https://github.com/KuromeSan/FlashPatcher/releases/tag/v1.7" target="_blank" rel="noopener noreferrer">FlashPatcher</a> <br>
+      <a href="/media/files/swftoexe_setup.exe">SWF to EXE Converter</a> <br>
+      <a href="/media/files/exe2swf.exe">EXE to SWF Converter</a>
+          </div><hr>
+             <div id="rs">
+               <h2> How to Run Apps in Screensavers </h2>
+    <p><b>Please note that AT Products LLC never created any of these files. Credits to <a href="https://www.reddit.com/user/IoI_xD/">IoI_xD on Reddit</a>.</b> The reason this relates to Flash as you may need this section for a .EXE file that contains Flash content that is supposed to be a screensaver.</p>
+    <p>Firstly, to get it to actually run, you'll first need to download and run <a href="/media/files/ScreensaversPlanet_Flash_Fix.reg">this registry file</a>. You will get a warning upon running it, <a href="https://www.virustotal.com/#/file/84532c37fba28264d9a73cb86cf92a524732e2d0b189cd4cd30c84c1e4db1e84/detection">It is indeed safe</a>.</p>
+    <p>After that you should be able to click on it and it will exactly as shown above, but what about getting it to automatically run as a screensaver? Windows doesn't allow you to run .exe files as savers anymore, so you will have to do a bit of extra set up. Before anything, you'll need a constistant place to save all these files. We recommend <code>C:\Windows\System32</code> because that's where all the screensavers are normally stored.</p>
+    <p>Secondly, you'll need to download <a href="/media/files/Screen Launcher.scr">Screen Launcher</a>. Save it to a place on your computer, then right click it and select "Install". Then right click the <code>.scr</code> file and click install, you shall be taken to the screensaver settings automatically. Optionally to prevent issues, put Screen Launcher into <code>C:\Windows\System32</code> If you're not on the screen and you're on Windows Vista or above, press WIN + R and type into Run <code>control desk.cpl,,@screensaver</code> to enter Screensaver Settings and select Screen Launcher. Click settings on the screensaver annd navigate it to where you saved the screensaver (e.g. <code>C:\Windows\System32\Bobsaver.exe</code>).</p>
+    <p>Now the screensaver works, but there's still a problem: it doesn't exit as it should. You can't move your mouse to exit it like normal. Instead you have to press "esc", which doesn't exit the program but minimizes it. We can't do anything about the mouse, but what we can do is make it so that the esc key exists the program completely. Download <a href="https://autohotkey.com/download/">AutoHotKey</a> and install it. Once it's installed, download a <a href="/media/files/bobsav.ahk">.ahk file</a>, then move it to <code>C:\Users\Owner\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</code>, or press WIN + R and type into Run <code>shell:startup</code> to go to the folder. What the script will do is bind the ESC key to the ALT + F4 function, but only when the screensaver is running. Just double click the file and it should start running. You can now experience the screensaver as it was meant to be seen.</p>
+             </div>
+             <hr>
+        <div id="fg">
+    <h2> Flash Games for Today's Times </h2>
+    <h3>Browser Games</h3>
+      <p>Browser games are not that popular due to the 2020s having modern and widely used browsers not supporting the original Flash Engine. Either websites went to HTML5 games or replaced their engines with <a href="https://ruffle.rs/">Ruffle</a> or others.</p>
+    
+      <p>
+        <a href="https://www.newgrounds.com/">Newgrounds</a>. This is a special one as they allow any users to post content. They replaced their engine with their <a href="https://www.newgrounds.com/flash/player">downloadable one</a>.</p>
+      <p>There's tons of generic flash games, like the following:<br>
+      <a href="https://www.crazygames.com/t/flash">CrazyGames</a><br>
+    <a href="https://armorgames.com/category/flash-games">Armor Games</a><br>
+        <a href="https://www.kongregate.com/flash-games">Kongregate</a><br>
+        <a href="https://poki.com/en/flash">Poki</a><br>
+        <a href="https://www.addictinggames.com/">Addicting Games</a><br>
+        <a href="https://www.numuki.com/games/flash/">NuMuKi</a><br>
+        <br>
+    If you wanna support high quality games, you can so on <a href="https://store.steampowered.com/curator/41097579-Adobe-Flash-Games/">Steam</a>.</p>
+        <h3>App Games</h3>
+      <p>
+        Not much Flash games are on apps, mostly after 2020.
+      </p>
+      <p>
+        <a href="https://flashpointarchive.org/">Flashpoint</a>, it contains a ton, mostly flash games.<br>
+    <a href="https://archive.org/details/softwarelibrary_flash_games">Archive.org</a>, it contains tons of SWF files for the <a href="#ft">App installation</a>.</p>
+    </div>
+    <hr>         <div id="eg">
+    <h2> Flash Engines and Alternatives </h2>
+    <h3>Browser Supports
+       <a href="https://ruffle.rs/">Ruffle</a>
+     <p></p>
+        </h3><h3>Apps</h3>
+      <p>These ones are for computers, if you use Android, <a href="#br">click here for the browsers</a> or <a href="#ao">click here for the actual flash engine</a>.</p>
+        <p><a href="https://ruffle.rs/">Ruffle</a><br>
+    <a href="https://flashpointarchive.org/">FlashPoint</a></p>
+    </div>
+        </main>
+        <Footer />
+<BackToTop />
+</div>
+<Scripts scrollspy="true"/>

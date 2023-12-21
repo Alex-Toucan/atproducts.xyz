@@ -1,0 +1,406 @@
+root@dea:/tmp/logix# gcc -o brute jihad.c -static -lssh2 -lssl -lcrypto -ldl -lz                                                                                                              -lpthread
+jihad.c: In function ‘check_sockets’:
+jihad.c:128:13: warning: implicit declaration of function ‘close’; did you mean                                                                                                              ‘pclose’? [-Wimplicit-function-declaration]
+  128 |             close(connlist[i].s);
+      |             ^~~~~
+      |             pclose
+jihad.c:141:33: warning: implicit declaration of function ‘inet_ntoa’ [-Wimplici                                                                                                             t-function-declaration]
+  141 |                         (char *)inet_ntoa(connlist[i].addr.sin_addr));
+      |                                 ^~~~~~~~~
+jihad.c:141:25: warning: cast to pointer from integer of different size [-Wint-t                                                                                                             o-pointer-cast]
+  141 |                         (char *)inet_ntoa(connlist[i].addr.sin_addr));
+      |                         ^
+jihad.c:156:21: warning: cast to pointer from integer of different size [-Wint-t                                                                                                             o-pointer-cast]
+  156 |                     (char *)inet_ntoa(connlist[i].addr.sin_addr));
+      |                     ^
+jihad.c: In function ‘checkauth’:
+jihad.c:232:16: warning: implicit declaration of function ‘inet_addr’ [-Wimplici                                                                                                             t-function-declaration]
+  232 |     hostaddr = inet_addr(hostname);
+      |                ^~~~~~~~~
+jihad.c:242:9: warning: implicit declaration of function ‘error’; did you mean ‘                                                                                                             herror’? [-Wimplicit-function-declaration]
+  242 |         error("setsockopt failed\n");
+      |         ^~~~~
+      |         herror
+jihad.c: In function ‘scanbclass’:
+jihad.c:403:44: warning: too many arguments for format [-Wformat-extra-args]
+  403 |     snprintf(outfile, sizeof(outfile) - 1, "scan.log", bclass, port);
+      |                                            ^~~~~~~~~~
+jihad.c:410:12: warning: too many arguments for format [-Wformat-extra-args]
+  410 |     printf("[-] Searching: ", bclass);
+      |            ^~~~~~~~~~~~~~~~~
+jihad.c:486:41: warning: format ‘%u’ expects argument of type ‘unsigned int’, bu                                                                                                             t argument 2 has type ‘time_t’ {aka ‘long int’} [-Wformat=]
+  486 |     printf("\n[!] Scanning complete In %u Seconds. [We got %d ips]\n", (                                                                                                             time(0) - scantime), tot);
+      |                                        ~^                              ~                                                                                                             ~~~~~~~~~~~~~~~~~~~
+      |                                         |                                                                                                                                                    |
+      |                                         unsigned int                                                                                                                                         time_t {aka long int}
+      |                                        %lu
+jihad.c: In function ‘scan’:
+jihad.c:539:13: warning: implicit declaration of function ‘fork’ [-Wimplicit-fun                                                                                                             ction-declaration]
+  539 |       PID = fork();
+      |             ^~~~
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (channel.o): in function `libssh2_channel_x11_req_ex':
+(.text+0x1bf3): undefined reference to `gcry_randomize'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (transport.o): in function `_libssh2_transport_send':
+(.text+0xa49): undefined reference to `gcry_randomize'
+/usr/bin/ld: (.text+0xc51): undefined reference to `gcry_randomize'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (libgcrypt.o): in function `_libssh2_rsa_new':
+(.text+0x48): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: (.text+0x77): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (libgcrypt.o): in function `_libssh2_rsa_sha1_verify':
+(.text+0xcb): undefined reference to `gcry_md_hash_buffer'
+/usr/bin/ld: (.text+0xe8): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: (.text+0x103): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: (.text+0x118): undefined reference to `gcry_pk_verify'
+/usr/bin/ld: (.text+0x123): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: (.text+0x12d): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: (.text+0x166): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (libgcrypt.o): in function `_libssh2_dsa_new':
+(.text+0x1cc): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: (.text+0x203): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (libgcrypt.o): in function `_libssh2_rsa_sha1_sign':
+(.text+0x73f): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: (.text+0x757): undefined reference to `gcry_pk_sign'
+/usr/bin/ld: (.text+0x763): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: (.text+0x77d): undefined reference to `gcry_sexp_find_token'
+/usr/bin/ld: (.text+0x79d): undefined reference to `gcry_sexp_nth_data'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (libgcrypt.o): in function `_libssh2_dsa_sha1_sign':
+(.text+0x87c): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: (.text+0x896): undefined reference to `gcry_pk_sign'
+/usr/bin/ld: (.text+0x8a2): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: (.text+0x8d0): undefined reference to `gcry_sexp_find_token'
+/usr/bin/ld: (.text+0x8f3): undefined reference to `gcry_sexp_nth_data'
+/usr/bin/ld: (.text+0x937): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: (.text+0x946): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: (.text+0x985): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: (.text+0x998): undefined reference to `gcry_sexp_find_token'
+/usr/bin/ld: (.text+0x9b2): undefined reference to `gcry_sexp_nth_data'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (libgcrypt.o): in function `_libssh2_dsa_sha1_verify':
+(.text+0xa62): undefined reference to `gcry_md_hash_buffer'
+/usr/bin/ld: (.text+0xa84): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: (.text+0xab2): undefined reference to `gcry_sexp_build'
+/usr/bin/ld: (.text+0xac9): undefined reference to `gcry_pk_verify'
+/usr/bin/ld: (.text+0xad4): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: (.text+0xade): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: (.text+0xb16): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (libgcrypt.o): in function `_libssh2_cipher_init':
+(.text+0xb5a): undefined reference to `gcry_cipher_get_algo_keylen'
+/usr/bin/ld: (.text+0xb6c): undefined reference to `gcry_cipher_open'
+/usr/bin/ld: (.text+0xb7f): undefined reference to `gcry_cipher_setkey'
+/usr/bin/ld: (.text+0xba4): undefined reference to `gcry_cipher_get_algo_blklen'
+/usr/bin/ld: (.text+0xbb8): undefined reference to `gcry_cipher_setiv'
+/usr/bin/ld: (.text+0xbc5): undefined reference to `gcry_cipher_close'
+/usr/bin/ld: (.text+0xbd1): undefined reference to `gcry_cipher_setctr'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (libgcrypt.o): in function `_libssh2_cipher_crypt':
+(.text+0xc02): undefined reference to `gcry_cipher_encrypt'
+/usr/bin/ld: (.text+0xc11): undefined reference to `gcry_cipher_decrypt'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (global.o): in function `libssh2_init':
+(.text+0x38): undefined reference to `gcry_control'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_rsa_dtor':
+(.text+0xc): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_dss_signv':
+(.text+0x7f): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0xa9): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xba): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0xd4): undefined reference to `gcry_md_close'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_dss_initPEMFromMemory':
+(.text+0x168): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_dss_initPEM':
+(.text+0x1f3): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_dss_init':
+(.text+0x281): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_rsa_signv':
+(.text+0x3c1): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x3f1): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x402): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x41c): undefined reference to `gcry_md_close'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_rsa_initPEMFromMemory':
+(.text+0x4c8): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_rsa_initPEM':
+(.text+0x553): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_rsa_init':
+(.text+0x5dd): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (hostkey.o): in function `hostkey_method_ssh_dss_dtor':
+(.text+0x6ec): undefined reference to `gcry_sexp_release'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `diffie_hellman_sha1':
+(.text+0x10b): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x11c): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x12d): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x141): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x1fd): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x208): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x21b): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x244): undefined reference to `gcry_mpi_randomize'
+/usr/bin/ld: (.text+0x257): undefined reference to `gcry_mpi_powm'
+/usr/bin/ld: (.text+0x260): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x26c): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x28a): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x2c9): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x2e2): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o):(.text+0x2ee): more undefined references to `gcry_mpi_get_nbits' follow
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `diffie_hellman_sha1':
+(.text+0x315): undefined reference to `gcry_mpi_print'
+/usr/bin/ld: (.text+0x43d): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x45e): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x4df): undefined reference to `gcry_mpi_scan'
+/usr/bin/ld: (.text+0x524): undefined reference to `gcry_mpi_powm'
+/usr/bin/ld: (.text+0x530): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x53f): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x563): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x5a6): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x5bd): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o):(.text+0x5cc): more undefined references to `gcry_mpi_get_nbits' follow
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `diffie_hellman_sha1':
+(.text+0x5f5): undefined reference to `gcry_mpi_print'
+/usr/bin/ld: (.text+0x611): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x643): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x663): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x68c): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x6ab): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x6cb): undefined reference to `gcry_md_write'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o):(.text+0x6e3): more undefined references to `gcry_md_write' follow
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `diffie_hellman_sha1':
+(.text+0x7ee): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x808): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x964): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x970): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x990): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x9b3): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x9cb): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x9dd): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x9fc): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xa13): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xa84): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xa90): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0xaaf): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0xad2): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0xaea): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xafd): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xb1c): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xb33): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xb55): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0xb61): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0xb88): undefined reference to `gcry_mpi_print'
+/usr/bin/ld: (.text+0xcbc): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xcc8): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0xce8): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0xd0b): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0xd23): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xd35): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xd54): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xd6b): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xdab): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xdb7): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0xdcc): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0xecc): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xed8): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0xef8): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0xf1b): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0xf33): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xf45): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xf64): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xf7b): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x103c): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x1048): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x1067): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x108a): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x10a2): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x10b5): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x10d4): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x10eb): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x11dc): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x11e8): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x1208): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x122b): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x1243): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x1255): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x1274): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x128b): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x1443): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x144f): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x146d): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x14f6): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x1505): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x152e): undefined reference to `gcry_mpi_print'
+/usr/bin/ld: (.text+0x15ba): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x15d0): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x1648): undefined reference to `gcry_md_write'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `kex_method_diffie_hellman_group_exchange_sha1_key_exchange                                                                                                             ':
+(.text+0x16e4): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x16fb): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x1823): undefined reference to `gcry_mpi_scan'
+/usr/bin/ld: (.text+0x1846): undefined reference to `gcry_mpi_scan'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `kex_method_diffie_hellman_group1_sha1_key_exchange':
+(.text+0x1a13): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x1a2a): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x1a5e): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x1a72): undefined reference to `gcry_mpi_set_ui'
+/usr/bin/ld: (.text+0x1a92): undefined reference to `gcry_mpi_scan'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `kex_method_diffie_hellman_group14_sha1_key_exchange':
+(.text+0x1b19): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x1b30): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x1b5e): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x1b72): undefined reference to `gcry_mpi_set_ui'
+/usr/bin/ld: (.text+0x1b92): undefined reference to `gcry_mpi_scan'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `kex_method_diffie_hellman_group_exchange_sha256_key_exchan                                                                                                             ge':
+(.text+0x21ef): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x2206): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x2243): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x2251): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x2350): undefined reference to `gcry_mpi_scan'
+/usr/bin/ld: (.text+0x2372): undefined reference to `gcry_mpi_scan'
+/usr/bin/ld: (.text+0x23d4): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x23eb): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x2402): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x2419): undefined reference to `gcry_mpi_release'
+/usr/bin/ld: (.text+0x24cd): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x24db): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x24f4): undefined reference to `gcry_mpi_new'
+/usr/bin/ld: (.text+0x251d): undefined reference to `gcry_mpi_randomize'
+/usr/bin/ld: (.text+0x2536): undefined reference to `gcry_mpi_powm'
+/usr/bin/ld: (.text+0x2542): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x2551): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x2572): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x25bc): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x25d3): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o):(.text+0x25e2): more undefined references to `gcry_mpi_get_nbits' follow
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `kex_method_diffie_hellman_group_exchange_sha256_key_exchan                                                                                                             ge':
+(.text+0x2608): undefined reference to `gcry_mpi_print'
+/usr/bin/ld: (.text+0x2734): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x2755): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x27d9): undefined reference to `gcry_mpi_scan'
+/usr/bin/ld: (.text+0x2824): undefined reference to `gcry_mpi_powm'
+/usr/bin/ld: (.text+0x2830): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x283f): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x2863): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x28a6): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x28bd): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o):(.text+0x28cc): more undefined references to `gcry_mpi_get_nbits' follow
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `kex_method_diffie_hellman_group_exchange_sha256_key_exchan                                                                                                             ge':
+(.text+0x28f4): undefined reference to `gcry_mpi_print'
+/usr/bin/ld: (.text+0x2910): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x2942): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2962): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x298b): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x29aa): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x29ca): undefined reference to `gcry_md_write'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o):(.text+0x29e2): more undefined references to `gcry_md_write' follow
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `kex_method_diffie_hellman_group_exchange_sha256_key_exchan                                                                                                             ge':
+(.text+0x2b1a): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x2b37): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x2c94): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2ca0): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x2cc3): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x2ce6): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x2cfe): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2d10): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2d2f): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2d46): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2df3): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x2e02): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x2e28): undefined reference to `gcry_mpi_print'
+/usr/bin/ld: (.text+0x2f2c): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2f38): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x2f5b): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x2f7e): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x2f96): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2fa8): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2fc7): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x2fde): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x3036): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x3042): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x3069): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x308c): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x30a4): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x30b6): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x30d5): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x30ec): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x322c): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x3238): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x325b): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x327e): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x3296): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x32a8): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x32c7): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x32de): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x334c): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x3358): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x337a): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x339d): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x33b5): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x33c9): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x33e8): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x33ff): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x34ec): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x34f8): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x351b): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x353e): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x3556): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x3568): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x3587): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x359e): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x3735): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x3741): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x375f): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x3785): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x3791): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x37a6): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x3821): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x3830): undefined reference to `gcry_mpi_get_nbits'
+/usr/bin/ld: (.text+0x3858): undefined reference to `gcry_mpi_print'
+/usr/bin/ld: (.text+0x38d2): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x38e8): undefined reference to `gcry_md_write'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (kex.o): in function `_libssh2_kex_exchange':
+(.text+0x3ca1): undefined reference to `gcry_randomize'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (mac.o): in function `mac_method_hmac_ripemd160_hash':
+(.text+0x92): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0xa4): undefined reference to `gcry_md_setkey'
+/usr/bin/ld: (.text+0xb6): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xc5): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0xdc): undefined reference to `gcry_md_get_algo'
+/usr/bin/ld: (.text+0xe3): undefined reference to `gcry_md_get_algo_dlen'
+/usr/bin/ld: (.text+0xf1): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x108): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x13d): undefined reference to `gcry_md_write'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (mac.o): in function `mac_method_hmac_md5_hash':
+(.text+0x1a2): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x1b4): undefined reference to `gcry_md_setkey'
+/usr/bin/ld: (.text+0x1c6): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x1d5): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x1ec): undefined reference to `gcry_md_get_algo'
+/usr/bin/ld: (.text+0x1f3): undefined reference to `gcry_md_get_algo_dlen'
+/usr/bin/ld: (.text+0x201): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x218): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x24d): undefined reference to `gcry_md_write'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (mac.o): in function `mac_method_hmac_sha1_hash':
+(.text+0x312): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x324): undefined reference to `gcry_md_setkey'
+/usr/bin/ld: (.text+0x336): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x345): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x35c): undefined reference to `gcry_md_get_algo'
+/usr/bin/ld: (.text+0x363): undefined reference to `gcry_md_get_algo_dlen'
+/usr/bin/ld: (.text+0x371): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x388): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x3bd): undefined reference to `gcry_md_write'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (mac.o): in function `mac_method_hmac_sha2_512_hash':
+(.text+0x482): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x494): undefined reference to `gcry_md_setkey'
+/usr/bin/ld: (.text+0x4a6): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x4b5): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x4cc): undefined reference to `gcry_md_get_algo'
+/usr/bin/ld: (.text+0x4d3): undefined reference to `gcry_md_get_algo_dlen'
+/usr/bin/ld: (.text+0x4e1): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x4f8): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x52d): undefined reference to `gcry_md_write'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (mac.o): in function `mac_method_hmac_sha2_256_hash':
+(.text+0x592): undefined reference to `gcry_md_open'
+/usr/bin/ld: (.text+0x5a4): undefined reference to `gcry_md_setkey'
+/usr/bin/ld: (.text+0x5b6): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x5c5): undefined reference to `gcry_md_write'
+/usr/bin/ld: (.text+0x5dc): undefined reference to `gcry_md_get_algo'
+/usr/bin/ld: (.text+0x5e3): undefined reference to `gcry_md_get_algo_dlen'
+/usr/bin/ld: (.text+0x5f1): undefined reference to `gcry_md_read'
+/usr/bin/ld: (.text+0x608): undefined reference to `gcry_md_close'
+/usr/bin/ld: (.text+0x63d): undefined reference to `gcry_md_write'
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/libssh2.a                                                                                                             (crypt.o): in function `crypt_dtor':
+(.text+0x22): undefined reference to `gcry_cipher_close'
+collect2: error: ld returned 1 exit status
