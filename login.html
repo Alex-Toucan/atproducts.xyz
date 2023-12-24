@@ -22,13 +22,24 @@
   <meta name="author" content="Alex Toucan">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="/static/darkmode.js"></script>
+  <style>
+      @media (max-width:767.98px) {
+          .main-img {
+              width: 80%;
+              content: url("/media/images/longwhite.png");
+          }
+          .hero-img {
+              height: 50%;
+          }
+      }
+  </style>
 </head>
 <body class="h-100">
   <div id="page">
-    <div class="d-md-flex gap-2 h-100">
-      <div class="col hero hero-main p-5 d-flex justify-content-center align-items-center border-bottom border-md-end border-5 border-dark-subtle">
+   <div class="d-md-flex gap-2 h-100">
+      <div class="col hero hero-img hero-main p-5 d-flex justify-content-center align-items-center border-bottom border-md-end border-5 border-dark-subtle">
         <div class="text-center">
-          <img src="/media/images/shortwhite.png" class="hero-filter" width="50%">
+          <img src="/media/images/shortwhite.png" class="main-img hero-filter" width="50%">
         </div>
       </div>
 
