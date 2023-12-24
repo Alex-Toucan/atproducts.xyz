@@ -17,13 +17,18 @@ import BackToTop from '../../components/BackToTop.astro';
   method="POST"
   data-netlify="true"
 class>
-  <div class="mb-3">
+<div class="d-sm-flex gap-2">
+<div class="col">
+    <div class="mb-3">
+      <label for="nameInput" class="form-label fw-bold">Name</label>
+      <input name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
+    </div>
+</div>
+<div class="col">
+<div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label fw-bold">Email address</label>
   <input name="Email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
 </div>
-<div class="mb-3">
-  <label for="nameInput" class="form-label fw-bold">Name</label>
-  <input name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
 </div>
 <div class="mb-3">
   <label for="textareaInput" class="form-label fw-bold">Information to Send</label>
