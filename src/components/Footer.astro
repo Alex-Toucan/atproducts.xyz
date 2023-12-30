@@ -1,9 +1,9 @@
 ---
-const { author, hr } = Astro.props;
+const { author, hr, marginTop } = Astro.props;
 ---
 <footer>
   {hr !== 'none' && <hr>}
-  <div class="container-footer">
+  <div class={`container-footer ${marginTop === 'true' ? 'mt-mmd-3' : ''}`}>
   <div class="mt-md-5">
     <div class="row px-md-2">
       <div class="col-md-2 me-xesm-2">
