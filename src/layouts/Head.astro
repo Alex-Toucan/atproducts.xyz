@@ -27,6 +27,7 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
         <Fragment>
           <link rel="icon" href={`/media/images/${icon}`}>
           <meta property="og:image" content={`/media/images/${icon}`}>
+          <meta name="twitter:image" content={`/media/images/${icon}`}>
         </Fragment>
         :
         <Fragment>
@@ -38,6 +39,7 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
           <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
           <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
           <meta property="og:image" content="/media/favicon/iconembed.png">
+          <meta name="twitter:image" content="/media/favicon/iconembed.png">
           <meta name="msapplication-TileColor" content="#da532c">
         </Fragment>
       }    
@@ -46,7 +48,10 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
       <meta name="title" content={title}>
       <meta name="description" content={description}>
       <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@ATProductsLLC">
       <meta name="twitter:creator" content="@ATProductsLLC">
+      <meta name="twitter:title" content={title}>
+      <meta name="twitter:description" content={description}>
       {keywords && (
         <meta name="keywords" content={keywords}>
       )}
