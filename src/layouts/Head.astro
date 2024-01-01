@@ -45,12 +45,16 @@ const { title, heroid, icon, bulletin, description, keywords, author, additional
       <meta charset="UTF-8">
       <meta name="title" content={title}>
       <meta name="description" content={description}>
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:creator" content="@ATProductsLLC">
       {keywords && (
         <meta name="keywords" content={keywords}>
       )}
       {author && (
         <meta name="author" content={author}>
       )}
+      <meta property="og:title" content={title}>
+      <meta property="og:description" content={description}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <Fragment set:html={additionalContent}>
       <script src="/static/darkmode.js" is:inline></script>
