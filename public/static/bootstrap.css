@@ -18013,5 +18013,10 @@ height: calc(100vh - 448px);
 	  border-color: var(--bs-light-border-subtle) !important;
 }
 
+.glow-text {
+    box-shadow: 0 0.5rem 1rem gold !important;
+}
+
+
 /* End secondary code */
 /*# sourceMappingURL=bootstrap.css.map */
