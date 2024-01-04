@@ -18014,7 +18014,7 @@ height: calc(100vh - 448px);
 }
 
 .glow-text {
-	text-color: gold;
+	color: gold;
     filter: drop-shadow(16px 16px 20px gold);
 }
 
