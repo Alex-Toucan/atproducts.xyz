@@ -17747,11 +17747,13 @@ textarea.form-control-lg {
 }
       
 
-    .sw-feature-box {
-      background-color: grey;
-      padding: 10px;
-			border: 1px solid black;
-    }
+.sw-feature-box {
+	display: flex;
+	justify-content: center;
+  background-color: grey;
+  padding: 10px;
+  border: 1px solid black;
+}
 
 .sw-link {
 	      color: white !important;
