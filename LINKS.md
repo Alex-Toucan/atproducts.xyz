@@ -4,7 +4,6 @@ https://pikuma.com/blog/isometric-projection-in-games interesting read
 https://github.com/WerWolv/ImHex
 https://github.com/idapython/src
 Udemy Mega.nz 12 Parts Courses Collection 2022:
-
 https://controlc.com/60860490
 https://youtube.com/shorts/hXSX1mfWahM?feature=share
 4 TB Mega.nz  Courses Collection 2022:
@@ -53,6 +52,7 @@ https://www.youtube.com/watch?v=7mdc-lRrW1c
 http://www.simplecpudesign.com/simple_cpu_v1/
 https://blog.miguelgrinberg.com/post/the-ultimate-guide-to-python-decorators-part-i-function-registration
 https://www.youtube.com/watch?v=-29x_deQQus
+<hr>
 --------Language Specific IDE's--------
 
 5. **Pycharm**
