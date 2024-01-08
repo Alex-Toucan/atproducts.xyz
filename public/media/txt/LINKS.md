@@ -53,6 +53,29 @@ http://www.simplecpudesign.com/simple_cpu_v1/
 https://blog.miguelgrinberg.com/post/the-ultimate-guide-to-python-decorators-part-i-function-registration
 https://www.youtube.com/watch?v=-29x_deQQus
 <hr>
+***What code editor should i use?***
+
+This all comes down to personal pereference so here are a couple of the most popular ones
+
+1. **Atom**
+
+Atom is a simple and clean text editor that does what it needs to do, and it does it good. Don't expect a lot of fancy stuff tho since it's just a text editor
+https://atom.io/
+
+2. **Visual Studio Code**
+
+VS Code is one of the most widely used text editors there is. It offers limitless options for customization, tons of community extension, and a ton more feautures. It can be a bit scary if you're just starting out but once it becomes familiar your productivity can skyrocket
+https://code.visualstudio.com/download
+
+3. **Sublime Text**
+
+Sublime text is a simple, lightweight text editor but it can be expanded to become very powerful with it's plugin support. If you want something lightweight and flexible that works good, this might be a good choice
+https://www.sublimetext.com/3
+
+4. **Vim**
+
+For all the chad programmers who want to flex their skills. Vim is a terminal based text editor that is very lightweight and can boost your efficiency once you get comfortable with it due to it's "simplicity". New users, beware, it looks scary and it's not very beginner friendly
+https://www.vim.org/download.php
 https://phish.report
 --------Language Specific IDE's--------
 
