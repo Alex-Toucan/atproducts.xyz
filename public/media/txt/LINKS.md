@@ -103,7 +103,7 @@ https://github.com/bytemate/chatapi-single
 https://fathy.fr/carbonyl
 https://github.com/lukasbalazik123/mantua
 https://medium.com/@rickarentsen/rock-paper-scissors-game-made-with-tkinter-with-python-e4003f697e0c
-<hr id="258-more-lines-left!">
+
 Linux Kernel Module Programming Guide 2022:
 
 https://sysprog21.github.io/lkmpg/
@@ -128,7 +128,8 @@ TJCTF 2022 witeups:
 https://www.youtube.com/watch?v=w8MJitt3irc&list=PLUrAjkLbvTpLtLloI8Pqk1P3n8p1sCRw2
 Our BYU CTF 2022 videos are now live! Check them out in the playlist below:
 https://www.youtube.com/watch?v=nSAJmtLbD-k&list=PLUrAjkLbvTpLT35eSB5anERpDAx2ogSCJ
-angstromCTF 2022 writeups:
+angstrom
+CTF 2022 writeups:
 https://www.youtube.com/watch?v=QpsBcWmPQCc&list=PLUrAjkLbvTpLU0f3zOp4DX5IW9OHlXF8u
 TJCTF 2022 witeups:
 https://www.youtube.com/watch?v=w8MJitt3irc&list=PLUrAjkLbvTpLtLloI8Pqk1P3n8p1sCRw2
@@ -153,7 +154,6 @@ TAMUctf 2022 writeups:
 https://www.youtube.com/watch?v=9uxuPygnEwk&list=PLUrAjkLbvTpIX9ZMshTxR3cJyW_kkOFIg
 picoCTF 2022 writeups:
 https://www.youtube.com/watch?v=UbAaLQz38T4&list=PLUrAjkLbvTpKnj4AARb4MeBb3hjOjF6BN
-https://github.com/invokethreatguy/CSASC
         https://github.com/secgroundzero/CS-Aggressor-Scripts
         https://github.com/Und3rf10w/Aggressor-scripts
         https://github.com/harleyQu1nn/AggressorScripts
@@ -177,10 +177,6 @@ https://github.com/CorentinJ/Real-Time-Voice-Cloning
 https://github.com/uppusaikiran/awesome-ctf-cheatsheet
 
 https://app.any.run/
-
-https://osint.link/
-
-https://pastebeen.com/
 
 https://github.com/Voorivex/pentest-guide
 
@@ -207,7 +203,7 @@ https://medium.com/@dmxinajeansuit/elf-binary-mangling-part-3-weaponization-6e11
 https://fccid.io/
 
 https://sploitus.com/
-
+<hr id="154-left!">
 https://medium.com/@viveik.chauhan/blind-remote-code-execution-b9c4e119f7c3
 https://www.tampermonkey.net
 https://link.medium.com/DVmtyIqLjnb
