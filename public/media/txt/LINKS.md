@@ -53,6 +53,7 @@ http://www.simplecpudesign.com/simple_cpu_v1/
 https://blog.miguelgrinberg.com/post/the-ultimate-guide-to-python-decorators-part-i-function-registration
 https://www.youtube.com/watch?v=-29x_deQQus
 <hr>
+https://phish.report
 --------Language Specific IDE's--------
 
 5. **Pycharm**
