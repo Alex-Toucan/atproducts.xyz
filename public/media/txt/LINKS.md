@@ -52,7 +52,6 @@ https://www.youtube.com/watch?v=7mdc-lRrW1c
 http://www.simplecpudesign.com/simple_cpu_v1/
 https://blog.miguelgrinberg.com/post/the-ultimate-guide-to-python-decorators-part-i-function-registration
 https://www.youtube.com/watch?v=-29x_deQQus
-<hr>
 ***What code editor should i use?***
 
 This all comes down to personal pereference so here are a couple of the most popular ones
@@ -104,6 +103,7 @@ https://github.com/bytemate/chatapi-single
 https://fathy.fr/carbonyl
 https://github.com/lukasbalazik123/mantua
 https://medium.com/@rickarentsen/rock-paper-scissors-game-made-with-tkinter-with-python-e4003f697e0c
+<hr>
 Linux Kernel Module Programming Guide 2022:
 
 https://sysprog21.github.io/lkmpg/
