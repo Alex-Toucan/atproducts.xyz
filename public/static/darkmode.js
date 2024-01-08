@@ -61,8 +61,7 @@
     }
   })
 
-  /* JQuery Modification */
-  $(window).on('load', function() {
+  window.addEventListener('load', () => {
     showActiveTheme(getPreferredTheme())
 
     for (const toggle of document.querySelectorAll('[data-bs-theme-value]')) {
