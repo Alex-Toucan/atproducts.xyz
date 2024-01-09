@@ -315,13 +315,8 @@ https://www.youtube.com/watch?v=pbdC-POk-XU&list=PLUrAjkLbvTpKBgf4uRsc2JWhs8OZes
 https://www.youtube.com/watch?v=6S0v8lIk9oA
 https://youtu.be/Op6QvVMj4fw
 https://youtu.be/In-XF5sY1Yo
-<hr>
-Chatgpt Bypasser:
-
-https://drive.proton.me/urls/H91XAQ83RM#oPsCUMci6z0v
 https://tools.intigriti.io/redirector/
 https://journal.opendataplayground.com/cyberhack-2023/
-https://www.f-secure.com/content/dam/press/ja/media-library/reports/F-Secure%20Report%20-%20The%20Fake%20Cisco%20(English).pdf
 Hey there,
 I made a story about the internet and wrote 5 facts. You should check it out and read the story: https://medium.com/@rickarentsen/5-interesting-facts-about-the-internet-b78b656f1a63 feedback is appreciated
 https://youtube.com/playlist?list=PL4wZd4YK_64FeEvmdSkORNRLrgS5DavgT
@@ -344,3 +339,4 @@ https://www.youtube.com/watch?v=TKFgnuftyrs&list=PLUrAjkLbvTpKOlxddIlVkOBvydnEw7
 https://www.youtube.com/watch?v=zH7GwcaCktA
 Almond Force’s writeups video for Metared Stage 4 CTF 2022 is now live! Check it out in the following link:
 https://youtu.be/dlEPoDIrYyc
+<hr>
