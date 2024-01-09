@@ -173,7 +173,7 @@ icons={[
                       <a href="https://dev.to/gogamic/how-to-run-discord-bot-24-7-in-ubuntu-3do0">How to run Discord Bots 24/7 w/ Ubuntu</a>
 </p>
 </Fragment></AccordionItem>
-               <AccordionItem title="Linux Resources" id="dbsshconnection" parent="linuxresources"><Fragment slot="accordion-item-content">
+               <AccordionItem title="Linux Resources" id="linuxresources" parent="learningresourcesAccordion"><Fragment slot="accordion-item-content">
 <h5>Linux Resources</h5>
 <p>
 <a href="https://phoenixnap.com/kb/install-ftp-server-on-ubuntu-vsftpd">How to Install FTP Server on Ubuntu with vsftpd</a>
@@ -181,7 +181,7 @@ icons={[
 <a href="https://www.youtube.com/watch?v=cC1CqyCN9Q0">How to Fit In with Linux Users</a>
 </p>
 </Fragment></AccordionItem>
-               <AccordionItem title="Mega.nz Resources" id="haskellresources" parent="meganzresources"><Fragment slot="accordion-item-content">
+               <AccordionItem title="Mega.nz Resources" id="meganzresources" parent="learningresourcesAccordion"><Fragment slot="accordion-item-content">
 <h5>Mega.nz Resources</h5>
 <p>
 <a href="https://controlc.com/60860490">Udemy Mega.nz 12 Parts Courses Collection</a>
@@ -221,6 +221,8 @@ icons={[
               <a href="https://www.immuniweb.com/websec/">Web Security Testing</a>
               <a href="https://css-tricks.com/probably-dont-base64-svg/">CSS Data URI</a>
               <a href="https://www.urldecoder.io/">URL Decoder</a>
+<a href="https://loremipsum.io/">Lorem Ipsum Generator</a>
+<a href="https://phish.report">Report Phishing</a>
               <a href="https://codebeautify.org/">CodeBeautify</a>
               <a href="https://www.newtonsoft.com/json">JSON.NET</a>
               <a href="https://github.com/sshnet/SSH.NET">SSH.NET</a>
@@ -249,10 +251,27 @@ icons={[
               <a href="https://pmichaels.net/2021/08/29/compiling-code-files-in-c-using-roslyn/">CS2DLL</a>
               <a href="https://www.spycolor.com/">SpyColor</a>
               <a href="https://app.eraser.io/">Eraser (Planning)</a>
+<a href="https://github.com/bytemate/chatapi-single">ChatGPT-API-Server</a>
+<a href="https://fathy.fr/carbonyl">Chrome Render to Terminal</a>
               <a href="https://dontasktoask.com/">Don't ask to ask, just ask</a>
               <a href="https://insights.stackoverflow.com/survey/">StackOverflow Yearly Surveys</a>
               <a href="https://survey.devographics.com/en-US">State of Language Survey</a>
             </p>
+      <Accordion parent="otherresourcesAccordion"><Fragment slot="accordion-content">
+  <AccordionItem title="Code Editors" id="codeeditors" parent="otherresourcesAccordion"><Fragment slot="accordion-item-content">
+<h5>Code Editors</h5>
+<p>
+<a href="https://atom.io">Atom</a>
+<a href="https://code.visualstudio.com/download">Visual Studio Code (VSCode)</a>
+<a href="https://www.sublimetext.com/download">Sublime Text</a>
+<a href="https://github.com/WerWolv/ImHex">Hex Editor (ImHex)</a>
+<a href="https://www.vim.org/download.php">Vim</a>
+<a href="https://www.jetbrains.com/pycharm/">Pycharm (Python IDE)</a>
+<a href="https://www.eclipse.org/downloads/">Eclipse (Java IDE)</a>
+<a href="https://www.jetbrains.com/idea/download/">Intellij (Java IDE)</a>
+</p>
+</Fragment></AccordionItem>  
+<AccordionItem title="Fonts" id="fontsitem" parent="otherresourcesAccordion"><Fragment slot="accordion-item-content">
             <h5>Fonts</h5>
               <p>
                 <a href="https://www.cufonfonts.com/font/segoe-ui-4">Segoe UI</a>
@@ -262,13 +281,17 @@ icons={[
                 <a href="https://www.cufonfonts.com/search/kanit">Kanit</a>
                 <a href="https://fonts.google.com/specimen/Kanit">Kanit from Google</a>
               </p>
+</Fragment></AccordionItem>
+  <AccordionItem title="Discord Glitches" id="discordgitches" parent="otherresourcesAccordion"><Fragment slot="accordion-item-content">
               <h5>Discord Glitches</h5>
       <p><a href="https://github.com/PanIntegralus/discord.webm-compilation">Glitched WEBMs</a><br>
       <a href="https://gist.github.com/ghostrider-05/8f1a0bfc27c7c4509b4ea4e8ce718af0">Discord Link Protocols</a><br>
       <a href="https://drive.google.com/drive/folders/18-9X13abayITCKmToARWDljynvMzBXob">Fake Nitro Links</a></p>
       
       <p><a href="https://www.youtube.com/watch?v=MDSscZjzXb4">Much more in this video</a></p>
-      </Fragment></AccordionItem>
+   </Fragment></AccordionItem>
+</Fragment></Accordion>
+</Fragment></AccordionItem>
       <AccordionItem title="YouTube Creators" id="youtubecreators" parent="resourcesAccordion"><Fragment slot="accordion-item-content">
               <h4>YouTube Creators</h4>
       <h5>C#</h5>
@@ -327,7 +350,7 @@ icons={[
         </Fragment></AccordionItem>
       <AccordionItem title="Downloadable Resources" id="downloadableresources" parent="resourcesAccordion"><Fragment slot="accordion-item-content">
               <h4>Downloadable Resources</h4>
-<div class="my-1"> <h4>DoB for CyberSecurity <a class="btn btn-primary" href="https://media.defense.gov/2023/May/09/2003218554/-1/-1/0/JOINT_CSA_HUNTING_RU_INTEL_SNAKE_MALWARE_20230509.PDF">View</a> </div>
+<div class="my-1"> <h4>DoD for CyberSecurity <a class="btn btn-primary" href="https://media.defense.gov/2023/May/09/2003218554/-1/-1/0/JOINT_CSA_HUNTING_RU_INTEL_SNAKE_MALWARE_20230509.PDF">View</a> </div>
 <hr>
 <div class="my-1"> <h4>Race Conditions for Web Pentesting <a class="btn btn-primary" href="https://book.hacktricks.xyz/pentesting-web/race-condition">View</a> </div>
 <hr>
