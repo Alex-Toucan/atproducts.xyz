@@ -203,11 +203,8 @@ https://medium.com/@dmxinajeansuit/elf-binary-mangling-part-3-weaponization-6e11
 https://fccid.io/
 
 https://sploitus.com/
-<hr id="154-left!">
 https://medium.com/@viveik.chauhan/blind-remote-code-execution-b9c4e119f7c3
 https://www.tampermonkey.net
-https://link.medium.com/DVmtyIqLjnb
-https://link.medium.com/BxIypWKI1mb
 https://east-ee.com/2022/02/28/1367/
 was doing a ctf and came across this, might be useful for some1 since it was for me https://www.betterhacker.com/2016/10/command-injection-without-spaces.html
 More then 8 million ebooks
@@ -245,7 +242,6 @@ https://picoctf.com/ (Designed for high school students while the event is usual
 https://microcorruption.com/login (one of the best interfaces, a good difficulty curve and introduction to low-level reverse engineering, specifically on an MSP430)
 http://ctflearn.com/ (a new CTF based learning platform with user-contributed challenges)*
 http://reversing.kr/
-http://hax.tor.hu/
 https://w3challs.com/
 https://pwn0.com/
 https://io.netgarage.org/
@@ -262,7 +258,6 @@ Almond Force's writeup videos for Hack The Boo 2022 are now live! Check them out
 https://www.youtube.com/watch?v=4UzHNuhTJbs&list=PLUrAjkLbvTpLJGPdxueL5uRvUVwmr4SnY
 Almond Force’s writeup video for the forensics challenges for Metared CTF Stage 3 is now live: 
 https://youtu.be/crz0VYlV1eg
-found how to embed stuff in executables lol pretty useful https://youtu.be/swanvyxraDY
 https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list
 https://start.me/p/L1rEYQ/osint4all
 https://github.com/SaumyajeetDas/GodGenesis
@@ -275,7 +270,7 @@ https://zer1t0.gitlab.io/posts/attacking_ad/
 http://www.insecam.org
 https://github.com/whoami15/FBI-Tools
 https://hacktricks.xyz
-https://trickest.com/?utm_campaign=hacktrics&utm_medium=banner&utm_source=hacktricks
+https://trickest.com/
 https://github.com/bee-san/pyWhat
 Almond Force's writeup videos for Metared CTF 2022 Stage 2 are now live! Check them out in the following PLAYLIST:
 https://www.youtube.com/watch?v=cEhL-N6fPfs&list=PLUrAjkLbvTpLEz-ZjJDSNmUyD8apzG16m
@@ -305,7 +300,6 @@ Almond Force's writeup videos for T3N4CI0US CTF 2022 are now live! Check them ou
 https://www.youtube.com/watch?v=PmBTMNqUTys&list=PLUrAjkLbvTpK4ixlkQxZDrsj9mASlz26N&index=1
 https://youtu.be/mPVG3tXjMgI?si=FM2PQLU7ZlrUmqgw
 https://pandaonair.com/2020/06/11/race-conditions-exploring-the-possibilities.html
-https://book.hacktricks.xyz/pentesting-web/race-condition
 https://www.youtube.com/watch?v=5g137gsB9Wk
 https://hackingthe.cloud/aws/capture_the_flag/cicdont/
 https://github.com/Hacking-the-Cloud/htc-ctfs/tree/main/aws/cicdont
@@ -318,21 +312,14 @@ Almond Force's writeup videos for picoCTF 2023 are now live! Check them out in t
 https://www.youtube.com/watch?v=j8CVLGuNlwk&list=PLUrAjkLbvTpKbRFTCCxpqtCYVh3cfo0-v
 Almond Force's writeup videos for Cyber Apocalypse 2023 are now live! Check them out in the following playlist:
 https://www.youtube.com/watch?v=pbdC-POk-XU&list=PLUrAjkLbvTpKBgf4uRsc2JWhs8OZeswah
-I'd like to thank my sponsors Aerna (@AernaegO) and ImpulseFlow (@lmpulse_Flow) on Twitter. They did a great job at trying to scam me! I cover everything in the following video:
-https://www.youtube.com/watch?v=oCDNYrz_h5Q
 https://www.youtube.com/watch?v=6S0v8lIk9oA
 https://youtu.be/Op6QvVMj4fw
 https://youtu.be/In-XF5sY1Yo
+<hr>
 Chatgpt Bypasser:
 
 https://drive.proton.me/urls/H91XAQ83RM#oPsCUMci6z0v
 https://tools.intigriti.io/redirector/
-We are proud to announce **CyberHack2023**, our new hackathon which will take place on March 11th 2023! 🎉
-
-This innovative digital hackathon, involving teams of young talents, will consist of a series of challenges in a #CaptureTheFlag mode, covering some of the main #CyberSecurity fields.
-
-Would you like to know more? Find out more at the link below ⤵️
-
 https://journal.opendataplayground.com/cyberhack-2023/
 https://www.f-secure.com/content/dam/press/ja/media-library/reports/F-Secure%20Report%20-%20The%20Fake%20Cisco%20(English).pdf
 Hey there,
