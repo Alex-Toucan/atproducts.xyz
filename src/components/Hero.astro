@@ -28,7 +28,7 @@ const {
             <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} />
           )}
           {title && (
-            <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? {titleClasses} : ''}`}>{title}</h1>
+            <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses}`}>{title}</h1>
           )}
         </div>
         <p class="fs-4 m-3 text-body-secondary">{description}</p>
