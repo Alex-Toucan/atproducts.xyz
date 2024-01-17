@@ -17659,7 +17659,7 @@ textarea.form-control-lg {
     margin-right: auto;
 	}
   .sw-feature-box {
-	  display: grid;
+	  display: grid !important;
   }
 }
 
