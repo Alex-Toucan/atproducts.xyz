@@ -1,18 +1,19 @@
 ---
 import Head from '../../layouts/Head.astro';
-import Scrollspy from '../../layouts/Scrollspy.astro';
+import Navbar from '../../layouts/stories/Navbar.astro';
+import Scrollspy from '../../layouts/stories/Scrollspy.astro';
 import Scripts from '../../layouts/Scripts.astro';
-import Navbar    from '../../components/Navbar.astro';
 import Footer    from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
   
 <Head title="CCTV Interception" description="AT Products LLC's Bookviewer presents 'CCTV Interception'!" author="Pynx"/>
       <div id="page">
-  <Scrollspy id="cctv"
+  <Navbar
 breadcrumbcontent={[
   { name: "Noodle Hackerspace", href: "/noodle", name2: "(Backup)", href2: "/backup/noodle" },
-]}
+]} />
+<Scrollspy id="cctv"
 scrollcontent={[
   { name: "Prenote", href: "#prenote" },
   { name: "Step 1", href: "#s1" },
