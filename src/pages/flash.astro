@@ -10,7 +10,8 @@ import BackToTop from '../components/BackToTop.astro';
 ---
 
 <Head title="Flash Documentation" heroid="flash" icon="Adobe_Flash_Player_32.svg.png" description="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!" keywords="Flash Documentation, AT Products" author="Alex Toucan" />
-    <Navbar />
+<div id="page">
+<Navbar />
         <Hero id="flash" description="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!" secondaryHref="/backup/flash" secondaryText="View the all laid out format" imageSrc="/media/images/flashdoc.webp" imageWidth="50%" minImageWidth="250px" imageClasses="bg-light p-1 bg-opacity-50 rounded-2"/>
        <main id="flash" class="text-center container">
       <div id="resources">
@@ -18,7 +19,7 @@ import BackToTop from '../components/BackToTop.astro';
         <p> What do you want to know about today? </p>
         <Modal title="Adobe AIR" id="ai"><Fragment slot="modal-content">
   <figure class="figure">
-<img src="/media/images/adobeair.png" width="12.5%" alt="AIR logo" class="flash">
+<img src="/media/images/adobeair.png" width="12.5%" style="min-width: 125px;" alt="AIR logo" class="flash">
   <figcaption class="figure-caption mt-1">Adobe AIR Logo</figcaption>
 </figure>
   <p> On this page, we will review Adobe AIR. </p>
@@ -62,7 +63,7 @@ scrollcontent={[
 </Fragment></Modal>
 <Modal title="Adobe Director" id="di"><Fragment slot="modal-content">
     <figure class="figure">
-  <img src="/media/images/Adobe_Di.svg.png" width="12.5%" alt="Director Logo" class="flash">
+  <img src="/media/images/Adobe_Di.svg.png" width="12.5%" style="min-width: 125px;" alt="Director Logo" class="flash">
   <figcaption class="figure-caption mt-1">Adobe Director Logo</figcaption>
 </figure>
   <p> On this page, we will review Adobe Director. </p>
@@ -221,7 +222,7 @@ scrollcontent={[
     <Modal title="Adobe Shockwave" id="sw"><Fragment slot="modal-content">
 <h2 class="modal-body-title"> Adobe Shockwave </h2>
     <figure class="figure">
-  <img src="/media/images/Shockwave.png" width="12.5%" alt="Shockwave Logo" class="flash">
+  <img src="/media/images/Shockwave.png" width="12.5%" style="min-width: 125px;" alt="Shockwave Logo" class="flash">
   <figcaption class="figure-caption mt-1">Adobe Shockwave Logo</figcaption>
 </figure>
    <p> On this page, we will go over Adobe Shockwave.</p>

@@ -34,7 +34,7 @@ $(document).ready(function() {
 
     updateTimeline(activeYear);
     // Add click event handlers to timeline buttons
-    for (let i = 1; i <= 4; i++) $(`#history-${i}`).click(() => updateTimeline(i));
+    for (let i = 1; i <= 5; i++) $(`#history-${i}`).click(() => updateTimeline(i));
     const debounce = 500;
     let isDebounced = false;
     let debounceTimeout;
@@ -63,10 +63,10 @@ $(document).ready(function() {
     // Function to update the timeline based on the selected year
     function updateTimeline(year) {
         // Make sure year is within the min and max
-        year = Math.min(Math.max(year, 1), 4);
+        year = Math.min(Math.max(year, 1), 5);
         if(year == activeYear) return;
         // Remove the "active" class from all buttons
-        for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i <= 5; i++) {
             $(`#history-${i}`).toggleClass("active", i == year).toggleClass("btn-secondary", i > year).toggleClass("btn-primary", i <= year);
             $(`#history-${i}-pane`).toggleClass("active", i == year).removeClass("show");
         }
@@ -74,7 +74,7 @@ $(document).ready(function() {
             $(`#history-${year}-pane`).addClass("show");  
         }, 50);
         // Update the progress bar width
-        const progressBarWidth = (year - 1) * 33.33333333;
+        const progressBarWidth = (year - 1) * 25;
         $("#history-progress").css("width", `${progressBarWidth}%`);
         // Update the active year
         activeYear = year;

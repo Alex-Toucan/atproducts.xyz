@@ -72,5 +72,5 @@
         showActiveTheme(theme, true)
       })
     }
-  })
+  });
 })()
