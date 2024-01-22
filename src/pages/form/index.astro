@@ -7,29 +7,38 @@ import BackToTop from '../../components/BackToTop.astro';
 ---
 
 <Head title="Contact Form" description="If you don't want to email us on your email client, use this instead. We'll reach out to your email provided." author="Alex Toucan"/>
+      <div id="page">
 <Navbar />
     <main id="form" class="container">
     <h1 class="title">Contact Form</h1>
-    <p>If you don't want to email us on your email client, use this instead. We'll reach out to your email provided.</p>
+    <p>You may either use this or <a href="mailto:support@atproducts.xyz">email us manually</a>. If you don't want to email us on your email client, use this instead. We'll reach out to your email provided.</p>
 <form
-  name="contact"
+  name="Contact Form" 
   action="/form/success"
   method="POST"
   data-netlify="true"
+  enctype="multipart/form-data"
 class>
-  <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label fw-bold">Email address</label>
-  <input name="Email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+<div class="d-sm-flex gap-2">
+<div class="col">
+    <div class="mb-3">
+      <label for="nameInput" class="form-label fw-bold">Name</label>
+      <input name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
+    </div>
 </div>
+<div class="col">
 <div class="mb-3">
-  <label for="nameInput" class="form-label fw-bold">Name</label>
-  <input name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
+  <label for="emailInput" class="form-label fw-bold">Email address</label>
+  <input name="Email" type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
 </div>
-<div class="mb-3">
+</div>
+</div>
+<div class="mb-2">
   <label for="textareaInput" class="form-label fw-bold">Information to Send</label>
   <textarea name="Text" class="form-control" id="textareaInput" rows="3" required></textarea>
 </div>
-<button type="submit" class="btn btn-primary">Send</button>
+<small>If you wish to upload files, you will have to resort to <a href="mailto:support@atproducts.xyz">emailing us manually</a> due to Netlify complications.</small>
+<button type="submit" class="mt-2 btn btn-lg btn-primary col-12">Send</button>
 </form>
 </main>
 <Footer />
