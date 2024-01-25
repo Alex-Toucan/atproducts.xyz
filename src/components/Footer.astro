@@ -1,9 +1,9 @@
 ---
-const { author, hr } = Astro.props;
+const { author, hr, marginTop } = Astro.props;
 ---
 <footer>
   {hr !== 'none' && <hr>}
-  <div class="container-footer">
+  <div class={`container-footer ${marginTop === 'true' ? 'mt-mmd-3' : ''}`}>
   <div class="mt-md-5">
     <div class="row px-md-2">
       <div class="col-md-2 me-xesm-2">
@@ -13,7 +13,7 @@ const { author, hr } = Astro.props;
            <h5><a href="/">AT Products LLC</a></h5>
           </div>
       </div>
-      <div class="col-md-2 me-md-2 text-centertostart">
+      <div class="col-md-2 mt-mmd-2 me-md-2 text-centertostart">
         <h5>Products</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-body-secondary">Paid Services</a></li>
@@ -23,7 +23,7 @@ const { author, hr } = Astro.props;
         </ul>
       </div>
 
-      <div class="col-md-2 me-md-2 text-centertostart">
+      <div class="col-md-2 mt-mmd-2 me-md-2 text-centertostart">
         <h5>Communities</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-body-secondary">The Script Community</a></li>
@@ -33,7 +33,7 @@ const { author, hr } = Astro.props;
         </ul>
       </div>
 
-      <div class="col-md-2 me-md-2 text-centertostart">
+      <div class="col-md-2 mt-mmd-2 me-md-2 text-centertostart">
         <h5>Documentation</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
@@ -72,8 +72,7 @@ const { author, hr } = Astro.props;
         <li><a class="link-footer" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
         <li><a class="link-footer" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a></li>
         <li><a class="link-footer" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-        <li><a class="link-footer" href="mailto:support@atproducts.xyz" aria-label="Support Email"><i class="bi bi-envelope-fill"></i></a></li>
-        <li><a class="link-footer" href="/form/" aria-label="Contact Form"><i class="bi bi-person-fill"></i></a></li>
+        <li><a class="link-footer" href="/form/" aria-label="Contact Form / Email"><i class="bi bi-envelope-fill"></i></a></li>
         <li><a class="link-footer" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
       </ul>
     </div>

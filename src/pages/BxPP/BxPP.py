@@ -3,9 +3,8 @@ import re
 from collections import deque
 import os
 
-#Version 0.2
-#Please note that this sits alongside python and this might be slow
-#Disclaimer taking input is a bit bad as of now.
+# Version 3.0
+# Input may be bugged. This program will run alongside python and may be slow.
 
 filename = sys.argv[1]
 printq = False

