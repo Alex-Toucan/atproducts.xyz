@@ -13,7 +13,7 @@
 # MAINTENANCE STANDARDS
 ### UNDER CONSTRUCTION
 ## Prior to Maintenance
-* If possible, let people know about this by putting a `alert-dark` and `alert-dismissible` with the template below. Include starting time, and ending time. 
+* If possible, let people know about this by putting a `alert-dark` and `alert-dismissible` with the template below which is included on `/src/components/navbar.astro`. Include starting time, and ending time. 
   * Sometimes, maintenance mode gets enabled due to issues. Enable the alert for versions, or planned maintenance. Unplanned maintenance is fine to not enable the alert.
 ```
 <div class="alert alert-dark alert-dismissible fade show" role="alert">
@@ -25,5 +25,4 @@
 ## Maintenance
 * Edit the `main` branch's `netlify.toml` file starting with the line `# Enable if maintenance mode.` (Keep the comment, remove the comments for the elements)
 ## After Maintenance
-* Reedit the
-*
+* Reedit the `netlify.toml` file on the `main` branch to make the whole segment a comment, basically reverting the file. Then remove the alert on `/src/components/navbar.astro`.
