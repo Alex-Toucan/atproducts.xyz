@@ -10,3 +10,20 @@
 * Merge branches around release time inside the pull request.
 * Make the release in the `main` branch after merging.
 * Make [Discord](https://discord.gg/pgGfhDVrmS) and [Twitter](https://twitter.com/ATProductsLLC) bulletin. (if possible, schedule the Twitter post)
+# MAINTENANCE STANDARDS
+### UNDER CONSTRUCTION
+## Prior to Maintenance
+* If possible, let people know about this by putting a `alert-dark` and `alert-dismissible` with the template below. Include starting time, and ending time. 
+  * Sometimes, maintenance mode gets enabled due to issues. Enable the alert for versions, or planned maintenance. Unplanned maintenance is fine to not enable the alert.
+```
+<div class="alert alert-dark alert-dismissible fade show" role="alert">
+  <strong>Title</strong> Description
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div> 
+```
+* Start to edit the `maintenance.html` file in the `backup` branch with information in the prior alert.
+## Maintenance
+* Edit the `main` branch's `netlify.toml` file starting with the line `# Enable if maintenance mode.` (Keep the comment, remove the comments for the elements)
+## After Maintenance
+* Reedit the
+*
