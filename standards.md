@@ -15,7 +15,7 @@
 * If possible, let people know about this by putting a `alert-dark` and `alert-dismissible` with the template below which is included on `/src/components/navbar.astro`. Include starting time, and ending time. 
   * Sometimes, maintenance mode gets enabled due to issues. Enable the alert for versions, or planned maintenance. Unplanned maintenance is fine to not enable the alert.
 ```
-<div class="alert alert-dark alert-dismissible fade show" role="alert">
+<div class="alert alert-dark alert-dismissible mb-0 fade show" role="alert">
   <strong>Title</strong> Description
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div> 
