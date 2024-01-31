@@ -11,7 +11,6 @@
 * Make the release in the `main` branch after merging.
 * Make [Discord](https://discord.gg/pgGfhDVrmS) and [Twitter](https://twitter.com/ATProductsLLC) bulletin. (if possible, schedule the Twitter post)
 # MAINTENANCE STANDARDS
-### UNDER CONSTRUCTION
 ## Prior to Maintenance
 * If possible, let people know about this by putting a `alert-dark` and `alert-dismissible` with the template below which is included on `/src/components/navbar.astro`. Include starting time, and ending time. 
   * Sometimes, maintenance mode gets enabled due to issues. Enable the alert for versions, or planned maintenance. Unplanned maintenance is fine to not enable the alert.
