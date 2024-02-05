@@ -17948,7 +17948,7 @@ height: calc(100vh - 448px);
 }
 
 .products-tabContent {
-	height: 16.25rem !important;
+	height: 17rem !important;
 }
 
 .tab-pane {
@@ -17979,14 +17979,14 @@ height: calc(100vh - 448px);
 @media (max-width:767.98px) {
 	.products-2 img {
 		width: 50%;
-		max-width: 200px;
+		max-width: 225px;
 	}
 	.products-3 img {
 		width: 75%;
-		max-width: 185px;
+		max-width: 200px;
 	}
 	.products-4 img {
-		max-width: 125px;
+		max-width: 150px;
 	}
 }
 
