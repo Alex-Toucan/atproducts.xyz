@@ -17979,11 +17979,11 @@ height: calc(100vh - 448px);
 @media (max-width:767.98px) {
 	.products-2 img {
 		width: 50%;
-		max-width: 275px;
+		max-width: 370px;
 	}
 	.products-3 img {
 		width: 75%;
-		max-width: 210px;
+		max-width: 185px;
 	}
 	.products-4 img {
 		max-width: 175px;
