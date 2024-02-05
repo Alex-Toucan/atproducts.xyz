@@ -17945,9 +17945,10 @@ height: calc(100vh - 448px);
   .back-to-top {
     bottom: 60px !important;
   }
-	.products-tabContent {
-		height: 15rem !important;
-	}
+}
+
+.products-tabContent {
+	height: 17.5rem !important;
 }
 
 .tab-pane {
