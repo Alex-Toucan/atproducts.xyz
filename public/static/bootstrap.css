@@ -17947,10 +17947,6 @@ height: calc(100vh - 448px);
   }
 }
 
-.products-tabContent {
-	height: 17rem !important;
-}
-
 .tab-pane {
 	height: 100%;
 }
@@ -17965,7 +17961,7 @@ height: calc(100vh - 448px);
 
 .products-2 img {
   max-width: 150px;
-	width: 40%
+	width: 40%;
 }
 
 .products-3 img {
@@ -17977,13 +17973,16 @@ height: calc(100vh - 448px);
 }
 
 @media (max-width:767.98px) {
+	.products-tabContent {
+  	height: 17rem !important;
+	}
 	.products-2 img {
 		width: 75%;
-		max-width: 185px;
+		max-width: 225px;
 	}
 	.products-3 img {
 		width: 75%;
-		max-width: 185px;
+		max-width: 210px;
 	}
 	.products-4 img {
 		max-width: 175px;
