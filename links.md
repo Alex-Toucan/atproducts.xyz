@@ -14,4 +14,16 @@
 <h5>Rust Resources</h5>
 <a href="https://github.com/rust-lang/miri">Miri</a>
 <a href="https://blessed.rs/">blessed.rs</a>
+<a href="https://github.com/ex0dus-0x/awesome-rust-security">Rust Security</a>
 <h5>Obfuscating Programs</h5>
+<a href="https://crates.io/crates/secmem-proc">Process Hardening</a>
+<a href="https://crates.io/crates/debugoff">Debug Off</a>
+<a href="https://crates.io/crates/goldberg">GoldBerg</a>
+<a href="https://crates.io/crates/cryptify">Cryptify</a>
+<a href="https://crates.io/crates/encrust">Mem Encrytion</a>
+<a href="https://crates.io/crates/stronghold-runtime">Stronghold-Runtime</a>
+<a href="https://crates.io/crates/Hela">
+<h5>Dependency Injection for AvaloniaUI Sources</h5>
+<a href="https://github.com/Kaharonus/Avalonia.Extensions.DependencyInjection">GitHub</a>
+<a href="https://www.reddit.com/r/AvaloniaUI/comments/ssplp9/microsoftextensionsdependencyinjection_to_inject/">Reddit + GitHub</a>
+<a href="https://dev.to/ingvarx/avaloniaui-dependency-injection-4aka">Dev.to</a>
