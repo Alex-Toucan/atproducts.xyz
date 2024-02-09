@@ -5,6 +5,13 @@
 <h5>General HE</h5>
 <a href="https://youtu.be/S9JGmA5_unY">How Secure is 256-bit Security?</a>
 <a href="https://youtu.be/nFZm4sVsPXk?si=7J_GzfZe-UOqic4b">TailOS Setup</a>
+<h5>Way to Configure Services</h5>
+<a href="/media/files/IService1.cs">Define Interfaces (IService1)</a>
+<a href="/media/files/IService2.cs">Define Interfaces (IService2)</a>
+<a href="/media/files/Service1.cs">Implement Services (Service1)</a>
+<a href="/media/files/Service2.cs">Implement Services (Service2)</a>
+<a href="/media/files/main.cs">Register Services</a>
+<a href="/media/files/inject.cs">Inject & Use Services</a>
 <h5>Clean Project Architecture</h5>
 <a href="https://github.com/jasontaylordev/CleanArchitecture">Template 1</a>
 <a href="https://github.com/ardalis/CleanArchitecture">Template 2</a>
