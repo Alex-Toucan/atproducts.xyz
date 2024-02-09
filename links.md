@@ -1,6 +1,17 @@
+<h5>General RE</h5>
+<a href="https://imposterdevs.com/">Imposter Devs</a>
+<a href="https://addr.tools/">Internet Tools</a>
+<a href="https://www.youtube.com/watch?v=rYnbspEcKJw">Organizing Code</a>
+<h5>General HE</h5>
+<a href="https://youtu.be/S9JGmA5_unY">How Secure is 256-bit Security?</a>
+<a href="https://youtu.be/nFZm4sVsPXk?si=7J_GzfZe-UOqic4b">TailOS Setup</a>
 <h5>Clean Project Architecture</h5>
 <a href="https://github.com/jasontaylordev/CleanArchitecture">Template 1</a>
 <a href="https://github.com/ardalis/CleanArchitecture">Template 2</a>
 <a href="https://github.com/amantinband/clean-architecture">Template 3</a>
 <a href="https://stackoverflow.com/questions/74781704/how-to-make-nlog-v5-work-with-avalonia-android">StackOverflow w/ NLog</a>
 <a href="https://www.youtube.com/watch?v=YiVqwoFMieg">Explanation Video</a>
+<h5>Rust Resources</h5>
+<a href="https://github.com/rust-lang/miri">Miri</a>
+<a href="https://blessed.rs/">blessed.rs</a>
+<h5>Obfuscating Programs</h5>
