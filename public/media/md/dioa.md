@@ -1,5 +1,5 @@
 ## Dependency Injection for AvaloniaUI
-### Created by our friend @venenjean.
+### Created by our friend [@venenjean](https://github.com/VenenJean).
 [MammaMiaDev - YouTube](https://www.youtube.com/watch?v=q6lFGr2DeHQ&t=199s)
 > Explains some possibilities.
 
