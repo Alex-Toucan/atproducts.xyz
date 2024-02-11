@@ -7,7 +7,7 @@ $(document).ready(function() {
       const targetAccordion = $('#' + targetId);
 
       if (targetAccordion.length && targetAccordion.hasClass('collapse')) {
-        const parentAccordion = targetAccordion.closest('.accordion-item');
+        const parentAccordion = targetAccordion.closest('.accordion');
 
         if (parentAccordion.length) {
           const openParentAccordions = parentAccordion.find('.collapse.show');
