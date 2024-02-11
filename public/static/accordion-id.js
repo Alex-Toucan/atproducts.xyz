@@ -10,13 +10,14 @@ $(document).ready(function() {
         const parentAccordion = targetAccordion.closest('.accordion-item');
 
         if (parentAccordion.length) {
-          const openAccordions = parentAccordion.find('.collapse.show');
-          openAccordions.collapse('hide');
-          targetAccordion.collapse('show');
+          const openParentAccordions = parentAccordion.find('.collapse.show');
+          openParentAccordions.collapse('hide');
+          parentAccordion.find('.collapse').collapse('show');
         } else {
           $('.collapse.show').collapse('hide');
-          targetAccordion.collapse('show');
         }
+
+        targetAccordion.collapse('show');
 
         const element = document.getElementById(targetId);
 
