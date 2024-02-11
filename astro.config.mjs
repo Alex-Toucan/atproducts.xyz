@@ -4,5 +4,15 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), compress()]
+  integrations: [
+    react(), 
+    compress({
+      css: false,
+      html: true,
+      img: true,
+      js: true,
+      image: true,
+      svg: true,
+    })
+  ]
 })
