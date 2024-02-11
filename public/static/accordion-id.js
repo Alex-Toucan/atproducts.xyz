@@ -14,8 +14,16 @@ $(document).ready(function() {
 
       if (accordion.length && accordion.hasClass('collapse')) {
         if (!accordion.hasClass('show')) {
-          $('.collapse.show').collapse('hide');
-          accordion.collapse('show');
+          // Open both the target accordion and its parent accordion
+          const parentAccordion = accordion.closest('.accordion-item');
+          if (parentAccordion && parentAccordion.length) {
+            parentAccordion.find('.collapse.show').collapse('hide');
+            parentAccordion.find('.collapse').collapse('show');
+          } else {
+            $('.collapse.show').collapse('hide');
+            accordion.collapse('show');
+          }
+
           const element = document.getElementById(targetId);
 
           // Scroll to the element's section with padding and animation
