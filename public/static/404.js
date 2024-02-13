@@ -1,3 +1,3 @@
 $("#404btn").click(function() {
-  window.back();
+  window.history.back()
 });
