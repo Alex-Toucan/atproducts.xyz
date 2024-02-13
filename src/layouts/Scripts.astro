@@ -7,6 +7,21 @@ const { fourofour, index, modal, accordion, scrollspy } = Astro.props;
 <script is:inline src="/static/scroll.js"></script>
 <script is:inline src="/static/purecookie.js"></script>
 <script is:inline src="/static/enabler.js"></script>
+{modal && (
+  <script is:inline src="/static/modal-id.js"></script>
+  <script is:inline src="/static/accordion-id.js"></script>
+  <script is:inline src="/static/scrollspy-id.js"></script>
+)} 
+{accordion && (
+  <script is:inline src="/static/accordion-id.js"></script>
+  <script is:inline src="/static/scrollspy-id.js"></script>
+)}    
+{scrollspy && (
+  <script is:inline src="/static/scrollspy-id.js"></script>
+)}
+{fourofour && (
+  <script is:inline src="/static/404.js"></script>
+)} 
 {index && (
   <script is:inline src="/static/index.js"></script>
 )}    
