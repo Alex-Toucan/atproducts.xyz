@@ -55,9 +55,9 @@ On this page, you'll find an <a class="link-warning" href="javascript:void(0)">o
       <a href="https://tryhackme.com/p/social" class="btn btn-primary rounded-0 py-2 col">Social</a>
     </div>
     <div class="d-flex flex-wrap row-cols-3 rounded-2 overflow-hidden text-white col-12 col-md-6"> 
-      <b class="col-12 py-2 bg-secondary">Additional Sources</b>
-      <a href="https://discord.com/invite/FqcSvnrnvc" class="btn btn-primary rounded-0 py-2 col-lg col-12">The International Developer's Association</a>
-      <a href="https://discord.com/invite/ring-zer0-827712340954578954" class="btn btn-primary rounded-0 py-2 col-lg col-12">Ring Zer0</a>
+      <b class="col-12 py-2 bg-secondary align-middle">Additional Sources</b>
+      <a href="https://discord.com/invite/FqcSvnrnvc" class="btn btn-primary rounded-0 py-2 col-lg col-12 align-middle">The International Developer's Association</a>
+      <a href="https://discord.com/invite/ring-zer0-827712340954578954" class="btn btn-primary rounded-0 py-2 col-lg col-12 align-middle">Ring Zer0</a>
     </div>
  </div>
  <figure class="figure mt-2 mb-0"> <img src="/media/files/400px-QR_Code_Structure_Example_3.svg.png" width="100%" alt="QR Code" class="bg-white rounded-1 p-1" style="max-width: 375px;"> <figcaption class="figure-caption mt-2">QR Code System Image</figcaption> </figure>
@@ -975,17 +975,28 @@ Can of course be used for other stuff except Views &amp; ViewModels.</p>
       ><Fragment slot="scrollspy-content">
       <div id="example-7">
       <h4>Example Document</h4>
-      <code>
-      h1 &lbrace;
-      &nbsp;&nbsp;color&colon; black;  
-      &nbsp;&nbsp;text-align&colon; center; 
-      &nbsp;&nbsp;font-size&colon; 26px;
-      &nbsp;&nbsp;font-family&colon; verdana;
-      &rbrace;
-      </code><br><br>
-      <code>&lt;p style="font-size:10px"&gt;</code>
-      <p>To put CSS files in HTML, use... <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
-      </div>
+<p>
+<code>
+h1 &lbrace;<br>
+&nbsp;&nbsp;color&colon; black;<br>
+&nbsp;&nbsp;text-align&colon; center;<br>
+&nbsp;&nbsp;font-size&colon; 26px;<br>
+&nbsp;&nbsp;font-family&colon; verdana;<br>
+&rbrace;
+</code></p>
+<p><code>&lt;p style="font-size:10px"&gt;</code></p>
+<p>To put CSS files in HTML, use:
+<br><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
+<p>To put CSS code in HTML, use:
+<br>
+<code>
+&lt;style&gt;<br>
+.class &lbrace;<br>
+&rbrace;<br>
+&lt;/style&gt;
+</code>
+</p>     
+</div>
       <div id="rules-7">
       <h4>CSS Rulesets</h4>
       <p>
