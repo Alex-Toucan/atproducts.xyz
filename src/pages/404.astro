@@ -5,16 +5,6 @@ import Hero     from '../components/Hero.astro';
 import Navbar    from '../components/Navbar.astro';
 import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
-
-function Previous() {
-  window.history.back()
-}
-
-var fourofour = document.getElementById('404btn');
-
-if(fourofour) {
-  fourofour.addEventListener("click", Previous);
-}
 ---
 
 <Head title="Error 404" heroid="web" description="The content the publisher attempted to share, doesn't exist. This is a 404 page after all..." author="Alex Toucan" />
