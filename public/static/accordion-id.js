@@ -13,6 +13,17 @@ $(document).ready(function() {
       }
 
       if (accordion.length && accordion.hasClass('collapse')) {
+        const parentAccordions = accordion.parents('.accordion'); // Find all parent accordions
+
+        if (parentAccordions.length) {
+          parentAccordions.each(function() {
+            const parentAccordion = $(this);
+            if (!parentAccordion.hasClass('show')) {
+              parentAccordion.collapse('show');
+            }
+          });
+        }
+
         if (!accordion.hasClass('show')) {
           $('.collapse.show').collapse('hide');
           accordion.collapse('show');
