@@ -7,34 +7,30 @@ $(document).ready(function() {
       const accordion = $('#' + targetId);
 
       if (accordion.length && accordion.hasClass('collapse')) {
-        const parentAccordions = accordion.parents('.accordion');
+        const parentAccordion = accordion.closest('.accordion');
+        
+        if (parentAccordion.length) {
+          const parentAccordionButton = parentAccordion.find('[data-bs-toggle="collapse"]');
+          const targetButton = parentAccordion.find('[data-bs-target="#' + targetId + '"]');
 
-        if (parentAccordions.length) {
-          parentAccordions.each(function() {
-            const parentAccordion = $(this);
-            const parentAccordionButton = parentAccordion.find('[data-bs-toggle="collapse"]');
-            const targetButton = parentAccordion.find('[data-bs-target="#' + targetId + '"]');
-
-            if (targetButton.length) {
-              parentAccordionButton.not(targetButton).removeClass('show'); // Close other children
-              targetButton.addClass('show'); // Open the target child
-              parentAccordionButton.trigger('click'); // Open the parent accordion
-            }
-          });
+          if (targetButton.length) {
+            parentAccordion.find('.collapse.show').collapse('hide'); // Close other children
+            targetButton.addClass('show'); // Open the target child
+            parentAccordionButton.trigger('click'); // Open the parent accordion
+          }
+        } else {
+          $('.collapse.show').collapse('hide'); // Close other top-level accordions
+          accordion.collapse('show');
         }
 
-        if (!accordion.hasClass('show')) {
-          $('.collapse.show').collapse('hide');
-          accordion.collapse('show');
-          const element = document.getElementById(targetId);
+        const element = document.getElementById(targetId);
 
-          if (element) {
-            const paddingTop = 150;
-            const sectionTop = accordion.offset().top - paddingTop;
-            $('html, body').animate({
-              scrollTop: sectionTop
-            }, 800);
-          }
+        if (element) {
+          const paddingTop = 150;
+          const sectionTop = accordion.offset().top - paddingTop;
+          $('html, body').animate({
+            scrollTop: sectionTop
+          }, 800);
         }
       }
     }
