@@ -1,42 +1,42 @@
 $(document).ready(function() {
   function openAccordionFromHash() {
-    const hash = decodeURIComponent(window.location.hash);
+    const hash = decodeURIComponent(window.location.hash); // Decode the hash
 
     if (hash && hash.startsWith('#')) {
-      const targetId = hash.substring(1);
-      const accordionItem = $('#' + targetId).closest('.accordion-item');
+      const targetId = hash.substring(1); // Remove '#' from the hash
 
-      if (accordionItem.length) {
-        const parentAccordionItem = accordionItem.closest('.accordion-item');
-        const parentAccordion = parentAccordionItem.closest('.accordion');
-        const parentAccordionButton = parentAccordion.find('[data-bs-toggle="collapse"]');
-        const targetButton = parentAccordionItem.find('[data-bs-toggle="collapse"]');
+      const accordion = $('#' + targetId); // Use the ID directly
+      const modal = accordion.closest('.modal'); // Find the closest parent modal
 
-        parentAccordion.find('.collapse.show').collapse('hide'); // Close other children
-        targetButton.addClass('show'); // Open the target child
-        parentAccordionButton.trigger('click'); // Open the parent accordion
+      if (modal && modal.length) {
+        modal.modal('show'); // Open the modal if it exists
+      }
 
-        const element = document.getElementById(targetId);
+      if (accordion.length && accordion.hasClass('collapse')) {
+        const parentAccordions = accordion.parents('.accordion'); // Find all parent accordions
 
-        if (element) {
-          const paddingTop = 150;
-          const sectionTop = accordionItem.offset().top - paddingTop;
-          $('html, body').animate({
-            scrollTop: sectionTop
-          }, 800);
+        if (parentAccordions.length) {
+          parentAccordions.each(function() {
+            const parentAccordion = $(this);
+            if (!parentAccordion.hasClass('show')) {
+              parentAccordion.collapse('show');
+            }
+          });
         }
-      } else {
-        $('.accordion .collapse.show').collapse('hide'); // Close other top-level accordions
-        $('#' + targetId).collapse('show');
 
-        const element = document.getElementById(targetId);
+        if (!accordion.hasClass('show')) {
+          $('.collapse.show').collapse('hide');
+          accordion.collapse('show');
+          const element = document.getElementById(targetId);
 
-        if (element) {
-          const paddingTop = 150;
-          const sectionTop = $('#' + targetId).offset().top - paddingTop;
-          $('html, body').animate({
-            scrollTop: sectionTop
-          }, 800);
+          // Scroll to the element's section with padding and animation
+          if (element) {
+            const paddingTop = 150; // 150px
+            const sectionTop = accordion.offset().top - paddingTop;
+            $('html, body').animate({
+              scrollTop: sectionTop
+            }, 800);
+          }
         }
       }
     }
