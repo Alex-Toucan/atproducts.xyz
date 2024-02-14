@@ -12,11 +12,15 @@ $(document).ready(function() {
         if (parentAccordions.length) {
           parentAccordions.each(function() {
             const parentAccordion = $(this);
-            const parentAccordionButtons = parentAccordion.find('[data-bs-toggle="collapse"]');
+            const parentAccordionButton = parentAccordion.find('[data-bs-toggle="collapse"]');
             const targetButton = accordion.siblings('[data-bs-toggle="collapse"]');
             
+            if (!parentAccordionButton.hasClass('show')) {
+              parentAccordionButton.trigger('click'); // Open the parent accordion
+            }
+
             if (!targetButton.hasClass('show')) {
-              parentAccordionButtons.not(targetButton).removeClass('show'); // Close other children
+              parentAccordionButton.not(targetButton).removeClass('show'); // Close other children
               targetButton.addClass('show'); // Open the target child
             }
           });
