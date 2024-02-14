@@ -4,30 +4,36 @@ $(document).ready(function() {
 
     if (hash && hash.startsWith('#')) {
       const targetId = hash.substring(1);
-      const accordion = $('#' + targetId);
+      const accordionItem = $('#' + targetId).closest('.accordion-item');
 
-      if (accordion.length && accordion.hasClass('collapse')) {
-        const parentAccordion = accordion.closest('.accordion');
-        
-        if (parentAccordion.length) {
-          const parentAccordionButton = parentAccordion.find('[data-bs-toggle="collapse"]');
-          const targetButton = parentAccordion.find('[data-bs-target="#' + targetId + '"]');
+      if (accordionItem.length) {
+        const parentAccordionItem = accordionItem.closest('.accordion-item');
+        const parentAccordion = parentAccordionItem.closest('.accordion');
+        const parentAccordionButton = parentAccordion.find('[data-bs-toggle="collapse"]');
+        const targetButton = parentAccordionItem.find('[data-bs-toggle="collapse"]');
 
-          if (targetButton.length) {
-            parentAccordion.find('.collapse.show').collapse('hide'); // Close other children
-            targetButton.addClass('show'); // Open the target child
-            parentAccordionButton.trigger('click'); // Open the parent accordion
-          }
-        } else {
-          $('.collapse.show').collapse('hide'); // Close other top-level accordions
-          accordion.collapse('show');
-        }
+        parentAccordion.find('.collapse.show').collapse('hide'); // Close other children
+        targetButton.addClass('show'); // Open the target child
+        parentAccordionButton.trigger('click'); // Open the parent accordion
 
         const element = document.getElementById(targetId);
 
         if (element) {
           const paddingTop = 150;
-          const sectionTop = accordion.offset().top - paddingTop;
+          const sectionTop = accordionItem.offset().top - paddingTop;
+          $('html, body').animate({
+            scrollTop: sectionTop
+          }, 800);
+        }
+      } else {
+        $('.accordion .collapse.show').collapse('hide'); // Close other top-level accordions
+        $('#' + targetId).collapse('show');
+
+        const element = document.getElementById(targetId);
+
+        if (element) {
+          const paddingTop = 150;
+          const sectionTop = $('#' + targetId).offset().top - paddingTop;
           $('html, body').animate({
             scrollTop: sectionTop
           }, 800);
