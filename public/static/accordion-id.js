@@ -12,10 +12,12 @@ $(document).ready(function() {
         if (parentAccordions.length) {
           parentAccordions.each(function() {
             const parentAccordion = $(this);
-            const parentAccordionButton = parentAccordion.find('[data-bs-toggle="collapse"]');
+            const parentAccordionButtons = parentAccordion.find('[data-bs-toggle="collapse"]');
+            const targetButton = accordion.siblings('[data-bs-toggle="collapse"]');
             
-            if (!parentAccordionButton.hasClass('show')) {
-              parentAccordionButton.trigger('click');
+            if (!targetButton.hasClass('show')) {
+              parentAccordionButtons.not(targetButton).removeClass('show'); // Close other children
+              targetButton.addClass('show'); // Open the target child
             }
           });
         }
