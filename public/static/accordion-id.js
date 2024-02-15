@@ -31,7 +31,7 @@ $(document).ready(function() {
       accordion.on('show.bs.collapse', function() {
         const parentAccordion = accordion.parents('.accordion').first();
         if (parentAccordion.length) {
-          parentAccordion.collapse('show');
+          parentAccordion.find('.collapse').collapse('show');
         }
       });
     }
