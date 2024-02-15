@@ -13,17 +13,6 @@ $(document).ready(function() {
       }
 
       if (accordion.length && accordion.hasClass('collapse')) {
-        const parentAccordions = accordion.parents('.accordion'); // Find all parent accordions
-
-        if (parentAccordions.length) {
-          parentAccordions.each(function() {
-            const parentAccordion = $(this);
-            if (!parentAccordion.hasClass('show')) {
-              parentAccordion.collapse('show');
-            }
-          });
-        }
-
         if (!accordion.hasClass('show')) {
           $('.collapse.show').collapse('hide');
           accordion.collapse('show');
@@ -39,9 +28,28 @@ $(document).ready(function() {
           }
         }
       }
+
+      // Check if the accordion is a child, and open the parent accordion if needed
+      const parentAccordion = accordion.parents('.accordion').first();
+      if (parentAccordion.length) {
+        const parentAccordionId = parentAccordion.attr('id');
+        const parentAccordionButton = $(`[data-bs-target="#${parentAccordionId}"]`);
+        parentAccordionButton.trigger('click');
+      }
     }
   }
 
   $(window).on('hashchange', openAccordionFromHash);
   openAccordionFromHash();
+
+  // Listen for show.bs.collapse event on child accordions
+  $('.accordion [data-bs-toggle="collapse"]').on('show.bs.collapse', function() {
+    const parentAccordionId = $(this).attr('data-bs-parent');
+    if (parentAccordionId) {
+      const parentAccordion = $(parentAccordionId);
+      if (parentAccordion.length && !parentAccordion.hasClass('show')) {
+        parentAccordion.collapse('show');
+      }
+    }
+  });
 });
