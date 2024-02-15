@@ -1,15 +1,14 @@
 $(document).ready(function() {
   function openAccordionFromHash() {
-    const hash = decodeURIComponent(window.location.hash); // Decode the hash
+    const hash = decodeURIComponent(window.location.hash);
 
     if (hash && hash.startsWith('#')) {
-      const targetId = hash.substring(1); // Remove '#' from the hash
-
-      const accordion = $('#' + targetId); // Use the ID directly
-      const modal = accordion.closest('.modal'); // Find the closest parent modal
+      const targetId = hash.substring(1);
+      const accordion = $('#' + targetId);
+      const modal = accordion.closest('.modal');
 
       if (modal && modal.length) {
-        modal.modal('show'); // Open the modal if it exists
+        modal.modal('show');
       }
 
       if (accordion.length && accordion.hasClass('collapse')) {
@@ -18,9 +17,8 @@ $(document).ready(function() {
           accordion.collapse('show');
           const element = document.getElementById(targetId);
 
-          // Scroll to the element's section with padding and animation
           if (element) {
-            const paddingTop = 150; // 150px
+            const paddingTop = 150;
             const sectionTop = accordion.offset().top - paddingTop;
             $('html, body').animate({
               scrollTop: sectionTop
@@ -29,7 +27,7 @@ $(document).ready(function() {
         }
       }
 
-      // Check if the accordion is a child, and open the parent accordion if needed
+      // Check if the accordion is a child and open both child and parent accordions
       const parentAccordion = accordion.parents('.accordion').first();
       if (parentAccordion.length) {
         const parentAccordionId = parentAccordion.attr('id');
@@ -41,15 +39,4 @@ $(document).ready(function() {
 
   $(window).on('hashchange', openAccordionFromHash);
   openAccordionFromHash();
-
-  // Listen for show.bs.collapse event on child accordions
-  $('.accordion [data-bs-toggle="collapse"]').on('show.bs.collapse', function() {
-    const parentAccordionId = $(this).attr('data-bs-parent');
-    if (parentAccordionId) {
-      const parentAccordion = $(parentAccordionId);
-      if (parentAccordion.length && !parentAccordion.hasClass('show')) {
-        parentAccordion.collapse('show');
-      }
-    }
-  });
 });
