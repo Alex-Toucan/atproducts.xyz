@@ -31,7 +31,10 @@ $(document).ready(function() {
       accordion.on('show.bs.collapse', function() {
         const parentAccordion = accordion.parents('.accordion').first();
         if (parentAccordion.length) {
-          parentAccordion.find('.collapse').collapse('show');
+          const childAccordion = parentAccordion.find(`[data-bs-target="#${targetId}"]`);
+          if (childAccordion.length) {
+            childAccordion.collapse('show');
+          }
         }
       });
     }
