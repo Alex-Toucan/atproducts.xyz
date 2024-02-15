@@ -28,12 +28,12 @@ $(document).ready(function() {
       }
 
       // Check if the accordion is a child and open both child and parent accordions
-      const parentAccordion = accordion.parents('.accordion').first();
-      if (parentAccordion.length) {
-        const parentAccordionId = parentAccordion.attr('id');
-        const parentAccordionButton = $(`[data-bs-target="#${parentAccordionId}"]`);
-        parentAccordionButton.trigger('click');
-      }
+      accordion.on('show.bs.collapse', function() {
+        const parentAccordion = accordion.parents('.accordion').first();
+        if (parentAccordion.length) {
+          parentAccordion.collapse('show');
+        }
+      });
     }
   }
 
