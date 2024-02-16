@@ -38,8 +38,6 @@ $(document).ready(function() {
           }
         }
       });
-
-      // Open the accordion and scroll to the accordion
     }
   }
 
