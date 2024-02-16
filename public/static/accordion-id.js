@@ -14,35 +14,39 @@ $(document).ready(function() {
         modal.modal('show'); // Open the modal if it exists
       }
 
-      // Open the accordion and scroll to the accordion
+      // Open the accordion, its child accordions, and scroll to the accordion
       if (accordion.length && accordion.hasClass('collapse')) {
-        if (!accordion.hasClass('show')) {
-          $('.collapse.show').collapse('hide');
-          accordion.collapse('show');
-          const element = document.getElementById(targetId);
+        // Close all other open accordions
+        $('.collapse.show').collapse('hide');
 
-          // Scroll to the element's section with padding and animation
-          if (element) {
-            const paddingTop = 150; // 150px
-            const sectionTop = accordion.offset().top - paddingTop;
-            $('html, body').animate({
-              scrollTop: sectionTop
-            }, 800);
-          }
+        const accordionItem = accordion.closest('.accordion-item');
+        if (accordionItem.length) {
+          accordionItem.find('.collapse').addBack().collapse('show');
+        }
+
+        const element = document.getElementById(targetId);
+
+        // Scroll to the element's section with padding and animation
+        if (element) {
+          const paddingTop = 150; // 150px
+          const sectionTop = accordionItem.offset().top - paddingTop;
+          $('html, body').animate({
+            scrollTop: sectionTop
+          }, 800);
         }
       }
     }
   }
 
+  // If the hash changes
+  $(window).on('hashchange', openAccordionFromHash);
+  openAccordionFromHash();
+
   // Show parent accordions when their child is shown
   $('.accordion').on('show.bs.collapse', function(event) {
     const accordionItem = $(event.target).closest('.accordion-item');
     if (accordionItem.length) {
-      accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
+      accordionItem.find('.collapse').addBack().collapse('show');
     }
   });
-
-  // If the hash changes
-  $(window).on('hashchange', openAccordionFromHash);
-  openAccordionFromHash();
 });
