@@ -26,7 +26,7 @@ $(document).ready(function() {
         // Scroll to the element's section with padding and animation
         if (element) {
           const paddingTop = 150; // 150px
-          const sectionTop = accordion.offset().top - paddingTop;
+          const sectionTop = accordionItem.offset().top - paddingTop;
           $('html, body').animate({
             scrollTop: sectionTop
           }, 800);
