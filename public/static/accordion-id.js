@@ -14,32 +14,31 @@ $(document).ready(function() {
         modal.modal('show'); // Open the modal if it exists
       }
 
-      // Open the accordion, its child accordions, and scroll to the accordion
+      // Open the accordion and scroll to the accordion
       if (accordion.length && accordion.hasClass('collapse')) {
-        const accordionItem = accordion.closest('.accordion-item');
-        if (accordionItem.length) {
-          accordionItem.find('.collapse').addBack().collapse('show');
-        }
+        if (!accordion.hasClass('show')) {
+          $('.collapse.show').collapse('hide');
+          accordion.collapse('show');
+          const element = document.getElementById(targetId);
 
-        const element = document.getElementById(targetId);
-
-        // Scroll to the element's section with padding and animation
-        if (element) {
-          const paddingTop = 150; // 150px
-          const sectionTop = accordionItem.offset().top - paddingTop;
-          $('html, body').animate({
-            scrollTop: sectionTop
-          }, 800);
+          // Scroll to the element's section with padding and animation
+          if (element) {
+            const paddingTop = 150; // 150px
+            const sectionTop = accordion.offset().top - paddingTop;
+            $('html, body').animate({
+              scrollTop: sectionTop
+            }, 800);
+          }
         }
       }
     }
   }
 
-  // Show parent and child accordions when their child is shown
+  // Show parent accordions when their child is shown
   $('.accordion').on('show.bs.collapse', function(event) {
     const accordionItem = $(event.target).closest('.accordion-item');
     if (accordionItem.length) {
-      accordionItem.find('.collapse').addBack().collapse('show');
+      accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
     }
   });
 
