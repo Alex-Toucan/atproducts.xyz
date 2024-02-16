@@ -34,6 +34,14 @@ $(document).ready(function() {
     }
   }
 
+  // Show parent accordions when their child is shown
+  $('.accordion').on('show.bs.collapse', function(event) {
+    const accordionItem = $(event.target).closest('.accordion-item');
+    if (accordionItem.length) {
+      accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
+    }
+  });
+
   // If the hash changes
   $(window).on('hashchange', openAccordionFromHash);
   openAccordionFromHash();
