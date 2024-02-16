@@ -33,6 +33,7 @@ $(document).ready(function() {
                     scrollTop: sectionTop
                   }, 800);
                 }
+              }
             }
           }
         }
