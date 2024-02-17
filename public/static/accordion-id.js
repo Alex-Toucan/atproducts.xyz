@@ -39,6 +39,7 @@ $(document).ready(function() {
     const accordionItem = $(event.target).closest('.accordion-item');
     if (accordionItem.length) {
       accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
+      openAccordionFromHash();
     }
   });
 
