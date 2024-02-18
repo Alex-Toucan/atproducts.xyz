@@ -13,7 +13,6 @@ $(document).ready(function() {
       // If the accordion is nested
       if (accordionItem.length) {
         accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
-        openAccordionFromHash(event); // Call the function here
       }
 
       // If the accordion is in a modal
