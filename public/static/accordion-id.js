@@ -8,7 +8,7 @@ $(document).ready(function() {
 
       const accordion = $('#' + targetId); // Use the ID directly
       const modal = accordion.closest('.modal'); // Find the closest parent modal
-      const accordionItem = $(event.target).closest('.accordion-item'); // Find parent accordion
+      const accordionItem = accordion.closest('.accordion-item'); // Find parent accordion
 
       // If the accordion is nested
       if (accordionItem.length) {
