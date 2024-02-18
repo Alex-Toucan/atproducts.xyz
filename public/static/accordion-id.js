@@ -11,9 +11,11 @@ $(document).ready(function() {
       const accordionItem = accordion.closest('.accordion-item'); // Find parent accordion
 
       // If the accordion is nested
-      if (accordionItem.length) {
-        accordionItem.parents('.accordion-item').find('.collapse').collapse('hide'); // Hide all other collapses
-        accordionItem.find('.collapse').collapse('show'); // Show only within the current accordionItem
+      if (accordionItem.length && accordionItem.hasClass('collapse')) {
+        if (!accordionItem.hasClass('show')) {
+          $('.collapse.show').collapse('hide');
+          accordion.collapse('show');
+        };
         openAccordionFromHash(); // Call the function here
       }
 
