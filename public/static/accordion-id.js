@@ -12,7 +12,9 @@ $(document).ready(function() {
 
       // If the accordion is nested
       if (accordionItem.length) {
-        accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
+        accordionItem.parents('.accordion-item').find('.collapse').collapse('hide'); // Hide all other collapses
+        accordionItem.find('.collapse').collapse('show'); // Show only within the current accordionItem
+        openAccordionFromHash(); // Call the function here
       }
 
       // If the accordion is in a modal
