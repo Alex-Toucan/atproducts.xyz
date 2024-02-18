@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  function openAccordionFromHash(event) {
+  function openAccordionFromHash() {
     const hash = decodeURIComponent(window.location.hash); // Decode the hash
 
     // Accordion opens with hashes
