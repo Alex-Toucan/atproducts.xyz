@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  function openAccordionFromHash() {
+  function openAccordionFromHash(event) {
     const hash = decodeURIComponent(window.location.hash); // Decode the hash
 
     // Accordion opens with hashes
@@ -13,7 +13,7 @@ $(document).ready(function() {
       // If the accordion is nested
       if (accordionItem.length) {
         accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
-        openAccordionFromHash(); // Call the function here
+        openAccordionFromHash(event); // Call the function here
       }
 
       // If the accordion is in a modal
