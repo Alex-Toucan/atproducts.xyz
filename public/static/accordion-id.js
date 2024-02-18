@@ -14,7 +14,7 @@ $(document).ready(function() {
       if (accordionItem.length && accordionItem.hasClass('collapse')) {
         if (!accordionItem.hasClass('show')) {
           $('.collapse.show').collapse('hide');
-          accordion.collapse('show');
+          accordionItem.collapse('show');
         };
         openAccordionFromHash(); // Call the function here
       }
