@@ -8,6 +8,13 @@ $(document).ready(function() {
 
       const accordion = $('#' + targetId); // Use the ID directly
       const modal = accordion.closest('.modal'); // Find the closest parent modal
+      const accordionItem = $(event.target).closest('.accordion-item'); // Find parent accordion
+
+      // If the accordion is nested
+      if (accordionItem.length) {
+        accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
+        openAccordionFromHash(); // Call the function here
+      }
 
       // If the accordion is in a modal
       if (modal && modal.length) {
@@ -33,16 +40,6 @@ $(document).ready(function() {
       }
     }
   }
-
-  // Show parent accordions when their child is shown
-  $('.accordion').on('show.bs.collapse', function(event) {
-    const accordionItem = $(event.target).closest('.accordion-item');
-    if (accordionItem.length && !accordionItem.hasClass('triggered-accordion')) {
-      accordionItem.addClass('triggered-accordion');
-      accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
-      openAccordionFromHash(); // Call the function here
-    }
-  });
 
   // If the hash changes
   $(window).on('hashchange', openAccordionFromHash);
