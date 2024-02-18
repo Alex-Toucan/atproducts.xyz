@@ -34,22 +34,16 @@ $(document).ready(function() {
     }
   }
 
-  let isAccordionEventTriggered = false;
-
   // Show parent accordions when their child is shown
   $('.accordion').on('show.bs.collapse', function(event) {
-    if (!isAccordionEventTriggered) {
-      isAccordionEventTriggered = true;
-      const accordionItem = $(event.target).closest('.accordion-item');
-      if (accordionItem.length) {
-        accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
-        openAccordionFromHash(); // Call the function here
-      }
-      isAccordionEventTriggered = false;
+    const accordionItem = $(event.target).closest('.accordion-item');
+    if (accordionItem.length) {
+      accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
+      openAccordionFromHash(); // Call the function directly without recursion
     }
   });
 
   // If the hash changes
   $(window).on('hashchange', openAccordionFromHash);
-  openAccordionFromHash();
+  openAccordionFromHash(); // Call the function directly on document ready
 });
