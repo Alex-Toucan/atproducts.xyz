@@ -37,9 +37,10 @@ $(document).ready(function() {
   // Show parent accordions when their child is shown
   $('.accordion').on('show.bs.collapse', function(event) {
     const accordionItem = $(event.target).closest('.accordion-item');
-    if (accordionItem.length) {
+    if (accordionItem.length && !accordionItem.hasClass('triggered-accordion')) {
+      accordionItem.addClass('triggered-accordion');
       accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
-      openAccordionFromHash(); // Call the function directly without recursion
+      openAccordionFromHash(); // Call the function here
     }
   });
 
