@@ -93,8 +93,12 @@
     100% { transform: translate(-100%, 0); }
 }
 </style>
-<div class="marquee py-1 d-block"><span>This is a alpha/beta page. The version recorded on this page is <script src="/static/version.js" is:inline></script>. Expect bugs and future changes. The carousel will not be updated for alpha/beta versions. Please contact <a href="mailto:support@atproducts.xyz">support@atproducts.xyz</a> if you find bugs and issues, or want to provide feedback.</span></div>
-<!-- End Enable -->
+<div class="p-2 d-flex gap-2">
+<h2><script src="/static/version.js"></script></h2>
+<div class="vr"> </div>
+<div class="col marquee my-auto"><span class="">This is a alpha/beta page. The version recorded on this page is <script src="/static/version.js"></script>. Expect bugs and future changes. The carousel will not be updated for alpha/beta versions. Please contact <a href="mailto:support@atproducts.xyz" data-astro-cid-5blmo7yk="">support@atproducts.xyz</a> if you find bugs and issues, or want to provide feedback.</span></div><div class="vr"></div>
+<a class="btn btn-primary icon-link icon-link-hover" href="https://github.com/Alex-Toucan/atproducts.xyz/blob/beta/standards.md">Beta Standards</a><div class="vr"></div><a class="btn btn-primary icon-link icon-link-hover" href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190">
+Release PR </a></div><!-- End Enable -->
 <!-- Enable if it's maintenance
 <div class="alert alert-dark alert-dismissible mb-0 fade show" role="alert">
   <strong>Planned Maintenance:</strong> Plan for maintenance
