@@ -14,6 +14,13 @@ $(document).ready(function() {
         modal.modal('show'); // Open the modal if it exists
       }
 
+      $('.accordion').on('show.bs.collapse', function(event) {
+        const accordionItem = accordion.closest('.accordion-item');
+        if (accordionItem.length) {
+          accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
+        }
+      });
+
       // Open the accordion and scroll to the accordion
       if (accordion.length && accordion.hasClass('collapse')) {
         if (!accordion.hasClass('show')) {
@@ -33,14 +40,6 @@ $(document).ready(function() {
       }
     }
   }
-
-  // Show parent accordions when their child is shown
-  $('.accordion').on('show.bs.collapse', function(event) {
-    const accordionItem = $(event.target).closest('.accordion-item');
-    if (accordionItem.length) {
-      accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
-    }
-  });
 
   // If the hash changes
   $(window).on('hashchange', openAccordionFromHash);
