@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  "use strict";
   function openAccordionFromHash() {
     const hash = decodeURIComponent(window.location.hash); // Decode the hash
 
