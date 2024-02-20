@@ -13,14 +13,6 @@ $(document).ready(function() {
         modal.modal('show');
       }
 
-      // Unbind the event handler after it's triggered
-      $('.accordion').one('show.bs.collapse', function(event) {
-        const accordionItem = accordion.closest('.accordion-item');
-        if (accordionItem.length) {
-          accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
-        }
-      });
-
       if (accordion.length && accordion.hasClass('collapse')) {
         if (!accordion.hasClass('show')) {
           $('.collapse.show').collapse('hide');
@@ -36,6 +28,14 @@ $(document).ready(function() {
           }
         }
       }
+      
+      // Unbind the event handler after it's triggered
+      $('.accordion').one('show.bs.collapse', function(event) {
+        const accordionItem = accordion.closest('.accordion-item');
+        if (accordionItem.length) {
+          accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
+        }
+      });
     }
   }
 
