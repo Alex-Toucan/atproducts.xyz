@@ -14,7 +14,7 @@ $(document).ready(function() {
       }
 
       // Unbind the event handler after it's triggered
-      $('.accordion').off('show.bs.collapse').on('show.bs.collapse', function(event) {
+      $('.accordion').one('show.bs.collapse', function(event) {
         const accordionItem = accordion.closest('.accordion-item');
         if (accordionItem.length) {
           accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
