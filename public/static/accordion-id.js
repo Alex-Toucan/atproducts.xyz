@@ -1,13 +1,9 @@
 $(document).ready(function() {
   "use strict";
 
-  let isAccordionProcessing = false;
-
   function openAccordionFromHash() {
-    if (isAccordionProcessing) return; // Check if already processing
-    isAccordionProcessing = true;
-
     const hash = decodeURIComponent(window.location.hash);
+
     if (hash && hash.startsWith('#')) {
       const targetId = hash.substring(1);
       const accordion = $('#' + targetId);
@@ -17,9 +13,8 @@ $(document).ready(function() {
         modal.modal('show');
       }
 
-      $('.accordion').off('show.bs.collapse'); // Unbind previous event handler
-
-      $('.accordion').on('show.bs.collapse', function(event) {
+      // Unbind the event handler after it's triggered
+      $('.accordion').off('show.bs.collapse').on('show.bs.collapse', function(event) {
         const accordionItem = accordion.closest('.accordion-item');
         if (accordionItem.length) {
           accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
@@ -42,8 +37,6 @@ $(document).ready(function() {
         }
       }
     }
-
-    isAccordionProcessing = false; // Reset the flag after processing
   }
 
   $(window).on('hashchange', openAccordionFromHash);
