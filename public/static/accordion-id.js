@@ -17,7 +17,7 @@ $(document).ready(function() {
       $('.accordion').one('show.bs.collapse', function(event) {
         const accordionItem = accordion.closest('.accordion-item');
         if (accordionItem.length) {
-          accordionItem.parents('.accordion-item').collapse('show');
+          accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
         }
       });
 
