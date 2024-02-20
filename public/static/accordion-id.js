@@ -15,6 +15,7 @@ $(document).ready(function() {
         modal.modal('show'); // Open the modal if it exists
       }
 
+      $('.accordion').off('show.bs.collapse');
       $('.accordion').on('show.bs.collapse', function(event) {
         const accordionItem = accordion.closest('.accordion-item');
         if (accordionItem.length) {
