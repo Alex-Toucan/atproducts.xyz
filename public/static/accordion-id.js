@@ -1,21 +1,24 @@
 $(document).ready(function() {
   "use strict";
+
+  let isAccordionProcessing = false;
+
   function openAccordionFromHash() {
-    const hash = decodeURIComponent(window.location.hash); // Decode the hash
+    if (isAccordionProcessing) return; // Check if already processing
+    isAccordionProcessing = true;
 
-    // Accordion opens with hashes
+    const hash = decodeURIComponent(window.location.hash);
     if (hash && hash.startsWith('#')) {
-      const targetId = hash.substring(1); // Remove '#' from the hash
+      const targetId = hash.substring(1);
+      const accordion = $('#' + targetId);
+      const modal = accordion.closest('.modal');
 
-      const accordion = $('#' + targetId); // Use the ID directly
-      const modal = accordion.closest('.modal'); // Find the closest parent modal
-
-      // If the accordion is in a modal
       if (modal && modal.length) {
-        modal.modal('show'); // Open the modal if it exists
+        modal.modal('show');
       }
 
-      $('.accordion').off('show.bs.collapse');
+      $('.accordion').off('show.bs.collapse'); // Unbind previous event handler
+
       $('.accordion').on('show.bs.collapse', function(event) {
         const accordionItem = accordion.closest('.accordion-item');
         if (accordionItem.length) {
@@ -23,16 +26,14 @@ $(document).ready(function() {
         }
       });
 
-      // Open the accordion and scroll to the accordion
       if (accordion.length && accordion.hasClass('collapse')) {
         if (!accordion.hasClass('show')) {
           $('.collapse.show').collapse('hide');
           accordion.collapse('show');
           const element = document.getElementById(targetId);
 
-          // Scroll to the element's section with padding and animation
           if (element) {
-            const paddingTop = 150; // 150px
+            const paddingTop = 150;
             const sectionTop = accordion.offset().top - paddingTop;
             $('html, body').animate({
               scrollTop: sectionTop
@@ -41,9 +42,10 @@ $(document).ready(function() {
         }
       }
     }
+
+    isAccordionProcessing = false; // Reset the flag after processing
   }
 
-  // If the hash changes
   $(window).on('hashchange', openAccordionFromHash);
   openAccordionFromHash();
 });
