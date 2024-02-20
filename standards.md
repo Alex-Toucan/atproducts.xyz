@@ -6,7 +6,7 @@
 ## Near Release
 * Start by making the bulletin slides with the Google Slides template.
 * Make the changelog in `/src/pages/index.astro`. (if not done already in it's own pull request)
-* Disable whole section in `/src/components/navbar.astro` under `<!-- Enable if it's a beta build -->`.
+* Disable the whole section in `/src/components/navbar.astro` under `<!-- Enable if it's a beta build -->`.
 ## Release
 * Merge branches around release time inside the pull request.
 * Make the release in the `main` branch after merging.
