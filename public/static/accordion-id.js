@@ -1,25 +1,16 @@
 $(document).ready(function() {
-  "use strict";
-
   function openAccordionFromHash() {
-    const hash = decodeURIComponent(window.location.hash);
+    const hash = decodeURIComponent(window.location.hash); // Decode the hash
 
     if (hash && hash.startsWith('#')) {
-      const targetId = hash.substring(1);
-      const accordion = $('#' + targetId);
-      const modal = accordion.closest('.modal');
+      const targetId = hash.substring(1); // Remove '#' from the hash
+
+      const accordion = $('#' + targetId); // Use the ID directly
+      const modal = accordion.closest('.modal'); // Find the closest parent modal
 
       if (modal && modal.length) {
-        modal.modal('show');
+        modal.modal('show'); // Open the modal if it exists
       }
-
-      // Unbind the event handler after it's triggered
-      $('.accordion').one('show.bs.collapse', function(event) {
-        const accordionItem = accordion.closest('.accordion-item');
-        if (accordionItem.length) {
-          accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
-        }
-      });
 
       if (accordion.length && accordion.hasClass('collapse')) {
         if (!accordion.hasClass('show')) {
@@ -27,8 +18,9 @@ $(document).ready(function() {
           accordion.collapse('show');
           const element = document.getElementById(targetId);
 
+          // Scroll to the element's section with padding and animation
           if (element) {
-            const paddingTop = 150;
+            const paddingTop = 150; // 150px
             const sectionTop = accordion.offset().top - paddingTop;
             $('html, body').animate({
               scrollTop: sectionTop
