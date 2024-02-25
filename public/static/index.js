@@ -8,7 +8,7 @@ $(function () {
     $(carouselMain).carousel({
         pause: "false",
 	ride: "true",
-	interval: 10000
+	interval: 90000
     });
     
     $(playButton).click(function () {
