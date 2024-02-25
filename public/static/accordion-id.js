@@ -37,40 +37,6 @@ $(document).ready(function() {
         }
       }
     }
-
-    if (hash && hash.startsWith('#:~:text=')) {
-      const searchText = hash.substring(12);
-      const accordionWithText = $('.accordion:contains(' + searchText + ')');
-      const modalWithText = $('.modal:contains(' + searchText + ')');
-
-      if (modalWithText.length) {
-        modalWithText.modal('show');
-      }
-
-      if (accordionWithText.length) {
-        accordionWithText.each(function() {
-          const accordion = $(this);
-          const accordionItem = accordion.closest('.accordion-item');
-          if (accordionItem.length) {
-            accordionItem.parents('.accordion-item').find('.collapse').collapse('show');
-          }
-
-          if (accordion.hasClass('collapse') && !accordion.hasClass('show')) {
-            $('.collapse.show').collapse('hide');
-            accordion.collapse('show');
-
-            const element = document.getElementById(accordion.attr('id'));
-            if (element) {
-              const paddingTop = 150;
-              const sectionTop = accordion.offset().top - paddingTop;
-              $('html, body').animate({
-                scrollTop: sectionTop
-              }, 800);
-            }
-          }
-        });
-      }
-    }
   }
 
   $(window).on('hashchange', openAccordionFromHash);
