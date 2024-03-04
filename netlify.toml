@@ -27,7 +27,7 @@
       font-src 'self' https://cdn.jsdelivr.net data:; 
       object-src 'self'; 
       script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net; 
-      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline'; 
+      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net 'unsafe-inline'; 
       img-src 'self' data:;
       frame-ancestors 'self' '''
     Features-Policy = '''
