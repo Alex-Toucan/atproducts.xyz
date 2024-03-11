@@ -9,9 +9,16 @@ import BackToTop from '../../components/BackToTop.astro';
 <Head title="ATPLLC DoBT - Applying for the DoBT" description="Apply for the Department of Beta Testing of AT Products LLC>." author="Alex Toucan"/>
       <div id="page">
 <Navbar />
-    <main id="form" class="container">
-    <h1 class="title">Applying for the DoBT</h1>
-    <p>You can use this page to contact us generally. To contact us generally, you can use the main website's form <a href="https://atproducts.xyz/form/">here</a>.</p>
+ <Hero
+  id="codinghome"
+  title="Applying for the DoBT"
+  description="Welcome to AT Products's Department of Beta Testing's website portal which is full of resources!"
+  primaryHref="https://beta.atproducts.xyz/"
+  primaryText="Application Form"
+  />
+    <main id="apply" class="container">
+<div id="form">
+    <p>You can use this section to apply. To contact us generally, you can use the main website's form <a href="https://atproducts.xyz/form/">here</a>.</p>
     <p>You may either use this or <a href="mailto:support@atproducts.xyz">email us manually</a>. If you don't want to email us on your email client, use this instead. We'll reach out to your email provided.</p>
 <form
   name="DoBT Apply Form" 
@@ -41,6 +48,7 @@ class>
 <small>If you wish to upload files, you will have to resort to <a href="mailto:support@atproducts.xyz">emailing us manually</a> due to Netlify complications.</small>
 <button type="submit" class="mt-2 btn btn-lg btn-primary col-12">Send</button>
 </form>
+</div>
 </main>
 <Footer />
 <BackToTop />
