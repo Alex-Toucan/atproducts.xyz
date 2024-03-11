@@ -4,7 +4,7 @@
 <header>
 <nav class="navbar navbar-expand-sm fixed-top main-navbar shadow-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><img src="/media/images/longblack.png" height="45px" alt="Icon" class="headerimg"><span class="ms-2">DoBT</span></a>
+    <a type="button" class="navbar-brand" data-bs-toggle="modal" href="#exampleModal"><img src="/media/images/longblack.png" height="45px" alt="Icon" class="headerimg"><span class="ms-2">DoBT</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -69,3 +69,21 @@
   <strong>It seems like you don't have JavaScript enabled!</strong> For color modes, accordions, scrollspies, tab panes, dropdowns, popovers, and much more, you'll need JavaScript to work! We do not have fallbacks, so please enable JavaScript or <a href="https://github.com/Alex-Toucan/atproducts.xyz">view the source code to read the information</a>.
   </div>
 </noscript>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
