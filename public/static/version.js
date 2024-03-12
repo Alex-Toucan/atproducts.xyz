@@ -1,1 +1,1 @@
-document.write("2.18");
+document.write("DoBT v2.0");
