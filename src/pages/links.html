@@ -1,0 +1,70 @@
+---
+import Head from '../../layouts/Head.astro';
+import Scripts from '../../layouts/Scripts.astro';
+import Hero from '../../components/Hero.astro';
+import Navbar    from '../../components/Navbar.astro';
+import Footer    from '../../components/Footer.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<Head title="ATPLLC DoBT - Links" description="Links for the beta testers of AT Products LLC." author="Alex Toucan"/>
+      <div id="page">
+<Navbar />
+ <Hero
+  id="codinghome"
+  title="Links"
+  description="Links for the beta testers of AT Products LLC"
+  />
+    <main id="apply" class="container">
+<div id="how">
+<h2>How to Apply</h2>
+<p>To apply as a beta tester, take the form below with basically an acceptance. Here’s an example template for the application part. Think about "Why do I want to apply?".
+    <br><br>
+<i>
+I find AT Products interesting, and I want to help beta test their website to assist in feedback. I'll provide feedback to help ATPLLC improve and grow more as a company and website. (add more)
+</i>
+    <br><br>
+Once sent, we will try our best to reply with information on when to begin, any delays, or other information. You can email us feedback once accepted.
+Every email from then on will be a link with a date, or other information. <b>REMINDER THIS IS VOLUNTEER WORK. THERE IS NO PAY UNLESS OTHERWISE NOTED.</b>
+<br> <br>
+Hopefully, we can have you as a part of AT Products LLC's Beta Testing team!</p>
+</div>
+<hr>
+<div id="form">
+<h2>Application Form</h2>
+    <p>You can use this section to apply. To contact us generally, you can use the main website's form <a href="https://atproducts.xyz/form/">here</a>.</p>
+    <p>You may either use this or <a href="mailto:support@atproducts.xyz">email us manually</a>. If you don't want to email us on your email client, use this instead. We'll reach out to your email provided.</p>
+<form
+  name="DoBT Apply Form" 
+  action="/form/success"
+  method="POST"
+  data-netlify="true"
+  enctype="multipart/form-data"
+class>
+<div class="d-sm-flex gap-2">
+<div class="col">
+    <div class="mb-3">
+      <label for="nameInput" class="form-label fw-bold">Name</label>
+      <input name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
+    </div>
+</div>
+<div class="col">
+<div class="mb-3">
+  <label for="emailInput" class="form-label fw-bold">Email address</label>
+  <input name="Email" type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+</div>
+</div>
+</div>
+<div class="mb-2">
+  <label for="textareaInput" class="form-label fw-bold">Application</label>
+  <textarea name="Text" class="form-control" id="textareaInput" rows="3" required></textarea>
+</div>
+<small>If you wish to upload files, you will have to resort to <a href="mailto:support@atproducts.xyz">emailing us manually</a> due to Netlify complications.</small>
+<button type="submit" class="mt-2 btn btn-lg btn-primary col-12">Send</button>
+</form>
+</div>
+</main>
+<Footer />
+<BackToTop />
+</div>
+<Scripts />
