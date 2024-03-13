@@ -17731,7 +17731,7 @@ html.fixedtopnavimage {
 }
 
 .modal-body-title, .title {
-    margin-top: .625rem;
+    padding-top: .625rem;
 }
 
 .main-navbar {
