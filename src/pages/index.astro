@@ -12,16 +12,18 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
+{ bulletinImage: "BETATESTING.webp" },
 { bulletinImage: "218-1-012424.webp" },
 { bulletinImage: "218-2-012424.webp" },
+{ bulletinImage: "218-3-012424.webp" },
 ]} />
 <div id="page">
   <Navbar />
   <div class="alert alert-dark alert-dismissible fade show mb-0 d-flex gap-2" role="alert">
-    <i class="bi bi-shield-fill-exclamation h-100"></i> 
+    <i class="bi bi-plus-lg h-100"></i> 
     <div>
-      <strong>LEGAL NOTICE:</strong> We have updated the ATP Discord Rules and it will be in effect starting in the version of 2.18, which is releasing on an unknown date in late March of 2024.
-      <a class="icon-link icon-link-hover" href="https://beta.atproducts.xyz/discord">Review now<i class="bi bi-arrow-right h-100"></i> </a> 
+      <strong>NEW BETA TESTING SITE:</strong> We have updated the Department of Beta Testing site to be more modernized with Bootstrap 5 and Astro!
+      <a class="icon-link icon-link-hover" href="https://beta-testing.atproducts.xyz">View now<i class="bi bi-arrow-right h-100"></i> </a> 
     </div> 
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> 
   </div>
@@ -52,10 +54,16 @@ bulletin={[
     <div class="pt-xmd-2 px-xmd-2">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
+          <img src="/media/slideshow/BETATESTING.webp" class="d-block w-100" alt="2.18 Release Slide 1">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
           <img src="/media/slideshow/218-1-012424.webp" class="d-block w-100" alt="2.18 Release Slide 1">
         </div>
         <div class="carousel-item" data-bs-interval="10000">
           <img src="/media/slideshow/218-2-012424.webp" class="d-block w-100" alt="2.18 Release Slide 2">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="/media/slideshow/218-3-012424.webp" class="d-block w-100" alt="2.18 Release Slide 3">
         </div>
       </div>
       <div class="mediarow py-2" aria-label="Carousel-A Controls">
@@ -66,6 +74,8 @@ bulletin={[
         <div class="carousel-indicators col-7 col-sm-5 text-center">
           <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
           <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
+          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
+          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
         </div>
         <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -299,26 +309,29 @@ bulletin={[
     <div id="what-new">
       <h2> What's New? </h2>
       <p>
-        <b> Released on:</b> January 24th, 2024.<br>
+        <b> Released on:</b> March 27th, 2024.<br>
         <b>ATP Database:</b> 2.18
       </p>
       <b>Added</b>
       <ul>
-        <li>Added more resources, accordions, and even authors to CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Added more resources, accordions, and authors to CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
         <li>Added Dependency review as a new GitHub Workflow. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
       </ul>
       <b>Changed</b>
       <ul>
         <li>Revamped MDickie Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
         <li>Updated CSS Basics in CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Updated Astro from v3.6.4 to v4.5.5. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
         <li>Updated Bootstrap from v5.3.2 to v5.3.3. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
         <li>Updated JQuery from v3.7.1 to v4.0.0-beta. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
         <li>Updated GitHub Workflow CodeQL from v2 to v3. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-</ul>
+        <li>Updated the Discord Rules. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+      </ul>
       <b>Bug Fixes</b>
       <ul>
-        <li>Fixed on the 404 page where the button does not work with the Cookie Menu present. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-</ul>
+        <li>Fixed on the 404 page where the button does not work with the Cookie Menu present. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Patched <code>darkmode.js</code> "to handle the case where the OS is set to light mode and the auto color mode is used" (<a href="https://blog.getbootstrap.com/2024/02/20/bootstrap-5-3-3/#:~:text=Fixed%20our,%20script" target="_blank" rel="noopener noreferrer">Reference</a>). <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+      </ul>
     </div>
   </main>
   <Footer />
