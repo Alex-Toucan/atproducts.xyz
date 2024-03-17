@@ -12,8 +12,10 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
+{ bulletinImage: "BETATESTING.webp" },
 { bulletinImage: "218-1-012424.webp" },
 { bulletinImage: "218-2-012424.webp" },
+{ bulletinImage: "218-3-012424.webp" },
 ]} />
 <div id="page">
   <Navbar />
@@ -52,10 +54,16 @@ bulletin={[
     <div class="pt-xmd-2 px-xmd-2">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
+          <img src="/media/slideshow/BETATESTING.webp" class="d-block w-100" alt="2.18 Release Slide 1">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
           <img src="/media/slideshow/218-1-012424.webp" class="d-block w-100" alt="2.18 Release Slide 1">
         </div>
         <div class="carousel-item" data-bs-interval="10000">
           <img src="/media/slideshow/218-2-012424.webp" class="d-block w-100" alt="2.18 Release Slide 2">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="/media/slideshow/218-3-012424.webp" class="d-block w-100" alt="2.18 Release Slide 3">
         </div>
       </div>
       <div class="mediarow py-2" aria-label="Carousel-A Controls">
@@ -66,6 +74,8 @@ bulletin={[
         <div class="carousel-indicators col-7 col-sm-5 text-center">
           <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
           <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
+          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
+          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
         </div>
         <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
