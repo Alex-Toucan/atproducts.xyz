@@ -1,0 +1,79 @@
+---
+const { author, hr, marginTop } = Astro.props;
+---
+
+<footer>
+  {hr !== 'none' && <hr>}
+  <div class={`container-footer ${marginTop === 'true' ? 'mt-mmd-3' : ''}`}>
+    <div class="mt-md-5">
+      <div class="row px-md-2">
+        <div class="col-md-2 me-xesm-2">
+         <div class="text-center">
+           <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.png" width="50%" alt="icon" class="footerimg"></a></div>
+             <br>
+             <h5><a href="https://atproducts.xyz">AT Products LLC</a></h5>
+             <h5><a href="/" class="text-body-secondary fs-6">Department of Beta Testing</a></h5>
+          </div>
+        </div>
+        <div class="col-md-2 mt-mmd-2 me-md-2 text-centertostart">
+          <h5>DoBT Links</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="/apply" class="nav-link p-0 text-body-secondary">Apply</a></li>
+            <li class="nav-item mb-2"><a href="/links" class="nav-link p-0 text-body-secondary">Links</a></li>
+            <li class="nav-item mb-2"><a href="/guidelines" class="nav-link p-0 text-body-secondary">Guidelines</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mt-mmd-2 me-md-2 text-centertostart">
+          <h5>ATPLLC Links</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://atproducts.xyz" class="nav-link p-0 text-body-secondary">Public Website</a></li>
+            <li class="nav-item mb-2"><a href="https://beta.atproducts.xyz" class="nav-link p-0 text-body-secondary">Beta Website</a></li>
+            <li class="nav-item mb-2"><a href="https://beta-testing.atproducts.xyz" class="nav-link p-0 text-body-secondary">Department of Beta Testing</a></li>
+            <li class="nav-item mb-2"><a href="https://backup.atproducts.xyz" class="nav-link p-0 text-body-secondary">Backup Archive</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mt-mmd-2 me-md-2 text-centertostart">
+          <h5>Documentation</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/guidelines" class="nav-link p-0 text-body-secondary">DoBT Guidelines</a></li>
+            <li class="nav-item mb-2"><a href="https://atproducts.xyz/terms" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
+            <li class="nav-item mb-2"><a href="https://atproducts.xyz/discord" class="nav-link p-0 text-body-secondary">Discord Rules</a></li>
+            <li class="nav-item mb-2"><a href="https://atproducts.xyz/policies" class="nav-link p-0 text-body-secondary">Policies</a></li>
+            <li class="nav-item mb-2"><a href="https://atproducts.xyz/licenses" class="nav-link p-0 text-body-secondary">Licenses</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between pt-3 pb-2 mt-4 border-top">
+        <div class="d-md-flex">
+          <a class="ps-3 footer-info dropdown-toggle" data-bs-toggle="collapse" href="#footerinfo" role="button" aria-expanded="false" aria-controls="footerinfo">
+          Information
+          </a>
+          <div class="ps-3 pt-2 col-md-6 collapse" id="footerinfo">
+            <div class="card card-body text-start">
+              <b>Version:</b> <script is:inline src="/static/version.js"></script><br>
+              {author ?
+                <>
+                  <b>Author:</b> {author}
+                </>
+                :
+                <>
+                 <b>Author:</b> Alex Toucan
+                </>
+              }    
+              <br><br>
+              <p>® <script is:inline src="/static/year.js"></script> AT Products LLC</p>
+             </div>
+            </div>
+          </div>
+          <ul class="list-unstyled d-flex pe-3 gap-3">
+            <li><a class="link-footer" href="https://github.com/Alex-Toucan/atproducts.xyz" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+            <li><a class="link-footer" href="https://twitter.com/ATProductsLLC" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a></li>
+            <li><a class="link-footer" href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+            <li><a class="link-footer" href="https://atproducts.xyz/form/" aria-label="Contact Form / Email"><i class="bi bi-envelope-fill"></i></a></li>
+            <li><a class="link-footer" href="https://twitter.com/ATPWeather" aria-label="Weather"><i class="bi bi-cloud-sun-fill"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>

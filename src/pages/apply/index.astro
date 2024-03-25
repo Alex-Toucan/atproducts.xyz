@@ -1,0 +1,68 @@
+---
+import Head from '../../layouts/Head.astro';
+import Scripts from '../../layouts/Scripts.astro';
+import Hero from '../../components/Hero.astro';
+import Navbar    from '../../components/Navbar.astro';
+import Footer    from '../../components/Footer.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<Head title="ATPLLC DoBT - Applying for the DoBT" description="Apply for the Department of Beta Testing of AT Products LLC." author="Alex Toucan"/>
+      <div id="page">
+<Navbar />
+ <Hero
+  id="codinghome"
+  title="Applying for the DoBT"
+  description="Apply for the DoBT today!"
+  primaryHref="#form"
+  primaryText="Application Form"
+  secondaryHref="/media/pdf/DoBT Backup Application Form.pdf"
+  secondaryText="Backup Physical Form"
+  />
+    <main id="apply" class="container">
+<div id="how">
+      <h2>How to Apply</h2>
+      <p><b>We highly recommend that all applicants read our <a href="/guidelines">guidelines</a> before submitting their application.</b></p>
+      <p>If you cannot take this online form, you may take this <a href="/media/pdf/DoBT Backup Application Form.pdf">PDF version form</a> instead.</p>
+      <p>To apply as a beta tester, please fill out the form below and include a brief statement about why you want to join our beta testing team. Your insights and feedback are invaluable to us!</p>
+      <p>Upon submission of your application, our team will review it and provide you with further instructions via email. Please note that beta testing with us is voluntary and unpaid unless otherwise specified.</p>
+      <p>We look forward to welcoming you to the AT Products LLC's Department of Beta Testing!</p>
+</div>
+<hr>
+<div id="form">
+<h2>Application Form</h2>
+    <p>To apply for the Department of Beta Testing, please fill out the form below. This form is specifically for applying to become a beta tester and should not be used for general inquiries. If you have general questions or feedback, please use the <a href="https://atproducts.xyz/form/">main website's contact form</a> or <a href="mailto:support@atproducts.xyz">email us directly</a>.</p>
+<form
+  name="DoBT Apply Form" 
+  action="/form/success"
+  method="POST"
+  data-netlify="true"
+  enctype="multipart/form-data"
+class>
+<div class="d-sm-flex gap-2">
+<div class="col">
+    <div class="mb-3">
+      <label for="nameInput" class="form-label fw-bold">Name</label>
+      <input name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
+    </div>
+</div>
+<div class="col">
+<div class="mb-3">
+  <label for="emailInput" class="form-label fw-bold">Email address</label>
+  <input name="Email" type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+</div>
+</div>
+</div>
+<div class="mb-2">
+  <label for="textareaInput" class="form-label fw-bold">Application</label>
+  <textarea name="Text" class="form-control" id="textareaInput" rows="3" required></textarea>
+</div>
+<small>If you wish to upload files, you will have to resort to <a href="mailto:support@atproducts.xyz">emailing us manually</a> due to Netlify complications.</small>
+<button type="submit" class="mt-2 btn btn-lg btn-primary col-12">Submit</button>
+</form>
+</div>
+</main>
+<Footer />
+<BackToTop />
+</div>
+<Scripts />

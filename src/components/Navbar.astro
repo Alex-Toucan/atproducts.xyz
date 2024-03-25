@@ -1,0 +1,104 @@
+--- 
+
+--- 
+
+<header>
+  <nav class="navbar navbar-expand-md fixed-top main-navbar shadow-lg">
+    <div class="container-fluid">
+      <a type="button" class="navbar-brand" data-bs-toggle="modal" href="#homeButton">
+        <img src="/media/images/longblack.png" height="45px" alt="Icon" class="headerimg">
+        <span class="ms-2">DoBT</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/apply">Apply</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about:blank" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resources
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/links">Links</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://atproducts.xyz">Public Website</a></li>
+              <li><a class="dropdown-item" href="https://beta.atproducts.xyz">Beta Website</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://github.com/Alex-Toucan/atproducts.xyz/blob/beta/standards.md">Beta Standards</a></li>
+              <li><a class="dropdown-item" href="https://github.com/Alex-Toucan/atproducts.xyz/pulls">GitHub PRs</a></li>
+              <li><a class="dropdown-item" href="https://github.com/Alex-Toucan/atproducts.xyz/tree/beta">Beta Branch</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="https://discord.gg/NTVd3vGFMS">Alex's Diary (CodingHome @ Discord)</a></li>
+              <li><a class="dropdown-item" href="https://twitter.com/ATProductsLLC">ATPLLC's Twitter</a></li>
+              <li><a class="dropdown-item" href="https://atproducts.xyz/backup/archive/">Backup Archive (public)</a></li>
+              <li><a class="dropdown-item" href="https://beta.atproducts.xyz/backup/archive/">Backup Archive (beta)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/guidelines">Guidelines</a>
+          </li>
+        </ul>
+        <hr class="m-2 permhr">
+        <ul class="navbar-nav d-flex gap-lg-3 mt-3 mt-lg-0">
+          <li class="nav-item">
+            <a class="btn btn-primary" href="/apply">Apply Today!</a>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+              <span class="theme-icon-active">
+                <i class="my-1"></i>
+              </span>
+              <span class="d-custom-none" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-specific" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="false">
+                  <i class="bi bi-sun-fill me-2"></i> Light </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <i class="bi bi-moon-stars-fill me-2"></i> Dark </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+                  <i class="bi bi-circle-half me-2"></i> Auto </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<noscript>
+  <div class="alert alert-dark mb-0" role="alert">
+    <strong>It seems like you don't have JavaScript enabled!</strong> For color modes, accordions, scrollspies, tab panes, dropdowns, popovers, and much more, you'll need JavaScript to work! We do not have fallbacks, so please enable JavaScript or <a href="https://github.com/Alex-Toucan/atproducts.xyz">view the source code to read the information</a>.
+  </div>
+</noscript>
+
+<div class="modal fade" id="homeButton" tabindex="-1" aria-labelledby="homeButtonTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="homeButtonTitle">atproducts.xyz</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="mb-3">Navbar Image Button</h2>
+        <div class="d-grid d-md-flex gap-2">
+          <a href="/" class="btn btn-primary btn-lg col-md-6">Return Home</a>
+          <a href="https://atproducts.xyz" class="btn btn-secondary btn-lg">Return to atproducts.xyz</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
