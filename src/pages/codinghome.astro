@@ -184,7 +184,7 @@ On this page, you'll find an <a class="link-warning" href="javascript:void(0)">o
                   <a href="https://github.com/MammaMiaDev/avaloniaui-the-series/blob/main/AvaloniaApplication/App.axaml.cs">MammaMiaDev - GitHub</a> - Example repository for DI in context with Views &amp; ViewModels | <code>Showing App.xaml.cs</code>
                 </p>
                 <p>
-                  <strong>REQUIRED</strong>: Implement the <code>RegisterViewFactory</code> from <code>ViewLocator.cs</code>. It can of course be used for other stuff except Views &amp; ViewModels.
+                  <strong>REQUIRED</strong>: Implement the <code>RegisterViewFactory</code> from <code>ViewLocator.cs</code>. It can be used for other stuff except Views &amp; ViewModels.
                 </p>
                 <hr>
                 <strong>Setup for Rider</strong>
@@ -219,7 +219,7 @@ On this page, you'll find an <a class="link-warning" href="javascript:void(0)">o
                 <br>
                 <br>
                 <p>By this action you are modifying the NetGet.config file, which applies configurations to the NuGet package manager on your local machine.</p>
-                <p>Afterwards install the package from Rider&#39;s NuGet Window as usual and you&#39;re off to the races. 👍</p>
+                <p>Afterwards install the package from Rider&#39;s NuGet Window as usual and you&#39;re off to the races.</p>
                 <hr>
                 <strong>Other GitHub Repos</strong>
                 <br>
@@ -1169,17 +1169,18 @@ h1, h4, h6, h2 &lbrace;
         <h4>Classes</h4>
         <p>Think of classes like custom HTML elements, they can be applied in html like <code>&lt;p class="text-red"&gt;</code></p>
         <p>Classes begin with a dot or period (.) to begin the selector.</p>
-        <code>
-.text-red &lbrace;
-&nbsp;&nbsp;color&colon; red;
+        <p><code>
+.text-red &lbrace;<be>
+&nbsp;&nbsp;color&colon; red;<be>
 &rbrace;</code>
+</p>
       </div>
 <div id="text-7">
 <h4>Text Elements</h4><p>
 <code>font-size&colon; 10px;</code> - Text size, can be in pixels.<br>
 <code>font-family&colon; verdana;</code> - Fonts<br>
 <code>text-align&colon; center;</code> - Can align to the left side, right side, or in the center of the webpage. <br>
-<code>text-shadow&colon; 3px black</code> - Shadow of text. Can be in pixels and colors.
+<code>text-shadow&colon; 3px black</code> - Shadow of text. It can be in pixels and colors.
 </p>
 </div>
 <div id="pad-7">
@@ -1209,10 +1210,10 @@ a multi-line<br>
         </div>
 <div id="eci-7">
 <h4>Extra: Centering Images</h4>
-<code>img &lbrace;
+<p><code>img &lbrace;
 &nbsp;&nbsp;margin&colon; 0 auto;
 &nbsp;&nbsp;display&colon; block;
-&rbrace;</code>
+&rbrace;</code></p>
   </div>
 </Fragment></Scrollspy>
  </Fragment></Modal>
@@ -1245,7 +1246,7 @@ Multi-line comments - <code>/* comment here */</code></p>
 <h4>Variables</h4>
 <p>
 <code>var, const, let</code><br>
-<code>var</code> — The most common variable. Can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
+<code>var</code> — The most common variable. It can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
 <code>const</code> — Can not be reassigned and not accessible before they appear within the code.<br>
 <code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
 </p>
@@ -1257,7 +1258,7 @@ Numbers — <code>var age = 23</code> <br>
 Variables — <code>var x</code><br>
 Text (strings) — <code>var a = "init"</code><br>
 Operations — <code>var b = 1 + 2 + 3</code><br>
-True or fase statements — <code>var c = true</code><br>
+True or false statements — <code>var c = true</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
 Constant numbers — <code>const PI = 3.14</code><br>
 Objects — <code>var name = &lbrace;firstName&colon; "John", lastName&colon; "Doe"&rbrace;</code>
@@ -1289,7 +1290,7 @@ scrollcontent={[
 <p>Query Data in Columns c1, c2 from a Table</p>
 <code>
 SELECT c1, c2 FROM t;<br>
-Code language: SQL (Structured Query Language) (sql)
+Code language: SQL (Structured Query Language) (SQL)
 </code><br><br>
 <p>Query All Rows and Columns from a Table</p>
 <code>SELECT * FROM t;</code><br><br>
