@@ -272,15 +272,17 @@ bulletin={[
     <hr>
     <div id="history">
       <h2> History </h2>
-      <div class="position-relative" aria-label="History Bar" id="historyTab" role="tablist" style="margin: 1.55rem !important;">
+      <div class="position-relative" aria-owns="history-buttons" aria-label="History Bar" id="historyTab" role="tablist" style="margin: 1.55rem !important;">
         <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 1px;" id="history-line">
           <div class="progress-bar" style="width: 0%" id="history-progress"></div>
         </div>
-        <button type="button" class="position-absolute top-0 start-0   translate-middle btn btn-sm btn-primary   rounded-3" aria-controls="history-1-pane" aria-label="2020" id="history-1">2020</button>
-        <button type="button" class="position-absolute top-0 start-25  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-2-pane" aria-label="2021" id="history-2">2021</button>
-        <button type="button" class="position-absolute top-0 start-50  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-3-pane" aria-label="2022" id="history-3">2022</button>  
-        <button type="button" class="position-absolute top-0 start-75  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-4-pane" aria-label="2023" id="history-4">2023</button>
-        <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-5-pane" aria-label="2024" id="history-5">2024</button>
+        <div id="history-buttons">
+          <button type="button" class="position-absolute top-0 start-0   translate-middle btn btn-sm btn-primary   rounded-3" aria-controls="history-1-pane" aria-label="2020" id="history-1">2020</button>
+          <button type="button" class="position-absolute top-0 start-25  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-2-pane" aria-label="2021" id="history-2">2021</button>
+          <button type="button" class="position-absolute top-0 start-50  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-3-pane" aria-label="2022" id="history-3">2022</button>  
+          <button type="button" class="position-absolute top-0 start-75  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-4-pane" aria-label="2023" id="history-4">2023</button>
+          <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-5-pane" aria-label="2024" id="history-5">2024</button>
+        </div>
       </div>
       <div class="tab-content products-border rounded-2 p-2" id="history-tabs">
         <div class="tab-pane fade show active" id="history-1-pane">
