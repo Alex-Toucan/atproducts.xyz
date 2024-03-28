@@ -38,14 +38,14 @@ const {
               <Fragment set:html={errorButton} />
             )}
             {primaryHref && primaryText && (
-            <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
+            <a href={primaryHref} class="btn btn-primary btn-lg col-md">{primaryText}</a>
             )}
             {secondaryHref && secondaryText && (
-              <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
+              <a href={secondaryHref} class="btn btn-secondary btn-lg col-md">{secondaryText}</a>
             )}
 {dropdownItems && (
   <div class="dropdown col-md">
-    <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
+    <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary btn-lg dropdown-toggle w-100">
       Navigation
     </button>
     <ul class="dropdown-menu w-100 white-space-normal">
