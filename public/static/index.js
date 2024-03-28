@@ -7,8 +7,7 @@ var slidebtn = document.querySelectorAll(".slidebtn");
 $(function () {
     $(carouselMain).carousel({
         pause: "false",
-			  cycle: "true",
-			  interval: 10000
+	ride: "true"
     });
     
     $(playButton).click(function () {

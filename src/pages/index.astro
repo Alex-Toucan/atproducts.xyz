@@ -12,17 +12,18 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-{ bulletinImage: "2172-1-012424.webp" },
-{ bulletinImage: "2172-2-012424.webp" },
-{ bulletinImage: "2172-3-012424.webp" },
+{ bulletinImage: "BETATESTING.webp" },
+{ bulletinImage: "218-1-032724.webp" },
+{ bulletinImage: "218-2-032724.webp" },
+{ bulletinImage: "218-3-032724.webp" },
 ]} />
 <div id="page">
   <Navbar />
   <div class="alert alert-dark alert-dismissible fade show mb-0 d-flex gap-2" role="alert">
-    <i class="bi bi-shield-fill-exclamation h-100"></i> 
+    <i class="bi bi-plus-lg h-100"></i> 
     <div>
-      <strong>LEGAL NOTICE:</strong> We have updated the ATP Discord Rules and the Title II & VII Policy and it will be in effect starting in the version of 2.18, which is releasing on March 27th, 2024.
-      <a class="icon-link icon-link-hover me-3" href="https://beta.atproducts.xyz/discord">Review the ATP Discord Rules<i class="bi bi-arrow-right h-100"></i> </a> <a class="icon-link icon-link-hover" href="https://beta.atproducts.xyz/titleiiandvii">Review the Title II & VII Policy<i class="bi bi-arrow-right h-100"></i> </a>
+      <strong>NEW BETA TESTING SITE:</strong> We have updated the Department of Beta Testing site to be more modernized with Bootstrap 5 and Astro!
+      <a class="icon-link icon-link-hover" href="https://beta-testing.atproducts.xyz">View now<i class="bi bi-arrow-right h-100"></i> </a> 
     </div> 
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> 
   </div>
@@ -42,24 +43,27 @@ bulletin={[
   { navigationDesc: "What's New?", navigationLink: "#what-new" },
   ]},
   icons={[
-  { icon: "github", desc: "Github", href: "https://github.com/Alex-Toucan/atproducts.xyz" },
+  { icon: "github", desc: "GitHub", href: "https://github.com/Alex-Toucan/atproducts.xyz" },
   { icon: "twitter-x", desc: "Twitter / X", href: "https://twitter.com/ATProductsLLC" },
   { icon: "youtube", desc: "YouTube", href: "https://youtube.com/c/AlexToucanAT" },
   { icon: "envelope-fill", desc: "Contact Form / Email", href: "/form/" },
   { icon: "cloud-sun-fill", desc: "Weather", href: "https://twitter.com/ATPWeather" },
   ]}
   />
-  <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow nolrpadding container-sm mt-xmd-2 mb-3 pointer-event" data-bs-ride="carousel">
+  <div id="carousel" class="carousel carousel-main carousel-fade slide shadow nolrpadding container-sm mt-xmd-2 mb-3 pointer-event" data-bs-ride="carousel">
     <div class="pt-xmd-2 px-xmd-2">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/media/slideshow/2172-1-012424.webp" class="d-block w-100" alt="2.17.2 Release Slide 1">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="/media/slideshow/BETATESTING.webp" class="d-block w-100" alt="2.18 Release Slide 1">
         </div>
-        <div class="carousel-item">
-          <img src="/media/slideshow/2172-2-012424.webp" class="d-block w-100" alt="2.17.2 Release Slide 2">
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="/media/slideshow/218-1-032724.webp" class="d-block w-100" alt="2.18 Release Slide 1">
         </div>
-        <div class="carousel-item">
-          <img src="/media/slideshow/2172-3-012424.webp" class="d-block w-100" alt="2.17.2 Release Slide 3">
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="/media/slideshow/218-2-032724.webp" class="d-block w-100" alt="2.18 Release Slide 2">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="/media/slideshow/218-3-032724.webp" class="d-block w-100" alt="2.18 Release Slide 3">
         </div>
       </div>
       <div class="mediarow py-2" aria-label="Carousel-A Controls">
@@ -71,6 +75,7 @@ bulletin={[
           <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
           <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
           <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
+          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
         </div>
         <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -85,14 +90,14 @@ bulletin={[
         <input type="radio" class="btn-check btn-check-dark col pauseButton" name="btnradio" id="pauseButton" aria-label="pauseButton">
         <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-hero"></i></label>
       </div>
-      <div class="col px-2 my-auto"><a href="/media/pdf/2.17.2 Patch Notes.pdf" class="fs-2 link-hero"><i class="bi bi-filetype-pdf"></i></a></div>
+      <div class="col px-2 my-auto"><a href="/media/pdf/2.18 Patch Notes.pdf" class="fs-2 link-hero" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a></div>
     </div>
   </div>
   <main id="index" class="container">
     <hr class="hero-drappear">
     <div id="general-info">
       <h2>General Information</h2>
-      <p> AT Products LLC, otherwise known as AT Products, is an informative technology company that is based in the United States, that contains resources for cybersecurity and malware. Our products are for the public to use anytime. </p>
+      <p> AT Products LLC, otherwise known as AT Products (officially recognized pronunciation: "A.T Products") is an informative technology company that is based in the United States, that contains resources for cybersecurity and malware. Our products are for the public to use anytime. </p>
       <p> Our current products are Flash Documentation, MDickie Projects, and SMS Bomb. </p>
       <p> The "AT" in AT Products does stand for Alex Toucan. </p>
     </div>
@@ -139,7 +144,7 @@ bulletin={[
             <div class="products-4 tab-pane fade" id="products-4" role="tabpanel" aria-labelledby="products-4-tab" tabindex="0">
               <div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/ya.png" alt="SMS Bomb"></div>
               <h2 class="card-title">SMS Bomb</h2>
-              <p class="mb-0">This is for Android Devices. You can SMS bomb your friends!</p>
+              <p class="mb-0">This is for Android Devices. You can spam message your friends!</p>
               <div class="tab-link">
                 <a href="/sms" class="btn btn-primary w-100">Visit</a>
               </div>
@@ -170,30 +175,21 @@ bulletin={[
           <div class="col-md">
             <div class="p-1">
               <div class="mx-md-auto d-table">
-                <a href="https://protdos.com" class="d-mmd-flex">
-                  <img src="/media/images/protdos.webp" alt="ProtDos" height="60px" class="d-inline col-auto">
-                  <div class="d-inline my-mmd-auto col">ProtDos</div>
-                </a>
+                <a href="https://protdos.com" class="d-mmd-flex"><img src="/media/images/protdos.webp" alt="ProtDos" height="60px" class="d-inline col-auto"><div class="d-inline my-mmd-auto col">ProtDos</div></a>
               </div>
             </div>
           </div>
           <div class="col-md">
             <div class="p-1">
               <div class="mx-md-auto d-table">
-                <a href="https://deltasoftai.com" class="d-mmd-flex">
-                  <img src="/media/images/deltasoft.webp" alt="Deltasoft" height="60px" class="d-inline col-auto me-2">
-                  <div class="d-inline my-mmd-auto col">Deltasoft</div>
-                </a>
+                <a href="https://deltasoftai.com" class="d-mmd-flex"><img src="/media/images/deltasoft.webp" alt="Deltasoft" height="60px" class="d-inline col-auto me-2"><div class="d-inline my-mmd-auto col">Deltasoft</div></a>
               </div>
             </div>
           </div>
           <div class="col-md">
             <div class="p-1">
               <div class="mx-md-auto d-table">
-                <a href="https://zoezo.dev" class="d-mmd-flex">
-                  <img src="/media/images/zoezo.webp" alt="Zoezo" height="60px" class="d-inline col-auto me-1">
-                  <div class="d-inline my-mmd-auto col">Zoezo</div>
-                </a>
+                <a href="https://zoezo.dev" class="d-mmd-flex"><img src="/media/images/zoezo.webp" alt="Zoezo" height="60px" class="d-inline col-auto me-1"><div class="d-inline my-mmd-auto col">Zoezo</div></a>
               </div>
             </div>
           </div>
@@ -203,20 +199,14 @@ bulletin={[
           <div class="col-md">
             <div class="p-1">
               <div class="mx-md-auto d-table">
-                <a href="https://2983u2.site/" class="d-mmd-flex">
-                  <img src="/media/images/pynx.webp" alt="PynxTech" height="60px" class="d-inline col-auto">
-                  <div class="d-inline my-mmd-auto col">PynxTech</div>
-                </a>
+                <a href="https://2983u2.site/" class="d-mmd-flex"><img src="/media/images/pynx.webp" alt="PynxTech" height="60px" class="d-inline col-auto"><div class="d-inline my-mmd-auto col">PynxTech</div></a>
               </div>
             </div>
           </div>
           <div class="col-md">
             <div class="p-1">
               <div class="mx-md-auto d-table">
-                <a href="https://discord.com/invite/FqcSvnrnvc" class="d-mmd-flex">
-                  <img src="/media/images/IDA.webp" alt="International Developer's Association" height="60px" class="d-inline col-auto rounded-2 me-2">
-                  <div class="d-inline my-mmd-auto col">International Developer's Association</div>
-                </a>
+                <a href="https://discord.com/invite/FqcSvnrnvc" class="d-mmd-flex"><img src="/media/images/IDA.webp" alt="International Developer's Association" height="60px" class="d-inline col-auto rounded-2 me-2"><div class="d-inline my-mmd-auto col">International Developer's Association</div></a>
               </div>
             </div>
           </div>
@@ -238,20 +228,25 @@ bulletin={[
         </div>
         <hr class="m-2 d-md-none">
         <div class="p-2 text-mmd-center">
+          <a href="https://astro.build">
+            <img src="/media/images/astro.webp" alt="Astro" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 px-1 ms-1 me-2"><div class="d-inline">Astro</a> has provided their framework which powers our site!</div>
+        </div>
+        <hr class="m-2 d-md-none">
+        <div class="p-2 text-mmd-center">
           <a href="https://zoezo.dev">
             <img src="/media/images/zoezo.webp" alt="Zoezo" height="60px" class="d-block mx-mmd-auto d-md-inline me-md-1 mb-mmd-2"><div class="d-inline">Zoezo</a> is a current <span class="glow-text">code contributor</span>!</div>
         </div>
         <hr class="m-2">
         <Accordion parent="resourcesAccordion" additionalClasses="m-2" theme="dark">
           <Fragment slot="accordion-content">
-            <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne" parent="resourcesAccordion" additionalClasses="text-white">
+            <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne" parent="resourcesAccordion">
               <Fragment slot="accordion-item-content">
                 <div class="p-2 text-mmd-center d-block">
                   <p class="mb-0"><a href="https://uigradients.com/">uiGradients</a> for providing gradients for the carousel images when I'm lazy to do it myself.</p>
                 </div>
               </Fragment>
             </AccordionItem>
-            <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo" parent="resourcesAccordion" additionalClasses="text-white">
+            <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo" parent="resourcesAccordion">
               <Fragment slot="accordion-item-content">
                 <div class="p-2 text-mmd-center">
                   <div class="p-2">
@@ -314,36 +309,32 @@ bulletin={[
     <div id="what-new">
       <h2> What's New? </h2>
       <p>
-        <b> Released on:</b> January 24th, 2024.<br>
-        <b>ATP Database:</b> 2.17.2
+        <b> Released on:</b> March 27th, 2024.<br>
+        <b>ATP Database:</b> 2.18
       </p>
       <b>Added</b>
       <ul>
-        <li>Added a <b>BUNCH</b> of resources in CodingHome and even added more accordions! <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>Added a PDF download button in the carousel. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>Added a footnote in both the Contact Form and the Submitted page. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
+        <li>Added a new "Classes" section in CSS Basics in CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Added more resources, accordions, and authors to CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Added Dependency review as a new GitHub Workflow. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">#190</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/192" target="_blank" rel="noopener noreferrer">#192</a>)</li>
       </ul>
       <b>Changed</b>
       <ul>
-        <li>Updated the Privacy Policy. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>MDickie Projects is now up to date. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>The Contact Form is now structured with flexbox. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>Updated the Contact Form's submit button's size. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>Changed the focus ring on the "Back To Top" button. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>Changed border radius on the history buttons. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>Updated Bootstrap Icons from v1.11.2 to v1.11.3. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>Updated Vite v4.5.1 to v4.5.2. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/186" target="_blank" rel="noopener noreferrer">(#186)</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-      </ul>
-      <b>Removed and Replaced</b>
-      <ul>
-        <li>Removed AstroCore as an ally as the company went defunct, instead we put Zoezo there and in the credits. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>Replaced the old mail button (the one to directly go to your email client) and replaced it with the Contact Form. The manual option link will be in the Contact Form from now on. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
+        <li>Revamped MDickie Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>The download links in BxPP & Inferno are now buttons. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Updated Astro from v3.6.4 to v4.5.10. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Updated Bootstrap from v5.3.2 to v5.3.3. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Updated JQuery from v3.7.1 to v4.0.0-beta. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Updated GitHub Workflow CodeQL from v2 to v3. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Updated the Discord Rules. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Updated the Title II & VII Policy. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
       </ul>
       <b>Bug Fixes</b>
       <ul>
-        <li>Fixed a bug where the back-to-top button was behind the cookie menu. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-        <li>Fixed missing GitHub workflows. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/184" target="_blank" rel="noopener noreferrer">(#184)</a></li>
-      </ul>
+        <li>Patched <code>darkmode.js</code> "to handle the case where the OS is set to light mode and the auto color mode is used" (<a href="https://blog.getbootstrap.com/2024/02/20/bootstrap-5-3-3/#:~:text=Fixed%20our,%20script" target="_blank" rel="noopener noreferrer">Reference</a>). <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Fixed an issue with Flash Documentation's navigation button containing CodingHome's content instead of its own. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Fixed on the 404 page where the button does not work with the Cookie Menu present. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">#190</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/191" target="_blank" rel="noopener noreferrer">#191</a>)</li>
+     </ul>
     </div>
   </main>
   <Footer />
