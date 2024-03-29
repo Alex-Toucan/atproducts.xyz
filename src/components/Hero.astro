@@ -15,7 +15,8 @@ const {
   minImageWidth,
   marginBottom,
   icons,
-  dropdownItems 
+  dropdownItems,
+  container
 } = Astro.props;
 ---
 
@@ -23,6 +24,9 @@ const {
   <div class="hero-back h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
       <div class="text-white">
+        {container && (
+          <div class="container">
+        )}
         <div>
           {imageSrc && (
             <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} />
@@ -67,7 +71,9 @@ const {
   ))}
 </div>
 )}
-
+        {container && (
+          </div>
+        )}
         </div>
       </div>
     </div>
