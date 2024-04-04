@@ -13,6 +13,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
 { bulletinImage: "BETATESTING.webp" },
+{ bulletinImage: "21801-1-040324.webp" },
 { bulletinImage: "218-1-032724.webp" },
 { bulletinImage: "218-2-032724.webp" },
 { bulletinImage: "218-3-032724.webp" },
@@ -57,6 +58,9 @@ bulletin={[
           <img src="/media/slideshow/BETATESTING.webp" class="d-block w-100" alt="2.18 Release Slide 1">
         </div>
         <div class="carousel-item" data-bs-interval="10000">
+          <img src="/media/slideshow/21801-1-040324.webp" class="d-block w-100" alt="2.18.0.1 Release Slide 1">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
           <img src="/media/slideshow/218-1-032724.webp" class="d-block w-100" alt="2.18 Release Slide 1">
         </div>
         <div class="carousel-item" data-bs-interval="10000">
@@ -76,6 +80,7 @@ bulletin={[
           <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
           <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
           <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
+          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
         </div>
         <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -90,8 +95,8 @@ bulletin={[
         <input type="radio" class="btn-check btn-check-dark col pauseButton" name="btnradio" id="pauseButton" aria-label="pauseButton">
         <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-hero"></i></label>
       </div>
-      <div class="col px-2 my-auto"><a href="/media/pdf/2.18 Patch Notes.pdf" class="fs-2 link-hero" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a></div>
-    </div>
+      <div class="col px-2 my-auto"><a href="/media/pdf/2.18.0.1 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-hero" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a></div>
+        </div>
   </div>
   <main id="index" class="container">
     <hr class="hero-drappear">
@@ -272,20 +277,22 @@ bulletin={[
     <hr>
     <div id="history">
       <h2> History </h2>
-      <div class="position-relative" id="historyTab" role="tablist" style="margin: 1.55rem !important;">
+      <div class="position-relative" aria-label="History Bar" id="historyTab" role="tablist" style="margin: 1.55rem !important;">
         <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 1px;" id="history-line">
           <div class="progress-bar" style="width: 0%" id="history-progress"></div>
         </div>
-        <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-3" id="history-1">2020</button>
-        <button type="button" class="position-absolute top-0 start-25 translate-middle btn btn-sm btn-secondary rounded-3" id="history-2">2021</button>
-        <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-3" id="history-3">2022</button>  
-        <button type="button" class="position-absolute top-0 start-75 translate-middle btn btn-sm btn-secondary rounded-3" id="history-4">2023</button>
-        <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-3" id="history-5">2024</button>
+        <div id="history-buttons">
+          <button type="button" class="position-absolute top-0 start-0   translate-middle btn btn-sm btn-primary   rounded-3" aria-controls="history-1-pane" aria-label="2020" id="history-1">2020</button>
+          <button type="button" class="position-absolute top-0 start-25  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-2-pane" aria-label="2021" id="history-2">2021</button>
+          <button type="button" class="position-absolute top-0 start-50  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-3-pane" aria-label="2022" id="history-3">2022</button>  
+          <button type="button" class="position-absolute top-0 start-75  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-4-pane" aria-label="2023" id="history-4">2023</button>
+          <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-5-pane" aria-label="2024" id="history-5">2024</button>
+        </div>
       </div>
       <div class="tab-content products-border rounded-2 p-2" id="history-tabs">
         <div class="tab-pane fade show active" id="history-1-pane">
           <h1>2020</h1>
-          <p class="m-0">AT Products was just a simple thought around this time, a company owned by Alex Toucan. It would become very real with the help of <a href="https://discord.com">Discord</a>, as it gave Alex Toucan some reputation.</p>
+          <p class="m-0">AT Products was just a simple thought around this time, a company owned by Alex Toucan. It would become genuine with the help of <a href="https://discord.com">Discord</a>, as it gave Alex Toucan some reputation.</p>
         </div>
         <div class="tab-pane fade" id="history-2-pane">
           <h1>2021</h1>
@@ -293,15 +300,14 @@ bulletin={[
         </div>
         <div class="tab-pane fade" id="history-3-pane">
           <h1>2022</h1>
-          <p class="m-0">The New Year of 2022, brought <a href="/codinghome">CodingHome</a>, and our Documentation. Finally, in February 2022, we bought the domain of atproducts.org and put the same code there. But, soon enough, <a href="https://protdos.com">ProtDos</a> permitted us to use their (and our) past CSS, which was <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3</a>. We changed the CSS to make it dark a month later, sold the domain a month later, and bought the atproducts.xyz domain... a month later. and then <a href="https://2-6.atproducts.xyz">changed it back in June of 2022</a>. Between March and June of 2022, we introduced <a href="/flash">Flash Documentation</a> and the <a href="/noodle">Noodle Hackerspace</a> as new products. The hugest overhaul would happen on June 3rd, 2022, with <a href="https://2-6.atproducts.xyz">2.6</a>. Which replaced <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3</a> with <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap 5</a>. Not much later, on August 21st, 2022, <a href="https://2-6-1.atproducts.xyz">we changed the company logo</a>, to a more professional design. <a href="https://2-7.atproducts.xyz">2.7</a>, released on September 22nd, 2022, changed the nav bar. In late August of 2022, AT Products joined and helped create The CodingHome Universe (now the <a href="https://discord.com/invite/FqcSvnrnvc">International Developer's Association</a>), a coders alliance with our current allies.</p>
+          <p class="m-0">The New Year of 2022, brought <a href="/codinghome">CodingHome</a>, and our Documentation. Finally, in February 2022, we bought the domain atproducts.org and put the same code there. But, soon enough, <a href="https://protdos.com">ProtDos</a> permitted us to use their (and our) past CSS, which was <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3</a>. We changed the CSS to make it dark a month later, sold the domain a month later, and bought the atproducts.xyz domain... a month later. and then <a href="https://2-6.atproducts.xyz">changed it back in June of 2022</a>. Between March and June of 2022, we introduced <a href="/flash">Flash Documentation</a> and the <a href="/noodle">Noodle Hackerspace</a> as new products. The hugest overhaul would happen on June 3rd, 2022, with <a href="https://2-6.atproducts.xyz">2.6</a>. Which replaced <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3</a> with <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap 5</a>. Not much later, on August 21st, 2022, <a href="https://2-6-1.atproducts.xyz">we changed the company logo</a>, to a more professional design. <a href="https://2-7.atproducts.xyz">2.7</a>, released on September 22nd, 2022, changed the nav bar. In late August of 2022, AT Products joined and helped create The CodingHome Universe (now the <a href="https://discord.com/invite/FqcSvnrnvc">International Developer's Association</a>), a coders alliance with our current allies.</p>
         </div>
         <div class="tab-pane fade" id="history-4-pane">
           <h1>2023</h1>
-          <p class="m-0"><a href="https://2-12.atproducts.xyz">2.12</a>, released on January 4th, 2023, added back dark mode and the switch as <a href="https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/">Bootstrap v5.3.0-alpha1</a> released on December 24th, 2022. What an update to release into the New Year of 2023 since dark mode was being waited on for months beforehand. <a href="https://2-15.atproducts.xyz">2.15</a> brought new introductions, otherwise called heroes with images, released on June 30th, 2023. <a href="https://2-16.atproducts.xyz">2.16</a> would bring improvements to the heroes, releasing on September 13rd, 2023. And finally, <a href="https://2-16-1.atproducts.xyz">2.16.1</a>, released on September 27th, 2023, brought an overhaul to this history tab. On November 29th, 2023, we changed the company logo again with <a href="https://2-17.atproducts.xyz">2.17</a>. Closing out the year, replacing the code behind this whole project, <a href="https://2-17-1.atproducts.xyz">2.17.1</a> releasing on December 20th, 2023, brought in the Astro framework.</p>
-        </div>
+          <p class="m-0"><a href="https://2-12.atproducts.xyz">2.12</a>, released on January 4th, 2023, added back dark mode and the switch as <a href="https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/">Bootstrap v5.3.0-alpha1</a> was released on December 24th, 2022. What an update to release into the New Year of 2023, since dark mode had been awaited for months beforehand. <a href="https://2-13.atproducts.xyz">2.13</a> would replace a couple of links to the iconic cards that still exist in Web Pages and Pynx's Projects, as most of these cards got replaced by 2.15, released on January 18th, 2023. <a href="https://2-15.atproducts.xyz">2.15</a> brought new introductions, otherwise called heroes with images, released on June 30th, 2023. <a href="https://2-16-1.atproducts.xyz">2.16.1</a>, released on September 27th, 2023, brought an overhaul to this history tab. On November 29th, 2023, we changed the company logo again with <a href="https://2-17.atproducts.xyz">2.17</a>. Closing out the year, replacing the code behind this whole project, <a href="https://2-17-1.atproducts.xyz">2.17.1</a> releasing on December 20th, 2023, brought in the Astro framework.</p>        </div>
         <div class="tab-pane fade" id="history-5-pane">
           <h1>2024</h1>
-          <p class="m-0">Nothing important here yet. 👀</p>
+          <p class="m-0"><a href="https://2-18.atproducts.xyz">2.18</a>, releasing on March 27th, 2024, would be the second update of the year, and revamped MDickie Projects entirely.</p>
         </div>
       </div>
     </div>
@@ -309,32 +315,24 @@ bulletin={[
     <div id="what-new">
       <h2> What's New? </h2>
       <p>
-        <b> Released on:</b> March 27th, 2024.<br>
-        <b>ATP Database:</b> 2.18
+        <b> Released on:</b> April 3rd, 2024.<br>
+        <b>ATP Database:</b> 2.18.0.1
       </p>
-      <b>Added</b>
-      <ul>
-        <li>Added a new "Classes" section in CSS Basics in CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Added more resources, accordions, and authors to CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Added Dependency review as a new GitHub Workflow. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">#190</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/192" target="_blank" rel="noopener noreferrer">#192</a>)</li>
-      </ul>
       <b>Changed</b>
       <ul>
-        <li>Revamped MDickie Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>The download links in BxPP & Inferno are now buttons. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Updated Astro from v3.6.4 to v4.5.10. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Updated Bootstrap from v5.3.2 to v5.3.3. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Updated JQuery from v3.7.1 to v4.0.0-beta. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Updated GitHub Workflow CodeQL from v2 to v3. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Updated the Discord Rules. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Updated the Title II & VII Policy. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
+        <li>Changed the button sizes in heroes to large. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/195" target="_blank" rel="noopener noreferrer">(#195)</a></li>
+        <li>The 404 hero is now in a container. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/195" target="_blank" rel="noopener noreferrer">(#195)</a></li>
+        <li>Updated column sizes on MDickie Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/195" target="_blank" rel="noopener noreferrer">(#195)</a></li>
+        <li>Updated Astro from v4.5.10 to v4.5.15. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/195" target="_blank" rel="noopener noreferrer">(#195)</a></li>
+        <li>Updated Vite from v5.1.5 to v5.2.8. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/196" target="_blank" rel="noopener noreferrer">#196</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/195" target="_blank" rel="noopener noreferrer">#195</a>)</li>
+        <li>Updated @astrojs/react from v3.1.0 to v3.1.1. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/195" target="_blank" rel="noopener noreferrer">(#195)</a></li>
+        <li>Updated all legal documents to include grammar fixes; no new statements. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/195" target="_blank" rel="noopener noreferrer">(#195)</a></li>
       </ul>
       <b>Bug Fixes</b>
       <ul>
-        <li>Patched <code>darkmode.js</code> "to handle the case where the OS is set to light mode and the auto color mode is used" (<a href="https://blog.getbootstrap.com/2024/02/20/bootstrap-5-3-3/#:~:text=Fixed%20our,%20script" target="_blank" rel="noopener noreferrer">Reference</a>). <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Fixed an issue with Flash Documentation's navigation button containing CodingHome's content instead of its own. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">(#190)</a></li>
-        <li>Fixed on the 404 page where the button does not work with the Cookie Menu present. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/190" target="_blank" rel="noopener noreferrer">#190</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/191" target="_blank" rel="noopener noreferrer">#191</a>)</li>
-     </ul>
+        <li>Fixed the main carousel being broken. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/194" target="_blank" rel="noopener noreferrer">#194</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/195" target="_blank" rel="noopener noreferrer">#195</a>)</li>
+        <li>Fixed grammar issues in the communities' disclaimer section. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/195" target="_blank" rel="noopener noreferrer">(#195)</a></li>
+      </ul>
     </div>
   </main>
   <Footer />

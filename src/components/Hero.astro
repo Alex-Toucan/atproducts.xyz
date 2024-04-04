@@ -15,7 +15,8 @@ const {
   minImageWidth,
   marginBottom,
   icons,
-  dropdownItems 
+  dropdownItems,
+  container
 } = Astro.props;
 ---
 
@@ -23,51 +24,52 @@ const {
   <div class="hero-back h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
       <div class="text-white">
-        <div>
-          {imageSrc && (
-            <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} />
-          )}
-          {title && (
-           <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
-          )}
-        </div>
-        <p class="fs-4 m-3 text-body-secondary">{description}</p>
-        <div class="mx-auto justify-content-between container" id="links">
-          <div class="d-md-flex d-grid gap-2">
-            {errorButton && (
-              <Fragment set:html={errorButton} />
+        <div class={`${container === 'true' ? 'container' : ''}`}>
+          <div>
+            {imageSrc && (
+              <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} />
             )}
-            {primaryHref && primaryText && (
-            <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
+            {title && (
+            <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
             )}
-            {secondaryHref && secondaryText && (
-              <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
-            )}
-{dropdownItems && (
-  <div class="dropdown col-md">
-    <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
-      Navigation
-    </button>
-    <ul class="dropdown-menu w-100 white-space-normal">
-      {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
-        <li key={index}>
-          <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
           </div>
-{icons && (
-<div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-  {icons && icons.map(({ icon, desc, href }, index) => (
-    <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc} key={index}>
-      <i class={`bi bi-${icon}`}></i>
-    </a>
-  ))}
-</div>
-)}
-
+          <p class="fs-4 m-3 text-body-secondary">{description}</p>
+          <div class="mx-auto justify-content-between container" id="links">
+            <div class="d-md-flex d-grid gap-2">
+              {errorButton && (
+                <Fragment set:html={errorButton} />
+              )}
+              {primaryHref && primaryText && (
+              <a href={primaryHref} class="btn btn-primary btn-lg col-md">{primaryText}</a>
+              )}
+              {secondaryHref && secondaryText && (
+                <a href={secondaryHref} class="btn btn-secondary btn-lg col-md">{secondaryText}</a>
+              )}
+              {dropdownItems && (
+                <div class="dropdown col-md">
+                  <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary btn-lg dropdown-toggle w-100">
+                    Navigation
+                  </button>
+                  <ul class="dropdown-menu w-100 white-space-normal">
+                    {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
+                      <li key={index}>
+                        <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+            {icons && (
+            <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
+              {icons && icons.map(({ icon, desc, href }, index) => (
+                <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc} key={index}>
+                  <i class={`bi bi-${icon}`}></i>
+                </a>
+              ))}
+            </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
