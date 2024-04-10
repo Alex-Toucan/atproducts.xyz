@@ -1,7 +1,7 @@
 # Security Policy
-### Last Update: 4/10/24
-### Into Effect: Unknown
-### Version: Unknown
+##### Last Update: 4/10/24
+##### Into Effect: Unknown
+##### Version: Unknown
 <hr>
 
 ## Where We Look for Vulnerabilities
