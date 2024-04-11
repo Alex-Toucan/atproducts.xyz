@@ -3,7 +3,7 @@
  <p>
   <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love">
   <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
-  <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-2.18-blue" alt="Stable Version"></a>
+  <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-2.18.0.1-blue" alt="Stable Version"></a>
   <a href="https://beta.atproducts.xyz#what-new"><img src="https://img.shields.io/badge/beta_version-2.18.0.1-red" alt="Beta Version"></a>
   <a href="https://beta-testing.atproducts.xyz"><img src="https://img.shields.io/badge/DoBT_version-DoBT_v2.0-green" alt="DoBT Version"></a>
   <img src="https://github.com/Alex-Toucan/atproducts.xyz/workflows/CodeQL/badge.svg" alt="CodeQL">
