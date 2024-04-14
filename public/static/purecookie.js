@@ -31,12 +31,12 @@ function pureFadeOut(elem){
     } else {
       requestAnimationFrame(fade);
     }
-      setTimeout(() => {
-      	var theelement = document.querySelector('#cookieConsentContainer');
-      	if (theelement) {
+    setTimeout(() => {
+      var theelement = document.querySelector('#cookieConsentContainer');
+        if (theelement) {
           theelement.remove();
         };
-      }, 1350);
+    }, 1350);
   })();
 };
 
