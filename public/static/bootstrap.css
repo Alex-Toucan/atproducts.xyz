@@ -99,6 +99,8 @@
   --bs-link-hover-color: #0a58ca;
   --bs-link-hover-color-rgb: 10, 88, 202;
   --bs-code-color: #d63384;
+  --bs-code-block-color: #B9BBBE;
+  --bs-code-block-background-color: #2F3136;
   --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
   --bs-border-width: 1px;
@@ -477,6 +479,15 @@ code {
   color: var(--bs-code-color);
   word-wrap: break-word;
 }
+
+.code-block {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: var(--bs-code-block-color);
+    background-color: var(--bs-code-block-background-color);
+    border-radius: 4px;
+}
+
 a > code {
   color: inherit;
 }
@@ -17936,10 +17947,10 @@ height: calc(100vh - 448px);
     margin-top: 0.125rem;
 }
 .products-border {
-  	 --bs-border-width: 2.5px;	
+    --bs-border-width: 2.5px;	
     border-width: 2.5px !important;	
-		border-style: solid;
-	  border-color: var(--bs-light-border-subtle) !important;
+    border-style: solid;
+    border-color: var(--bs-light-border-subtle) !important;
 }
 
 .glow-text {
