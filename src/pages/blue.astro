@@ -48,36 +48,44 @@
     </button>
   </div>
 
-    <script>
+<script>
       (() => {
-      'use strict';
+        'use strict';
     
-      const playAudio = () => {
-        const audio = new Audio('sound.mp3');
-        audio.play();
-      };
+        let audio = null;
     
-      const toggleAudio = () => {
-        const icon = document.querySelector('.audio-icon-active i');
-        icon.classList.toggle('bi-volume-up-fill');
-        icon.classList.toggle('bi-volume-mute-fill');
-        const isMuted = icon.classList.contains('bi-volume-mute-fill');
-        if (isMuted) {
-          // Pause the audio
-          // (You should handle audio playback logic accordingly)
-        } else {
-          // Play the audio
-          playAudio();
-        }
-      };
+        const playAudio = () => {
+          if (!audio) {
+            audio = new Audio('/media/images/sound.mp3');
+          }
+          audio.play();
+        };
     
-      window.addEventListener('load', () => {
-        const audioButton = document.getElementById('bd-audio');
-        audioButton.addEventListener('click', () => {
-          toggleAudio();
+        const pauseAudio = () => {
+          if (audio) {
+            audio.pause();
+          }
+        };
+    
+        const toggleAudio = () => {
+          const icon = document.querySelector('.audio-icon-active i');
+          icon.classList.toggle('bi bi-volume-up-fill');
+          icon.classList.toggle('bi bi-volume-mute-fill');
+          const isMuted = icon.classList.contains('bi bi-volume-mute-fill');
+          if (isMuted) {
+            pauseAudio();
+          } else {
+            playAudio();
+          }
+        };
+    
+        window.addEventListener('load', () => {
+          const audioButton = document.getElementById('bd-audio');
+          audioButton.addEventListener('click', () => {
+            toggleAudio();
+          });
         });
-      });
-    })();
+      })();
     </script>
   </body>
 </html>
