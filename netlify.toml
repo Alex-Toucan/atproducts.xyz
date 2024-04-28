@@ -20,7 +20,7 @@
       preload'''
     Content-Security-Policy = '''
       media-src 'self';
-      default-src 'none'; 
+      default-src 'self'; 
       frame-src 'self'; 
       form-action 'self'; 
       base-uri 'self'; 
