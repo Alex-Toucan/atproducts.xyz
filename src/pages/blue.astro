@@ -39,5 +39,37 @@
     <audio controls autoplay loop hidden>
       <source src="/media/images/sound.mp3" type="audio/mp3">
     </audio>
+
+    <script>
+      (() => {
+      'use strict';
+    
+      const playAudio = () => {
+        const audio = new Audio('sound.mp3');
+        audio.play();
+      };
+    
+      const toggleAudio = () => {
+        const icon = document.querySelector('.theme-icon-active i');
+        icon.classList.toggle('bi-volume-up-fill');
+        icon.classList.toggle('bi-volume-mute-fill');
+        const isMuted = icon.classList.contains('bi-volume-mute-fill');
+        if (isMuted) {
+          // Pause the audio
+          // (You should handle audio playback logic accordingly)
+        } else {
+          // Play the audio
+          playAudio();
+        }
+      };
+    
+      window.addEventListener('load', () => {
+        const audioButton = document.getElementById('bd-audio');
+        audioButton.addEventListener('click', () => {
+          toggleAudio();
+        });
+      });
+    })();
+    </script>
   </body>
 </html>
