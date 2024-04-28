@@ -19,6 +19,7 @@
       includeSubDomains; 
       preload'''
     Content-Security-Policy = '''
+      media-src 'self';
       default-src 'none'; 
       frame-src 'self'; 
       form-action 'self'; 
