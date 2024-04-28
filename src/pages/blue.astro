@@ -2,7 +2,7 @@
 
 ---
 
-<html class="h-100" lang="en" data-bs-theme="dark">
+<html class="h-100" lang="en">
   <head>
     <title>Blue Ball Machine</title>
     <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
@@ -36,9 +36,15 @@
     </style>
   </head>
   <body class="h-100">
-    <audio controls autoplay loop hidden>
-      <source src="/media/images/sound.mp3" type="audio/mp3">
-    </audio>
+
+  <div class="position-fixed bottom-0 end-0 mb-3 me-3">
+    <button class="btn btn-secondary py-2 d-flex align-items-center" id="bd-audio" type="button" aria-expanded="false">
+      <span class="audio-icon-active">
+        <i class="my-1"></i>
+      </span>
+      <span class="visually-hidden" id="bd-audio-text">Toggle audio</span>
+    </button>
+  </div>
 
     <script>
       (() => {
@@ -50,7 +56,7 @@
       };
     
       const toggleAudio = () => {
-        const icon = document.querySelector('.theme-icon-active i');
+        const icon = document.querySelector('.audio-icon-active i');
         icon.classList.toggle('bi-volume-up-fill');
         icon.classList.toggle('bi-volume-mute-fill');
         const isMuted = icon.classList.contains('bi-volume-mute-fill');
