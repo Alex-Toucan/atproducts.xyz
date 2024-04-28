@@ -48,7 +48,7 @@
     </button>
   </div>
 
-<script>
+    <script>
       (() => {
         'use strict';
     
@@ -69,12 +69,13 @@
     
         const toggleAudio = () => {
           const icon = document.querySelector('.audio-icon-active i');
-          icon.classList.toggle('bi bi-volume-up-fill');
-          icon.classList.toggle('bi bi-volume-mute-fill');
-          const isMuted = icon.classList.contains('bi bi-volume-mute-fill');
-          if (isMuted) {
+          if (icon.classList.contains('bi-volume-up-fill')) {
+            icon.classList.remove('bi-volume-up-fill');
+            icon.classList.add('bi-volume-mute-fill');
             pauseAudio();
           } else {
+            icon.classList.remove('bi-volume-mute-fill');
+            icon.classList.add('bi-volume-up-fill');
             playAudio();
           }
         };
@@ -87,5 +88,6 @@
         });
       })();
     </script>
+
   </body>
 </html>
