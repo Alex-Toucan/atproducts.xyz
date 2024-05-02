@@ -1,4 +1,4 @@
- Enable if maintenance mode.
+# Enable if maintenance mode.
  [[redirects]]
    from = "/*"
    to = "https://other.atproducts.xyz/maintenance/"
