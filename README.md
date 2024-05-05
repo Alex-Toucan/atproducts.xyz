@@ -1,5 +1,5 @@
 <div align="center">
- <a href="https://atproducts.xyz"><img src="/public/medi/images/ATProductsLLC.png" alt="AT Products LLC" width="75%"></a>
+ <a href="https://atproducts.xyz"><img src="/public/media/images/ATProductsLLC.png" alt="AT Products LLC" width="75%"></a>
  <br><br>
  <p>
   <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love">
