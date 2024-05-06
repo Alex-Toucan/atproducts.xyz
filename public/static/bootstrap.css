@@ -7698,7 +7698,7 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] .link-footer {
-  color: var(--bs-secondary-color)!important !important;
+  color: var(--bs-secondary-color)!important;
 }
 
 
@@ -8215,7 +8215,7 @@ textarea.form-control-lg {
 }
 
 .position-inherit {
-  position: inherit+ !important;
+  position: inherit !important;
 }
 
 .position-absolute {
