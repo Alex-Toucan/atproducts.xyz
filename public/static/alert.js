@@ -49,7 +49,7 @@ function eraseAlertCookie(name) {
 document.addEventListener('DOMContentLoaded', () => {
   if (!getAlertCookie('pureAlertDismiss')) {
     document.querySelector('header').innerHTML += 
-'<div class="alert alert-dark alert-dismissible fade show mb-0 d-flex gap-2" role="alert">' + pureAlertIcon + '<div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
+'<div class="alert alert-dark alert-dismissible fade show mb-0 d-flex gap-2" role="alert">' + pureAlertIcon + '<div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="purecookieDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
     pureFadeIn("alertContentContainer");
   }
 });
