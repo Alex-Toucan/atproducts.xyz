@@ -1,7 +1,7 @@
 # Security Policy
-##### Last Update: 4/10/24
-##### Into Effect: Unknown
-##### Version: Unknown
+##### Last Updated: April 10th, 2024.
+##### Into Effect: May 15th, 2024.
+##### Version: v2
 <hr>
 
 ## Where We Look for Vulnerabilities
