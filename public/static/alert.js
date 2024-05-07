@@ -3,7 +3,7 @@ var pureAlertTitle = "NEW BETA TESTING SITE:"; // Title
 var pureAlertIcon = '<i class="bi bi-plus-lg h-100"></i>' // Cookie icon
 var pureAlertDesc = "We have updated the Department of Beta Testing site to be more modernized with Bootstrap 5 and Astro!"; // Description
 var pureAlertLink = 'https://beta-testing.atproducts.xyz'; // Cookiepolicy link
-var pureAlertLinkDesc = 'View Now'; // Cookiepolicy link
+var pureAlertLinkDesc = 'View now'; // Cookiepolicy link
 var pureAlertButton = "Understood"; // Button text
 // ---        --- //
 
