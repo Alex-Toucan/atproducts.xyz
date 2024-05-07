@@ -40,5 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function pureAlertDismiss() {
   setAlertCookie('pureAlertDismiss','1',7);
-  pureFadeOut("alertContentContainer");
 }
