@@ -7,21 +7,6 @@ var pureAlertLinkDesc = 'View Now'; // Cookiepolicy link
 var pureAlertButton = "Understood"; // Button text
 // ---        --- //
 
-
-function pureFadeIn(elem, display){
-  var el = document.getElementById(elem);
-  el.style.opacity = 0;
-  el.style.display = display || "block";
-
-  (function fade() {
-    var val = parseFloat(el.style.opacity);
-    if (!((val += .02) > 1)) {
-      el.style.opacity = val;
-      requestAnimationFrame(fade);
-    }
-  })();
-};
-
 function setAlertCookie(name,value,days) {
     var expires = "";
     if (days) {
@@ -50,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!getAlertCookie('pureAlertDismiss')) {
     document.querySelector('header').innerHTML += 
 '<div class="alert alert-dark alert-dismissible fade show mb-0 d-flex gap-2" role="alert">' + pureAlertIcon + '<div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="purecookieDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
-    pureFadeIn("alertContentContainer");
   }
 });
 
