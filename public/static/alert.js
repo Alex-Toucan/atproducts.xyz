@@ -8,20 +8,6 @@ var pureAlertLinkDesc = 'View now'; // Link text
 var pureAlertButton = "Understood"; // Button text
 // ---        --- //
 
-function pureFadeIn(display){
-  var alertElement = document.getElementsByClassName('alert-container');
-  alertElement.style.opacity = 0;
-  alertElement.style.display = display || "block";
-
-  (function fade() {
-    var val = parseFloat(alertElement.style.opacity);
-    if (!((val += .02) > 1)) {
-      alertElement.style.opacity = val;
-      requestAnimationFrame(fade);
-    }
-  })();
-};
-
 function setAlertCookie(name,value,days) {
     var expires = "";
     if (days) {
@@ -53,8 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var alertContainer = document.createElement('div');
     alertContainer.className = "alert-container";
     alertContainer.innerHTML = '<div class="alert' + pureAlertType + 'alert-dismissible fade show mb-0 d-flex gap-2" role="alert"> <i class="bi ' + pureAlertIcon + ' h-100"></i><div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlertDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
-    pureFadeIn("alert-container");
-      
+    $(".alert-container").fadeIn("fast");
     // Insert after header
     header.parentNode.insertBefore(alertContainer, header.nextSibling);
   }
