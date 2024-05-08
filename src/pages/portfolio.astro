@@ -34,8 +34,15 @@
     <meta property="og:description" content="Portfolio of Alex Toucan.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script is:inline src="/static/darkmode.js"></script>
+
+    <style>
+      body {
+        overflow: visible;
+      }
+    </style>
+    
   </head>
-  <body class="my-5 container">
+  <body class="py-5 container">
     <div class="d-md-flex gap-3 h-100">
       <div class="col-md-3">
         <div class="text-center">
@@ -66,7 +73,8 @@
         </li>
       </ul>
       </div>
-      <div class="vr border-3"></div>
+      <div class="vr d-none d-md-block border-3"></div>
+      <hr class="d-block d-md-none border-3">
       <div class="col-md">
         <div class="tab-content col-md products-tabContent" id="products-tabContent">
           <div class="tab-pane fade active show" id="tab-about" role="tabpanel" aria-labelledby="tab-about-tab" tabindex="0">
@@ -97,8 +105,8 @@
             <p>AT Products LLC currently serves websites made for customers via our <a href="https://beta.atproducts.xyz/paid">Paid Services</a>. It also serves my website projects of <a href="https://beta.atproducts.xyz/flash">Flash Documentation</a>, full of Adobe Flash resources, and <a href="https://beta.atproducts.xyz/mdickie">MDickie Projects</a>,  a fanmade site about what MDickie has developed since the 1990s.</p>
             <p>There are also a couple of third-party products made with other people and organizations. <a href="https://atproducts.xyz/sms">SMS Bomb, made with <a href="https://protdos.com">ProtDos</a>, allows you to spam SMS messages to whoever you choose. And <a href="https://atproducts.xyz/pynx">Pynx's Projects</a>, malware collection that includes <a href="https://atproducts.xyz/bxpp">BxPP</a> and <a href="https://atproducts.xyz/inferno">Inferno</a>.</p>
             <p>AT Products LLC serves as a resource hub for four technology communities. The <a href="https://atproducts.xyz/ehs">Ethical Hacking Society</a> (defunct as of 2024), which ethically hacks. The <a href="https://atproducts.xyz/script">The Script Community</a> (defunct as of 2021), is for hacking enthusiasts to share their knowledge. <a href="https://atproducts.xyz/codinghome">CodingHome</a> (active), a coding and web development community where tech enthusiasts of all skill levels can come together, and the <a href="https://atproducts.xyz/noodle">Noodle Hackerspace</a> (defunct as of 2023), a community of physical and digital hacking resources.</p>
-            <h2 class="display-7 fw-bold card-title mb-2">History</h2>
-              <p>AT Products LLC was being thought about around 2019/2020, just as a thought to create a company, but did not have a reason behind it. I guess I just liked having bodies of power.</p>
+            <h2 class="fw-bold card-title mb-2">History</h2>
+            <p>AT Products LLC was being thought about around 2019/2020, just as a thought to create a company, but did not have a reason behind it. I guess I just liked having bodies of power.</p>
             <p>My first product, <a href="https://backup.atproducts.xyz/roms">AT's ROM Games</a>, was just a bunch of ROMs that I put together around 2019 and started posting on sites like the <a href="https://archive.org">Internet Archive</a> and later <a href="https://code.org">code.org Sites</a>. Once I started taking middle school tech classes, I 3D modeled a basic text logo for AT Products, so there's the logo for that and I also made an AT's ROM Games logo around late 2021.</p>
             <p>Still in middle school around late 2021, entering into early-2022, now we were making basic HTML and CSS sites (totally nothing like today's site), being made on <a href="https://code.org">code.org</a>, which had the option to publish to the public. As an assignment, I had to create a site with four sections and an image, which AT's ROM Games fit perfectly with that criteria. At that point, I started making sites. You can find more details about those sites and their version at the <strong>atproducts.xyz</strong> tab.</p>
             <p>At this point, I started collaborating with sites to make the sites for the <a href="https://atproducts.xyz/ehs">Ethical Hacking Society (EHS)</a> and <a href="https://atproducts.xyz/script">The Script Community (TSC)</a> (a server that forked off the EHS). <a href="https://atproducts.xyz/codinghome">CodingHome</a> would come later (which also forked off TSC). Around mid-2022, the <a href="https://atproducts.xyz/noodle">Noodle Hackerspace</a>, and <a href="https://atproducts.xyz/flash">Flash Documentation</a> would be introduced. There was a <a href="https://backup.atproducts.xyz/food">Food Bot</a> that I made around June 2022, a Discord Bot that serves food images but would quickly be defunct as it requires a bunch of time to maintain.</p>
@@ -106,10 +114,20 @@
             <p>2023 came, and <a href="https://beta.atproducts.xyz/pynx">Pynx's Projects and <a href="https://beta.atproducts.xyz/mdickie">MDickie Projects</a> came by. Finally, we changed the logo again in late November. That's the whole history of the company!</p>
           </div>
           <div class="tab-pane fade" id="tab-atproductsxyz" role="tabpanel" aria-labelledby="tab-atproductsxyz-tab" tabindex="0">
-            <div class="bg-white rounded-2 mb-2">
-              <img class="py-1 rounded-2" src="/media/images/mdickiepro.webp" alt="MDickie Projects">
+            <div class="w-100 border-1 bg-white rounded-2 p-5 mb-2">
+                <img src="/media/images/longblack.png" class="d-block mx-auto text-center" width="40%">
             </div>
-            <h1 class="card-title">MDickie Projects</h1>
+            <p><strong><a href="https://atproducts.xyz">atproducts.xyz</a></strong>, is the website for AT Products LLC. The history of the company is the <em>AT Products LLC</em> section, this section will go over the website.</p>
+            <p>AT Products LLC currently serves websites made for customers via our <a href="https://beta.atproducts.xyz/paid">Paid Services</a>. It also serves my website projects of <a href="https://beta.atproducts.xyz/flash">Flash Documentation</a>, full of Adobe Flash resources, and <a href="https://beta.atproducts.xyz/mdickie">MDickie Projects</a>,  a fanmade site about what MDickie has developed since the 1990s.</p>
+            <p>There are also a couple of third-party products made with other people and organizations. <a href="https://atproducts.xyz/sms">SMS Bomb, made with <a href="https://protdos.com">ProtDos</a>, allows you to spam SMS messages to whoever you choose. And <a href="https://atproducts.xyz/pynx">Pynx's Projects</a>, malware collection that includes <a href="https://atproducts.xyz/bxpp">BxPP</a> and <a href="https://atproducts.xyz/inferno">Inferno</a>.</p>
+            <p>AT Products LLC serves as a resource hub for four technology communities. The <a href="https://atproducts.xyz/ehs">Ethical Hacking Society</a> (defunct as of 2024), which ethically hacks. The <a href="https://atproducts.xyz/script">The Script Community</a> (defunct as of 2021), is for hacking enthusiasts to share their knowledge. <a href="https://atproducts.xyz/codinghome">CodingHome</a> (active), a coding and web development community where tech enthusiasts of all skill levels can come together, and the <a href="https://atproducts.xyz/noodle">Noodle Hackerspace</a> (defunct as of 2023), a community of physical and digital hacking resources.</p>
+            <h2 class="fw-bold card-title mb-2">History</h2>
+            <p>AT Products LLC was being thought about around 2019/2020, just as a thought to create a company, but did not have a reason behind it. I guess I just liked having bodies of power.</p>
+            <p>My first product, <a href="https://backup.atproducts.xyz/roms">AT's ROM Games</a>, was just a bunch of ROMs that I put together around 2019 and started posting on sites like the <a href="https://archive.org">Internet Archive</a> and later <a href="https://code.org">code.org Sites</a>. Once I started taking middle school tech classes, I 3D modeled a basic text logo for AT Products, so there's the logo for that and I also made an AT's ROM Games logo around late 2021.</p>
+            <p>Still in middle school around late 2021, entering into early-2022, now we were making basic HTML and CSS sites (totally nothing like today's site), being made on <a href="https://code.org">code.org</a>, which had the option to publish to the public. As an assignment, I had to create a site with four sections and an image, which AT's ROM Games fit perfectly with that criteria. At that point, I started making sites. You can find more details about those sites and their version at the <strong>atproducts.xyz</strong> tab.</p>
+            <p>At this point, I started collaborating with sites to make the sites for the <a href="https://atproducts.xyz/ehs">Ethical Hacking Society (EHS)</a> and <a href="https://atproducts.xyz/script">The Script Community (TSC)</a> (a server that forked off the EHS). <a href="https://atproducts.xyz/codinghome">CodingHome</a> would come later (which also forked off TSC). Around mid-2022, the <a href="https://atproducts.xyz/noodle">Noodle Hackerspace</a>, and <a href="https://atproducts.xyz/flash">Flash Documentation</a> would be introduced. There was a <a href="https://backup.atproducts.xyz/food">Food Bot</a> that I made around June 2022, a Discord Bot that serves food images but would quickly be defunct as it requires a bunch of time to maintain.</p>
+            <p>Starting to experiment with logos and such, in August 2022 came the <a href="https://2-6-1.atproducts.xyz/media/images/94952755_padded_logo.png">old logo</a>. Logos, then alliances, with The CodingHome Universe (now the International Developer's Association [defunct May 2024]).</p>
+            <p>2023 came, and <a href="https://beta.atproducts.xyz/pynx">Pynx's Projects and <a href="https://beta.atproducts.xyz/mdickie">MDickie Projects</a> came by. Finally, we changed the logo again in late November. That's the whole history of the company!</p>
             <p class="mb-0">This is a fanmade site about what MDickie has developed since the 1990s!</p>
             <div class="tab-link">
               <a href="/mdickie" class="btn btn-primary w-100">Visit</a>
