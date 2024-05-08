@@ -8,8 +8,8 @@ var pureAlertLinkDesc = 'View now'; // Link text
 var pureAlertButton = "Understood"; // Button text
 // ---        --- //
 
-function pureFadeIn(elem, display){
-  var el = document.getElementById(elem);
+function pureFadeIn(display){
+  var el = document.getElementsByClassName('alert-container');
   el.style.opacity = 0;
   el.style.display = display || "block";
 
