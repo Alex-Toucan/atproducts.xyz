@@ -38,8 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var header = document.querySelector('header');
     var alertContainer = document.createElement('div');
     alertContainer.className = "alert-container";
-    alertContainer.innerHTML = '<div class="alert' + pureAlertType + 'alert-dismissible fade show mb-0 d-flex gap-2" role="alert"> <i class="bi ' + pureAlertIcon + ' h-100"></i><div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlertDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
-    $(".alert-container").fadeIn("fast");
+    alertContainer.innerHTML = '<div class="alert ' + pureAlertType + ' alert-dismissible fade show mb-0 d-flex gap-2" role="alert"> <i class="bi ' + pureAlertIcon + ' h-100"></i><div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlertDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
     // Insert after header
     header.parentNode.insertBefore(alertContainer, header.nextSibling);
   }
