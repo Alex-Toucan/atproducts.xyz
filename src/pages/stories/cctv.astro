@@ -24,9 +24,10 @@ scrollcontent={[
   { name: "Step 6", href: "#s6" },
   { name: "Step 7", href: "#s7" },
    { name: "Step 8", href: "#s8" },
-]} 
+]}
 />
   <Fragment slot="scrollspy-content">
+    <div class="col-md-10 p-1 pt-mmd-2 px-mmd-2 story-top-scroll story-top-body story-scroll" tabindex="0" data-bs-smooth-scroll="true" data-bs-target={`#${id}-list`} data-bs-spy="scroll">
   <div id="intro" class="story-top-scroll">
     <h1>CCTV Interception</h1>
     <h5>By the <a href="/noodle">Noodle Hackerspace</a>.</h5>
@@ -89,7 +90,7 @@ CH&nbsp;&nbsp;4 ][ Elapsed: 0 s ][ 2018-12-24 02:42<br>
     <th scope="col">#/s</th>
     <th scope="col">CH</th>
     <th scope="col">MB</th>
-    <th scope="col" h="">ENC</th>
+    <th scope="col">ENC</th>
     <th scope="col">CIPHER</th>
     <th scope="col">AUTH</th>
     <th scope="col">ESSID</th>
@@ -303,6 +304,7 @@ Click "Close", and then navigate to the folder you exported the images to. You s
 <br><br>
 Finally, click on one of the images to see the image that was intercepted on the way to the target computer. You should see a frame from the video feed!
   </p></div>
+  <div class="col-md-10 p-1 pt-mmd-2 px-mmd-2 story-top-scroll story-top-body story-scroll" tabindex="0" data-bs-smooth-scroll="true" data-bs-target={`#${id}-list`} data-bs-spy="scroll">
 </Fragment>
 </Scrollspy>
 <Footer />
