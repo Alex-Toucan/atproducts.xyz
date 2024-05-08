@@ -1,7 +1,7 @@
 // --- Config --- //
 var pureAlertType = "alert-dark"; // Color
 var pureAlertTitle = "NEW BETA TESTING SITE:"; // Title
-var pureAlertIcon = '<i class="bi bi-plus-lg h-100"></i>' // Icon
+var pureAlertIcon = 'bi-plus-lg' // Icon
 var pureAlertDesc = "We have updated the Department of Beta Testing site to be more modernized with Bootstrap 5 and Astro!"; // Description
 var pureAlertLink = 'https://beta-testing.atproducts.xyz'; // Link
 var pureAlertLinkDesc = 'View now'; // Link text
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var header = document.querySelector('header');
     var alertContainer = document.createElement('div');
     alertContainer.className = "alert-container";
-    alertContainer.innerHTML = '<div class="alert alert-dark alert-dismissible fade show mb-0 d-flex gap-2" role="alert">' + pureAlertIcon + '<div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlertDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
+    alertContainer.innerHTML = '<div class="alert' + pureAlertType + 'alert-dismissible fade show mb-0 d-flex gap-2" role="alert"> <i class="bi ' + pureAlertIcon + ' h-100"></i><div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlertDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
     pureFadeIn("alert-container");
       
     // Insert after header
