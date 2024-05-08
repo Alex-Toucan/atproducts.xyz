@@ -33,8 +33,11 @@ function eraseAlertCookie(name) {
 /* Comment this section if there is no alert loaded */
 document.addEventListener('DOMContentLoaded', () => {
   if (!getAlertCookie('pureAlertDismiss')) {
-    document.querySelector('header').innerHTML += 
-'<div class="alert alert-dark alert-dismissible fade show mb-0 d-flex gap-2" role="alert">' + pureAlertIcon + '<div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlertDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
+    var header = document.querySelector('header');
+    var alertContainer = document.createElement('div');
+    alertContainer.className = "alert-container";
+    alertContainer.innerHTML = '<div class="alert alert-dark alert-dismissible fade show mb-0 d-flex gap-2" role="alert">' + pureAlertIcon + '<div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlertDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>';
+    header.parentNode.insertBefore(alertContainer, header.nextSibling);
   }
 });
 
