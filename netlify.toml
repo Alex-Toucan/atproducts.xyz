@@ -29,7 +29,7 @@
       object-src 'self'; 
       script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net; 
       style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline'; 
-      img-src 'self' data:;
+      img-src 'self' data: https://atproducts.xyz;
       frame-ancestors 'self' '''
     Features-Policy = "document-domain 'self';"
     Permissions-Policy = '''
