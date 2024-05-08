@@ -9,14 +9,14 @@ var pureAlertButton = "Understood"; // Button text
 // ---        --- //
 
 function pureFadeIn(display){
-  var alertElement= document.getElementsByClassName('alert-container');
-  alertElementstyle.opacity = 0;
-  alertElementstyle.display = display || "block";
+  var alertElement = document.getElementsByClassName('alert-container');
+  alertElement.style.opacity = 0;
+  alertElement.style.display = display || "block";
 
   (function fade() {
-    var val = parseFloat(alertElementstyle.opacity);
+    var val = parseFloat(alertElement.style.opacity);
     if (!((val += .02) > 1)) {
-      alertElementstyle.opacity = val;
+      alertElement.style.opacity = val;
       requestAnimationFrame(fade);
     }
   })();
