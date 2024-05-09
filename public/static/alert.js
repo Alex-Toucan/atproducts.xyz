@@ -35,15 +35,11 @@ function eraseAlertCookie(name) {
 
 /* Comment this section if there is no alert loaded */
 $(document).ready(function () {
-    // Check if current page is not "cctv"
     if (window.location.pathname.indexOf("/cctv") === -1 && !getAlertCookie('pureAlertDismiss')) {
         var header = $('header');
         var alertContainer = $('<div class="alert-container" style="display:none;"></div>');
         alertContainer.html('<div class="alert ' + pureAlertType + ' alert-dismissible fade show mb-0 d-flex gap-2" role="alert"> <i class="bi ' + pureAlertIcon + ' h-100"></i><div><strong>' + pureAlertTitle + '</strong> ' + pureAlertDesc + ' <a class="icon-link icon-link-hover" href="' + pureAlertLink + '">' + pureAlertLinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlertDismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>');
-        // Insert after header
         header.after(alertContainer);
-        // Fade in the alertContainer
-        alertContainer.fadeIn('fast');
     }
 });
 
