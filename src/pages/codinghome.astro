@@ -256,6 +256,34 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
                   <a href="https://www.sqlstyle.guide">SQL Style Guide</a>
                   <a href="https://goteleport.com/blog/securing-postgres-postgresql/">Securing Your PostgreSQL Database</a>
                 </p>
+                <h5>Apache, MariaDB and PHP (LAMP) Installation for Arch-based Distros</h5>
+                <p><a href="https://forum.manjaro.org/t/howto-install-apache-mariadb-mysql-php-lamp/13000">[HowTo] Install Apache, MariaDB (MySQL), PHP (LAMP)</a></p>
+                <blockquote class="ps-3">
+                <p>&gt; PS: You must add a <code>phpmyadmin</code> DB and import  <code>/usr/share/webapps/phpmyadmin/sql/create_tables.sql</code> there - on Linux.<br>
+                &gt; And also modify / add some lines in your <code>.../phpmyadmin/config.inc.php</code> to tell <code>phpmyadmin</code> to use this DB for it&#39;s configuration storage:</p>
+                </blockquote>
+                <h4>Under the <code>phpMyAdmin configuration storage settings</code>-section</h4>
+                <p>Un-comment all tables matching the pattern below - but check in your DB, if they were created by the <code>create_table.sql</code>.</p>
+                <p>
+                <code>
+                // REQUIRED User - uncomment as well!!!<br>
+                // Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.<br>
+                $cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;;<br>
+                $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;<br>
+                // Pattern<br>
+                $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;;
+                </code>
+                </p>
+                <h6>Optional: Create the User</h6>
+                <p>
+                <code>
+                CREATE USER <span class="hljs-string">'pma'</span>@<span class="hljs-string">'localhost'</span> IDENTIFIED BY <span class="hljs-string">'pmapass'</span>;<br>
+                GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO <span class="hljs-string">'pma'</span>@<span class="hljs-string">'localhost'</span>;<br>
+                FLUSH PRIVILEGES;<br>
+                </code>
+                </p>
+                <p>Problems or using Windows?
+                =&gt; Refer to the Docs: <code>http://yourServerNameOrIPAddr/phpmyadmin/doc/html/setup.html#phpmyadmin-configuration-storage</code></p>
               </Fragment>
             </AccordionItem>
             <AccordionItem title=".NET Resources" id="dotnetresources" parent="learningresourcesAccordion">
