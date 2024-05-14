@@ -15,8 +15,5 @@
     "astro-compress": "^2.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.9.5"
   }
 }
