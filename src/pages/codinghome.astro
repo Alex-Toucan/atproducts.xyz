@@ -54,7 +54,7 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
  </div>
  <figure class="figure mt-2 mb-0"> <img src="/media/files/400px-QR_Code_Structure_Example_3.svg.png" alt="QR Code" width="100%" class="bg-white rounded-1 p-1" style="max-width: 375px;"> <figcaption class="figure-caption mt-2">QR Code System Image</figcaption> </figure>
       <p class="my-3">Please note that if a link is a <a href="javascript:void(0)" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German.</p>
-   <Accordion parent="resourcesAccordion">
+<Accordion parent="resourcesAccordion">
   <Fragment slot="accordion-content">
     <AccordionItem title="Learning Resources" id="learningresources" parent="resourcesAccordion">
       <Fragment slot="accordion-item-content">
@@ -86,6 +86,7 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
           <a href="https://github.com/donnemartin/system-design-primer">Learn System Design</a>
           <a href="https://en.wikibooks.org/">WikiBooks</a>
           <a href="https://university.webflow.com/">Webflow University</a>
+          <a href="https://youtube.com/playlist?list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9pe-&si=EYMJrwqxIqlYXCZw">Learning PHP The Right Way</a>
           <a href="https://www.edx.org/learn">EDX Courses</a>
           <a href="https://caniuse.com/">CanIUse?</a>
           <a href="https://refactoring.guru/">Refactoring Guru</a>
@@ -256,44 +257,6 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
                   <a href="https://www.sqlstyle.guide">SQL Style Guide</a>
                   <a href="https://goteleport.com/blog/securing-postgres-postgresql/">Securing Your PostgreSQL Database</a>
                 </p>
-                <h5>SQL Resources</h5>
-                <p>
-                  <a href="https://www.w3schools.com/sql/default.asp">W3Schools SQL Tutorials</a>
-                  <a href="https://www.litedb.org/docs/getting-started/">LiteDB</a>
-                  <a href="https://docs.oracle.com/cd/E17952_01/connector-net-en/index.html">.NET SQL Connecter Documentation</a>
-                  <a href="https://mysqlconnector.net/">MySQLConnecter</a>
-                  <a href="https://www.youtube.com/watch?v=4q-keGvUnag">DB Relation Models</a>
-                  <a href="https://www.sqlstyle.guide">SQL Style Guide</a>
-                  <a href="https://goteleport.com/blog/securing-postgres-postgresql/">Securing Your PostgreSQL Database</a>
-                </p>
-                <h5>Apache, MariaDB and PHP (LAMP) Installation for Arch-based Distros</h5>
-                <p><a href="https://forum.manjaro.org/t/howto-install-apache-mariadb-mysql-php-lamp/13000">[HowTo] Install Apache, MariaDB (MySQL), PHP (LAMP)</a></p>
-                <blockquote class="ps-3">
-                <p>&gt; PS: You must add a <code>phpmyadmin</code> DB and import  <code>/usr/share/webapps/phpmyadmin/sql/create_tables.sql</code> there - on Linux.<br>
-                &gt; And also modify / add some lines in your <code>.../phpmyadmin/config.inc.php</code> to tell <code>phpmyadmin</code> to use this DB for it&#39;s configuration storage:</p>
-                </blockquote>
-                <h4>Under the <code>phpMyAdmin configuration storage settings</code>-section</h4>
-                <p>Un-comment all tables matching the pattern below - but check in your DB, if they were created by the <code>create_table.sql</code>.</p>
-                <p>
-                <code>
-                // REQUIRED User - uncomment as well!!!<br>
-                // Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.<br>
-                $cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;;<br>
-                $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;<br>
-                // Pattern<br>
-                $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;;
-                </code>
-                </p>
-                <h6>Optional: Create the User</h6>
-                <p>
-                <code>
-                CREATE USER 'pma'@'localhost' IDENTIFIED BY'pmapass';<br>
-                GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO 'pma'@'localhost';<br>
-                FLUSH PRIVILEGES;<br>
-                </code>
-                </p>
-                <p>Problems or using Windows?
-                =&gt; Refer to the Docs: <code>http://yourServerNameOrIPAddr/phpmyadmin/doc/html/setup.html#phpmyadmin-configuration-storage</code></p>
               </Fragment>
             </AccordionItem>
             <AccordionItem title=".NET Resources" id="dotnetresources" parent="learningresourcesAccordion">
@@ -361,11 +324,41 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
                   <a href="https://www.youtube.com/watch?v=cC1CqyCN9Q0">How to Fit In with Linux Users</a>
                 </p>
                 <h5>Astonishing GNOME customization</h5>
-                <p><a href="https://www.youtube.com/watch?v=3XHIV2RF2Yc">Glassmorphism</a><br>
-                <a href="https://www.youtube.com/watch?v=49_ZUgpMMFA">Everforest</a><br>
-                <a href="https://www.youtube.com/watch?v=bDTUbBoIoUQ">Fluent</a><br>
-                <a href="https://www.youtube.com/watch?v=qC0mnGprbeM">Orchis GTK</a><br>
-                <a href="https://www.youtube.com/watch?v=1doqD4t7xVs">Evergreen</a></p>
+                <p>
+                  <a href="https://www.youtube.com/watch?v=3XHIV2RF2Yc">Glassmorphism</a><br>
+                  <a href="https://www.youtube.com/watch?v=49_ZUgpMMFA">Everforest</a><br>
+                  <a href="https://www.youtube.com/watch?v=bDTUbBoIoUQ">Fluent</a><br>
+                  <a href="https://www.youtube.com/watch?v=qC0mnGprbeM">Orchis GTK</a><br>
+                  <a href="https://www.youtube.com/watch?v=1doqD4t7xVs">Evergreen</a>
+                </p>
+                <h5>Apache, MariaDB and PHP (LAMP) Installation for Arch-based Distros</h5>
+                <p><a href="https://forum.manjaro.org/t/howto-install-apache-mariadb-mysql-php-lamp/13000">[HowTo] Install Apache, MariaDB (MySQL), PHP (LAMP)</a></p>
+                <blockquote class="ps-3">
+                <p>&gt; PS: You must add a <code>phpmyadmin</code> DB and import  <code>/usr/share/webapps/phpmyadmin/sql/create_tables.sql</code> there - on Linux.<br>
+                &gt; And also modify / add some lines in your <code>.../phpmyadmin/config.inc.php</code> to tell <code>phpmyadmin</code> to use this DB for it&#39;s configuration storage:</p>
+                </blockquote>
+                <h4>Under the <code>phpMyAdmin configuration storage settings</code>-section</h4>
+                <p>Un-comment all tables matching the pattern below - but check in your DB, if they were created by the <code>create_table.sql</code>.</p>
+                <p>
+                <code>
+                // REQUIRED User - uncomment as well!!!<br>
+                // Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.<br>
+                $cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;;<br>
+                $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;<br>
+                // Pattern<br>
+                $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;;
+                </code>
+                </p>
+                <h6>Optional: Create the User</h6>
+                <p>
+                <code>
+                CREATE USER 'pma'@'localhost' IDENTIFIED BY'pmapass';<br>
+                GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO 'pma'@'localhost';<br>
+                FLUSH PRIVILEGES;<br>
+                </code>
+                </p>
+                <p>Problems or using Windows?<br>
+                =&gt; Refer to the Docs: <code>http://yourServerNameOrIPAddr/phpmyadmin/doc/html/setup.html#phpmyadmin-configuration-storage</code></p>
               </Fragment>
             </AccordionItem>
             <AccordionItem title="Mega.nz Resources" id="meganzresources" parent="learningresourcesAccordion">
