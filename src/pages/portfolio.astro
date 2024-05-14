@@ -61,7 +61,7 @@
       }
 
       @media (max-width: 767.98px) {
-        p:last-of-type {
+        p:last-of-type:not(#intro p)  {
           padding-bottom: 4rem !important;
         }
       }
@@ -71,7 +71,7 @@
   <body class="py-5 container">
     <div class="d-md-flex gap-3 h-100">
       <div class="col-md-3">
-        <div class="text-center">
+        <div class="text-center" id="intro">
           <img src="/media/favicon/iconembed.png" width="40%" class="mb-2 rounded-2" alt="Icon">
           <h1 class="display-6 fw-bold">Alex Toucan</h1>
           <p class="text-body-secondary p-0 fw-bold">Website Developer</p>
