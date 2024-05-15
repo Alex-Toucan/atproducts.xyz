@@ -40,17 +40,6 @@
         overflow: visible;
       }
 
-      @media (max-width: 767.98px) {
-        img.atproducts-image {
-          min-width: 200px !important;
-        }
-
-        br.custom-br {
-          height: 4rem !important;
-          display: initial !important;
-        }
-      }
-
       img.atproducts-image {
         min-width: 290px;
         width: 40%;
@@ -60,7 +49,7 @@
         display: none;
       }
 
-      p, p:has(+ div.bg-white) {
+      p {
         margin-bottom: 0 !important;
         padding-bottom: 1rem;
       }
@@ -72,6 +61,22 @@
       @media (max-width: 767.98px) {
         p:last-of-type:not(#intro p)  {
           padding-bottom: 4rem !important;
+        }
+
+        img.atproducts-image {
+          min-width: 200px !important;
+        }
+
+        br.custom-br {
+          height: 4rem !important;
+          display: initial !important;
+        }
+      }
+
+      @media (min-width: 767.98px) {
+        p:has(+ div.bg-white) {
+          margin-bottom: 0 !important;
+          padding-bottom: 1rem;
         }
       }
     </style>
