@@ -276,7 +276,7 @@
       </ul>
     </div>
 
-    <a href="#" class="btn btn-lg btn-lg-square back-to-top focus-ring position-fixed bottom-0 start-0 mb-3 ms-3">
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top-alt focus-ring position-fixed bottom-0 start-0 mb-3 ms-3">
       <i class="bi bi-caret-up-fill"></i>
     </a>
 
@@ -284,6 +284,22 @@
     <script is:inline src="https://cdn.jsdelivr.net/npm/jquery@4.0.0-beta/dist/jquery.min.js"></script>
     <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
 
-    <script is:inline src="/static/scroll.js"></script>
+    <script is:inline>
+      (function ($) {
+          "use strict";
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > 100) {
+                  $('.back-to-top-alt').fadeIn('slow');
+              } else {
+                  $('.back-to-top-alt').fadeOut('slow');
+              }
+          });
+          $('.back-to-top-alt').click(function () {
+              $('html, body').animate({scrollTop: 0}, 500, 'easeInOutExpo');
+              return false;
+          });
+      
+      })(jQuery);
+    </script>
   </body>
 </html>
