@@ -1,5 +1,6 @@
 <div align="center">
- <h1>AT Products LLC</h1>
+ <a href="https://atproducts.xyz"><img src="/public/media/images/ATProductsLLC.png" alt="AT Products LLC" width="75%"></a>
+ <br><br>
  <p>
   <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love">
   <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
@@ -31,4 +32,4 @@ AT Products LLC, otherwise known as AT Products, is an informative technology co
 The "AT" in AT Products does stand for Alex Toucan.
 <hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#ours">View more information</a>.
-<h6>Last Recorded Version: 2.18.0.1</h6>
+<h6>Last Recorded Version: 2.18.0.2</h6>

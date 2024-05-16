@@ -54,7 +54,7 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
  </div>
  <figure class="figure mt-2 mb-0"> <img src="/media/files/400px-QR_Code_Structure_Example_3.svg.png" alt="QR Code" width="100%" class="bg-white rounded-1 p-1" style="max-width: 375px;"> <figcaption class="figure-caption mt-2">QR Code System Image</figcaption> </figure>
       <p class="my-3">Please note that if a link is a <a href="javascript:void(0)" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German.</p>
-   <Accordion parent="resourcesAccordion">
+<Accordion parent="resourcesAccordion">
   <Fragment slot="accordion-content">
     <AccordionItem title="Learning Resources" id="learningresources" parent="resourcesAccordion">
       <Fragment slot="accordion-item-content">
@@ -75,13 +75,18 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
           <a href="https://roadmap.sh/">Roadmaps for Languages</a>
           <a href="https://www.youtube.com/watch?v=rYnbspEcKJw">Organizing Code</a>
           <a href="https://github.com/codecrafters-io/build-your-own-x">Build your own X</a>
+          <a href="https://github.com/donnemartin/system-design-primer">System Design Primer</a>
+          <a href="https://github.com/trimstray/the-book-of-secret-knowledge">Book of Secret Knowledge</a>
+          <a href="https://github.com/practical-tutorials/project-based-learning">Project Based Learning</a>
           <a href="https://learn.microsoft.com/en-us/docs/">Microsoft's Documentation</a>
           <a href="https://markdownguide.org">Markdown Documentation</a>
           <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">Mozilla JS Tutorials</a>
-            <a href="https://devhints.io/lua">Lua Cheatsheet</a>
+          <a href="https://devhints.io/lua">Lua Cheatsheet</a>
           <a href="https://typehero.dev/explore">Learn TypeScript</a>
+          <a href="https://github.com/donnemartin/system-design-primer">Learn System Design</a>
           <a href="https://en.wikibooks.org/">WikiBooks</a>
           <a href="https://university.webflow.com/">Webflow University</a>
+          <a href="https://youtube.com/playlist?list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9pe-&si=EYMJrwqxIqlYXCZw">Learning PHP The Right Way</a>
           <a href="https://www.edx.org/learn">EDX Courses</a>
           <a href="https://caniuse.com/">CanIUse?</a>
           <a href="https://refactoring.guru/">Refactoring Guru</a>
@@ -93,6 +98,9 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
           <a href="https://pikuma.com/blog/isometric-projection-in-games">Isometric Project in Games</a>
           <a href="https://youtu.be/NmM9HA2MQGI">How to do Secret Key Exchange</a>
           <a href="https://www.youtube.com/watch?v=7mdc-lRrW1c">Series and Parallel Circuits</a>
+          <a href="https://youtube.com/shorts/nZuWCo52wTg?si=k3P9AgZfFjkslhvz">Architectural Patterns</a>
+          <a href="https://www.youtube.com/watch?v=9ElrcTtAxzA">The Secret Science of Perfect Spacing Part 1</a>
+          <a href="https://www.youtube.com/watch?v=r1DANFZYJDw">The Secret Science of Perfect Spacing Part 2</a>
         </p>
         <Accordion parent="learningresourcesAccordion">
           <Fragment slot="accordion-content">
@@ -315,6 +323,42 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
                   <a href="https://sysprog21.github.io/lkmpg/">Linux Kernel Module Programming Guide</a>
                   <a href="https://www.youtube.com/watch?v=cC1CqyCN9Q0">How to Fit In with Linux Users</a>
                 </p>
+                <h5>Astonishing GNOME customization</h5>
+                <p>
+                  <a href="https://www.youtube.com/watch?v=3XHIV2RF2Yc">Glassmorphism</a><br>
+                  <a href="https://www.youtube.com/watch?v=49_ZUgpMMFA">Everforest</a><br>
+                  <a href="https://www.youtube.com/watch?v=bDTUbBoIoUQ">Fluent</a><br>
+                  <a href="https://www.youtube.com/watch?v=qC0mnGprbeM">Orchis GTK</a><br>
+                  <a href="https://www.youtube.com/watch?v=1doqD4t7xVs">Evergreen</a>
+                </p>
+                <h5>Apache, MariaDB and PHP (LAMP) Installation for Arch-based Distros</h5>
+                <p><a href="https://forum.manjaro.org/t/howto-install-apache-mariadb-mysql-php-lamp/13000">[HowTo] Install Apache, MariaDB (MySQL), PHP (LAMP)</a></p>
+                <blockquote class="ps-3">
+                <p>&gt; PS: You must add a <code>phpmyadmin</code> DB and import  <code>/usr/share/webapps/phpmyadmin/sql/create_tables.sql</code> there - on Linux.<br>
+                &gt; And also modify / add some lines in your <code>.../phpmyadmin/config.inc.php</code> to tell <code>phpmyadmin</code> to use this DB for it&#39;s configuration storage:</p>
+                </blockquote>
+                <h4>Under the <code>phpMyAdmin configuration storage settings</code>-section</h4>
+                <p>Un-comment all tables matching the pattern below - but check in your DB, if they were created by the <code>create_table.sql</code>.</p>
+                <p>
+                <code>
+                // REQUIRED User - uncomment as well!!!<br>
+                // Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.<br>
+                $cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;;<br>
+                $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;<br>
+                // Pattern<br>
+                $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;;
+                </code>
+                </p>
+                <h6>Optional: Create the User</h6>
+                <p>
+                <code>
+                CREATE USER 'pma'@'localhost' IDENTIFIED BY'pmapass';<br>
+                GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO 'pma'@'localhost';<br>
+                FLUSH PRIVILEGES;<br>
+                </code>
+                </p>
+                <p>Problems or using Windows?<br>
+                =&gt; Refer to the Docs: <code>http://yourServerNameOrIPAddr/phpmyadmin/doc/html/setup.html#phpmyadmin-configuration-storage</code></p>
               </Fragment>
             </AccordionItem>
             <AccordionItem title="Mega.nz Resources" id="meganzresources" parent="learningresourcesAccordion">
@@ -375,6 +419,8 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
           <a href="https://www.newtonsoft.com/json">JSON.NET</a>
           <a href="https://github.com/sshnet/SSH.NET">SSH.NET</a>
           <a href="https://www.sonarsource.com/products/sonarlint/features/visual-studio/">SonarLint</a>
+          <a href="https://figma.com">Figma</a>
+          <a href="https://www.youtube.com/watch?v=HMntFTgy8Is">Simple Table in Figma</a>
           <a href="https://astro.build/">Astro</a>
           <a href="https://getbootstrap.com">Bootstrap</a>
           <a href="https://tailwindcss.com/">Tailwind.css</a>
@@ -423,6 +469,7 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
                 <p>
                   <a href="https://atom.io">Atom</a>
                   <a href="https://code.visualstudio.com/download">Visual Studio Code (VSCode)</a>
+                  <a href="https://youtube.com/shorts/y7fwyTh0F7Y?si=1YktIy5eP2H5vF1k">GitHub in VSCode</a>
                   <a href="https://www.sublimetext.com/download">Sublime Text</a>
                   <a href="https://github.com/WerWolv/ImHex">Hex Editor (ImHex)</a>
                   <a href="https://www.vim.org/download.php">Vim</a>
@@ -533,6 +580,7 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
           <a href="https://www.youtube.com/watch?v=5g137gsB9Wk">File Path Race Condition & How To Prevent It - bin 0x31 (LiveOverflow)</a>
           <a href="http://www.insecam.org">InSeCam</a>
           <a href="https://tools.intigriti.io/redirector/">Open Redirector/SSRF Payload Generator</a>
+          <a href="https://uops.info/table.html">CPU/IP Table</a>
           <a href="https://journal.opendataplayground.com/cyberhack-2023/">CyberHack 2023</a>
           <a href="https://gtfobins.github.io/">List of UNIX Binaries for Priv Escalation</a>
           <a href="https://pwk.hide01.ir/">Linux & Bash Hacking</a>
@@ -690,9 +738,9 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
                   <a href="https://www.youtube.com/watch?v=I7ugaarsN9M&list=PLUrAjkLbvTpKw5ZC-jryJI6wQpHvH_naE">HeroCTF v4</a>
                   <a href="https://www.youtube.com/watch?v=0dXv4mgFvEo&list=PLUrAjkLbvTpJvQddU6MZooARtnKtcI6Li">Incognito 3</a>
                   <a href="https://www.youtube.com/watch?v=A9ACD-DGM2U&list=PLUrAjkLbvTpKNt1wDghHXqWGrt7p3nFfP">MidnightFlag - INFEKTION</a>
-                  <a href="https://www.youtube.com/watch?v=YljnMU6iswU&list=PLUrAjkLbvTpIID1I8sdwwe4fgFJOZCGhV&index=1">Hacky Holidays 2022</a>
+                  <a href="https://www.youtube.com/watch?v=YljnMU6iswU&list=PLUrAjkLbvTpIID1I8sdwwe4fgFJOZCGhV">Hacky Holidays 2022</a>
                   <a href="https://www.youtube.com/watch?v=4UzHNuhTJbs&list=PLUrAjkLbvTpLJGPdxueL5uRvUVwmr4SnY">Hack the Boo 2022</a>
-                  <a href="https://www.youtube.com/watch?v=j1CYn74wCXU&list=PLUrAjkLbvTpJK0qbXAE7H73H8WkY26OwD&index=1">CTF After Dark - Fall 2022</a>
+                  <a href="https://www.youtube.com/watch?v=j1CYn74wCXU&list=PLUrAjkLbvTpJK0qbXAE7H73H8WkY26OwD">CTF After Dark - Fall 2022</a>
                   <a href="https://www.youtube.com/watch?v=TKFgnuftyrs&list=PLUrAjkLbvTpKOlxddIlVkOBvydnEw7qVS">Digital Overdose 2022 Autumn CTF</a>
                   <a href="https://www.youtube.com/watch?v=kYcEAeek_Wk&list=PLUrAjkLbvTpIQLKVQHi1XJBGaBp6UAjQM">DEADFACE CTF 2022</a>
                   <a href="https://m.youtube.com/watch?v=BjtVkYRhCHU&list=PLUrAjkLbvTpKN8YKY6ZBEag_EAOGBa9jQ">HTB Business CTF</a>
@@ -702,7 +750,7 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
                   <a href="https://www.youtube.com/watch?v=bDEXY_MY_Wk&feature=youtu.be">Hack The Box - Starting Point (Tier 0): Fawn</a>
                   <a href="https://www.youtube.com/watch?v=yt_jfx4D1gY">Hack The Box - Starting Point (Tier 0): Meow & Almond Force Channel Updates</a>
                   <a href="https://www.youtube.com/watch?v=7Ln4Ga8WBG8">HackTheBox Marshal in the Middle</a>
-                  <a href="https://www.youtube.com/watch?v=n4RK09OZbAw&list=PLUrAjkLbvTpLUHxP0zFq7kwRqs4NZIFvW&index=3&t=57s">11 HackTheBox Videos</a>
+                  <a href="https://www.youtube.com/watch?v=n4RK09OZbAw&list=PLUrAjkLbvTpLUHxP0zFq7kwRqs4NZIFvW">11 HackTheBox Videos</a>
                   <a href="https://www.youtube.com/watch?v=w8MJitt3irc&list=PLUrAjkLbvTpLtLloI8Pqk1P3n8p1sCRw2">TJCTF 2022</a>
                   <a href="https://www.youtube.com/watch?v=nSAJmtLbD-k&list=PLUrAjkLbvTpLT35eSB5anERpDAx2ogSCJangstrom">BYU CTF 2022</a>
                   <a href="https://www.youtube.com/watch?v=lI4gpyz09PE&list=PLUrAjkLbvTpJoJ5mVa0lf_UtoSetcwylu">Digital Overdose CTF 2022</a>
@@ -722,8 +770,8 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
                   <a href="https://www.youtube.com/watch?v=_nriNzpVrgQ&list=PLUrAjkLbvTpI4BFDBOFZnMr7Z61y0Ejvs">Inter-Galactic CTF 2022</a>
                   <a href="https://www.youtube.com/watch?v=fIcuIE1C-FY&list=PLUrAjkLbvTpIcQaDPx4sOGOUca4IpWLDI">SHELL CTF 2022</a>
                   <a href="https://www.youtube.com/watch?v=o2b33EMBM5w">Whack-a-frog corCTF 2022</a>
-                  <a href="https://www.youtube.com/watch?v=PmBTMNqUTys&list=PLUrAjkLbvTpK4ixlkQxZDrsj9mASlz26N&index=1">T3N4CI0US CTF 2022</a>
-                  <a href="https://www.youtube.com/watch?v=6OANStAZEss&list=PLUrAjkLbvTpIOn4XCn7F9V5SXMXve766b&index=1">TFC CTF 2022</a>
+                  <a href="https://www.youtube.com/watch?v=PmBTMNqUTys&list=PLUrAjkLbvTpK4ixlkQxZDrsj9mASlz26N">T3N4CI0US CTF 2022</a>
+                  <a href="https://www.youtube.com/watch?v=6OANStAZEss&list=PLUrAjkLbvTpIOn4XCn7F9V5SXMXve766b">TFC CTF 2022</a>
                   <a href="https://www.youtube.com/watch?v=_w5qd0Rh9sg">MITRE Cyber Academy CTF 2022</a>
                   <a href="https://www.youtube.com/watch?v=j8CVLGuNlwk&list=PLUrAjkLbvTpKbRFTCCxpqtCYVh3cfo0-v">picoCTF 2023</a>
                   <a href="https://www.youtube.com/watch?v=pbdC-POk-XU&list=PLUrAjkLbvTpKBgf4uRsc2JWhs8OZeswah">Cyber Apocalypse 2023</a>
@@ -766,9 +814,10 @@ Within the contents of this page, you'll find an <a class="link-warning" href="j
         <hr>
         <div class="my-1">
           <h4>Digital Systems (10th Edition PDF)</h4>
-          <a class="btn btn-primary" href="https://doc.lagout.org/electronics/Digital%20Systems%20Principles%20And%20Applications%20%20%5Bby%20Ronald%20Tocci%5D.pdf">View</a>
-          <br>
-          <a class="btn btn-secondary mt-2" href="https://doc.lagout.org">doc.lagout.org</a>
+          <div class="d-sm-flex gap-2">
+              <a class="btn btn-primary" href="https://doc.lagout.org/electronics/Digital%20Systems%20Principles%20And%20Applications%20%20%5Bby%20Ronald%20Tocci%5D.pdf">View</a>
+              <a class="btn btn-secondary" href="https://doc.lagout.org">doc.lagout.org</a>
+          </div>
         </div>
         <hr>
         <div class="my-1">

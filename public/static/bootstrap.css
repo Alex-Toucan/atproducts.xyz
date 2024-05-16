@@ -99,6 +99,8 @@
   --bs-link-hover-color: #0a58ca;
   --bs-link-hover-color-rgb: 10, 88, 202;
   --bs-code-color: #d63384;
+  --bs-code-block-color: #B9BBBE;
+  --bs-code-block-background-color: #2F3136;
   --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
   --bs-border-width: 1px;
@@ -477,6 +479,15 @@ code {
   color: var(--bs-code-color);
   word-wrap: break-word;
 }
+
+.code-block {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: var(--bs-code-block-color);
+    background-color: var(--bs-code-block-background-color);
+    border-radius: 4px;
+}
+
 a > code {
   color: inherit;
 }
@@ -7670,7 +7681,7 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
 }
 .link-hero:hover, .link-hero:focus, [data-bs-theme=dark] .link-footer:hover, [data-bs-theme=dark] .link-footer:focus  {
-  color: #c5cbd0 !important;
+  color: #d6dade !important;
   -webkit-text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
   text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
 }
@@ -7687,7 +7698,7 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] .link-footer {
-  color: var(--bs-body-color) !important;
+  color: var(--bs-secondary-color)!important;
 }
 
 
@@ -8204,7 +8215,7 @@ textarea.form-control-lg {
 }
 
 .position-inherit {
-  position: inherit+ !important;
+  position: inherit !important;
 }
 
 .position-absolute {
@@ -9331,6 +9342,10 @@ textarea.form-control-lg {
 
 .text-center {
   text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
 }
 
 .text-decoration-none {
@@ -17828,9 +17843,6 @@ margin-top: 25px;
     height: calc(100vh - 7rem);
     overflow-y: auto;
 }
-.story-top-body {
-margin-top: 72px;
-}
 }
 
 .hero-drappear {
@@ -17865,7 +17877,7 @@ margin-top: 72px;
 		display: none !important;
 	}
 	.story-top-scroll {
-		scroll-margin-top: 72px;
+		scroll-margin-top: 144px;
 	}
 	.story-end {
 		display: none;
@@ -17932,10 +17944,10 @@ height: calc(100vh - 448px);
     margin-top: 0.125rem;
 }
 .products-border {
-  	 --bs-border-width: 2.5px;	
+    --bs-border-width: 2.5px;	
     border-width: 2.5px !important;	
-		border-style: solid;
-	  border-color: var(--bs-light-border-subtle) !important;
+    border-style: solid;
+    border-color: var(--bs-light-border-subtle) !important;
 }
 
 .glow-text {
