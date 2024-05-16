@@ -40,6 +40,37 @@
         overflow: visible;
       }
 
+      .back-to-top {
+        box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
+        color: white;
+        background-color: black;
+      }
+      
+      .back-to-top:hover {
+        color: white;
+        background-color: #262626;
+      }
+      
+      .back-to-top:active {
+        color: white;
+        background-color: #404040;
+      }
+      
+      [data-bs-theme=dark] .back-to-top {
+          color: black;
+          background-color: white;
+      }
+      
+      [data-bs-theme=dark] .back-to-top:hover {
+        color: black;
+        background-color: #f2f2f2;
+      }
+      
+      [data-bs-theme=dark] .back-to-top:active {
+        color: black;
+        background-color: #bfbfbf;
+      }
+
       img.atproducts-image {
         min-width: 290px;
         width: 40%;
