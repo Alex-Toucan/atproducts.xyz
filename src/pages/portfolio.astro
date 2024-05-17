@@ -76,6 +76,11 @@
         width: 40%;
       }
 
+      img.codinghome-image {
+        min-width: 200px;
+        width: 15%;
+      }
+
       img.tpt2-image, .tpt2-image {
         min-width: 350px;
         width: 20%;
@@ -83,6 +88,13 @@
 
       .atpweather-background {
         background-image: url(/media/images/sunset.png);
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+      }
+
+      .codinghome-background {
+        background-image: url(/media/images/codinghome.webp);
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
@@ -218,7 +230,7 @@
             <p>Join me on this exciting journey through technology, ruling countries, gaming, and meteorology as we explore the ever-evolving innovation landscape together!</p>
           </div>
           <div class="tab-pane fade" id="tab-atproducts" role="tabpanel" aria-labelledby="tab-atproducts-tab" tabindex="0">
-            <div class="w-100 border-1 bg-white rounded-2 p-sm-5 p-3 mb-3">
+            <div class="w-100 bg-white rounded-2 p-sm-5 p-3 mb-3">
               <img src="/media/images/longblack.png" alt="AT Products LLC" class="d-block mx-auto text-center atproducts-image">
             </div>
             <h1 class="display-6 fw-bold mb-2">AT Products LLC</h1>
@@ -236,7 +248,7 @@
             <p>2023 came, and <a href="https://beta.atproducts.xyz/pynx">Pynx's Projects and <a href="https://beta.atproducts.xyz/mdickie">MDickie Projects</a> came by. Finally, we changed the logo again in late November. March of 2024, the <a href="https://beta-testing.atproducts.xyz">Department of Beta Testing</a> launched. That's the whole history of the company!</p>
           </div>
           <div class="tab-pane fade" id="tab-atproductsxyz" role="tabpanel" aria-labelledby="tab-atproductsxyz-tab" tabindex="0">
-            <div class="w-100 border-1 bg-white rounded-2 p-sm-5 p-3 mb-3">
+            <div class="w-100 bg-white rounded-2 p-sm-5 p-3 mb-3">
               <img src="/media/images/longblack.png" alt="AT Products LLC" class="d-block mx-auto text-center atproducts-image">
             </div>
             <h1 class="display-6 fw-bold mb-2">atproducts.xyz</h1>
@@ -262,7 +274,7 @@
             <p>A grand start to 2023, <a href="https://2-12.atproducts.xyz/">2.12</a> added the color modes switch with the return of dark mode, thanks to <a href="https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/">Bootstrap v5.3.0-alpha1</a> releasing a bit earlier. <a href="https://2-13.atproducts.xyz/">2.13</a> brought in cards. <a href="https://2-14.atproducts.xyz/">2.14</a> brought in PWA, Content Security Policy, and a carousel redesign. <a href="https://2-15.atproducts.xyz/">2.15</a> overhauled the introductions with heroes, and <a href="https://2-16.atproducts.xyz/">2.16</a> overhauled them. Finally, <a href="https://2-17-2.atproducts.xyz/">2.17.2</a> replaced HTML with Astro. That's the atproducts.xyz history!</p>
           </div>
           <div class="tab-pane fade" id="tab-toucan" role="tabpanel" aria-labelledby="tab-toucan-tab" tabindex="0">
-            <div class="w-100 border-1 bg-white rounded-2 p-2 mb-3">
+            <div class="w-100 bg-white rounded-2 p-2 mb-3">
               <img src="/media/images/the-toucans.png" alt="The Toucans" class="d-block mx-auto text-center" width="30%" style="min-width:200px"> 
             </div>
             <h1 class="display-6 fw-bold mb-2">The Toucan Empire</h1>
@@ -286,8 +298,10 @@
             <br class="custom-br">
           </div>
           <div class="tab-pane fade" id="tab-codinghome" role="tabpanel" aria-labelledby="tab-codinghome-tab" tabindex="0">
-            <div class="w-100 border-1 bg-white rounded-2 p-2 mb-3">
-              <img src="/media/images/codinghome.webp" alt="CodingHome" class="d-block mx-auto text-center rounded-2" width="17.5%" style="min-width:200px"> 
+            <div class="w-100 codinghome-background rounded-2 mb-3">
+              <div class="cover rounded-2 p-sm-5 p-3">
+                <img src="/media/images/codinghome.webp" alt="CodingHome" class="d-block mx-auto text-center codinghome-image filter rounded-2"> 
+              </div>
             </div>
             <h1 class="display-6 fw-bold mb-2">CodingHome</h1>
             <p><strong><a href="https://atproducts.xyz/codinghome">CodingHome</a></strong> is a <a href="https://discord.com">Discord</a> server full of coding resources, and coding help, becoming your home for coding. Currently owned by Alex Toucan, CodingHome is sitting at 310+ members.</p>
@@ -296,7 +310,7 @@
             <p>The server kept growing through 2022, up until October 18th, 2022, when the server got nuked and most things got deleted when <a href="https://protdos.com">CodingLive</a> got hacked. CodingHome had 800 members before the deletion. The server kept losing activity and members since, so it would lead to <a href="https://discord.gg/pgGfhDVrmS">v2</a> being created as a new server, which was released on March 18th, 2023. The new server now contains 310+ members as of May 2024.</p>
           </div>
           <div class="tab-pane fade" id="tab-atpweather" role="tabpanel" aria-labelledby="tab-atpweather-tab" tabindex="0">
-            <div class="w-100 border-1 atpweather-background rounded-2 mb-3">
+            <div class="w-100 atpweather-background rounded-2 mb-3">
               <div class="cover rounded-2 p-sm-5 p-3">
                 <img src="/media/images/atpweather-white.png" alt="ATPWeather" class="d-block mx-auto text-center atproducts-image filter">
               </div>
