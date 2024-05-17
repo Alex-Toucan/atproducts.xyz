@@ -100,6 +100,10 @@
         filter: drop-shadow(2px 4px 6px black);
       }
 
+      .cover {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
       p {
         margin-bottom: 0 !important;
         padding-bottom: 1rem;
@@ -293,7 +297,9 @@
           </div>
           <div class="tab-pane fade" id="tab-atpweather" role="tabpanel" aria-labelledby="tab-atpweather-tab" tabindex="0">
             <div class="w-100 border-1 atpweather-background rounded-2 p-sm-5 p-3 mb-3">
-              <img src="/media/images/atpweather-white.png" alt="ATPWeather" class="d-block mx-auto text-center atproducts-image filter">
+              <div class="cover rounded-2">
+                <img src="/media/images/atpweather-white.png" alt="ATPWeather" class="d-block mx-auto text-center atproducts-image filter">
+              </div>
             </div>
             <h1 class="display-6 fw-bold mb-2">ATPWeather</h1>
             <p><strong><a href="https://twitter.com/ATPWeather">ATPWeather</a></strong>, is a <a href="https://twitter.com">Twitter/X</a> account that contains meteorology forecasts and data with the data and charts from <a href="https://weather.gov">NWS (National Weather Service)</a>. Created on November 23rd, 2022, by Alex Toucan, it has been serving numerous forecasts including severe weather, winter weather, hurricanes, and space weather.</p>
