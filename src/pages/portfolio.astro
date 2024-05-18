@@ -327,17 +327,15 @@
             <h2 class="fw-bold card-title mb-2"><a href="https://www.roblox.com/games/69184822/Theme-Park-Tycoon-2">Theme Park Tycoon 2</a></h2>
             <p>The Toucan Empire is also on the <a href="https://roblox.com">Roblox</a> game <a href="https://www.roblox.com/games/69184822/Theme-Park-Tycoon-2">Theme Park Tycoon 2</a> as a theme park, and has been existing since late 2016 (originally as "The Amazing Theme Park"; before its renaming in early 2023). The park's theme is a highway/city with numerous highways, roads, intersections, and multiple bridges. It has a border, a processing center, numerous departments (transportation, architecture, broadcasting, etc.), train stations, food centers, beaches, and rides. The map below shows the many districts (areas) that The Toucan Empire contains with their special attraction. As theme parks cannot be shared and Alex Toucan must be playing to view the park, a picture album is below.</p>
             <div class="mt-2" id="tpt2-album">
-              <div class="d-lg-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
-                <div class="col-lg-6 mt-4 mt-lg-auto">
-                  <img src="/media/images/The Toucan Empire.png" alt="The theme park map included with districts." class="rounded-2 tpt2-image">
-                  <div class="mt-2 figure-caption">The theme park map included with districts.</div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-auto">
-                  <img src="/media/images/Spawn Building.png" alt="The processing and control department as soon as walking in the park." class="rounded-2 tpt2-image">
-                  <div class="mt-2 figure-caption">The processing and control department as soon as walking in the park.</div>
-                </div>
-              </div>
-              <div class="d-lg-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
+              <div class="d-lg-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center" data-masonry="{&quot;percentPosition&quot;: true }>
+                  <div class="col-lg-6 mt-4 mt-lg-auto">
+                    <img src="/media/images/The Toucan Empire.png" alt="The theme park map included with districts." class="rounded-2 tpt2-image">
+                    <div class="mt-2 figure-caption">The theme park map included with districts.</div>
+                  </div>
+                  <div class="col-lg-6 mt-4 mt-lg-auto">
+                    <img src="/media/images/Spawn Building.png" alt="The processing and control department as soon as walking in the park." class="rounded-2 tpt2-image">
+                    <div class="mt-2 figure-caption">The processing and control department as soon as walking in the park.</div>
+                  </div>
                   <div class="col-lg-6 mt-4 mt-lg-auto">
                     <img src="/media/images/Inside Spawn.png" alt="Inside the processing and control department." class="rounded-2 tpt2-image">
                     <div class="mt-2 figure-caption">Inside the processing and control department.</div>
@@ -346,7 +344,6 @@
                     <img src="/media/images/Welcome To.png" alt="The welcome sign after the processing and control department building." class="rounded-2 tpt2-image">
                     <div class="mt-2 figure-caption">The welcome sign after the processing and control department building.</div>
                   </div>
-                </div>
                 <div class="d-lg-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
                   <div class="col-lg-6 mt-4 mt-lg-auto">
                     <img src="/media/images/Fountain.png" alt="A fountain in the Ford District recognizing Alex Toucan." class="rounded-2 tpt2-image">
@@ -356,8 +353,6 @@
                     <img src="/media/images/Alta Building.png" alt="The Alta Food Court (middle) with the Alta Station (left) in the Alta District." class="rounded-2 tpt2-image">
                     <div class="mt-2 figure-caption">The Alta Food Court (middle) with the Alta Station (left) in the Alta District.</div>
                   </div>
-                </div>
-                <div class="d-lg-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
                   <div class="col-lg-6 mt-4 mt-lg-auto">
                     <img src="/media/images/Line of Defense.png" alt="The Line of Defense building in the Ford District." class="rounded-2 tpt2-image">
                     <div class="mt-2 figure-caption">The Line of Defense building in the Ford District.</div>
@@ -366,8 +361,6 @@
                     <img src="/media/images/Advertisement.png" alt="An advertisement in the Algonquin District." class="rounded-2 tpt2-image">
                     <div class="mt-2 figure-caption">An advertisement in the Algonquin District.</div>
                   </div>
-                </div>
-                <div class="d-lg-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
                   <div class="col-lg-6 mt-4 mt-lg-auto">
                     <img src="/media/images/Roller Coaster.png" alt="A roller coaster full of Nature in the Insitux District." class="rounded-2 tpt2-image">
                     <div class="mt-2 figure-caption">A roller coaster full of Nature in the Insitux District.</div>
@@ -435,6 +428,7 @@
     <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script is:inline src="https://cdn.jsdelivr.net/npm/jquery@4.0.0-beta/dist/jquery.min.js"></script>
     <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
+    <script is:inline src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
     <script is:inline>
       (function ($) {
