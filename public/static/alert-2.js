@@ -11,7 +11,7 @@ function setAlert2Cookie(name, value, days) {
     var expires = "";
     if (days) {
         var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000 * 4.285));
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000 * 4.28571428571));
         expires = "; expires=" + date.toUTCString();
     }
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
