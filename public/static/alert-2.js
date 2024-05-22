@@ -43,5 +43,5 @@ $(document).ready(function () {
 });
 
 function pureAlert2Dismiss() {
-    setAlertCookie('pureAlert2Dismiss', '1', 7);
+    setAlert2Cookie('pureAlert2Dismiss', '1', 7);
 }
