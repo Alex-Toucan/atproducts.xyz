@@ -2,6 +2,10 @@
   --bs-heading-color: #fff !important;
 }
 
+html, body {
+  overflow-x: hidden !important;
+}
+
 .hero {
 	width: 100%;
 	position: relative;
