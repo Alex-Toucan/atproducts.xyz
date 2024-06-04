@@ -998,7 +998,14 @@ import BackToTop from '../../components/BackToTop.astro';
     <hr>
     <div id="py">
       <h2> Python Basics </h2>
-      <Scrollspy id="py-basics-list" scrollcontent={[ { name: "Comments" , href: "#com-3" }, { name: "Data Types" , href: "#data-3" }, { name: "Strings" , href: "#str-3" }, { name: "Numbers" , href: "#num-3" }, ]}>
+      <Scrollspy id="py-basics-list" 
+            scrollcontent={[ 
+              { name: "Comments" , href: "#com-3" }, 
+              { name: "Data Types" , href: "#data-3" }, 
+              { name: "Strings" , href: "#str-3" }, 
+              { name: "Numbers" , href: "#num-3" }, 
+            ]}
+          >
         <Fragment slot="scrollspy-content">
           <div id="com-3">
             <h4>Comments</h4>
@@ -1086,7 +1093,15 @@ import BackToTop from '../../components/BackToTop.astro';
     <hr>
     <div id="hs">
       <h2> Haskell Basics </h2>
-      <Scrollspy id="hs-basics-list" scrollcontent={[ { name: "Data Types" , href: "#data-5" }, { name: "Function Type Declartion" , href: "#ftd-5" }, { name: "Function Defintion" , href: "#fde-5" }, { name: "Functional Principles" , href: "#fpr-5" }, { name: "Comments" , href: "#com-5" }, ]}>
+      <Scrollspy id="hs-basics-list" 
+            scrollcontent={[ 
+              { name: "Data Types" , href: "#data-5" }, 
+              { name: "Function Type Declartion" , href: "#ftd-5" }, 
+              { name: "Function Defintion" , href: "#fde-5" }, 
+              { name: "Functional Principles" , href: "#fpr-5" }, 
+              { name: "Comments" , href: "#com-5" }, 
+            ]}
+          >
         <Fragment slot="scrollspy-content">
           <div id="data-5">
             <h4>Data Types</h4>
@@ -1109,28 +1124,451 @@ import BackToTop from '../../components/BackToTop.astro';
           <div id="ftd-5">
             <h4>Function Type Declaration</h4>
             <p>Haskell's functions will usually have 2 parts: a type declaration, and the implementation of the function itself (the type part can also be inferred):</p>
-            <code> -- type declaration <br> -- constraints =&gt; type -&gt; ... -&gt; returnType (the last type will always be the return type) <br> countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int <br> -- implementation undefined<br> countIns x = length . filter (== x) undefined<br>undefined</code>undefined<ul>undefined<li>Bool: boolean True or False.</li>undefined<li>Char: one character.</li>undefined<li>Int: fixed-precision signed integer (usually 64-bit)</li>undefined<li>Float / Double: floating-point values.</li>undefined</ul>undefined<p>Notice the type declaration has 2 types of "arrows": undefined<code>=&gt;</code> and undefined<code>-&gt;</code>.undefined</p>undefined<ul>undefined<li>=&gt; : used for giving additional context of what rules undefined<code>a</code> should follow (in the example above, we see a should be part of the undefined<code>Eq</code> class, which allows for comparison)undefined</li>undefined<li>-&gt; : used for actually declaring the type of the function (in the above example, we see the first argument is undefined<code>a</code>, a general, comparable type, then a list of as and then finally it outputs an undefined<code>Int</code>eger)undefined</li>undefined</ul>undefined
-          </div>undefined<div id="fde-5">undefined<h4>Function Definition</h4>undefined<p>Functions are defined like: undefined<code>functionName argument(s) = expression</code>. Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). undefined</p>undefined<code> -- type declaration countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int -- implementation -- function args = expression countIns x = length . filter (== x) </code>undefined</div>undefined<div id="fpr-5">undefined<h4>Functional Principles</h4>undefined<p>Haskell restricts to the functional paradigm, meaning Haskell enforces:</p>undefined<ul>undefined<li>undefined<b>Immutability:</b> when the undefined<code>data</code> has to be defined again for it to "change"undefined</li>undefined<li>undefined<b>Purity:</b> functions must be pure, producing no side-effects (like modifying a global variable), and must be deterministic (undefined<code>f(x) = y</code>, no matter when undefined<code>f</code> is called)undefined</li>undefined<li>undefined<b>Higher-order functions:</b> functions must be first-class, meaning they can be passed as arguments to other functions. This allows for higher-order functions. which take a function and other data and apply the function to the data in different ways.undefined</li>undefined<li>undefined<b>Disciplined state </b> trying to minimize the use of mutable state and trying to make it local when possible.undefined</li>undefined</ul>undefined</div>undefined<div id="com-5">undefined<h4>Comments</h4>undefined<p>In-line comments are made with undefined<code>--</code> and block comments with undefined<code>&lbrace;- -&rbrace;</code>:undefined</p>undefined<code> -- inlineundefined<br> commentHere = False &lbrace;- block commenHere = True -&rbrace; undefined</code>undefined</div>undefined
+            <code> -- type declaration <br> -- constraints =&gt; type -&gt; ... -&gt; returnType (the last type will always be the return type) <br> countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int <br> -- implementation <br> countIns x = length . filter (== x) <br>
+            </code>
+            <ul><li>Bool: boolean True or False.</li><li>Char: one character.</li><li>Int: fixed-precision signed integer (usually 64-bit)</li><li>Float / Double: floating-point values.</li>
+            </ul>
+            <p>Notice the type declaration has 2 types of "arrows": <code>=&gt;</code> and <code>-&gt;</code>. </p>
+            <ul><li>=&gt; : used for giving additional context of what rules <code>a</code> should follow (in the example above, we see a should be part of the <code>Eq</code> class, which allows for comparison)</li><li>-&gt; : used for actually declaring the type of the function (in the above example, we see the first argument is <code>a</code>, a general, comparable type, then a list of as and then finally it outputs an <code>Int</code>eger)</li>
+            </ul>
+          </div>
+          <div id="fde-5">
+            <h4>Function Definition</h4>
+            <p>Functions are defined like: <code>functionName argument(s) = expression</code>. Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
+            <code> -- type declaration countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int -- implementation -- function args = expression countIns x = length . filter (== x) </code>
+          </div>
+          <div id="fpr-5">
+            <h4>Functional Principles</h4>
+            <p>Haskell restricts to the functional paradigm, meaning Haskell enforces:</p>
+            <ul><li><b>Immutability:</b> when the <code>data</code> has to be defined again for it to "change"</li><li><b>Purity:</b> functions must be pure, producing no side-effects (like modifying a global variable), and must be deterministic (<code>f(x) = y</code>, no matter when <code>f</code> is called)</li><li><b>Higher-order functions:</b> functions must be first-class, meaning they can be passed as arguments to other functions. This allows for higher-order functions. which take a function and other data and apply the function to the data in different ways.</li><li><b>Disciplined state </b> trying to minimize the use of mutable state and trying to make it local when possible.</li>
+            </ul>
+          </div>
+          <div id="com-5">
+            <h4>Comments</h4>
+            <p>In-line comments are made with <code>--</code> and block comments with <code>&lbrace;- -&rbrace;</code>: </p>
+            <code> -- inline<br> commentHere = False &lbrace;- block commenHere = True -&rbrace; </code>
+          </div>
         </Fragment>
       </Scrollspy>
     </div>
     <hr>
-    <div id="html">undefined<h2> HTML Basics </h2>undefined<Scrollspy id="html-basics-list" scrollcontent={[ { name: "Example Document" , href: "#example-6" }, { name: "HTML Headings" , href: "#head-6" }, { name: "HTML Paragraphs" , href: "#text-6" }, { name: "HTML Links" , href: "#links-6" }, { name: "HTML Images" , href: "#img-6" }, ]}>undefined<Fragment slot="scrollspy-content">undefined<div id="example-6">undefined<h4>Example Document</h4>undefined<code> &lt;!DOCTYPE html&gt;undefined<br> &lt;html&gt;undefined<br> &nbsp;&lt;body&gt;undefined<br> &nbsp;&nbsp;&lt;h1&gt;My first Heading&lt;/h1&gt;undefined<br> &nbsp;&nbsp;&lt;p&gt;My first paragraph&lt;/p&gt;undefined<br> &nbsp;&lt;/body&gt;undefined<br> &lt;/html&gt; undefined</code>undefined<br>undefined<p>The undefined<code>&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags). The undefined<code>&lt;!DOCTYPE&gt;</code> declaration is not case sensitive. undefined</p>undefined</div>undefined<div id="head-6">undefined<h4>HTML Headings</h4>undefined<p>HTML headings are defined with the undefined<code>&lt;h1&gt;</code> to undefined<code>&lt;h6&gt;</code> tags. undefined<code>&lt;h1&gt;</code>defines the most important heading. undefined<code>&lt;h6&gt;</code> defines the least important heading:undefined<br>undefined<code>&lt;h1&gt;Big&lt;/h1&gt;</code>undefined<br>undefined<code>&lt;h6&gt;Small&lt;/h6&gt;</code>undefined</p>undefined</div>undefined<div id="text-6">undefined<h4>HTML Paragraphs</h4>undefined<p>HTML paragraphs are defined with the &lt;p&gt; tag:undefined<code>undefined<br> &lt;p&gt;This is a paragraph.&lt;/p&gt;undefined<br> &lt;p&gt;This is another paragraph.&lt;/p&gt;undefined</code>undefined</p>undefined</div>undefined<div id="links-6">undefined<h4>HTML Links</h4>undefined<p>HTML links are defined with the &lt;a&gt; tag:undefined<br>undefined<code>&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;</code>undefined</p>undefined</div>undefined<div id="img-6">undefined<h4>HTML Images</h4>undefined<p>HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width, and height are provided as attributes:undefined<br>undefined<code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code>undefined</p>undefined</div>undefined</Fragment>undefined</Scrollspy>undefined</div>undefined
-    <hr>undefined<div id="css">undefined<h2> CSS Basics </h2>undefined<div class="my-3">undefined<a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>undefined</div>undefined<Scrollspy id="css-basics-list" scrollcontent={[ { name: "Example Document" , href: "#example-7" }, { name: "CSS Rulesets" , href: "#rules-7" }, { name: "Classes" , href: "#classes-7" }, { name: "Text Elements" , href: "#text-7" }, { name: "Padding Elements" , href: "#pad-7" }, { name: "Color Elements" , href: "#color-7" }, { name: "Comments" , href: "#com-7" }, { name: "Extra: Centering Images" , href: "#eci-7" }, ]}>undefined<Fragment slot="scrollspy-content">undefined<div id="example-7">undefined<h4>Example Document</h4>undefined<p>undefined<code> h1 &lbrace;undefined<br> &nbsp;&nbsp;color&colon; black;undefined<br> &nbsp;&nbsp;text-align&colon; center;undefined<br> &nbsp;&nbsp;font-size&colon; 26px;undefined<br> &nbsp;&nbsp;font-family&colon; verdana;undefined<br> &rbrace; undefined</code>undefined</p>undefined<p>undefined<code>&lt;p style="font-size:10px"&gt;</code>undefined</p>undefined<p>To put CSS files in HTML, use: undefined<br>undefined<code>&lt;link rel="stylesheet" href="style.css"&gt;</code>undefined</p>undefined<p>To put CSS code in HTML, use: undefined<br>undefined<code> &lt;style&gt;undefined<br> .class &lbrace;undefined<br> &rbrace;undefined<br> &lt;/style&gt; undefined</code>undefined</p>undefined</div>undefined<div id="rules-7">undefined<h4>CSS Rulesets</h4>undefined<p></p>undefined<div class="d-flex">undefined<div class="col-4">undefined<p>Selector</p>undefined</div>undefined<div class="col">undefined<div class="me-auto">undefined<code class="position-static">p &lbrace; </code>undefined</div>undefined</div>undefined</div>undefined<div class="d-flex">undefined<div class="col-4">undefined<p>Property</p>undefined</div>undefined<div class="col">undefined<div class="me-auto">undefined<code class="position-static">&nbsp;&nbsp;color&colon; red; </code>undefined</div>undefined</div>undefined</div>undefined<div class="d-flex">undefined<div class="col-4">undefined<p>Declaration</p>undefined</div>undefined<div class="col">undefined<div class="me-auto">undefined<code class="position-static">&rbrace;</code>undefined</div>undefined</div>undefined</div>undefined<p></p>undefined<p>undefined<b>Properties</b> - With these, you can style a HTML element, like for example; color. undefined<br>undefined<b>Property Value</b> - This chooses one of the possible options for a given property, like red for color.undefined</p>undefined<p> You can also write CSS like undefined<code>html&lbrace;color&colon;red;&rbrace;</code>undefined<br> You can also put styles in HTML elements. undefined<code>&lt;h1 style="font-color:white;"&gt;</code>undefined<br> You can also select multiple elements at once like... undefined<br>undefined<code> h1, h4, h6, h2 &lbrace; &nbsp;&nbsp;color&colon; red; &rbrace;</code>undefined</p>undefined</div>undefined<div id="classes-7">undefined<h4>Classes</h4>undefined<p>Think of classes like custom HTML elements, they can be applied in html like undefined<code>&lt;p class="text-red"&gt;</code>undefined</p>undefined<p>Classes begin with a dot or period (.) to begin the selector.</p>undefined<p>undefined<code> .text-red &lbrace;undefined<br> &nbsp;&nbsp;color&colon; red;undefined<br> &rbrace;undefined</code>undefined</p>undefined</div>undefined<div id="text-7">undefined<h4>Text Elements</h4>undefined<p>undefined<code>font-size&colon; 10px;</code> - Text size, can be in pixels.undefined<br>undefined<code>font-family&colon; verdana;</code> - Fontsundefined<br>undefined<code>text-align&colon; center;</code> - Can align to the left side, right side, or in the center of the webpage. undefined<br>undefined<code>text-shadow&colon; 3px black</code> - Shadow of text. It can be in pixels and colors. undefined</p>undefined</div>undefined<div id="pad-7">undefined<h4>Padding Elements</h4>undefined<p>undefined<code>padding-top&colon; 50px;</code> - Separation. It can be top, left, right, and bottom in pixels.undefined<br>undefined<code>margin&colon; 50px;</code> - A margin. It can be in pixels.undefined<br>undefined<code>border-width&colon; 5px;</code> - Border width. Can be thin, medium, thick, or just pixels.undefined<br>undefined<code>border-style&colon; dotted;</code> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.undefined<br>undefined<code>width=500px;</code> - Width of the element. It can be pixels or percentages.undefined</p>undefined</div>undefined<div id="color-7">undefined<h4>Color Elements</h4>undefined<p>undefined<code>color&colon; red;</code> - The color of the element, can be hexadecimal, or RGB.undefined<br>undefined<code>background-color&colon; white;</code> - Background color of the element.undefined</p>undefined</div>undefined<div id="com-7">undefined<h4>Comments</h4>undefined<p>Comments are commonly used to explain the code and may help when you edit the source code later and are ignored by browsers. undefined<br>undefined<br> A CSS comment starts with undefined<code>/*</code> and ends with undefined<code>*/</code>, and no changes are needed to make it multiple lines.undefined</p>undefined<p>undefined<code> /* This is a single-line comment */undefined<br>undefined<br> /* This isundefined<br> a multi-lineundefined<br> comment */undefined</code>undefined</p>undefined</div>undefined<div id="eci-7">undefined<h4>Extra: Centering Images</h4>undefined<p>undefined<code>img &lbrace; &nbsp;&nbsp;margin&colon; 0 auto; &nbsp;&nbsp;display&colon; block; &rbrace;</code>undefined</p>undefined</div>undefined</Fragment>undefined</Scrollspy>undefined</div>undefined
-    <hr>undefined<div id="js">undefined<h2> JavaScript Basics </h2>undefined<Scrollspy id="js-basics-list" scrollcontent={[ { name: "Including JavaScript in an HTML Page" , href: "#html-8" }, { name: "Call an External JavaScript File" , href: "#call-8" }, { name: "Including Comments" , href: "#com-8" }, { name: "Variables" , href: "#var-8" }, { name: "Data Types" , href: "data-8" }, ]}>undefined<Fragment slot="scrollspy-content">undefined<div id="html-8">undefined<h4>Including JavaScript in an HTML Page</h4>undefined<p>undefined<code>&lt;script type="text/javascript"&gt; undefined<br> //JS code goes here undefined<br> &lt;/script&gt; undefined</code>undefined</p>undefined</div>undefined<div id="call-8">undefined<h4>Call an External JavaScript File</h4>undefined<p>undefined<code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code>undefined</p>undefined</div>undefined<div id="com-8">undefined<h4>Including Comments</h4>undefined<p>Single line comments - undefined<code>// Comment</code>undefined<br> Multi-line comments - undefined<code>/* comment here */</code>undefined</p>undefined</div>undefined<div id="var-8">undefined<h4>Variables</h4>undefined<p>undefined<code>var, const, let</code>undefined<br>undefined<code>var</code> — The most common variable. It can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.undefined<br>undefined<code>const</code> — Can not be reassigned and not accessible before they appear within the code.undefined<br>undefined<code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.undefined<br>undefined</p>undefined</div>undefined<div id="data-8">undefined<h4>Data Types</h4>undefined<p> Numbers — undefined<code>var age = 23</code>undefined<br> Variables — undefined<code>var x</code>undefined<br> Text (strings) — undefined<code>var a = "init"</code>undefined<br> Operations — undefined<code>var b = 1 + 2 + 3</code>undefined<br> True or false statements — undefined<code>var c = true</code>undefined<br> Constant numbers — undefined<code>const PI = 3.14</code>undefined<br> Constant numbers — undefined<code>const PI = 3.14</code>undefined<br> Objects — undefined<code>var name = &lbrace;firstName&colon; "John", lastName&colon; "Doe"&rbrace;</code>undefined</p>undefined<p>undefined<b>Objects Example</b>undefined<br>undefined
-            <pre>
-          var person = &lbrace;
-          &nbsp;&nbsp;firstName&colon; "John",
-          &nbsp;&nbsp;lastName&colon; "Doe",
-          &nbsp;&nbsp;age&colon; 20,
-          &nbsp;&nbsp;nationality&colon; "American"
-          &rbrace;
-            </pre>undefined</p>undefined
-          </div>undefined</Fragment>undefined</Scrollspy>undefined</div>undefined
-    <hr>undefined<div id="sql">undefined<h2> SQL Basics </h2>undefined<Scrollspy id="sql-basics-list" scrollcontent={[ { name: "Querying Data from a Tablem" , href: "#query-9" }, { name: "Modifying Data" , href: "#mod-9" }, { name: "Table Management" , href: "#table-9" }, ]}>undefined<Fragment slot="scrollspy-content">undefined<div id="query-9">undefined<h4>Querying Data from a Table</h4>undefined<p>Query Data in Columns c1, c2 from a Table</p>undefined<code> SELECT c1, c2 FROM t;undefined<br> Code language: SQL (Structured Query Language) (SQL) undefined</code>undefined<br>undefined<br>undefined<p>Query All Rows and Columns from a Table</p>undefined<code>SELECT * FROM t;</code>undefined<br>undefined<br>undefined<p>Query Data and Filter Rows with a Condition</p>undefined<code> SELECT c1, c2 FROM tundefined<br> WHERE condition; undefined</code>undefined<br>undefined<br>undefined<p>Query Distinct Rows from a Table</p>undefined<code> SELECT DISTINCT c1 FROM tundefined<br> WHERE condition; undefined</code>undefined<br>undefined<br>undefined<p>Sort the Result Set in Ascending or Descending Order</p>undefined<code> SELECT c1, c2 FROM tundefined<br> ORDER BY c1 ASC [DESC]; undefined</code>undefined<br>undefined<br>undefined<p>Skip Offset of Rows and Return the Next n Rows</p>undefined<code> SELECT c1, c2 FROM tundefined<br> ORDER BY c1undefined<br> LIMIT n OFFSET offset; undefined</code>undefined<br>undefined<br>undefined<p>Group Rows using an Aggregate Function</p>undefined<code> SELECT c1, aggregate(c2)undefined<br> FROM tundefined<br> GROUP BY c1; undefined</code>undefined<br>undefined<br>undefined<p>Filter Groups using undefined<b>Having</b> Clauseundefined</p>undefined<code> SELECT c1, aggregate(c2)undefined<br> FROM tundefined<br> GROUP BY c1undefined<br> HAVING condition; undefined</code>undefined<br>undefined<br>undefined</div>undefined<div id="mod-9">undefined<h4>Modifying Data</h4>undefined<p>Insert One Row into a Table</p>undefined<code> INSERT INTO t(column_list)undefined<br> VALUES(value_list); undefined</code>undefined<br>undefined<br>undefined<p>Insert Multiple Rows into a Table</p>undefined<code> INSERT INTO t(column_list)undefined<br> VALUES (value_list), undefined<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(value_list), …; undefined</code>undefined<br>undefined<br>undefined<p>Insert Rows from t2 into t1</p>undefined<code> INSERT INTO t1(column_list)undefined<br> SELECT column_listundefined<br> FROM t2; undefined</code>undefined<br>undefined<br>undefined<p>Update New Value in the Column c1 for All Rows</p>undefined<code> UPDATE tundefined<br> SET c1 = new_value; undefined</code>undefined<br>undefined<br>undefined<p>Update Values in the Column c1, c2 that Match the Condition</p>undefined<code> UPDATE t SET c1 = new_value, undefined<br> &nbsp;&nbsp;&nbsp;&nbsp;c2 = new_valueundefined<br> WHERE condition; undefined</code>undefined<br>undefined<br>undefined<p>Delete All Data in a Table</p>undefined<code>DELETE FROM t;</code>undefined<p>Delete Subset of Rows in a Table</p>undefined<code> DELETE FROM tundefined<br> WHERE condition; undefined</code>undefined<br>undefined<br>undefined</div>undefined<div id="table-9">undefined<h4>Table Management</h4>undefined<p>Create a new Table with Three Columns</p>undefined<code> CREATE TABLE t (undefined<br> &nbsp;&nbsp;id INT PRIMARY KEY,undefined<br> &nbsp;&nbsp;name VARCHAR NOT NULL,undefined<br> &nbsp;&nbsp;price INT DEFAULT 0undefined<br> );undefined<br>undefined</code>undefined<br>undefined<br>undefined<p>Delete the Table from the Database</p>undefined<code>DROP TABLE t ;</code>undefined<br>undefined<br>undefined<p>Add a new Column to the Table</p>undefined<code>ALTER TABLE t ADD column;</code>undefined<br>undefined<br>undefined<p>Drop Column c from the Table</p>undefined<code>ALTER TABLE t DROP COLUMN c ;</code>undefined<br>undefined<br>undefined<p>Add a Constraint</p>undefined<code>ALTER TABLE t ADD constraint;</code>undefined<br>undefined<br>undefined<p>Drop a Constraint</p>undefined<code>ALTER TABLE t DROP constraint;</code>undefined<br>undefined<br>undefined<p>Rename a Table from t1 to t2</p>undefined<code>ALTER TABLE t1 RENAME TO t2;</code>undefined<br>undefined<br>undefined<p>Rename Column c1 to c2</p>undefined<code>ALTER TABLE t1 RENAME c1 TO c2 ;</code>undefined<br>undefined<br>undefined<p>Remove all Data in a Table</p>undefined<code>TRUNCATE TABLE t;</code>undefined</div>undefined</Fragment>undefined</Scrollspy>undefined</div>undefined
-    <hr>undefined<div id="json">undefined<h2>JSON Basics</h2>undefined<Scrollspy id="json-basics-list" scrollcontent={[ { name: "Example Documents" , href: "#example-10" }, { name: "Importing JSON" , href: "#import-10" }, ]}>undefined<Fragment slot="scrollspy-content">undefined<div id="example-10">undefined<h4>Example Document</h4>undefined<code> &lbrace;undefined<br> &nbsp;&nbsp;"foo"&colon; "bar", &nbsp;&nbsp;"array"&colon; [ &nbsp;&nbsp;&nbsp;&nbsp;"foo", &nbsp;&nbsp;&nbsp;&nbsp;"bar" &nbsp;&nbsp;]undefined<br> &rbrace; undefined</code>undefined<br>undefined<br>undefined<p>All JSON files are surrounded by &lbrace; and &rbrace;, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>undefined</div>undefined<div id="import-10">undefined<h4>Importing JSON</h4>undefined<table>undefined<tbody>undefined<tr>undefined<td class="border-1">JavaScript</td>undefined<td class="border-1 text-break">undefined<code class="position-static">fetch('example.json')</code>undefined</td>undefined</tr>undefined<tr>undefined<td class="border-1">Node.js</td>undefined<td class="border-1 text-break">undefined<code class="position-static">import('./example.json')</code>undefined</td>undefined</tr>undefined<tr>undefined<td class="border-1">TypeScript + Node.js</td>undefined<td class="border-1 text-break">undefined<code class="position-static">import data from 'example.json'</code>undefined</td>undefined</tr>undefined<tr>undefined<td class="border-1">Python</td>undefined<td class="border-1 text-break">undefined<code class="position-static">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code>undefined</td>undefined</tr>undefined</tbody>undefined</table>undefined</div>undefined</Fragment>undefined</Scrollspy>undefined</div>undefined
-  </main>undefined
-  <Footer author="Alex Toucan & CodingLive" />undefined
-  <BackToTop />undefined
-</div>undefined
+    <div id="html">
+      <h2> HTML Basics </h2>
+      <Scrollspy id="html-basics-list"
+        scrollcontent={[
+          { name: "Example Document", href: "#example-6" },
+          { name: "HTML Headings", href: "#head-6" },
+          { name: "HTML Paragraphs", href: "#text-6" },
+          { name: "HTML Links", href: "#links-6" },
+          { name: "HTML Images", href: "#img-6" },
+        ]}
+      >
+            <Fragment slot="scrollspy-content">
+              <div id="example-6">
+                <h4>Example Document</h4>
+                <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &nbsp;&lt;body&gt;<br>
+                &nbsp;&nbsp;&lt;h1&gt;My first Heading&lt;/h1&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;My first paragraph&lt;/p&gt;<br>
+                &nbsp;&lt;/body&gt;<br>
+                &lt;/html&gt;
+                </code><br>
+                <p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags). The <code>&lt;!DOCTYPE&gt;</code> declaration is not case sensitive. </p>
+              </div>
+              <div id="head-6">
+                <h4>HTML Headings</h4>
+                <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.
+                <code>&lt;h1&gt;</code>defines the most important heading. <code>&lt;h6&gt;</code> defines the least important heading:<br>
+                <code>&lt;h1&gt;Big&lt;/h1&gt;</code> <br>
+                <code>&lt;h6&gt;Small&lt;/h6&gt;</code> </p>
+              </div>
+              <div id="text-6">
+                <h4>HTML Paragraphs</h4>
+                <p>HTML paragraphs are defined with the &lt;p&gt; tag:<code><br>
+                &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+                &lt;p&gt;This is another paragraph.&lt;/p&gt;</code></p>
+              </div>
+              <div id="links-6">
+                <h4>HTML Links</h4>
+                <p>HTML links are defined with the &lt;a&gt; tag:<br>
+                <code>&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;</code></p>
+              </div>
+              <div id="img-6">
+                <h4>HTML Images</h4>
+                <p>HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width, and height are provided as attributes:<br>
+                <code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code></p>
+              </div> 
+            </Fragment>
+          </Scrollspy> 
+        </div>
+        <hr>
+        <div id="css">
+          <h2>CSS Basics</h2>
+          <div class="my-3">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>
+          </div>
+          <Scrollspy id="css-basics-list"
+          scrollcontent={[
+            { name: "Example Document", href: "#example-7" },
+            { name: "CSS Rulesets", href: "#rules-7" },
+            { name: "Classes", href: "#classes-7" },
+            { name: "Text Elements", href: "#text-7" },
+            { name: "Padding Elements", href: "#pad-7" },
+            { name: "Color Elements", href: "#color-7" },
+            { name: "Comments", href: "#com-7" },
+            { name: "Extra: Centering Images", href: "#eci-7" },
+          ]}
+          >
+            <Fragment slot="scrollspy-content">
+              <div id="example-7">
+                <h4>Example Document</h4>
+                <p>
+                <code>
+                h1 &lbrace;<br>
+                &nbsp;&nbsp;color&colon; black;<br>
+                &nbsp;&nbsp;text-align&colon; center;<br>
+                &nbsp;&nbsp;font-size&colon; 26px;<br>
+                &nbsp;&nbsp;font-family&colon; verdana;<br>
+                &rbrace;
+                </code>
+                </p>
+                <p><code>&lt;p style="font-size:10px"&gt;</code></p>
+                <p>To put CSS files in HTML, use:
+                <br><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
+                <p>To put CSS code in HTML, use:
+                <br>
+                <code>
+                &lt;style&gt;<br>
+                .class &lbrace;<br>
+                &rbrace;<br>
+                &lt;/style&gt;
+                </code>
+                </p>
+                </div>
+              <div id="rules-7">
+                <h4>CSS Rulesets</h4>
+                <p>
+                </p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p &lbrace; </code></div></div></div>
+                <div class="d-flex"><div class="col-4"><p>Property</p></div><div class="col"><div class="me-auto"><code class="position-static">&nbsp;&nbsp;color&colon; red; </code></div></div></div>
+                <div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">&rbrace;</code></div></div></div>  
+                <p></p>
+                <p><b>Properties</b> - With these, you can style a HTML element, like for example; color. <br>
+                <b>Property Value</b> - This chooses one of the possible options for a given property, like red for color.</p>
+                  <p>
+                You can also write CSS like <code>html&lbrace;color&colon;red;&rbrace;</code>
+                <br>
+                You can also put styles in HTML elements. <code>&lt;h1 style="font-color:white;"&gt;</code>
+                <br>
+                You can also select multiple elements at once like...
+                <br>
+                <code>
+                h1, h4, h6, h2 &lbrace;
+                &nbsp;&nbsp;color&colon; red;
+                &rbrace;</code></p>
+              </div>
+              <div id="classes-7">
+                <h4>Classes</h4>
+                <p>Think of classes like custom HTML elements, they can be applied in html like <code>&lt;p class="text-red"&gt;</code></p>
+                <p>Classes begin with a dot or period (.) to begin the selector.</p>
+                <p>
+                  <code>
+                    .text-red &lbrace;<be>
+                    &nbsp;&nbsp;color&colon; red;<be>
+                    &rbrace;
+                  </code>
+                </p>
+              </div>
+              <div id="text-7">
+                <h4>Text Elements</h4><p>
+                <code>font-size&colon; 10px;</code> - Text size, can be in pixels.<br>
+                <code>font-family&colon; verdana;</code> - Fonts<br>
+                <code>text-align&colon; center;</code> - Can align to the left side, right side, or in the center of the webpage. <br>
+                <code>text-shadow&colon; 3px black</code> - Shadow of text. It can be in pixels and colors.
+                </p>
+              </div>
+              <div id="pad-7">
+                <h4>Padding Elements</h4>
+                <p>
+                <code>padding-top&colon; 50px;</code> - Separation. It can be top, left, right, and bottom in pixels.<br>
+                <code>margin&colon; 50px;</code> - A margin. It can be in pixels.<br>
+                <code>border-width&colon; 5px;</code> - Border width. Can be thin, medium, thick, or just pixels.<br>
+                <code>border-style&colon; dotted;</code> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
+                <code>width=500px;</code> - Width of the element. It can be pixels or percentages.</p>
+              </div>
+              <div id="color-7">
+                <h4>Color Elements</h4>
+                <p><code>color&colon; red;</code> - The color of the element, can be hexadecimal, or RGB.<br>
+                <code>background-color&colon; white;</code> - Background color of the element.</p>
+              </div>
+              <div id="com-7">
+                <h4>Comments</h4>
+                <p>Comments are commonly used to explain the code and may help when you edit the source code later and are ignored by browsers.
+                <br><br>
+                A CSS comment starts with <code>/*</code> and ends with <code>*/</code>, and no changes are needed to make it multiple lines.</p>
+                <p> 
+                  <code>
+                    /* This is a single-line comment */<br><br>
+                    /* This is<br>
+                    a multi-line<br>
+                    comment */
+                  </code>
+                </p>
+              </div>
+              <div id="eci-7">
+                <h4>Extra: Centering Images</h4>
+                <p><code>img &lbrace;<br>
+                &nbsp;&nbsp;margin&colon; 0 auto;<br>
+                &nbsp;&nbsp;display&colon; block;<br>
+                &rbrace;</code></p>
+              </div>
+            </Fragment>
+          </Scrollspy>
+        </div>
+        <hr>
+        <div id="js">
+          <h2> JavaScript Basics </h2>
+          <Scrollspy id="js-basics-list"
+          scrollcontent={[
+            { name: "Including JavaScript in an HTML Page", href: "#html-8" },
+            { name: "Call an External JavaScript File", href: "#call-8" },
+            { name: "Including Comments", href: "#com-8" },
+            { name: "Variables", href: "#var-8" },
+            { name: "Data Types", href: "data-8" },
+          ]}
+          >
+            <Fragment slot="scrollspy-content">
+              <div id="html-8">
+                <h4>Including JavaScript in an HTML Page</h4>
+                <p>
+                  <code>
+                    &lt;script type="text/javascript"&gt; <br>
+                    //JS code goes here <br>
+                    &lt;/script&gt; 
+                  </code>
+                </p>
+              </div>
+              <div id="call-8">
+                <h4>Call an External JavaScript File</h4>
+                <p> <code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code></p>
+              </div>
+              <div id="com-8">
+                <h4>Including Comments</h4>
+                <p>Single line comments - <code>// Comment</code> <br>
+                Multi-line comments - <code>/* comment here */</code></p>
+              </div>
+              <div id="var-8">
+                <h4>Variables</h4>
+                <p>
+                <code>var, const, let</code><br>
+                <code>var</code> — The most common variable. It can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
+                <code>const</code> — Can not be reassigned and not accessible before they appear within the code.<br>
+                <code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
+                </p>
+              </div>
+              <div id="data-8">
+                <h4>Data Types</h4>
+                <p>
+                Numbers — <code>var age = 23</code> <br>
+                Variables — <code>var x</code><br>
+                Text (strings) — <code>var a = "init"</code><br>
+                Operations — <code>var b = 1 + 2 + 3</code><br>
+                True or false statements — <code>var c = true</code><br>
+                Constant numbers — <code>const PI = 3.14</code><br>
+                Constant numbers — <code>const PI = 3.14</code><br>
+                Objects — <code>var name = &lbrace;firstName&colon; "John", lastName&colon; "Doe"&rbrace;</code>
+                </p>
+
+                <p><b>Objects Example</b> <br>
+                  <code>
+                    var person = &lbrace;<br>
+                    &nbsp;&nbsp;firstName&colon; "John",<br>
+                    &nbsp;&nbsp;lastName&colon; "Doe",<br>
+                    &nbsp;&nbsp;age&colon; 20,<br>
+                    &nbsp;&nbsp;nationality&colon; "American"<br>
+                    &rbrace;
+                  </code>
+                </p>
+              </div>
+            </Fragment>
+          </Scrollspy>
+        </div>
+        <hr>
+        <div id="sql">
+          <h2>SQL Basics</h2>
+          <Scrollspy id="sql-basics-list"
+        scrollcontent={[
+          { name: "Querying Data from a Tablem", href: "#query-9" },
+          { name: "Modifying Data", href: "#mod-9" },
+          { name: "Table Management", href: "#table-9" },
+        ]}
+        >
+          <Fragment slot="scrollspy-content">
+            <div id="query-9">
+              <h4>Querying Data from a Table</h4>
+              <p>Query Data in Columns c1, c2 from a Table</p>
+              <code>
+              SELECT c1, c2 FROM t;<br>
+              Code language: SQL (Structured Query Language) (SQL)
+              </code><br><br>
+              <p>Query All Rows and Columns from a Table</p>
+              <code>SELECT * FROM t;</code><br><br>
+              <p>Query Data and Filter Rows with a Condition</p>
+              <code>
+              SELECT c1, c2 FROM t<br>
+              WHERE condition;
+              </code><br><br>
+              <p>Query Distinct Rows from a Table</p>
+              <code>
+              SELECT DISTINCT c1 FROM t<br>
+              WHERE condition;
+              </code><br><br>
+              <p>Sort the Result Set in Ascending or Descending Order</p>
+              <code>
+              SELECT c1, c2 FROM t<br>
+              ORDER BY c1 ASC [DESC];
+              </code><br><br>
+              <p>Skip Offset of Rows and Return the Next n Rows</p>
+              <code>
+              SELECT c1, c2 FROM t<br>
+              ORDER BY c1<br>
+              LIMIT n OFFSET offset;
+              </code><br><br>
+              <p>Group Rows using an Aggregate Function</p>
+              <code>
+              SELECT c1, aggregate(c2)<br>
+              FROM t<br>
+              GROUP BY c1;
+              </code><br><br>
+              <p>Filter Groups using <b>Having</b> Clause</p>
+              <code>
+              SELECT c1, aggregate(c2)<br>
+              FROM t<br>
+              GROUP BY c1<br>
+              HAVING condition;
+              </code><br><br>
+            </div>
+            <div id="mod-9">
+              <h4>Modifying Data</h4>
+              <p>Insert One Row into a Table</p>
+              <code>
+              INSERT INTO t(column_list)<br>
+              VALUES(value_list);
+              </code><br><br>
+              <p>Insert Multiple Rows into a Table</p>
+              <code>
+              INSERT INTO t(column_list)<br>
+              VALUES (value_list), <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(value_list), …;
+              </code><br><br>
+              <p>Insert Rows from t2 into t1</p>
+              <code>
+              INSERT INTO t1(column_list)<br>
+              SELECT column_list<br>
+              FROM t2;
+              </code><br><br>
+              <p>Update New Value in the Column c1 for All Rows</p>
+              <code>
+              UPDATE t<br>
+              SET c1 = new_value;
+              </code><br><br>
+              <p>Update Values in the Column c1, c2 that Match the Condition</p>
+              <code>
+              UPDATE t
+              SET c1 = new_value, <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;c2 = new_value<br>
+              WHERE condition;
+              </code><br><br>
+              <p>Delete All Data in a Table</p>
+              <code>DELETE FROM t;</code>
+              <p>Delete Subset of Rows in a Table</p>
+              <code>
+              DELETE FROM t<br>
+              WHERE condition;
+              </code><br><br>
+            </div>
+            <div id="table-9">
+              <h4>Table Management</h4>
+              <p>Create a new Table with Three Columns</p>
+              <code>
+              CREATE TABLE t (<br>
+              &nbsp;&nbsp;id INT PRIMARY KEY,<br>
+              &nbsp;&nbsp;name VARCHAR NOT NULL,<br>
+              &nbsp;&nbsp;price INT DEFAULT 0<br>
+              );<br>
+              </code><br><br>
+              <p>Delete the Table from the Database</p>
+              <code>DROP TABLE t ;</code><br><br>
+              <p>Add a new Column to the Table</p>
+              <code>ALTER TABLE t ADD column;</code><br><br>
+              <p>Drop Column c from the Table</p>
+              <code>ALTER TABLE t DROP COLUMN c ;</code><br><br>
+              <p>Add a Constraint</p>
+              <code>ALTER TABLE t ADD constraint;</code><br><br>
+              <p>Drop a Constraint</p>
+              <code>ALTER TABLE t DROP constraint;</code><br><br>
+              <p>Rename a Table from t1 to t2</p>
+              <code>ALTER TABLE t1 RENAME TO t2;</code><br><br>
+              <p>Rename Column c1 to c2</p>
+              <code>ALTER TABLE t1 RENAME c1 TO c2 ;</code><br><br>
+              <p>Remove all Data in a Table</p>
+              <code>TRUNCATE TABLE t;</code>
+            </div>
+          </Fragment>
+        </Scrollspy>
+      </div>
+      <hr>
+      <div id="json">
+        <h2>JSON Basics</h2>
+        <Scrollspy id="json-basics-list"
+          scrollcontent={[
+            { name: "Example Documents", href: "#example-10" },
+            { name: "Importing JSON", href: "#import-10" },
+          ]}
+        >
+          <Fragment slot="scrollspy-content">
+            <div id="example-10">
+              <h4>Example Document</h4>
+              <code>
+              &lbrace;<br>
+              &nbsp;&nbsp;"foo"&colon; "bar",<br>
+              &nbsp;&nbsp;"array"&colon; [<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;"foo",<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;"bar"<br>
+              &nbsp;&nbsp;]<br>
+              &rbrace;
+              </code><br><br>
+              <p>All JSON files are surrounded by &lbrace; and &rbrace;, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
+            </div>
+            <div id="import-10">
+              <h4>Importing JSON</h4>
+              <table class="mb-1">
+                <tbody>
+                <tr>
+                  <td class="border-1">JavaScript</td>
+                  <td class="border-1 text-break"><code class="position-static">fetch('example.json')</code></td>
+                </tr>
+                <tr>
+                  <td class="border-1">Node.js</td>
+                  <td class="border-1 text-break"><code class="position-static">import('./example.json')</code></td>
+                </tr>
+                <tr>
+                  <td class="border-1">TypeScript + Node.js</td>
+                  <td class="border-1 text-break"><code class="position-static">import data from 'example.json'</code></td>
+                </tr>
+                <tr>
+                  <td class="border-1">Python</td>
+                  <td class="border-1 text-break"><code class="position-static">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </Fragment>
+        </Scrollspy>
+      </div>
+  </main>
+  <Footer author="Alex Toucan & CodingLive" />
+  <BackToTop />
+</div>
 <Scripts accordion="true" />
