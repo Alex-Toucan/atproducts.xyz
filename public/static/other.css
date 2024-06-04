@@ -228,3 +228,187 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   padding-right: 0;
   text-align: center;
 }
+
+.dropdown-menu {
+  animation-duration: 0.3s;
+  -webkit-animation-duration: 0.3s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+@keyframes pageslideIn {
+  0% {
+    transform: translateY(3.5rem);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(3.5rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pageslideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+
+  100% {
+    -webkit-opacity: 1;
+  }
+
+  0% {
+    -webkit-transform: translateY(3.5rem);
+    -webkit-opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes slideIn {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slideIn {
+    0% {
+      -webkit-transform: translateY(0);
+      opacity: 1;
+    }
+
+    100% {
+      -webkit-transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pageslideIn {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes pageslideIn {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.dropdown-menu {
+  -webkit-animation-name: pageslideIn;
+  animation-name: pageslideIn;
+}
+
+.navbar .dropdown-menu {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:focus + .btn,
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active,
+.btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active {
+  z-index: 1;
+}
+
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.btn-toolbar .input-group {
+  width: auto;
+}
+
+.btn-group {
+  border-radius: var(--bs-border-radius);
+}
+.btn-group > :not(.btn-check:first-child) + .btn,
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: calc(var(--bs-border-width) * -1);
+}
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn.dropdown-toggle-split:first-child,
+.btn-group > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn:nth-child(n+3),
+.btn-group > :not(.btn-check) + .btn,
+.btn-group > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
