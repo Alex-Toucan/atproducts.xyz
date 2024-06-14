@@ -30,17 +30,17 @@ const {
               <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} />
             )}
             {title && (
-            <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
+              <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
             )}
           </div>
-          <p class="fs-4 m-3 text-body-secondary">{description}</p>
+          <p class="fs-4 m-3 text-body-secondary" set:html={description}></p>
           <div class="mx-auto justify-content-between container" id="links">
             <div class="d-md-flex d-grid gap-2">
               {errorButton && (
                 <Fragment set:html={errorButton} />
               )}
               {primaryHref && primaryText && (
-              <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
+                <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
               )}
               {secondaryHref && secondaryText && (
                 <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
