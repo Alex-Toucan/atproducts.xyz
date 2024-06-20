@@ -17761,7 +17761,8 @@ html.fixedtopnavimage {
 }
 
 [data-bs-theme=dark] img.footerimg, 
-[data-bs-theme=dark] img.headerimg {
+[data-bs-theme=dark] img.headerimg,
+[data-bs-theme=dark] img.popover-image {
    filter: invert(1);
 }
 
