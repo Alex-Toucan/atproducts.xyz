@@ -6512,7 +6512,7 @@ textarea.form-control-lg {
   background-clip: padding-box;
   border: var(--bs-popover-border-width) solid var(--bs-popover-border-color);
   border-radius: var(--bs-popover-border-radius);
-  box-shadow: var(--bs-box-shadow-lg)!important; /* CUSTOM */
+  box-shadow: var(--bs-box-shadow-lg); /* CUSTOM */
 }
 .popover .popover-arrow {
   display: block;
@@ -17955,6 +17955,11 @@ height: calc(100vh - 448px);
 .glow-text {
   color: gold;
   text-shadow: gold 1px 0 10px;
+}
+
+.text-decoration-dashed {
+  border-bottom: 1px dotted !important;
+  text-decoration: none !important;
 }
 
 
