@@ -5,7 +5,7 @@ var purecookieDesc = "By using this website, you automatically accept that we us
 
 var currentPath = window.location.pathname;
 var purecookieLink = '';
-if (currentPath === '/privacy') {
+if (currentPath === 'privacy') {
     purecookieLink = 'View this page to learn more';
 } else {
     purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookie policy link
