@@ -1527,23 +1527,23 @@ import BackToTop from '../components/BackToTop.astro';
             </div>
             <div id="import-10">
               <h4>Importing JSON</h4>
-              <table class="mb-1">
+              <table class="table mb-1">
                 <tbody>
                 <tr>
-                  <td class="border-1">JavaScript</td>
-                  <td class="border-1 text-break"><code class="position-static">fetch('example.json')</code></td>
+                  <th scope="row">JavaScript</th>
+                  <td class="text-break"><code class="position-static">fetch('example.json')</code></td>
                 </tr>
                 <tr>
-                  <td class="border-1">Node.js</td>
-                  <td class="border-1 text-break"><code class="position-static">import('./example.json')</code></td>
+                  <th scope="row">Node.js</th>
+                  <td class="text-break"><code class="position-static">import('./example.json')</code></td>
                 </tr>
                 <tr>
-                  <td class="border-1">TypeScript + Node.js</td>
-                  <td class="border-1 text-break"><code class="position-static">import data from 'example.json'</code></td>
+                  <th scope="row">TypeScript + Node.js</th>
+                  <td class="text-break"><code class="position-static">import data from 'example.json'</code></td>
                 </tr>
                 <tr>
-                  <td class="border-1">Python</td>
-                  <td class="border-1 text-break"><code class="position-static">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></td>
+                  <th scope="row">Python</th>
+                  <td class="text-break"><code class="position-static">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></td>
                 </tr>
                 </tbody>
               </table>
