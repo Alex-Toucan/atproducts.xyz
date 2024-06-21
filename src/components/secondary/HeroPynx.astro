@@ -28,31 +28,31 @@ const {
             {secondaryHref && secondaryText && (
               <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
             )}
-{dropdownItems && (
-  <div class="dropdown col-md">
-    <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
-      Navigation
-    </button>
-    <ul class="dropdown-menu w-100 white-space-normal">
-      {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
-        <li key={index}>
-          <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
+            {dropdownItems && (
+              <div class="dropdown col-md">
+                <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
+                  Navigation
+                </button>
+                <ul class="dropdown-menu w-100 white-space-normal">
+                  {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
+                    <li>
+                      <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
           <hr class="mx-mmd-4 opacity-75">
-<div class="d-md-flex mt-3 justify-content-between container" id="links">
-<h2 class="me-md-auto text-centertostart mb-0">Contact Us</h2>
-           <br class="disbr">
-<div class="d-flex justify-content-center gap-3">
-  <a href="https://www.2983u2.site/misc/resource/contact.html" aria-label="Pynx Technologies" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Pynx Technologies"><i class="bi bi-globe"></i></a>
-  <a href="https://www.instagram.com/fisted.mp3" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram"><i class="bi bi-instagram"></i></a>
-  <a href="mailto:support@atproducts.xyz" aria-label="Our Support Email" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Our Support Email"><i class="bi bi-envelope-fill"></i></a>  
-</div></div>
-
+          <div class="d-md-flex mt-3 justify-content-between container" id="links">
+            <h2 class="me-md-auto text-centertostart mb-0">Contact Us</h2>
+            <br class="disbr">
+            <div class="d-flex justify-content-center gap-3">
+              <a href="https://www.2983u2.site/misc/resource/contact.html" aria-label="Pynx Technologies" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Pynx Technologies"><i class="bi bi-globe"></i></a>
+              <a href="https://www.instagram.com/fisted.mp3" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="mailto:support@atproducts.xyz" aria-label="Our Support Email" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Our Support Email"><i class="bi bi-envelope-fill"></i></a>  
+            </div>
+          </div>
         </div>
       </div>
     </div>
