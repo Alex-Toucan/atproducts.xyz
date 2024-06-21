@@ -43,7 +43,7 @@ function eraseCookie(name) {
 
 $(document).ready(function() {
   if (!getCookie('purecookieDismiss')) {
-    $('div#page').append('<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><span>' + purecookieIcon + '' + purecookieTitle + '</span></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><button onClick="purecookieDismiss();">' + purecookieButton + '</button></div></div>');
+    $('div#page').append('<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="h4">' + purecookieIcon + '' + purecookieTitle + '</div><div class="my-3"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><button class="btn btn-secondary" onclick="purecookieDismiss();">Understood</button></div>');
     pureFadeIn("cookieConsentContainer");
   }
 });
