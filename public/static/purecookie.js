@@ -3,7 +3,6 @@ var purecookieTitle = "Cookies."; // Title
 var purecookieIcon = '<i class="bi bi-cookie me-2"></i>' // Cookie icon
 var purecookieDesc = "By using this website, you automatically accept that we use cookies."; // Description
 var purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookie policy link
-
 var purecookieButton = "Understood"; // Button text
 // ---        --- //
 
