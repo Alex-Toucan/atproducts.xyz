@@ -5,6 +5,7 @@ var pureAlert1Icon = 'bi-plus-lg'; // Icon
 var pureAlert1Desc = "We have updated the Department of Beta Testing site to be more modernized with Bootstrap 5 and Astro!"; // Description
 var pureAlert1Link = 'https://beta-testing.atproducts.xyz'; // Link
 var pureAlert1LinkDesc = 'View now'; // Link text
+var pureAlert1Enabled = true; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert1Cookie(name, value, days) {
@@ -32,9 +33,8 @@ function eraseAlert1Cookie(name) {
     document.cookie = name + '=; Max-Age=-99999999;';
 }
 
-/* Comment this section if there is no alert loaded */
 $(document).ready(function () {
-    if (window.location.pathname.indexOf("/cctv") === -1 && !getAlert1Cookie('pureAlert1Dismiss')) {
+    if (pureAlert1Enabled && window.location.pathname.indexOf("/cctv") === -1 && !getAlert1Cookie('pureAlert1Dismiss')) {
         var header = $('header');
         var alert1Container = $('<div class="alert-container"></div>');
         alert1Container.html('<div class="alert ' + pureAlert1Type + ' alert-dismissible fade show mb-0 d-flex gap-2" role="alert"> <i class="bi ' + pureAlert1Icon + ' h-100"></i><div><strong>' + pureAlert1Title + '</strong> ' + pureAlert1Desc + ' <a class="icon-link icon-link-hover" href="' + pureAlert1Link + '">' + pureAlert1LinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlert1Dismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>');
