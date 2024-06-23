@@ -12,8 +12,9 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-{ bulletinImage: "21803-1-052924.webp" },
-{ bulletinImage: "21803-2-052924.webp" },
+  { bulletinImage: "219-1-071024.webp" },
+  { bulletinImage: "219-2-071024.webp" },
+  { bulletinImage: "219-3-071024.webp" },
 ]} />
 <div id="page">
   <Navbar />
@@ -44,10 +45,13 @@ bulletin={[
     <div class="pt-xmd-2 px-xmd-2">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
-          <img src="/media/slideshow/21803-1-052924.webp" class="d-block w-100" alt="2.18.0.3 Release Slide 1">
+          <img src="/media/slideshow/219-1-071024.webp" class="d-block w-100" alt="2.19 Release Slide 1">
         </div>
         <div class="carousel-item" data-bs-interval="10000">
-          <img src="/media/slideshow/21803-2-052924.webp" class="d-block w-100" alt="2.18.0.3 Release Slide 2">
+          <img src="/media/slideshow/219-2-071024.webp" class="d-block w-100" alt="2.19 Release Slide 2">
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="/media/slideshow/219-3-071024.webp" class="d-block w-100" alt="2.19 Release Slide 3">
         </div>
       </div>
       <div class="mediarow py-2" aria-label="Carousel-A Controls">
@@ -57,7 +61,8 @@ bulletin={[
         </button>
         <div class="carousel-indicators col-7 col-sm-5 text-center">
           <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
-          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
+          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>.
+          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
         </div>
         <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -73,7 +78,7 @@ bulletin={[
         <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-hero"></i></label>
       </div>
       <div class="col px-2 my-auto">
-        <a href="/media/pdf/2.18.0.3 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-hero" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
+        <a href="/media/pdf/2.19 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-hero" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
       </div>
       </div>
   </div>
@@ -306,25 +311,34 @@ bulletin={[
     <div id="what-new">
       <h2> What's New? </h2>
       <p>
-        <b> Released on:</b> May 29th, 2024.<br>
-        <b>ATP Database:</b> 2.18.0.3
+        <b> Released on:</b> July 10th, 2024.<br>
+        <b>ATP Database:</b> 2.19
       </p>
       <b>Added</b>
       <ul>
-        <li>You guessed it! Added more resources to CodingHome! (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/198" target="_blank" rel="noopener noreferrer">#208</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/212" target="_blank" rel="noopener noreferrer">#212</a>)</li>
+        <li>Added in the history section in the Index page, new popovers showing old/current logos on certain text referring to those logos. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/218" target="_blank" rel="noopener noreferrer">(#218)</a></li>
+        <li>Added more resources to CodingHome. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/214" target="_blank" rel="noopener noreferrer">#214</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/216" target="_blank" rel="noopener noreferrer">#216</a>)</li>
+        <li>Added a new "Hard Time III" entry to MDickie Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/216" target="_blank" rel="noopener noreferrer">(#216)</a></li>
       </ul>
       <b>Changed</b>
       <ul>
-        <li>Updated Astro from v4.8.4 to v4.9.2. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/213" target="_blank" rel="noopener noreferrer">(#213)</a></li>
-        <li>Updated @astrojs/react from v3.3.4 to v3.4.0. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/213" target="_blank" rel="noopener noreferrer">(#213)</a></li>
+        <li>Redesigned the cookie menu. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/218" target="_blank" rel="noopener noreferrer">(#218)</a></li>
+        <li>Patched IDA's link and up-to-date name. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pul1l/214" target="_blank" rel="noopener noreferrer">(#214)</a></li>
+        <li>Made The Script Community more up to date. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/214" target="_blank" rel="noopener noreferrer">(#214)</a></li>
+        <li>Changed the table in the SQL Basics in CodingHome to a Bootstrap table. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/218" target="_blank" rel="noopener noreferrer">(#218)</a></li>
+        <li>Overhauled all scrollspies' padding. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/214" target="_blank" rel="noopener noreferrer">(#214)</a></li>
+        <li>Updated Astro from v4.9.2 to v4.10.3. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/216" target="_blank" rel="noopener noreferrer">#216</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/217" target="_blank" rel="noopener noreferrer">#217</a>)</li>
+        <li>Updated @astrojs/react from v3.4.0 to v3.6.0. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/217" target="_blank" rel="noopener noreferrer">(#217)</a></li>
       </ul>
       <b>Removed</b>
       <ul>
-        <li>Removed unnecessary border-radius in MDickie Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/213" target="_blank" rel="noopener noreferrer">(#213)</a></li>
+        <li>Removed the disclaimer from MDickie Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/217" target="_blank" rel="noopener noreferrer">(#217)</a></li>
       </ul>
       <b>Bug Fixes</b>
       <ul>
-        <li>Fixed margin-top issues for both Web Projects and Pynx's Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/207" target="_blank" rel="noopener noreferrer">(#207)</a></li>
+        <li>Fixed a bug where links did not download upon request from MDickie Projects. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/217" target="_blank" rel="noopener noreferrer">(#217)</a></li>
+        <li>Fixed a bug that prevented the JavaScript Basics section from loading in The Script Community. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/214" target="_blank" rel="noopener noreferrer">(#214)</a></li>
+        <li>Fixed a rendering issue with the backup version of CodingHome at the bottom half of the page. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/215" target="_blank" rel="noopener noreferrer">(#215)</a></li>
       </ul>
     </div>
   </main>
