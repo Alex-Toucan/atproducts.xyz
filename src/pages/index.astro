@@ -12,8 +12,6 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-{ bulletinImage: "PORTFOLIO.webp" },
-{ bulletinImage: "BETATESTING.webp" },
 { bulletinImage: "21803-1-052924.webp" },
 { bulletinImage: "21803-2-052924.webp" },
 ]} />
@@ -46,16 +44,6 @@ bulletin={[
     <div class="pt-xmd-2 px-xmd-2">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
-          <a href="https://other.atproducts.xyz/portfolio/">
-            <img src="/media/slideshow/PORTFOLIO.webp" class="d-block w-100" alt="New founder portfolio!">
-          </a>
-        </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <a href="https://beta-testing.atproducts.xyz">
-            <img src="/media/slideshow/BETATESTING.webp" class="d-block w-100" alt="Beta Testing Department Site now Open!">
-          </a>
-        </div>
-        <div class="carousel-item" data-bs-interval="10000">
           <img src="/media/slideshow/21803-1-052924.webp" class="d-block w-100" alt="2.18.0.3 Release Slide 1">
         </div>
         <div class="carousel-item" data-bs-interval="10000">
@@ -70,8 +58,6 @@ bulletin={[
         <div class="carousel-indicators col-7 col-sm-5 text-center">
           <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
           <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
-          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
-          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
         </div>
         <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -98,11 +84,12 @@ bulletin={[
       <p> AT Products LLC, otherwise known as AT Products (officially recognized pronunciation: "A.T Products") is an informative technology company that is based in the United States, that contains resources for cybersecurity and malware. Our products are for the public to use anytime. </p>
       <p> Our current products are Flash Documentation, MDickie Projects, and SMS Bomb. </p>
       <p> The "AT" in AT Products does stand for Alex Toucan. </p>
-      <p> Here are some links that lead to departments/projects:</p>
-      <ul>
-        <li><a href="https://beta-testing.atproducts.xyz/">Department of Beta Testing</a></li>
-        <li><a href="https://other.atproducts.xyz/portfolio">Alex Toucan's Portfolio</a></li>
-      </ul>
+      <p> Here are some links that lead to departments/projects:
+        <ul>
+          <li><a href="https://beta-testing.atproducts.xyz/">Department of Beta Testing</a></li>
+          <li><a href="https://other.atproducts.xyz/portfolio">Alex Toucan's Portfolio</a></li>
+        </ul>
+      </p>
     </div>
     <hr>
     <div id="products">
