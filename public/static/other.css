@@ -229,6 +229,10 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   text-align: center;
 }
 
+.modal, .modal-open, .modal-open .navbar {
+  padding-right: 0 !important;
+}
+
 .dropdown-item {
   border-radius: var(--bs-border-radius-sm);
 }
