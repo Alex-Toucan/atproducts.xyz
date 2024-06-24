@@ -695,6 +695,16 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   font-size: 6.25rem !important;
 }
 
+.my-433 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.my-466 {
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
 @media (max-width: 576px) {
   .float-ssm-start {
     float: left !important;
