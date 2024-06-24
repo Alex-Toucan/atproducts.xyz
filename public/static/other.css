@@ -69,29 +69,29 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 }
 
 @media (min-width: 645.98px) {
-  .container-sm, .container {
+  .container-xsm, .container-sm, .container {
     max-width: 540px;
     margin-right: auto;
     margin-left: auto;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container {
+  .container-md, .container-sm, .container-xsm, .container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
+  .container-lg, .container-md, .container-sm, .container-xsm, .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xl, .container-lg, .container-md, .container-sm, .container-xsm, .container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container-xsm, .container {
     max-width: 1320px;
   }
 }
@@ -536,3 +536,51 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
 }
+
+.carousel-main {	
+    background-color: black;	
+    width: 100%;		
+ }	
+ @media (min-width:645.98px) {	
+    .carousel-main {	
+          width: 90%;
+          border-radius: var(--bs-border-radius) !important;
+    }	
+ }	
+ @media (min-width:767.98px) {	
+    .carousel-main {	
+       width: 70%;	
+    }	
+ }	
+ @media (min-width:1024px) {	
+    .carousel-main {	
+       width: 50%;	
+    }	
+ }
+ @media (min-width:1440px) {	
+    .carousel-main {	
+       width: 40%;	
+    }	
+ }	
+ @media (min-width:2000px) {	
+    .carousel-main {	
+       width: 30%;	
+    }	
+ }	
+ 
+ .carousel-main .carousel-control-prev, .carousel-main .carousel-control-next {
+   position: static !important;
+ }
+ 
+ .carousel-main .carousel-indicators {
+   display: block !important;
+   position: static !important;
+   margin-left: 0 !important;
+   margin-bottom: 0 !important;
+   margin-right: 0 !important;
+ }
+ 
+ .carousel-products .carousel-control-prev,
+ .carousel-products .carousel-control-next {
+     position: initial;
+ }
