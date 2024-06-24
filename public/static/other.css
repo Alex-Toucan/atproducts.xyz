@@ -9,7 +9,7 @@ html, body {
 .hero {
     width: 100%;
     position: relative;
-    z-index: 1046;
+    z-index: 0;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;   
