@@ -537,6 +537,10 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   background-color: var(--bs-card-cap-bg);
 }
 
+.popover {
+    box-shadow: var(--bs-box-shadow-lg);
+}
+
 .carousel-main {	
     background-color: black;	
     width: 100%;		

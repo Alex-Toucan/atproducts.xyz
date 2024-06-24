@@ -4642,9 +4642,9 @@ textarea.form-control-lg {
   box-shadow: var(--bs-accordion-btn-focus-box-shadow);
 }
 
-.accordion-header {	
-	margin-bottom: 0;
-}	
+.accordion-header {
+  margin-bottom: 0;
+}
 
 .accordion-item {
   color: var(--bs-accordion-color);
@@ -4708,9 +4708,9 @@ textarea.form-control-lg {
   --bs-breadcrumb-margin-bottom: 1rem;
   --bs-breadcrumb-bg: ;
   --bs-breadcrumb-border-radius: ;
-  --bs-breadcrumb-divider-color: var(--bs-breadcrumb-secondary-color);
+  --bs-breadcrumb-divider-color: var(--bs-secondary-color);
   --bs-breadcrumb-item-padding-x: 0.5rem;
-  --bs-breadcrumb-item-active-color: var(--bs-breadcrumb-secondary-color);
+  --bs-breadcrumb-item-active-color: var(--bs-secondary-color);
   display: flex;
   flex-wrap: wrap;
   padding: var(--bs-breadcrumb-padding-y) var(--bs-breadcrumb-padding-x);
@@ -5470,7 +5470,7 @@ textarea.form-control-lg {
 }
 
 .modal {
-  --bs-modal-zindex: 10005;
+  --bs-modal-zindex: 1055;
   --bs-modal-width: 500px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
@@ -5501,10 +5501,6 @@ textarea.form-control-lg {
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
-}
-
-.modal, .modal-open, .modal-open .navbar {
-  padding-right: 0 !important;
 }
 
 .modal-dialog {
@@ -5765,7 +5761,7 @@ textarea.form-control-lg {
   }
 }
 .tooltip {
-  --bs-tooltip-zindex: 1049;
+  --bs-tooltip-zindex: 1080;
   --bs-tooltip-max-width: 200px;
   --bs-tooltip-padding-x: 0.5rem;
   --bs-tooltip-padding-y: 0.25rem;
@@ -5814,7 +5810,7 @@ textarea.form-control-lg {
 }
 
 .bs-tooltip-top .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow {
-  bottom: calc(-1 * var(--bs-tooltip-arrow-height));;
+  bottom: calc(-1 * var(--bs-tooltip-arrow-height));
 }
 .bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
   top: -1px;
@@ -5824,7 +5820,7 @@ textarea.form-control-lg {
 
 /* rtl:begin:ignore */
 .bs-tooltip-end .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow {
-  left: calc(-1 * var(--bs-tooltip-arrow-height));;
+  left: calc(-1 * var(--bs-tooltip-arrow-height));
   width: var(--bs-tooltip-arrow-height);
   height: var(--bs-tooltip-arrow-width);
 }
@@ -5836,7 +5832,7 @@ textarea.form-control-lg {
 
 /* rtl:end:ignore */
 .bs-tooltip-bottom .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow {
-  top: calc(-1 * var(--bs-tooltip-arrow-height));;
+  top: calc(-1 * var(--bs-tooltip-arrow-height));
 }
 .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
   bottom: -1px;
@@ -5846,7 +5842,7 @@ textarea.form-control-lg {
 
 /* rtl:begin:ignore */
 .bs-tooltip-start .tooltip-arrow, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow {
-  right: calc(-1 * var(--bs-tooltip-arrow-height));;
+  right: calc(-1 * var(--bs-tooltip-arrow-height));
   width: var(--bs-tooltip-arrow-height);
   height: var(--bs-tooltip-arrow-width);
 }
@@ -5867,7 +5863,7 @@ textarea.form-control-lg {
 }
 
 .popover {
-  --bs-popover-zindex: 1049;
+  --bs-popover-zindex: 1070;
   --bs-popover-max-width: 276px;
   --bs-popover-font-size: 0.875rem;
   --bs-popover-bg: var(--bs-body-bg);
@@ -5910,7 +5906,6 @@ textarea.form-control-lg {
   background-clip: padding-box;
   border: var(--bs-popover-border-width) solid var(--bs-popover-border-color);
   border-radius: var(--bs-popover-border-radius);
-  box-shadow: var(--bs-box-shadow-lg); /* CUSTOM */
 }
 .popover .popover-arrow {
   display: block;
@@ -6230,7 +6225,6 @@ textarea.form-control-lg {
   color: #000;
 }
 
-/* Removed content
 [data-bs-theme=dark] .carousel .carousel-control-prev-icon,
 [data-bs-theme=dark] .carousel .carousel-control-next-icon, [data-bs-theme=dark].carousel .carousel-control-prev-icon,
 [data-bs-theme=dark].carousel .carousel-control-next-icon {
@@ -6242,57 +6236,6 @@ textarea.form-control-lg {
 [data-bs-theme=dark] .carousel .carousel-caption, [data-bs-theme=dark].carousel .carousel-caption {
   color: #000;
 }
-*/
-
-/* Custom carousel settings */	
-.carousel-main {	
-   background-color: black;	
-   width: 100%;		
-}	
-@media (min-width:645.98px) {	
-   .carousel-main {	
-		 width: 90%;
-		 border-radius: var(--bs-border-radius) !important;
-   }	
-}	
-@media (min-width:767.98px) {	
-   .carousel-main {	
-      width: 70%;	
-   }	
-}	
-@media (min-width:1024px) {	
-   .carousel-main {	
-      width: 50%;	
-   }	
-}
-@media (min-width:1440px) {	
-   .carousel-main {	
-      width: 40%;	
-   }	
-}	
-@media (min-width:2000px) {	
-   .carousel-main {	
-      width: 30%;	
-   }	
-}	
-
-.carousel-main .carousel-control-prev, .carousel-main .carousel-control-next {
-  position: static !important;
-}
-
-.carousel-main .carousel-indicators {
-  display: block !important;
-  position: static !important;
-  margin-left: 0 !important;
-  margin-bottom: 0 !important;
-  margin-right: 0 !important;
-}
-
-.carousel-products .carousel-control-prev,
-.carousel-products .carousel-control-next {
-	position: initial;
-}
-/* End custom carousel settings */
 
 .spinner-grow,
 .spinner-border {
