@@ -5749,3 +5749,19 @@ height: calc(100vh - 448px);
   border-bottom: 1px dotted !important;
   text-decoration: none !important;
 }
+
+.start-25 {
+  left: 25% !important;
+}
+
+.start-33 {
+  left: 33.3333333% !important;
+}
+
+.start-66 {
+  left: 66.6666667% !important;
+}
+
+.start-75 {
+  left: 75% !important;
+}
