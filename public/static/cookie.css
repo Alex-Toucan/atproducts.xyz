@@ -1,12 +1,12 @@
 .cookieConsentContainer {
-	z-index: 1050;
+	z-index: 9999;
 	width: 350px;
 	min-height: 20px;
 	box-sizing: border-box;
 	padding: 30px 30px 30px 30px;
 	overflow: hidden;
 	position: fixed;
-  bottom: 30px;
+  	bottom: 30px;
 	left: 30px;
 	display: none;
 }
