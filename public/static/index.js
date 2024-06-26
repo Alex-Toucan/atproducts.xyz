@@ -42,7 +42,10 @@ function cycleTabs() {
         const activeContent = tabContent[currentTab];
 
         activeTab.classList.remove('active');
-        activeContent.classList.remove('active', 'show');
+        activeContent.classList.remove('show');
+        setTimeout(() => {
+            activeContent.classList.remove('active');
+        }, 500);
 
         currentTab = (currentTab + 1) % tabs.length;
 
@@ -50,7 +53,10 @@ function cycleTabs() {
         const nextContent = tabContent[currentTab];
 
         nextTab.classList.add('active');
-        nextContent.classList.add('active', 'show');
+        nextContent.classList.add('active');
+        setTimeout(() => {
+            nextContent.classList.add('show');
+        }, 20);
     }
 }
 
