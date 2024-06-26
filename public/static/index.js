@@ -29,62 +29,6 @@ $(function () {
     };
 });
 
-// Product tab cycle
-let currentTab = 0;
-const tabs = document.querySelectorAll('#products-tab button');
-const tabContent = document.querySelectorAll('.tab-pane');
-let userClicked = false;
-let cycleInterval;
-
-function cycleTabs() {
-    if (!userClicked) {
-        const activeTab = tabs[currentTab];
-        const activeContent = tabContent[currentTab];
-
-        activeTab.classList.remove('active');
-        activeContent.classList.remove('show');
-        setTimeout(() => {
-            activeContent.classList.remove('active');
-        }, 500);
-
-        currentTab = (currentTab + 1) % tabs.length;
-
-        const nextTab = tabs[currentTab];
-        const nextContent = tabContent[currentTab];
-
-        nextTab.classList.add('active');
-        nextContent.classList.add('active');
-        setTimeout(() => {
-            nextContent.classList.add('show');
-        }, 20);
-    }
-}
-
-function startCycling() {
-    clearInterval(cycleInterval);
-    cycleInterval = setInterval(cycleTabs, 10000);
-}
-
-function userInteractionHandler(index) {
-    clearInterval(cycleInterval);
-    currentTab = index;
-    userClicked = true;
-    setTimeout(() => {
-        userClicked = false;
-        startCycling();
-    }, 30000);
-}
-
-tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => userInteractionHandler(index));
-});
-
-tabContent.forEach((content, index) => {
-    content.addEventListener('click', () => userInteractionHandler(index));
-});
-
-startCycling();
-
 // History tabs
 $(document).ready(function() {
     // Initialize the active button and set btn-primary for past years
