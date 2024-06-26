@@ -38,13 +38,19 @@ let cycleInterval;
 
 function cycleTabs() {
     if (!userClicked) {
-        tabs[currentTab].classList.remove('active');
-        tabContent[currentTab].classList.remove('active', 'show');
+        const activeTab = tabs[currentTab];
+        const activeContent = tabContent[currentTab];
+
+        activeTab.classList.remove('active');
+        activeContent.classList.remove('active', 'show');
 
         currentTab = (currentTab + 1) % tabs.length;
 
-        tabs[currentTab].classList.add('active');
-        tabContent[currentTab].classList.add('active', 'show');
+        const nextTab = tabs[currentTab];
+        const nextContent = tabContent[currentTab];
+
+        nextTab.classList.add('active');
+        nextContent.classList.add('active', 'show');
     }
 }
 
