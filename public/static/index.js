@@ -1,9 +1,11 @@
+// Carousel play/pause
 var playButton = document.querySelector(".playButton");
 var pauseButton = document.querySelector(".pauseButton");
 var nextButton = document.querySelector(".carousel-control-next");
 var previousButton = document.querySelector(".carousel-control-prev");
 var carouselMain = document.querySelector(".carousel-main");
 var slidebtn = document.querySelectorAll(".slidebtn");
+
 $(function () {
     $(carouselMain).carousel({
         pause: "false",
@@ -27,6 +29,40 @@ $(function () {
     };
 });
 
+// Product tab cycle
+let currentTab = 0;
+const tabs = document.querySelectorAll('#products-tab button');
+const tabContent = document.querySelectorAll('.tab-pane');
+
+function cycleTabs() {
+    tabs[currentTab].classList.remove('active');
+    tabContent[currentTab].classList.remove('active', 'show');
+
+    currentTab = (currentTab + 1) % tabs.length;
+
+    tabs[currentTab].classList.add('active');
+    tabContent[currentTab].classList.add('active', 'show');
+}
+
+let cycleInterval = setInterval(cycleTabs, 30000);
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        clearInterval(cycleInterval);
+        currentTab = index;
+        cycleInterval = setInterval(cycleTabs, 30000);
+    });
+});
+
+tabContent.forEach((content, index) => {
+    content.addEventListener('click', () => {
+        clearInterval(cycleInterval);
+        currentTab = index;
+        cycleInterval = setInterval(cycleTabs, 30000);
+    });
+});
+
+// History tabs
 $(document).ready(function() {
     // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
