@@ -33,34 +33,45 @@ $(function () {
 let currentTab = 0;
 const tabs = document.querySelectorAll('#products-tab button');
 const tabContent = document.querySelectorAll('.tab-pane');
+let userClicked = false;
+let cycleInterval;
 
 function cycleTabs() {
-    tabs[currentTab].classList.remove('active');
-    tabContent[currentTab].classList.remove('active', 'show');
+    if (!userClicked) {
+        tabs[currentTab].classList.remove('active');
+        tabContent[currentTab].classList.remove('active', 'show');
 
-    currentTab = (currentTab + 1) % tabs.length;
+        currentTab = (currentTab + 1) % tabs.length;
 
-    tabs[currentTab].classList.add('active');
-    tabContent[currentTab].classList.add('active', 'show');
+        tabs[currentTab].classList.add('active');
+        tabContent[currentTab].classList.add('active', 'show');
+    }
 }
 
-let cycleInterval = setInterval(cycleTabs, 30000);
+function startCycling() {
+    clearInterval(cycleInterval);
+    cycleInterval = setInterval(cycleTabs, 10000);
+}
+
+function userInteractionHandler(index) {
+    clearInterval(cycleInterval);
+    currentTab = index;
+    userClicked = true;
+    setTimeout(() => {
+        userClicked = false;
+        startCycling();
+    }, 30000);
+}
 
 tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-        clearInterval(cycleInterval);
-        currentTab = index;
-        cycleInterval = setInterval(cycleTabs, 30000);
-    });
+    tab.addEventListener('click', () => userInteractionHandler(index));
 });
 
 tabContent.forEach((content, index) => {
-    content.addEventListener('click', () => {
-        clearInterval(cycleInterval);
-        currentTab = index;
-        cycleInterval = setInterval(cycleTabs, 30000);
-    });
+    content.addEventListener('click', () => userInteractionHandler(index));
 });
+
+startCycling();
 
 // History tabs
 $(document).ready(function() {
