@@ -5764,3 +5764,7 @@ height: calc(100vh - 448px);
 .start-75 {
   left: 75% !important;
 }
+
+.text-wrap {
+  word-break: break-all;
+}
