@@ -22,8 +22,3 @@
 	}
 }
 
-@media (min-width: 767.98px) {
-	.rounded-md-3 {
-		border-radius: var(--bs-border-radius-lg) !important;
-	}
-}
