@@ -5761,10 +5761,42 @@ height: calc(100vh - 448px);
   left: 66.6666667% !important;
 }
 
+
 .start-75 {
   left: 75% !important;
 }
 
 .text-wrap {
   word-break: break-all;
+}
+
+@media (min-width: 767.98px) {
+	.rounded-md-1 {
+		border-radius: var(--bs-border-radius-sm) !important;
+	}
+	.rounded-md-2 {
+		border-radius: var(--bs-border-radius) !important;
+	}
+	.rounded-md-3 {
+		border-radius: var(--bs-border-radius-lg) !important;
+	}
+	.rounded-md-4 {
+		border-radius: var(--bs-border-radius-xl) !important;
+	}
+	.rounded-md-5 {
+		border-radius: var(--bs-border-radius-xxl) !important;
+	}
+	.rounded-md-6 {
+		border-radius: var(--bs-border-radius-2xl) !important;
+	}
+	.rounded-md-circle {
+		border-radius: 50%;
+	}
+	.rounded-md-pill {
+		border-radius: var(--bs-border-radius-pill);
+	}
+}
+
+.rounded-6 {
+		border-radius: var(--bs-border-radius-2xl) !important;
 }
