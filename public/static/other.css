@@ -631,6 +631,10 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   color: var(--bs-secondary-color)!important;
 }
 
+.text-justify {
+	text-align: justify;
+}
+
 .border-1 {	
   --bs-border-width: 1px;	
   border-width: 1px !important;	
