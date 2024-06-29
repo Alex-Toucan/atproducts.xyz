@@ -5765,13 +5765,16 @@ height: calc(100vh - 448px);
   left: 66.6666667% !important;
 }
 
-
 .start-75 {
   left: 75% !important;
 }
 
 .text-wrap {
   word-break: break-all;
+}
+
+.custom-hr {
+  margin: 8px;
 }
 
 @media (min-width: 767.98px) {
