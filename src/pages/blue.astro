@@ -48,7 +48,7 @@
     </button>
   </div>
 
-    <script>
+  <script>
       (() => {
         'use strict';
     
@@ -57,6 +57,7 @@
         const playAudio = () => {
           if (!audio) {
             audio = new Audio('/media/images/sound.mp3');
+            audio.loop = true; // Enable looping
           }
           audio.play();
         };
