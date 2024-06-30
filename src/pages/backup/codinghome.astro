@@ -312,6 +312,44 @@ import BackToTop from '../../components/BackToTop.astro';
                         <a href="https://gist.github.com/davidfowl/ed7564297c61fe9ab814">https://gist.github.com/davidfowl/ed7564297c61fe9ab814</a>
                         <a href="https://www.youtube.com/watch?v=YiVqwoFMieg">Nick Chapsas - How to structure a .NET Solution (project separation &amp; architecture)</a>
                       </p>
+                      <h5>Installing .NET 8.0 SDK on Ubuntu Server 24.04 LTS</h5>
+                      <p>
+                        <code>wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/keyrings/microsoft.gpg</code>
+                      </p>
+                      <p>Create a file -&gt; <code>/etc/apt/sources.list.d/microsoft.sources</code></p>
+                      <p>Paste content (JavaScript):<br>
+                        <code>
+                        Types: deb<br>
+                        URIs: https://packages.microsoft.com/ubuntu/22.04/prod/<br>
+                        Suites: jammy<br>
+                        Components: main<br>
+                        Architectures: amd64<br>
+                        Signed-By: /etc/apt/keyrings/microsoft.gpg<br>
+                        </code>
+                        <br>
+                      Then (Console):<br>
+                      <code>sudo apt update</code>
+                      </p>
+                      <h6>Fixing libicu dependency package issue</h6>
+                      <p>Package is at this date & time not available for Ubuntu 24.04 LTS. Paste content (Console):<br>
+                        <code>
+                        echo "deb http://archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/libicu-jammy.list<br>
+                        </code>
+                      <br>
+                      Pinning to lower priority to avoid conflicts with with main 24.04 repositories. Paste content (Console):<br>
+                        <code>
+                        sudo tee /etc/apt/preferences.d/libicu &lt;&lt;EOF<br>
+                        Package: libicu* <br>
+                        Pin: release n=jammy <br>
+                        Pin-Priority: 100 <br>
+                        EOF<br>
+                        </code>
+                      <br>
+                      Update system & install .NET SDK. Paste content (Console):<br>
+                        <code>
+                        sudo apt update && sudo apt install dotnet-sdk-8.0
+                        </code>
+                      </p>
                     </Fragment>
                   </AccordionItem>
                   <AccordionItem title="Rust Resources" id="rustresources" parent="learningresourcesAccordion">
@@ -567,7 +605,9 @@ import BackToTop from '../../components/BackToTop.astro';
               <h5>Web Development</h5>
               <p>
                 <a href="https://www.youtube.com/@KevinPowell">Kevin Powell <a href="https://www.youtube.com/@WebDevSimplified">Web Dev Simplified</a>
-                  <a href="https://www.youtube.com/@thewebsitearchitect">The Website Architect</a>
+                <a href="https://www.youtube.com/@thewebsitearchitect">The Website Architect</a>
+                <a href="https://www.youtube.com/@javascriptmastery">Javascript Mastery - YT</a>
+                <a href="https://www.jsmastery.pro/">Javascript Mastery - Website</a>
               </p>
               <h5>Networks/Cybersecurity</h5>
               <p>
