@@ -39,16 +39,16 @@
   </head>
   <body class="h-100">
 
-  <div class="position-fixed bottom-0 end-0 mb-3 me-3">
-    <button class="btn btn-secondary py-2 d-flex align-items-center" id="bd-audio" type="button" aria-expanded="false">
-      <span class="audio-icon-active">
-        <i class="my-1 bi bi-volume-mute-fill"></i>
-      </span>
-      <span class="visually-hidden" id="bd-audio-text">Toggle audio</span>
-    </button>
-  </div>
+    <div class="position-fixed bottom-0 end-0 mb-3 me-3">
+      <button class="btn btn-secondary py-2 d-flex align-items-center" id="bd-audio" type="button" aria-expanded="false">
+        <span class="audio-icon-active">
+          <i class="my-1 bi bi-volume-up-fill"></i>
+        </span>
+        <span class="visually-hidden" id="bd-audio-text">Toggle audio</span>
+      </button>
+    </div>
 
-  <script>
+    <script>
       (() => {
         'use strict';
     
@@ -86,6 +86,7 @@
           audioButton.addEventListener('click', () => {
             toggleAudio();
           });
+          playAudio(); // Start playing audio when the page loads
         });
       })();
     </script>
