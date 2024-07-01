@@ -1,9 +1,11 @@
+// Carousel play/pause
 var playButton = document.querySelector(".playButton");
 var pauseButton = document.querySelector(".pauseButton");
 var nextButton = document.querySelector(".carousel-control-next");
 var previousButton = document.querySelector(".carousel-control-prev");
 var carouselMain = document.querySelector(".carousel-main");
 var slidebtn = document.querySelectorAll(".slidebtn");
+
 $(function () {
     $(carouselMain).carousel({
         pause: "false",
@@ -27,6 +29,7 @@ $(function () {
     };
 });
 
+// History tabs
 $(document).ready(function() {
     // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
