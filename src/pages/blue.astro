@@ -58,6 +58,23 @@
           if (!audio) {
             audio = new Audio('/media/images/sound.mp3');
             audio.loop = true;
+            // Update Media Session metadata
+            if ('mediaSession' in navigator) {
+              navigator.mediaSession.metadata = new MediaMetadata({
+                title: 'Blue Ball Machine',
+                artist: 'Alex Toucan',
+                album: 'Blue Ball Machine Soundtrack',
+                artwork: [
+                  { src: '/media/favicon/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+                  { src: '/media/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+                  { src: '/media/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+                  { src: '/media/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' }
+                ]
+              });
+              
+              navigator.mediaSession.setActionHandler('play', playAudio);
+              navigator.mediaSession.setActionHandler('pause', pauseAudio);
+            }
           }
           audio.play();
         };
@@ -86,8 +103,30 @@
           audioButton.addEventListener('click', () => {
             toggleAudio();
           });
+    
+          if ('mediaSession' in navigator) {
+            navigator.mediaSession.setActionHandler('play', () => {
+              playAudio();
+              updateButtonIcon(true);
+            });
+            navigator.mediaSession.setActionHandler('pause', () => {
+              pauseAudio();
+              updateButtonIcon(false);
+            });
+          }
         });
-      })();
+    
+        const updateButtonIcon = (isPlaying) => {
+          const icon = document.querySelector('.audio-icon-active i');
+          if (isPlaying) {
+            icon.classList.remove('bi-volume-mute-fill');
+            icon.classList.add('bi-volume-up-fill');
+          } else {
+            icon.classList.remove('bi-volume-up-fill');
+            icon.classList.add('bi-volume-mute-fill');
+          }
+        };
+      })();    
     </script>
 
   </body>
