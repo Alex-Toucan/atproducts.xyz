@@ -58,7 +58,6 @@
           if (!audio) {
             audio = new Audio('/media/images/sound.mp3');
             audio.loop = true;
-            // Update Media Session metadata
             if ('mediaSession' in navigator) {
               navigator.mediaSession.metadata = new MediaMetadata({
                 title: 'Blue Ball Machine',
@@ -76,25 +75,33 @@
               navigator.mediaSession.setActionHandler('pause', pauseAudio);
             }
           }
-          audio.play();
+          audio.play().then(() => updateButtonIcon(true)).catch(error => console.log('Audio play was prevented by the browser:', error));
         };
     
         const pauseAudio = () => {
           if (audio) {
             audio.pause();
+            updateButtonIcon(false);
           }
         };
     
         const toggleAudio = () => {
           const icon = document.querySelector('.audio-icon-active i');
           if (icon.classList.contains('bi-volume-up-fill')) {
-            icon.classList.remove('bi-volume-up-fill');
-            icon.classList.add('bi-volume-mute-fill');
             pauseAudio();
           } else {
+            playAudio();
+          }
+        };
+    
+        const updateButtonIcon = (isPlaying) => {
+          const icon = document.querySelector('.audio-icon-active i');
+          if (isPlaying) {
             icon.classList.remove('bi-volume-mute-fill');
             icon.classList.add('bi-volume-up-fill');
-            playAudio();
+          } else {
+            icon.classList.remove('bi-volume-up-fill');
+            icon.classList.add('bi-volume-mute-fill');
           }
         };
     
@@ -107,27 +114,15 @@
           if ('mediaSession' in navigator) {
             navigator.mediaSession.setActionHandler('play', () => {
               playAudio();
-              updateButtonIcon(true);
             });
             navigator.mediaSession.setActionHandler('pause', () => {
               pauseAudio();
-              updateButtonIcon(false);
             });
           }
         });
-    
-        const updateButtonIcon = (isPlaying) => {
-          const icon = document.querySelector('.audio-icon-active i');
-          if (isPlaying) {
-            icon.classList.remove('bi-volume-mute-fill');
-            icon.classList.add('bi-volume-up-fill');
-          } else {
-            icon.classList.remove('bi-volume-up-fill');
-            icon.classList.add('bi-volume-mute-fill');
-          }
-        };
-      })();    
+      })();
     </script>
+    
 
   </body>
 </html>
