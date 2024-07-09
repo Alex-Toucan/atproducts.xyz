@@ -36,6 +36,27 @@
         background: url(/media/images/image.gif);
       }
     </style>
+
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s forwards;
+      }
+
+      .fade-out {
+        animation: fadeOut 1s forwards;
+      }
+    </style>
+
   </head>
   <body class="h-100">
 
@@ -54,10 +75,29 @@
     
         let audio = null;
     
+        const setCookie = (name, value, days) => {
+          const date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          const expires = `; expires=${date.toUTCString()}`;
+          document.cookie = `${name}=${value || ''}${expires}; path=/`;
+        };
+    
+        const getCookie = (name) => {
+          const nameEQ = `${name}=`;
+          const ca = document.cookie.split(';');
+          for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+          }
+          return null;
+        };
+    
         const playAudio = () => {
           if (!audio) {
             audio = new Audio('/media/images/sound.mp3');
             audio.loop = true;
+            // Update Media Session metadata
             if ('mediaSession' in navigator) {
               navigator.mediaSession.metadata = new MediaMetadata({
                 title: 'Blue Ball Machine',
@@ -105,15 +145,44 @@
           }
         };
     
+        const showNotification = () => {
+          const notification = document.getElementById('audio-notification');
+          if (notification) {
+            notification.style.display = 'block';
+            notification.classList.add('fade-in');
+          }
+        };
+    
+        const hideNotification = () => {
+          const notification = document.getElementById('audio-notification');
+          if (notification) {
+            notification.classList.add('fade-out');
+            notification.addEventListener('animationend', () => {
+              notification.style.display = 'none';
+            });
+          }
+        };
+    
         window.addEventListener('load', () => {
           const audioButton = document.getElementById('bd-audio');
+          const closeButton = document.getElementById('close-notification');
           audioButton.addEventListener('click', () => {
             toggleAudio();
+            hideNotification();
           });
+          closeButton.addEventListener('click', () => {
+            hideNotification();
+            setCookie('audioNotificationDismissed', 'true', 7);
+          });
+    
+          if (!getCookie('audioNotificationDismissed')) {
+            showNotification();
+          }
     
           if ('mediaSession' in navigator) {
             navigator.mediaSession.setActionHandler('play', () => {
               playAudio();
+              hideNotification();
             });
             navigator.mediaSession.setActionHandler('pause', () => {
               pauseAudio();
