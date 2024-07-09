@@ -69,19 +69,25 @@
       </button>
     </div>
 
+    <div class="bg-dark rounded-2 position-fixed bottom-0 end-0 mb-2 me-2 pt-3 ps-3 pb-2 text-light shadow-lg" id="audio-notification" style="padding-right: 5rem !important; display: none;" data-bs-theme="dark">
+      <p class="h4">There is audio that could be played!</p>
+      <i class="h1 bi bi-arrow-right" style="margin-left: 21.75rem !important;"></i>
+      <button type="button" class="btn-close" aria-label="Close" id="close-notification"></button>
+    </div>
+  
     <script>
       (() => {
         'use strict';
-    
+  
         let audio = null;
-    
+  
         const setCookie = (name, value, days) => {
           const date = new Date();
           date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
           const expires = `; expires=${date.toUTCString()}`;
           document.cookie = `${name}=${value || ''}${expires}; path=/`;
         };
-    
+  
         const getCookie = (name) => {
           const nameEQ = `${name}=`;
           const ca = document.cookie.split(';');
@@ -92,7 +98,7 @@
           }
           return null;
         };
-    
+  
         const playAudio = () => {
           if (!audio) {
             audio = new Audio('/media/images/sound.mp3');
@@ -117,14 +123,14 @@
           }
           audio.play().then(() => updateButtonIcon(true)).catch(error => console.log('Audio play was prevented by the browser:', error));
         };
-    
+  
         const pauseAudio = () => {
           if (audio) {
             audio.pause();
             updateButtonIcon(false);
           }
         };
-    
+  
         const toggleAudio = () => {
           const icon = document.querySelector('.audio-icon-active i');
           if (icon.classList.contains('bi-volume-up-fill')) {
@@ -133,7 +139,7 @@
             playAudio();
           }
         };
-    
+  
         const updateButtonIcon = (isPlaying) => {
           const icon = document.querySelector('.audio-icon-active i');
           if (isPlaying) {
@@ -144,7 +150,7 @@
             icon.classList.add('bi-volume-mute-fill');
           }
         };
-    
+  
         const showNotification = () => {
           const notification = document.getElementById('audio-notification');
           if (notification) {
@@ -152,7 +158,7 @@
             notification.classList.add('fade-in');
           }
         };
-    
+  
         const hideNotification = () => {
           const notification = document.getElementById('audio-notification');
           if (notification) {
@@ -162,7 +168,7 @@
             });
           }
         };
-    
+  
         window.addEventListener('load', () => {
           const audioButton = document.getElementById('bd-audio');
           const closeButton = document.getElementById('close-notification');
@@ -174,11 +180,11 @@
             hideNotification();
             setCookie('audioNotificationDismissed', 'true', 7);
           });
-    
+  
           if (!getCookie('audioNotificationDismissed')) {
             showNotification();
           }
-    
+  
           if ('mediaSession' in navigator) {
             navigator.mediaSession.setActionHandler('play', () => {
               playAudio();
