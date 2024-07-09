@@ -55,10 +55,27 @@
       .fade-out {
         animation: fadeOut 1s forwards;
       }
+
+      .notification-container {
+        padding-right: 5rem !important;
+        display: none;
+      }
+
+      .notification-close-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+      }
     </style>
 
   </head>
   <body class="h-100">
+
+    <div class="bg-dark rounded-2 position-fixed bottom-0 end-0 mb-2 me-2 pt-3 ps-3 pb-2 text-light shadow-lg notification-container" id="audio-notification" data-bs-theme="dark">
+      <button type="button" class="btn-close notification-close-btn" aria-label="Close" id="close-notification"></button>
+      <p class="h4">There is audio that could be played!</p>
+      <i class="h1 bi bi-arrow-right" style="margin-left: 21.75rem !important;"></i>
+    </div>
 
     <div class="position-fixed bottom-0 end-0 mb-3 me-3">
       <button class="btn btn-secondary py-2 d-flex align-items-center shadow-lg" id="bd-audio" type="button" aria-expanded="false">
@@ -67,12 +84,6 @@
         </span>
         <span class="visually-hidden" id="bd-audio-text">Toggle audio</span>
       </button>
-    </div>
-
-    <div class="bg-dark rounded-2 position-fixed bottom-0 end-0 mb-2 me-2 pt-3 ps-3 pb-2 text-light shadow-lg" id="audio-notification" style="padding-right: 5rem !important; display: none;" data-bs-theme="dark">
-      <p class="h4">There is audio that could be played!</p>
-      <i class="h1 bi bi-arrow-right" style="margin-left: 21.75rem !important;"></i>
-      <button type="button" class="btn-close" aria-label="Close" id="close-notification"></button>
     </div>
   
     <script>
