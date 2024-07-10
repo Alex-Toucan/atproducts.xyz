@@ -12,11 +12,15 @@ import BackToTop from '../components/BackToTop.astro';
 <div id="page">
   <Navbar />
   <div class="alert alert-dark mb-0" role="alert"> This is an inactive community. Expect no new sections or changes without special exceptions. </div>
-  <Hero id="ehs" title="Ethical Hacking Society" description="The Ethical Hacking Society is about ethical hacking as a whole." primaryHref="https://discord.gg/yCnteHexEs" primaryText="Discord Server Invite" secondaryHref="/backup/ehs" secondaryText="View the all laid out format"
+  <Hero id="ehs" title="Ethical Hacking Society" description="The Ethical Hacking Society is about ethical hacking as a whole." 
+    buttons={[
+      { href: "https://discord.gg/yCnteHexEs", text: "Discord Server Invite", type: "primary" },
+      { href: "/backup/ehs", text: "View the all laid out format", type: "secondary" },
+    ]},
     icons={[
         { icon: "discord", desc: "Discord Server Invite", href: "https://discord.gg/zPdxVST5VU" },
         { icon: "discord", desc: "Anti Vegans", href: "https://discord.gg/yCnteHexEs" },
-      ]}
+    ]},
   />
   <main id="ehs" class="mt-3 text-center container">
     <div id="disclaimer">
