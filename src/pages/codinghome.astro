@@ -15,16 +15,17 @@ import BackToTop from '../components/BackToTop.astro';
 <div id="page">
   <Navbar />
   <Hero id="codinghome" title="CodingHome" description="CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together." imageSrc="/media/images/codinghome.webp" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3 rounded-2"
-    buttons={[
-      { href: "https://discord.gg/pgGfhDVrmS", text: "Discord Server Invite", type: "primary" },
-      { href: "/backup/codinghome", text: "View the all laid out format", type: "secondary" },
-    ]};
     icons={[
       { icon: "discord", desc: "Discord Server Invite", href: "https://discord.gg/pgGfhDVrmS" },
       { icon: "bullseye", desc: "ProtDos", href: "https://protdos.com/" },
       { icon: "github", desc: "GitHub", href: "https://github.com/protdos" },
       { icon: "envelope-fill", desc: "ProtDos's Email", href: "mailto:contact@protdos.com" },
-    ]};
+    ]},
+    buttons={[
+      { href: "https://discord.gg/pgGfhDVrmS", text: "Discord Server Invite", type: "primary" },
+      { href: "/sms", text: "SMS Bomb", type: "secondary" },
+      { href: "/backup/codinghome", text: "View the all laid out format", type: "secondary" },
+    ]},
   />  
   <main id="codinghome" class="text-center container">
     <div id="disclaimer">
