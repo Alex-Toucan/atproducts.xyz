@@ -14,13 +14,17 @@ import BackToTop from '../components/BackToTop.astro';
 <Head title="CodingHome" heroid="codinghome" icon="codinghome.webp" description="A Discord server full of coders!" keywords="Scripts, viruses, coding," author="Alex Toucan & CodingLive" />
 <div id="page">
   <Navbar />
-  <Hero id="codinghome" title="CodingHome" description="CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together." primaryHref="https://discord.gg/pgGfhDVrmS" primaryText="Discord Server Invite" secondaryHref="/backup/codinghome" secondaryText="View the all laid out format" imageSrc="/media/images/codinghome.webp" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3 rounded-2"
+  <Hero id="codinghome" title="CodingHome" description="CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together." imageSrc="/media/images/codinghome.webp" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3 rounded-2"
+    buttons={[
+      { href: "https://discord.gg/pgGfhDVrmS", text: "Discord Server Invite", type: "primary" },
+      { href: "/backup/codinghome", text: "View the all laid out format", type: "secondary" },
+    ]};
     icons={[
       { icon: "discord", desc: "Discord Server Invite", href: "https://discord.gg/pgGfhDVrmS" },
       { icon: "bullseye", desc: "ProtDos", href: "https://protdos.com/" },
       { icon: "github", desc: "GitHub", href: "https://github.com/protdos" },
       { icon: "envelope-fill", desc: "ProtDos's Email", href: "mailto:contact@protdos.com" },
-    ]}
+    ]};
   />  
   <main id="codinghome" class="text-center container">
     <div id="disclaimer">
