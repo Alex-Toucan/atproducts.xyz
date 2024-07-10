@@ -115,16 +115,16 @@
     <script>
       (() => {
         'use strict';
-  
+
         let audio = null;
-  
+
         const setCookie = (name, value, days) => {
           const date = new Date();
           date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
           const expires = `; expires=${date.toUTCString()}`;
           document.cookie = `${name}=${value || ''}${expires}; path=/`;
         };
-  
+
         const getCookie = (name) => {
           const nameEQ = `${name}=`;
           const ca = document.cookie.split(';');
@@ -135,7 +135,7 @@
           }
           return null;
         };
-  
+
         const playAudio = () => {
           if (!audio) {
             audio = new Audio('/media/images/sound.mp3');
@@ -160,14 +160,14 @@
           }
           audio.play().then(() => updateButtonIcon(true)).catch(error => console.log('Audio play was prevented by the browser:', error));
         };
-  
+
         const pauseAudio = () => {
           if (audio) {
             audio.pause();
             updateButtonIcon(false);
           }
         };
-  
+
         const toggleAudio = () => {
           const icon = document.querySelector('.audio-icon-active i');
           if (icon.classList.contains('bi-volume-up-fill')) {
@@ -176,7 +176,7 @@
             playAudio();
           }
         };
-  
+
         const updateButtonIcon = (isPlaying) => {
           const icon = document.querySelector('.audio-icon-active i');
           if (isPlaying) {
@@ -187,7 +187,7 @@
             icon.classList.add('bi-volume-mute-fill');
           }
         };
-  
+
         const showNotification = () => {
           const notification = document.getElementById('audio-notification');
           if (notification) {
@@ -195,7 +195,7 @@
             notification.classList.add('fade-in');
           }
         };
-  
+
         const hideNotification = () => {
           const notification = document.getElementById('audio-notification');
           if (notification) {
@@ -205,27 +205,31 @@
             });
           }
         };
-  
+
+        const dismissNotification = () => {
+          hideNotification();
+          setCookie('audioNotificationDismissed', 'true', 7);
+        };
+
         window.addEventListener('load', () => {
           const audioButton = document.getElementById('bd-audio');
           const closeButton = document.getElementById('close-notification');
           audioButton.addEventListener('click', () => {
             toggleAudio();
-            hideNotification();
+            dismissNotification();
           });
           closeButton.addEventListener('click', () => {
-            hideNotification();
-            setCookie('audioNotificationDismissed', 'true', 7);
+            dismissNotification();
           });
-  
+
           if (!getCookie('audioNotificationDismissed')) {
             showNotification();
           }
-  
+
           if ('mediaSession' in navigator) {
             navigator.mediaSession.setActionHandler('play', () => {
               playAudio();
-              hideNotification();
+              dismissNotification();
             });
             navigator.mediaSession.setActionHandler('pause', () => {
               pauseAudio();
