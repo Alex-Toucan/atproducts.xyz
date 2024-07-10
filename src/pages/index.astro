@@ -22,9 +22,10 @@ bulletin={[
   id="main"
   title="AT Products LLC"
   description="The company that provides <strong>web solutions</strong> to your <strong>web problems</strong>!"
-  primaryHref="/paid"
-  primaryText="Paid Services"
   marginBottom="false"
+  buttons={[
+    { href: "/paid", text: "Paid Services", type: "primary" },
+  ]},
   dropdownItems={[
     { navigationDesc: "General Information", navigationLink: "#general-info" },
     { navigationDesc: "Products", navigationLink: "#products" },
@@ -39,7 +40,7 @@ bulletin={[
     { icon: "youtube", desc: "YouTube", href: "https://youtube.com/c/AlexToucanAT" },
     { icon: "envelope-fill", desc: "Contact Form / Email", href: "/form/" },
     { icon: "cloud-sun-fill", desc: "Weather", href: "https://twitter.com/ATPWeather" },
-  ]}
+  ]},
   />
   <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow px-0 container-xsm mt-xmd-2 mb-3 pointer-event" data-bs-ride="carousel">
     <div class="pt-xmd-2 px-xmd-2">

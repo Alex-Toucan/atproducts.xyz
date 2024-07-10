@@ -14,18 +14,18 @@ import BackToTop from '../components/BackToTop.astro';
     title="SMS Bomb"
     id="sms"
     description="An Android app that can spam messages very easily and very fast!"
-    primaryHref="#downloads"
-    primaryText="Downloads"
-    secondaryHref="/codinghome"
-    secondaryText="CodingHome"
     imageSrc="/media/images/ya.png" 
     imageWidth="30%" 
     minImageWidth="150px" 
     imageClasses="pe-md-3"
+    buttons={[
+      { href: "#downloads", text: "Downloads", type: "primary" },
+      { href: "/codinghome", text: "CodingHome", type: "secondary" },
+    ]},
     dropdownItems={[
       { navigationDesc: "What is SMS Bomb?", navigationLink: "#what" },
       { navigationDesc: "Downloads", navigationLink: "#downloads" },
-    ]}
+    ]},
   />
   <main id="sms" class="container">
     <div id="what">
