@@ -5,10 +5,7 @@ const {
   titleClasses,
   description,
   errorButton,
-  primaryHref,
-  primaryText,
-  secondaryHref,
-  secondaryText,
+  buttons,
   imageSrc,
   imageWidth,
   imageClasses,
@@ -39,11 +36,10 @@ const {
               {errorButton && (
                 <Fragment set:html={errorButton} />
               )}
-              {primaryHref && primaryText && (
-                <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
-              )}
-              {secondaryHref && secondaryText && (
-                <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
+              {buttons && (
+                buttons.map(({ href, text, type }, index) => (
+                  <a href={href} class={`btn ${type === 'primary' ? 'btn-primary' : 'btn-secondary'} col-md`}>{text}</a>
+                ))
               )}
               {dropdownItems && (
                 <div class="dropdown col-md">
@@ -52,7 +48,7 @@ const {
                   </button>
                   <ul class="dropdown-menu w-100 white-space-normal">
                     {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
-                      <li key={index}>
+                      <li>
                         <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
                       </li>
                     ))}
@@ -61,13 +57,13 @@ const {
               )}
             </div>
             {icons && (
-            <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-              {icons && icons.map(({ icon, desc, href }, index) => (
-                <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc} key={index}>
-                  <i class={`bi bi-${icon}`}></i>
-                </a>
-              ))}
-            </div>
+              <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
+                {icons && icons.map(({ icon, desc, href }, index) => (
+                  <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc}>
+                    <i class={`bi bi-${icon}`}></i>
+                  </a>
+                ))}
+              </div>
             )}
           </div>
         </div>

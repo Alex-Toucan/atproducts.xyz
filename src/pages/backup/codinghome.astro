@@ -13,12 +13,17 @@ import BackToTop from '../../components/BackToTop.astro';
 <Head title="CodingHome" heroid="codinghome" icon="codinghome.webp" description="A Discord server full of coders!" keywords="Scripts, viruses, coding," author="Alex Toucan & CodingLive" />
 <div id="page">
   <Navbar />
-  <Hero id="codinghome" title="CodingHome" description="CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together." primaryHref="https://discord.gg/pgGfhDVrmS" primaryText="Discord Server Invite" secondaryHref="/codinghome" secondaryText="View the pop-up format" imageSrc="/media/images/codinghome.webp" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3 rounded-2"
+  <Hero id="codinghome" title="CodingHome" description="CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together." secondaryText="View the pop-up format" imageSrc="/media/images/codinghome.webp" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3 rounded-2"
     icons={[
         { icon: "discord", desc: "Discord Server Invite", href: "https://discord.gg/pgGfhDVrmS" },
         { icon: "bullseye", desc: "ProtDos", href: "https://protdos.com/" },
         { icon: "github", desc: "GitHub", href: "https://github.com/protdos" },
         { icon: "envelope-fill", desc: "ProtDos's Email", href: "mailto:contact@protdos.com" },
+    ]},
+    buttons={[
+      { href: "https://discord.gg/pgGfhDVrmS", text: "Discord Server Invite", type: "primary" },
+      { href: "/sms", text: "SMS Bomb", type: "secondary" },
+      { href: "/codinghome", text: "View the pop-up format", type: "secondary" },
     ]},
     dropdownItems={[
       { navigationDesc: "Resources", navigationLink: "#resources-alt" },
@@ -32,7 +37,7 @@ import BackToTop from '../../components/BackToTop.astro';
       { navigationDesc: "JavaScript Basics", navigationLink: "#js" },
       { navigationDesc: "SQL Basics", navigationLink: "#sql" },
       { navigationDesc: "JSON Basics", navigationLink: "#json" },
-    ]};
+    ]},
   />  
   <main id="codinghome" class="container">
     <div id="disclaimer">
@@ -96,6 +101,7 @@ import BackToTop from '../../components/BackToTop.astro';
                 <a href="https://github.com/donnemartin/system-design-primer">System Design Primer</a>
                 <a href="https://github.com/trimstray/the-book-of-secret-knowledge">Book of Secret Knowledge</a>
                 <a href="https://github.com/practical-tutorials/project-based-learning">Project Based Learning</a>
+                <a href="https://www.digitalocean.com/community/tutorials">Digital Ocean - Community Resources</a>
                 <a href="https://learn.microsoft.com/en-us/docs/">Microsoft's Documentation</a>
                 <a href="https://markdownguide.org">Markdown Documentation</a>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">Mozilla JS Tutorials</a>
@@ -184,6 +190,8 @@ import BackToTop from '../../components/BackToTop.astro';
                         <a href="https://learn.microsoft.com/en-us/dotnet/api/system.configuration.configurationmanager?view=windowsdesktop-7.0">ConfigurationManager C#</a>
                         <a href="https://auth0.com/blog/introduction-to-async-programming-in-csharp/">Async I/O in C#</a>
                         <a href="https://www.youtube.com/watch?v=z4SB5BkQX7M">Making IDs safer in C#</a>
+                        <a href="https://www.youtube.com/watch?v=sGwfwtkaDfk">Testing Tests (C#)</a>
+                        <a href="https://stryker-mutator.io/docs/stryker-net/getting-started/">Mutational Testing</a>
                       </p>
                       <h5>C# Hashing with Salt and Pepper</h5>
                       <p>
@@ -312,6 +320,44 @@ import BackToTop from '../../components/BackToTop.astro';
                         <a href="https://gist.github.com/davidfowl/ed7564297c61fe9ab814">https://gist.github.com/davidfowl/ed7564297c61fe9ab814</a>
                         <a href="https://www.youtube.com/watch?v=YiVqwoFMieg">Nick Chapsas - How to structure a .NET Solution (project separation &amp; architecture)</a>
                       </p>
+                      <h5>Installing .NET 8.0 SDK on Ubuntu Server 24.04 LTS</h5>
+                      <p>
+                        <code>wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/keyrings/microsoft.gpg</code>
+                      </p>
+                      <p>Create a file -&gt; <code>/etc/apt/sources.list.d/microsoft.sources</code></p>
+                      <p>Paste content (JavaScript):<br>
+                        <code>
+                        Types: deb<br>
+                        URIs: https://packages.microsoft.com/ubuntu/22.04/prod/<br>
+                        Suites: jammy<br>
+                        Components: main<br>
+                        Architectures: amd64<br>
+                        Signed-By: /etc/apt/keyrings/microsoft.gpg<br>
+                        </code>
+                        <br>
+                      Then (Console):<br>
+                      <code>sudo apt update</code>
+                      </p>
+                      <h6>Fixing libicu dependency package issue</h6>
+                      <p>Package is at this date & time not available for Ubuntu 24.04 LTS. Paste content (Console):<br>
+                        <code>
+                        echo "deb http://archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/libicu-jammy.list<br>
+                        </code>
+                      <br>
+                      Pinning to lower priority to avoid conflicts with with main 24.04 repositories. Paste content (Console):<br>
+                        <code>
+                        sudo tee /etc/apt/preferences.d/libicu &lt;&lt;EOF<br>
+                        Package: libicu* <br>
+                        Pin: release n=jammy <br>
+                        Pin-Priority: 100 <br>
+                        EOF<br>
+                        </code>
+                      <br>
+                      Update system & install .NET SDK. Paste content (Console):<br>
+                        <code>
+                        sudo apt update && sudo apt install dotnet-sdk-8.0
+                        </code>
+                      </p>
                     </Fragment>
                   </AccordionItem>
                   <AccordionItem title="Rust Resources" id="rustresources" parent="learningresourcesAccordion">
@@ -348,6 +394,7 @@ import BackToTop from '../../components/BackToTop.astro';
                       <h5>Linux Resources</h5>
                       <p>
                         <a href="https://phoenixnap.com/kb/install-ftp-server-on-ubuntu-vsftpd">How to Install FTP Server on Ubuntu with vsftpd</a>
+                        <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps">How to install and manage supervisor on Ubuntu and Debian VPS</a>
                         <a href="https://sysprog21.github.io/lkmpg/">Linux Kernel Module Programming Guide</a>
                         <a href="https://www.youtube.com/watch?v=cC1CqyCN9Q0">How to Fit In with Linux Users</a>
                       </p>
@@ -567,7 +614,9 @@ import BackToTop from '../../components/BackToTop.astro';
               <h5>Web Development</h5>
               <p>
                 <a href="https://www.youtube.com/@KevinPowell">Kevin Powell <a href="https://www.youtube.com/@WebDevSimplified">Web Dev Simplified</a>
-                  <a href="https://www.youtube.com/@thewebsitearchitect">The Website Architect</a>
+                <a href="https://www.youtube.com/@thewebsitearchitect">The Website Architect</a>
+                <a href="https://www.youtube.com/@javascriptmastery">Javascript Mastery - YT</a>
+                <a href="https://www.jsmastery.pro/">Javascript Mastery - Website</a>
               </p>
               <h5>Networks/Cybersecurity</h5>
               <p>
@@ -934,21 +983,21 @@ import BackToTop from '../../components/BackToTop.astro';
         <a href="/media/files/protect.py" download>SSL Protection (Python)</a>
         <a href="https://github.com/ProtDos/SeedPhraseHack/archive/refs/heads/main.zip" download>SeedPhraseHack (Python | ZIP)</a>
         <a href="/media/files/checker.py" download>Domain Checker (Python)</a>
-        <a href="https://github.com/ProtDos/DiscordMassDM">Discord Mass DM</a> ( <a href="https://github.com/ProtDos/DiscordMassDM/archive/refs/heads/main.zip">Python | ZIP</a>)
+        <a href="https://github.com/ProtDos/DiscordMassDM">Discord Mass DM</a> (<a href="https://github.com/ProtDos/DiscordMassDM/archive/refs/heads/main.zip">Python | ZIP</a>)
       </p>
       <p>
-        <a href="https://github.com/ProtDos/IP-Address-Generator-Checker">IP Address Generator Checker</a> ( <a href="https://github.com/ProtDos/IP-Address-Generator-Checker/archive/refs/heads/main.zip">Python | ZIP</a>)
+        <a href="https://github.com/ProtDos/IP-Address-Generator-Checker">IP Address Generator Checker</a> (<a href="https://github.com/ProtDos/IP-Address-Generator-Checker/archive/refs/heads/main.zip">Python | ZIP</a>)
       </p>
       <p>
-        <a href="https://github.com/ProtDos/ClashOfClans-Wrapper">Clash of Clans Wrapper</a> ( <a href="https://github.com/ProtDos/ClashOfClans-Wrapper/archive/refs/heads/main.zip">Python | ZIP</a>)
+        <a href="https://github.com/ProtDos/ClashOfClans-Wrapper">Clash of Clans Wrapper</a> (<a href="https://github.com/ProtDos/ClashOfClans-Wrapper/archive/refs/heads/main.zip">Python | ZIP</a>)
       </p>
       <p>
         <a href="https://github.com/ProtDos/Crunch-PasswordGenerator/archive/refs/heads/main.zip" download>Crunch Password Generator (Python | ZIP)</a>
-        <a href="https://github.com/ProtDos/Mint">Mint (OSINT)</a> ( <a href="https://github.com/ProtDos/Mint/archive/refs/heads/main.zip">Python | ZIP</a>)
+        <a href="https://github.com/ProtDos/Mint">Mint (OSINT)</a> (<a href="https://github.com/ProtDos/Mint/archive/refs/heads/main.zip">Python | ZIP</a>)
       </p>
       <p>
         <a href="https://github.com/ProtDos/WebcamSearch/archive/refs/heads/main.zip" download>Webcam Search (Python | ZIP)</a>
-        <a href="https://github.com/ProtDos/Discord-Token-Onliner">Discord Token Onliner</a> ( <a href="https://github.com/ProtDos/Discord-Token-Onliner/archive/refs/heads/main.zip">Python | ZIP</a>) <a href="https://github.com/ProtDos/boosint">boosint (OSINT)</a> ( <a href="https://github.com/ProtDos/boosint/archive/refs/heads/main.zip">Python | ZIP</a>) <a href="https://github.com/ProtDos/ntru">ntru</a> ( <a href="https://github.com/ProtDos/ntru/archive/refs/heads/main.zip">Python | ZIP</a>) <a href="https://github.com/ProtDos/pq-ntru">pq-ntru</a> ( <a href="https://github.com/ProtDos/pq-ntru/archive/refs/heads/main.zip">Python | ZIP</a>) <a href="https://github.com/ProtDos/IP-Address-Generator-Checker">IP Address Generator Checker</a> by CodingLive
+        <a href="https://github.com/ProtDos/Discord-Token-Onliner">Discord Token Onliner</a> (<a href="https://github.com/ProtDos/Discord-Token-Onliner/archive/refs/heads/main.zip">Python | ZIP</a>) <a href="https://github.com/ProtDos/boosint">boosint (OSINT)</a> (<a href="https://github.com/ProtDos/boosint/archive/refs/heads/main.zip">Python | ZIP</a>) <a href="https://github.com/ProtDos/ntru">ntru</a> (<a href="https://github.com/ProtDos/ntru/archive/refs/heads/main.zip">Python | ZIP</a>) <a href="https://github.com/ProtDos/pq-ntru">pq-ntru</a> (<a href="https://github.com/ProtDos/pq-ntru/archive/refs/heads/main.zip">Python | ZIP</a>) <a href="https://github.com/ProtDos/IP-Address-Generator-Checker">IP Address Generator Checker</a> by CodingLive
       </p>
       <h4>ncrypt.c by Sezieru</h4> This is a relatively simple example for using <code>crypt()</code> on Linux to generate Linux-compatible password hashes. This is useful for replacing a lost password hash, for example. <p>
         <a href="/media/files/ncrypt.c" download>ncrypt.c Download</a>
@@ -964,7 +1013,7 @@ import BackToTop from '../../components/BackToTop.astro';
     <div id="app">
       <h2> Apps &amp; Software </h2>
       <p>
-        <a href="/media/files/sms_bomb.apk" download>SMS Bomb (APK)</a> ( <a href="/sms">Site</a>) by CodingLive
+        <a href="/media/files/sms_bomb.apk" download>SMS Bomb (APK)</a> (<a href="/sms">Site</a>) by CodingLive
       </p>
       <h4>Veilo by CodingLive</h4>
       <p>
@@ -991,7 +1040,7 @@ import BackToTop from '../../components/BackToTop.astro';
       </p>
       <h4>vpnchecker by CodingLive</h4>
       <p>
-        <a href="https://github.com/ProtDos/vpnchecker">vpnchecker</a> ( <a href="https://github.com/ProtDos/vpnchecker/archive/refs/heads/main.zip">HTML | ZIP</a>)
+        <a href="https://github.com/ProtDos/vpnchecker">vpnchecker</a> (<a href="https://github.com/ProtDos/vpnchecker/archive/refs/heads/main.zip">HTML | ZIP</a>)
       </p>
       <p>
         <a class="link-danger" href="https://protdos.github.io/vpnchecker">vpnchecker Website</a>
@@ -1208,7 +1257,7 @@ import BackToTop from '../../components/BackToTop.astro';
         <hr>
         <div id="css">
           <h2>CSS Basics</h2>
-          <div class="my-3">
+          <div class="mb-3">
             <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>
           </div>
           <Scrollspy id="css-basics-list"
@@ -1545,23 +1594,23 @@ import BackToTop from '../../components/BackToTop.astro';
             </div>
             <div id="import-10">
               <h4>Importing JSON</h4>
-              <table class="mb-1">
+              <table class="table table-hover mb-1">
                 <tbody>
                 <tr>
-                  <td class="border-1">JavaScript</td>
-                  <td class="border-1 text-break"><code class="position-static">fetch('example.json')</code></td>
+                  <th scope="row">JavaScript</th>
+                  <td class="text-break"><code class="position-static">fetch('example.json')</code></td>
                 </tr>
                 <tr>
-                  <td class="border-1">Node.js</td>
-                  <td class="border-1 text-break"><code class="position-static">import('./example.json')</code></td>
+                  <th scope="row">Node.js</th>
+                  <td class="text-break"><code class="position-static">import('./example.json')</code></td>
                 </tr>
                 <tr>
-                  <td class="border-1">TypeScript + Node.js</td>
-                  <td class="border-1 text-break"><code class="position-static">import data from 'example.json'</code></td>
+                  <th scope="row">TypeScript + Node.js</th>
+                  <td class="text-break"><code class="position-static">import data from 'example.json'</code></td>
                 </tr>
                 <tr>
-                  <td class="border-1">Python</td>
-                  <td class="border-1 text-break"><code class="position-static">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></td>
+                  <th scope="row">Python</th>
+                  <td class="text-break"><code class="position-static">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></td>
                 </tr>
                 </tbody>
               </table>

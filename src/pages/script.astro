@@ -17,7 +17,11 @@ import BackToTop from '../components/BackToTop.astro';
     <div class="alert alert-dark mb-0" role="alert">
       This is an inactive community. Expect no new sections or changes without special exceptions.
     </div>
-    <Hero id="script" title="The Script Community" description="The Script Community is for hacking enthusiasts to share their knowledge." secondaryHref="/backup/script" secondaryText="View the all laid out format" imageSrc="/media/images/vibrant2.png" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3" />
+    <Hero id="script" title="The Script Community" description="The Script Community is for hacking enthusiasts to share their knowledge." imageSrc="/media/images/vibrant2.png" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3" 
+      buttons={[
+        { href: "/backup/script", text: "View the all laid out format", type: "secondary" },
+      ]},
+    />
     <main id="script" class="text-center container">
       <div id="disclaimer">
         <h2> Disclaimer </h2>
@@ -208,8 +212,8 @@ import BackToTop from '../components/BackToTop.astro';
               <Scrollspy id="html-basics-list"
                 scrollcontent={[
                   { name: "Example Document", href: "#example-3" },
+                  { name: "HTML Text", href: "#text-3" },
                   { name: "HTML Headings", href: "#head-3" },
-                  { name: "HTML Paragraphs", href: "#text-3" },
                   { name: "HTML Links", href: "#links-3" },
                   { name: "HTML Images", href: "#img-3" },
                 ]};

@@ -16,24 +16,27 @@ import BackToTop from '../../components/BackToTop.astro';
     <div class="alert alert-dark mb-0" role="alert">
       This is an inactive community. Expect no new sections or changes without special exceptions.
     </div>
-    <Hero id="script" title="The Script Community" description="The Script Community is for hacking enthusiasts to share their knowledge." secondaryHref="/script" secondaryText="View the pop-up format" imageSrc="/media/images/vibrant2.png" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3"
+    <Hero id="script" title="The Script Community" description="The Script Community is for hacking enthusiasts to share their knowledge." imageSrc="/media/images/vibrant2.png" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3"
+      buttons={[
+        { href: "/script", text: "View the pop-up format", type: "secondary" },
+      ]},
       dropdownItems={[
-      { navigationDesc: "Learning Resources", navigationLink: "#learn" },
-      { navigationDesc: "Links", navigationLink: "#links" },
-      { navigationDesc: "Python Basics", navigationLink: "#py" },
-      { navigationDesc: "JavaScript Basics", navigationLink: "#js" },
-      { navigationDesc: "HTML Basics", navigationLink: "#html" },
-      { navigationDesc: "OSINT", navigationLink: "#osint" },
-      { navigationDesc: "Denial of Service", navigationLink: "#dos" },
-      { navigationDesc: "Passwords", navigationLink: "#password" },
-      { navigationDesc: "ID Creation Time", navigationLink: "#id" },
-      { navigationDesc: "Keylogging", navigationLink: "#key" },
-      { navigationDesc: "Nitrologging | Tokenlogging", navigationLink: "#logging" },
-      { navigationDesc: "Other Scripts", navigationLink: "#other" },
-      { navigationDesc: "Phishing", navigationLink: "#phishing" },
-      { navigationDesc: "Google Dorking", navigationLink: "#google" },
-      { navigationDesc: "Wi-Fi Hacking", navigationLink: "#wifi" },
-      ]};
+        { navigationDesc: "Learning Resources", navigationLink: "#learn" },
+        { navigationDesc: "Links", navigationLink: "#links" },
+        { navigationDesc: "Python Basics", navigationLink: "#py" },
+        { navigationDesc: "JavaScript Basics", navigationLink: "#js" },
+        { navigationDesc: "HTML Basics", navigationLink: "#html" },
+        { navigationDesc: "OSINT", navigationLink: "#osint" },
+        { navigationDesc: "Denial of Service", navigationLink: "#dos" },
+        { navigationDesc: "Passwords", navigationLink: "#password" },
+        { navigationDesc: "ID Creation Time", navigationLink: "#id" },
+        { navigationDesc: "Keylogging", navigationLink: "#key" },
+        { navigationDesc: "Nitrologging | Tokenlogging", navigationLink: "#logging" },
+        { navigationDesc: "Other Scripts", navigationLink: "#other" },
+        { navigationDesc: "Phishing", navigationLink: "#phishing" },
+        { navigationDesc: "Google Dorking", navigationLink: "#google" },
+        { navigationDesc: "Wi-Fi Hacking", navigationLink: "#wifi" },
+      ]},
     />
     <main id="script" class="container">
       <div id="disclaimer">
@@ -221,8 +224,8 @@ import BackToTop from '../../components/BackToTop.astro';
       <Scrollspy id="html-basics-list"
       scrollcontent={[
         { name: "Example Document", href: "#example-3" },
+        { name: "HTML Text", href: "#text-3" },
         { name: "HTML Headings", href: "#head-3" },
-        { name: "HTML Paragraphs", href: "#text-3" },
         { name: "HTML Links", href: "#links-3" },
         { name: "HTML Images", href: "#img-3" },
       ]};
