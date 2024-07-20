@@ -12,6 +12,11 @@ import BackToTop from '../components/BackToTop.astro';
     padding-right: 0 !important;
   }
 
+  .dollar-sign {
+    position: relative;
+    top: -.145em;
+  }
+
   .theme-changer {
     align-self: baseline;
   }
@@ -182,9 +187,9 @@ import BackToTop from '../components/BackToTop.astro';
       <div class="col p-4">
         <h1>This Certain Item</h1>
         <s class="text-danger">
-          <h3 class="h3 text-body-secondary card-title pricing-card-title">$175</h3>
+          <h3 class="h3 text-body-secondary card-title pricing-card-title"><small class="dollar-sign">$</small>175</h3>
         </s>
-        <h3 class="h3 text-body-secondary card-title pricing-card-title">$125</h3>
+        <h3 class="h3 text-body-secondary card-title pricing-card-title"><small class="dollar-sign">$</small>125</h3>
         <div class="d-grid pt-3">
           <a href="#" class="btn btn-primary btn-lg">Add to cart</a>
           <a href="#" class="btn btn-primary">Buy now</a>
