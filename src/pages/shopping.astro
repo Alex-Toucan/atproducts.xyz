@@ -164,6 +164,7 @@ import BackToTop from '../components/BackToTop.astro';
   <main id="shopping">
     <div class="d-md-flex">
       <div class="col bg-body-secondary p-4">
+        <h1 class="d-md-none pb-3">This Certain Item</h1>
         <div class="d-grid gap-4">
           <div class="ratio ratio-16x9 rounded-2">
             <img src="/media/images/hero.webp" class="rounded-2">
@@ -185,7 +186,7 @@ import BackToTop from '../components/BackToTop.astro';
         </div>
       </div>
       <div class="col p-4">
-        <h1>This Certain Item</h1>
+        <h1 class="d-none d-md-block">This Certain Item</h1>
         <s class="text-danger">
           <h3 class="h3 text-body-secondary card-title pricing-card-title"><small class="dollar-sign">$</small>175</h3>
         </s>
@@ -193,9 +194,9 @@ import BackToTop from '../components/BackToTop.astro';
         <div class="d-grid gap-3 pt-3">
           <select class="form-select" aria-label="Select Quantity">
             <option selected>Select Quantity</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
           </select>
           <a href="#" class="btn btn-primary btn-lg col">Add to cart</a>
           <a href="#" class="btn btn-primary col">Buy now</a>
