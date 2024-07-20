@@ -5612,30 +5612,30 @@ html.fixedtopnavimage {
 }
 
 @media (min-width: 901.98px) {
-.bd-toc {
-    position: -webkit-fixed;
-    position: fixed;
-    right: 0;
-    z-index: 2;
-    height: calc(100vh - 7rem);
-    overflow-y: auto;
-}
+  .bd-toc {
+      position: -webkit-fixed;
+      position: fixed;
+      right: 0;
+      z-index: 2;
+      height: calc(100vh - 7rem);
+      overflow-y: auto;
+  }
 	
-	.story-top-body {
-margin-top: 25px;
-}
+  .story-top-body {
+    margin-top: 25px;
+  }
 }
 
 @media (min-width: 767.98px) and (max-width: 901.98px) {
-.bd-toc {
-    position: -webkit-fixed;
-    position: fixed;
-    top: calc(72px + .75rem);
-    right: 0;
-    z-index: 2;
-    height: calc(100vh - 7rem);
-    overflow-y: auto;
-}
+  .bd-toc {
+      position: -webkit-fixed;
+      position: fixed;
+      top: calc(72px + .75rem);
+      right: 0;
+      z-index: 2;
+      height: calc(100vh - 7rem);
+      overflow-y: auto;
+  }
 }
 
 .hero-drappear {
