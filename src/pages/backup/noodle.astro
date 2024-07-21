@@ -17,15 +17,15 @@ import BackToTop from '../../components/BackToTop.astro';
     This is an inactive community. Expect no new sections or changes without special exceptions.
   </div>
   <Hero id="noodle" title="Noodle Hackerspace" description="Noodle Hackerspace is the community of physical and digital hacking resources!" imageSrc="/media/images/noodle.webp" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3 rounded-2"
+    buttons={[
+      { href: "/pynx", text: "Pynx's Projects", type: "primary" },
+      { href: "/noodle", text: "View the pop-up format", type: "secondary" },
+    ]},
     icons={[
       { icon: "discord", desc: "Discord Server Invite", href: "https://discord.gg/r7qVKedjwR" },
       { icon: "twitter", desc: "Twitter", href: "https://twitter.com/Aquoz_co" },
       { icon: "bullseye", desc: "Pynx Technologies", href: "https://2983u2.site/" },
       { icon: "heart-fill", desc: "Tokyo Chat", href: "https://tokyochat.pynxthegoat.repl.co/" },
-    ]},
-    buttons={[
-      { href: "https://2983u2.site/", text: "Pynx Technologies", type: "primary" },
-      { href: "/noodke", text: "View the pop-up format", type: "secondary" },
     ]},
     dropdownItems = {[
       { navigationDesc: "Pynx Technologies", navigationLink: "#pynx" },
