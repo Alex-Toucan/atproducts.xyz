@@ -61,7 +61,7 @@ import BackToTop from '../components/BackToTop.astro';
       <h2>Downloads</h2>
       <ul class="nav nav-tabs" id="downloadTab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="python" data-bs-toggle="tab" data-bs-target="#python-pane" type="button" role="tab" aria-controls="python-pane" aria-selected="false" tabindex="-1"><img src="/media/images/python.png" height="45px"></button>
+          <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#python-pane" type="button" role="tab" aria-controls="python-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/python.png" height="45px"></button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="java-tab" data-bs-toggle="tab" data-bs-target="#java-tab-pane" type="button" role="tab" aria-controls="java-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/java.png" height="45px"></button>
@@ -70,7 +70,7 @@ import BackToTop from '../components/BackToTop.astro';
           <button class="nav-link" id="c-tab" data-bs-toggle="tab" data-bs-target="#c-tab-pane" type="button" role="tab" aria-controls="c-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/c.png" height="45px"></button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="cpp-tab" data-bs-toggle="tab" data-bs-target="#cpp-tab-pane" type="button" role="tab" aria-controls="cpp-tab-pane" aria-selected="true"><img src="/media/images/cpp.png" height="45px"></button>
+          <button class="nav-link" id="cpp-tab" data-bs-toggle="tab" data-bs-target="#cpp-tab-pane" type="button" role="tab" aria-controls="cpp-tab-pane" aria-selected="true"><img src="/media/images/c++.png" height="45px"></button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="rust-tab" data-bs-toggle="tab" data-bs-target="#rust-tab-pane" type="button" role="tab" aria-controls="rust-tab-pane" aria-selected="true"><img src="/media/images/rust.png" height="45px"></button>
@@ -80,7 +80,7 @@ import BackToTop from '../components/BackToTop.astro';
         </li>
       </ul>
       <div class="tab-content border rounded-bottom-2 p-2" id="downloadTabContent">
-        <div class="tab-pane fade show active" id="python-tab-pane" role="tabpanel" aria-labelledby="python-tab" tabindex="0">
+        <div class="tab-pane fade active show" id="python-tab-pane" role="tabpanel" aria-labelledby="python-tab" tabindex="0">
           <a class="btn btn-primary" href="https://github.com/2983u2/Pson/blob/main/Pson.py">Library File (Python)</a> 
           <a class="btn btn-primary" href="https://github.com/2983u2/Pson/archive/refs/heads/main.zip" download="">ZIP Download (Python)</a> 
         </div>
