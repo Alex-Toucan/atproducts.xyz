@@ -26,7 +26,7 @@ const {
             <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
             )}
             {secondaryHref && secondaryText && (
-              <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
+              <a href={secondaryHref} class="btn btn-secondary col-md" set:html={secondaryText}></a>
             )}
             {dropdownItems && (
               <div class="dropdown col-md">
