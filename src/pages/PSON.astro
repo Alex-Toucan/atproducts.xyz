@@ -19,15 +19,13 @@ import BackToTop from '../components/BackToTop.astro';
     secondaryText="<i class='bi bi-github fs-6 me-2'></i> GitHub Repo"
     dropdownItems={[
       { navigationDesc: "General Information", navigationLink: "#general-info" },
-      { navigationDesc: "Requirements", navigationLink: "#requirements" },
-      { navigationDesc: "Installation", navigationLink: "#install" },
-      { navigationDesc: "Downloads", navigationLink: "#downloads" },
+      { navigationDesc: "Downloads & Installation", navigationLink: "#downloads" },
     ]},
   />
   <main id="bxpp" class="container">
     <div id="general-info">
       <h2> General Information </h2>
-      <p>PSON aka PynxSON, made by Pynx, is a JSON extension for Python3. It uses a Python script as a library, then you create a Python script using functions from the library for it to create a JSON file using what you wrote.</p>
+      <p>PSON aka PynxSON, made by Pynx, is a JSON extension for Python3 (and soon, other languages). It uses a Python script as a library, then you create a Python script using functions from the library for it to create a JSON file using what you wrote.</p>
       <p>What does PSON have? Well:</p>
       <ul>
         <li>Comments (Ever needed to describe your objects? Well now you can!)</li>
@@ -40,25 +38,8 @@ import BackToTop from '../components/BackToTop.astro';
       </p>
     </div>
     <hr>
-    <div id="requirements">
-      <h2> Requirements </h2>
-      <p><b>Python:</b> 3.0 and above</p>
-    </div>
-    <hr>
-    <div id="install">
-      <h2> Installation </h2>
-      <p>
-        <ol>
-          <li>Download the <a href="https://github.com/2983u2/Pson/blob/main/Pson.py">Python library file</a>.</li>
-          <li>Import the file: <code>from Pson import *</code></li>
-          <li>Call the functions: <b><u><a href="https://github.com/2983u2/Pson?tab=readme-ov-file#examples">Examples</a></u></b></li>
-          <li>Run your script to generate a JSON file.</li>
-        </ol>
-      </p>
-    </div>
-    <hr>
     <div id="downloads">
-      <h2>Downloads</h2>
+      <h2>Downloads & Installation</h2>
       <ul class="mt-2 nav nav-tabs" id="downloadTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#python-tab-pane" type="button" role="tab" aria-controls="python-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/python.png" height="45px"></button>
@@ -81,42 +62,55 @@ import BackToTop from '../components/BackToTop.astro';
       </ul>
       <div class="tab-content border rounded-bottom-2 p-4" id="downloadTabContent">
         <div class="tab-pane fade active show" id="python-tab-pane" role="tabpanel" aria-labelledby="python-tab" tabindex="0">
-          <h3>Python Downloads</h3>
-          <div class="d-grid d-sm-flex gap-2">
+          <h1>Python</h1>
+          <h2> Downloads </h2>
+          <div class="my-2 d-grid d-sm-flex gap-2">
             <a class="btn btn-primary" href="https://github.com/2983u2/Pson/blob/main/Pson.py">Library File (Python)</a> 
             <a class="btn btn-primary" href="https://github.com/2983u2/Pson/archive/refs/heads/main.zip" download="">ZIP Download (Python)</a> 
           </div>
+          <h2> Requirements </h2>
+          <p><b>Python:</b> 3.0 and above</p>
+          <h2> Installation </h2>
+          <p>
+            <ol>
+              <li>Download the <a href="https://github.com/2983u2/Pson/blob/main/Pson.py">Python library file</a>.</li>
+              <li>Import the file: <code>from Pson import *</code></li>
+              <li>Call the functions: <b><u><a href="https://github.com/2983u2/Pson?tab=readme-ov-file#examples">Examples</a></u></b></li>
+              <li>Run your script to generate a JSON file.</li>
+            </ol>
+          </p>
+          </div>
         </div>
         <div class="tab-pane fade" id="java-tab-pane" role="tabpanel" aria-labelledby="java-tab" tabindex="0">
-          <h3>Java Downloads</h3>
+          <h3>Java</h3>
           <div class="text-center">
             <i class="fs-1 bi bi-cone-striped"></i>
             <p class="m-0"> This section is under development. </p>
           </div>
         </div>
         <div class="tab-pane fade" id="c-tab-pane" role="tabpanel" aria-labelledby="c-tab" tabindex="0">
-          <h3>C Downloads</h3>
+          <h3>C</h3>
           <div class="text-center">
             <i class="fs-1 bi bi-cone-striped"></i>
             <p class="m-0"> This section is under development. </p>
           </div>
         </div>
         <div class="tab-pane fade" id="go-tab-pane" role="tabpanel" aria-labelledby="go-tab" tabindex="0">
-          <h3>Go Downloads</h3>
+          <h3>Go</h3>
           <div class="text-center">
             <i class="fs-1 bi bi-cone-striped"></i>
             <p class="m-0"> This section is under development. </p>
           </div>
         </div>
         <div class="tab-pane fade" id="rust-tab-pane" role="tabpanel" aria-labelledby="rust-tab" tabindex="0">
-          <h3>Rust Downloads</h3>
+          <h3>Rust</h3>
           <div class="text-center">
             <i class="fs-1 bi bi-cone-striped"></i>
             <p class="m-0"> This section is under development. </p>
           </div>
         </div>
         <div class="tab-pane fade" id="haskell-tab-pane" role="tabpanel" aria-labelledby="haskell-tab" tabindex="0">
-          <h3>Haskell Downloads</h3>
+          <h3>Haskell</h3>
           <div class="text-center">
             <i class="fs-1 bi bi-cone-striped"></i>
             <p class="m-0"> This section is under development. </p>
