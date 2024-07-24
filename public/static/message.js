@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  console.log('%cHello there fellow traveler!%c\nNothing you can do on this website that\'ll get you hacked, so do whatever you want here in the console. Also, your cookies don\'t personally identify you, so you can also mess with those.',
+  console.log('%cHello there fellow traveler!%c\nFeel free to explore and experiment with the console. Rest assured, nothing on this site can compromise your security, and your cookies do not contain personally identifiable information. Feel free to play around with the console if you want to.',
               'font-weight: bold; font-size: 24px; color: green;', // Style for header
-              'font-size: 16px; color: black;'                     // Style for body text
+              'font-size: 16px; color: white;'                     // Style for body text
              );
 });
