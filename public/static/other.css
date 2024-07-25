@@ -551,6 +551,10 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
     width: 100%
   }
 
+  [data-bs-theme=dark] & {
+    background-color: #000;
+  }
+
   & img {
     margin-left: 0 !important;
     margin-right: 0 !important;
