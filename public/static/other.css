@@ -547,7 +547,7 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 
 .carousel-main {
   & {
-    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+    background-color: var(--bs-secondary-bg-subtle) !important;
     width: 100%
   }
 
@@ -555,10 +555,6 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-
-  [data-bs-theme=dark] & {	
-    background-color: black !important;		
-  }	
 
   @media (min-width:645.98px) {	
     & {	
