@@ -552,7 +552,7 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   }
 
   [data-bs-theme=dark] & {
-    background-color: #000;
+    background-color: #000 !important;
   }
 
   & img {
