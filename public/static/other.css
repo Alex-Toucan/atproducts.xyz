@@ -551,8 +551,8 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
     width: 100%
   }
 
-  & [data-bs-theme=dark] .carousel-main {	
-      background-color: black !important;		
+  [data-bs-theme=dark] & {	
+    background-color: black !important;		
   }	
 
   @media (min-width:645.98px) {	
@@ -582,7 +582,8 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
     }	
   }	
 
-  & .carousel-control-prev, .carousel-main .carousel-control-next {
+  & .carousel-control-prev, 
+  & .carousel-control-next {
     position: static !important;
   }
 
@@ -594,11 +595,13 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
     margin-right: 0 !important;
   }
 
-  & .carousel-control-next, & .carousel-control-prev {
+  & .carousel-control-next, 
+  & .carousel-control-prev {
     color: #212529 !important
   }
 
-  [data-bs-theme=dark] & .carousel-control-next, [data-bs-theme=dark] & .carousel-control-prev {
+  [data-bs-theme=dark] & .carousel-control-next,
+  [data-bs-theme=dark] & .carousel-control-prev {
     color: #212529 !important
   }
 
@@ -609,8 +612,8 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 
   [data-bs-theme=dark] & .carousel .carousel-control-prev-icon,
   [data-bs-theme=dark] & .carousel .carousel-control-next-icon, 
-  [data-bs-theme=dark]&  .carousel .carousel-control-prev-icon,
-  [data-bs-theme=dark]&  .carousel .carousel-control-next-icon {
+  [data-bs-theme=dark] &  .carousel .carousel-control-prev-icon,
+  [data-bs-theme=dark] &  .carousel .carousel-control-next-icon {
     filter: initial;
   }
 
@@ -618,7 +621,8 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   & .carousel .carousel-indicators [data-bs-target] {
     background-color: #212529;
   }
-  & .carousel .carousel-caption, & .carousel .carousel-caption {
+  & .carousel .carousel-caption, 
+  & .carousel .carousel-caption {
     color: #212529!important;
   }
 
@@ -643,12 +647,12 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
 }
 
-.link-footer {
+.link-footer, .link-carousel {
   color: RGBA(var(--bs-dark-rgb, var(--bs-link-opacity, 1)));
   -webkit-text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
   text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
 }
-.link-footer:hover, .link-footer:focus {
+.link-footer:hover, .link-footer:focus, .link-carousel:hover, .link-carousel:focus {
   color: RGBA(26, 30, 33, var(--bs-link-opacity, 1));
   -webkit-text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
   text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
