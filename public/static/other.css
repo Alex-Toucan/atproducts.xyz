@@ -546,76 +546,90 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 }
 
 .carousel-main {
-  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-  width: 100%
-}
+  & {
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+    width: 100%
+  }
 
-[data-bs-theme=dark] .carousel-main {	
-    background-color: black;		
-}	
+  & [data-bs-theme=dark] .carousel-main {	
+      background-color: black !important;		
+  }	
 
- @media (min-width:645.98px) {	
-    .carousel-main {	
+  @media (min-width:645.98px) {	
+    & {	
           width: 90%;
           border-radius: var(--bs-border-radius) !important;
     }	
- }	
- @media (min-width:767.98px) {	
-    .carousel-main {	
-       width: 70%;	
+  }	
+  @media (min-width:767.98px) {	
+    & {	
+        width: 70%;	
     }	
- }	
- @media (min-width:1024px) {	
-    .carousel-main {	
-       width: 50%;	
+  }	
+  @media (min-width:1024px) {	
+    & {	
+        width: 50%;	
     }	
- }
- @media (min-width:1440px) {	
-    .carousel-main {	
-       width: 40%;	
+  }
+  @media (min-width:1440px) {	
+    & {	
+        width: 40%;	
     }	
- }	
- @media (min-width:2000px) {	
-    .carousel-main {	
-       width: 30%;	
+  }	
+  @media (min-width:2000px) {	
+    & {	
+        width: 30%;	
     }	
- }	
- 
- .carousel-main .carousel-control-prev, .carousel-main .carousel-control-next {
-   position: static !important;
- }
- 
- .carousel-main .carousel-indicators {
-   display: block !important;
-   position: static !important;
-   margin-left: 0 !important;
-   margin-bottom: 0 !important;
-   margin-right: 0 !important;
- }
- 
- .carousel-products .carousel-control-prev,
- .carousel-products .carousel-control-next {
-     position: initial;
- }
+  }	
 
-[data-bs-theme=dark] .carousel .carousel-control-prev-icon,
-[data-bs-theme=dark] .carousel .carousel-control-next-icon, [data-bs-theme=dark] .carousel .carousel-control-prev-icon,
-[data-bs-theme=dark] .carousel .carousel-control-next-icon {
-  filter: initial;
-}
+  & .carousel-control-prev, .carousel-main .carousel-control-next {
+    position: static !important;
+  }
 
-.carousel .carousel-indicators [data-bs-target], .carousel .carousel-indicators [data-bs-target] {
-  background-color: #212529;
-}
-.carousel .carousel-caption, .carousel .carousel-caption {
-  color: #212529;
-}
+  & .carousel-indicators {
+    display: block !important;
+    position: static !important;
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+  }
 
-[data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target], [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target] {
-  background-color: #fff;
-}
-[data-bs-theme=dark] .carousel .carousel-caption, [data-bs-theme=dark] .carousel .carousel-caption {
-  color: #fff;
+  & .carousel-control-next, & .carousel-control-prev {
+    color: #212529 !important
+  }
+
+  [data-bs-theme=dark] & .carousel-control-next, [data-bs-theme=dark] & .carousel-control-prev {
+    color: #212529 !important
+  }
+
+  & .carousel-products .carousel-control-prev,
+  & .carousel-products .carousel-control-next {
+      position: initial;
+  }
+
+  [data-bs-theme=dark] & .carousel .carousel-control-prev-icon,
+  [data-bs-theme=dark] & .carousel .carousel-control-next-icon, 
+  [data-bs-theme=dark]&  .carousel .carousel-control-prev-icon,
+  [data-bs-theme=dark]&  .carousel .carousel-control-next-icon {
+    filter: initial;
+  }
+
+  & .carousel .carousel-indicators [data-bs-target], 
+  & .carousel .carousel-indicators [data-bs-target] {
+    background-color: #212529;
+  }
+  & .carousel .carousel-caption, & .carousel .carousel-caption {
+    color: #212529!important;
+  }
+
+  & [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target],
+  & [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target] {
+    background-color: #fff;
+  }
+  & [data-bs-theme=dark] .carousel .carousel-caption,
+  & [data-bs-theme=dark] .carousel .carousel-caption {
+    color: #fff;
+  }
 }
 
 .link-hero, [data-bs-theme=dark] .link-carousel {
