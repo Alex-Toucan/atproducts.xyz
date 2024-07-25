@@ -597,11 +597,6 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 
   & .carousel-control-next, 
   & .carousel-control-prev {
-    color: #212529 !important
-  }
-
-  [data-bs-theme=dark] & .carousel-control-next,
-  [data-bs-theme=dark] & .carousel-control-prev {
     filter: invert(1) grayscale(100);
   }
 
@@ -610,8 +605,8 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
       position: initial;
   }
 
-  [data-bs-theme=dark] & .carousel .carousel-control-prev-icon,
-  [data-bs-theme=dark] & .carousel .carousel-control-next-icon {
+  [data-bs-theme=dark] & .carousel-control-prev-icon,
+  [data-bs-theme=dark] & .carousel-control-next-icon {
     filter: initial;
   }
 
