@@ -1,11 +1,11 @@
 // --- Config --- //
 var pureAlert1Type = "alert-dark"; // Color
-var pureAlert1Title = "NEW BETA TESTING SITE:"; // Title
-var pureAlert1Icon = 'bi-plus-lg'; // Icon
-var pureAlert1Desc = "We have updated the Department of Beta Testing site to be more modernized with Bootstrap 5 and Astro!"; // Description
-var pureAlert1Link = 'https://beta-testing.atproducts.xyz'; // Link
-var pureAlert1LinkDesc = 'View now'; // Link text
-var pureAlert1Enabled = false; // Switch to enable/disable alert
+var pureAlert1Title = "DATA NOTICE:"; // Title
+var pureAlert1Icon = 'bi-dash-lg'; // Icon
+var pureAlert1Desc = "We have removed all unnecessary and/or unused files starting with 2.19.1. This results in 207 files being removed. If you are curious on what these files are, please click the link below."; // Description
+var pureAlert1Link = 'https://github.com/Alex-Toucan/atproducts.xyz/pull/220/commits/80b2ffed86602d040542bf7168f28056e7ddc801'; // Link
+var pureAlert1LinkDesc = 'View the GitHub commit'; // Link text
+var pureAlert1Enabled = true; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert1Cookie(name, value, days) {
