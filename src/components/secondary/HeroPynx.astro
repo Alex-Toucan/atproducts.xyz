@@ -26,7 +26,7 @@ const {
             <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
             )}
             {secondaryHref && secondaryText && (
-              <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
+              <a href={secondaryHref} class="btn btn-secondary col-md" set:html={secondaryText}></a>
             )}
             {dropdownItems && (
               <div class="dropdown col-md">
@@ -48,9 +48,8 @@ const {
             <h2 class="me-md-auto text-centertostart mb-0">Contact Us</h2>
             <br class="disbr">
             <div class="d-flex justify-content-center gap-3">
-              <a href="https://www.2983u2.site" aria-label="Pynx Technologies" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Pynx Technologies"><i class="bi bi-globe"></i></a>
-              <a href="https://www.instagram.com/fisted.mp3" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram"><i class="bi bi-instagram"></i></a>
-              <a href="mailto:support@atproducts.xyz" aria-label="Our Support Email" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Our Support Email"><i class="bi bi-envelope-fill"></i></a>  
+              <a href="https://www.instagram.com/void.iso" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="/form" aria-label="Our Support Email" target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Our Support Email"><i class="bi bi-envelope-fill"></i></a>  
             </div>
           </div>
         </div>

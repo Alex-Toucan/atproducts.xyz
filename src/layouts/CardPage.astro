@@ -1,12 +1,12 @@
 ---
-const { id, title, cardLinks } = Astro.props;
+const { id, title, cardLinks, size } = Astro.props;
 ---
 
 <div class={`hero hero-${id}`} data-bs-theme="dark">
   <div class="hero-back h-100">
     <div class="hero-filter">
       <h1 class="display-4 fw-bold title pt-3 pb-2" set:html={title}></h1>
-      <div class="d-md-flex mx-mmd-2">
+      <div class={`d-${size}-flex mx-2`}>
         {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, secondaryHref, additionalImageClasses }, index) => (
           <div class="col-md mt-1 mb-3 m-1">
             <div class="card text-center permcard shadow-sm h-100">

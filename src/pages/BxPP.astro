@@ -1,0 +1,58 @@
+---
+import Head from '../layouts/Head.astro';
+import Scripts from '../layouts/Scripts.astro';
+import HeroPynx      from '../components/secondary/HeroPynx.astro';
+import Navbar    from '../components/Navbar.astro';
+import Footer    from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+
+<Head title="BxPP" heroid="ehs" description="BxPP; a Python programming language." keywords="Inferno, BxPP, AT Products LLC" author="Alex Toucan & Pynx" />
+<div id="page">
+	<Navbar />
+	<HeroPynx
+		title="BxPP Programming Language"
+		description="Made by Pynx&semi; a Python/C++ Programming Language."
+		primaryHref="#downloads"
+    primaryText="Downloads"
+    secondaryHref="https://github.com/Discordmodsbers/BxPP/"
+    secondaryText="<i class='bi bi-github fs-6 me-2'></i> GitHub Repo"
+		dropdownItems={[
+			{ navigationDesc: "General Information", navigationLink: "#general-info" },
+			{ navigationDesc: "Installation", navigationLink: "#install" },
+			{ navigationDesc: "Downloads", navigationLink: "#downloads" },
+		]},
+	/>
+  <main id="bxpp" class="container">
+		<div id="general-info">
+			<h2> General Information </h2>
+			<p> BxPP, made by Pynx, is a custom Python programming language. </p>
+			<br>
+			<p>
+				<b>Version:</b> 3.0 <br>
+				<b>Platforms:</b> Linux & Windows
+      </p>
+		</div>
+		<hr>
+		<div id="install">
+			<h2> Installation </h2>
+			<p>
+				<code> sudo python3 setup.py</code>
+				<br> OR <br>
+				<code>run setup.exe </code>
+			</p>
+		</div>
+		<hr>
+		<div id="downloads">
+			<h2>Downloads</h2>
+			<div class="d-grid d-sm-flex gap-2">
+        <a class="btn btn-primary" href="/bxpp/setup.py" download>Setup File (Python)</a> 
+        <a class="btn btn-primary" href="/bxpp/BxPP.py" download>Main File (Python)</a> 
+        <a class="btn btn-primary" href="https://github.com/Discordmodsbers/BxPP/archive/refs/heads/main.zip" download>ZIP Download (Linux &amp; Windows)</a> 
+      </div>
+		</div>
+	</main>
+	<Footer author="Alex Toucan & Pynx" />
+	<BackToTop />
+</div>
+<Scripts />
