@@ -13,7 +13,8 @@ const {
   marginBottom,
   icons,
   dropdownItems,
-  container
+  container,
+  size = 'md',
 } = Astro.props;
 ---
 
@@ -32,17 +33,17 @@ const {
           </div>
           <p class="fs-4 m-3 text-body-secondary" set:html={description}></p>
           <div class="mx-auto justify-content-between container" id="links">
-            <div class="d-md-flex d-grid gap-2">
+            <div class={`d-${size}-flex d-grid gap-2`}>
               {errorButton && (
                 <Fragment set:html={errorButton} />
               )}
               {buttons && (
                 buttons.map(({ href, text, type }, index) => (
-                  <a href={href} class={`btn ${type === 'primary' ? 'btn-primary' : 'btn-secondary'} col-md`}>{text}</a>
+                  <a href={href} class={`btn ${type === 'primary' ? 'btn-primary' : 'btn-secondary'} col-${size}`}>{text}</a>
                 ))
               )}
               {dropdownItems && (
-                <div class="dropdown col-md">
+                <div class={`dropdown col-${size}`}>
                   <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
                     Navigation
                   </button>
