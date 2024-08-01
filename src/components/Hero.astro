@@ -14,7 +14,7 @@ const {
   icons,
   dropdownItems,
   container,
-  size = 'md',
+  size,
 } = Astro.props;
 ---
 
@@ -33,7 +33,7 @@ const {
           </div>
           <p class="fs-4 m-3 text-body-secondary" set:html={description}></p>
           <div class="mx-auto justify-content-between container" id="links">
-            <div class={`d-${size}-flex d-grid gap-2`}>
+            <div class={`d-${size === size ? size : 'md'}-flex d-grid gap-2`}>
               {errorButton && (
                 <Fragment set:html={errorButton} />
               )}
