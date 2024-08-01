@@ -1,3 +1,14 @@
+:root {
+  --text-color: black; /* Default for light mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: white; /* Default for dark mode */
+  }
+}
+
+
 [data-bs-theme=dark] {
   --bs-heading-color: #fff !important;
 }
