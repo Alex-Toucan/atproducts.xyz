@@ -20,7 +20,7 @@
       preload'''
     Content-Security-Policy = '''
       default-src 'none'; 
-      frame-src 'self'; 
+      frame-src 'self' https://app.netlify.com/; 
       form-action 'self'; 
       base-uri 'self'; 
       manifest-src 'self'; 
