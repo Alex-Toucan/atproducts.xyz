@@ -13,8 +13,9 @@ import BackToTop from '../components/BackToTop.astro';
 	<HeroPynx
 		title="PSON for JSON"
 		description="Made by Pynx&semi; the better way to do JSON files for languages; with languages."
-		primaryHref="#downloads"
-    primaryText="Downloads"
+    buttons={[
+      { href: "#downloads", text: "Downloads", type: "primary" },
+    ]},
     dropdownItems={[
       { navigationDesc: "General Information", navigationLink: "#general-info" },
       { navigationDesc: "Downloads & Installs", navigationLink: "#downloads" },
