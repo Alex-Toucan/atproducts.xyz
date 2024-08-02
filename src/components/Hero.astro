@@ -13,8 +13,11 @@ const {
   marginBottom,
   icons,
   dropdownItems,
-  container
+  container,
+  size
 } = Astro.props;
+
+const flexSize = size ? size : 'md';
 ---
 
 <div id="intro" class={`hero hero-${id} text-center ${marginBottom === 'false' ? '' : 'mb-3'}`} data-bs-theme="dark">
@@ -32,7 +35,7 @@ const {
           </div>
           <p class="fs-4 m-3 text-body-secondary" set:html={description}></p>
           <div class="mx-auto justify-content-between container" id="links">
-            <div class="d-md-flex d-grid gap-2">
+            <div class={`d-${flexSize}-flex d-grid gap-2`}>
               {errorButton && (
                 <Fragment set:html={errorButton} />
               )}
