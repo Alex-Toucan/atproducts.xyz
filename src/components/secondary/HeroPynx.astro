@@ -2,10 +2,7 @@
 const {
   title,
   description,
-  primaryHref,
-  primaryText,
-  secondaryHref,
-  secondaryText,
+  buttons,
   dropdownItems 
 } = Astro.props;
 ---
@@ -22,11 +19,10 @@ const {
         <p class="fs-4 m-3 text-body-secondary" set:html={description}></p>
         <div class="mx-auto justify-content-between container" id="links">
           <div class="d-md-flex d-grid gap-2 container">
-            {primaryHref && primaryText && (
-            <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
-            )}
-            {secondaryHref && secondaryText && (
-              <a href={secondaryHref} class="btn btn-secondary col-md" set:html={secondaryText}></a>
+            {buttons && (
+              buttons.map(({ href, text, type }, index) => (
+                <a href={href} class={`btn ${type === 'primary' ? 'btn-primary' : 'btn-secondary'} col-md`} set:html={text}></a>
+              ))
             )}
             {dropdownItems && (
               <div class="dropdown col-md">

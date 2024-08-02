@@ -7,16 +7,15 @@ import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="PSON" heroid="ehs" description="PSON; The better JSON for Python." keywords="Inferno, PSON, BxPP, AT Products LLC" author="Alex Toucan & Pynx" />
+<Head title="PSON" heroid="ehs" description="PSON; The better JSON." keywords="Inferno, PSON, BxPP, AT Products LLC" author="Alex Toucan & Pynx" />
 <div id="page">
 	<Navbar />
 	<HeroPynx
 		title="PSON for JSON"
-		description="Made by Pynx&semi; the better way to do JSON files for Python; with Python."
-		primaryHref="#downloads"
-    primaryText="Downloads"
-    secondaryHref="https://github.com/2983u2/Pson/"
-    secondaryText="<i class='bi bi-github fs-6 me-2'></i> GitHub Repo"
+		description="Made by Pynx&semi; the better way to do JSON files for languages; with languages."
+    buttons={[
+      { href: "#downloads", text: "Downloads", type: "primary" },
+    ]},
     dropdownItems={[
       { navigationDesc: "General Information", navigationLink: "#general-info" },
       { navigationDesc: "Downloads & Installs", navigationLink: "#downloads" },
@@ -25,7 +24,7 @@ import BackToTop from '../components/BackToTop.astro';
   <main id="bxpp" class="container">
     <div id="general-info">
       <h2> General Information </h2>
-      <p>PSON aka PynxSON, made by Pynx, is a JSON extension for Python3 (and soon, other languages). It uses a Python script as a library, then you create a Python script using functions from the library for it to create a JSON file using what you wrote.</p>
+      <p>PSON aka PynxSON, made by Pynx, is a JSON extension for the supported programming languages (can be found below). It uses a script from the supported programming languages as a library, then you can create script using functions from the library for it to create a JSON file using what you wrote.</p>
       <p>What does PSON have? Well:</p>
       <ul>
         <li>Comments (Ever needed to describe your objects? Well now you can!)</li>
@@ -33,16 +32,22 @@ import BackToTop from '../components/BackToTop.astro';
         <li>Better speed and compatibility</li>
       </ul>
       <p>
-        <b>Version:</b> 3.0 <br>
         <b>Platforms:</b> Windows, Linux, and MacOS.
       </p>
     </div>
     <hr>
     <div id="downloads">
       <h2>Downloads & Installation</h2>
-      <ul class="mt-2 nav nav-tabs" id="downloadTab" role="tablist">
+      <ul class="mt-2 nav nav-tabs" id="downloadTab" role="tablist" style="
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+      ">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#python-tab-pane" type="button" role="tab" aria-controls="python-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/python.png" height="45px"></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="dart-tab" data-bs-toggle="tab" data-bs-target="#dart-tab-pane" type="button" role="tab" aria-controls="dart-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/dart.png" height="45px"></button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="c-tab" data-bs-toggle="tab" data-bs-target="#c-tab-pane" type="button" role="tab" aria-controls="c-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/c.png" height="45px"></button>
@@ -60,15 +65,17 @@ import BackToTop from '../components/BackToTop.astro';
       <div class="tab-content border rounded-bottom-2 p-4" id="downloadTabContent">
         <div class="tab-pane fade active show" id="python-tab-pane" role="tabpanel" aria-labelledby="python-tab" tabindex="0">
           <h1>Python</h1>
+          <span class="h5">Version: <span class="fw-normal">3.0</span></span>
           <hr class="border-3">
           <h2> Downloads </h2>
-          <div class="my-2 d-grid d-sm-flex gap-2">
-            <a class="btn btn-primary" href="https://github.com/2983u2/Pson/blob/main/Pson.py">Library File (Python)</a> 
-            <a class="btn btn-primary" href="https://github.com/2983u2/Pson/archive/refs/heads/main.zip" download="">ZIP Download (Python)</a> 
+          <div class="my-2 d-grid d-sm-flex flex-wrap gap-2">
+            <a class="btn btn-primary" href="https://github.com/2983u2/Pson/blob/main/Pson.py" download>Library File (Python)</a> 
+            <a class="btn btn-primary" href="https://github.com/2983u2/Pson/archive/refs/heads/main.zip" download>ZIP Download (Python)</a> 
+            <a class="btn btn-secondary" href="https://github.com/2983u2/Pson/"><i class='bi bi-github fs-6 me-2'></i> GitHub Repo</a>
           </div>
           <hr>
           <h2> Requirements </h2>
-          <p><b>Python:</b> 3.0 and above</p>
+          <p><b>Python:</b> 3.0 or above</p>
           <hr>
           <h2> Installation </h2>
           <p>
@@ -76,6 +83,30 @@ import BackToTop from '../components/BackToTop.astro';
               <li>Download the <a href="https://github.com/2983u2/Pson/blob/main/Pson.py">Python library file</a>.</li>
               <li>Import the file: <code>from Pson import *</code></li>
               <li>Call the functions: <b><u><a href="https://github.com/2983u2/Pson?tab=readme-ov-file#examples">Examples</a></u></b></li>
+              <li>Run your script to generate a JSON file.</li>
+            </ol>
+          </p>
+        </div>
+        <div class="tab-pane fade" id="dart-tab-pane" role="tabpanel" aria-labelledby="dart-tab" tabindex="0">
+          <h1>Dart</h1>
+          <span class="h5">Version: <span class="fw-normal">1.0</span></span>
+          <hr class="border-3">
+          <h2> Downloads </h2>
+          <div class="my-2 d-grid d-sm-flex gap-2">
+            <a class="btn btn-primary" href="https://github.com/2983u2/Dson/blob/main/Dson.dart">Library File (Dart)</a> 
+            <a class="btn btn-primary" href="https://github.com/2983u2/Dson/archive/refs/heads/main.zip" download="">ZIP Download (Dart)</a> 
+            <a class="btn btn-secondary" href="https://github.com/2983u2/Dson/"><i class='bi bi-github fs-6 me-2'></i> GitHub Repo</a>
+          </div>
+          <hr>
+          <h2> Requirements </h2>
+          <p><b>Dart:</b> 3.4.4 or above</p>
+          <hr>
+          <h2> Installation </h2>
+          <p>
+            <ol>
+              <li>Download the <a href="https://github.com/2983u2/Pson/blob/main/Dson.dart">Dart library file</a>.</li>
+              <li>Import the file: <code>import 'Dson.dart';</code></li>
+              <li>Call the functions: <b><u><a href="https://github.com/2983u2/Dson?tab=readme-ov-file#examples">Examples</a></u></b></li>
               <li>Run your script to generate a JSON file.</li>
             </ol>
           </p>
