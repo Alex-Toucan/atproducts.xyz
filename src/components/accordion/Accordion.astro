@@ -6,9 +6,9 @@ const classes = additionalClasses ? `accordion ${additionalClasses}` : 'accordio
 <div class={classes} id={parent}>
   {theme ? (
     <div data-bs-theme={theme}>
-      <slot name="accordion-content" parent={parent} />
+      <slot name="accordion-content" />
     </div>
   ) : (
-    <slot name="accordion-content" parent={parent} />
+    <slot name="accordion-content" />
   )}
 </div>
