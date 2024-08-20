@@ -44,3 +44,4 @@
       interest-cohort=() '''
     Referrer-Policy = "strict-origin"
     Access-Control-Allow-Origin = "*"
+    X-UA-Compatible = "IE=edge"
