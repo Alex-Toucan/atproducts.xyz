@@ -1,4 +1,5 @@
 ---
+import Dependencies from '../layouts/Dependencies.astro';
 import Head      from '../layouts/Head.astro';
 import Scripts from '../layouts/Scripts.astro';
 import Hero      from '../components/Hero.astro';
@@ -11,6 +12,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
+<Dependencies />
 <Head title="CodingHome" heroid="codinghome" icon="codinghome.webp" description="A Discord server full of coders!" keywords="Scripts, viruses, coding," author="Alex Toucan & CodingLive" />
 <div id="page">
   <Navbar />
@@ -1617,4 +1619,4 @@ import BackToTop from '../components/BackToTop.astro';
   <Footer author="Alex Toucan & CodingLive" />
   <BackToTop />
 </div>
-<Scripts modal="true" />
+<Scripts modal="true" scrollspy="true" accordion="true" />

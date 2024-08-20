@@ -1,4 +1,5 @@
 ---
+import Dependencies from '../../layouts/Dependencies.astro';
 import Head      from '../../layouts/Head.astro';
 import Scripts from '../../layouts/Scripts.astro';
 import Hero      from '../../components/Hero.astro';
@@ -8,6 +9,7 @@ import Scrollspy from '../../components/Scrollspy.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
+<Dependencies />
 <Head title="Flash Documentation" heroid="flash" icon="Adobe_Flash_Player_32.svg.png" description="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!" keywords="Flash Documentation, AT Products" author="Alex Toucan" />
 <div id="page">
   <Navbar />
@@ -550,4 +552,4 @@ import BackToTop from '../../components/BackToTop.astro';
   <Footer />
   <BackToTop />
 </div>
-<Scripts scrollspy="true"/>
+<Scripts scrollspy="true" accordion="true" />

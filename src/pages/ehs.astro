@@ -1,4 +1,5 @@
 ---
+import Dependencies from '../layouts/Dependencies.astro';
 import Head from '../layouts/Head.astro';
 import Scripts from '../layouts/Scripts.astro';
 import Hero   from '../components/Hero.astro';
@@ -8,6 +9,7 @@ import Modal  from '../components/Modal.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
+<Dependencies />
 <Head title="Ethical Hacking Society" heroid="ehs" description="The Ethical Hacking Society is about ethical hacking as a whole." keyword="scripts, viruses, coding," author="Alex Toucan & CobraCommander" />
 <div id="page">
   <Navbar />
@@ -185,4 +187,4 @@ import BackToTop from '../components/BackToTop.astro';
   <Footer author="Alex Toucan & CobraCommander" />
   <BackToTop />
 </div>
-<Scripts />
+<Scripts modal="true" />
