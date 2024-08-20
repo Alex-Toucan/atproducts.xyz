@@ -15,5 +15,12 @@ export default defineConfig({
       svg: true,
     })
     */
-  ]
+  ],
+  vite: {
+    resolve: {
+      alias: {
+        'jquery-ui': 'jquery-ui/ui'
+      }
+    }
+  }
 })
