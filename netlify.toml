@@ -20,7 +20,7 @@
       preload'''
     Content-Security-Policy = '''
       default-src 'none'; 
-      frame-src 'self'; 
+      frame-src 'self' https://app.netlify.com/; 
       form-action 'self'; 
       base-uri 'self'; 
       manifest-src 'self'; 
@@ -44,3 +44,4 @@
       interest-cohort=() '''
     Referrer-Policy = "strict-origin"
     Access-Control-Allow-Origin = "*"
+    X-UA-Compatible = "IE=edge"

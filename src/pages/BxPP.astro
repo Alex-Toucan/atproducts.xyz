@@ -13,10 +13,10 @@ import BackToTop from '../components/BackToTop.astro';
 	<HeroPynx
 		title="BxPP Programming Language"
 		description="Made by Pynx&semi; a Python/C++ Programming Language."
-		primaryHref="#downloads"
-    primaryText="Downloads"
-    secondaryHref="https://github.com/Discordmodsbers/BxPP/"
-    secondaryText="<i class='bi bi-github fs-6 me-2'></i> GitHub Repo"
+    buttons={[
+      { href: "#downloads", text: "Downloads", type: "primary" },
+      { href: "https://github.com/Discordmodsbers/BxPP", text: "<i class='bi bi-github fs-6 me-2'></i> GitHub Repo", type: "secondary" },
+    ]},
 		dropdownItems={[
 			{ navigationDesc: "General Information", navigationLink: "#general-info" },
 			{ navigationDesc: "Installation", navigationLink: "#install" },
