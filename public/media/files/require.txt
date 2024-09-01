@@ -6,7 +6,7 @@ Pillow>=10.0.1
 browserhistory==0.1.2
 cryptography>=39.0.1
 keyboard==0.13.5
-opencv_python==4.5.3.56
+opencv_python==4.8.1.78
 pynput==1.7.3
 pywin32==301
 scipy>=1.10.0
