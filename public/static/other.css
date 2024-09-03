@@ -5483,7 +5483,7 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   border: 1px solid black;
 }
 
-@media (min-width:767.98px) {
+@media (min-width: 767.98px) {
 	.sw-feature-box {
 		display: flex
 	}
