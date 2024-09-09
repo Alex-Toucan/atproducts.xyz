@@ -41,7 +41,7 @@ const flexSize = size ? size : 'md';
               )}
               {buttons && (
                 buttons.map(({ href, text, type }, index) => (
-                  <a href={href} class={`btn ${type === 'primary' ? 'btn-primary' : 'btn-secondary'} col-md`}>{text}</a>
+                  <a href={href} class={`btn btn-${type} col-md`}>{text}</a>
                 ))
               )}
               {dropdownItems && (
