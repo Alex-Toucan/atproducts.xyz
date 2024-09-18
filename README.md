@@ -22,10 +22,10 @@
 <hr>
 <h2>Contact Links</h2>
 <p>Discord: <a href="https://discord.com/users/905434578926313512">@alextoucan</a></p>
-<p>Twitter: <a href="https://twitter.com/ATProductsLLC">ATProductsLLC</a></p>
+<p>Twitter/X: <a href="https://x.com/ATProductsLLC">ATProductsLLC</a></p>
 <p>YouTube: <a href="https://youtube.com/c/AlexToucanAT">Alex Toucan -AT-</a></p>
 <p>Email: <a href="mailto:support@atproducts.xyz">support@atproducts.xyz</a></p>
-<p>Secondary Weather Account: <a href="https://twitter.com/ATPWeather">ATPWeather</a></p>
+<p>Secondary Weather Account: <a href="https://x.com/ATPWeather">ATPWeather</a></p>
 <hr>
 <h2>About Us</h2>
 AT Products LLC, otherwise known as AT Products, is an informative technology company that is based in the United States that provides files, that contains resources for cybersecurity and malware, and <a href="https://atproducts.xyz/paid">other solutions</a> to your problems!<br><br>
