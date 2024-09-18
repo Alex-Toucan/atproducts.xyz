@@ -2,7 +2,7 @@
  <a href="https://atproducts.xyz"><img src="/public/media/images/ATProductsLLC.png" alt="AT Products LLC" width="75%"></a>
  <br><br>
  <p>
-  <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love">
+  <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love"> 
   <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
   <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-2.19.2-blue" alt="Stable Version"></a>
   <a href="https://beta.atproducts.xyz#what-new"><img src="https://img.shields.io/badge/beta_version-2.19.2-red" alt="Beta Version"></a>
