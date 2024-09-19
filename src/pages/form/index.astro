@@ -9,39 +9,41 @@ import BackToTop from '../../components/BackToTop.astro';
 <Head title="Contact Form" description="If you don't want to email us on your email client, use this instead. We'll reach out to your email provided." author="Alex Toucan"/>
 <div id="page">
   <Navbar />
-  <main id="form" class="container">
-    <h1 class="title">Contact Form</h1>
-    <p>You may either use this or <a href="mailto:support@atproducts.xyz">email us manually</a>. If you don't want to email us on your email client, use this instead. We'll reach out to your email provided.</p>
-    <form
-    name="Contact Form" 
-    action="/form/success"
-    method="POST"
-    data-netlify="true"
-    enctype="multipart/form-data"
-    >
-      <div class="d-sm-flex gap-2">
-        <div class="col">
-          <div class="mb-3">
-            <label for="nameInput" class="form-label fw-bold">Name</label>
-            <input name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
-        </div>
-        </div>
-        <div class="col">
-          <div class="mb-3">
-            <label for="emailInput" class="form-label fw-bold">Email address</label>
-            <input name="Email" type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+  <div id="main-content">
+    <main id="form" class="container">
+      <h1 class="title">Contact Form</h1>
+      <p>You may either use this or <a href="mailto:support@atproducts.xyz">email us manually</a>. If you don't want to email us on your email client, use this instead. We'll reach out to your email provided.</p>
+      <form
+      name="Contact Form" 
+      action="/form/success"
+      method="POST"
+      data-netlify="true"
+      enctype="multipart/form-data"
+      >
+        <div class="d-sm-flex gap-2">
+          <div class="col">
+            <div class="mb-3">
+              <label for="nameInput" class="form-label fw-bold">Name</label>
+              <input name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
+          </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="emailInput" class="form-label fw-bold">Email address</label>
+              <input name="Email" type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="mb-2">
-        <label for="textareaInput" class="form-label fw-bold">Information to Send</label>
-        <textarea name="Text" class="form-control" id="textareaInput" rows="3" required></textarea>
-      </div>
-      <small>If you wish to upload files, you must <a href="mailto:support@atproducts.xyz">email us manually</a> due to Netlify complications. Please allow 72 hours for a response back to your email provided. If your response is considered spam, it may not be responded to.</small>
-      <button type="submit" class="mt-2 btn btn-lg btn-primary col-12">Send</button>
-    </form>
-  </main>
-<Footer />
+        <div class="mb-2">
+          <label for="textareaInput" class="form-label fw-bold">Information to Send</label>
+          <textarea name="Text" class="form-control" id="textareaInput" rows="3" required></textarea>
+        </div>
+        <small>If you wish to upload files, you must <a href="mailto:support@atproducts.xyz">email us manually</a> due to Netlify complications. Please allow 72 hours for a response back to your email provided. If your response is considered spam, it may not be responded to.</small>
+        <button type="submit" class="mt-2 btn btn-lg btn-primary col-12">Send</button>
+      </form>
+    </main>
+  <Footer />
+  </div>
 <BackToTop />
 </div>
 <Scripts />
