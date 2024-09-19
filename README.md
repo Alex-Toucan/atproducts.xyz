@@ -2,7 +2,7 @@
  <a href="https://atproducts.xyz"><img src="/public/media/images/ATProductsLLC.png" alt="AT Products LLC" width="75%"></a>
  <br><br>
  <p>
-  <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love">
+  <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love"> 
   <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
   <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-2.19.2-blue" alt="Stable Version"></a>
   <a href="https://beta.atproducts.xyz#what-new"><img src="https://img.shields.io/badge/beta_version-2.19.2-red" alt="Beta Version"></a>
@@ -22,14 +22,14 @@
 <hr>
 <h2>Contact Links</h2>
 <p>Discord: <a href="https://discord.com/users/905434578926313512">@alextoucan</a></p>
-<p>Twitter: <a href="https://twitter.com/ATProductsLLC">ATProductsLLC</a></p>
+<p>Twitter/X: <a href="https://x.com/ATProductsLLC">ATProductsLLC</a></p>
 <p>YouTube: <a href="https://youtube.com/c/AlexToucanAT">Alex Toucan -AT-</a></p>
 <p>Email: <a href="mailto:support@atproducts.xyz">support@atproducts.xyz</a></p>
-<p>Secondary Weather Account: <a href="https://twitter.com/ATPWeather">ATPWeather</a></p>
+<p>Secondary Weather Account: <a href="https://x.com/ATPWeather">ATPWeather</a></p>
 <hr>
 <h2>About Us</h2>
 AT Products LLC, otherwise known as AT Products, is an informative technology company that is based in the United States that provides files, that contains resources for cybersecurity and malware, and <a href="https://atproducts.xyz/paid">other solutions</a> to your problems!<br><br>
 The "AT" in AT Products does stand for Alex Toucan.
 <hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#ours">View more information</a>.
-<h6>Last Recorded Version: 2.19.2</h6>
+<h6>Last Recorded Version: 2.19.2.1</h6>
