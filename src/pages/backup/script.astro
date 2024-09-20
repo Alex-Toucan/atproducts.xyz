@@ -13,9 +13,10 @@ import BackToTop from '../../components/BackToTop.astro';
 <Head title="The Script Community" heroid="script" icon="vibrant2.png" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus"/>
 <div id="page">
   <Navbar />
-    <div class="alert alert-dark mb-0" role="alert">
-      This is an inactive community. Expect no new sections or changes without special exceptions.
-    </div>
+  <div class="alert alert-dark mb-0" role="alert">
+    This is an inactive community. Expect no new sections or changes without special exceptions.
+  </div>
+  <div id="main-content>
     <Hero id="script" title="The Script Community" description="The Script Community is for hacking enthusiasts to share their knowledge." imageSrc="/media/images/vibrant2.png" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3"
       buttons={[
         { href: "/script", text: "View the pop-up format", type: "secondary" },
@@ -498,7 +499,8 @@ import BackToTop from '../../components/BackToTop.astro';
       <p><a class="icon-link icon-link-hover" href="https://www.youtube.com/watch?v=zOYohNOnWp4">Tutorial<i class="bi bi-arrow-right h-100"></i></a></p>
     </div>         
   </main>
-<Footer author="Alex Toucan & Nasus" />
+  <Footer author="Alex Toucan & Nasus" />
+</div>
 <BackToTop />
 </div>
 <Scripts accordion="true" scrollspy="true" />
