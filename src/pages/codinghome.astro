@@ -340,27 +340,27 @@ import BackToTop from '../components/BackToTop.astro';
                             <h6>Fixing libicu dependency package issue</h6>
                             <p>Package is at this date & time not available for Ubuntu 24.04 LTS. Paste content (Console):<br>
 <pre>
-  <code>
-    echo "deb http://archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/libicu-jammy.list<br>
-  </code>
+<code>
+echo "deb http://archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/libicu-jammy.list<br>
+</code>
 </pre>
                             <br>
                             Pinning to lower priority to avoid conflicts with with main 24.04 repositories. Paste content (Console):<br>
 <pre>
-  <code>
-    sudo tee /etc/apt/preferences.d/libicu &lt;&lt;EOF
-    Package: libicu*
-    Pin: release n=jammy
-    Pin-Priority: 100
-    EOF<br>
-  </code>
+<code>
+sudo tee /etc/apt/preferences.d/libicu &lt;&lt;EOF
+Package: libicu*
+Pin: release n=jammy
+Pin-Priority: 100
+EOF<br>
+</code>
 </pre>
                             <br>
                             Update system & install .NET SDK. Paste content (Console):<br>
 <pre>
-  <code>
-    sudo apt update && sudo apt install dotnet-sdk-8.0
-  </code>
+<code>
+sudo apt update && sudo apt install dotnet-sdk-8.0
+</code>
 </pre>
                             </p>
                           </Fragment>
@@ -426,25 +426,25 @@ import BackToTop from '../components/BackToTop.astro';
                             <p>Un-comment all tables matching the pattern below - but check in your DB, if they were created by the <code>create_table.sql</code>. </p>
                             <p>
 <pre>
-  <code> 
-    // REQUIRED User - uncomment as well!!!
-    // Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.
-    $cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;; 
-    $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;
-    // Pattern 
-    $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;; 
-  </code>
+<code> 
+// REQUIRED User - uncomment as well!!!
+// Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.
+$cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;; 
+$cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;
+// Pattern 
+$cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;; 
+</code>
 </pre>
                             </p>
                             <h6>Optional: Create the User</h6>
                             <p>
-                              <pre>
-                                <code> 
-                                      CREATE USER 'pma'@'localhost' IDENTIFIED BY'pmapass';
-                                      GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO 'pma'@'localhost'; 
-                                      FLUSH PRIVILEGES;
-                                </code>
-                              </pre>
+<pre>
+<code> 
+CREATE USER 'pma'@'localhost' IDENTIFIED BY'pmapass';
+GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO 'pma'@'localhost'; 
+FLUSH PRIVILEGES;
+</code>
+</pre>
                             </p>
                             <p>Problems or using Windows? <br> =&gt; Refer to the Docs: <code>http://yourServerNameOrIPAddr/phpmyadmin/doc/html/setup.html#phpmyadmin-configuration-storage</code>
                             </p>
