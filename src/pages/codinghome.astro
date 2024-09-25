@@ -356,13 +356,12 @@ EOF<br>
 </code>
 </pre>
                             <br>
-                            Update system & install .NET SDK. Paste content (Console):<br>
+                            Update system & install .NET SDK. Paste content (Console):</p>
 <pre>
 <code>
 sudo apt update && sudo apt install dotnet-sdk-8.0
 </code>
 </pre>
-                            </p>
                           </Fragment>
                         </AccordionItem>
                         <AccordionItem title="Rust Resources" id="rustresources" parent="learningresourcesAccordion">
@@ -424,7 +423,6 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                             </blockquote>
                             <h3>Under the <code>phpMyAdmin configuration storage settings</code>-section </h3>
                             <p>Un-comment all tables matching the pattern below - but check in your DB, if they were created by the <code>create_table.sql</code>. </p>
-                            <p>
 <pre>
 <code> 
 // REQUIRED User - uncomment as well!!!
@@ -434,10 +432,8 @@ $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;
 // Pattern 
 $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;; 
 </code>
-</pre>
-                            </p>
+</pre>      
                             <h6>Optional: Create the User</h6>
-                            <p>
 <pre>
 <code> 
 CREATE USER 'pma'@'localhost' IDENTIFIED BY'pmapass';
@@ -445,7 +441,6 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO 'pma'@'localhost';
 FLUSH PRIVILEGES;
 </code>
 </pre>
-                            </p>
                             <p>Problems or using Windows? <br> =&gt; Refer to the Docs: <code>http://yourServerNameOrIPAddr/phpmyadmin/doc/html/setup.html#phpmyadmin-configuration-storage</code>
                             </p>
                           </Fragment>
@@ -1071,13 +1066,12 @@ FLUSH PRIVILEGES;
               <Fragment slot="scrollspy-content">
                 <div id="com-3">
                   <h3>Comments</h3>
-                  <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes. <br>
+                  <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes. </p>
 <pre>
 <code> 
 # This is a comment 
 </code>  
 </pre>
-                  </p>
                 </div>
                 <div id="data-3">
                   <h3>Data Types</h3>
@@ -1090,14 +1084,13 @@ FLUSH PRIVILEGES;
                     <br> Boolean Type: <code>bool</code>
                     <br> Binary Types: <code>bytes, bytearray, memoryview</code>
                   </p>
-                  <p>We will go more in-depth on some of these types in the next few paragraphs.</p>
-                  <p>You can print the data type of a variable with the type() function: <br>
+                  <p>We will go more in-depth on some of these types in the next few sections.</p>
+                  <p>You can print the data type of a variable with the <code>type()</code> function:</p>
 <pre>
 <code>
 x = 5 <br> print(type(x)) 
 </code> 
 </pre>
-                  </p>
                 </div>
                 <div id="str-3">
                   <h3>Strings</h3>
@@ -1110,43 +1103,37 @@ y = 'hello'
 x == y # returns True 
 </code>
 </pre>
-                  </p>
-                  <p>You can assign a multiline string to a variable by using three quotes: <br>
+                  <p>You can assign a multiline string to a variable by using three quotes: </p>
 <pre>
 <code> 
 x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""  
 </code>
 </pre>
-                  </p>
-                  <p>You can check the length of a string using the len() function: 
+                  <p>You can check the length of a string using the len() function: </p>
 <pre>
-  <code>  
-      x = "hello" 
-      print(len(text)) # returns 5
-  </code>
+<code>  
+  x = "hello" 
+  print(len(text)) # returns 5
+</code>
 </pre>
-                  </p>
                 </div>
                 <div id="num-3">
                   <h3>Numbers</h3>
                   <p>There are 2 primary, <code>int</code> and <code>float</code>
                   </p>
-                  <p>
 <pre>
 <code> 
 x = 2   # int
 y = 2.8 # float 
 </code>
 </pre>
-                  </p>
-                  <p>To verify the type of an object in Python, use the type() function:
+                  <p>To verify the type of an object in Python, use the type() function:</p>
 <pre>
 <code> 
 print(type(x)) 
 print(type(y)) 
 </code>
 </pre>
-                  </p>
                   <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
                   <p>Float is a number, positive or negative, containing one or more decimals.</p>
                   <p>Both strings and numbers are built-in data types.</p>
@@ -1207,14 +1194,15 @@ int main() &lbrace;
 #include &lt;iostream&gt;
 
 int main() &lbrace;
-// Declare an integer variable
-int num = 10;
-// Declare a floating-point variable
-float fnum = 10.5;
+  // Declare an integer variable
+  int num = 10;
+  // Declare a floating-point variable
+  float fnum = 10.5;
 
-std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)
-std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)
-return 0;
+  std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)
+  std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)
+
+  return 0;
 &rbrace;
 </code>
 </pre>
