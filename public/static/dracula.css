@@ -11,6 +11,7 @@
  */
 
 .not-standalone {
+  display: inline-flex;
   margin-bottom: 0 !important;
 }
 
