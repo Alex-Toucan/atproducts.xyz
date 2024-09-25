@@ -165,7 +165,7 @@ import BackToTop from '../components/BackToTop.astro';
                             <p>
                               <a href="https://www.w3schools.com/c/index.php">W3Schools C Tutorials</a>
                               <a href="https://www.learnc.org">LearnC.org</a>
-                              <a href="https://www.learnc.net">LearnC.net
+                              <a href="https://www.learnc.net">LearnC.net</a>
                             </p>
                             <h4>C++ Resources</h4>
                             <p>
@@ -321,47 +321,47 @@ import BackToTop from '../components/BackToTop.astro';
                             <p>
                               <code>wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/keyrings/microsoft.gpg</code>
                             </p>
-                            <p>Create a file -&gt; <code>/etc/apt/sources.list.d/microsoft.sources</code></p>
+                            <p>Create a file -&gt; <pre><code>/etc/apt/sources.list.d/microsoft.sources</code></pre></p>
                             <p>Paste content (JavaScript):<br>
-                            <pre>
-                              <code>
-                                Types: deb
-                                URIs: https://packages.microsoft.com/ubuntu/22.04/prod/
-                                Suites: jammy
-                                Components: main
-                                Architectures: amd64
-                                Signed-By: /etc/apt/keyrings/microsoft.gpg
-                              </code>
-                            </pre>
+  <pre>
+    <code>
+      Types: deb
+      URIs: https://packages.microsoft.com/ubuntu/22.04/prod/
+      Suites: jammy
+      Components: main
+      Architectures: amd64
+      Signed-By: /etc/apt/keyrings/microsoft.gpg
+    </code>
+  </pre>
                             <br>
                             Then (Console):<br>
-                            <code>sudo apt update</code>
+                            <pre><code>sudo apt update</code></pre>
                             </p>
                             <h6>Fixing libicu dependency package issue</h6>
                             <p>Package is at this date & time not available for Ubuntu 24.04 LTS. Paste content (Console):<br>
-                            <pre>
-                              <code>
-                                echo "deb http://archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/libicu-jammy.list<br>
-                              </code>
-                            </pre>
+<pre>
+  <code>
+    echo "deb http://archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/libicu-jammy.list<br>
+  </code>
+</pre>
                             <br>
                             Pinning to lower priority to avoid conflicts with with main 24.04 repositories. Paste content (Console):<br>
-                            <pre>
-                              <code>
-                                sudo tee /etc/apt/preferences.d/libicu &lt;&lt;EOF
-                                Package: libicu*
-                                Pin: release n=jammy
-                                Pin-Priority: 100
-                                EOF<br>
-                              </code>
-                            </pre>
+<pre>
+  <code>
+    sudo tee /etc/apt/preferences.d/libicu &lt;&lt;EOF
+    Package: libicu*
+    Pin: release n=jammy
+    Pin-Priority: 100
+    EOF<br>
+  </code>
+</pre>
                             <br>
                             Update system & install .NET SDK. Paste content (Console):<br>
-                            <pre>
-                              <code>
-                                sudo apt update && sudo apt install dotnet-sdk-8.0
-                              </code>
-                            </pre>
+<pre>
+  <code>
+    sudo apt update && sudo apt install dotnet-sdk-8.0
+  </code>
+</pre>
                             </p>
                           </Fragment>
                         </AccordionItem>
@@ -425,16 +425,16 @@ import BackToTop from '../components/BackToTop.astro';
                             <h3>Under the <code>phpMyAdmin configuration storage settings</code>-section </h3>
                             <p>Un-comment all tables matching the pattern below - but check in your DB, if they were created by the <code>create_table.sql</code>. </p>
                             <p>
-                              <pre>
-                                <code> 
-                                  // REQUIRED User - uncomment as well!!!
-                                  // Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.
-                                  $cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;; 
-                                  $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;
-                                  // Pattern 
-                                  $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;; 
-                                </code>
-                              </pre>
+<pre>
+  <code> 
+    // REQUIRED User - uncomment as well!!!
+    // Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.
+    $cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;; 
+    $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;
+    // Pattern 
+    $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;; 
+  </code>
+</pre>
                             </p>
                             <h6>Optional: Create the User</h6>
                             <p>
@@ -1073,11 +1073,11 @@ import BackToTop from '../components/BackToTop.astro';
                   <h3>Comments</h3>
                   <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes. <br>
                     <br>
-                      <pre>
-                        <code> 
-                          # This is a comment 
-                        </code>  
-                      </pre>
+<pre>
+  <code> 
+    # This is a comment 
+  </code>  
+</pre>
                   </p>
                 </div>
                 <div id="data-3">
@@ -1093,39 +1093,39 @@ import BackToTop from '../components/BackToTop.astro';
                   </p>
                   <p>We will go more in-depth on some of these types in the next few paragraphs.</p>
                   <p>You can print the data type of a variable with the type() function: <br>
-                    <pre>
-                      <code>
-                        x = 5 <br> print(type(x)) 
-                      </code> 
-                    </pre>
+<pre>
+  <code>
+    x = 5 <br> print(type(x)) 
+  </code> 
+</pre>
                   </p>
                 </div>
                 <div id="str-3">
                   <h3>Strings</h3>
                   <p>Strings are surrounded by either single quotation marks, or double quotation marks.:
-                    <pre>
-                      <code>  
-                          x = "hello" 
-                          y = 'hello']
-                          # single quotations and double quotation marks are the same
-                          x == y # returns True 
-                      </code>
-                    </pre>
+<pre>
+  <code>  
+      x = "hello" 
+      y = 'hello']
+      # single quotations and double quotation marks are the same
+      x == y # returns True 
+  </code>
+</pre>
                   </p>
                   <p>You can assign a multiline string to a variable by using three quotes: <br>
-                    <pre>
-                      <code> 
-                        x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""  
-                      </code>
-                    </pre>
+<pre>
+  <code> 
+    x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""  
+  </code>
+</pre>
                   </p>
                   <p>You can check the length of a string using the len() function: 
-                    <pre>
-                      <code>  
-                          x = "hello" 
-                          print(len(text)) # returns 5
-                      </code>
-                    </pre>
+<pre>
+  <code>  
+      x = "hello" 
+      print(len(text)) # returns 5
+  </code>
+</pre>
                   </p>
                 </div>
                 <div id="num-3">
@@ -1133,20 +1133,20 @@ import BackToTop from '../components/BackToTop.astro';
                   <p>There are 2 primary, <code>int</code> and <code>float</code>
                   </p>
                   <p>
-                    <pre>
-                      <code> 
-                        x = 2   # int
-                        y = 2.8 # float 
-                      </code>
-                    </pre>
+<pre>
+  <code> 
+    x = 2   # int
+    y = 2.8 # float 
+  </code>
+</pre>
                   </p>
                   <p>To verify the type of an object in Python, use the type() function:
-                    <pre>
-                      <code> 
-                        print(type(x)) 
-                        print(type(y)) 
-                      </code>
-                    </pre>
+<pre>
+  <code> 
+    print(type(x)) 
+    print(type(y)) 
+  </code>
+</pre>
                   </p>
                   <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
                   <p>Float is a number, positive or negative, containing one or more decimals.</p>
@@ -1168,58 +1168,58 @@ import BackToTop from '../components/BackToTop.astro';
                   <h3>Strings</h3>
                   <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
                   <p>
-                    <pre>
-                      <code> 
-                        #include &lt;ostream&gt;
-                        #include &lt;string&gt;
-    
-                        int main()  &lbrace; 
-                          // Declare a string variable
-                          std&colon;&colon;string str = "codinghome"; 
-                        &rbrace; 
-                      </code>
-                    </pre>
+<pre>
+  <code> 
+    #include &lt;ostream&gt;
+    #include &lt;string&gt;
+
+    int main()  &lbrace; 
+      // Declare a string variable
+      std&colon;&colon;string str = "codinghome"; 
+    &rbrace; 
+  </code>
+</pre>
                   </p>
                 </div>
                 <div id="integers-4">
                   <h3>Integers and Floating Point Numbers</h3>
                   <p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple. </p>
                   <p>
-                    <pre>
-                      <code> 
-                        #include &lt;iostream&gt;
+<pre>
+  <code> 
+    #include &lt;iostream&gt;
 
-                        int main() &lbrace; 
-                          // Declare an integer variable 
-                            int num = 10; 
+    int main() &lbrace; 
+      // Declare an integer variable 
+        int num = 10; 
 
-                          // Declare a floating-point variable float 
-                            fnum = 10.5; 
-                        &rbrace; 
-                      </code>
-                    </pre>
+      // Declare a floating-point variable float 
+        fnum = 10.5; 
+    &rbrace; 
+  </code>
+</pre>
                   </p>
                 </div>
                 <div id="print-4">
                   <h3>Print</h3>
                   <p> Printing an output to the terminal/console or whatever you want to call it. </p>
                   <p>
-                    <pre>
-                      <code>
-                        #include &lt;iostream&gt;
-                        
-                        int main() &lbrace;
-                          // Declare an integer variable
-                          int num = 10;
-                          // Declare a floating-point variable
-                          float fnum = 10.5;
-  
-                          std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)
-                          std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)
-                          return 0;
-                        &rbrace;
-                      </code>
-                    </pre>
+<pre>
+  <code>
+    #include &lt;iostream&gt;
+    
+    int main() &lbrace;
+      // Declare an integer variable
+      int num = 10;
+      // Declare a floating-point variable
+      float fnum = 10.5;
+
+      std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)
+      std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)
+      return 0;
+    &rbrace;
+  </code>
+</pre>
                   </p>
                 </div>
               </Fragment>
