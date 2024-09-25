@@ -14,9 +14,14 @@ p:has(+ pre), pre {
   margin-bottom: 0 !important;
 }
 
+pre:has(:is(h1, h2, h3, h4, h5, h6)) {
+  margin-bottom: 1rem !important;
+}
+
 .hljs {
   display: block;
   overflow-x: auto;
+  word-break: break-all;
 }
 
 .hljs-built_in,
