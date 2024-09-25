@@ -13,7 +13,8 @@
 .hljs {
   display: block;
   overflow-x: auto;
-  word-break: break-all;
+  white-space: pre-wrap;    
+  word-wrap: break-word; 
 }
 
 .hljs-built_in,
