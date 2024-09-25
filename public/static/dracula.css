@@ -10,6 +10,10 @@
  * @author Zeno Rocha <hi@zenorocha.com>
  */
 
+p:has(+ pre), pre {
+  margin-bottom: 0 !important;
+}
+
 .hljs {
   display: block;
   overflow-x: auto;
