@@ -26,8 +26,8 @@
       manifest-src 'self'; 
       font-src 'self' data: https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; 
       object-src 'self'; 
-      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net; 
-      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline'; 
+      script-src 'unsafe-inline' 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; 
+      style-src 'unsafe-hashes' 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline'; 
       img-src 'self' data:;
       frame-ancestors 'self' '''
     Features-Policy = "document-domain 'self';"
