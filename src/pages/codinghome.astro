@@ -11,7 +11,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="CodingHome" heroid="codinghome" icon="codinghome.webp" description="A Discord server full of coders!" keywords="Scripts, viruses, coding," author="Alex Toucan & CodingLive" />
+<Head highlight="true" title="CodingHome" heroid="codinghome" icon="codinghome.webp" description="A Discord server full of coders!" keywords="Scripts, viruses, coding," author="Alex Toucan & CodingLive" />
 <div id="page">
   <Navbar /> 
   <div id="main-content">
@@ -323,37 +323,45 @@ import BackToTop from '../components/BackToTop.astro';
                             </p>
                             <p>Create a file -&gt; <code>/etc/apt/sources.list.d/microsoft.sources</code></p>
                             <p>Paste content (JavaScript):<br>
+                            <pre>
                               <code>
-                              Types: deb<br>
-                              URIs: https://packages.microsoft.com/ubuntu/22.04/prod/<br>
-                              Suites: jammy<br>
-                              Components: main<br>
-                              Architectures: amd64<br>
-                              Signed-By: /etc/apt/keyrings/microsoft.gpg<br>
+                                Types: deb
+                                URIs: https://packages.microsoft.com/ubuntu/22.04/prod/
+                                Suites: jammy
+                                Components: main
+                                Architectures: amd64
+                                Signed-By: /etc/apt/keyrings/microsoft.gpg
                               </code>
-                              <br>
+                            </pre>
+                            <br>
                             Then (Console):<br>
                             <code>sudo apt update</code>
                             </p>
                             <h6>Fixing libicu dependency package issue</h6>
                             <p>Package is at this date & time not available for Ubuntu 24.04 LTS. Paste content (Console):<br>
+                            <pre>
                               <code>
-                              echo "deb http://archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/libicu-jammy.list<br>
+                                echo "deb http://archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/libicu-jammy.list<br>
                               </code>
+                            </pre>
                             <br>
                             Pinning to lower priority to avoid conflicts with with main 24.04 repositories. Paste content (Console):<br>
+                            <pre>
                               <code>
-                              sudo tee /etc/apt/preferences.d/libicu &lt;&lt;EOF<br>
-                              Package: libicu* <br>
-                              Pin: release n=jammy <br>
-                              Pin-Priority: 100 <br>
-                              EOF<br>
+                                sudo tee /etc/apt/preferences.d/libicu &lt;&lt;EOF
+                                Package: libicu*
+                                Pin: release n=jammy
+                                Pin-Priority: 100
+                                EOF<br>
                               </code>
+                            </pre>
                             <br>
                             Update system & install .NET SDK. Paste content (Console):<br>
+                            <pre>
                               <code>
-                              sudo apt update && sudo apt install dotnet-sdk-8.0
+                                sudo apt update && sudo apt install dotnet-sdk-8.0
                               </code>
+                            </pre>
                             </p>
                           </Fragment>
                         </AccordionItem>
@@ -417,12 +425,26 @@ import BackToTop from '../components/BackToTop.astro';
                             <h3>Under the <code>phpMyAdmin configuration storage settings</code>-section </h3>
                             <p>Un-comment all tables matching the pattern below - but check in your DB, if they were created by the <code>create_table.sql</code>. </p>
                             <p>
-                              <code> // REQUIRED User - uncomment as well!!! <br> // Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database. <br> $cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;; <br> $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;; <br> // Pattern <br> $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;; </code>
+                              <pre>
+                                <code> 
+                                  // REQUIRED User - uncomment as well!!!
+                                  // Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.
+                                  $cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;; 
+                                  $cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;
+                                  // Pattern 
+                                  $cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;; 
+                                </code>
+                              </pre>
                             </p>
                             <h6>Optional: Create the User</h6>
                             <p>
-                              <code> CREATE USER 'pma'@'localhost' IDENTIFIED BY'pmapass'; <br> GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO 'pma'@'localhost'; <br> FLUSH PRIVILEGES; <br>
-                              </code>
+                              <pre>
+                                <code> 
+                                      CREATE USER 'pma'@'localhost' IDENTIFIED BY'pmapass';
+                                      GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO 'pma'@'localhost'; 
+                                      FLUSH PRIVILEGES;
+                                </code>
+                              </pre>
                             </p>
                             <p>Problems or using Windows? <br> =&gt; Refer to the Docs: <code>http://yourServerNameOrIPAddr/phpmyadmin/doc/html/setup.html#phpmyadmin-configuration-storage</code>
                             </p>
@@ -1051,7 +1073,11 @@ import BackToTop from '../components/BackToTop.astro';
                   <h3>Comments</h3>
                   <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes. <br>
                     <br>
-                    <code> # This is a comment </code>
+                      <pre>
+                        <code> 
+                          # This is a comment 
+                        </code>  
+                      </pre>
                   </p>
                 </div>
                 <div id="data-3">
@@ -1067,19 +1093,39 @@ import BackToTop from '../components/BackToTop.astro';
                   </p>
                   <p>We will go more in-depth on some of these types in the next few paragraphs.</p>
                   <p>You can print the data type of a variable with the type() function: <br>
-                    <code> x = 5 <br> print(type(x)) </code>
+                    <pre>
+                      <code>
+                        x = 5 <br> print(type(x)) 
+                      </code> 
+                    </pre>
                   </p>
                 </div>
                 <div id="str-3">
                   <h3>Strings</h3>
-                  <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
-                  <code> x = "hello" <br> y = 'hello' <br> # single quotations and double quotation marks are the same <br> x == y # returns True </code>
-                  <p></p>
-                  <p>You can assign a multiline string to a variable by using three quotes: <br>
-                    <code> x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds.""" </code>
+                  <p>Strings are surrounded by either single quotation marks, or double quotation marks.:
+                    <pre>
+                      <code>  
+                          x = "hello" 
+                          y = 'hello']
+                          # single quotations and double quotation marks are the same
+                          x == y # returns True 
+                      </code>
+                    </pre>
                   </p>
-                  <p>You can check the length of a string using the len() function: <code> x = "hello" <br> print(len(text)) # returns 5 <br>
-                    </code>
+                  <p>You can assign a multiline string to a variable by using three quotes: <br>
+                    <pre>
+                      <code> 
+                        x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""  
+                      </code>
+                    </pre>
+                  </p>
+                  <p>You can check the length of a string using the len() function: 
+                    <pre>
+                      <code>  
+                          x = "hello" 
+                          print(len(text)) # returns 5
+                      </code>
+                    </pre>
                   </p>
                 </div>
                 <div id="num-3">
@@ -1087,9 +1133,20 @@ import BackToTop from '../components/BackToTop.astro';
                   <p>There are 2 primary, <code>int</code> and <code>float</code>
                   </p>
                   <p>
-                    <code> x = 2 # int <br> y = 2.8 # float </code>
+                    <pre>
+                      <code> 
+                        x = 2   # int
+                        y = 2.8 # float 
+                      </code>
+                    </pre>
                   </p>
-                  <p>To verify the type of an object in Python, use the type() function: <code> print(type(x)) <br> print(type(y)) </code>
+                  <p>To verify the type of an object in Python, use the type() function:
+                    <pre>
+                      <code> 
+                        print(type(x)) 
+                        print(type(y)) 
+                      </code>
+                    </pre>
                   </p>
                   <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
                   <p>Float is a number, positive or negative, containing one or more decimals.</p>
@@ -1111,39 +1168,58 @@ import BackToTop from '../components/BackToTop.astro';
                   <h3>Strings</h3>
                   <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
                   <p>
-                    <code> #include &lt;ostream&gt; <br> #include &lt;string&gt; <br>
-                      <br>
-                      <br> int main() <br> &lbrace; <br> // Declare a string variable <br> std&colon;&colon;string str = "codinghome"; <br> &rbrace; </code>
+                    <pre>
+                      <code> 
+                        #include &lt;ostream&gt;
+                        #include &lt;string&gt;
+    
+                        int main()  &lbrace; 
+                          // Declare a string variable
+                          std&colon;&colon;string str = "codinghome"; 
+                        &rbrace; 
+                      </code>
+                    </pre>
                   </p>
                 </div>
                 <div id="integers-4">
                   <h3>Integers and Floating Point Numbers</h3>
                   <p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple. </p>
                   <p>
-                    <code> #include &lt;iostream&gt; <br>
-                      <br> int main() &lbrace; // Declare an integer variable int num = 10; // Declare a floating-point variable float fnum = 10.5; &rbrace; </code>
+                    <pre>
+                      <code> 
+                        #include &lt;iostream&gt;
+
+                        int main() &lbrace; 
+                          // Declare an integer variable 
+                            int num = 10; 
+
+                          // Declare a floating-point variable float 
+                            fnum = 10.5; 
+                        &rbrace; 
+                      </code>
+                    </pre>
                   </p>
                 </div>
                 <div id="print-4">
                   <h3>Print</h3>
                   <p> Printing an output to the terminal/console or whatever you want to call it. </p>
                   <p>
-                    <code>
-                      #include &lt;iostream&gt;<br>
-                      <br>
-                      int main() &lbrace;<br>
-                      &nbsp;&nbsp;// Declare an integer variable<br>
-                      &nbsp;&nbsp;int num = 10;<br>
-                      <br>
-                      &nbsp;&nbsp;// Declare a floating-point variable<br>
-                      &nbsp;&nbsp;float fnum = 10.5;<br>
-                      <br>
-                      &nbsp;&nbsp;std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)<br>
-                      &nbsp;&nbsp;std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)<br>
-                      <br>
-                      &nbsp;&nbsp;return 0;<br>
-                      &rbrace;
-                    </code>
+                    <pre>
+                      <code>
+                        #include &lt;iostream&gt;
+                        
+                        int main() &lbrace;
+                          // Declare an integer variable
+                          int num = 10;
+                          // Declare a floating-point variable
+                          float fnum = 10.5;
+  
+                          std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)
+                          std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)
+                          return 0;
+                        &rbrace;
+                      </code>
+                    </pre>
                   </p>
                 </div>
               </Fragment>
@@ -1185,27 +1261,27 @@ import BackToTop from '../components/BackToTop.astro';
                   <p>Haskell's functions will usually have 2 parts: a type declaration, and the implementation of the function itself (the type part can also be inferred):</p>
                   <code> -- type declaration <br> -- constraints =&gt; type -&gt; ... -&gt; returnType (the last type will always be the return type) <br> countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int <br> -- implementation <br> countIns x = length . filter (== x) <br>
                   </code>
-                  <ul>undefined<li>Bool: boolean True or False.</li>undefined<li>Char: one character.</li>undefined<li>Int: fixed-precision signed integer (usually 64-bit)</li>undefined<li>Float / Double: floating-point values.</li>
+                  <ul><li>Bool: boolean True or False.</li><li>Char: one character.</li><li>Int: fixed-precision signed integer (usually 64-bit)</li><li>Float / Double: floating-point values.</li>
                   </ul>
-                  <p>Notice the type declaration has 2 types of "arrows": undefined<code>=&gt;</code> and undefined<code>-&gt;</code>. </p>
-                  <ul>undefined<li>=&gt; : used for giving additional context of what rules undefined<code>a</code> should follow (in the example above, we see a should be part of the undefined<code>Eq</code> class, which allows for comparison)undefined</li>undefined<li>-&gt; : used for actually declaring the type of the function (in the above example, we see the first argument is undefined<code>a</code>, a general, comparable type, then a list of as and then finally it outputs an undefined<code>Int</code>eger)undefined</li>
+                  <p>Notice the type declaration has 2 types of "arrows": <code>=&gt;</code> and <code>-&gt;</code>. </p>
+                  <ul><li>=&gt; : used for giving additional context of what rules <code>a</code> should follow (in the example above, we see a should be part of the <code>Eq</code> class, which allows for comparison)</li><li>-&gt; : used for actually declaring the type of the function (in the above example, we see the first argument is <code>a</code>, a general, comparable type, then a list of as and then finally it outputs an <code>Int</code>eger)</li>
                   </ul>
                 </div>
                 <div id="fde-5">
                   <h3>Function Definition</h3>
-                  <p>Functions are defined like: undefined<code>functionName argument(s) = expression</code>. Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
+                  <p>Functions are defined like: <code>functionName argument(s) = expression</code>. Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
                   <code> -- type declaration countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int -- implementation -- function args = expression countIns x = length . filter (== x) </code>
                 </div>
                 <div id="fpr-5">
                   <h3>Functional Principles</h3>
                   <p>Haskell restricts to the functional paradigm, meaning Haskell enforces:</p>
-                  <ul>undefined<li>undefined<b>Immutability:</b> when the undefined<code>data</code> has to be defined again for it to "change"undefined</li>undefined<li>undefined<b>Purity:</b> functions must be pure, producing no side-effects (like modifying a global variable), and must be deterministic (undefined<code>f(x) = y</code>, no matter when undefined<code>f</code> is called)undefined</li>undefined<li>undefined<b>Higher-order functions:</b> functions must be first-class, meaning they can be passed as arguments to other functions. This allows for higher-order functions. which take a function and other data and apply the function to the data in different ways.undefined</li>undefined<li>undefined<b>Disciplined state </b> trying to minimize the use of mutable state and trying to make it local when possible.undefined</li>
+                  <ul><li><b>Immutability:</b> when the <code>data</code> has to be defined again for it to "change"</li><li><b>Purity:</b> functions must be pure, producing no side-effects (like modifying a global variable), and must be deterministic (<code>f(x) = y</code>, no matter when <code>f</code> is called)</li><li><b>Higher-order functions:</b> functions must be first-class, meaning they can be passed as arguments to other functions. This allows for higher-order functions. which take a function and other data and apply the function to the data in different ways.</li><li><b>Disciplined state </b> trying to minimize the use of mutable state and trying to make it local when possible.</li>
                   </ul>
                 </div>
                 <div id="com-5">
                   <h3>Comments</h3>
-                  <p>In-line comments are made with undefined<code>--</code> and block comments with undefined<code>&lbrace;- -&rbrace;</code>: </p>
-                  <code> -- inlineundefined<br> commentHere = False &lbrace;- block commenHere = True -&rbrace; undefined</code>
+                  <p>In-line comments are made with <code>--</code> and block comments with <code>&lbrace;- -&rbrace;</code>: </p>
+                  <code> -- inline<br> commentHere = False &lbrace;- block commenHere = True -&rbrace; </code>
                 </div>
               </Fragment>
             </Scrollspy>
@@ -1225,15 +1301,17 @@ import BackToTop from '../components/BackToTop.astro';
               <Fragment slot="scrollspy-content">
                 <div id="example-6">
                   <h3>Example Document</h3>
-                  <code>
-                  &lt;!DOCTYPE html&gt;<br>
-                  &lt;html&gt;<br>
-                  &nbsp;&lt;body&gt;<br>
-                  &nbsp;&nbsp;&lt;h1&gt;My first Heading&lt;/h1&gt;<br>
-                  &nbsp;&nbsp;&lt;p&gt;My first paragraph&lt;/p&gt;<br>
-                  &nbsp;&lt;/body&gt;<br>
-                  &lt;/html&gt;
-                  </code><br>
+                    <pre>
+                      <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                        &lt;body&gt;
+                        &lt;h1&gt;My first Heading&lt;/h1&gt;
+                        &lt;p&gt;My first paragraph&lt;/p&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                      </code>
+                    </pre>
                   <p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags). The <code>&lt;!DOCTYPE&gt;</code> declaration is not case sensitive. </p>
                 </div>
                 <div id="head-6">
@@ -1245,9 +1323,14 @@ import BackToTop from '../components/BackToTop.astro';
                 </div>
                 <div id="text-6">
                   <h3>HTML Paragraphs</h3>
-                  <p>HTML paragraphs are defined with the &lt;p&gt; tag:<code><br>
-                  &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
-                  &lt;p&gt;This is another paragraph.&lt;/p&gt;</code></p>
+                  <p>HTML paragraphs are defined with the &lt;p&gt; tag:
+                    <pre>
+                      <code>
+                        &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+                        &lt;p&gt;This is another paragraph.&lt;/p&gt;
+                      </code>
+                    </pre>
+                  </p>
                 </div>
                 <div id="links-6">
                   <h3>HTML Links</h3>
@@ -1284,48 +1367,56 @@ import BackToTop from '../components/BackToTop.astro';
                 <div id="example-7">
                   <h3>Example Document</h3>
                   <p>
-                  <code>
-                  h1 &lbrace;<br>
-                  &nbsp;&nbsp;color&colon; black;<br>
-                  &nbsp;&nbsp;text-align&colon; center;<br>
-                  &nbsp;&nbsp;font-size&colon; 26px;<br>
-                  &nbsp;&nbsp;font-family&colon; verdana;<br>
-                  &rbrace;
-                  </code>
+                    <pre>
+                      <code>
+                        h1 &lbrace;
+                        color&colon; black;
+                        text-align&colon; center;
+                        font-size&colon; 26px;
+                        font-family&colon; verdana;
+                      &rbrace;
+                      </code>
+                    </pre>
                   </p>
                   <p><code>&lt;p style="font-size:10px"&gt;</code></p>
                   <p>To put CSS files in HTML, use:
                   <br><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
                   <p>To put CSS code in HTML, use:
                   <br>
-                  <code>
-                  &lt;style&gt;<br>
-                  .class &lbrace;<br>
-                  &rbrace;<br>
-                  &lt;/style&gt;
-                  </code>
+                    <pre>
+                      <code>
+                        &lt;style&gt;
+                        .class &lbrace;
+                        &rbrace;
+                        &lt;/style&gt;
+                      </code>
+                    </pre>
                   </p>
-                  </div>
+                </div>
                 <div id="rules-7">
                   <h3>CSS Rulesets</h3>
                   <p>
-                  </p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><code class="position-static">p &lbrace; </code></div></div></div>
-                  <div class="d-flex"><div class="col-4"><p>Property</p></div><div class="col"><div class="me-auto"><code class="position-static">&nbsp;&nbsp;color&colon; red; </code></div></div></div>
-                  <div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><code class="position-static">&rbrace;</code></div></div></div>  
+                  </p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><pre class="position-static"><code class="position-static">p &lbrace; </code></pre></div></div></div>
+                  <div class="d-flex"><div class="col-4"><p>Property</p></div><div class="col"><div class="me-auto"><pre class="position-static"><code class="position-static">color&colon; red; </code></pre></div></div></div>
+                  <div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><pre class="position-static"><code class="position-static">&rbrace;</code></div></div></div>  
                   <p></p>
                   <p><b>Properties</b> - With these, you can style a HTML element, like for example; color. <br>
                   <b>Property Value</b> - This chooses one of the possible options for a given property, like red for color.</p>
                     <p>
-                  You can also write CSS like <code>html&lbrace;color&colon;red;&rbrace;</code>
+                  You can also write CSS like <pre><code>html&lbrace;color&colon;red;&rbrace;</code></pre>
                   <br>
-                  You can also put styles in HTML elements. <code>&lt;h1 style="font-color:white;"&gt;</code>
+                  You can also put styles in HTML elements. <pre><code>&lt;h1 style="font-color:white;"&gt;</code></pre>
                   <br>
                   You can also select multiple elements at once like...
                   <br>
-                  <code>
-                  h1, h4, h6, h2 &lbrace;
-                  &nbsp;&nbsp;color&colon; red;
-                  &rbrace;</code></p>
+                  <pre>
+                    <code>
+                      h1, h4, h6, h2 &lbrace;
+                      color&colon; red;
+                      &rbrace;
+                    </code>
+                  </pre>
+                </p>
                 </div>
                 <div id="classes-7">
                   <h3>Classes</h3>
@@ -1334,32 +1425,32 @@ import BackToTop from '../components/BackToTop.astro';
                   <p>
                     <code>
                       .text-red &lbrace;<be>
-                      &nbsp;&nbsp;color&colon; red;<be>
+                      color&colon; red;<be>
                       &rbrace;
                     </code>
                   </p>
                 </div>
                 <div id="text-7">
                   <h3>Text Elements</h3><p>
-                  <code>font-size&colon; 10px;</code> - Text size, can be in pixels.<br>
-                  <code>font-family&colon; verdana;</code> - Fonts<br>
-                  <code>text-align&colon; center;</code> - Can align to the left side, right side, or in the center of the webpage. <br>
-                  <code>text-shadow&colon; 3px black</code> - Shadow of text. It can be in pixels and colors.
+                  <pre class="position-static"><code>font-size&colon; 10px;</code></pre> - Text size, can be in pixels.<br>
+                  <pre class="position-static"><code>font-family&colon; verdana;</code></pre> - Fonts<br>
+                  <pre class="position-static"><code>text-align&colon; center;</code></pre> - Can align to the left side, right side, or in the center of the webpage. <br>
+                  <pre class="position-static"><code>text-shadow&colon; 3px black</code></pre> - Shadow of text. It can be in pixels and colors.
                   </p>
                 </div>
                 <div id="pad-7">
                   <h3>Padding Elements</h3>
                   <p>
-                  <code>padding-top&colon; 50px;</code> - Separation. It can be top, left, right, and bottom in pixels.<br>
-                  <code>margin&colon; 50px;</code> - A margin. It can be in pixels.<br>
-                  <code>border-width&colon; 5px;</code> - Border width. Can be thin, medium, thick, or just pixels.<br>
-                  <code>border-style&colon; dotted;</code> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
-                  <code>width=500px;</code> - Width of the element. It can be pixels or percentages.</p>
+                  <pre class="position-static"><code>padding-top&colon; 50px;</code></pre> - Separation. It can be top, left, right, and bottom in pixels.<br>
+                  <pre class="position-static"><code>margin&colon; 50px;</code></pre> - A margin. It can be in pixels.<br>
+                  <pre class="position-static"><code>border-width&colon; 5px;</code></pre> - Border width. Can be thin, medium, thick, or just pixels.<br>
+                  <pre class="position-static"><code>border-style&colon; dotted;</code></pre> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
+                  <pre class="position-static"><code>width=500px;</code></pre> - Width of the element. It can be pixels or percentages.</p>
                 </div>
                 <div id="color-7">
                   <h3>Color Elements</h3>
-                  <p><code>color&colon; red;</code> - The color of the element, can be hexadecimal, or RGB.<br>
-                  <code>background-color&colon; white;</code> - Background color of the element.</p>
+                  <p><pre class="position-static"><code>color&colon; red;</code></pre> - The color of the element, can be hexadecimal, or RGB.<br>
+                  <pre class="position-static"><code>background-color&colon; white;</code></pre> - Background color of the element.</p>
                 </div>
                 <div id="com-7">
                   <h3>Comments</h3>
@@ -1367,20 +1458,29 @@ import BackToTop from '../components/BackToTop.astro';
                   <br><br>
                   A CSS comment starts with <code>/*</code> and ends with <code>*/</code>, and no changes are needed to make it multiple lines.</p>
                   <p> 
-                    <code>
-                      /* This is a single-line comment */<br><br>
-                      /* This is<br>
-                      a multi-line<br>
-                      comment */
-                    </code>
+                    <pre>
+                      <code>
+                        /* This is a single-line comment */
+
+                        /* This is
+                        a multi-line
+                        comment */
+                      </code>
+                    </pre>
                   </p>
                 </div>
                 <div id="eci-7">
                   <h3>Extra: Centering Images</h3>
-                  <p><code>img &lbrace;<br>
-                  &nbsp;&nbsp;margin&colon; 0 auto;<br>
-                  &nbsp;&nbsp;display&colon; block;<br>
-                  &rbrace;</code></p>
+                  <p>
+                    <pre>
+                      <code>
+                        img &lbrace;
+                        margin&colon; 0 auto;
+                        display&colon; block;
+                        &rbrace;
+                      </code>
+                    </pre>
+                  </p>
                 </div>
               </Fragment>
             </Scrollspy>
@@ -1410,7 +1510,13 @@ import BackToTop from '../components/BackToTop.astro';
                 </div>
                 <div id="call-8">
                   <h3>Call an External JavaScript File</h3>
-                  <p> <code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code></p>
+                  <p>
+                    <pre>
+                      <code>
+                        &lt;script src="myscript.js"&gt;&lt;/script&gt;
+                      </code>
+                    </pre>
+                  </p>
                 </div>
                 <div id="com-8">
                   <h3>Including Comments</h3>
@@ -1429,25 +1535,27 @@ import BackToTop from '../components/BackToTop.astro';
                 <div id="data-8">
                   <h3>Data Types</h3>
                   <p>
-                  Numbers — <code>var age = 23</code> <br>
-                  Variables — <code>var x</code><br>
-                  Text (strings) — <code>var a = "init"</code><br>
-                  Operations — <code>var b = 1 + 2 + 3</code><br>
-                  True or false statements — <code>var c = true</code><br>
-                  Constant numbers — <code>const PI = 3.14</code><br>
-                  Constant numbers — <code>const PI = 3.14</code><br>
-                  Objects — <code>var name = &lbrace;firstName&colon; "John", lastName&colon; "Doe"&rbrace;</code>
+                  Numbers — <pre class="position-static"><code>var age = 23</code></pre> <br>
+                  Variables — <pre class="position-static"><code>var x</code></pre><br>
+                  Text (strings) — <pre class="position-static"><code>var a = "init"</code></pre><br>
+                  Operations — <pre class="position-static"><code>var b = 1 + 2 + 3</code></pre><br>
+                  True or false statements — <pre class="position-static"><code>var c = true</code></pre><br>
+                  Constant numbers — <pre class="position-static"><code>const PI = 3.14</code</pre><br>
+                  Constant numbers — <pre class="position-static"><code>const PI = 3.14</code></pre><br>
+                  Objects — <pre class="position-static"><code>var name = &lbrace;firstName&colon; "John", lastName&colon; "Doe"&rbrace;</code></pre>
                   </p>
   
                   <p><b>Objects Example</b> <br>
-                    <code>
-                      var person = &lbrace;<br>
-                      &nbsp;&nbsp;firstName&colon; "John",<br>
-                      &nbsp;&nbsp;lastName&colon; "Doe",<br>
-                      &nbsp;&nbsp;age&colon; 20,<br>
-                      &nbsp;&nbsp;nationality&colon; "American"<br>
-                      &rbrace;
-                    </code>
+                    <pre>
+                      <code>
+                        var person = &lbrace;
+                        firstName&colon; "John",
+                        lastName&colon; "Doe",
+                        age&colon; 20,
+                        nationality&colon; "American"
+                        &rbrace;
+                      </code>
+                    </pre>
                   </p>
                 </div>
               </Fragment>
@@ -1466,112 +1574,112 @@ import BackToTop from '../components/BackToTop.astro';
               <div id="query-9">
                 <h3>Querying Data from a Table</h3>
                 <p>Query Data in Columns c1, c2 from a Table</p>
-                <code>
-                SELECT c1, c2 FROM t;<br>
-                Code language: SQL (Structured Query Language) (SQL)
-                </code><br><br>
+                <pre><code>
+                SELECT c1, c2 FROM t;
+                </code></pre><br><br>
                 <p>Query All Rows and Columns from a Table</p>
-                <code>SELECT * FROM t;</code><br><br>
+                <pre><code>SELECT * FROM t;</code></pre><br><br>
                 <p>Query Data and Filter Rows with a Condition</p>
-                <code>
-                SELECT c1, c2 FROM t<br>
+                <pre><code>
+                SELECT c1, c2 FROM t
                 WHERE condition;
-                </code><br><br>
+                </code></pre><br><br>
                 <p>Query Distinct Rows from a Table</p>
-                <code>
-                SELECT DISTINCT c1 FROM t<br>
+                <pre><code>
+                SELECT DISTINCT c1 FROM t
                 WHERE condition;
-                </code><br><br>
+                </code></pre><br><br>
                 <p>Sort the Result Set in Ascending or Descending Order</p>
-                <code>
+                <pre><code>
                 SELECT c1, c2 FROM t<br>
                 ORDER BY c1 ASC [DESC];
-                </code><br><br>
+                </code></pre><br><br>
                 <p>Skip Offset of Rows and Return the Next n Rows</p>
-                <code>
-                SELECT c1, c2 FROM t<br>
-                ORDER BY c1<br>
+                <pre><code>
+                SELECT c1, c2 FROM t
+                ORDER BY c1
                 LIMIT n OFFSET offset;
-                </code><br><br>
+                </code></pre><br><br>
                 <p>Group Rows using an Aggregate Function</p>
-                <code>
-                SELECT c1, aggregate(c2)<br>
-                FROM t<br>
+                <pre><code>
+                SELECT c1, aggregate(c2)
+                FROM t
                 GROUP BY c1;
-                </code><br><br>
+                </code></pre><br><br>
                 <p>Filter Groups using <b>Having</b> Clause</p>
-                <code>
-                SELECT c1, aggregate(c2)<br>
-                FROM t<br>
-                GROUP BY c1<br>
+                <pre><code>
+                SELECT c1, aggregate(c2)
+                FROM t
+                GROUP BY c1
                 HAVING condition;
-                </code><br><br>
+                </code></pre><br><br>
               </div>
               <div id="mod-9">
                 <h3>Modifying Data</h3>
                 <p>Insert One Row into a Table</p>
-                <code>
-                INSERT INTO t(column_list)<br>
+                <pre><code>
+                INSERT INTO t(column_list)
                 VALUES(value_list);
-                </code><br><br>
+                </code></pre><br><br>
                 <p>Insert Multiple Rows into a Table</p>
-                <code>
+                <pre><code>
                 INSERT INTO t(column_list)<br>
-                VALUES (value_list), <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(value_list), …;
-                </code><br><br>
+                VALUES (value_list),
+                (value_list), …;
+                </code></pre><br><br>
                 <p>Insert Rows from t2 into t1</p>
-                <code>
-                INSERT INTO t1(column_list)<br>
-                SELECT column_list<br>
+                <pre><code>
+                INSERT INTO t1(column_list)
+                SELECT column_list
                 FROM t2;
-                </code><br><br>
+                </code></pre><br><br>
                 <p>Update New Value in the Column c1 for All Rows</p>
-                <code>
-                UPDATE t<br>
-                SET c1 = new_value;
-                </code><br><br>
-                <p>Update Values in the Column c1, c2 that Match the Condition</p>
-                <code>
+                <pre><code>
                 UPDATE t
-                SET c1 = new_value, <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;c2 = new_value<br>
+                SET c1 = new_value;
+                </code></pre><br><br>
+                <p>Update Values in the Column c1, c2 that Match the Condition</p>
+                <pre><code>
+                UPDATE t
+                SET c1 = new_value,
+                c2 = new_value
                 WHERE condition;
-                </code><br><br>
+                </code></pre><br><br>
                 <p>Delete All Data in a Table</p>
-                <code>DELETE FROM t;</code>
+                <pre><code>DELETE FROM t;</code></pre>
                 <p>Delete Subset of Rows in a Table</p>
-                <code>
-                DELETE FROM t<br>
+                <pre><code>
+                DELETE FROM t
                 WHERE condition;
-                </code><br><br>
+                </code></pre><br><br>
               </div>
               <div id="table-9">
                 <h3>Table Management</h3>
                 <p>Create a new Table with Three Columns</p>
                 <code>
-                CREATE TABLE t (<br>
-                &nbsp;&nbsp;id INT PRIMARY KEY,<br>
-                &nbsp;&nbsp;name VARCHAR NOT NULL,<br>
-                &nbsp;&nbsp;price INT DEFAULT 0<br>
+                <pre>
+                CREATE TABLE t (
+                  id INT PRIMARY KEY,
+                  name VARCHAR NOT NULL,
+                  price INT DEFAULT 0
                 );<br>
-                </code><br><br>
+                </code></pre><br><br>
                 <p>Delete the Table from the Database</p>
-                <code>DROP TABLE t ;</code><br><br>
+                <pre><code>DROP TABLE t ;</code></pre><br><br>
                 <p>Add a new Column to the Table</p>
-                <code>ALTER TABLE t ADD column;</code><br><br>
+                <pre><code>ALTER TABLE t ADD column;</code></pre><br><br>
                 <p>Drop Column c from the Table</p>
-                <code>ALTER TABLE t DROP COLUMN c ;</code><br><br>
+                <pre><code>ALTER TABLE t DROP COLUMN c ;</code></pre><br><br>
                 <p>Add a Constraint</p>
-                <code>ALTER TABLE t ADD constraint;</code><br><br>
+                <pre><code>ALTER TABLE t ADD constraint;</code></pre><br><br>
                 <p>Drop a Constraint</p>
-                <code>ALTER TABLE t DROP constraint;</code><br><br>
+                <pre><code>ALTER TABLE t DROP constraint;</code></pre><br><br>
                 <p>Rename a Table from t1 to t2</p>
-                <code>ALTER TABLE t1 RENAME TO t2;</code><br><br>
+                <pre><code>ALTER TABLE t1 RENAME TO t2;</code></pre><br><br>
                 <p>Rename Column c1 to c2</p>
-                <code>ALTER TABLE t1 RENAME c1 TO c2 ;</code><br><br>
+                <pre><code>ALTER TABLE t1 RENAME c1 TO c2 ;</code></pre><br><br>
                 <p>Remove all Data in a Table</p>
-                <code>TRUNCATE TABLE t;</code>
+                <pre><code>TRUNCATE TABLE t;</code></pre>
               </div>
             </Fragment>
           </Scrollspy>
@@ -1588,15 +1696,18 @@ import BackToTop from '../components/BackToTop.astro';
             <Fragment slot="scrollspy-content">
               <div id="example-10">
                 <h3>Example Document</h3>
-                <code>
-                &lbrace;<br>
-                &nbsp;&nbsp;"foo"&colon; "bar",<br>
-                &nbsp;&nbsp;"array"&colon; [<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;"foo",<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;"bar"<br>
-                &nbsp;&nbsp;]<br>
-                &rbrace;
-                </code><br><br>
+                <pre>
+                  <code>
+                    &lbrace;
+                      "foo"&colon; "bar",
+                      "array"&colon; [
+                      "foo",
+                      "bar"
+                      ]
+                    &rbrace;
+                  </code>
+                </pre>
+                <br><br>
                 <p>All JSON files are surrounded by &lbrace; and &rbrace;, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
               </div>
               <div id="import-10">
@@ -1605,19 +1716,19 @@ import BackToTop from '../components/BackToTop.astro';
                   <tbody>
                   <tr>
                     <th scope="row">JavaScript</th>
-                    <td class="text-break"><code class="position-static">fetch('example.json')</code></td>
+                    <td class="text-break"><pre class="position-static"><code class="position-static">fetch('example.json')</code></pre></td>
                   </tr>
                   <tr>
                     <th scope="row">Node.js</th>
-                    <td class="text-break"><code class="position-static">import('./example.json')</code></td>
+                    <td class="text-break"><pre class="position-static"><code class="position-static">import('./example.json')</code></pre></td>
                   </tr>
                   <tr>
                     <th scope="row">TypeScript + Node.js</th>
-                    <td class="text-break"><code class="position-static">import data from 'example.json'</code></td>
+                    <td class="text-break"><pre class="position-static"><code class="position-static">import data from 'example.json'</code></pre></td>
                   </tr>
                   <tr>
                     <th scope="row">Python</th>
-                    <td class="text-break"><code class="position-static">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></td>
+                    <td class="text-break"><pre class="position-static"><code class="position-static">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></pre></td>
                   </tr>
                   </tbody>
                 </table>
@@ -1631,4 +1742,4 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts modal="true" accordion="true" scrollspy="true" />
+<Scripts highlight="true" modal="true" accordion="true" scrollspy="true" />
