@@ -10,7 +10,7 @@ import AccordionItem from '../../components/accordion/AccordionItem.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head title="The Script Community" heroid="script" icon="vibrant2.png" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus"/>
+<Head highlight="true" title="The Script Community" heroid="script" icon="vibrant2.png" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus"/>
 <div id="page">
   <Navbar />
   <div class="alert alert-dark mb-0" role="alert">
@@ -75,84 +75,97 @@ import BackToTop from '../../components/BackToTop.astro';
       <div id="py">
         <h2>Python Basics</h2>
         <Scrollspy id="py-basics-list"
-        scrollcontent={[
-          { name: "Comments", href: "#com-1" },
-          { name: "Data Types", href: "#data-1" },
-          { name: "Strings", href: "#str-1" },
-          { name: "Numbers", href: "#num-1" },
-        ]};
-        >
-          <Fragment slot="scrollspy-content">
-            <div id="com-1">
-              <h3>Comments</h3>
-              <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br>
-                <code>
-                  # This is a comment
-                </code>
-              </p>
-            </div>
-            <div id="data-1">
-              <h3>Data Types</h3>
-              <p>Variables can store data of different types, and different types can do different things.</p>
-              <p>Python has the following data types built-in by default, in these categories:<br>
-              Text Type: <code>str</code><br>
-              Numeric Types: <code>int, float, complex</code><br>
-              Sequence Types: <code>list, tuple, range</code><br>
-              Mapping Type: <code>dict</code><br>
-              Set Types: <code>set, frozenset</code><br>
-              Boolean Type: <code>bool</code><br>
-              Binary Types: <code>bytes, bytearray, memoryview</code></p>
-              <p>We will go more in-depth on some of these types in the next few paragraphs.</p>
-              <p>You can print the data type of a variable with the type() function:<br>
-                <code>
-                x = 5 <br>
-                print(type(x))
-                </code>
-              </p>
-            </div>
-            <div id="str-1">
-              <h3>Strings</h3>
-              <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
-              <code>
-                x = "hello" <br>
-                y = 'hello' <br>
-                # single quotations and double quotation marks are the same<br>
-                x == y # returns True
-              </code>
-              <p>You can assign a multiline string to a variable by using three quotes:<br>
-                <code>
-                  x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
-                </code>
-              </p>
-              <p>You can check the length of a string using the len() function:
-                <code>
-                  py<br>
-                  x = "hello"<br>
-                  print(len(text)) # returns 5<br>
-                </code>
-              </p>
-            </div>
-            <div id="num-1">
-              <h3>Numbers</h3>
-              <p>There are 2 primary, <code>int</code> and <code>float</code></p>
-              <p>
-                <code>
-                  py<br>
-                  x = 2 # int<br>
-                  y = 2.8 # float
-                  </code></p>
-                  <p>To verify the type of an object in Python, use the type() function:<code>
-                  py<br>
-                  print(type(x))<br>
-                  print(type(y))
-                </code>
-              </p>
-              <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
-              <p>Float is a number, positive or negative, containing one or more decimals.</p>
-              <p>Both strings and numbers are built-in data types.</p>
-            </div>
-          </Fragment>
-        </Scrollspy>
+          scrollcontent={[
+            { name: "Comments", href: "#com-1" },
+            { name: "Data Types", href: "#data-1" },
+            { name: "Strings", href: "#str-1" },
+            { name: "Numbers", href: "#num-1" },
+          ]};
+          >
+            <Fragment slot="scrollspy-content">
+              <div id="com-1">
+                <h3>Comments</h3>
+                <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br>
+<pre>
+<code>
+# This is a comment
+</code>
+</pre>
+                </p>
+              </div>
+              <div id="data-1">
+                <h3>Data Types</h3>
+                <p>Variables can store data of different types, and different types can do different things.</p>
+                <p>Python has the following data types built-in by default, in these categories:<br>
+                Text Type: <code>str</code><br>
+                Numeric Types: <code>int, float, complex</code><br>
+                Sequence Types: <code>list, tuple, range</code><br>
+                Mapping Type: <code>dict</code><br>
+                Set Types: <code>set, frozenset</code><br>
+                Boolean Type: <code>bool</code><br>
+                Binary Types: <code>bytes, bytearray, memoryview</code></p>
+                <p>We will go more in-depth on some of these types in the next few sections.</p>
+                <p>You can print the data type of a variable with the <code>type()</code> function:</p>
+<pre>
+<code>
+x = 5 <br>
+print(type(x))
+</code>
+</pre>
+                </p>
+              </div>
+              <div id="str-1">
+                <h3>Strings</h3>
+                <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
+<pre>
+<code>
+x = "hello" <br>
+y = 'hello' <br>
+# single quotations and double quotation marks are the same<br>
+x == y # returns True
+</code>
+</pre>
+                <p>You can assign a multiline string to a variable by using three quotes:</p>
+<pre>
+<code>
+x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
+</code>
+</pre>
+                <p>You can check the length of a string using the len() function:</p>
+<pre>
+<code>
+py<br>
+x = "hello"<br>
+print(len(text)) # returns 5<br>
+</code>
+</pre>
+                </p>
+              </div>
+              <div id="num-1">
+                <h3>Numbers</h3>
+                <p>There are 2 primary, <code>int</code> and <code>float</code></p>
+<pre>
+<code>
+py
+x = 2 # int
+y = 2.8 # float
+</code>
+</pre>
+                  <p>To verify the type of an object in Python, use the <code>type()</code> function:
+<pre>
+<code>
+py
+print(type(x))
+print(type(y))
+</code>
+</pre>
+                </p>
+                <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
+                <p>Float is a number, positive or negative, containing one or more decimals.</p>
+                <p>Both strings and numbers are built-in data types.</p>
+              </div>
+            </Fragment>
+          </Scrollspy>
       </div> 
       <hr> 
       <div id="js">
@@ -166,88 +179,93 @@ import BackToTop from '../../components/BackToTop.astro';
             { name: "Data Types", href: "data-2" },
           ]};
         >
-        <Fragment slot="scrollspy-content">
-          <div id="html-2">
-            <h3>Including JavaScript in an HTML Page</h3>
-            <p>
-              <code>
-                &lt;script type="text/javascript"&gt; <br>
-                &nbsp;//JS code goes here <br>
-                &lt;/script&gt; 
-              </code>
-            </p>
-          </div>
-            <div id="call-2">
-            <h3>Call an External JavaScript File</h3>
-            <p>
-              <code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code>
-            </p>
-          </div>
-          <div id="com-2">
-            <h3>Including Comments</h3>
-            <p>Single line comments - <code>// Comment</code> <br>
-            Multi-line comments - <code>/* comment here */</code></p>
-          </div>
-          <div id="var-2">
-            <h3>Variables</h3>
-            <p>
-            <code>var, const, let</code><br>
-            <code>var</code> — The most common variable. Can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
-            <code>const</code> — Can not be reassigned and not accessible before they appear within the code.<br>
-            <code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
-            </p>
-          </div>
-          <div id="data-2">
-            <h3>Data Types</h3>
-            <p>Numbers — <code>var age = 23</code> <br>
-            Variables — <code>var x</code><br>
-            Text (strings) — <code>var a = "init"</code><br>
-            Operations — <code>var b = 1 + 2 + 3</code><br>
-            True or fase statements — <code>var c = true</code><br>
-            Constant numbers — <code>const PI = 3.14</code><br>
-            Objects — <code>var name = &lbrace;firstName&colon;"John", lastName&colon;”Doe"&rbrace;</code></p>
-            <p><b>Objects Example</b> <br>
-            <code>
-            var person = &lbrace;<br>
-            &nbsp;&nbsp;firstName&colon;"John",<br>
-            &nbsp;&nbsp;lastName&colon;"Doe",<br>
-            &nbsp;&nbsp;age&colon;20,<br>
-            &nbsp;&nbsp;nationality&colon;"American"<br>
-            &rbrace;;
-            </code></p>
-          </div>
-        </Fragment>
-      </Scrollspy>
+          <Fragment slot="scrollspy-content">
+            <div id="html-2">
+              <h3>Including JavaScript in an HTML Page</h3>
+              <p>
+<pre>
+<code>
+&lt;script type="text/javascript"&gt;
+//JS code goes here <br>
+&lt;/script&gt; 
+</code>
+</pre>
+              </p>
+            </div>
+              <div id="call-2">
+              <h3>Call an External JavaScript File</h3>
+<pre><code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code>
+            </div>
+            <div id="com-2">
+              <h3>Including Comments</h3>
+              <p>Single line comments - <code>// Comment</code> <br>
+              Multi-line comments - <code>/* comment here */</code></p>
+            </div>
+            <div id="var-2">
+              <h3>Variables</h3>
+              <p>
+              <code>var, const, let</code><br>
+              <code>var</code> — The most common variable. Can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
+              <code>const</code> — Can not be reassigned and not accessible before they appear within the code.<br>
+              <code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
+              </p>
+            </div>
+            <div id="data-2">
+              <h3>Data Types</h3>
+              <p>Numbers — <code>var age = 23</code> <br>
+              Variables — <code>var x</code><br>
+              Text (strings) — <code>var a = "init"</code><br>
+              Operations — <code>var b = 1 + 2 + 3</code><br>
+              True or fase statements — <code>var c = true</code><br>
+              Constant numbers — <code>const PI = 3.14</code><br>
+              Objects — <code>var name = &lbrace;firstName&colon;"John", lastName&colon;”Doe"&rbrace;</code></p>
+              <p><b>Objects Example</b> <br>
+<pre>
+<code>
+var person = &lbrace;
+  firstName&colon;"John",
+  lastName&colon;"Doe",
+  age&colon;20,
+  nationality&colon;"American"
+&rbrace;;
+</code>
+</pre>
+              </p>
+            </div>
+          </Fragment>
+        </Scrollspy>
     </div>
     <hr> 
     <div id="html"> 
       <h2> HTML Basics </h2>
       <Scrollspy id="html-basics-list"
-      scrollcontent={[
-        { name: "Example Document", href: "#example-3" },
-        { name: "HTML Text", href: "#text-3" },
-        { name: "HTML Headings", href: "#head-3" },
-        { name: "HTML Links", href: "#links-3" },
-        { name: "HTML Images", href: "#img-3" },
-      ]};
+        scrollcontent={[
+          { name: "Example Document", href: "#example-3" },
+          { name: "HTML Text", href: "#text-3" },
+          { name: "HTML Headings", href: "#head-3" },
+          { name: "HTML Links", href: "#links-3" },
+          { name: "HTML Images", href: "#img-3" },
+        ]};
       >
         <Fragment slot="scrollspy-content">
           <div id="example-3">
             <h3>Example Document</h3>
             <p>
-              <code>
-                &lt;!DOCTYPE HTML&gt; <br>
-                &lt;html&gt; <br>
-                &lt;head&gt; <br>
-                &lt;/head&gt; <br>
-                &lt;body&gt; <br>
-                &lt;h1&gt; This is a heading &lt;/h1&gt;<br>
-                &lt;p&gt; This is text &lt;/p&gt;<br>
-                &lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;<br>
-                &lt;img src="at.png" width="99.99% alt="Example Image"&gt; <br>
-                &lt;/body&gt; <br>
-                &lt;/html&gt; <br>
-              </code>
+<pre>
+<code>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt; This is a heading &lt;/h1&gt;
+    &lt;p&gt; This is text &lt;/p&gt;
+    &lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;
+    &lt;img src="at.png" width="99.99% alt="Example Image"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code> 
+</pre>
             </p>
             <p>We got to first lay down the very first thing to know. The <code>&lt;!DOCTYPE html&gt;</code> tag represents the Document Type and helps some browsers display correctly with your website, must only be used once. Some elements do need a closing tag, like <code>&lt;/center&gt;</code>.</p>
             <p>The <code>&lt;head&gt;</code> tag is needed to represent the head of the website. The <code>&lt;body&gt;</code> tag is the same thing, but it's the body.</p>
@@ -271,7 +289,7 @@ import BackToTop from '../../components/BackToTop.astro';
           <div id="img-3">
             <h3>HTML Images</h3>
             <p>The <code>&lt;img&gt;</code> tag is to show a image. The width or height description can be used by pixels or percentages by displays. The <code>alt</code> tag shows up when the image doesn't load or can't load, it shows the description.</p>
-            <p><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></p>
+            <pre><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></pre>
           </div>
         </Fragment>
       </Scrollspy>
@@ -503,4 +521,4 @@ import BackToTop from '../../components/BackToTop.astro';
 </div>
 <BackToTop />
 </div>
-<Scripts accordion="true" scrollspy="true" />
+<Scripts highlight="true" accordion="true" scrollspy="true" />
