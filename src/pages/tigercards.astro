@@ -8,6 +8,47 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script is:inline src="/static/darkmode.js"></script>
+
+    <style>
+      .card-custom, .card-img-top {
+        width: 25rem;
+      }
+      
+      .card-orange {
+        background-color: #f58f20;
+        border-color: #ff8c00;
+        border-bottom-left-radius: var(--bs-card-inner-border-radius);
+        border-bottom-right-radius: var(--bs-card-inner-border-radius);
+      }
+      
+      .card-orange-today {
+        background-color: #f7a855;
+        border-color: #f69c3c;
+      }
+      
+      .card-img-top {
+        height: 225px;
+        object-fit: cover;
+        filter: brightness(0.7);
+      }
+      
+      .proper-center {
+        & {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6 {
+          margin-bottom: 0;
+        }
+      }
+    </style>
   </head>
   <body class="m-5 d-flex flex-wrap gap-2">
     <div class="card card-custom" data-bs-theme="light">
