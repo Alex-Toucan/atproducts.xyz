@@ -1244,8 +1244,15 @@ int main() &lbrace;
                 <div id="ftd-5">
                   <h3>Function Type Declaration</h3>
                   <p>Haskell's functions will usually have 2 parts: a type declaration, and the implementation of the function itself (the type part can also be inferred):</p>
-                  <code> -- type declaration <br> -- constraints =&gt; type -&gt; ... -&gt; returnType (the last type will always be the return type) <br> countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int <br> -- implementation <br> countIns x = length . filter (== x) <br>
-                  </code>
+<pre>
+<code> 
+-- type declaration 
+-- constraints =&gt; type -&gt; ... -&gt; returnType (the last type will always be the return type) 
+countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int
+-- implementation 
+countIns x = length . filter (== x)
+</code>
+</pre>
                   <ul><li>Bool: boolean True or False.</li><li>Char: one character.</li><li>Int: fixed-precision signed integer (usually 64-bit)</li><li>Float / Double: floating-point values.</li>
                   </ul>
                   <p>Notice the type declaration has 2 types of "arrows": <code>=&gt;</code> and <code>-&gt;</code>. </p>
@@ -1254,8 +1261,14 @@ int main() &lbrace;
                 </div>
                 <div id="fde-5">
                   <h3>Function Definition</h3>
-                  <p>Functions are defined like: <code>functionName argument(s) = expression</code>. Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
-                  <code> -- type declaration countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int -- implementation -- function args = expression countIns x = length . filter (== x) </code>
+                  <p>Functions are defined similar to: <pre class="not-standalone"><code>functionName argument(s) = expression</code></a>. Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
+<pre><code> 
+-- type declaration 
+countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int 
+-- implementation 
+-- function 
+args = expression countIns x = length . filter (== x) 
+</code></pre>
                 </div>
                 <div id="fpr-5">
                   <h3>Functional Principles</h3>
