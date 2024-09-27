@@ -6034,7 +6034,7 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
       
 
 .sw-feature-box {
-	display: grid !important;
+	display: grid;
 	justify-content: center;
   background-color: grey;
   padding: 10px;
