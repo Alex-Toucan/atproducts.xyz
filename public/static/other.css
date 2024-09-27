@@ -6048,11 +6048,12 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 }
 
 .sw-link {
-	      color: white !important;
+	color: white !important;
+	text-align: center !important;
 }
-    .sw-link:hover, .sw-link:active, .sw-link:focus {
-      color: wheat !important;
-    }
+.sw-link:hover, .sw-link:active, .sw-link:focus {
+	color: wheat !important;
+}
 
 .footer-info {
   text-decoration: none;
