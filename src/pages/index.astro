@@ -12,11 +12,10 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-  { bulletinImage: "21921-1-091824.webp" },
-  { bulletinImage: "21921-2-091824.webp" },
-  { bulletinImage: "2192-1-082124.webp" },
-  { bulletinImage: "2192-2-082124.webp" },
-  { bulletinImage: "2192-3-082124.webp" },
+  { bulletinImage: "3YEAR.webp" },
+  { bulletinImage: "220-1-101024.webp" },
+  { bulletinImage: "220-2-101024.webp" },
+  { bulletinImage: "220-3-101024.webp" },
 ]} />
 <div id="page">
   <Navbar />
@@ -48,20 +47,17 @@ bulletin={[
     <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow px-0 container-xsm mt-xmd-2 mb-3 pointer-event" data-bs-ride="carousel">
       <div class="pt-xmd-2 px-xmd-2">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/media/slideshow/21921-1-091824.webp" class="d-block w-100" alt="2.19.2.1 Release Slide 1">
+          <div class="carousel-item activ3" data-bs-interval="10000">
+            <img src="/media/slideshow/3YEAR.webp" class="d-block w-100" alt="3 Year Anniversary">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/21921-2-091824.webp" class="d-block w-100" alt="2.19.2.1 Release Slide 2">
+            <img src="/media/slideshow/220-1-101024.webp" class="d-block w-100" alt="2.20 Release Slide 1">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/2192-1-082124.webp" class="d-block w-100" alt="2.19.2 Release Slide 1">
+            <img src="/media/slideshow/220-2-101024.webp" class="d-block w-100" alt="2.20 Release Slide 2">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/2192-2-082124.webp" class="d-block w-100" alt="2.19.2 Release Slide 2">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/2192-3-082124.webp" class="d-block w-100" alt="2.19.2 Release Slide 3">
+            <img src="/media/slideshow/220-3-101024.webp" class="d-block w-100" alt="2.20 Release Slide 3">
           </div>
         </div>
         <div class="mediarow py-2" aria-label="Carousel-A Controls">
@@ -90,7 +86,7 @@ bulletin={[
           <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-carousel"></i></label>
         </div>
         <div class="col px-2 my-auto">
-          <a href="/media/pdf/2.19.2.1 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
+          <a href="/media/pdf/2.20 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
         </div>
       </div>
     </div>
@@ -299,23 +295,23 @@ bulletin={[
       <div id="what-new">
         <h2> What's New? </h2>
         <p>
-          <b> Released on:</b> September 18th, 2024.<br>
-          <b>ATP Database:</b> 2.19.2.1
+          <b> Released on:</b> October 10th, 2024.<br>
+          <b>ATP Database:</b> 2.20
         </p>
         <b>Added</b>
         <ul>
-          <li>Added more resources into CodingHome. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/265" target="_blank" rel="noopener noreferrer">#265</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/281" target="_blank" rel="noopener noreferrer">#281</a>)</li>
-          <li>Added Renovate, a GitHub bot to update dependencies. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/258" target="_blank" rel="noopener noreferrer">(#258)</a></li>
+          <li>Added a button for keyboard users to skip to the main content. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/287" target="_blank" rel="noopener noreferrer">#287</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/291" target="_blank" rel="noopener noreferrer">#291</a>)</li>
+          <li>Added highlight.js to color code syntax in CodingHome and the Script Community. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/300" target="_blank" rel="noopener noreferrer">(#300)</a></li>
+          <li>Added more resources and accordions in CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/301" target="_blank" rel="noopener noreferrer">(#301)</a></li>
+          <li>Added the Selectors section in CodingHome's CSS Basics. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/300" target="_blank" rel="noopener noreferrer">(#300)</a></li>
         </ul>
         <b>Changed</b>
         <ul>
-          <li>Updated the Privacy Policy to include IP Logging. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/256" target="_blank" rel="noopener noreferrer">(#256)</a></li>
-          <li>Updated the way the site renders hero buttons. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/263" target="_blank" rel="noopener noreferrer">(#263)</a></li>
-          <li>Updated Astro from v4.14.4 to v4.15.5. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/253" target="_blank" rel="noopener noreferrer">#253</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/264" target="_blank" rel="noopener noreferrer">#264</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/266" target="_blank" rel="noopener noreferrer">#266</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/268" target="_blank" rel="noopener noreferrer">#268</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/270" target="_blank" rel="noopener noreferrer">#270</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/271" target="_blank" rel="noopener noreferrer">#271</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/276" target="_blank" rel="noopener noreferrer">#276</a>)</li>
-          <li>Updated vite from v5.4.5 to v5.4.6. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/282" target="_blank" rel="noopener noreferrer">(#282)</a></li>
-          <li>Updated micromatch from v4.0.7 to v4.0.8. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/252" target="_blank" rel="noopener noreferrer">#252</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/258" target="_blank" rel="noopener noreferrer">#257</a>)</li>
-          <li>Updated opencv-python from v4.5.3.56 to v4.8.1.78 in <code>require.txt</code>. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/267" target="_blank" rel="noopener noreferrer">(#267)</a></li>
-          <li>Updated actions/checkout from v3 to v4. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/255" target="_blank" rel="noopener noreferrer">(#255)</a></li>
+          <li>Fixed accessibility issues in most pages (mostly headers and links). <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/297" target="_blank" rel="noopener noreferrer">(#297)</a></li>
+          <li>Changed the main logo image to a .webp format. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/292" target="_blank" rel="noopener noreferrer">(#292)</a></li>
+          <li>Reduced the scripts needed for community pages. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/286" target="_blank" rel="noopener noreferrer">#286</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/296" target="_blank" rel="noopener noreferrer">#296</a>)</li>
+          <li>Updated Astro from v4.15.5 to v4.15.9. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/288" target="_blank" rel="noopener noreferrer">#288</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/291" target="_blank" rel="noopener noreferrer">#291</a>)</li>
+          <li>Updated rollup from v4.21.1 to v4.22.4. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/298" target="_blank" rel="noopener noreferrer">(#298)</a></li>
         </ul>
       </div>
     </main>
