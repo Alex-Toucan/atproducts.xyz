@@ -493,6 +493,9 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 	.ms-story-1 {
 		margin-left: .25rem !important;
 	}
+	.d-story-none {
+		display: none !important;
+	}
 }
 
 @media (max-width: 900.98px) {
