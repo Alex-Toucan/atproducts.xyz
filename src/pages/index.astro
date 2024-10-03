@@ -16,6 +16,7 @@ bulletin={[
   { bulletinImage: "220-1-101024.webp" },
   { bulletinImage: "220-2-101024.webp" },
   { bulletinImage: "220-3-101024.webp" },
+  { bulletinImage: "220-4-101024.webp" },
 ]} />
 <div id="page">
   <Navbar />
@@ -59,6 +60,9 @@ bulletin={[
           <div class="carousel-item" data-bs-interval="10000">
             <img src="/media/slideshow/220-3-101024.webp" class="d-block w-100" alt="2.20 Release Slide 3">
           </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="/media/slideshow/220-4-101024.webp" class="d-block w-100" alt="2.20 Release Slide 4">
+          </div>
         </div>
         <div class="mediarow py-2" aria-label="Carousel-A Controls">
           <button class="carousel-control-prev col" type="button" data-bs-target="#carousel-A" data-bs-slide="prev">
@@ -70,6 +74,7 @@ bulletin={[
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
+            <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
           </div>
           <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -307,10 +312,15 @@ bulletin={[
         <b>Changed</b>
         <ul>
           <li>Fixed accessibility issues in most pages (mostly headers and links). <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/297" target="_blank" rel="noopener noreferrer">(#297)</a></li>
+          <li>Updated the Discord Rules. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/306" target="_blank" rel="noopener noreferrer">(#306)</a></li>
           <li>Changed the main logo image to a .webp format. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/292" target="_blank" rel="noopener noreferrer">(#292)</a></li>
           <li>Reduced the scripts needed for community pages. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/286" target="_blank" rel="noopener noreferrer">#286</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/296" target="_blank" rel="noopener noreferrer">#296</a>)</li>
-          <li>Updated Astro from v4.15.5 to v4.15.9. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/288" target="_blank" rel="noopener noreferrer">#288</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/291" target="_blank" rel="noopener noreferrer">#291</a>)</li>
+          <li>Updated Astro from v4.15.5 to v4.15.11. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/288" target="_blank" rel="noopener noreferrer">#288</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/291" target="_blank" rel="noopener noreferrer">#291</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/304" target="_blank" rel="noopener noreferrer">#304</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/307" target="_blank" rel="noopener noreferrer">#307</a>)</li>
           <li>Updated rollup from v4.21.1 to v4.22.4. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/298" target="_blank" rel="noopener noreferrer">(#298)</a></li>
+        </ul>
+        <b>Bug Fixes</b>
+        <ul>
+          <li>Fixed where the navbar was inconsistent in design in CCTV Interception. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/305" target="_blank" rel="noopener noreferrer">(#305)</a></li>
         </ul>
       </div>
     </main>
