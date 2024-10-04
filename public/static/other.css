@@ -6348,7 +6348,7 @@ height: calc(100vh - 448px);
 	position: sticky;
     top: 100%;
 }
-.products-3 img, .products-4 img {
+.products-3 img, .products-4 img, .products-6 img {
 	width: 25%;
 }
 
@@ -6373,7 +6373,7 @@ height: calc(100vh - 448px);
 		width: 75%;
 		max-width: 225px;
 	}
-	.products-3 img {
+	.products-3 img, .products-6 img {
 		width: 75%;
 		max-width: 210px;
 	}
