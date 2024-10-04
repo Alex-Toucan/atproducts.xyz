@@ -70,6 +70,10 @@ html, body {
 	background: url('/media/images/hero-mdickie.webp');
 } 
 
+.hero-roms {
+	background: url('/media/images/hero-roms.webp');
+} 
+
 .accordion-body p:last-child {
   margin-bottom: 0 !important;
 }
