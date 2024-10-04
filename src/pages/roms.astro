@@ -1,0 +1,45 @@
+---
+import Head from '../layouts/Head.astro';
+import Scripts from '../layouts/Scripts.astro';
+import Hero     from '../components/Hero.astro';
+import Navbar    from '../components/Navbar.astro';
+import Footer    from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+
+<Head title="AT's ROM Games" heroid="roms" description="AT's ROM Games is a discontinued collection of ROMs back in 2021." keywords="ROMS, AT's ROM Games, AT Products" author="Alex Toucan" />
+<div id="page">
+  <Navbar />
+  <div id="main-content">
+    <Hero
+      id="sms"
+      description="A <strong>discontinued</strong> collection of ROMs back in 2021!"
+      imageSrc="/media/images/AT-ROM-Games-with-logo-white.webp" 
+      imageWidth="50%" 
+      minImageWidth="250px" 
+      buttons={[
+        { href: "#downloads", text: "Downloads", type: "primary" },
+      ]},
+      dropdownItems={[
+        { navigationDesc: "What is AT's ROM Games?", navigationLink: "#what" },
+        { navigationDesc: "Downloads", navigationLink: "#downloads" },
+      ]},
+    />
+    <main id="roms" class="container">
+      <div id="what">
+        <h2>What is AT's ROM Games?</h2>
+        <p>AT's ROM Games is a <strong>discontinued</strong> collection of various ROMs, and includes emulators to play such ROMs. AT's ROM Games had been in and out of this website, but it has a comeback as a rememberance to our first product, which is AT's ROM Games, all the way back in late 2021. 
+        <br><br>The current version from May 28th, 2022, is 3.0.
+        </p>
+      </div>
+      <hr>
+      <div id="downloads">
+        <h2>Downloads</h2>
+        <a href="https://mega.nz/folder/xa1DFLjS#l6bJvDJA1P7Thj0zwHrryw">AT's ROM Games 3.0 (mega.nz)</a>
+      </div>
+    </main>
+    <Footer author="Alex Toucan" />
+  </div>
+  <BackToTop />
+</div>
+<Scripts />
