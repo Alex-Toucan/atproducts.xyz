@@ -10,7 +10,7 @@
  * @author Zeno Rocha <hi@zenorocha.com>
  */
 
-.basics div {
+.pre-scroll div {
   overflow-x: auto;
   max-width: 100%;
 }
