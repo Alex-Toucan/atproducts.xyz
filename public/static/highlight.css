@@ -24,7 +24,6 @@
 
 :root, [data-bs-theme=light] {
   .hljs {
-    background: #F3F3F3;
     color: #444
   }
   .hljs-subst {
