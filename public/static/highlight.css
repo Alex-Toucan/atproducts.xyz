@@ -10,6 +10,18 @@
  * @author Zeno Rocha <hi@zenorocha.com>
  */
 
+.basics {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+pre {
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%; 
+}
+
 .not-standalone {
   display: inline-flex;
   margin-bottom: 0 !important;
@@ -18,8 +30,6 @@
 .hljs {
   display: block;
   overflow-x: auto;
-  white-space: pre-wrap;    
-  word-wrap: break-word; 
 }
 
 :root, [data-bs-theme=light] {
