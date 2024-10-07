@@ -10,7 +10,7 @@ import AccordionItem from '../../components/accordion/AccordionItem.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head highlight="true" title="CodingHome" heroid="codinghome" icon="codinghome.webp" description="A Discord server full of coders!" keywords="Scripts, viruses, coding," author="Alex Toucan & CodingLive" />
+<Head highlight="true" title="CodingHome" heroid="codinghome" icon="codinghome.webp" description="CodingHome is a coding and web development community where tech enthusiasts of all skill levels can come together." keywords="Scripts, viruses, coding," author="Alex Toucan & CodingLive" />
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -1348,7 +1348,7 @@ countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int
 -- implementation 
 countIns x = length . filter (== x)
 </code>
-</pre>         
+</pre>
               <ul><li>Bool: boolean True or False.</li><li>Char: one character.</li><li>Int: fixed-precision signed integer (usually 64-bit)</li><li>Float / Double: floating-point values.</li>
               </ul>
               <p>Notice the type declaration has 2 types of "arrows": <code>=&gt;</code> and <code>-&gt;</code>. </p>
@@ -1357,13 +1357,13 @@ countIns x = length . filter (== x)
             </div>
             <div id="fde-5">
               <h3>Function Definition</h3>
-              <p>Functions are defined like: <pre><code>functionName argument(s) = expression</code></pre>. Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
+              <p>Functions are defined similar to: <pre class="not-standalone"><code>functionName argument(s) = expression</code></pre>. Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
 <pre><code> 
 -- type declaration 
 countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int 
 -- implementation 
--- function 
-args = expression countIns x = length . filter (== x) 
+-- function args = expression 
+countIns x = length . filter (== x) 
 </code></pre>
             </div>
             <div id="fpr-5">
