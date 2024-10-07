@@ -113,6 +113,11 @@ pre {
 }
 
 [data-bs-theme=dark] {
+  .hljs-tag, 
+  .hljs-punctuation {
+    color: inherit !important;
+  }
+  
   .hljs-built_in,
   .hljs-selector-tag,
   .hljs-section,
