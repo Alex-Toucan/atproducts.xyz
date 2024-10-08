@@ -6365,6 +6365,10 @@ height: calc(100vh - 448px);
 	max-width: 125px;
 }
 
+.products-6 img {
+	max-width: 200px;
+}
+
 @media (max-width:767.98px) {
 	.products-tabContent {
   	height: 20rem !important;
