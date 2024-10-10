@@ -10,143 +10,145 @@ import BackToTop from '../components/BackToTop.astro';
 <Head title="PSON" heroid="ehs" description="PSON; The better JSON." keywords="Inferno, PSON, BxPP, AT Products LLC" author="Alex Toucan & Pynx" />
 <div id="page">
 	<Navbar />
-	<HeroPynx
-		title="PSON for JSON"
-		description="Made by Pynx&semi; the better way to do JSON files for languages; with languages."
-    buttons={[
-      { href: "#downloads", text: "Downloads", type: "primary" },
-    ]},
-    dropdownItems={[
-      { navigationDesc: "General Information", navigationLink: "#general-info" },
-      { navigationDesc: "Downloads & Installs", navigationLink: "#downloads" },
-    ]},
-  />
-  <main id="bxpp" class="container">
-    <div id="general-info">
-      <h2> General Information </h2>
-      <p>PSON aka PynxSON, made by Pynx, is a JSON extension for the supported programming languages (can be found below). It uses a script from the supported programming languages as a library, then you can create script using functions from the library for it to create a JSON file using what you wrote.</p>
-      <p>What does PSON have? Well:</p>
-      <ul>
-        <li>Comments (Ever needed to describe your objects? Well now you can!)</li>
-        <li>Better read and write (no "with open")</li>
-        <li>Better speed and compatibility</li>
-      </ul>
-      <p>
-        <b>Platforms:</b> Windows, Linux, and MacOS.
-      </p>
-    </div>
-    <hr>
-    <div id="downloads">
-      <h2>Downloads & Installation</h2>
-      <ul class="mt-2 nav nav-tabs" id="downloadTab" role="tablist" style="
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-      ">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#python-tab-pane" type="button" role="tab" aria-controls="python-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/python.png" height="45px"></button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="dart-tab" data-bs-toggle="tab" data-bs-target="#dart-tab-pane" type="button" role="tab" aria-controls="dart-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/dart.png" height="45px"></button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="c-tab" data-bs-toggle="tab" data-bs-target="#c-tab-pane" type="button" role="tab" aria-controls="c-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/c.png" height="45px"></button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="go-tab" data-bs-toggle="tab" data-bs-target="#go-tab-pane" type="button" role="tab" aria-controls="go-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/go.png" height="45px"></button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="rust-tab" data-bs-toggle="tab" data-bs-target="#rust-tab-pane" type="button" role="tab" aria-controls="rust-tab-pane" aria-selected="true"><img src="/media/images/rust.png" height="45px"></button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="haskell-tab" data-bs-toggle="tab" data-bs-target="#haskell-tab-pane" type="button" role="tab" aria-controls="haskell-tab-pane" aria-selected="true"><img src="/media/images/haskell.png" height="45px"></button>
-        </li>
-      </ul>
-      <div class="tab-content border rounded-bottom-2 p-4" id="downloadTabContent">
-        <div class="tab-pane fade active show" id="python-tab-pane" role="tabpanel" aria-labelledby="python-tab" tabindex="0">
-          <h1>Python</h1>
-          <span class="h5">Version: <span class="fw-normal">3.0</span></span>
-          <hr class="border-3">
-          <h2> Downloads </h2>
-          <div class="my-2 d-grid d-sm-flex flex-wrap gap-2">
-            <a class="btn btn-primary" href="https://github.com/2983u2/Pson/blob/main/Pson.py" download>Library File (Python)</a> 
-            <a class="btn btn-primary" href="https://github.com/2983u2/Pson/archive/refs/heads/main.zip" download>ZIP Download (Python)</a> 
-            <a class="btn btn-secondary" href="https://github.com/2983u2/Pson/"><i class='bi bi-github fs-6 me-2'></i> GitHub Repo</a>
-          </div>
-          <hr>
-          <h2> Requirements </h2>
-          <p><b>Python:</b> 3.0 or above</p>
-          <hr>
-          <h2> Installation </h2>
-          <p>
-            <ol>
-              <li>Download the <a href="https://github.com/2983u2/Pson/blob/main/Pson.py">Python library file</a>.</li>
-              <li>Import the file: <code>from Pson import *</code></li>
-              <li>Call the functions: <b><u><a href="https://github.com/2983u2/Pson?tab=readme-ov-file#examples">Examples</a></u></b></li>
-              <li>Run your script to generate a JSON file.</li>
-            </ol>
-          </p>
-        </div>
-        <div class="tab-pane fade" id="dart-tab-pane" role="tabpanel" aria-labelledby="dart-tab" tabindex="0">
-          <h1>Dart</h1>
-          <span class="h5">Version: <span class="fw-normal">1.0</span></span>
-          <hr class="border-3">
-          <h2> Downloads </h2>
-          <div class="my-2 d-grid d-sm-flex gap-2">
-            <a class="btn btn-primary" href="https://github.com/2983u2/Dson/blob/main/Dson.dart">Library File (Dart)</a> 
-            <a class="btn btn-primary" href="https://github.com/2983u2/Dson/archive/refs/heads/main.zip" download="">ZIP Download (Dart)</a> 
-            <a class="btn btn-secondary" href="https://github.com/2983u2/Dson/"><i class='bi bi-github fs-6 me-2'></i> GitHub Repo</a>
-          </div>
-          <hr>
-          <h2> Requirements </h2>
-          <p><b>Dart:</b> 3.4.4 or above</p>
-          <hr>
-          <h2> Installation </h2>
-          <p>
-            <ol>
-              <li>Download the <a href="https://github.com/2983u2/Pson/blob/main/Dson.dart">Dart library file</a>.</li>
-              <li>Import the file: <code>import 'Dson.dart';</code></li>
-              <li>Call the functions: <b><u><a href="https://github.com/2983u2/Dson?tab=readme-ov-file#examples">Examples</a></u></b></li>
-              <li>Run your script to generate a JSON file.</li>
-            </ol>
-          </p>
-        </div>
-        <div class="tab-pane fade" id="c-tab-pane" role="tabpanel" aria-labelledby="c-tab" tabindex="0">
-          <h1>C</h1>
-          <hr class="border-3">
-          <div class="text-center">
-            <i class="fs-1 bi bi-cone-striped"></i>
-            <p class="m-0"> This section is under development. </p>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="go-tab-pane" role="tabpanel" aria-labelledby="go-tab" tabindex="0">
-          <h1>Go</h1>
-          <hr class="border-3">
-          <div class="text-center">
-            <i class="fs-1 bi bi-cone-striped"></i>
-            <p class="m-0"> This section is under development. </p>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="rust-tab-pane" role="tabpanel" aria-labelledby="rust-tab" tabindex="0">
-          <h1>Rust</h1>
-          <hr class="border-3">
-          <div class="text-center">
-            <i class="fs-1 bi bi-cone-striped"></i>
-            <p class="m-0"> This section is under development. </p>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="haskell-tab-pane" role="tabpanel" aria-labelledby="haskell-tab" tabindex="0">
-          <h1>Haskell</h1>
-          <hr class="border-3">
-          <div class="text-center">
-            <i class="fs-1 bi bi-cone-striped"></i>
-            <p class="m-0"> This section is under development. </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-	<Footer author="Alex Toucan & Pynx" />
+	<div id="main-content">
+		<HeroPynx
+			title="PSON for JSON"
+			description="Made by Pynx&semi; the better way to do JSON files for languages; with languages."
+	    buttons={[
+	      { href: "#downloads", text: "Downloads", type: "primary" },
+	    ]},
+	    dropdownItems={[
+	      { navigationDesc: "General Information", navigationLink: "#general-info" },
+	      { navigationDesc: "Downloads & Installs", navigationLink: "#downloads" },
+	    ]},
+	  />
+	  <main id="bxpp" class="container">
+	    <div id="general-info">
+	      <h2> General Information </h2>
+	      <p>PSON aka PynxSON, made by Pynx, is a JSON extension for the supported programming languages (can be found below). It uses a script from the supported programming languages as a library, then you can create script using functions from the library for it to create a JSON file using what you wrote.</p>
+	      <p>What does PSON have? Well:</p>
+	      <ul>
+	        <li>Comments (Ever needed to describe your objects? Well now you can!)</li>
+	        <li>Better read and write (no "with open")</li>
+	        <li>Better speed and compatibility</li>
+	      </ul>
+	      <p>
+	        <b>Platforms:</b> Windows, Linux, and MacOS.
+	      </p>
+	    </div>
+	    <hr>
+	    <div id="downloads">
+	      <h2>Downloads & Installation</h2>
+	      <ul class="pt-2 nav nav-tabs" id="downloadTab" role="tablist" style="
+	        flex-wrap: nowrap;
+	        overflow-x: auto;
+	        overflow-y: hidden;
+	      ">
+	        <li class="nav-item" role="presentation">
+	          <button class="nav-link active" id="python-tab" aria-label="Python Tab" data-bs-toggle="tab" data-bs-target="#python-tab-pane" type="button" role="tab" aria-controls="python-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/python.png" alt="Python" height="45px"></button>
+	        </li>
+	        <li class="nav-item" role="presentation">
+	          <button class="nav-link" id="dart-tab" aria-label="Dart Tab" data-bs-toggle="tab" data-bs-target="#dart-tab-pane" type="button" role="tab" aria-controls="dart-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/dart.png" alt="Dart" height="45px"></button>
+	        </li>
+	        <li class="nav-item" role="presentation">
+	          <button class="nav-link" id="c-tab" aria-label="C Tab" data-bs-toggle="tab" data-bs-target="#c-tab-pane" type="button" role="tab" aria-controls="c-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/c.png" alt="C" height="45px"></button>
+	        </li>
+	        <li class="nav-item" role="presentation">
+	          <button class="nav-link" id="go-tab" aria-label="Go Tab" data-bs-toggle="tab" data-bs-target="#go-tab-pane" type="button" role="tab" aria-controls="go-tab-pane" aria-selected="false" tabindex="-1"><img src="/media/images/go.png" alt="Go" height="45px"></button>
+	        </li>
+	        <li class="nav-item" role="presentation">
+	          <button class="nav-link" id="rust-tab" aria-label="Rust Tab" data-bs-toggle="tab" data-bs-target="#rust-tab-pane" type="button" role="tab" aria-controls="rust-tab-pane" aria-selected="true"><img src="/media/images/rust.png" alt="Rust" height="45px"></button>
+	        </li>
+	        <li class="nav-item" role="presentation">
+	          <button class="nav-link" id="haskell-tab" aria-label="Haskell Tab" data-bs-toggle="tab" data-bs-target="#haskell-tab-pane" type="button" role="tab" aria-controls="haskell-tab-pane" aria-selected="true"><img src="/media/images/haskell.png" alt="Haskell" height="45px"></button>
+	        </li>
+	      </ul>
+	      <div class="tab-content border rounded-bottom-2 p-4" id="downloadTabContent">
+	        <div class="tab-pane fade active show" id="python-tab-pane" role="tabpanel" aria-labelledby="python-tab" tabindex="0">
+	          <h1>Python</h1>
+	          <span class="h5">Version: <span class="fw-normal">3.0</span></span>
+	          <hr class="border-3">
+	          <h2> Downloads </h2>
+	          <div class="my-2 d-grid d-sm-flex flex-wrap gap-2">
+	            <a class="btn btn-primary" href="https://github.com/2983u2/Pson/blob/main/Pson.py" download>Library File (Python)</a> 
+	            <a class="btn btn-primary" href="https://github.com/2983u2/Pson/archive/refs/heads/main.zip" download>ZIP Download (Python)</a> 
+	            <a class="btn btn-secondary" href="https://github.com/2983u2/Pson/"><i class='bi bi-github fs-6 me-2'></i> GitHub Repo</a>
+	          </div>
+	          <hr>
+	          <h2> Requirements </h2>
+	          <p><b>Python:</b> 3.0 or above</p>
+	          <hr>
+	          <h2> Installation </h2>
+	          <p>
+	            <ol>
+	              <li>Download the <a href="https://github.com/2983u2/Pson/blob/main/Pson.py">Python library file</a>.</li>
+	              <li>Import the file: <code>from Pson import *</code></li>
+	              <li>Call the functions: <b><u><a href="https://github.com/2983u2/Pson?tab=readme-ov-file#examples">Examples</a></u></b></li>
+	              <li>Run your script to generate a JSON file.</li>
+	            </ol>
+	          </p>
+	        </div>
+	        <div class="tab-pane fade" id="dart-tab-pane" role="tabpanel" aria-labelledby="dart-tab" tabindex="0">
+	          <h1>Dart</h1>
+	          <span class="h5">Version: <span class="fw-normal">1.0</span></span>
+	          <hr class="border-3">
+	          <h2> Downloads </h2>
+	          <div class="my-2 d-grid d-sm-flex gap-2">
+	            <a class="btn btn-primary" href="https://github.com/2983u2/Dson/blob/main/Dson.dart">Library File (Dart)</a> 
+	            <a class="btn btn-primary" href="https://github.com/2983u2/Dson/archive/refs/heads/main.zip" download="">ZIP Download (Dart)</a> 
+	            <a class="btn btn-secondary" href="https://github.com/2983u2/Dson/"><i class='bi bi-github fs-6 me-2'></i> GitHub Repo</a>
+	          </div>
+	          <hr>
+	          <h2> Requirements </h2>
+	          <p><b>Dart:</b> 3.4.4 or above</p>
+	          <hr>
+	          <h2> Installation </h2>
+	          <p>
+	            <ol>
+	              <li>Download the <a href="https://github.com/2983u2/Pson/blob/main/Dson.dart">Dart library file</a>.</li>
+	              <li>Import the file: <code>import 'Dson.dart';</code></li>
+	              <li>Call the functions: <b><u><a href="https://github.com/2983u2/Dson?tab=readme-ov-file#examples">Examples</a></u></b></li>
+	              <li>Run your script to generate a JSON file.</li>
+	            </ol>
+	          </p>
+	        </div>
+	        <div class="tab-pane fade" id="c-tab-pane" role="tabpanel" aria-labelledby="c-tab" tabindex="0">
+	          <h1>C</h1>
+	          <hr class="border-3">
+	          <div class="text-center">
+	            <i class="fs-1 bi bi-cone-striped"></i>
+	            <p class="m-0"> This version of PSON is under development. </p>
+	          </div>
+	        </div>
+	        <div class="tab-pane fade" id="go-tab-pane" role="tabpanel" aria-labelledby="go-tab" tabindex="0">
+	          <h1>Go</h1>
+	          <hr class="border-3">
+	          <div class="text-center">
+	            <i class="fs-1 bi bi-cone-striped"></i>
+	            <p class="m-0"> This version of PSON is under development. </p>
+	          </div>
+	        </div>
+	        <div class="tab-pane fade" id="rust-tab-pane" role="tabpanel" aria-labelledby="rust-tab" tabindex="0">
+	          <h1>Rust</h1>
+	          <hr class="border-3">
+	          <div class="text-center">
+	            <i class="fs-1 bi bi-cone-striped"></i>
+	            <p class="m-0"> This version of PSON is under development. </p>
+	          </div>
+	        </div>
+	        <div class="tab-pane fade" id="haskell-tab-pane" role="tabpanel" aria-labelledby="haskell-tab" tabindex="0">
+	          <h1>Haskell</h1>
+	          <hr class="border-3">
+	          <div class="text-center">
+	            <i class="fs-1 bi bi-cone-striped"></i>
+	            <p class="m-0"> This version of PSON is under development. </p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </main>
+		<Footer author="Alex Toucan & Pynx" />
+	</div>
 	<BackToTop />
 </div>
 <Scripts />

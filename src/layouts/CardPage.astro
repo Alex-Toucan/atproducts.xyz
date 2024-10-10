@@ -17,7 +17,7 @@ const { id, title, cardLinks, size } = Astro.props;
               )}
               <div class="card-body">
                 <h2 class="card-title">{cardTitle}</h2>
-                <p class="card-text">{cardDescription}</p>
+                <p class="card-text" set:html={cardDescription}></p>
                 <div class="tab-link d-grid gap-2">
                   <a href={cardHref} class="btn btn-primary w-100">Visit</a>
                   {secondaryHref && (
