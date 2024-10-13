@@ -5,19 +5,20 @@ const {
   titleClasses,
   description,
   errorButton,
-  primaryHref,
-  primaryText,
-  secondaryHref,
-  secondaryText,
+  buttons,
   imageSrc,
   imageWidth,
   imageClasses,
+  imageAlt,
   minImageWidth,
   marginBottom,
   icons,
   dropdownItems,
-  container
+  container,
+  size
 } = Astro.props;
+
+const flexSize = size ? size : 'md';
 ---
 
 <div id="intro" class={`hero hero-${id} text-center ${marginBottom === 'false' ? '' : 'mb-3'}`} data-bs-theme="dark">
@@ -27,23 +28,22 @@ const {
         <div class={`${container === 'true' ? 'container' : ''}`}>
           <div>
             {imageSrc && (
-              <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} />
+              <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} alt={`${imageAlt ? imageAlt : 'icon'}`} />
             )}
             {title && (
-            <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
+              <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
             )}
           </div>
-          <p class="fs-4 m-3 text-body-secondary">{description}</p>
+          <p class="fs-4 m-3 text-body-secondary" set:html={description}></p>
           <div class="mx-auto justify-content-between container" id="links">
-            <div class="d-md-flex d-grid gap-2">
+            <div class={`d-${flexSize}-flex d-grid gap-2`}>
               {errorButton && (
                 <Fragment set:html={errorButton} />
               )}
-              {primaryHref && primaryText && (
-              <a href={primaryHref} class="btn btn-primary col-md">{primaryText}</a>
-              )}
-              {secondaryHref && secondaryText && (
-                <a href={secondaryHref} class="btn btn-secondary col-md">{secondaryText}</a>
+              {buttons && (
+                buttons.map(({ href, text, type }, index) => (
+                  <a href={href} class={`btn btn-${type} col-md`}>{text}</a>
+                ))
               )}
               {dropdownItems && (
                 <div class="dropdown col-md">
@@ -52,7 +52,7 @@ const {
                   </button>
                   <ul class="dropdown-menu w-100 white-space-normal">
                     {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
-                      <li key={index}>
+                      <li>
                         <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
                       </li>
                     ))}
@@ -61,13 +61,13 @@ const {
               )}
             </div>
             {icons && (
-            <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
-              {icons && icons.map(({ icon, desc, href }, index) => (
-                <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc} key={index}>
-                  <i class={`bi bi-${icon}`}></i>
-                </a>
-              ))}
-            </div>
+              <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
+                {icons && icons.map(({ icon, desc, href }, index) => (
+                  <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc}>
+                    <i class={`bi bi-${icon}`}></i>
+                  </a>
+                ))}
+              </div>
             )}
           </div>
         </div>
