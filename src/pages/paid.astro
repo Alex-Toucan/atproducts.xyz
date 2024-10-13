@@ -66,8 +66,16 @@ import BackToTop from '../components/BackToTop.astro';
           description="If you would like to donate without buying our packages, you can do so here!"
         >
           <div slot="paid-card-content">
-            <p class="mb-0"><b>CashApp:</b> $ATProductsLLC</p>
-          </div>
+            <div class="d-flex flex-wrap gap-2"> 
+              <div class="col text-end">
+                <b>CashApp:</b>
+              </div>
+              <div class="vr"></div> 
+              <div class="col text-start">
+                $ATProductsLLC
+              </div>
+            </div>
+         </div>
         </SecondPaidCard>
       </div>
       <p> We only accept CashApp. Contact <a href="/contact/">our support line</a>, and we can figure something out. <a href="/paidterms">Terms may apply</a>.</p>
