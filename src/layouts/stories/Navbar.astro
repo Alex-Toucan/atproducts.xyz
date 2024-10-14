@@ -87,8 +87,9 @@ const { breadcrumbcontent } = Astro.props;
           <hr class="permhr m-story-2 m-story-0">
           <ol class="navbar-nav breadcrumb m-0">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/stories">Stories</a></li>
             {breadcrumbcontent && breadcrumbcontent.map(({ name, href, dropname1, drophref1, dropname2, drophref2 }, index) => (
-              <li class="breadcrumb-item"><a href="/noodle">Noodle Hackerspace</a>
+              <li class="breadcrumb-item"><a href={href}>{name}</a>
                 <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show">
                 </a>
                 {drophref1 && dropname1 && (
