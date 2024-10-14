@@ -8,9 +8,11 @@ import BackToTop from '../../components/BackToTop.astro';
 
 <Head title="CCTV Interception" description="AT Products LLC's Bookviewer presents 'CCTV Interception'!" author="Pynx" />
 <div id="page">
-  <Navbar storyname="CCTV Interception" id="cctv"
+  <Navbar pageTitle="CCTV Interception" id="cctv"
+    link={[
+     { name: "Noodle Hackerspace" , href: "/noodle" },
+    ]}
     breadcrumbcontent={[ 
-      { name: "Noodle Hackerspace" , href: "/noodle" },
       { dropname: "Noodle Hackerspace" , drophref: "/noodle" },
       { dropname: "(Backup)" , drophref: "/backup/noodle" }
     ]} 
