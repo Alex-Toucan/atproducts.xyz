@@ -1,5 +1,5 @@
 ---
-const { name, breadcrumbcontent } = Astro.props;
+const { storyname, breadcrumbcontent } = Astro.props;
 ---
 
 <a href="#main-content" class="visually-hidden-focusable btn btn-primary position-fixed m-2 hero-filter" style="z-index: 2000;">Skip to main content</a>
@@ -127,7 +127,7 @@ const { name, breadcrumbcontent } = Astro.props;
               </div>
             </li>
           ))}
-          <li class="breadcrumb-item active" aria-current="page">{name}</li>
+          <li class="breadcrumb-item active" aria-current="page">{storyname}</li>
         </ol>
       </div>
     </div>
