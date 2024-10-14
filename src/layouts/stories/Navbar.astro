@@ -8,7 +8,7 @@ const { breadcrumbcontent } = Astro.props;
   <nav class="first-navbar navbar navbar-expand-story main-navbar pb-0">
     <div class="container-fluid">
       <a class="navbar-brand d-inline me-3" href="/">
-        <img src="/media/images/longblack.png" height="45px" alt="Icon" class="headerimg"> 
+        <img src="/media/images/longblack.png" height="45px" alt="Icon" class="headerimg">
         <p class="text-disappear d-inline ms-2 align-middle">BookViewer</p>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-label="Toggle navigation" aria-expanded="true">
@@ -18,98 +18,123 @@ const { breadcrumbcontent } = Astro.props;
         <div class="vr story-end"></div>
         <ul class="ms-story-1 navbar-nav me-auto">
           <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/paid">Paid Services</a></li>
-              <li><a class="dropdown-item" href="/web">Web Projects</a></li>
-              <li><a class="dropdown-item" href="/sms">SMS Bomb</a></li>
-              <li><a class="dropdown-item" href="/pynx">Pynx's Projects</a></li>
+              <li>
+                <a class="dropdown-item" href="/paid">Paid Services</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/web">Web Projects</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/sms">SMS Bomb</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/pynx">Pynx's Projects</a>
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Communities</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Communities</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/ehs">Ethical Hacking Society</a></li>
-              <li><a class="dropdown-item" href="/script">The Script Community</a></li>
-              <li><a class="dropdown-item" href="/codinghome">CodingHome</a></li>
-              <li><a class="dropdown-item" href="/noodle">Noodle Hackerspace</a></li>
+              <li>
+                <a class="dropdown-item" href="/ehs">Ethical Hacking Society</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/script">The Script Community</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/codinghome">CodingHome</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/noodle">Noodle Hackerspace</a>
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentation</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
-              <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
-              <li><a class="dropdown-item" href="/policies">Policies</a></li>
-              <li><a class="dropdown-item" href="/licenses">Licenses</a></li>
+              <li>
+                <a class="dropdown-item" href="/terms">Terms of Service</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/discord">Discord Rules</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/policies">Policies</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/licenses">Licenses</a>
+              </li>
             </ul>
           </li>
         </ul>
         <hr class="m-2 permhr">
         <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <button class="nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
-            <span class="theme-icon-active">
-              <i class="my-1"></i>
-            </span>
-            <span class="d-custom-none" id="bd-theme-text">Toggle theme</span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-specific" aria-labelledby="bd-theme-text">
-            <li>
-              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="false">
-              <i class="bi bi-sun-fill me-2"></i>
-              Light
+          <li class="nav-item dropdown">
+            <button class="nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+              <span class="theme-icon-active">
+                <i class="my-1"></i>
+              </span>
+              <span class="d-custom-none" id="bd-theme-text">Toggle theme</span>
             </button>
-            </li>
-            <li>
-              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-              <i class="bi bi-moon-stars-fill me-2"></i>
-              Dark
-              </button>
-            </li>
-            <li>
-              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
-              <i class="bi bi-circle-half me-2"></i>
-              Auto
-              </button>
-            </li>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-specific" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="false">
+                  <i class="bi bi-sun-fill me-2"></i> Light </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <i class="bi bi-moon-stars-fill me-2"></i> Dark </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+                  <i class="bi bi-circle-half me-2"></i> Auto </button>
+              </li>
             </ul>
           </li>
         </ul>
       </div>
-      </div>
-      </nav>
-      <nav class="pb-2 navbar navbar-expand-story navbar-main pt-0 border-fix second-navbar"><div class="container-fluid">
-        <div class="navbar-collapse collapse" id="collapsibleNavbar">
-          <hr class="permhr m-story-2 m-story-0">
-          <ol class="navbar-nav breadcrumb m-0">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item"><a href="/stories">Stories</a></li>
-            {breadcrumbcontent && breadcrumbcontent.map(({ name, href, dropname1, drophref1, dropname2, drophref2 }, index) => (
-              <li class="breadcrumb-item"><a href={href}>{name}</a>
-                <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show">
-                </a>
-                {drophref1 && dropname1 && (
-                  <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                    <li><a class="dropdown-item" href={drophref1}>{dropname1}</a>
-                      {dropname2 && drophref2 && (<a class="dropdown-item" href={drophref2}>{dropname2}</a>)}
+    </div>
+  </nav>
+  <nav class="pb-2 navbar navbar-expand-story navbar-main pt-0 border-fix second-navbar">
+    <div class="container-fluid">
+      <div class="navbar-collapse collapse" id="collapsibleNavbar">
+        <hr class="permhr m-story-2 m-story-0">
+        <ol class="navbar-nav breadcrumb m-0">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/stories">Stories</a>
+          </li> 
+          {breadcrumbcontent && breadcrumbcontent.map(({ name, href, dropdown }, index) => (
+            <li class="breadcrumb-item"><a href={href}>{name}</a>
+              <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show">
+              </a>
+              {dropdown && (
+                <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
+                  {breadcrumbcontent && breadcrumbcontent.map(({ dropname, drophref }, index) => (
+                    <li>
+                     <a class="dropdown-item" href={drophref}>{dropname}</a>
                     </li>
-                  </ul>
-                )}
+                  ))}
+                </ul>
+              )}
               </div>
-              </li>
-            ))}
-            <li class="breadcrumb-item active" aria-current="page">CCTV Interception</li>
-          </ol>
-          </div>
-        </div>
-    </nav>
+            </li>
+          ))}
+          <li class="breadcrumb-item active" aria-current="page">CCTV Interception</li>
+        </ol>
+      </div>
+    </div>
+  </nav>
 </header>
-<noscript> 
-  <div class="alert alert-dark mb-0" role="alert"> 
+<noscript>
+  <div class="alert alert-dark mb-0" role="alert">
     <strong>It seems like you don't have JavaScript enabled!</strong> For color modes, accordions, scrollspies, tab panes, dropdowns, popovers, and much more, you'll need JavaScript to work! We do not have fallbacks, so please enable JavaScript or <a href="https://github.com/Alex-Toucan/atproducts.xyz">view the source code to read the information</a>.
-  </div> 
+  </div>
 </noscript>
