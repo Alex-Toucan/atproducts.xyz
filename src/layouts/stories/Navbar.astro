@@ -91,7 +91,7 @@ const { breadcrumbcontent } = Astro.props;
               <li class="breadcrumb-item"><a href="/noodle">Noodle Hackerspace</a>
                 <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show">
                 </a>
-                {drophref1 && dropname1 (
+                {drophref1 && dropname1 && (
                   <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
                     <li><a class="dropdown-item" href={drophref1}>{dropname1}</a>
                       {dropname2 && drophref2 && (<a class="dropdown-item" href={drophref2}>{dropname2}</a>)}
