@@ -1,5 +1,5 @@
 ---
-const { storyname, breadcrumbcontent } = Astro.props;
+const { storyname, breadcrumbcontent, dropdown} = Astro.props;
 ---
 
 <a href="#main-content" class="visually-hidden-focusable btn btn-primary position-fixed m-2 hero-filter" style="z-index: 2000;">Skip to main content</a>
@@ -117,7 +117,7 @@ const { storyname, breadcrumbcontent } = Astro.props;
               </a>
               {dropdown && (
                 <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                  {breadcrumbcontent.map(({ dropname, drophref }, index) => (
+                  {dropdown.map(({ dropname, drophref }, index) => (
                     <li>
                       <a class="dropdown-item" href={drophref}>{dropname}</a>
                     </li>
