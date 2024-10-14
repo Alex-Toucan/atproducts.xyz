@@ -12,6 +12,10 @@ import BackToTop from '../../components/BackToTop.astro';
   <div id="main-content">
     <Scrollspy name="How to Center a <div>" id="div" 
       scrollcontent={[ 
+        { name: "Prenote" , href: "#prenote" },
+        { name: "Aligning in Both Ways" , href: "#both" },  
+        { name: "Horizontally Aligning" , href: "#horizontal" }, 
+        { name: "Vertically Aligning" , href: "#vertical" }, 
         { name: "Sources" , href: "#sources" }, 
       ]} 
     >
@@ -22,7 +26,26 @@ import BackToTop from '../../components/BackToTop.astro';
           <h5><b>Published on:</b> May 17th, 2023.</h5>
           <hr>
         </div>
-        <div id="Sources" class="story-top-scroll">
+        <div id="prenote" class="story-top-scroll">
+          <h2>Prenote</h2>
+          <p>This article contains information on how to center a <code>&lt;code&gt;</code>, horizontally and vertically, within HTML. The sole purpose of this article is to annoy <a href="https://github.com/VenenJean">Venen Jean</a>, so have fun with this little payback.</p>
+        </div>
+        <div id="both">
+          <h2>Aligning in Both Directions</h2>
+          <h3>Auto Margin</h3>
+          <p>A margin sets the space outside the selected element. Setting the element's margin to auto, automatically makes it centered in all directions. Please </p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering a image in all directions." src="https://codepen.io/alex-toucan/embed/wvVJqOr?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/wvVJqOr">
+            Centering a image in all directions.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+        </div>
+        <div id="horizontal">
+          <h2>Horizontally Aligning</h2>
+          <p>Horizontally aligning a <code>&lt;div&gt;</code> is more easier than vertically aligning a <code>&lt;div&gt;</code>.</p>
+          <h3>Auto Margin</h3>
+        </div>
+        <div id="sources" class="story-top-scroll">
           <h2>Sources</h2>
           <div class="d-flex">
             <div class="col-1 fw-bold">[1]</div>
