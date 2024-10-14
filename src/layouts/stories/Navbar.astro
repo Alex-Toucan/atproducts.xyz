@@ -111,15 +111,17 @@ const { storyname, breadcrumbcontent } = Astro.props;
           <li class="breadcrumb-item">
             <a href="/stories">Stories</a>
           </li> 
-          {breadcrumbcontent && breadcrumbcontent.map(({ name, href, dropdown, dropname, drophref }, index) => (
+          {breadcrumbcontent && breadcrumbcontent.map(({ name, href, dropdown }, index) => (
             <li class="breadcrumb-item"><a href={href}>{name}</a>
               <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show">
               </a>
               {dropdown && (
                 <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                  <li>
-                    <a class="dropdown-item" href={drophref}>{dropname}</a>
-                  </li>
+                  {breadcrumbcontent && breadcrumbcontent.map(({ dropname, drophref }, index) => (
+                    <li>
+                      <a class="dropdown-item" href={drophref}>{dropname}</a>
+                    </li>
+                  ))}
                 </ul>
               )}
               </div>
