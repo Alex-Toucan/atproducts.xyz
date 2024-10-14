@@ -15,7 +15,9 @@ import BackToTop from '../../components/BackToTop.astro';
       <Fragment slot="scrollspy-content">
         <div id="intro" class="story-top-scroll">
           <h1>CCTV Interception</h1>
-          <h5>By the <a href="/noodle">Noodle Hackerspace</a>. </h5>
+          <h5><b>Made by:</b> The <a href="/noodle">Noodle Hackerspace</a>. </h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>. </h5>
+          <h5><b>Published on:</b> May 17th, 2023.</h5>
           <hr>
         </div>
         <div id="prenote" class="story-top-scroll">
@@ -271,6 +273,11 @@ import BackToTop from '../../components/BackToTop.astro';
             <br> Click "Close", and then navigate to the folder you exported the images to. You should see a list of files that Wireshark exported from our capture. This will be more or less depending on how long you ran the capture. <br>
             <br> Finally, click on one of the images to see the image that was intercepted on the way to the target computer. You should see a frame from the video feed!
           </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>AT Products LLC is the publisher of this article/story.</h6>
         </div>
       </Fragment>
     </Scrollspy>
