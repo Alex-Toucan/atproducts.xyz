@@ -111,31 +111,19 @@ const { storyname, breadcrumbcontent } = Astro.props;
           <li class="breadcrumb-item">
             <a href="/stories">Stories</a>
           </li> 
-<<<<<<< HEAD
           {breadcrumbcontent && breadcrumbcontent.map(({ name, href, dropdown }, index) => (
-=======
-          {breadcrumbcontent && breadcrumbcontent.map(({ name, href, dropname, drophref }, index) => (
->>>>>>> 22eacbdcca8e90362649d01d67d7e5469bd6948c
             <li class="breadcrumb-item"><a href={href}>{name}</a>
               <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href={href} class="dropdown-toggle footer-info show">
               </a>
-<<<<<<< HEAD
               {dropdown && (
                 <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                  {breadcrumbcontent && breadcrumbcontent.map(({ dropname, drophref }, index) => (
+                  {breadcrumbcontent.map(({ dropname, drophref }, index) => (
                     <li>
                       <a class="dropdown-item" href={drophref}>{dropname}</a>
                     </li>
                   ))}
                 </ul>
               )}
-=======
-              <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                <li>
-                  <a class="dropdown-item" href={drophref}>{dropname}</a>
-                </li>
-              </ul>
->>>>>>> 22eacbdcca8e90362649d01d67d7e5469bd6948c
               </div>
             </li>
           ))}
@@ -145,6 +133,7 @@ const { storyname, breadcrumbcontent } = Astro.props;
     </div>
   </nav>
 </header>
+
 <noscript>
   <div class="alert alert-dark mb-0" role="alert">
     <strong>It seems like you don't have JavaScript enabled!</strong> For color modes, accordions, scrollspies, tab panes, dropdowns, popovers, and much more, you'll need JavaScript to work! We do not have fallbacks, so please enable JavaScript or <a href="https://github.com/Alex-Toucan/atproducts.xyz">view the source code to read the information</a>.
