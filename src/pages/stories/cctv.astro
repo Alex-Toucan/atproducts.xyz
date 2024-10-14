@@ -8,7 +8,7 @@ import BackToTop from '../../components/BackToTop.astro';
 
 <Head title="CCTV Interception" description="AT Products LLC's Bookviewer presents 'CCTV Interception'!" author="Pynx" />
 <div id="page">
-  <Navbar breadcrumbcontent={[ { name: "Noodle Hackerspace" , href: "/noodle" , name2: "(Backup)" , href2: "/backup/noodle" }, ]} />
+  <Navbar link={[ { name: "Noodle Hackerspace" , href: "/noodle" } ]}, breadcrumbcontent={[ { name: "Noodle Hackerspace" , href: "/noodle" , name2: "(Backup)" , href2: "/backup/noodle" }, ]} />
   <div id="main-content">
     <Scrollspy id="cctv" scrollcontent={[ { name: "Prenote" , href: "#prenote" }, { name: "Step 1" , href: "#s1" }, { name: "Step 2" , href: "#s2" }, { name: "Step 3" , href: "#s3" }, { name: "Step 4" , href: "#s4" }, { name: "Step 5" , href: "#s5" }, { name: "Step 6" , href: "#s6" }, { name: "Step 7" , href: "#s7" }, { name: "Step 8" , href: "#s8" }, ]} >
       <Fragment slot="scrollspy-content">
