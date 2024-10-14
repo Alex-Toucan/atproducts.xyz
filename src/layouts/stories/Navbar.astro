@@ -1,5 +1,5 @@
 ---
-const { link, breadcrumbcontent } = Astro.props;
+const { breadcrumbcontent } = Astro.props;
 ---
 
 <a href="#main-content" class="visually-hidden-focusable btn btn-primary position-fixed m-2 hero-filter" style="z-index: 2000;">Skip to main content</a>
@@ -87,20 +87,18 @@ const { link, breadcrumbcontent } = Astro.props;
           <hr class="permhr m-story-2 m-story-0">
           <ol class="navbar-nav breadcrumb m-0">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            {link && link.map(({ name, href }, index) => (
-              <li class="breadcrumb-item"><a href={href}>{name}</a>
+            {breadcrumbcontent && breadcrumbcontent.map(({ name, href, dropname1, drophref1, dropname2, drophref2 }, index) => (
+              <li class="breadcrumb-item"><a href="/noodle">Noodle Hackerspace</a>
+                <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show">
+                </a>
+                <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
+                    <li><a class="dropdown-item" href={drophref1}>{dropname1}</a>
+                      {dropname2 && drophref2 && (<a class="dropdown-item" href={drophref2}>{dropname2}</a>)}
+                    </li>
+                </ul>
+              </div>
+              </li>
             ))}
-              <div class="dropdown d-inline"><a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show">
-              </a>
-              <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                {breadcrumbcontent && breadcrumbcontent.map(({ name, href, name2, href2 }, index) => (
-                  <li><a class="dropdown-item" href={href}>{name}</a>
-                    {name2 && href2 && (<a class="dropdown-item" href={href2}>{name2}</a>)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            </li>
             <li class="breadcrumb-item active" aria-current="page">CCTV Interception</li>
           </ol>
           </div>
