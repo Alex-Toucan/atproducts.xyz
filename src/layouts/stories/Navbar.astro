@@ -1,5 +1,5 @@
 ---
-const { link, breadcrumbcontent } = Astro.props;
+const { link } = Astro.props;
 ---
 
 <a href="#main-content" class="visually-hidden-focusable btn btn-primary position-fixed m-2 hero-filter" style="z-index: 2000;">Skip to main content</a>
@@ -88,18 +88,16 @@ const { link, breadcrumbcontent } = Astro.props;
           <ol class="navbar-nav breadcrumb m-0">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="/stories">Stories</a>
-              {link && link.map(({ name, href }, index) => (
+              {link && link.map(({ name, href, breadname1, breadhref1, breadname2, breadhref2 }, index) => (
                 <li class="breadcrumb-item">
                   <a href={href}>{name}</a>
                   <div class="dropdown d-inline">
                     <a aria-expanded="true" data-bs-toggle="dropdown" type="button" href="/noodle" class="dropdown-toggle footer-info show"></a>
                     <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                      {breadcrumbcontent && breadcrumbcontent.map(({ name, href, name2, href2 }, index) => (
-                        <li>
-                          <a class="dropdown-item" href={href}>{name}</a>
-                          {name2 && href2 && (<a class="dropdown-item" href={href2}>{name2}</a>)}
-                        </li>
-                      ))}
+                      <li>
+                        <a class="dropdown-item" href={breadhref1}>{breadname1}</a>
+                        {breadname2 && breadhref2 && (<a class="dropdown-item" href={breadhref2}>{breadname2}</a>)}
+                      </li>
                     </ul>
                   </div>
                 </li>
