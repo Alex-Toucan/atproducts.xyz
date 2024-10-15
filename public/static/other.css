@@ -6462,5 +6462,9 @@ height: calc(100vh - 448px);
 }
 
 .rounded-6 {
-		border-radius: var(--bs-border-radius-2xl) !important;
+	border-radius: var(--bs-border-radius-2xl) !important;
+}
+
+iframe {
+	padding-bottom: 1rem;
 }
