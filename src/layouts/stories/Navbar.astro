@@ -88,6 +88,7 @@ const { breadcrumbcontent, link, pageTitle } = Astro.props;
           <hr class="permhr m-story-2 m-story-0">
           <ol class="navbar-nav breadcrumb m-0">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/stories/">Stories</a></li>
             {link && link.map(({ name, href }, index) => (
               <li class="breadcrumb-item dropdown d-inline" key={index}>
                 <a href={href} class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{name}</a>
