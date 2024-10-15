@@ -59,6 +59,13 @@ import BackToTop from '../../components/BackToTop.astro';
         <div id="vertical">
           <h2>Vertically Aligning</h2>
           <p>Vertically aligning a <code>&lt;div&gt;</code> is harder than horizontally aligning.</p>
+          <h3>Using Position and Transform</h3>
+          <p>Combining <code>position: relative;</code> for your parent container, and using <code>position: absolute;</code>, <code>top: 50%;</code>, and <code>transform: translateY(-50%);</code> for your child container. This can align the child container in a vertical direction.</p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering text in a vertical direction using position." src="https://codepen.io/alex-toucan/embed/qBerxzj?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/qBerxzj">
+            Centering text in a vertical direction using position.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
           <h3>Padding</h3>
           <p>Top and bottom padding can vertically center text.</p>
           <iframe height="300" style="width: 100%;" scrolling="no" title="Centering text in a vertical direction using padding." src="https://codepen.io/alex-toucan/embed/mdNWXGX?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
@@ -121,6 +128,7 @@ import BackToTop from '../../components/BackToTop.astro';
               Abdu. “How Can I Vertically Align Elements in a Div?” Stack Overflow, 17 Sept. 2008, <a href="https://www.stackoverflow.com/questions/79461/how-can-i-vertically-align-elements-in-a-div">stackoverflow.com/questions/79461/how-can-i-vertically-align-elements-in-a-div</a>. Accessed 14 Oct. 2024.
             </div>
           </div>
+          <br>
           <div class="d-flex">
             <div class="col-1 fw-bold">[4]</div>
             <div class="col">
