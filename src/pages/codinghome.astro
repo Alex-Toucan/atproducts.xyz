@@ -1248,58 +1248,57 @@ print(type(y))
                   <h3>Strings</h3>
                   <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
                   <p>
-    <pre>
-    <code> 
-    #include &lt;ostream&gt;
-    #include &lt;string&gt;
-    
-    int main() &lbrace; 
-        // Declare a string variable
-        std&colon;&colon;string str = "codinghome"; 
-    &rbrace; 
-    </code>
-    </pre>
+<pre>
+<code> 
+#include &lt;ostream&gt;
+#include &lt;string&gt;
+
+int main() &lbrace; 
+    // Declare a string variable
+    std&colon;&colon;string str = "codinghome"; 
+&rbrace; 
+</code>
+</pre>
                   </p>
                 </div>
                 <div id="integers-4">
                   <h3>Integers and Floating Point Numbers</h3>
                   <p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple. </p>
-                  <p>
-    <pre>
-    <code> 
-    #include &lt;iostream&gt;
-    
-    int main() &lbrace; 
-      // Declare an integer variable 
-      int num = 10; 
-    
-      // Declare a floating-point variable float 
-      fnum = 10.5; 
-    &rbrace; 
-    </code>
-    </pre>
-                  </p>
+
+<pre class="mb-2">
+<code> 
+#include &lt;iostream&gt;
+
+int main() &lbrace; 
+  // Declare an integer variable 
+  int num = 10; 
+
+  // Declare a floating-point variable float 
+  fnum = 10.5; 
+&rbrace; 
+</code>
+</pre>
                 </div>
                 <div id="print-4">
                   <h3>Print</h3>
                   <p> Printing an output to the terminal/console: </p>
-    <pre>
-    <code>
-    #include &lt;iostream&gt;
-    
-    int main() &lbrace;
-      // Declare an integer variable
-      int num = 10;
-      // Declare a floating-point variable
-      float fnum = 10.5;
-      
-      std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)
-      std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)
-      
-      return 0;
-    &rbrace;
-    </code>
-    </pre>
+<pre>
+<code>
+#include &lt;iostream&gt;
+
+int main() &lbrace;
+  // Declare an integer variable
+  int num = 10;
+  // Declare a floating-point variable
+  float fnum = 10.5;
+  
+  std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)
+  std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)
+  
+  return 0;
+&rbrace;
+</code>
+</pre>
                 </div>
                 <div id="data-4">
                   <h3>Other Data Types</h3>
@@ -1310,20 +1309,20 @@ print(type(y))
                   <p>But there are other data types in C++, such as:</p>
                   <pre class="not-standalone"><code>double</code></pre> - Stores strings (Text) (use &quot;).<br>
                   <pre class="not-standalone"><code>char</code></pre> - floating point number (8 bytes).<br>
-                  <pre class="not-standalone"><code>bool</code></pre> - true (1) or false (0) (1 byte).<br>
+                  <pre class="not-standalone mb-2"><code>bool</code></pre> - true (1) or false (0) (1 byte).<br>
                 </div>
                 <div id="comments-4">
                   <h3>Comments</h3>
                   <p>Below is an example of comments.</p>
-    <pre>
-    <code>
-    // This is a single line comment
-     /*
-      * This is a multi-line comment
-      * that spans multiple lines
-      */
-    </code>
-    </pre>
+<pre>
+<code>
+// This is a single line comment
+/*
+* This is a multi-line comment
+* that spans multiple lines
+*/
+</code>
+</pre>
                 </div>
               </Fragment>
             </Scrollspy>
@@ -1503,7 +1502,7 @@ h1 &lbrace;
                   <p>To put CSS files in HTML, use:</p>
                   <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
                   <p>To put CSS code in HTML, use:</p>
-<pre class="mb-1">
+<pre class="mb-2">
 <code>
 &lt;style&gt;
   .class &lbrace;
@@ -1527,7 +1526,7 @@ h1 &lbrace;
                   <p>You can also put styles in HTML elements:</p>
                   <pre><code>&lt;h1 style="font-color:white;"&gt;</code></pre>
                   <p>You can also select multiple elements with commas at once like...</p>
-<pre class="mb-1">
+<pre class="mb-2">
 <code>
 h1, h4, h6, h2 &lbrace;
   color&colon; red;
@@ -1540,7 +1539,7 @@ h1, h4, h6, h2 &lbrace;
                   <p>Think of classes like custom HTML elements, they can be applied in HTML:</p>
                   <pre><code>&lt;p class="text-red"&gt;</code></pre>
                   <p>Classes begin with a dot or period (.) to begin the selector.</p>
-<pre class="mb-1">
+<pre class="mb-2">
 <code>
 .text-red &lbrace;
   color&colon; red;
@@ -1556,14 +1555,14 @@ h1, h4, h6, h2 &lbrace;
                   <pre class="not-standalone"><code>&colon;last-child</code></pre> - Selects the last child element if it is inside a parent element.<br>
                   <pre class="not-standalone"><code>&colon;nth-child(n)</code></pre> - Selects elements based on position, replace <code>n</code> with a number.<br>
                   <pre class="not-standalone"><code>&colon;focus</code></pre> - Selects elements if it is focused, usually by using the <code>TAB</code>. <br>
-                  <pre class="not-standalone"><code>&colon;has(+ element)</code></pre> - Selects the element if the selected element is before it.<br>
+                  <span class="mb-2"><pre class="not-standalone"><code>&colon;has(+ element)</code></pre> - Selects the element if the selected element is before it.</span><br>
                 </div>
                 <div id="text-7">
                   <h3>Text Elements</h3>
                   <pre class="not-standalone"><code>font-size&colon; 10px;</code></pre> - Text size, can be in pixels.<br>
                   <pre class="not-standalone"><code>font-family&colon; verdana;</code></pre> - Fonts<br>
                   <pre class="not-standalone"><code>text-align&colon; center;</code></pre> - Can align to the left side, right side, or in the center of the webpage. <br>
-                  <pre class="not-standalone mb-1"><code>text-shadow&colon; 3px black</code></pre> - Shadow of text. It can be in pixels and colors.
+                  <span class="mb-2"><pre class="not-standalone"><code>text-shadow&colon; 3px black</code></pre> - Shadow of text. It can be in pixels and colors.</span><br>
                 </div>
                 <div id="pad-7">
                   <h3>Padding Elements</h3>
@@ -1571,19 +1570,19 @@ h1, h4, h6, h2 &lbrace;
                   <pre class="not-standalone"><code>margin&colon; 50px;</code></pre> - A margin. It can be in pixels.<br>
                   <pre class="not-standalone"><code>border-width&colon; 5px;</code></pre> - Border width. Can be thin, medium, thick, or just pixels.<br>
                   <pre class="not-standalone"><code>border-style&colon; dotted;</code></pre> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
-                  <pre class="not-standalone mb-1"><code>width=500px;</code></pre> - Width of the element. It can be pixels or percentages.
+                  <span class="mb-2"><pre class="not-standalone"><code>width=500px;</code></pre> - Width of the element. It can be pixels or percentages.
                 </div>
                 <div id="color-7">
                   <h3>Color Elements</h3>
                   <p><pre class="not-standalone"><code>color&colon; red;</code></pre> - The color of the element, can be hexadecimal, or RGB.<br>
-                  <pre class="not-standalone mb-1"><code>background-color&colon; white;</code></pre> - Background color of the element.</p>
+                    <span class="mb-2"><pre class="not-standalone"><code>background-color&colon; white;</code></pre> - Background color of the element.</span>
                 </div>
                 <div id="com-7">
                   <h3>Comments</h3>
                   <p>Comments are commonly used to explain the code and may help when you edit the source code later and are ignored by browsers.
                   <br><br>
                   A CSS comment starts with <code>/*</code> and ends with <code>*/</code>, and no changes are needed to make it multiple lines.</p>
-<pre class="mb-1">
+<pre class="mb-2">
 <code>
 /* This is a single-line comment */
 
@@ -1595,7 +1594,7 @@ comment */
                 </div>
                 <div id="eci-7">
                   <h3>Extra: Centering Images</h3>
-<pre class="mb-1">
+<pre class="mb-2">
 <code>
 img &lbrace;
   margin&colon; 0 auto;
@@ -1834,7 +1833,7 @@ CREATE TABLE t (
               </div>
               <div id="import-10">
                 <h3>Importing JSON</h3>
-                <table class="table table-hover mb-1">
+                <table class="table table-hover mb-2">
                   <tbody>
                   <tr>
                     <th scope="row">JavaScript</th>
