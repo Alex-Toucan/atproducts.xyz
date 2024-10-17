@@ -1163,6 +1163,9 @@ FLUSH PRIVILEGES;
       <hr>
       <div id="py">
         <h2> Python Basics </h2>
+        <div class="mb-3">
+          <a href="#pythonresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Python Resources</a>
+        </div>
         <Scrollspy id="py-basics-list" 
           scrollcontent={[ 
             { name: "Comments" , href: "#com-3" }, 
@@ -1252,7 +1255,8 @@ print(type(y))
       <hr>
       <div id="cpp">
         <h2> C++ Basics </h2>
-        <div class="mb-3">
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <a href="#cppresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">C++ Resources</a>
           <a href="https://gist.github.com/VenenJean/8e8a0c7fcaee8713d8aaf7230b28d6b6" target="_blank" rel="noreferrer noopener" class="btn btn-info">VenenJean's Notes</a>
         </div>
         <Scrollspy id="cpp-basics-list" 
@@ -1352,6 +1356,9 @@ int main() &lbrace;
       <hr>
       <div id="hs">
         <h2> Haskell Basics </h2>
+        <div class="mb-3">
+          <a href="#haskellresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Haskell Resources</a>
+        </div>
         <Scrollspy id="hs-basics-list" 
           scrollcontent={[ 
             { name: "Data Types" , href: "#data-5" }, 
@@ -1432,15 +1439,18 @@ commentHere = False &lbrace;
       <hr>
       <div id="html">
         <h2> HTML Basics </h2>
+        <div class="mb-3">
+          <a href="#webresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Web Resources</a>
+        </div>
         <Scrollspy id="html-basics-list"
-              scrollcontent={[
-                { name: "Example Document", href: "#example-6" },
-                { name: "HTML Headings", href: "#head-6" },
-                { name: "HTML Paragraphs", href: "#text-6" },
-                { name: "HTML Links", href: "#links-6" },
-                { name: "HTML Images", href: "#img-6" },
-              ]}
-            >
+          scrollcontent={[
+            { name: "Example Document", href: "#example-6" },
+            { name: "HTML Headings", href: "#head-6" },
+            { name: "HTML Paragraphs", href: "#text-6" },
+            { name: "HTML Links", href: "#links-6" },
+            { name: "HTML Images", href: "#img-6" },
+          ]}
+        >
               <Fragment slot="scrollspy-content">
                 <div id="example-6">
                   <h3>Example Document</h3>
@@ -1492,6 +1502,7 @@ commentHere = False &lbrace;
           <div id="css">
             <h2>CSS Basics</h2>
             <div class="mb-3">
+              <a href="#webresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Web Resources</a>
               <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>
             </div>
             <Scrollspy id="css-basics-list"
@@ -1708,12 +1719,15 @@ var person = &lbrace;
         <hr>
         <div id="sql">
           <h2>SQL Basics</h2>
-                    <Scrollspy id="sql-basics-list"
-          scrollcontent={[
-            { name: "Querying Data from a Tablem", href: "#query-9" },
-            { name: "Modifying Data", href: "#mod-9" },
-            { name: "Table Management", href: "#table-9" },
-          ]}
+          <div class="mb-3">
+            <a href="#sqlresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">SQL Resources</a>
+          </div>
+          <Scrollspy id="sql-basics-list"
+            scrollcontent={[
+              { name: "Querying Data from a Tablem", href: "#query-9" },
+              { name: "Modifying Data", href: "#mod-9" },
+              { name: "Table Management", href: "#table-9" },
+            ]}
           >
             <Fragment slot="scrollspy-content">
               <div id="query-9">

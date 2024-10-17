@@ -1142,6 +1142,9 @@ FLUSH PRIVILEGES;
         </Modal>
         <Modal title="Python Basics" id="py">
           <Fragment slot="modal-content">
+            <div class="mb-3">
+              <a href="#pythonresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Python Resources</a>
+            </div>
             <Scrollspy id="py-basics-list" 
               scrollcontent={[ 
                 { name: "Comments" , href: "#com-3" }, 
@@ -1231,7 +1234,8 @@ print(type(y))
         </Modal>
         <Modal title="C++ Basics" id="cpp">
           <Fragment slot="modal-content">
-            <div class="mb-3">
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <a href="#cppresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">C++ Resources</a>
               <a href="https://gist.github.com/VenenJean/8e8a0c7fcaee8713d8aaf7230b28d6b6" target="_blank" rel="noreferrer noopener" class="btn btn-info">VenenJean's Notes</a>
             </div>
             <Scrollspy id="cpp-basics-list" 
@@ -1330,6 +1334,9 @@ int main() &lbrace;
         </Modal>
         <Modal title="Haskell Basics" id="hs">
           <Fragment slot="modal-content">
+            <div class="mb-3">
+              <a href="#haskellresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Haskell Resources</a>
+            </div>
             <Scrollspy id="hs-basics-list" 
               scrollcontent={[ 
                 { name: "Data Types" , href: "#data-5" }, 
@@ -1410,6 +1417,9 @@ commentHere = False &lbrace;
         </Modal>
         <Modal title="HTML Basics" id="html">
           <Fragment slot="modal-content">
+            <div class="mb-3">
+              <a href="#webresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Web Resources</a>
+            </div>
             <Scrollspy id="html-basics-list"
               scrollcontent={[
                 { name: "Example Document", href: "#example-6" },
@@ -1469,8 +1479,9 @@ commentHere = False &lbrace;
         </Modal>
         <Modal title="CSS Basics" id="css">
           <Fragment slot="modal-content">
-            <div class="mb-3">
+            <div class="d-flex flex-wrap gap-2 mb-3">
               <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>
+              <a href="#webresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Web Resources</a>
             </div>
             <Scrollspy id="css-basics-list"
             scrollcontent={[
@@ -1685,6 +1696,9 @@ var person = &lbrace;
           </Fragment>
         </Modal>
         <Modal title="SQL Basics" id="sql"><Fragment slot="modal-content">
+          <div class="mb-3">
+            <a href="#sqlresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">SQL Resources</a>
+          </div>
           <Scrollspy id="sql-basics-list"
           scrollcontent={[
             { name: "Querying Data from a Tablem", href: "#query-9" },
