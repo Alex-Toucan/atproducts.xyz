@@ -3,19 +3,28 @@ import Head from '../../layouts/Head.astro';
 import Navbar from '../../layouts/stories/Navbar.astro';
 import Scrollspy from '../../layouts/stories/Scrollspy.astro';
 import Scripts from '../../layouts/Scripts.astro';
-import Footer    from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
 <Head title="CCTV Interception" description="AT Products LLC's Bookviewer presents 'CCTV Interception'!" author="Pynx" />
 <div id="page">
-  <Navbar breadcrumbcontent={[ { name: "Noodle Hackerspace" , href: "/noodle" , name2: "(Backup)" , href2: "/backup/noodle" }, ]} />
+  <Navbar pageTitle="CCTV Interception" id="cctv"
+    link={[
+     { name: "Noodle Hackerspace" , href: "/noodle" },
+    ]}
+    breadcrumbcontent={[ 
+      { name: "Noodle Hackerspace" , href: "/noodle" },
+      { name: "(Backup)" , href: "/backup/noodle" }
+    ]} 
+  />
   <div id="main-content">
     <Scrollspy id="cctv" scrollcontent={[ { name: "Prenote" , href: "#prenote" }, { name: "Step 1" , href: "#s1" }, { name: "Step 2" , href: "#s2" }, { name: "Step 3" , href: "#s3" }, { name: "Step 4" , href: "#s4" }, { name: "Step 5" , href: "#s5" }, { name: "Step 6" , href: "#s6" }, { name: "Step 7" , href: "#s7" }, { name: "Step 8" , href: "#s8" }, ]} >
       <Fragment slot="scrollspy-content">
         <div id="intro" class="story-top-scroll">
           <h1>CCTV Interception</h1>
-          <h5>By the <a href="/noodle">Noodle Hackerspace</a>. </h5>
+          <h5><b>Made by:</b> The <a href="/noodle">Noodle Hackerspace</a>. </h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <h5><b>Published on:</b> May 17th, 2023.</h5>
           <hr>
         </div>
         <div id="prenote" class="story-top-scroll">
@@ -271,6 +280,11 @@ import BackToTop from '../../components/BackToTop.astro';
             <br> Click "Close", and then navigate to the folder you exported the images to. You should see a list of files that Wireshark exported from our capture. This will be more or less depending on how long you ran the capture. <br>
             <br> Finally, click on one of the images to see the image that was intercepted on the way to the target computer. You should see a frame from the video feed!
           </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>AT Products LLC is the publisher of this article/story.</h6>
         </div>
       </Fragment>
     </Scrollspy>
