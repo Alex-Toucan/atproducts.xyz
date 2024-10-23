@@ -6468,3 +6468,7 @@ height: calc(100vh - 448px);
 iframe {
 	padding-bottom: 1rem;
 }
+
+.tab {
+  tab-size: 8;
+}
