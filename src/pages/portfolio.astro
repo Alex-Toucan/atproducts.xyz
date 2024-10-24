@@ -206,6 +206,28 @@
           min-width: 400px;
         }
       }
+
+      .link-custom {
+        color: RGBA(var(--bs-dark-rgb, var(--bs-link-opacity, 1)));
+        -webkit-text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
+        text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
+      }
+      .link-custom:hover, .link-custom:focus {
+        color: RGBA(26, 30, 33, var(--bs-link-opacity, 1));
+        -webkit-text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
+        text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
+      }
+
+      [data-bs-theme=dark] .link-custom {
+        color: #adb5bd !important;
+        -webkit-text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
+        text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
+      }
+      [data-bs-theme=dark] .link-custom:hover, [data-bs-theme=dark] .link-custom:focus {
+        color: #d6dade !important;
+        -webkit-text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
+        text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
+      }
     </style>
   </head>
   <body class="py-5 container">
@@ -218,33 +240,33 @@
           <p class="text-body-secondary m-0">Amongst Other Hobbies...</p>
           <div class="mt-2 p-1 bg-dark rounded-2" id="icons">
             <div class="d-flex justify-content-center gap-3">
-              <a href="https://discord.com/users/905434578926313512" aria-label="Discord" target="_blank" rel="noopener noreferrer" class="link-hero fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Discord">
+              <a href="https://discord.com/users/905434578926313512" aria-label="Discord" target="_blank" rel="noopener noreferrer" class="link-custom fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Discord">
                 <i class="bi bi-discord"></i>
               </a>
-              <a href="https://github.com/Alex-Toucan/" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="link-hero fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="GitHub">
+              <a href="https://github.com/Alex-Toucan/" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="link-custom fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="GitHub">
                 <i class="bi bi-github"></i>
               </a>
-              <a href="https://twitter.com/ATProductsLLC" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer" class="link-hero fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Twitter / X">
+              <a href="https://twitter.com/ATProductsLLC" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer" class="link-custom fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Twitter / X">
                 <i class="bi bi-twitter-x"></i>
               </a>
-              <a href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube" target="_blank" rel="noopener noreferrer" class="link-hero fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="YouTube">
+              <a href="https://youtube.com/c/AlexToucanAT" aria-label="YouTube" target="_blank" rel="noopener noreferrer" class="link-custom fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="YouTube">
                 <i class="bi bi-youtube"></i>
               </a>
-              <a href="https://instagram.com/atproductsllc" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="link-hero fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram">
+              <a href="https://instagram.com/atproductsllc" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="link-custom fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram">
                 <i class="bi bi-instagram"></i>
               </a>
             </div>
             <div class="d-flex justify-content-center gap-3">
-              <a href="https://www.linkedin.com/in/alex-toucan-9805b6292" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="link-hero fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="LinkedIn">
+              <a href="https://www.linkedin.com/in/alex-toucan-9805b6292" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="link-custom fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="LinkedIn">
                 <i class="bi bi-linkedin"></i>
               </a>
-              <a href="https://atproducts.xyz/form/" aria-label="Email Form" target="_blank" rel="noopener noreferrer" class="link-hero fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Email Form">
+              <a href="https://atproducts.xyz/form/" aria-label="Email Form" target="_blank" rel="noopener noreferrer" class="link-custom fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Email Form">
                 <i class="bi bi-envelope-fill"></i>
               </a>
-              <a href="https://www.roblox.com/users/170901919/profile" aria-label="Roblox" target="_blank" rel="noopener noreferrer" class="link-hero fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Roblox">
+              <a href="https://www.roblox.com/users/170901919/profile" aria-label="Roblox" target="_blank" rel="noopener noreferrer" class="link-custom fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Roblox">
                 <i class="bi bi-dpad-fill"></i>
               </a>
-              <a href="https://twitter.com/ATPWeather" aria-label="ATPWeather" target="_blank" rel="noopener noreferrer" class="link-hero fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="ATPWeather">
+              <a href="https://twitter.com/ATPWeather" aria-label="ATPWeather" target="_blank" rel="noopener noreferrer" class="link-custom fs-4" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="ATPWeather">
                 <i class="bi bi-cloud-sun-fill"></i>
               </a>
             </div>
