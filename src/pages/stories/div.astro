@@ -1,0 +1,153 @@
+---
+import Head from '../../layouts/Head.astro';
+import Navbar from '../../layouts/stories/Navbar.astro';
+import Scrollspy from '../../layouts/stories/Scrollspy.astro';
+import Scripts from '../../layouts/Scripts.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<Head title="How to Center a <div>" description="AT Products LLC's Bookviewer presents 'How to Center a <div>'!" author="Alex Toucan" />
+<div id="page">
+  <Navbar pageTitle="How to Center a <div>" />
+  <div id="main-content">
+    <Scrollspy id="div" 
+      scrollcontent={[ 
+        { name: "Horizontally Aligning" , href: "#horizontal" }, 
+        { name: "Vertically Aligning" , href: "#vertical" }, 
+        { name: "Aligning in Both Ways" , href: "#both" },  
+        { name: "Sources" , href: "#sources" }, 
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1>How to Center a <code>&lt;div&gt;</code></h1>
+          <h5><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <h5><b>Published on:</b> October 23rd, 2024.</h5>
+          <br>
+          <p>This article contains information on how to center a <code>&lt;code&gt;</code> using CSS, horizontally and vertically, within HTML. The sole purpose of this article is to annoy <a href="https://github.com/VenenJean">Venen Jean</a>, so have fun with this little payback.</p>
+          <hr>
+        </div>
+        <div id="horizontal">
+          <h2>Horizontally Aligning</h2>
+          <p>Horizontally aligning a <code>&lt;div&gt;</code> is more easier than vertically aligning a <code>&lt;div&gt;</code>.</p>
+          <h3>Auto Margin</h3>
+          <p>A margin sets the space outside the selected element. Setting the element's left and right margin to auto, automatically makes it centered horizontally. </p>
+          <p>Your code should contain <code>margin-left: auto;</code> and <code>margin-right: auto;</code>, and it's <code>display</code> must be set to <code>block</code> using <code>display: block;</code>. <a href="#source-1" class="fw-bold">[1]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering a image in all directions." src="https://codepen.io/alex-toucan/embed/bGXqrZY?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/bGXqrZY">
+            Centering a image in all directions.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+          <h3>Flexbox</h3>
+          <p>You can also use Flexbox to center your &lt;div&gt; using <code>display: flex;</code> and <code>justify-content: center;</code>. <a href="#source-4" class="fw-bold">[4]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering a div in a horizontal direction." src="https://codepen.io/alex-toucan/embed/RwXpQJj?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/RwXpQJj">
+            Centering a div in a horizontal direction.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+          <h3>Text Center</h3>
+          <p>To center not necessarily a <code>&lt;div&gt;</code>, but any text, use <code>text-align: center;</code> for its property. <a href="#source-1" class="fw-bold">[1]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering text in a horizontal direction." src="https://codepen.io/alex-toucan/embed/bGXqLLx?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/bGXqLLx">
+            Centering text in a horizontal direction.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+        </div>
+        <div id="vertical">
+          <h2>Vertically Aligning</h2>
+          <p>Vertically aligning a <code>&lt;div&gt;</code> is harder than horizontally aligning.</p>
+          <h3>Using Position and Transform</h3>
+          <p>Combining <code>position: relative;</code> for your parent container, and using <code>position: absolute;</code>, <code>top: 50%;</code>, and <code>transform: translateY(-50%);</code> for your child container. This can align the child container in a vertical direction. <a href="#source-2" class="fw-bold">[2]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering text in a vertical direction using position." src="https://codepen.io/alex-toucan/embed/JjgWpgN?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/JjgWpgN">
+            Centering text in a vertical direction using position.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+          <h3>Padding</h3>
+          <p>Top and bottom padding can vertically center text. <a href="#source-1" class="fw-bold">[1]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering text in a vertical direction using padding." src="https://codepen.io/alex-toucan/embed/mdNWXGX?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/mdNWXGX">
+            Centering text in a vertical direction using padding.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+          <h3>Line Height</h3>
+          <p>For <code>line-height</code> to vertically align text, it must be the same height as the container. If your text is above one line, you can use <code>line-height: 1.5;</code> on the <code>&lt;p&gt;</code> tag. <a href="#source-1" class="fw-bold">[1]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering text in a vertical direction using line height." src="https://codepen.io/alex-toucan/embed/JjgWpgN?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/JjgWpgN">
+            Centering text in a vertical direction using line height.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+        </div>
+        <div id="both">
+          <h2>Aligning in Both Directions</h2>
+          <p>This section will show how a &lt;div&gt; can be both horizontally and vertically aligned.</p>
+          <h3>Flexbox</h3>
+          <p>You can use Flexbox to center your &lt;div&gt; using <code>display: flex;</code>, <code>justify-content: center;</code>, <code>align-items: center;</code>, and setting a <code>height</code> on a parent container. <a href="#source-4" class="fw-bold">[4]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering a div in all directions." src="https://codepen.io/alex-toucan/embed/OJKpQww?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/OJKpQww">
+            Centering a div in all directions.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+          <h3>Using Position and Transform</h3>
+          <p>Combining <code>position: relative;</code> for your parent container, and using <code>position: absolute;</code>, <code>top: 50%;</code>, <code>left: 50%;</code>, and <code>transform: translate(-50%, -50%);</code> for your child container. This can align the child container in all directions. <a href="#source-2" class="fw-bold">[2]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering text in all directions using line height." src="https://codepen.io/alex-toucan/embed/VwopQgM?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/VwopQgM">
+            Centering position in all directions using position.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+          <h3>Padding</h3>
+          <p>Top and bottom padding, combined with <code>text-align: center;</code>, can horizontally and vertically align text. <a href="#source-1" class="fw-bold">[1]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering text in all directions using padding." src="https://codepen.io/alex-toucan/embed/bGXqLmQ?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/bGXqLmQ">
+            Centering text in all directions using padding.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+          <h3>Line Height</h3>
+          <p>For <code>line-height</code> to vertically align text, it must be the same height as the container. You can also combine this with <code>text-align: center;</code>. If your text is above one line, you can use <code>line-height: 1.5;</code> on the <code>&lt;p&gt;</code> tag. <a href="#source-1" class="fw-bold">[1]</a></p>
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Centering text in all directions using line height." src="https://codepen.io/alex-toucan/embed/wvVJyRQ?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/alex-toucan/pen/wvVJyRQ">
+            Centering text in all directions using line height.</a> by Alex-Toucan (<a href="https://codepen.io/alex-toucan">@alex-toucan</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+        </div>
+        <div id="sources" class="story-top-scroll">
+          <h2>Sources</h2>
+          <div class="d-flex">
+            <div class="col-1 fw-bold" id="source-1">[1]</div>
+            <div class="col">
+              W3Schools. “CSS Layout - Horizontal & Vertical Align.” Www.w3schools.com, <a href="https://www.w3schools.com/css/css_align.asp">www.w3schools.com/css/css_align.asp</a>. Accessed 14 Oct. 2024.
+            </div>
+          </div>
+          <br>
+          <div class="d-flex">
+            <div class="col-1 fw-bold" id="source-2">[2]</div>
+            <div class="col">
+              “How to Center an Element Vertically.” Www.w3schools.com, <a href="https://www.w3schools.com/howto/howto_css_center-vertical.asp">www.w3schools.com/howto/howto_css_center-vertical.asp</a>. Accessed 14 Oct. 2024.
+            </div>
+          </div>
+          <br>
+          <div class="d-flex">
+            <div class="col-1 fw-bold" id="source-3">[3]</div>
+            <div class="col">
+              Abdu. “How Can I Vertically Align Elements in a Div?” Stack Overflow, 17 Sept. 2008, <a href="https://www.stackoverflow.com/questions/79461/how-can-i-vertically-align-elements-in-a-div">stackoverflow.com/questions/79461/how-can-i-vertically-align-elements-in-a-div</a>. Accessed 14 Oct. 2024.
+            </div>
+          </div>
+          <br>
+          <div class="d-flex">
+            <div class="col-1 fw-bold" id="source-4">[4]</div>
+            <div class="col">
+              “How to Center a &lt;div&gt; Using Flexbox Property of CSS.” GeeksforGeeks, GeeksforGeeks, 16 Sept. 2024, <a href="https://www.geeksforgeeks.org/how-to-center-a-div-using-flexbox-property-of-css/">www.geeksforgeeks.org/how-to-center-a-div-using-flexbox-property-of-css/</a>. Accessed 14 Oct. 2024.
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>AT Products LLC is the author and publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+<Scripts />

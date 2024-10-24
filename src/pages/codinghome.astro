@@ -84,6 +84,7 @@ import BackToTop from '../components/BackToTop.astro';
                       <a href="https://leetcode.com/">Leetcode</a><br>
                       <a href="https://imposterdevs.com/">Imposter Devs</a><br>
                       <a href="https://www.edx.org/learn">EDX Courses</a><br>
+                      <a href="https://books.goalkicker.com/">GoalKicker Programming Books</a><br>
                       <a href="https://www.sporcle.com/games/moogles/programlanguages">Programming Quiz</a><br>
                       <a href="https://progle.net/">progle()</a><br>
                       <a href="https://roadmap.sh/">Roadmaps for Languages</a><br>
@@ -389,8 +390,15 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                             </p>
                           </Fragment>
                         </AccordionItem>
-                        <AccordionItem title="Godot Resources" id="godotresources" parent="learningresourcesAccordion">
+                        <AccordionItem title="Game Dev Resources" id="gamedevresources" parent="learningresourcesAccordion">
                           <Fragment slot="accordion-item-content">
+                            <h4>Game Dev Resources</h4>
+                            <p>
+                              <a href="https://characterdesignreferences.com/visual-library">Visual Library
+                              <a href="https://www.youtube.com/watch?v=zEfBPmPDUVc">Using AI to Generate Game Assets For Free</a><br>
+                              <a href="https://www.youtube.com/watch?v=UfSw6428bcc">Painterly Animations in Blender 3D</a><br>
+                              <a href="https://github.com/Alex-Toucan/atproducts.xyz/tree/main/public/media/md/bingai.md">Bing AI on: What has to be on a model design sheet, so I can work with it in Blender?</a>
+                            </p>
                             <h4>Godot Resources</h4>
                             <p>
                               <a href="https://docs.godotengine.org/">Godot Docs</a><br>
@@ -994,6 +1002,11 @@ FLUSH PRIVILEGES;
                     </div>
                     <hr>
                     <div class="my-1">
+                      <h3>Free coding books!</h3>
+                      <a class="btn btn-primary" href="https://books.goalkicker.com/">View</a>
+                    </div>
+                    <hr>
+                    <div class="my-1">
                       <h3>1,000 I.T books!</h3>
                       <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1F7D5c30nP-y_Q7SFqoRTRvJ7tl0UcY3q">View</a>
                     </div>
@@ -1129,6 +1142,9 @@ FLUSH PRIVILEGES;
         </Modal>
         <Modal title="Python Basics" id="py">
           <Fragment slot="modal-content">
+            <div class="mb-3">
+              <a href="#pythonresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Python Resources</a>
+            </div>
             <Scrollspy id="py-basics-list" 
               scrollcontent={[ 
                 { name: "Comments" , href: "#com-3" }, 
@@ -1218,11 +1234,19 @@ print(type(y))
         </Modal>
         <Modal title="C++ Basics" id="cpp">
           <Fragment slot="modal-content">
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <a href="#cppresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">C++ Resources</a>
+              <a href="https://gist.github.com/VenenJean/8e8a0c7fcaee8713d8aaf7230b28d6b6" target="_blank" rel="noreferrer noopener" class="btn btn-info">VenenJean's Notes</a>
+            </div>
             <Scrollspy id="cpp-basics-list" 
               scrollcontent={[ 
                 { name: "Strings" , href: "#str-4" }, 
                 { name: "Integers" , href: "#integers-4" }, 
-                { name: "Print" , href: "#print-4" }, ]}>
+                { name: "Print" , href: "#print-4" }, 
+                { name: "Other Data Types" , href: "#data-4" },
+                { name: "Comments" , href: "#comments-4" }
+              ]}
+            >
               <Fragment slot="scrollspy-content">
                 <div id="strings-4">
                   <h3>Strings</h3>
@@ -1233,9 +1257,9 @@ print(type(y))
 #include &lt;ostream&gt;
 #include &lt;string&gt;
 
-int main()  &lbrace; 
-  // Declare a string variable
-  std&colon;&colon;string str = "codinghome"; 
+int main() &lbrace; 
+    // Declare a string variable
+    std&colon;&colon;string str = "codinghome"; 
 &rbrace; 
 </code>
 </pre>
@@ -1244,7 +1268,7 @@ int main()  &lbrace;
                 <div id="integers-4">
                   <h3>Integers and Floating Point Numbers</h3>
                   <p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple. </p>
-                  <p>
+
 <pre>
 <code> 
 #include &lt;iostream&gt;
@@ -1258,7 +1282,6 @@ int main() &lbrace;
 &rbrace; 
 </code>
 </pre>
-                  </p>
                 </div>
                 <div id="print-4">
                   <h3>Print</h3>
@@ -1272,12 +1295,36 @@ int main() &lbrace;
   int num = 10;
   // Declare a floating-point variable
   float fnum = 10.5;
-
+  
   std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)
   std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)
-
+  
   return 0;
 &rbrace;
+</code>
+</pre>
+                </div>
+                <div id="data-4">
+                  <h3>Other Data Types</h3>
+                  <p>As previously listed:</p>
+                  <pre class="not-standalone"><code>string</code></pre> - Integers (whole number) (2 or 4 bytes).<br>
+                  <pre class="not-standalone"><code>int</code></pre> - floating point number (4 bytes).<br>
+                  <pre class="not-standalone"><code>float</code></pre> - Stores strings (Text) (use &apos;).<br><br>
+                  <p>But there are other data types in C++, such as:</p>
+                  <pre class="not-standalone"><code>double</code></pre> - Stores strings (Text) (use &quot;).<br>
+                  <pre class="not-standalone"><code>char</code></pre> - floating point number (8 bytes).<br>
+                  <pre class="not-standalone mb-2"><code>bool</code></pre> - true (1) or false (0) (1 byte).<br>
+                <br></div>
+                <div id="comments-4">
+                  <h3>Comments</h3>
+                  <p>Below is an example of comments.</p>
+<pre>
+<code>
+// This is a single line comment
+/*
+* This is a multi-line comment
+* that spans multiple lines
+*/
 </code>
 </pre>
                 </div>
@@ -1287,6 +1334,9 @@ int main() &lbrace;
         </Modal>
         <Modal title="Haskell Basics" id="hs">
           <Fragment slot="modal-content">
+            <div class="mb-3">
+              <a href="#haskellresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Haskell Resources</a>
+            </div>
             <Scrollspy id="hs-basics-list" 
               scrollcontent={[ 
                 { name: "Data Types" , href: "#data-5" }, 
@@ -1367,6 +1417,9 @@ commentHere = False &lbrace;
         </Modal>
         <Modal title="HTML Basics" id="html">
           <Fragment slot="modal-content">
+            <div class="mb-3">
+              <a href="#webresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Web Resources</a>
+            </div>
             <Scrollspy id="html-basics-list"
               scrollcontent={[
                 { name: "Example Document", href: "#example-6" },
@@ -1426,8 +1479,9 @@ commentHere = False &lbrace;
         </Modal>
         <Modal title="CSS Basics" id="css">
           <Fragment slot="modal-content">
-            <div class="mb-3">
+            <div class="d-flex flex-wrap gap-2 mb-3">
               <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>
+              <a href="#webresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Web Resources</a>
             </div>
             <Scrollspy id="css-basics-list"
             scrollcontent={[
@@ -1482,15 +1536,14 @@ h1 &lbrace;
                   <pre><code>html&lbrace;color&colon;red;&rbrace;</code></pre>
                   <p>You can also put styles in HTML elements:</p>
                   <pre><code>&lt;h1 style="font-color:white;"&gt;</code></pre>
-                  <p>You can also select multiple elements with commas at once like...
+                  <p>You can also select multiple elements with commas at once like...</p>
 <pre>
 <code>
 h1, h4, h6, h2 &lbrace;
   color&colon; red;
 &rbrace;
 </code>
-</pre>
-                </p>
+</pre><br><br>
                 </div>
                 <div id="classes-7">
                   <h3>Classes</h3>
@@ -1503,7 +1556,7 @@ h1, h4, h6, h2 &lbrace;
   color&colon; red;
 &rbrace;
 </code>
-</pre>
+</pre><br><br>
                 </div>
                 <div id="selectors-7">
                   <h3>Selectors</h3>
@@ -1512,37 +1565,34 @@ h1, h4, h6, h2 &lbrace;
                   <pre class="not-standalone"><code>&colon;first-child</code></pre> - Selects the first child element if it is inside a parent element.<br>
                   <pre class="not-standalone"><code>&colon;last-child</code></pre> - Selects the last child element if it is inside a parent element.<br>
                   <pre class="not-standalone"><code>&colon;nth-child(n)</code></pre> - Selects elements based on position, replace <code>n</code> with a number.<br>
-                  <pre class="not-standalone"><code>&colon;</code></pre> - Selects elements if it is focused, usually by using the <code>TAB</code>. <br>
-                  <pre class="not-standalone"><code>&colon;has(+ element)</code></pre> - Selects the element if the selected element is before it.<br>
+                  <pre class="not-standalone"><code>&colon;focus</code></pre> - Selects elements if it is focused, usually by using the <code>TAB</code>. <br>
+                  <pre class="not-standalone"><code>&colon;has(+ element)</code></pre> - Selects the element if the selected element is before it.<br><br>
                 </div>
                 <div id="text-7">
-                  <h3>Text Elements</h3><p>
+                  <h3>Text Elements</h3>
                   <pre class="not-standalone"><code>font-size&colon; 10px;</code></pre> - Text size, can be in pixels.<br>
                   <pre class="not-standalone"><code>font-family&colon; verdana;</code></pre> - Fonts<br>
                   <pre class="not-standalone"><code>text-align&colon; center;</code></pre> - Can align to the left side, right side, or in the center of the webpage. <br>
-                  <pre class="not-standalone"><code>text-shadow&colon; 3px black</code></pre> - Shadow of text. It can be in pixels and colors.
-                  </p>
+                  <pre class="not-standalone"><code>text-shadow&colon; 3px black</code></pre> - Shadow of text. It can be in pixels and colors.<br><br>
                 </div>
                 <div id="pad-7">
                   <h3>Padding Elements</h3>
-                  <p>
                   <pre class="not-standalone"><code>padding-top&colon; 50px;</code></pre> - Separation. It can be top, left, right, and bottom in pixels.<br>
                   <pre class="not-standalone"><code>margin&colon; 50px;</code></pre> - A margin. It can be in pixels.<br>
                   <pre class="not-standalone"><code>border-width&colon; 5px;</code></pre> - Border width. Can be thin, medium, thick, or just pixels.<br>
                   <pre class="not-standalone"><code>border-style&colon; dotted;</code></pre> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
-                  <pre class="not-standalone"><code>width=500px;</code></pre> - Width of the element. It can be pixels or percentages.</p>
+                  <pre class="not-standalone"><code>width=500px;</code></pre> - Width of the element. It can be pixels or percentages.
                 </div>
                 <div id="color-7">
                   <h3>Color Elements</h3>
                   <p><pre class="not-standalone"><code>color&colon; red;</code></pre> - The color of the element, can be hexadecimal, or RGB.<br>
-                  <pre class="not-standalone"><code>background-color&colon; white;</code></pre> - Background color of the element.</p>
+                    <pre class="not-standalone"><code>background-color&colon; white;</code></pre> - Background color of the element.<br><br>
                 </div>
                 <div id="com-7">
                   <h3>Comments</h3>
                   <p>Comments are commonly used to explain the code and may help when you edit the source code later and are ignored by browsers.
                   <br><br>
                   A CSS comment starts with <code>/*</code> and ends with <code>*/</code>, and no changes are needed to make it multiple lines.</p>
-                  <p> 
 <pre>
 <code>
 /* This is a single-line comment */
@@ -1551,12 +1601,10 @@ h1, h4, h6, h2 &lbrace;
 a multi-line
 comment */
 </code>
-</pre>
-                  </p>
+</pre><br><br>
                 </div>
                 <div id="eci-7">
                   <h3>Extra: Centering Images</h3>
-                  <p>
 <pre>
 <code>
 img &lbrace;
@@ -1565,7 +1613,6 @@ img &lbrace;
 &rbrace;
 </code>
 </pre>
-                  </p>
                 </div>
               </Fragment>
             </Scrollspy>
@@ -1649,6 +1696,9 @@ var person = &lbrace;
           </Fragment>
         </Modal>
         <Modal title="SQL Basics" id="sql"><Fragment slot="modal-content">
+          <div class="mb-3">
+            <a href="#sqlresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">SQL Resources</a>
+          </div>
           <Scrollspy id="sql-basics-list"
           scrollcontent={[
             { name: "Querying Data from a Tablem", href: "#query-9" },
@@ -1797,7 +1847,7 @@ CREATE TABLE t (
               </div>
               <div id="import-10">
                 <h3>Importing JSON</h3>
-                <table class="table table-hover mb-1">
+                <table class="table table-hover mb-2">
                   <tbody>
                   <tr>
                     <th scope="row">JavaScript</th>

@@ -1,6 +1,6 @@
 {
   "name": "atproducts.xyz",
-  "version": "2.20",
+  "version": "2.20.1",
   "config": {
     "version_short": "2.20"
   },
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^3.6.2",
-    "astro": "^4.16.6",
+    "astro": "^4.16.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
