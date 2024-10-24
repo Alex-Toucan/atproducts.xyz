@@ -6045,17 +6045,12 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
       
 
 .sw-feature-box {
-	display: grid;
+	display: flex;
+  flex-wrap: wrap;
 	justify-content: center;
   background-color: grey;
   padding: 10px;
   border: 1px solid black;
-}
-
-@media (min-width: 767.98px) {
-	.sw-feature-box {
-		display: flex
-	}
 }
 
 .sw-link {
