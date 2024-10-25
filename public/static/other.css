@@ -6418,9 +6418,6 @@ height: calc(100vh - 448px);
 .historyTabs {
   display: flex;
   flex-direction: column;
-}
-
-.historyTabs {
   min-width: 300px;
 }
 
