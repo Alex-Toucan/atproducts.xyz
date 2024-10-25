@@ -30,13 +30,15 @@ $(function () {
 });
 
 // History tabs
+// Too add a new year, just replace any references of the last numbers (ex: 6) in "for (let i = 1; i <= 6; i++)" and "year = Math.min(Math.max(year, 1), 6);"
+
 $(document).ready(function() {
     // Initialize the active button and set btn-primary for past years
     let activeYear = 1;
 
     updateTimeline(activeYear);
     // Add click event handlers to timeline buttons
-    for (let i = 1; i <= 5; i++) $(`#history-${i}`).click(() => updateTimeline(i));
+    for (let i = 1; i <= 6; i++) $(`#history-${i}`).click(() => updateTimeline(i));
     const debounce = 500;
     let isDebounced = false;
     let debounceTimeout;
@@ -65,7 +67,7 @@ $(document).ready(function() {
     // Function to update the timeline based on the selected year
     function updateTimeline(year) {
         // Make sure year is within the min and max
-        year = Math.min(Math.max(year, 1), 5);
+        year = Math.min(Math.max(year, 1), 6);
         if(year == activeYear) return;
         // Remove the "active" class from all buttons
         for (let i = 1; i <= 5; i++) {
