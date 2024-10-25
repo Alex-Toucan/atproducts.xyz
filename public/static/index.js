@@ -30,7 +30,7 @@ $(function () {
 });
 
 // History tabs
-// Too add a new year, just replace any references of the last numbers (ex: 6) in "for (let i = 1; i <= 6; i++)" and "year = Math.min(Math.max(year, 1), 6);"
+// Too add a new year, just replace any references of the last numbers (ex: 6) in "for (let i = 1; i <= 6; i++)",  and "year = Math.min(Math.max(year, 1), 6);"
 
 $(document).ready(function() {
     // Initialize the active button and set btn-primary for past years
@@ -70,7 +70,7 @@ $(document).ready(function() {
         year = Math.min(Math.max(year, 1), 6);
         if(year == activeYear) return;
         // Remove the "active" class from all buttons
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i <= 6; i++) {
             $(`#history-${i}`).toggleClass("active", i == year).toggleClass("btn-secondary", i > year).toggleClass("btn-primary", i <= year);
             $(`#history-${i}-pane`).toggleClass("active", i == year).removeClass("show");
         }
