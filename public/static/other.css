@@ -6405,7 +6405,7 @@ height: calc(100vh - 448px);
   text-decoration: none !important;
 }
 
-.progress-wrapper, .progress, .progress-bar {
+.progress-wrapper, .progress {
   position: absolute;
   top: 50%;
   left: 50%;
