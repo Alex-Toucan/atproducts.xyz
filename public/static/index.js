@@ -67,9 +67,11 @@ $(document).ready(function() {
     // Function to update the timeline based on the selected year
     function updateTimeline(year) {
         // Make sure year is within the min and max
+        // Replace the number here
         year = Math.min(Math.max(year, 1), 6);
         if(year == activeYear) return;
         // Remove the "active" class from all buttons
+        // Replace the number here
         for (let i = 1; i <= 6; i++) {
             $(`#history-${i}`).toggleClass("active", i == year).toggleClass("btn-secondary", i > year).toggleClass("btn-primary", i <= year);
             $(`#history-${i}-pane`).toggleClass("active", i == year).removeClass("show");
@@ -78,7 +80,8 @@ $(document).ready(function() {
             $(`#history-${year}-pane`).addClass("show");  
         }, 50);
         // Update the progress bar width
-        const progressBarWidth = (year - 1) * 25;
+        // Divide the amount of buttons minus one, by 100.
+        const progressBarWidth = (year - 1) * 20;
         $("#history-progress").css("width", `${progressBarWidth}%`);
         // Update the active year
         activeYear = year;
