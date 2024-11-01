@@ -12,8 +12,6 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-  { bulletinImage: "Halloween.webp" },
-  { bulletinImage: "3YEAR.webp" },
   { bulletinImage: "2201-102324-1.webp" },
   { bulletinImage: "2201-102324-2.webp" },
 ]} />
@@ -48,15 +46,12 @@ bulletin={[
       <div class="pt-xmd-2 px-xmd-2">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/media/slideshow/Halloween.webp" class="d-block w-100" alt="Happy Halloween!">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
             <img src="/media/slideshow/2201-102324-1.webp" class="d-block w-100" alt="2.20.1 Release Slide 1">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
             <img src="/media/slideshow/2201-102324-2.webp" class="d-block w-100" alt="2.20.1 Release Slide 2">
           </div>
-        </div>
+        </div
         <div class="mediarow py-2" aria-label="Carousel-A Controls">
           <button class="carousel-control-prev col" type="button" data-bs-target="#carousel-A" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -65,7 +60,6 @@ bulletin={[
           <div class="carousel-indicators col-8 col-xs-6 col-sm-5 text-center">
             <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
-            <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
           </div>
           <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -260,16 +254,20 @@ bulletin={[
       <hr>
       <div id="history">
         <h2> History </h2>
-        <div class="position-relative" aria-label="History Bar" id="historyTab" role="tablist" style="margin: 1.55rem !important;">
-          <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 1px;" id="history-line">
-            <div class="progress-bar" style="width: 0%" id="history-progress"></div>
-          </div>
-          <div id="history-buttons">
-            <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-3" aria-controls="history-1-pane" aria-label="2020" id="history-1">2020</button>
-            <button type="button" class="position-absolute top-0 start-25 translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-2-pane" aria-label="2021" id="history-2">2021</button>
-            <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-3-pane" aria-label="2022" id="history-3">2022</button>
-            <button type="button" class="position-absolute top-0 start-75 translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-4-pane" aria-label="2023" id="history-4">2023</button>
-            <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-5-pane" aria-label="2024" id="history-5">2024</button>
+        <div class="overflow-auto mt-1 mb-2">
+          <div aria-label="History Bar" id="historyTab" role="tablist" class="historyTabs position-relative">
+            <div class="progress-wrapper">
+              <div class="progress proper-center" role="progressbar" aria-label="Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 10px;" id="history-line">
+                <div class="progress-bar" style="width: 0%" id="history-progress"></div>
+              </div>
+            </div>
+            <div id="history-buttons" class="d-flex justify-content-between">
+              <button type="button" class="btn btn-sm btn-primary rounded-3" aria-controls="history-1-pane" aria-label="2020" id="history-1">2020</button>
+              <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-2-pane" aria-label="2021" id="history-2">2021</button>
+              <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-3-pane" aria-label="2022" id="history-3">2022</button>
+              <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-4-pane" aria-label="2023" id="history-4">2023</button>
+              <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-5-pane" aria-label="2024" id="history-5">2024</button>
+            </div>
           </div>
         </div>
         <div class="tab-content products-border rounded-2 p-2" id="history-tabs">
