@@ -1,0 +1,39 @@
+---
+const { id, title, description, cardLinks, size } = Astro.props;
+---
+
+<div class={`hero hero-${id}`} data-bs-theme="dark">
+  <div class="hero-back h-100">
+    <div class="hero-filter">
+      <h1 class="display-4 fw-bold title pt-3 pb-2" set:html={title}></h1>
+      {description && (
+        <p class="fs-4 mt-0 mb-3 text-body-secondary container">{description}</p>
+      )}
+      <div class={`d-${size}-flex flex-wrap mx-2`}>
+        {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, pdfHref, additionalImageClasses }, index) => (
+          <div class="col-md mt-1 mb-3 m-1">
+            <div class="card text-center permcard shadow-sm h-100">
+              {cardImage && (
+                <div class="bg-white card-img-top">
+                  <img src={cardImage} alt={cardTitle} class={additionalImageClasses} width="100%">
+                </div>
+              )}
+              <div class="card-body">
+                <h2 class="card-title">{cardTitle}</h2>
+                <p class="card-text" set:html={cardDescription}></p>
+                <div class="tab-link d-flex gap-2">
+                  <a href={cardHref} class="btn btn-primary w-100 d-grid">
+                    <span class="align-self-center">Visit</span>
+                  </a>
+                  <a href={pdfHref} class="btn btn-secondary fs-5">
+                    <i class="bi bi-filetype-pdf"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
