@@ -6338,6 +6338,12 @@ html.fixedtopnavimage {
 	}
 }
 
+@media (min-width: 991.98px) {
+	.story-body {
+		width: 75ch;
+	}
+}
+
 .tab-pane {
 	height: 100%;
 }
