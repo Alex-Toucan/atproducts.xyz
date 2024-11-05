@@ -6332,12 +6332,6 @@ html.fixedtopnavimage {
 	}
 }
 
-@media (min-width:991.98px) {
-	.story-body, .story-body * {
-		width: 75ch;
-	}
-}
-
 @media (max-width:767.98px) {
 	.back-to-top {
 		bottom: 60px !important;
