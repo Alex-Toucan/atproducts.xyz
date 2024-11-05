@@ -3,7 +3,7 @@ const { id, scrollcontent } = Astro.props;
 ---
 
 <main id={id}>
-  <div class="bd-toc col-md-2 p-3 pb-0 story-top-buttons">
+  <div class="bd-toc col-3 col-lg-2 p-3 pb-0 story-top-buttons">
     <div id={`${id}-list`} class="list-group">
       {scrollcontent ? (
         scrollcontent.map(({ name, href, additionalClasses }, index) => (
@@ -17,7 +17,7 @@ const { id, scrollcontent } = Astro.props;
     </div>
   </div>
   <div class="col-md-10 p-3 story-top-scroll story-top-body story-scroll d-lg-grid" tabindex="0" data-bs-smooth-scroll="true" data-bs-target={`${id}-list`} data-bs-spy="scroll">
-	<div class="d-lg-grid story-body align-self-lg-center text-justify">
+	<div class="d-lg-grid story-body text-justify">
 		<slot name="scrollspy-content" />
     </div>
   </div>
