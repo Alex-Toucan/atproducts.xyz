@@ -6332,6 +6332,12 @@ html.fixedtopnavimage {
 	}
 }
 
+@media (min-width:991.98px) {
+	.story-body, .story-body * {
+		width: 75ch;
+	}
+}
+
 @media (max-width:767.98px) {
 	.back-to-top {
 		bottom: 60px !important;
@@ -6369,7 +6375,7 @@ html.fixedtopnavimage {
 
 @media (max-width:767.98px) {
 	.products-tabContent {
-  	height: 20rem !important;
+		height: 20rem !important;
 	}
 	.products-2 img {
 		width: 75%;
@@ -6453,9 +6459,7 @@ html.fixedtopnavimage {
 	.rounded-md-pill {
 		border-radius: var(--bs-border-radius-pill);
 	}
-	.story-body {
-		width: 75ch;
-	}
+	
 }
 
 .rounded-6 {
