@@ -6339,7 +6339,7 @@ html.fixedtopnavimage {
 }
 
 @media (min-width: 991.98px) {
-	.story-body {
+	.story-body, .story-body * {
 		width: 75ch;
 	}
 }
