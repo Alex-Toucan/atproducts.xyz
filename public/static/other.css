@@ -6274,6 +6274,7 @@ html.fixedtopnavimage {
 	}
 }
 
+
 @media (min-width: 767.98px) and (max-width: 901.98px) {
 	.bd-toc {
 		position: -webkit-fixed;
@@ -6338,10 +6339,32 @@ html.fixedtopnavimage {
 	}
 }
 
-@media (min-width: 991.98px) {
-	.story-body, .story-body * {
-		width: 75ch;
-	}
+@media (min-width: 645.98px) {
+  .container-story {
+    max-width: 65ch;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 768px) {
+  .container-story {
+    max-width: 70ch;
+  }
+}
+@media (min-width: 992px) {
+  .container-story {
+    max-width: 75ch;
+  }
+}
+@media (min-width: 1200px) {
+  .container-story {
+    max-width: 80ch;
+  }
+}
+@media (min-width: 1400px) {
+  .container-story {
+    max-width: 85ch;
+  }
 }
 
 .tab-pane {
