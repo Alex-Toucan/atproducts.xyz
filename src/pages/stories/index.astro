@@ -1,7 +1,7 @@
 ---
 import Head from '../../layouts/Head.astro';
 import Scripts from '../../layouts/Scripts.astro';
-import CardPage  from '../../layouts/CardPage.astro';
+import CardPage  from '../../layouts/stories/CardPage.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
@@ -21,9 +21,9 @@ bulletin={[
     <main id="stories" class="text-center">
       <CardPage id="stories" title="Stories" description="Read about our stories about IT!" size="md"
         cardLinks={[
-          { cardTitle: "CCTV Interception", cardDescription: "Learn about how to intercept CCTV for <strong>educational purposes</strong>.", cardHref: "cctv" },
-          { cardTitle: "How to Center a <div>", cardDescription: "Learn about how to center a <code>&lt;div&gt;</code> in HTML and CSS.", cardHref: "div" },
-          { cardTitle: "The Internet Now is Dull and Gray", cardDescription: "Take a peak on how Alex Toucan feels about how websites are design in the modern world.", cardHref: "websites" },
+          { cardTitle: "CCTV Interception", cardDescription: "Learn about how to intercept CCTV for <strong>educational purposes</strong>.", cardHref: "cctv", pdfHref: "/media/pdf/CCTV Interception.pdf" },
+          { cardTitle: "How to Center a <div>", cardDescription: "Learn about how to center a <code>&lt;div&gt;</code> in HTML and CSS.", cardHref: "div", pdfHref: "/media/pdf/How to Center a _div_.pdf" },
+          { cardTitle: "The Internet Now is Dull and Gray", cardDescription: "Take a peek on how Alex Toucan feels about how websites are designed in the modern world.", cardHref: "websites", pdfHref: "/media/pdf/The Internet Now is Dull and Gray.pdf" },
         ]} 
       />
     </main>
