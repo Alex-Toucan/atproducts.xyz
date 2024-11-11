@@ -25,6 +25,12 @@ import BackToTop from '../components/BackToTop.astro';
                 th {
                   overflow: hidden !important;
                 }
+
+                @media (max-width: 767.98px) {
+                  .column {
+                    width: 100%;
+                  }
+                }
               </style>
               <div dir="ltr" class="table-responsive rounded-2">
                 <table class="table table-hover overflow-auto" style="table-layout: fixed;" cellspacing="0" cellpadding="0">
@@ -32,9 +38,9 @@ import BackToTop from '../components/BackToTop.astro';
                     <tr>
                       <th style="width:30px; vertical-align: middle;">#</th>
                       <th style="width:270px; vertical-align: middle;">Projects</th>
-                      <th style="width:500px; vertical-align: middle;">Devices/Files</th>
+                      <th style="width:400px; vertical-align: middle;">Devices/Files</th>
                       <th style="width:85px; vertical-align: middle;">Date (MM/YY)</th>
-                      <th style="width:200px; vertical-align: middle;">Notes</th>
+                      <th style="width:270px; vertical-align: middle;">Notes</th>
                     </tr>
                   </tbody>
                   <tbody>
