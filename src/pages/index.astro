@@ -12,313 +12,312 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-  { bulletinImage: "21921-1-091124.webp" },
-  { bulletinImage: "21921-2-091124.webp" },
-  { bulletinImage: "2192-1-082124.webp" },
-  { bulletinImage: "2192-2-082124.webp" },
-  { bulletinImage: "2192-3-082124.webp" },
+  { bulletinImage: "2201-102324-1.webp" },
+  { bulletinImage: "2201-102324-2.webp" },
 ]} />
 <div id="page">
   <Navbar />
-  <Hero
-    id="main"
-    title="AT Products LLC"
-    description="The company that provides <strong>web solutions</strong> to your <strong>web problems</strong>!"
-    marginBottom="false"
-    buttons={[
-      { href: "/paid", text: "Paid Services", type: "primary" },
-    ]},
-    dropdownItems={[
-      { navigationDesc: "General Information", navigationLink: "#general-info" },
-      { navigationDesc: "Products", navigationLink: "#products" },
-      { navigationDesc: "Allies", navigationLink: "#allies" },
-      { navigationDesc: "Credits", navigationLink: "#credits" },
-      { navigationDesc: "History", navigationLink: "#history" },
-      { navigationDesc: "What's New?", navigationLink: "#what-new" },
-    ]},
-    icons={[
-      { icon: "github", desc: "GitHub", href: "https://github.com/Alex-Toucan/atproducts.xyz" },
-      { icon: "twitter-x", desc: "Twitter / X", href: "https://twitter.com/ATProductsLLC" },
-      { icon: "youtube", desc: "YouTube", href: "https://youtube.com/c/AlexToucanAT" },
-      { icon: "envelope-fill", desc: "Contact Form / Email", href: "/form/" },
-      { icon: "cloud-sun-fill", desc: "Weather", href: "https://twitter.com/ATPWeather" },
-    ]},
-  />
-  <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow px-0 container-xsm mt-xmd-2 mb-3 pointer-event" data-bs-ride="carousel">
-    <div class="pt-xmd-2 px-xmd-2">
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="/media/slideshow/21921-1-091124.webp" class="d-block w-100" alt="2.19.2.1 Release Slide 1">
+  <div id="main-content">
+    <Hero
+      id="main"
+      title="AT Products LLC"
+      description="The company that provides <strong>web solutions</strong> to your <strong>web problems</strong>!"
+      marginBottom="false"
+      buttons={[
+        { href: "/paid", text: "Paid Services", type: "primary" },
+      ]},
+      dropdownItems={[
+        { navigationDesc: "General Information", navigationLink: "#general-info" },
+        { navigationDesc: "Products", navigationLink: "#products" },
+        { navigationDesc: "Allies", navigationLink: "#allies" },
+        { navigationDesc: "Credits", navigationLink: "#credits" },
+        { navigationDesc: "History", navigationLink: "#history" },
+        { navigationDesc: "What's New?", navigationLink: "#what-new" },
+      ]},
+      icons={[
+        { icon: "github", desc: "GitHub", href: "https://github.com/Alex-Toucan/atproducts.xyz" },
+        { icon: "twitter-x", desc: "Twitter / X", href: "https://x.com/ATProductsLLC" },
+        { icon: "youtube", desc: "YouTube", href: "https://youtube.com/c/AlexToucanAT" },
+        { icon: "envelope-fill", desc: "Contact Form / Email", href: "/contact/" },
+        { icon: "cloud-sun-fill", desc: "Weather", href: "https://x.com/ATPWeather" },
+      ]},
+    />
+    <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow px-0 container-xsm mt-xmd-2 mb-3 pointer-event" data-bs-ride="carousel">
+      <div class="pt-xmd-2 px-xmd-2">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="/media/slideshow/2201-102324-1.webp" class="d-block w-100" alt="2.20.1 Release Slide 1">
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img src="/media/slideshow/2201-102324-2.webp" class="d-block w-100" alt="2.20.1 Release Slide 2">
+          </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <img src="/media/slideshow/21921-2-091124.webp" class="d-block w-100" alt="2.19.2.1 Release Slide 2">
-        </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <img src="/media/slideshow/2192-1-082124.webp" class="d-block w-100" alt="2.19.2 Release Slide 1">
-        </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <img src="/media/slideshow/2192-2-082124.webp" class="d-block w-100" alt="2.19.2 Release Slide 2">
-        </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <img src="/media/slideshow/2192-3-082124.webp" class="d-block w-100" alt="2.19.2 Release Slide 3">
+        <div class="mediarow py-2" aria-label="Carousel-A Controls">
+          <button class="carousel-control-prev col" type="button" data-bs-target="#carousel-A" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <div class="carousel-indicators col-8 col-xs-6 col-sm-5 text-center">
+            <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
+            <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
+          </div>
+          <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-      <div class="mediarow py-2" aria-label="Carousel-A Controls">
-        <button class="carousel-control-prev col" type="button" data-bs-target="#carousel-A" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <div class="carousel-indicators col-8 col-xs-6 col-sm-5 text-center">
-          <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
-          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
-          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
-          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
-          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
+      <div class="d-flex">
+        <div class="btn-group w-100 p-1" role="group" aria-label="Carousel-A Play/Pause">
+          <input type="radio" class="btn-check btn-check-dark col playButton" name="btnradio" id="playButton" aria-label="playButton" checked="">
+          <label class="btn" for="playButton" id="playButtonLabel"><i class="bi bi-play-fill fs-4 link-carousel"></i></label>
+          <input type="radio" class="btn-check btn-check-dark col pauseButton" name="btnradio" id="pauseButton" aria-label="pauseButton">
+          <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-carousel"></i></label>
         </div>
-        <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-    <div class="d-flex">
-      <div class="btn-group w-100 p-1" role="group" aria-label="Carousel-A Play/Pause">
-        <input type="radio" class="btn-check btn-check-dark col playButton" name="btnradio" id="playButton" aria-label="playButton" checked="">
-        <label class="btn" for="playButton" id="playButtonLabel"><i class="bi bi-play-fill fs-4 link-carousel"></i></label>
-        <input type="radio" class="btn-check btn-check-dark col pauseButton" name="btnradio" id="pauseButton" aria-label="pauseButton">
-        <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-carousel"></i></label>
-      </div>
-      <div class="col px-2 my-auto">
-        <a href="/media/pdf/2.19.2 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
+        <div class="col px-2 my-auto">
+          <a href="/media/pdf/2.20.1 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
+        </div>
       </div>
     </div>
+    <main id="index" class="container">
+      <hr class="hero-drappear">
+      <div id="general-info">
+        <h2>General Information</h2>
+        <p> AT Products LLC (officially recognized pronunciation: "A.T Products LLC"), otherwise known as ATP, is an informative technology company that is based in the United States, that contains resources for cybersecurity and malware. Our products are for the public to use anytime. </p>
+        <p> Our current products are Flash Documentation, MDickie Projects, and SMS Bomb. </p>
+        <p> The "AT" in AT Products does stand for Alex Toucan. </p>
+        <p> The <a href="/backup/archive">Public Archive</a> contains other projects and pages that we've completed before. </p>
+      </div>
+      <hr>
+      <div id="products">
+        <h2>Products</h2>
+        <div class="products-border rounded-2 p-1">
+          <div class="d-md-flex">
+            <div class="nav flex-column nav-pills col-md-4 me-md-1" id="products-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active" id="products-1-tab" data-bs-toggle="pill" data-bs-target="#products-1" type="button" role="tab" aria-controls="products-1" aria-selected="true">Paid Services</button>
+              <button class="nav-link" id="products-2-tab" data-bs-toggle="pill" data-bs-target="#products-2" type="button" role="tab" aria-controls="products-2" aria-selected="false" tabindex="-1">Flash Documentation</button>
+              <button class="nav-link" id="products-3-tab" data-bs-toggle="pill" data-bs-target="#products-3" type="button" role="tab" aria-controls="products-3" aria-selected="false" tabindex="-1">MDickie Projects</button>
+              <button class="nav-link" id="products-4-tab" data-bs-toggle="pill" data-bs-target="#products-4" type="button" role="tab" aria-controls="products-4" aria-selected="false" tabindex="-1">SMS Bomb</button>
+              <button class="nav-link" id="products-5-tab" data-bs-toggle="pill" data-bs-target="#products-5" type="button" role="tab" aria-controls="products-5" aria-selected="false" tabindex="-1">Pynx's Projects</button>
+              <button class="nav-link" id="products-6-tab" data-bs-toggle="pill" data-bs-target="#products-6" type="button" role="tab" aria-controls="products-6" aria-selected="false" tabindex="-1">AT's ROM Games</button>
+              <button class="nav-link" id="products-7-tab" data-bs-toggle="pill" data-bs-target="#products-7" type="button" role="tab" aria-controls="products-7" aria-selected="false" tabindex="-1">Public Archive</button>
+            </div>
+            <div class="vr disbr me-1"></div>
+            <hr class="opacity-25 my-1 d-md-none">
+            <div class="tab-content col-md text-center products-tabContent" id="products-tabContent">
+              <div class="products-1 tab-pane fade active show" id="products-1" role="tabpanel" aria-labelledby="products-1-tab" tabindex="0">
+                <h2>Paid Services</h2>
+                <p>View our Paid Services!</p>
+                <p>Current primary services are Website Design and Website Hosting.</p>
+                <div class="tab-link">
+                  <a href="/paid" class="btn btn-primary w-100">Visit</a>
+                </div>
+              </div>
+              <div class="products-2 tab-pane fade" id="products-2" role="tabpanel" aria-labelledby="products-2-tab" tabindex="0">
+                <div class="bg-white rounded-2 mb-2"><img class=" rounded-2" src="/media/images/flashdoc.webp" alt="Flash Documentation"></div>
+                <h2>Flash Documentation</h2>
+                <p class="mb-0">Here are some things about Adobe Flash!</p>
+                <div class="tab-link">
+                  <a href="/flash" class="btn btn-primary w-100 mb-2">Visit</a><a href="/backup/flash" class="btn btn-secondary w-100">Visit the all laid out version</a>
+                </div>
+              </div>
+              <div class="products-3 tab-pane fade" id="products-3" role="tabpanel" aria-labelledby="products-3-tab" tabindex="0">
+                <div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/mdickiepro.webp" alt="MDickie Projects"></div>
+                <h2>MDickie Projects</h2>
+                <p class="mb-0">This is a fanmade site about what MDickie has developed since the 1990s!</p>
+                <div class="tab-link">
+                  <a href="/mdickie" class="btn btn-primary w-100">Visit</a>
+                </div>
+              </div>
+              <div class="products-4 tab-pane fade" id="products-4" role="tabpanel" aria-labelledby="products-4-tab" tabindex="0">
+                <div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/ya.png" alt="SMS Bomb"></div>
+                <h2>SMS Bomb</h2>
+                <p class="mb-0">This is for Android Devices. You can spam message your friends!</p>
+                <div class="tab-link">
+                  <a href="/sms" class="btn btn-primary w-100">Visit</a>
+                </div>
+              </div>
+              <div class="products-5 tab-pane fade" id="products-5" role="tabpanel" aria-labelledby="products-5-tab" tabindex="0">
+                <h2>Pynx's Projects</h2>
+                <p class="mb-0">Partnered with <a href="https://2983u2.site/">PynxTech</a>, we released these projects!</p>
+                <div class="tab-link">
+                  <a href="/pynx" class="btn btn-primary w-100">Visit</a>
+                </div>
+              </div>
+              <div class="products-6 tab-pane fade" id="products-6" role="tabpanel" aria-labelledby="products-6-tab" tabindex="0">
+                <div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/AT-ROM-Games-with-logo.webp" alt="AT's ROM Games"></div>
+                <h2>AT's ROM Games</h2>
+                <p class="mb-0">A <strong>discontinued</strong> collection of ROMs from back in 2021!</p>
+                <div class="tab-link">
+                  <a href="/roms" class="btn btn-primary w-100">Visit</a>
+                </div>
+              </div>
+              <div class="products-7 tab-pane fade" id="products-7" role="tabpanel" aria-labelledby="products-7-tab" tabindex="0">
+                <h2>Public Archive</h2>
+                <p class="mb-0">View most of our old versions here!</p>
+                <div class="tab-link">
+                  <a href="/backup/archive" class="btn btn-primary w-100">Visit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div id="allies">
+        <h2>Allies</h2>
+        <div class="bg-dark index-border p-1 p-dark-0 rounded-2 text-white" data-bs-theme="dark">
+          <div class="d-md-flex flex-row">
+            <div class="col-md">
+              <div class="p-2">
+                <div class="mx-md-auto d-table">
+                  <a href="https://protdos.com" class="d-mmd-flex"><img src="/media/images/protdos.webp" alt="ProtDos" height="60px" class="d-inline col-auto"><div class="d-inline my-mmd-auto col">ProtDos</div></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="p-2">
+                <div class="mx-md-auto d-table">
+                  <a href="https://deltasoftai.com" class="d-mmd-flex"><img src="/media/images/deltasoft.webp" alt="Deltasoft AI" height="60px" class="d-inline col-auto me-2"><div class="d-inline my-mmd-auto col">Deltasoft AI</div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-md-2"></div>
+          <div class="d-md-flex flex-row">
+            <div class="col-md">
+              <div class="p-2">
+                <div class="mx-md-auto d-table">
+                  <a href="https://discord.gg/pYa87Bhau9" class="d-mmd-flex"><img src="/media/images/IDA.webp" alt="Royal Stack Alliance" height="60px" class="d-inline col-auto rounded-2 me-2"><div class="d-inline my-mmd-auto col">Royal Stack Alliance</div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div id="credits">
+        <h2>Credits</h2>
+        <div class="bg-dark index-border p-dark-0 p-1 rounded-2 text-white" data-bs-theme="dark">
+          <div class="p-2 text-mmd-center">
+            <a href="https://deltasoftai.com">
+              <img src="/media/images/deltasoft.webp" alt="Deltasoft AI" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">Deltasoft AI</a> has <span class="glow-text">created our logo</span>!</div>
+          </div>
+          <hr class="m-2 d-md-none">
+          <div class="p-2 text-mmd-center">
+            <a href="https://protdos.com">
+              <img src="/media/images/protdos.webp" alt="ProtDos" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2"><div class="d-inline">ProtDos</a> allowed us to use their (our current) scroll button and their past Bootstrap v3.</div>
+          </div>
+          <hr class="m-2 d-md-none">
+          <div class="p-2 text-mmd-center">
+            <a href="https://getbootstrap.com">
+              <img src="/media/images/bootstrap.webp" alt="Bootstrap" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">Bootstrap</a> has provided their CSS library for us to use.</div>
+          </div>
+          <hr class="m-2 d-md-none">
+          <div class="p-2 text-mmd-center">
+            <a href="https://astro.build">
+              <img src="/media/images/astro.webp" alt="Astro" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 px-1 ms-1 me-2"><div class="d-inline">Astro</a> has provided their framework which powers our site!</div>
+          </div>
+          <hr class="m-2">
+          <Accordion parent="resourcesAccordion" additionalClasses="m-2" theme="dark">
+            <Fragment slot="accordion-content">
+              <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne" parent="resourcesAccordion">
+                <Fragment slot="accordion-item-content">
+                  <div class="p-2 text-mmd-center d-block">
+                    <p class="mb-0"><a href="https://uigradients.com/">uiGradients</a> for providing gradients for the carousel images when we are lazy to do it ourselves.</p>
+                  </div>
+                </Fragment>
+              </AccordionItem>
+              <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo" parent="resourcesAccordion">
+                <Fragment slot="accordion-item-content">
+                  <div class="p-2 text-mmd-center">
+                    <div class="p-2">
+                      <p class="d-inline">
+                        <a href="https://w3schools.com"><img src="/media/images/w3schools.webp" alt="W3Schools" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">W3Schools</a> has provided the former navigation buttons.</p></div>
+                    </div>
+                    <div class="mb-md-2"></div>
+                    <hr class="m-2 d-md-none">
+                    <div class="p-2">
+                      <p class="d-inline">
+                        <a href="https://tinkercad.com">
+                          <img src="/media/images/tinkercad.webp" alt="TinkerCAD" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">TinkerCAD</a> has provided their 3D building tool to build our past logo.
+                      </p>
+                    </div>
+                    </div>
+                  </div>
+                </Fragment>
+              </AccordionItem>
+            </Fragment>
+          </Accordion>
+        </div>
+      </div>
+      <hr>
+      <div id="history">
+        <h2> History </h2>
+        <div class="overflow-auto mt-1 mb-2">
+          <div aria-label="History Bar" id="historyTab" role="tablist" class="historyTabs position-relative">
+            <div class="progress-wrapper">
+              <div class="progress proper-center" role="progressbar" aria-label="Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 10px;" id="history-line">
+                <div class="progress-bar" style="width: 0%" id="history-progress"></div>
+              </div>
+            </div>
+            <div id="history-buttons" class="d-flex justify-content-between">
+              <button type="button" class="btn btn-sm btn-primary rounded-3" aria-controls="history-1-pane" aria-label="2020" id="history-1">2020</button>
+              <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-2-pane" aria-label="2021" id="history-2">2021</button>
+              <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-3-pane" aria-label="2022" id="history-3">2022</button>
+              <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-4-pane" aria-label="2023" id="history-4">2023</button>
+              <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-5-pane" aria-label="2024" id="history-5">2024</button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content products-border rounded-2 p-2" id="history-tabs">
+          <div class="tab-pane fade show active" id="history-1-pane">
+            <h3>2020</h3>
+            <p class="m-0">AT Products was just a simple thought around this time, a company owned by Alex Toucan. It would become genuine with the help of <a href="https://discord.com">Discord</a>, as it gave Alex Toucan some reputation.</p>
+          </div>
+          <div class="tab-pane fade" id="history-2-pane">
+            <h3>2021</h3>
+            <p class="m-0">The journey began in 2021, with <span><a tabindex="0" href="javascript:void(0)" type="button" class="text-reset text-decoration-dashed" data-bs-toggle="popover" data-bs-title="2021-2022 Logo" data-bs-content="<img src='/media/images/2021logo.png' class='popover-image' width='100%' alt='2021-2022 Logo'>" data-bs-html="true" data-bs-placement="bottom" data-bs-trigger="focus">the past logo</a></span> being completed with a 3D modeling tool, also known as <a href="https://tinkercad.com">TinkerCAD</a>. Also in 2021, especially around late 2021, was when our website was just getting under development. For a school assignment, <a href="https://1-0.atproducts.xyz/roms">AT's ROM Games</a> was chosen as the first web page to be completed. Since the criteria were just for four areas of information to be put on the said web page, and the product was already being made. This would start the adventure of atproducts.xyz, but these sites had <a href="https://code.org">code.org/codeprojects.org</a> domains), which had basic CSS. We finished the main website within the same time area of late 2021, which meant that the <a href="/ehs">Ethical Hacking Society</a> and <a href="/script">The Script Community</a> got their website done around that period as well.</p>
+          </div>
+          <div class="tab-pane fade" id="history-3-pane">
+            <h3>2022</h3>
+            <p class="m-0">The New Year of 2022, brought <a href="/codinghome">CodingHome</a>, and our Documentation. Finally, we bought the domain atproducts.org in February and put the same code there. But, soon enough, <a href="https://protdos.com">ProtDos</a> permitted us to use their (and our) past CSS, which was <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3</a>. We changed the CSS to make it dark a month later, sold the domain a month later, and bought the atproducts.xyz domain... a month later. and then <a href="https://2-6.atproducts.xyz">changed it back in June</a>. Between March and June, we introduced <a href="/flash">Flash Documentation</a> and the <a href="/noodle">Noodle Hackerspace</a> as new products. The hugest overhaul would happen on June 3rd, with <a href="https://2-6.atproducts.xyz">2.6</a>. Which replaced <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3</a> with <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap 5</a>. Not much later, on August 21st, <a href="https://2-6-1.atproducts.xyz">we changed the company logo in 2.6.1</a>, to a more <span><a tabindex="0" href="javascript:void(0)" type="button" class="text-reset text-decoration-dashed" data-bs-toggle="popover" data-bs-title="2022-2023 Logo" data-bs-content="<img src='/media/images/2022logo.png' class='popover-image' width='100%' alt='2022-2023 Logo'>" data-bs-html="true" data-bs-placement="bottom" data-bs-trigger="focus">professional design</a></span>. <a href="https://2-7.atproducts.xyz">2.7</a>, released on September 22nd, changed the nav bar. In late August, AT Products joined and helped create The CodingHome Universe (now the <a href="https://discord.com/invite/FqcSvnrnvc">International Developer's Association</a>), a coders alliance with our current allies.</p>
+          </div>
+          <div class="tab-pane fade" id="history-4-pane">
+            <h3>2023</h3>
+            <p class="m-0"><a href="https://2-12.atproducts.xyz">2.12</a>, released on January 4th, added back dark mode and the switch as <a href="https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/">Bootstrap v5.3.0-alpha1</a> was released on December 24th, 2022. What an update to release into the New Year of 2023, since dark mode had been awaited for months beforehand. <a href="https://2-13.atproducts.xyz">2.13</a> would replace a couple of links to the iconic cards that still exist in Web Pages and Pynx's Projects, as most of these cards got replaced by 2.15 (later on), released on January 18th. <a href="https://2-15.atproducts.xyz">2.15</a> brought new introductions, otherwise called heroes with images, released on June 30th. <a href="https://2-16-1.atproducts.xyz">2.16.1</a>, released on September 27th, brought an overhaul to this history tab. On November 29th, we changed the <span><a tabindex="0" href="javascript:void(0)" type="button" class="text-reset text-decoration-dashed" data-bs-toggle="popover" data-bs-title="2023-Current Logo" data-bs-content="<img src='/media/images/2023logo.png' class='popover-image' width='100%' alt='2023-Current Logo'>" data-bs-html="true" data-bs-placement="bottom" data-bs-trigger="focus">company logo</a></span> again with <a href="https://2-17.atproducts.xyz">2.17</a>. Closing out the year, replacing the code behind this whole project, <a href="https://2-17-1.atproducts.xyz">2.17.1</a>, which released on December 20th, brought in the Astro framework.</p>        
+          </div>
+          <div class="tab-pane fade" id="history-5-pane">
+            <h3>2024</h3>
+            <p class="m-0">2024 has been a slow year, but stuff still came out for the site at least. The first update released was <a href="https://2-17-2.atproducts.xyz">2.17.2</a>, on January 24th. <a href="https://2-18.atproducts.xyz">2.18</a>, releasing on March 27th, would be the second update of the year, and revamped MDickie Projects entirely. <a href="https://2-19.atproducts.xyz">2.19</a>, released on July 10th, 2024, added new features and resources, including the logo popovers you see here in the history section, redesigned several UI elements, updated various components, removed outdated items, and fixed multiple bugs. <a href="https://2-20.atproducts.xyz">2.20</a>, released on October 10th, readded <a href="/roms">AT's ROM Games</a>, and added code highlighting where needed.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div id="what-new">
+        <h2> What's New? </h2>
+        <p>
+          <b> Released on:</b> October 23rd, 2024.<br>
+          <b>ATP Database:</b> 2.20.1
+        </p>
+        <b>Added</b>
+        <ul>
+          <li>Added 2 new stories, related to websites. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/319" target="_blank" rel="noopener noreferrer">#319</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/332" target="_blank" rel="noopener noreferrer">#332</a>)</li>
+          <li>Added a new card page to contain the stories. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/319" target="_blank" rel="noopener noreferrer">(#319)</a></li>
+          <li>Added 2 new sections to the C++ Basics section in CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/327" target="_blank" rel="noopener noreferrer">(#327)</a></li>
+          <li>Added buttons for most basics in CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/328" target="_blank" rel="noopener noreferrer">(#328)</a></li>
+          <li>Added more resources to CodingHome. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/322" target="_blank" rel="noopener noreferrer">#322</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/326" target="_blank" rel="noopener noreferrer">#326</a>)</li>
+          <li>Added highlight.js and the Dracula theme to Licenses. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/318" target="_blank" rel="noopener noreferrer">(#318)</a></li>
+        </ul>
+        <b>Changed</b>
+        <ul>
+          <li>The contact form directory is now <code>/contact</code> instead of <code>/form</code>. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/316" target="_blank" rel="noopener noreferrer">(#316)</a></li>
+          <li>Updated Astro from v4.16.0 to v4.16.7. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/317" target="_blank" rel="noopener noreferrer">#317</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/320" target="_blank" rel="noopener noreferrer">#320</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/321" target="_blank" rel="noopener noreferrer">#321</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/325" target="_blank" rel="noopener noreferrer">#325</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/329" target="_blank" rel="noopener noreferrer">#329</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/331" target="_blank" rel="noopener noreferrer">#331</a>)</li>
+        </ul>
+      </div>
+    </main>
+    <Footer />
   </div>
-  <main id="index" class="container">
-    <hr class="hero-drappear">
-    <div id="general-info">
-      <h2>General Information</h2>
-      <p> AT Products LLC, otherwise known as AT Products (officially recognized pronunciation: "A.T Products") is an informative technology company that is based in the United States, that contains resources for cybersecurity and malware. Our products are for the public to use anytime. </p>
-      <p> Our current products are Flash Documentation, MDickie Projects, and SMS Bomb. </p>
-      <p> The "AT" in AT Products does stand for Alex Toucan. </p>
-      <p> The <a href="/backup/archive">Public Archive</a> contains other projects and pages that we've completed before. </p>
-    </div>
-    <hr>
-    <div id="products">
-      <h2>Products</h2>
-      <div class="products-border rounded-2 p-1">
-        <div class="d-md-flex">
-          <div class="nav flex-column nav-pills col-md-4 me-md-1" id="products-tab" role="tablist" aria-orientation="vertical">
-            <button class="nav-link active" id="products-1-tab" data-bs-toggle="pill" data-bs-target="#products-1" type="button" role="tab" aria-controls="products-1" aria-selected="true">Paid Services</button>
-            <button class="nav-link" id="products-2-tab" data-bs-toggle="pill" data-bs-target="#products-2" type="button" role="tab" aria-controls="products-2" aria-selected="false" tabindex="-1">Flash Documentation</button>
-            <button class="nav-link" id="products-3-tab" data-bs-toggle="pill" data-bs-target="#products-3" type="button" role="tab" aria-controls="products-3" aria-selected="false" tabindex="-1">MDickie Projects</button>
-            <button class="nav-link" id="products-4-tab" data-bs-toggle="pill" data-bs-target="#products-4" type="button" role="tab" aria-controls="products-4" aria-selected="false" tabindex="-1">SMS Bomb</button>
-            <button class="nav-link" id="products-5-tab" data-bs-toggle="pill" data-bs-target="#products-5" type="button" role="tab" aria-controls="products-5" aria-selected="false" tabindex="-1">Pynx's Projects</button>
-            <button class="nav-link" id="products-6-tab" data-bs-toggle="pill" data-bs-target="#products-6" type="button" role="tab" aria-controls="products-6" aria-selected="false" tabindex="-1">Public Archive</button>
-          </div>
-          <div class="vr disbr me-1"></div>
-          <hr class="opacity-25 my-1 d-md-none">
-          <div class="tab-content col-md text-center products-tabContent" id="products-tabContent">
-            <div class="products-1 tab-pane fade active show" id="products-1" role="tabpanel" aria-labelledby="products-1-tab" tabindex="0">
-              <h2 class="card-title mb-2">Paid Services</h2>
-              <p>View our Paid Services!</p>
-              <p>Current primary services are Website Design and Website Hosting.</p>
-              <div class="tab-link">
-                <a href="/paid" class="btn btn-primary w-100">Visit</a>
-              </div>
-            </div>
-            <div class="products-2 tab-pane fade" id="products-2" role="tabpanel" aria-labelledby="products-2-tab" tabindex="0">
-              <div class="bg-white rounded-2 mb-2"><img class=" rounded-2" src="/media/images/flashdoc.webp" alt="Flash Documentation"></div>
-              <h2 class="card-title">Flash Documentation</h2>
-              <p class="mb-0">Here are some things about Adobe Flash!</p>
-              <div class="tab-link">
-                <a href="/flash" class="btn btn-primary w-100 mb-2">Visit</a><a href="/backup/flash" class="btn btn-secondary w-100">Visit the all laid out version</a>
-              </div>
-            </div>
-            <div class="products-3 tab-pane fade" id="products-3" role="tabpanel" aria-labelledby="products-3-tab" tabindex="0">
-              <div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/mdickiepro.webp" alt="MDickie Projects"></div>
-              <h2 class="card-title">MDickie Projects</h2>
-              <p class="mb-0">This is a fanmade site about what MDickie has developed since the 1990s!</p>
-              <div class="tab-link">
-                <a href="/mdickie" class="btn btn-primary w-100">Visit</a>
-              </div>
-            </div>
-            <div class="products-4 tab-pane fade" id="products-4" role="tabpanel" aria-labelledby="products-4-tab" tabindex="0">
-              <div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/ya.png" alt="SMS Bomb"></div>
-              <h2 class="card-title">SMS Bomb</h2>
-              <p class="mb-0">This is for Android Devices. You can spam message your friends!</p>
-              <div class="tab-link">
-                <a href="/sms" class="btn btn-primary w-100">Visit</a>
-              </div>
-            </div>
-            <div class="products-5 tab-pane fade" id="products-5" role="tabpanel" aria-labelledby="products-5-tab" tabindex="0">
-              <h2 class="card-title mb-2">Pynx's Projects</h2>
-              <p class="mb-0">Partnered with <a href="https://2983u2.site/">PynxTech</a>, we released these projects!</p>
-              <div class="tab-link">
-                <a href="/pynx" class="btn btn-primary w-100">Visit</a>
-              </div>
-            </div>
-            <div class="products-6 tab-pane fade" id="products-6" role="tabpanel" aria-labelledby="products-6-tab" tabindex="0">
-              <h2 class="card-title mb-2">Public Archive</h2>
-              <p class="mb-0">View most of our old versions here!</p>
-              <div class="tab-link">
-                <a href="/backup/archive" class="btn btn-primary w-100">Visit</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div id="allies">
-      <h2>Allies</h2>
-      <div class="bg-dark index-border p-1 p-dark-0 rounded-2 text-white">
-        <div class="d-md-flex flex-row">
-          <div class="col-md">
-            <div class="p-2">
-              <div class="mx-md-auto d-table">
-                <a href="https://protdos.com" class="d-mmd-flex"><img src="/media/images/protdos.webp" alt="ProtDos" height="60px" class="d-inline col-auto"><div class="d-inline my-mmd-auto col">ProtDos</div></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="p-2">
-              <div class="mx-md-auto d-table">
-                <a href="https://deltasoftai.com" class="d-mmd-flex"><img src="/media/images/deltasoft.webp" alt="Deltasoft AI" height="60px" class="d-inline col-auto me-2"><div class="d-inline my-mmd-auto col">Deltasoft AI</div></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="m-md-2"></div>
-        <div class="d-md-flex flex-row">
-          <div class="col-md">
-            <div class="p-2">
-              <div class="mx-md-auto d-table">
-                <a href="https://discord.gg/pYa87Bhau9" class="d-mmd-flex"><img src="/media/images/IDA.webp" alt="International Developers Inc." height="60px" class="d-inline col-auto rounded-2 me-2"><div class="d-inline my-mmd-auto col">International Developers Inc.</div></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div id="credits">
-      <h2>Credits</h2>
-      <div class="bg-dark index-border p-dark-0 p-1 rounded-2 text-white">
-        <div class="p-2 text-mmd-center">
-          <a href="https://deltasoftai.com">
-            <img src="/media/images/deltasoft.webp" alt="Deltasoft AI" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">Deltasoft AI</a> has <span class="glow-text">created our logo</span>!</div>
-        </div>
-        <hr class="m-2 d-md-none">
-        <div class="p-2 text-mmd-center">
-          <a href="https://protdos.com">
-            <img src="/media/images/protdos.webp" alt="ProtDos" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2"><div class="d-inline">ProtDos</a> allowed us to use their (our current) scroll button and their past Bootstrap v3.</div>
-        </div>
-        <hr class="m-2 d-md-none">
-        <div class="p-2 text-mmd-center">
-          <a href="https://getbootstrap.com">
-            <img src="/media/images/bootstrap.webp" alt="Bootstrap" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">Bootstrap</a> has provided their CSS library for us to use.</div>
-        </div>
-        <hr class="m-2 d-md-none">
-        <div class="p-2 text-mmd-center">
-          <a href="https://astro.build">
-            <img src="/media/images/astro.webp" alt="Astro" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 px-1 ms-1 me-2"><div class="d-inline">Astro</a> has provided their framework which powers our site!</div>
-        </div>
-        <hr class="m-2">
-        <Accordion parent="resourcesAccordion" additionalClasses="m-2" theme="dark">
-          <Fragment slot="accordion-content">
-            <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne" parent="resourcesAccordion">
-              <Fragment slot="accordion-item-content">
-                <div class="p-2 text-mmd-center d-block">
-                  <p class="mb-0"><a href="https://uigradients.com/">uiGradients</a> for providing gradients for the carousel images when I'm lazy to do it myself.</p>
-                </div>
-              </Fragment>
-            </AccordionItem>
-            <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo" parent="resourcesAccordion">
-              <Fragment slot="accordion-item-content">
-                <div class="p-2 text-mmd-center">
-                  <div class="p-2">
-                    <p class="d-inline">
-                      <a href="https://w3schools.com"><img src="/media/images/w3schools.webp" alt="W3Schools" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">W3Schools</a> has provided the former navigation buttons.</p></div>
-                  </div>
-                  <div class="mb-md-2"></div>
-                  <hr class="m-2 d-md-none">
-                  <div class="p-2">
-                    <p class="d-inline">
-                      <a href="https://tinkercad.com">
-                        <img src="/media/images/tinkercad.webp" alt="TinkerCAD" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">TinkerCAD</a> has provided their 3D building tool to build our past logo.
-                    </p>
-                  </div>
-                  </div>
-                </div>
-              </Fragment>
-            </AccordionItem>
-          </Fragment>
-        </Accordion>
-      </div>
-    </div>
-    <hr>
-    <div id="history">
-      <h2> History </h2>
-      <div class="position-relative" aria-label="History Bar" id="historyTab" role="tablist" style="margin: 1.55rem !important;">
-        <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="height: 1px;" id="history-line">
-          <div class="progress-bar" style="width: 0%" id="history-progress"></div>
-        </div>
-        <div id="history-buttons">
-          <button type="button" class="position-absolute top-0 start-0   translate-middle btn btn-sm btn-primary   rounded-3" aria-controls="history-1-pane" aria-label="2020" id="history-1">2020</button>
-          <button type="button" class="position-absolute top-0 start-25  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-2-pane" aria-label="2021" id="history-2">2021</button>
-          <button type="button" class="position-absolute top-0 start-50  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-3-pane" aria-label="2022" id="history-3">2022</button>  
-          <button type="button" class="position-absolute top-0 start-75  translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-4-pane" aria-label="2023" id="history-4">2023</button>
-          <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-3" aria-controls="history-5-pane" aria-label="2024" id="history-5">2024</button>
-        </div>
-      </div>
-      <div class="tab-content products-border rounded-2 p-2" id="history-tabs">
-        <div class="tab-pane fade show active" id="history-1-pane">
-          <h1>2020</h1>
-          <p class="m-0">AT Products was just a simple thought around this time, a company owned by Alex Toucan. It would become genuine with the help of <a href="https://discord.com">Discord</a>, as it gave Alex Toucan some reputation.</p>
-        </div>
-        <div class="tab-pane fade" id="history-2-pane">
-          <h1>2021</h1>
-          <p class="m-0">The journey began in 2021, with <span><a tabindex="0" type="button" class="text-reset text-decoration-dashed" data-bs-toggle="popover" data-bs-title="2021-2022 Logo" data-bs-content="<img src='/media/images/2021logo.png' class='popover-image' width='100%' alt='2021-2022 Logo'>" data-bs-html="true" data-bs-placement="bottom" data-bs-trigger="focus">the past logo</a></span> being completed with a 3D modeling tool, also known as <a href="https://tinkercad.com">TinkerCAD</a>. Also in 2021, especially around late 2021, was when our website was just getting under development. For a school assignment, <a href="https://1-0.atproducts.xyz/roms">AT's ROM Games</a> was chosen as the first web page to be completed. Since the criteria were just for four areas of information to be put on the said web page, and the product was already being made. This would start the adventure of atproducts.xyz, but these sites had <a href="https://code.org">code.org/codeprojects.org</a> domains), which had basic CSS. We finished the main website within the same time area of late 2021, which meant that the <a href="/ehs">Ethical Hacking Society</a> and <a href="/script">The Script Community</a> got their website done around that period as well.</p>
-        </div>
-        <div class="tab-pane fade" id="history-3-pane">
-          <h1>2022</h1>
-          <p class="m-0">The New Year of 2022, brought <a href="/codinghome">CodingHome</a>, and our Documentation. Finally, in February, we bought the domain atproducts.org and put the same code there. But, soon enough, <a href="https://protdos.com">ProtDos</a> permitted us to use their (and our) past CSS, which was <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3</a>. We changed the CSS to make it dark a month later, sold the domain a month later, and bought the atproducts.xyz domain... a month later. and then <a href="https://2-6.atproducts.xyz">changed it back in June</a>. Between March and June
-            , we introduced <a href="/flash">Flash Documentation</a> and the <a href="/noodle">Noodle Hackerspace</a> as new products. The hugest overhaul would happen on June 3rd, with <a href="https://2-6.atproducts.xyz">2.6</a>. Which replaced <a href="https://getbootstrap.com/docs/3.3/">Bootstrap 3</a> with <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap 5</a>. Not much later, on August 21st, <a href="https://2-6-1.atproducts.xyz">we changed the company logo in 2.6.1</a>, to a more <span><a tabindex="0" type="button" class="text-reset text-decoration-dashed" data-bs-toggle="popover" data-bs-title="2022-2023 Logo" data-bs-content="<img src='/media/images/2022logo.png' class='popover-image' width='100%' alt='2022-2023 Logo'>" data-bs-html="true" data-bs-placement="bottom" data-bs-trigger="focus">professional design</a></span>. <a href="https://2-7.atproducts.xyz">2.7</a>, released on September 22nd, changed the nav bar. In late August, AT Products joined and helped create The CodingHome Universe (now the <a href="https://discord.com/invite/FqcSvnrnvc">International Developer's Association</a>), a coders alliance with our current allies.</p>
-        </div>
-        <div class="tab-pane fade" id="history-4-pane">
-          <h1>2023</h1>
-          <p class="m-0"><a href="https://2-12.atproducts.xyz">2.12</a>, released on January 4th, added back dark mode and the switch as <a href="https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/">Bootstrap v5.3.0-alpha1</a> was released on December 24th, 2022. What an update to release into the New Year of 2023, since dark mode had been awaited for months beforehand. <a href="https://2-13.atproducts.xyz">2.13</a> would replace a couple of links to the iconic cards that still exist in Web Pages and Pynx's Projects, as most of these cards got replaced by 2.15 (later on), released on January 18th. <a href="https://2-15.atproducts.xyz">2.15</a> brought new introductions, otherwise called heroes with images, released on June 30th. <a href="https://2-16-1.atproducts.xyz">2.16.1</a>, released on September 27th, brought an overhaul to this history tab. On November 29th, we changed the <span><a tabindex="0" type="button" class="text-reset text-decoration-dashed" data-bs-toggle="popover" data-bs-title="2023-Current Logo" data-bs-content="<img src='/media/images/2023logo.png' class='popover-image' width='100%' alt='2023-Current Logo'>" data-bs-html="true" data-bs-placement="bottom" data-bs-trigger="focus">company logo</a></span> again with <a href="https://2-17.atproducts.xyz">2.17</a>. Closing out the year, replacing the code behind this whole project, <a href="https://2-17-1.atproducts.xyz">2.17.1</a>, which released on December 20th, brought in the Astro framework.</p>        
-        </div>
-        <div class="tab-pane fade" id="history-5-pane">
-          <h1>2024</h1>
-          <p class="m-0">2024 has been a slow year, but stuff still came out for the site at least. The first update released was <a href="https://2-17-2.atproducts.xyz">2.17.2</a>, on January 24th. <a href="https://2-18.atproducts.xyz">2.18</a>, releasing on March 27th, would be the second update of the year, and revamped MDickie Projects entirely. <a href="https://2-19.atproducts.xyz">2.19</a>, released on July 10th, 2024, added new features and resources, including the logo popovers you see here in the history section, redesigned several UI elements, updated various components, removed outdated items, and fixed multiple bugs.</p>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div id="what-new">
-      <h2> What's New? </h2>
-      <p>
-        <b> Released on:</b> September 11th, 2024.<br>
-        <b>ATP Database:</b> 2.19.2.1
-      </p>
-      <b>Added</b>
-      <ul>
-        <li>Added more resources into CodingHome. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/265" target="_blank" rel="noopener noreferrer">(#265)</a></li>
-        <li>Added Renovate, a GitHub bot to update dependencies. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/258" target="_blank" rel="noopener noreferrer">(#258)</a></li>
-      </ul>
-      <b>Changed</b>
-      <ul>
-        <li>Updated the Privacy Policy to include IP Logging. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/256" target="_blank" rel="noopener noreferrer">(#256)</a></li>
-        <li>Updated the way the site renders hero buttons. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/263" target="_blank" rel="noopener noreferrer">(#263)</a></li>
-        <li>Updated Astro from v4.14.4 to v4.15.2. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/253" target="_blank" rel="noopener noreferrer">#253</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/264" target="_blank" rel="noopener noreferrer">#264</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/266" target="_blank" rel="noopener noreferrer">#266</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/268" target="_blank" rel="noopener noreferrer">#268</a>)</li>
-        <li>Updated micromatch from v4.0.7 to v4.0.8. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/252" target="_blank" rel="noopener noreferrer">#252</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/258" target="_blank" rel="noopener noreferrer">#257</a>)</li>
-        <li>Updated opencv-python from v4.5.3.56 to v4.8.1.78 in <code>require.txt</code>. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/267" target="_blank" rel="noopener noreferrer">(#267)</a></li>
-        <li>Update actions/checkout from v3 to v4. <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/255" target="_blank" rel="noopener noreferrer">(#255)</a></li>
-      </ul>
-    </div>
-  </main>
-  <Footer />
   <BackToTop />
 </div>
 <Scripts index="true" />

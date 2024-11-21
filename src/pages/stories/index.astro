@@ -1,0 +1,34 @@
+---
+import Head from '../../layouts/Head.astro';
+import Scripts from '../../layouts/Scripts.astro';
+import CardPage  from '../../layouts/stories/CardPage.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<Head title="Stories" description="Read about AT Products' stories related to Informational Technology." keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
+bulletin={[
+  { bulletinImage: "3YEAR.webp" },
+  { bulletinImage: "220-101024-1.webp" },
+  { bulletinImage: "220-101024-2.webp" },
+  { bulletinImage: "220-101024-3.webp" },
+  { bulletinImage: "220-101024-4.webp" },
+]} />
+<div id="page">
+  <Navbar />
+  <div id="main-content">
+    <main id="stories" class="text-center">
+      <CardPage id="stories" title="Stories" description="Read about our stories about IT!" size="md"
+        cardLinks={[
+          { cardTitle: "CCTV Interception", cardDescription: "Learn about how to intercept CCTV for <strong>educational purposes</strong>.", cardHref: "cctv", pdfHref: "/media/pdf/CCTV Interception.pdf" },
+          { cardTitle: "How to Center a <div>", cardDescription: "Learn about how to center a <code>&lt;div&gt;</code> in HTML and CSS.", cardHref: "div", pdfHref: "/media/pdf/How to Center a _div_.pdf" },
+          { cardTitle: "The Internet Now is Dull and Gray", cardDescription: "Take a peek on how Alex Toucan feels about how websites are designed in the modern world.", cardHref: "websites", pdfHref: "/media/pdf/The Internet Now is Dull and Gray.pdf" },
+        ]} 
+      />
+    </main>
+    <Footer hr="none" marginTop="true" />
+  </div>
+  <BackToTop />
+</div>
+<Scripts index="true" />

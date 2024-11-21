@@ -8,10 +8,11 @@ import BackToTop from '../components/BackToTop.astro';
 ---
 
 <Head title="Error 404" heroid="web" description="The content that the publisher attempted to share, doesn't exist. This is a 404 page after all..." author="Alex Toucan" />
-      <div id="page">
-<Navbar />
-     <main id="404" class="text-center">
-         <Hero
+  <div id="page">
+    <Navbar />
+    <div id="main-content">
+      <main id="404" class="text-center">
+        <Hero
          id="web"
          title="404"
          titleClasses="lh-1 fs-16"
@@ -20,9 +21,10 @@ import BackToTop from '../components/BackToTop.astro';
          secondaryHref="/"
          secondaryText="Index Page"
          container="true"
-       />
-</main>
-<Footer hr="none"/>
-<BackToTop />
-</div>
+         />
+      </main>
+      <Footer hr="none"/>
+    </div>
+    <BackToTop />
+  </div>
 <Scripts fourofour="true" />
