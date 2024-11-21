@@ -1,0 +1,183 @@
+/* Dracula Theme v1.2.5
+ *
+ * https://github.com/dracula/highlightjs
+ *
+ * Copyright 2016-present, All rights reserved
+ *
+ * Code licensed under the MIT license
+ *
+ * @author Denis Ciccale <dciccale@gmail.com>
+ * @author Zeno Rocha <hi@zenorocha.com>
+ */
+
+.pre-scroll div {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+pre {
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%; 
+}
+
+.not-standalone {
+  display: inline-flex;
+  margin-bottom: 0 !important;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+}
+
+:root, [data-bs-theme=light] {
+  .hljs {
+    color: #444
+  }
+  .hljs-subst {
+  }
+  .hljs-formula,
+  .hljs-attr,
+  .hljs-property,
+  .hljs-params {
+  }
+  .hljs-comment {
+    color: #697070
+  }
+  .hljs-tag,
+  .hljs-punctuation {
+    color: #444a
+  }
+  .hljs-tag .hljs-name,
+  .hljs-tag .hljs-attr {
+    color: #444
+  }
+  .hljs-keyword,
+  .hljs-attribute,
+  .hljs-selector-tag,
+  .hljs-meta .hljs-keyword,
+  .hljs-doctag,
+  .hljs-name {
+    font-weight: bold
+  }
+  /* User color: hue: 0 */
+  .hljs-type,
+  .hljs-string,
+  .hljs-number,
+  .hljs-selector-id,
+  .hljs-selector-class,
+  .hljs-quote,
+  .hljs-template-tag,
+  .hljs-deletion {
+    color: #880000
+  }
+  .hljs-title,
+  .hljs-section {
+    color: #880000;
+    font-weight: bold
+  }
+  .hljs-regexp,
+  .hljs-symbol,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-link,
+  .hljs-selector-attr,
+  .hljs-operator,
+  .hljs-selector-pseudo {
+    color: #ab5656
+  }
+  /* Language color: hue: 90; */
+  .hljs-literal {
+    color: #695
+  }
+  .hljs-built_in,
+  .hljs-bullet,
+  .hljs-code,
+  .hljs-addition {
+    color: #397300
+  }
+  .hljs-meta {
+    color: #1f7199
+  }
+  .hljs-meta .hljs-string {
+    color: #38a
+  }
+  .hljs-emphasis {
+    font-style: italic
+  }
+  .hljs-strong {
+    font-weight: bold
+  }
+}
+
+[data-bs-theme=dark] {
+  .hljs-tag, 
+  .hljs-punctuation {
+    color: inherit !important;
+  }
+  
+  .hljs-built_in,
+  .hljs-selector-tag,
+  .hljs-section,
+  .hljs-link {
+    color: #8be9fd !important;
+  }
+  
+  .hljs-keyword {
+    color: #ff79c6 !important;
+  }
+  
+  .hljs,
+  .hljs-subst {
+    color: #f8f8f2 !important;
+  }
+  
+  .hljs-title,
+  .hljs-attr,
+  .hljs-meta-keyword {
+    font-style: italic !important;
+    color: #50fa7b !important;
+  }
+  
+  .hljs-string,
+  .hljs-meta,
+  .hljs-name,
+  .hljs-type,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-addition,
+  .hljs-variable,
+  .hljs-template-tag,
+  .hljs-template-variable {
+    color: #f1fa8c !important;
+  }
+  
+  .hljs-comment,
+  .hljs-quote,
+  .hljs-deletion {
+    color: #6272a4 !important;
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-title,
+  .hljs-section,
+  .hljs-doctag,
+  .hljs-type,
+  .hljs-name,
+  .hljs-strong {
+    font-weight: bold !important;
+  }
+  
+  .hljs-literal,
+  .hljs-number {
+    color: #bd93f9 !important;
+  }
+  
+  .hljs-emphasis {
+    font-style: italic !important;
+  }
+}

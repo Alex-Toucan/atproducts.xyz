@@ -9,6 +9,7 @@ const {
   imageSrc,
   imageWidth,
   imageClasses,
+  imageAlt,
   minImageWidth,
   marginBottom,
   icons,
@@ -27,7 +28,7 @@ const flexSize = size ? size : 'md';
         <div class={`${container === 'true' ? 'container' : ''}`}>
           <div>
             {imageSrc && (
-              <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} />
+              <img src={imageSrc} width={imageWidth} alt="icon" style={{ minWidth: minImageWidth || "150px" }} class={imageClasses} alt={`${imageAlt ? imageAlt : 'icon'}`} />
             )}
             {title && (
               <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
@@ -41,7 +42,7 @@ const flexSize = size ? size : 'md';
               )}
               {buttons && (
                 buttons.map(({ href, text, type }, index) => (
-                  <a href={href} class={`btn ${type === 'primary' ? 'btn-primary' : 'btn-secondary'} col-md`}>{text}</a>
+                  <a href={href} class={`btn btn-${type} col-md`}>{text}</a>
                 ))
               )}
               {dropdownItems && (

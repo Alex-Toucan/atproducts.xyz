@@ -14,9 +14,10 @@ import BackToTop from '../components/BackToTop.astro';
 <Head title="The Script Community" heroid="script" icon="vibrant2.png" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus"/>
 <div id="page"> 
   <Navbar />
-    <div class="alert alert-dark mb-0" role="alert">
-      This is an inactive community. Expect no new sections or changes without special exceptions.
-    </div>
+  <div class="alert alert-dark mb-0" role="alert">
+    This is an inactive community. Expect no new sections or changes without special exceptions.
+  </div>
+  <div id="main-content">
     <Hero id="script" title="The Script Community" description="The Script Community is for hacking enthusiasts to share their knowledge." imageSrc="/media/images/vibrant2.png" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3" 
       buttons={[
         { href: "/backup/script", text: "View the all laid out format", type: "secondary" },
@@ -71,15 +72,17 @@ import BackToTop from '../components/BackToTop.astro';
               >
                 <Fragment slot="scrollspy-content">
                   <div id="com-1">
-                    <h4>Comments</h4>
+                    <h3>Comments</h3>
                     <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.<br><br>
-                      <code>
-                        # This is a comment
-                      </code>
+<pre>
+<code>
+# This is a comment
+</code>
+</pre>
                     </p>
                   </div>
                   <div id="data-1">
-                    <h4>Data Types</h4>
+                    <h3>Data Types</h3>
                     <p>Variables can store data of different types, and different types can do different things.</p>
                     <p>Python has the following data types built-in by default, in these categories:<br>
                     Text Type: <code>str</code><br>
@@ -89,50 +92,61 @@ import BackToTop from '../components/BackToTop.astro';
                     Set Types: <code>set, frozenset</code><br>
                     Boolean Type: <code>bool</code><br>
                     Binary Types: <code>bytes, bytearray, memoryview</code></p>
-                    <p>We will go more in-depth on some of these types in the next few paragraphs.</p>
-                    <p>You can print the data type of a variable with the type() function:<br>
-                      <code>
-                      x = 5 <br>
-                      print(type(x))
-                      </code>
+                    <p>We will go more in-depth on some of these types in the next few sections.</p>
+                    <p>You can print the data type of a variable with the <code>type()</code> function:</p>
+<pre>
+<code>
+x = 5 <br>
+print(type(x))
+</code>
+</pre>
                     </p>
                   </div>
                   <div id="str-1">
-                    <h4>Strings</h4>
+                    <h3>Strings</h3>
                     <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
-                    <code>
-                      x = "hello" <br>
-                      y = 'hello' <br>
-                      # single quotations and double quotation marks are the same<br>
-                      x == y # returns True
-                    </code>
-                    <p>You can assign a multiline string to a variable by using three quotes:<br>
-                      <code>
-                        x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
-                      </code>
-                    </p>
-                    <p>You can check the length of a string using the len() function:
-                      <code>
-                        py<br>
-                        x = "hello"<br>
-                        print(len(text)) # returns 5<br>
-                      </code>
+<pre>
+<code>
+x = "hello" <br>
+y = 'hello' <br>
+# single quotations and double quotation marks are the same<br>
+x == y # returns True
+</code>
+</pre>
+                    <p>You can assign a multiline string to a variable by using three quotes:</p>
+<pre>
+<code>
+x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
+</code>
+</pre>
+                    <p>You can check the length of a string using the len() function:</p>
+<pre>
+<code>
+py<br>
+x = "hello"<br>
+print(len(text)) # returns 5<br>
+</code>
+</pre>
                     </p>
                   </div>
                   <div id="num-1">
-                    <h4>Numbers</h4>
+                    <h3>Numbers</h3>
                     <p>There are 2 primary, <code>int</code> and <code>float</code></p>
-                    <p>
-                      <code>
-                        py<br>
-                        x = 2 # int<br>
-                        y = 2.8 # float
-                        </code></p>
-                        <p>To verify the type of an object in Python, use the type() function:<code>
-                        py<br>
-                        print(type(x))<br>
-                        print(type(y))
-                      </code>
+<pre>
+<code>
+py
+x = 2 # int
+y = 2.8 # float
+</code>
+</pre>
+                      <p>To verify the type of an object in Python, use the <code>type()</code> function:
+<pre>
+<code>
+py
+print(type(x))
+print(type(y))
+</code>
+</pre>
                     </p>
                     <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
                     <p>Float is a number, positive or negative, containing one or more decimals.</p>
@@ -155,28 +169,28 @@ import BackToTop from '../components/BackToTop.astro';
               >
                 <Fragment slot="scrollspy-content">
                   <div id="html-2">
-                    <h4>Including JavaScript in an HTML Page</h4>
+                    <h3>Including JavaScript in an HTML Page</h3>
                     <p>
-                      <code>
-                        &lt;script type="text/javascript"&gt; <br>
-                        &nbsp;//JS code goes here <br>
-                        &lt;/script&gt; 
-                      </code>
+<pre>
+<code>
+&lt;script type="text/javascript"&gt;
+  //JS code goes here <br>
+&lt;/script&gt; 
+</code>
+</pre>
                     </p>
                   </div>
                     <div id="call-2">
-                    <h4>Call an External JavaScript File</h4>
-                    <p>
-                      <code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code>
-                    </p>
+                    <h3>Call an External JavaScript File</h3>
+<pre><code>&lt;script src="myscript.js"&gt;&lt;/script&gt;</code>
                   </div>
                   <div id="com-2">
-                    <h4>Including Comments</h4>
+                    <h3>Including Comments</h3>
                     <p>Single line comments - <code>// Comment</code> <br>
                     Multi-line comments - <code>/* comment here */</code></p>
                   </div>
                   <div id="var-2">
-                    <h4>Variables</h4>
+                    <h3>Variables</h3>
                     <p>
                     <code>var, const, let</code><br>
                     <code>var</code> — The most common variable. Can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
@@ -185,7 +199,7 @@ import BackToTop from '../components/BackToTop.astro';
                     </p>
                   </div>
                   <div id="data-2">
-                    <h4>Data Types</h4>
+                    <h3>Data Types</h3>
                     <p>Numbers — <code>var age = 23</code> <br>
                     Variables — <code>var x</code><br>
                     Text (strings) — <code>var a = "init"</code><br>
@@ -194,14 +208,17 @@ import BackToTop from '../components/BackToTop.astro';
                     Constant numbers — <code>const PI = 3.14</code><br>
                     Objects — <code>var name = &lbrace;firstName&colon;"John", lastName&colon;”Doe"&rbrace;</code></p>
                     <p><b>Objects Example</b> <br>
-                    <code>
-                    var person = &lbrace;<br>
-                    &nbsp;&nbsp;firstName&colon;"John",<br>
-                    &nbsp;&nbsp;lastName&colon;"Doe",<br>
-                    &nbsp;&nbsp;age&colon;20,<br>
-                    &nbsp;&nbsp;nationality&colon;"American"<br>
-                    &rbrace;;
-                    </code></p>
+<pre>
+<code>
+var person = &lbrace;
+  firstName&colon;"John",
+  lastName&colon;"Doe",
+  age&colon;20,
+  nationality&colon;"American"
+&rbrace;;
+</code>
+</pre>
+                    </p>
                   </div>
                 </Fragment>
               </Scrollspy>
@@ -220,45 +237,47 @@ import BackToTop from '../components/BackToTop.astro';
               >
                 <Fragment slot="scrollspy-content">
                   <div id="example-3">
-                    <h4>Example Document</h4>
+                    <h3>Example Document</h3>
                     <p>
-                      <code>
-                        &lt;!DOCTYPE HTML&gt; <br>
-                        &lt;html&gt; <br>
-                        &lt;head&gt; <br>
-                        &lt;/head&gt; <br>
-                        &lt;body&gt; <br>
-                        &lt;h1&gt; This is a heading &lt;/h1&gt;<br>
-                        &lt;p&gt; This is text &lt;/p&gt;<br>
-                        &lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;<br>
-                        &lt;img src="at.png" width="99.99% alt="Example Image"&gt; <br>
-                        &lt;/body&gt; <br>
-                        &lt;/html&gt; <br>
-                      </code>
+<pre>
+<code>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt; This is a heading &lt;/h1&gt;
+    &lt;p&gt; This is text &lt;/p&gt;
+    &lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;
+    &lt;img src="at.png" width="99.99% alt="Example Image"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code> 
+</pre>
                     </p>
                     <p>We got to first lay down the very first thing to know. The <code>&lt;!DOCTYPE html&gt;</code> tag represents the Document Type and helps some browsers display correctly with your website, must only be used once. Some elements do need a closing tag, like <code>&lt;/center&gt;</code>.</p>
                     <p>The <code>&lt;head&gt;</code> tag is needed to represent the head of the website. The <code>&lt;body&gt;</code> tag is the same thing, but it's the body.</p>
                   </div>
                   <div id="text-3">
-                    <h4>HTML Text</h4>
+                    <h3>HTML Text</h3>
                     <p>Some elements are meant to show text like <code>&lt;text&gt;</code>, and <code>&lt;p&gt;</code>.</p>
                     <p><code>&lt;p&gt; This is text &lt;/p&gt;</code></p>
                   </div>
                   <div id="head-3">
-                    <h4>HTML Headings</h4>
+                    <h3>HTML Headings</h3>
                     <p>The <code>&lt;h&gt;</code> tag has 6 different sizes, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.</p>
                     <p>1 is the hugest, to 6 is the smallest.</p>
                     <p><code>&lt;h1&gt; This is a heading &lt;/h1&gt;</code></p>
                   </div>
                   <div id="link-3">
-                    <h4>HTML Links</h4>
+                    <h3>HTML Links</h3>
                     <p>The <code>&lt;a&gt;</code> is a text element to represent links. Once clicked on the hyperlink, will redirect the user to a new link.</p>
                     <p><code>&lt;a href="atproducts.tk"&gt;Example Website&lt;/a&gt;</code></p>
                   </div>
                   <div id="img-3">
-                    <h4>HTML Images</h4>
+                    <h3>HTML Images</h3>
                     <p>The <code>&lt;img&gt;</code> tag is to show a image. The width or height description can be used by pixels or percentages by displays. The <code>alt</code> tag shows up when the image doesn't load or can't load, it shows the description.</p>
-                    <p><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></p>
+                    <pre><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></pre>
                   </div>
                 </Fragment>
               </Scrollspy>
@@ -321,7 +340,7 @@ import BackToTop from '../components/BackToTop.astro';
               <p> Keystroke logging, often referred to as keylogging or keyboard capturing, is the action of recording the keys struck on a keyboard, typically covertly, so that a person using the keyboard is unaware that their actions are being monitored. Data can then be retrieved by the person operating the logging program. </p> 
               <br> <p> <a href="/media/files/keylogger.py" download="">Keylogger (Python | pynput)</a> by Nasus</p>
               <br>
-              <h4> CУБΞЯC's Recommendations </h4>
+              <h3> CУБΞЯC's Recommendations </h3>
               <p> 
                 <a href="/media/files/AdvKeylogger.py" download="">Advanced Key Logger (Python)</a> 
                 <a href="/media/files/Decryptor.py" download="">Decryptor (Python)</a> 
@@ -359,7 +378,7 @@ import BackToTop from '../components/BackToTop.astro';
                 <Fragment slot="accordion-content">
                   <AccordionItem title="Nitro Generator" id="ngott" parent="other-accordion">
                     <Fragment slot="accordion-item-content">
-                      <h4> Disclaimer </h4>
+                      <h3> Disclaimer </h3>
                       <p> Note that an actual working key would take over a billion (10^6) years to find. </p>
                       <br>
                       <p> 
@@ -482,14 +501,15 @@ import BackToTop from '../components/BackToTop.astro';
               </div>
               <p> Section by Nasus </p>
               <p> <a href="https://www.wireshark.org/#download">Wireshark</a> is a network protocol analyzer used to capture traffic. <br> <br>Putting your adapter in Monitor mode, or RFMON mode, allows a computer with a wireless network interface controller to monitor all traffic received on a wireless channel. Unlike promiscuous mode, which is also used for packet sniffing, monitor mode allows packets to be captured without having to associate with an access point<br> <br> Buy a WiFi Adapter that supports Monitor Mode.
-              The most recommended brand is Alla for WiFi Adapters.</p><h4> Tools </h4> <p class="mb-0">Alla Network AWUS036NH &amp; Alla Network 1000 mW AWUS036H.</p><br>
+              The most recommended brand is Alla for WiFi Adapters.</p><h3> Tools </h3> <p class="mb-0">Alla Network AWUS036NH &amp; Alla Network 1000 mW AWUS036H.</p><br>
               <p><a class="icon-link icon-link-hover" href="https://www.youtube.com/watch?v=zOYohNOnWp4">Tutorial<i class="bi bi-arrow-right h-100"></i></a></p>        
             </Fragment>
           </Modal>
         </div>
       </div>
     </main>
-  <Footer author="Alex Toucan & Nasus" />
+    <Footer author="Alex Toucan & Nasus" />
+  </div>
   <BackToTop />
 </div>
-<Scripts modal="true"/>
+<Scripts highlight="true" modal="true" accordion="true" scrollspy="true" />

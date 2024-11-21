@@ -1,11 +1,11 @@
 // --- Config --- //
 var pureAlert1Type = "alert-dark"; // Color
-var pureAlert1Title = "DATA NOTICE:"; // Title
+var pureAlert1Title = "NOTICE:"; // Title
 var pureAlert1Icon = 'bi-dash-lg'; // Icon
-var pureAlert1Desc = "We have removed all unnecessary and/or unused files starting with 2.19.1. This results in 207 files being removed. If you are curious on what these files are, please click the link here:"; // Description
-var pureAlert1Link = 'https://github.com/Alex-Toucan/atproducts.xyz/pull/220/commits/80b2ffed86602d040542bf7168f28056e7ddc801'; // Link
-var pureAlert1LinkDesc = 'View the GitHub commit'; // Link text
-var pureAlert1Enabled = true; // Switch to enable/disable alert
+var pureAlert1Desc = "ALL DEPARTMENTS AND SUBSIDARIES WILL SHUT DOWN OPERATIONS THROUGHOUT TODAY DUE TO UNEXPECTED CIRCUMSTANCES, ON WHICH WILL NOT BE SHARED. SOME DEPARTMENTS MAY CONTINUE OPERATING AFTER 4 PM CDT. ALL DEPARTMENTS AND SUBSIDARIES WILL CONTINUE OPERATIONS TOMORROW MORNING. THANK YOU FOR YOUR COOPERATION."; // Description
+var pureAlert1Link = 'https://x.com/ATProductsLLC/status/1845844813892943965'; // Link
+var pureAlert1LinkDesc = 'VIEW TWITTER/X POST FOR OTHER DEPARTMENTS'; // Link text
+var pureAlert1Enabled = false; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert1Cookie(name, value, days) {
@@ -34,7 +34,7 @@ function eraseAlert1Cookie(name) {
 }
 
 $(document).ready(function () {
-    if (pureAlert1Enabled && window.location.pathname.indexOf("/cctv") === -1 && !getAlert1Cookie('pureAlert1Dismiss')) {
+    if (pureAlert1Enabled && window.location.pathname.indexOf("/stories/") === -1 && !getAlert1Cookie('pureAlert1Dismiss')) {
         var header = $('header');
         var alert1Container = $('<div class="alert-container"></div>');
         alert1Container.html('<div class="alert ' + pureAlert1Type + ' alert-dismissible fade show mb-0 d-flex gap-2" role="alert"> <i class="bi ' + pureAlert1Icon + ' h-100"></i><div><strong>' + pureAlert1Title + '</strong> ' + pureAlert1Desc + ' <a class="icon-link icon-link-hover" href="' + pureAlert1Link + '">' + pureAlert1LinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlert1Dismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>');
