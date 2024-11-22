@@ -1,7 +1,7 @@
 # Security Policy
 ##### Last Updated: November 21st, 2024
 ##### Into Effect: December 11th, 2024
-##### Version: v2
+##### Version: v3
 <hr>
 
 ## Where We Look for Vulnerabilities
