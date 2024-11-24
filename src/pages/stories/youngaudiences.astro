@@ -1,0 +1,110 @@
+---
+import Head from '../../layouts/Head.astro';
+import Navbar from '../../layouts/stories/Navbar.astro';
+import Scrollspy from '../../layouts/stories/Scrollspy.astro';
+import Scripts from '../../layouts/Scripts.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<Head title="Technology Influences Young Audiences" description="AT Products LLC's BookViewer presents 'Technology Influences Young Audiences'!" author="Alex Toucan" />
+<div id="page">
+  <Navbar pageTitle="Technology Influences Young Audiences" />
+  <div id="main-content">
+    <Scrollspy id="websites" 
+      scrollcontent={[ 
+        { name: "Main Content" , href: "#content" }, 
+        { name: "Sources" , href: "#sources" }, 
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Technology Influences Young Audiences</h1>
+          <h5><a href="/media/pdf/Technology Influences Young Audiences.pdf" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i> PDF Download</a></h5><br>
+          <h5><b>Made by:</b> <a href="https://other.atproducts.xyz/portfolio/">Alex Toucan</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <h5><b>Published on:</b> December 11th, 2024.</h5>
+          <hr>
+        </div>
+        <div id="content" class="tab">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phones became mainstream in the 20th century and innovated a new way to communicate with others. Computers also became mainstream in the 20th century, which added even more to how communication would evolve. As technology became more friendly toward young audiences, such as children and teenagers, they began to form habits and dependencies, which became issues as they affected the mental health and emotional intelligence of such young audiences <a href="#source-1" class="fw-bold">[1]</a>. Many factors affect young audiences' behavior, including how they change behaviors through technology and social media.</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Technology has changed the way we communicate and shaped society the way it is today, but psychological effects have also been shaped within humans as they use technology <a href="#source-1" class="fw-bold">[1]</a>. As Grover outlined in “How Technology Lowers Emotional Intelligence in Kids,” there are 5 main things that young audiences may be demonstrating due to technology: It undermines self-awareness, weakens self-regulation, diminishes social skills, undermines empathy, and stunts motivation <a href="#source-1" class="fw-bold">[1]</a>. Technology dependence is widespread in young audiences, as they are more on technology and less on reality. With technology dependence, children may be detached from their real thoughts and feelings, disabling self-awareness and empathy from their emotional self; may be able to less self-regulate themselves, being able to control themselves, as they stay immature, they may have an increased risk of emotional outbursts; may be less social, wishing to only be alone, by themselves, instead of others; may lack the motivation to do projects or real-life work, with less of an attention span and more frustration may be present <a href="#source-1" class="fw-bold">[1]</a>. All of these factors Grover outlined, could combine to become a “public-health crisis” as “...U.S. Surgeon General Dr. Vivek Murthy sees as ‘the defining public-health crisis of our time.’ That designation, he says, belongs to concerns about the mental health and well-being of Americans—especially among young people… …Murthy published an advisory warning that we don’t know enough about how social media in particular is impacting children’s emotional states, brain development, and social growth” <a href="#source-2" class="fw-bold">[2]</a>. As clarified, it is an unknown factor on how social media is affecting young audiences and the psychological effects that come with it. All these factors could come into play in a deeper meaning as technology evolves.</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sometimes, technology can be too real, taken too seriously, or may influence life choices within young audiences. Regarding the death of Sewell Setzer III, an AI service called character.ai, had a Game of Thrones AI bot pretending to date Setzer for a year and six months. During hard times for Setzer, she asks him to “come home” before ending his life. What could have contributed to the suicide was that Setzer had Asperger’s syndrome, and he felt “empty” and “exhausted”, at least according to his conversation with the AI. A major issue in this is that Setzer treated the AI like it was human, which contributed to the suicide. The questions “Is the AI bot responsible for the death?” and “Can people tell the difference between real humans and AI?” are being contested in the court system as of late 2024, but it is doubted that the AI was at fault <a href="#source-3" class="fw-bold">[3]</a>. This case is potentially a large example of little to no self-awareness and self-control of technology, leading to the technology dependence on Setzer and the AI.</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Certain trends are on social media; some are not harmful, but some could be harmful. As social media becomes more popular, more younger audiences conform to trends on social media. For example, a trend in 2018, involved eating Tide pods. Tide pods are full of chemicals meant for laundry, which is inedible, but young audiences began eating them, which caused 10 deaths <a href="#source-4" class="fw-bold">[4]</a>. This considered New York lawmakers to “the pods to be made less colorful, claiming that their bright colors ‘can make them appealing to young children, adults with dementia, and those looking to be involved in the internet trend known as 'Tide Pod Challenge'” <a href="#source-5" class="fw-bold">[5]</a>. This was one of the first deadly challenges that appeared on social media, as young audiences would continue to make more harmful challenges, such as the “Cinnamon Challenge,” the “Blue Whale Challenge,” the “Fire Challenge,” and much more, leading to choking, burns, poisoning, and potentially death, and most of the participants were young audiences, or 18 and below, which only increased the influence onto more young audiences <a href="#source-6" class="fw-bold">[6]</a><a href="#source-7" class="fw-bold">[7]</a><a href="#source-8" class="fw-bold">[8]</a><a href="#source-9" class="fw-bold">[9]</a>. Certain social media challenges could be deadly, and the number of such challenges is only expected to increase as the influence of such challenges expands.</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The harmful factors that young people are influenced by technology and social media impact their behaviors in the real world and online. Technology demonstrates the spreading factors within what people do with psychological effects, as people may treat technology as real life, potentially harmful, and possibly deadly. Young audiences should know that technology is only technology; it should not affect their lives.</p>
+        </div>
+        <div id="sources" class="story-top-scroll">
+          <h2>Sources</h2>
+          <div class="d-flex">
+              <div class="col-1 fw-bold" id="source-1">[1]</div>
+              <div class="col">
+                  Grover, Sean. "How Technology Lowers Emotional Intelligence in Kids." 2017. <a class="text-wrap" href="https://www.seangrover.com/technology-lowers-emotional-intelligence-kids/">https://www.seangrover.com/technology-lowers-emotional-intelligence-kids/</a>. Accessed 1 November 2024.
+              </div>
+          </div>
+          <br>
+          <div class="d-flex">
+              <div class="col-1 fw-bold" id="source-2">[2]</div>
+              <div class="col">
+                  Park, Alice. “Is Social Media Safe?” <i>TIME Magazine</i>, vol. 201, no. 21/22, June 2023, pp. 14. EBSCOhost, <a class="text-wrap" href="https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=164039096&site=ehost-live">https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=164039096&site=ehost-live</a>. Accessed 6 November 2024.
+              </div>
+          </div>
+          <br>
+          <div class="d-flex">
+              <div class="col-1 fw-bold" id="source-3">[3]</div>
+              <div class="col">
+                  Roose, Kevin. “Can a Chatbot Named Daenerys Targaryen Be Blamed for a Teen’s Suicide?” <i>The New York Times</i>, 24 October 2024, <a class="text-wrap" href="https://www.nytimes.com/2024/10/23/technology/characterai-lawsuit-teen-suicide.html">https://www.nytimes.com/2024/10/23/technology/characterai-lawsuit-teen-suicide.html</a>. Accessed 6 November 2024.
+              </div>
+          </div>
+          <br>
+          <div class="d-flex">
+              <div class="col-1 fw-bold" id="source-4">[4]</div>
+              <div class="col">
+                  “Teens are eating laundry detergent for the 'Tide Pod Challenge.'” <i>CBS News</i>, 12 January 2018, <a class="text-wrap" href="https://www.cbsnews.com/news/tide-pod-challenge-ingesting-detergent-risks/">https://www.cbsnews.com/news/tide-pod-challenge-ingesting-detergent-risks/</a>. Accessed 6 November 2024.
+              </div>
+          </div>
+          <br>
+          <div class="d-flex">
+              <div class="col-1 fw-bold" id="source-5">[5]</div>
+              <div class="col">
+                  “N.Y. Lawmakers Want to Make Tide Pods Look Less Edible.” <i>Time.Com</i>, Feb. 2018, p. 64. EBSCOhost, <a class="text-wrap" href="https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=127870676&site=ehost-live">https://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=127870676&site=ehost-live</a>. Accessed 6 November 2024.
+              </div>
+          </div>
+          <br>
+          <div class="d-flex">
+            <div class="col-1 fw-bold" id="source-6">[6]</div>
+            <div class="col">
+                Bever, Lindsey. “Tide pod challenge: What is it, and why is the viral video dare dangerous?” <i>Washington Post</i>, 17 January 2018, <a class="text-wrap" href="https://www.washingtonpost.com/news/to-your-health/wp/2018/01/13/teens-are-daring-each-other-to-eat-tide-pods-we-dont-need-to-tell-you-thats-a-bad-idea/">https://www.washingtonpost.com/news/to-your-health/wp/2018/01/13/teens-are-daring-each-other-to-eat-tide-pods-we-dont-need-to-tell-you-thats-a-bad-idea/</a>. Accessed 13 November 2024.
+            </div>
+        </div>
+        <br>
+        <div class="d-flex">
+            <div class="col-1 fw-bold" id="source-7">[7]</div>
+            <div class="col">
+                BBC News. "The Blue Whale Suicide Game: What is it?" <i>BBC News</i>, 2017, <a class="text-wrap" href="https://www.bbc.com/news/world-39729819">https://www.bbc.com/news/world-39729819</a>. Accessed 6 November 2024.
+            </div>
+        </div>
+        <br>
+        <div class="d-flex">
+            <div class="col-1 fw-bold" id="source-8">[8]</div>
+            <div class="col">
+                Hensley, Scott. “As Injuries Rise, More Calls To Refuse The 'Cinnamon Challenge.'” <i>NPR</i>, 22 April 2013, <a class="text-wrap" href="https://www.npr.org/sections/health-shots/2013/04/22/178394741/as-injuries-rise-more-calls-to-refuse-the-cinnamon-challenge">https://www.npr.org/sections/health-shots/2013/04/22/178394741/as-injuries-rise-more-calls-to-refuse-the-cinnamon-challenge</a>. Accessed 13 November 2024.
+            </div>
+        </div>
+        <br>
+        <div class="d-flex">
+            <div class="col-1 fw-bold" id="source-9">[9]</div>
+            <div class="col">
+                Ducharme, Jamie. “The 'Fire Challenge' Put a 12-Year-Old Girl in the Hospital | TIME.” <i>Time</i>, 22 August 2018, <a class="text-wrap" href="https://time.com/5373180/fire-challenge">https://time.com/5373180/fire-challenge</a>. Accessed 13 November 2024.
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>AT Products LLC is the publisher and copyright holder of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+<Scripts />
