@@ -19,21 +19,35 @@ import BackToTop from '../components/BackToTop.astro';
 	    ]},
 	    dropdownItems={[
 	      { navigationDesc: "General Information", navigationLink: "#general-info" },
+        { navigationDesc: "Commands", navigationLink: "#commands" },
 	      { navigationDesc: "Downloads", navigationLink: "#downloads" },
 	    ]},
 	  />
 	  <main id="bxpp" class="container">
 	    <div id="general-info">
 	      <h2> General Information </h2>
-	      <p><strong>NyaOS is still in the testing phase, be warned of bugs and glitches. If you find any, please contact us at our <a href="/contact">Contact Form</a>.</strong> NyaOS is a 32-bit hobby OS, purely made for fun, as the bootloader is made with <a href="https://osdev.org/">OSDev</a>. Test this OS in a virtual machine!</p>
+	      <p><strong>NyaOS is still in the experimental phase, be warned of bugs and glitches. If you find any, please contact us at our <a href="/contact">Contact Form</a>.</strong> NyaOS is a 32-bit hobby OS, purely made for fun, as the bootloader is made with <a href="https://osdev.org/">OSDev</a>. Test this OS in a virtual machine!</p>
         <span><strong>The minimum requirements for your system is:</strong></span>
         <ul>
           <li><strong>CPU:</strong> At least 1 core.</li>
-          <li><strong>RAM:</strong> 16mb.</li>
+          <li><strong>RAM:</strong> At least 21mb.</li>
           <li><strong>Storage:</strong> None, since it's all run on the ISO.</li>
         </ul>
 	    </div>
 	    <hr>
+      <div id="commands">
+        <h2>Commands</h2>
+<pre class="mt-2 p-2 border-2 border-solid rounded-2">
+help # shows a help message
+ping # just outputs pong 
+echo # echos back said string(s) (currently, echo is bugged)
+clear # clears screen (after running commands, it may turn light blue instead)
+fb # toggle special characters
+exit # exits the console (causes a kernal panic)
+</code>
+</pre>
+      </div>
+      <hr>
 	    <div id="downloads">
 	      <h2>Downloads</h2>
         <div class="d-grid d-md-flex flex-wrap gap-2 py-2">
