@@ -1,9 +1,9 @@
 ---
 import Head from '../layouts/Head.astro';
 import Scripts from '../layouts/Scripts.astro';
-import HeroPynx      from '../components/secondary/HeroPynx.astro';
-import Navbar    from '../components/Navbar.astro';
-import Footer    from '../components/Footer.astro';
+import HeroPynx from '../components/secondary/HeroPynx.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
@@ -18,15 +18,15 @@ import BackToTop from '../components/BackToTop.astro';
 	      { href: "#downloads", text: "Downloads", type: "primary" },
 	    ]},
 	    dropdownItems={[
-	      { navigationDesc: "General Information", navigationLink: "#general-info" },
+        { navigationDesc: "General Information", navigationLink: "#general-info" },
         { navigationDesc: "Commands", navigationLink: "#commands" },
-	      { navigationDesc: "Downloads", navigationLink: "#downloads" },
+        { navigationDesc: "Downloads", navigationLink: "#downloads" },
 	    ]},
 	  />
 	  <main id="nyaos" class="container">
 	    <div id="general-info">
 	      <h2> General Information </h2>
-	      <p><strong>NyaOS is still in the experimental phase, be warned of bugs and glitches. If you find any, please contact us at our <a href="/contact">Contact Form</a>.</strong> NyaOS is a 32-bit hobby OS, purely made for fun, as the bootloader is made with <a href="https://osdev.org/">OSDev</a>. Test this OS in a virtual machine!</p>
+	      <p><strong>NyaOS is still experimental; be warned of bugs and glitches. If you find any, please get in touch with us at our <a href="/contact">Contact Form</a>.</strong> NyaOS is a 32-bit hobby OS, purely made for fun, as the bootloader is made with <a href="https://osdev.org/">OSDev</a>. Test this OS in a virtual machine!</p>
         <span><strong>The minimum requirements for NyaOS is:</strong></span>
         <ul>
           <li><strong>CPU:</strong> At least 1 core.</li>
@@ -47,7 +47,7 @@ fb               # toggle special characters
 exit             # exits the console (causes a kernel panic)
 
 -- File-related Commands --
-create &lt;dirname&gt; # creates a new files
+create &lt;dirname&gt; # creates a new file
 write &lt;dirname&gt;  # writes data to a file
 cat &lt;dirname&gt;    # displays the contents of a files
 del &lt;dirname&gt;    # deletes a files
