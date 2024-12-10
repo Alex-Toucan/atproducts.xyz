@@ -1,6 +1,12 @@
 {
   "name": "AT Products LLC",
   "short_name": "AT Products LLC",
+  "theme_color": "#212529",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "id": "2.20.2",
+  "start_url": "/",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/media/favicon/web-app-manifest-192x192.png",
