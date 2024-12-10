@@ -17,12 +17,6 @@
           "src": "/media/favicon/favicon.png",
           "sizes": "512x512",
           "type": "image/png"
-      },
-      {
-        "src": "/media/favicon/android.png",
-        "sizes": "230x230",
-        "type": "image/png",
-        "purpose": "any maskable"
       }
   ]
 }
