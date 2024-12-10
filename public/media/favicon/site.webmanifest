@@ -8,10 +8,15 @@
   "start_url": "/",
   "prefer_related_applications": false,
   "icons": [
-      {
-          "src": "/media/favicon/favicon.png",
-          "sizes": "512x512",
-          "type": "image/png"
-      }
+    {
+        "src": "/media/favicon/favicon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+      "src": "/media/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
   ]
 }
