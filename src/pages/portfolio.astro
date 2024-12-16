@@ -594,7 +594,9 @@
               const targetButton = $('#' + targetId);
 
               if (targetButton.length) {
-                targetButton.tab('show');
+                // Activate the tab using Bootstrap's method
+                const tab = new bootstrap.Tab(targetButton[0]);
+                tab.show();
               }
             }
           } catch (error) {
