@@ -6502,6 +6502,15 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 	}
 }
 
+@media (min-width:991.98px) {
+  .text-centertostart-lg {
+    text-align: left !important;
+  }
+  .text-centertoend-lg {
+    text-align: right !important;
+	}
+}
+
 .text-centertostart-md, .text-centertoend-md, .text-centertostart-lg, .text-centertoend-lg {
 	text-align: center;
 }
