@@ -584,12 +584,12 @@
       })(jQuery);
     </script>
     <script is:inline>
-      $(document).ready(function() {
+      document.addEventListener('DOMContentLoaded', function() {
         function activateSectionFromHash() {
           const hash = decodeURIComponent(window.location.hash);
           if (hash && hash.startsWith('#')) {
             const targetId = hash.substring(1);
-            const targetButton = document.querySelector(`button#${targetId}`);
+            const targetButton = document.getElementById(targetId);
             if (targetButton) {
               targetButton.click();
             }
@@ -598,10 +598,9 @@
 
         const triggerTabList = document.querySelectorAll('#pills-tab button');
         triggerTabList.forEach(triggerEl => {
-          const tabTrigger = new bootstrap.Tab(triggerEl);
-
-          triggerEl.addEventListener('click', event => {
+          triggerEl.addEventListener('click', function(event) {
             event.preventDefault();
+            const tabTrigger = new bootstrap.Tab(triggerEl);
             tabTrigger.show();
           });
         });
