@@ -588,19 +588,21 @@
         function activateSectionFromHash() {
           const hash = decodeURIComponent(window.location.hash);
           if (hash && hash.startsWith('#')) {
-            const targetId = hash.substring(1);
+            const targetId = hash.substring(1) + '-tab';
             const targetButton = document.getElementById(targetId);
             if (targetButton) {
-              targetButton.click();
+              const tabTrigger = new bootstrap.Tab(targetButton);
+              tabTrigger.show();
             }
           }
         }
 
-        const triggerTabList = document.querySelectorAll('#pills-tab button');
+        const triggerTabList = document.querySelectorAll('button[data-bs-toggle="pill"]');
         triggerTabList.forEach(triggerEl => {
-          triggerEl.addEventListener('click', function(event) {
+          const tabTrigger = new bootstrap.Tab(triggerEl);
+
+          triggerEl.addEventListener('click', event => {
             event.preventDefault();
-            const tabTrigger = new bootstrap.Tab(triggerEl);
             tabTrigger.show();
           });
         });
