@@ -586,19 +586,13 @@
     <script is:inline>
       $(document).ready(function() {
         function activateSectionFromHash() {
-          try {
-            const hash = decodeURIComponent(window.location.hash);
-
-            if (hash && hash.startsWith('#')) {
-              const targetId = hash.substring(1);
-              const targetButton = document.getElementById(targetId);
-
-              if (targetButton) {
-                const tab = new bootstrap.Tab(targetButton);
-                tab.show();
-              }
+          const hash = decodeURIComponent(window.location.hash);
+          if (hash && hash.startsWith('#')) {
+            const targetId = hash.substring(1);
+            const targetButton = document.querySelector(`button#${targetId}`);
+            if (targetButton) {
+              targetButton.click();
             }
-          } catch (error) {
           }
         }
 
@@ -612,7 +606,7 @@
           });
         });
 
-        $(window).on('hashchange', activateSectionFromHash);
+        window.addEventListener('hashchange', activateSectionFromHash);
         activateSectionFromHash();
       });
     </script>
