@@ -583,5 +583,35 @@
         });
       })(jQuery);
     </script>
+    <script is:inline>
+      $(document).ready(function() {
+        function activateTabFromHash() {
+          const hash = decodeURIComponent(window.location.hash);
+
+          if (hash && hash.startsWith('#')) {
+            const targetId = hash.substring(1);
+
+            const targetTab = $('#' + targetId);
+
+            if (targetTab.length) {
+              // Activate the tab
+              targetTab.tab('show');
+
+              const element = document.getElementById(targetId);
+              if (element) {
+                const paddingTop = 100; // Adjust as necessary
+                const sectionTop = $(element).offset().top - paddingTop;
+                $('html, body').animate({
+                  scrollTop: sectionTop
+                }, 800);
+              }
+            }
+          }
+        }
+
+        $(window).on('hashchange', activateTabFromHash);
+        activateTabFromHash();
+      });
+    </script>
   </body>
 </html>
