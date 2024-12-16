@@ -6568,12 +6568,16 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 	.disbr {
 		display: none;
 	}
+}
+
+@media (max-width:991.98px) {
 	.imgdiv {
 		width: 30%;
 		margin-left: auto;
 		margin-right: auto;
 	}
 }
+
 
 @media (max-width:1000px) {
    .pdont {
