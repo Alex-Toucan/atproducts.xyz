@@ -586,26 +586,27 @@
     <script is:inline>
       $(document).ready(function() {
         function activateTabFromHash() {
-          const hash = decodeURIComponent(window.location.hash);
+          try {
+            const hash = decodeURIComponent(window.location.hash);
 
-          if (hash && hash.startsWith('#')) {
-            const targetId = hash.substring(1);
+            if (hash && hash.startsWith('#')) {
+              const targetId = hash.substring(1);
+              const targetTab = $('#' + targetId);
 
-            const targetTab = $('#' + targetId);
+              if (targetTab.length) {
+                targetTab.tab('show');
 
-            if (targetTab.length) {
-              // Activate the tab
-              targetTab.tab('show');
-
-              const element = document.getElementById(targetId);
-              if (element) {
-                const paddingTop = 100; // Adjust as necessary
-                const sectionTop = $(element).offset().top - paddingTop;
-                $('html, body').animate({
-                  scrollTop: sectionTop
-                }, 800);
+                const element = document.getElementById(targetId);
+                if (element) {
+                  const sectionTop = $(element).offset().top;
+                  $('html, body').animate({
+                    scrollTop: sectionTop
+                  }, 800);
+                }
               }
             }
+          } catch (error) {
+            console.error('Error in activateTabFromHash:', error);
           }
         }
 
