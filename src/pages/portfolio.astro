@@ -594,15 +594,20 @@
               const targetButton = $('#' + targetId);
 
               if (targetButton.length) {
-                // Activate the tab using Bootstrap's method
-                const tab = new bootstrap.Tab(targetButton[0]);
-                tab.show();
+                // Manually trigger the tab show event
+                targetButton.tab('show');
               }
             }
           } catch (error) {
             console.error('Error in activateSectionFromHash:', error);
           }
         }
+
+        // Use jQuery's event handler for the 'shown.bs.tab' event
+        $('#pills-tab a[data-bs-toggle="pill"]').on('shown.bs.tab', function (e) {
+          const target = $(e.target).attr('href');
+          window.location.hash = target;
+        });
 
         $(window).on('hashchange', activateSectionFromHash);
         activateSectionFromHash();
