@@ -8,7 +8,7 @@ const { title, price, secondaryPrice, description, buttonHref, buttonText, foote
     </div>
     <div class="card-body">
       <h1 class="card-title pricing-card-title" set:html={price} />
-      {secondaryprice && (
+      {secondaryPrice && (
         <p class="mt-2 text-body-secondary fw-light fs-5" set:html={secondaryPrice} />
       )}
       <p class="list-unstyled mt-3 mb-4">{description}</p>
