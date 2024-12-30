@@ -3,17 +3,17 @@ const { author, hr, marginTop } = Astro.props;
 ---
 <footer>
   {hr !== 'none' && <hr>}
-  <div class={`container-footer ${marginTop === 'true' ? 'mt-mmd-3' : ''}`}>
-    <div class="mt-md-5">
-      <div class="row px-md-2">
-        <div class="col-md-2 me-xesm-2">
+  <div class={`container-footer ${marginTop === 'true' ? 'mt-mxl-3' : ''}`}>
+    <div class="mt-lg-5">
+      <div class="row px-lg-2">
+        <div class="col-lg-2 me-xesm-2">
          <div class="text-center">
            <div class="imgdiv"><a href="/"><img src="/media/images/shortblack.webp" width="50%" alt="icon" class="footerimg"></a></div>
              <br>
              <h1 class="h5"><a href="/">AT Products LLC</a></h1>
           </div>
         </div>
-        <div class="col-md-2 mt-mmd-2 me-md-2 text-centertostart">
+        <div class="col-lg-2 mt-mxl-2 me-lg-2 pe-xxl-5 text-centertostart-lg">
           <h2 class="h5">Products</h2>
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-body-secondary">Paid Services</a></li>
@@ -23,7 +23,15 @@ const { author, hr, marginTop } = Astro.props;
             <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-body-secondary">Pynx's Projects</a></li>
           </ul>
         </div>
-        <div class="col-md-2 mt-mmd-2 me-md-2 text-centertostart">
+        <div class="col-lg-2 mt-mxl-2 me-lg-2 pe-xxl-5 text-centertostart-lg">
+          <h2 class="h5">Departments</h2>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://beta-testing.atproducts.xyz" class="nav-link p-0 text-body-secondary">Department of Beta Testing</a></li>
+            <li class="nav-item mb-2"><a href="https://other.atproducts.xyz/portfolio/#toucanempire" class="nav-link p-0 text-body-secondary">The Toucan Empire</a></li>
+            <li class="nav-item mb-2"><a href="https://other.atproducts.xyz/portfolio/#atpweather" class="nav-link p-0 text-body-secondary">ATPWeather</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mt-mxl-2 me-lg-2 pe-xxl-5 text-centertostart-lg">
           <h2 class="h5">Communities</h2>
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-body-secondary">The Script Community</a></li>
@@ -32,7 +40,7 @@ const { author, hr, marginTop } = Astro.props;
             <li class="nav-item mb-2"><a href="/noodle" class="nav-link p-0 text-body-secondary">Noodle Hackerspace</a></li>
           </ul>
         </div>
-        <div class="col-md-2 mt-mmd-2 me-md-2 text-centertostart">
+        <div class="col-lg-2 mt-mxl-2 me-lg-2 pe-xxl-5 text-centertostart-lg">
           <h2 class="h5">Documentation</h2>
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
@@ -44,11 +52,11 @@ const { author, hr, marginTop } = Astro.props;
         </div>
       </div>
       <div class="d-flex justify-content-between pt-3 pb-2 mt-4 border-top">
-        <div class="d-md-flex">
+        <div class="d-lg-flex">
           <a class="ps-3 footer-info dropdown-toggle" data-bs-toggle="collapse" href="#footerinfo" role="button" aria-expanded="false" aria-controls="footerinfo">
           Information
           </a>
-          <div class="ps-3 pt-2 col-md-6 collapse" id="footerinfo">
+          <div class="ps-3 pt-2 col-lg-6 collapse" id="footerinfo">
             <div class="card card-body text-start">
               <b>Version:</b> <script is:inline src="/static/version.js"></script><br>
               {author ?
