@@ -1,19 +1,7 @@
----
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
-import Hero   from '../components/Hero.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import BackToTop from '../components/BackToTop.astro';
-import Accordion from '../components/accordion/Accordion.astro';
-import AccordionItem from '../components/accordion/AccordionItem.astro';
----
-
 <Head title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-  { bulletinImage: "CHRISTMAS.webp" },
-  { bulletinImage: "HANUKKAH.webp" },
+  { bulletinImage: "NY24.webp" },
   { bulletinImage: "2202-121124-1.webp" },
   { bulletinImage: "2202-121124-2.webp" },
   { bulletinImage: "2202-121124-2.webp" },
@@ -49,10 +37,7 @@ bulletin={[
       <div class="pt-xmd-2 px-xmd-2">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/media/slideshow/CHRISTMAS.webp" class="d-block w-100" alt="Happy Christmas!">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/HANUKKAH.webp" class="d-block w-100" alt="Happy Hanukkah!">
+            <img src="/media/slideshow/NY24.webp" class="d-block w-100" alt="Happy New Year of 2025!">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
             <img src="/media/slideshow/2202-121124-1.webp" class="d-block w-100" alt="2.20.2 Release Slide 1">
@@ -74,7 +59,6 @@ bulletin={[
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
-            <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
           </div>
           <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
