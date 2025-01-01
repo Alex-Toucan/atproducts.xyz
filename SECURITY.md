@@ -8,7 +8,7 @@
 We actively look for and address vulnerabilities in internal website code, external (outside domain) files, and files distributed by our products and communities.
 
 ## Reporting a Vulnerability
-**DO NOT** report security vulnerabilities as an issue, pull request (PR), or discussion on GitHub, Discord communities, or other online forums. Vulnerabilities should not be publicly disclosed. Please report all vulnerabilities privately at [support@atproducts.xyz](mailto:support@atproducts.xyz).
+**DO NOT** report security vulnerabilities as an issue, pull request (PR), or discussion on GitHub, Discord communities, or other online forums. Vulnerabilities should not be publicly disclosed. Please report all vulnerabilities privately at [support@atproducts.xyz](mailto:support@atproducts.xyz) or make a security advisory here.
 
 ## Fixing Vulnerabilities
 Our team prioritizes fixing security vulnerabilities as soon as possible. All vulnerability patches take precedence over scheduled release dates and should be released as soon as the patch is ready. These patches should only include vulnerability fixes with no additional content. This policy is crucial as upcoming updates may consist of account-based components, making security even more vital.
