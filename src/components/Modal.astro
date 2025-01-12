@@ -9,13 +9,12 @@ const { id, title } = Astro.props;
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id={`${id}-title`}>
+        <h2 class="h5 modal-title" id={`${id}-title`}>
           {title}
-        </h5>
+        </h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h2>{title}</h2>
         <slot name="modal-content" />
       </div>
       <div class="modal-footer">
