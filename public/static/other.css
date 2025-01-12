@@ -6532,6 +6532,7 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 
 .basics-scroll {
   height: 49vh;
+  max-height: 400px;
   overflow: auto;
   text-align: left !important;
 }
