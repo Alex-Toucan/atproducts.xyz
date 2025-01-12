@@ -4,7 +4,7 @@ const { id, scrollcontent, additionalClasses, otherClass } = Astro.props;
 
 <div class="d-grid d-md-flex gap-2 pre-scroll">
     <div class="col-md-4">
-        <div id={id} class="list-group">
+        <div id={id} class={`list-group ${otherClass === "dmsize" ? "dmsize" : ""}`}>
             {scrollcontent && scrollcontent.map(({ name, href, additionalClasses }, index) => (
                 <a class={`list-group-item list-group-item-action ${additionalClasses}`} href={href}>{name}</a>
             ))}
