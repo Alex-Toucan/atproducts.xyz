@@ -8,7 +8,15 @@ import BackToTop from '../../../components/BackToTop.astro';
 
 <Head title="HTML Basics" description="CodingHome presents 'HTML Basics'!" author="AT Products LLC & CodingHome" />
 <div id="page">
-  <Navbar pageTitle="HTML Basics" />
+  <Navbar pageTitle="HTML Basics" 
+  link={[
+   { name: "CodingHome" , href: "/codinghome" },
+  ]}
+  breadcrumbcontent={[ 
+    { name: "CodingHome" , href: "/codinghome" },
+    { name: "(Backup)" , href: "/backup/codinghome" }
+  ]} 
+  />
   <div id="main-content">
     <Scrollspy id="html" 
       scrollcontent={[ 
