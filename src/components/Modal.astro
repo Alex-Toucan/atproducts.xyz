@@ -9,14 +9,12 @@ const { id, title } = Astro.props;
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id={`${id}-title`}>
+        <h5 class="h4 modal-title" id={`${id}-title`}>
           {title}
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <i>To close this page, click the X or "Close" button to close. Clicking off the pop-up will not work.</i>
-        <h2 class="modal-body-title">{title}</h2>
         <slot name="modal-content" />
       </div>
       <div class="modal-footer">
