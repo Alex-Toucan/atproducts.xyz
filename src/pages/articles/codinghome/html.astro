@@ -1,0 +1,88 @@
+---
+import Head from '../../layouts/Head.astro';
+import Navbar from '../../layouts/stories/Navbar.astro';
+import Scrollspy from '../../layouts/stories/Scrollspy.astro';
+import Scripts from '../../layouts/Scripts.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<Head title="HTML Basics" description="CodingHome presents 'HTML Basics'!" author="AT Products LLC & CodingHome" />
+<div id="page">
+  <Navbar pageTitle="HTML Basics" />
+  <div id="main-content">
+    <Scrollspy id="html" 
+      scrollcontent={[ 
+        { name: "Example Document", href: "#example-6" },
+        { name: "HTML Headings", href: "#head-6" },
+        { name: "HTML Paragraphs", href: "#text-6" },
+        { name: "HTML Links", href: "#links-6" },
+        { name: "HTML Images", href: "#img-6" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">How to Center a <code>&lt;div&gt;</code></h1>
+          <h5><a href="/media/pdf/How To Center a _div_.pdf" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i> PDF Download</a></h5><br>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <h5><b>Published on:</b> October 23rd, 2024.</h5>
+          <br>
+          <p>This article contains information on how to center a <code>&lt;code&gt;</code> using CSS, horizontally and vertically, within HTML. The sole purpose of this article is to annoy <a href="https://github.com/VenenJean">Venen Jean</a>, so have fun with this little payback.</p>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="example-6">
+            <h3>Example Document</h3>
+  <pre>
+  <code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;body&gt;
+      &lt;h1&gt;My first Heading&lt;/h1&gt;
+      &lt;p&gt;My first paragraph&lt;/p&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+  </code>
+  </pre>
+            <p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags). The <code>&lt;!DOCTYPE&gt;</code> declaration is not case sensitive. </p>
+          </div>
+          <div id="head-6">
+            <h3>HTML Headings</h3>
+            <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.
+            <code>&lt;h1&gt;</code>defines the most important heading. <code>&lt;h6&gt;</code> defines the least important heading:<br>
+            <code>&lt;h1&gt;Big&lt;/h1&gt;</code> <br>
+            <code>&lt;h6&gt;Small&lt;/h6&gt;</code> </p>
+          </div>
+          <div id="text-6">
+            <h3>HTML Paragraphs</h3>
+            <p>HTML paragraphs are defined with the <code>&lt;p&gt;</code> tag:
+  <pre>
+  <code>
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+  &lt;p&gt;This is another paragraph.&lt;/p&gt;
+  </code>
+  </pre>
+            </p>
+          </div>
+          <div id="links-6">
+            <h3>HTML Links</h3>
+            <p>HTML links are defined with the &lt;a&gt; tag:<br>
+            <pre><code>&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;</code></pre></p>
+          </div>
+          <div id="img-6">
+            <h3>HTML Images</h3>
+            <p>HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width, and height are provided as attributes:<br>
+            <pre><code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code></pre></p>
+          </div>  
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+<Scripts />
