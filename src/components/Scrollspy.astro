@@ -15,7 +15,7 @@ const { id, scrollcontent, additionalClasses, otherClass } = Astro.props;
             data-bs-spy="scroll"
             data-bs-target={`#${id}`}
             data-bs-smooth-scroll="true"
-            class={otherClass === "dmsize" ? "dmsize" : "basics-scroll"}
+            class={`rounded-2 ${otherClass === "dmsize" ? "dmsize" : "basics-scroll"}`}
             tabindex="0"
         >
             <slot name="scrollspy-content" />
