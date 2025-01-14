@@ -20,15 +20,15 @@ import BackToTop from '../../../components/BackToTop.astro';
   <div id="main-content">
     <Scrollspy id="html" 
       scrollcontent={[ 
-        { name: "Example Document", href: "#example-7" },
-        { name: "CSS Rulesets", href: "#rules-7" },
-        { name: "Selectors", href: "#selectors-7" },
-        { name: "Classes", href: "#classes-7" },
-        { name: "Text Elements", href: "#text-7" },
-        { name: "Padding Elements", href: "#pad-7" },
-        { name: "Color Elements", href: "#color-7" },
-        { name: "Comments", href: "#com-7" },
-        { name: "Extra: Centering Images", href: "#eci-7" },
+        { name: "Example Document", href: "#example" },
+        { name: "CSS Rulesets", href: "#rules" },
+        { name: "Selectors", href: "#selectors" },
+        { name: "Classes", href: "#classes" },
+        { name: "Text Elements", href: "#text" },
+        { name: "Padding Elements", href: "#pad" },
+        { name: "Color Elements", href: "#color" },
+        { name: "Comments", href: "#com" },
+        { name: "Extra: Centering Images", href: "#eci" },
       ]} 
     >
       <Fragment slot="scrollspy-content">
@@ -39,7 +39,7 @@ import BackToTop from '../../../components/BackToTop.astro';
           <hr>
         </div>
         <div id="content">
-          <div id="example-7">
+          <div id="example">
             <h3>Example Document</h3>
 <pre class="m-0">
 <code>
@@ -65,7 +65,7 @@ h1 &lbrace;
 </code>
 </pre>
           </div>
-          <div id="rules-7">
+          <div id="rules">
             <h3>CSS Rulesets</h3>
             <p>
             </p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><pre class="not-standalone"><code class="not-standalone">p &lbrace; </code></pre></div></div></div>
@@ -87,7 +87,7 @@ h1, h4, h6, h2 &lbrace;
 </code>
 </pre><br><br>
           </div>
-          <div id="classes-7">
+          <div id="classes">
             <h3>Classes</h3>
             <p>Think of classes like custom HTML elements, they can be applied in HTML:</p>
             <pre><code>&lt;p class="text-red"&gt;</code></pre>
@@ -100,7 +100,7 @@ h1, h4, h6, h2 &lbrace;
 </code>
 </pre><br><br>
           </div>
-          <div id="selectors-7">
+          <div id="selectors">
             <h3>Selectors</h3>
             <p>There are more ways to select elements and classes apart from their name. Here's some common ones:</p>
             <pre class="not-standalone"><code>&colon;hover</code></pre> - Applies the CSS rules if the element is selected.<br>
@@ -110,14 +110,14 @@ h1, h4, h6, h2 &lbrace;
             <pre class="not-standalone"><code>&colon;focus</code></pre> - Selects elements if it is focused, usually by using the <code>TAB</code>. <br>
             <pre class="not-standalone"><code>&colon;has(+ element)</code></pre> - Selects the element if the selected element is before it.<br><br>
           </div>
-          <div id="text-7">
+          <div id="text">
             <h3>Text Elements</h3>
             <pre class="not-standalone"><code>font-size&colon; 10px;</code></pre> - Text size, can be in pixels.<br>
             <pre class="not-standalone"><code>font-family&colon; verdana;</code></pre> - Fonts<br>
             <pre class="not-standalone"><code>text-align&colon; center;</code></pre> - Can align to the left side, right side, or in the center of the webpage. <br>
             <pre class="not-standalone"><code>text-shadow&colon; 3px black</code></pre> - Shadow of text. It can be in pixels and colors.<br><br>
           </div>
-          <div id="pad-7">
+          <div id="pad">
             <h3>Padding Elements</h3>
             <pre class="not-standalone"><code>padding-top&colon; 50px;</code></pre> - Separation. It can be top, left, right, and bottom in pixels.<br>
             <pre class="not-standalone"><code>margin&colon; 50px;</code></pre> - A margin. It can be in pixels.<br>
@@ -125,12 +125,12 @@ h1, h4, h6, h2 &lbrace;
             <pre class="not-standalone"><code>border-style&colon; dotted;</code></pre> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
             <pre class="not-standalone"><code>width=500px;</code></pre> - Width of the element. It can be pixels or percentages.
           </div>
-          <div id="color-7">
+          <div id="color">
             <h3>Color Elements</h3>
             <p><pre class="not-standalone"><code>color&colon; red;</code></pre> - The color of the element, can be hexadecimal, or RGB.<br>
               <pre class="not-standalone"><code>background-color&colon; white;</code></pre> - Background color of the element.<br><br>
           </div>
-          <div id="com-7">
+          <div id="com">
             <h3>Comments</h3>
             <p>Comments are commonly used to explain the code and may help when you edit the source code later and are ignored by browsers.
             <br><br>
@@ -145,7 +145,7 @@ comment */
 </code>
 </pre><br><br>
           </div>
-          <div id="eci-7">
+          <div id="eci">
             <h3>Extra: Centering Images</h3>
 <pre>
 <code>
