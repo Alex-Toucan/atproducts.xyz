@@ -20,8 +20,8 @@ import BackToTop from '../../../components/BackToTop.astro';
   <div id="main-content">
     <Scrollspy id="html" 
       scrollcontent={[ 
-        { name: "Example Documents", href: "#example-10" },
-        { name: "Importing JSON", href: "#import-10" },
+        { name: "Example Documents", href: "#example" },
+        { name: "Importing JSON", href: "#import" },
       ]} 
     >
       <Fragment slot="scrollspy-content">
@@ -32,7 +32,7 @@ import BackToTop from '../../../components/BackToTop.astro';
           <hr>
         </div>
         <div id="content">
-          <div id="example-10">
+          <div id="example">
             <h3>Example Document</h3>
 <pre><code>
 &lbrace;
@@ -45,7 +45,7 @@ import BackToTop from '../../../components/BackToTop.astro';
 </code></pre>
             <p>All JSON files are surrounded by &lbrace; and &rbrace;, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
           </div>
-          <div id="import-10">
+          <div id="import">
             <h3>Importing JSON</h3>
             <table class="table table-hover mb-2">
               <tbody>
