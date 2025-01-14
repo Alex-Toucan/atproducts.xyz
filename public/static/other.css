@@ -6541,7 +6541,12 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 
 @media (max-width:767.98px) {
   .basics-scroll {
-    margin-top: 0.5rem;
+    & { 
+      margin-top: 0.5rem;
+    }
+		.modal & {
+			height: 30vh;
+		}
   }
 }
 
