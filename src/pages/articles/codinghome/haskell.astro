@@ -33,7 +33,7 @@ import BackToTop from '../../../components/BackToTop.astro';
         </div>
         <div id="content">
           <div id="data">
-            <h3>Data Types</h3>
+            <h2>Data Types</h2>
             <p>In Haskell, types are how you describe the data your program will work with. Types can be simple, like:</p>
             <ul>
               <li>Bool: boolean True or False.</li>
@@ -51,7 +51,7 @@ import BackToTop from '../../../components/BackToTop.astro';
             </ul>
           </div>
           <div id="ftd">
-            <h3>Function Type Declaration</h3>
+            <h2>Function Type Declaration</h2>
             <p>Haskell's functions will usually have 2 parts: a type declaration, and the implementation of the function itself (the type part can also be inferred):</p>
 <pre><code> 
 -- type declaration 
@@ -67,7 +67,7 @@ countIns x = length . filter (== x)
             </ul>
           </div>
           <div id="fde">
-            <h3>Function Definition</h3>
+            <h2>Function Definition</h2>
             <p>Functions are defined similar to:</p> <pre class="not-standalone"><code>functionName argument(s) = expression</code></pre> <p>Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
 <pre><code> 
 -- type declaration 
@@ -78,13 +78,13 @@ countIns x = length . filter (== x)
 </code></pre>
           </div>
           <div id="fpr">
-            <h3>Functional Principles</h3>
+            <h2>Functional Principles</h2>
             <p>Haskell restricts to the functional paradigm, meaning Haskell enforces:</p>
             <ul><li><b>Immutability:</b> when the <code>data</code> has to be defined again for it to "change"</li><li><b>Purity:</b> functions must be pure, producing no side-effects (like modifying a global variable), and must be deterministic (<code>f(x) = y</code>, no matter when <code>f</code> is called)</li><li><b>Higher-order functions:</b> functions must be first-class, meaning they can be passed as arguments to other functions. This allows for higher-order functions. which take a function and other data and apply the function to the data in different ways.</li><li><b>Disciplined state </b> trying to minimize the use of mutable state and trying to make it local when possible.</li>
             </ul>
           </div>
           <div id="com">
-            <h3>Comments</h3>
+            <h2>Comments</h2>
             <p>In-line comments are made with <code>--</code> and block comments with <code>&lbrace;- -&rbrace;</code>: </p>
 <pre><code>
 -- inline
