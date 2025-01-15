@@ -20,11 +20,11 @@ import BackToTop from '../../../components/BackToTop.astro';
   <div id="main-content">
     <Scrollspy id="cpp" 
       scrollcontent={[ 
-        { name: "Strings" , href: "#str-4" }, 
-        { name: "Integers" , href: "#integers-4" }, 
-        { name: "Print" , href: "#print-4" }, 
-        { name: "Other Data Types" , href: "#data-4" },
-        { name: "Comments" , href: "#comments-4" }
+        { name: "Strings" , href: "#str" }, 
+        { name: "Integers" , href: "#integers" }, 
+        { name: "Print" , href: "#print" }, 
+        { name: "Other Data Types" , href: "#data" },
+        { name: "Comments" , href: "#comments" }
       ]} 
     >
       <Fragment slot="scrollspy-content">
@@ -35,7 +35,7 @@ import BackToTop from '../../../components/BackToTop.astro';
           <hr>
         </div>
         <div id="content">
-          <div id="strings-4">
+          <div id="strings">
             <h3>Strings</h3>
             <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
             <p>
@@ -50,7 +50,7 @@ int main() &lbrace;
 </code></pre>
             </p>
           </div>
-          <div id="integers-4">
+          <div id="integers">
             <h3>Integers and Floating Point Numbers</h3>
             <p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple. </p>
 
@@ -66,7 +66,7 @@ int main() &lbrace;
 &rbrace; 
 </code></pre>
           </div>
-          <div id="print-4">
+          <div id="print">
             <h3>Print</h3>
             <p> Printing an output to the terminal/console: </p>
 <pre><code>
@@ -85,7 +85,7 @@ int main() &lbrace;
 &rbrace;
 </code></pre>
           </div>
-          <div id="data-4">
+          <div id="data">
             <h3>Other Data Types</h3>
             <p>As previously listed:</p>
             <pre class="not-standalone"><code>string</code></pre> - Integers (whole number) (2 or 4 bytes).<br>
@@ -96,7 +96,7 @@ int main() &lbrace;
             <pre class="not-standalone"><code>char</code></pre> - floating point number (8 bytes).<br>
             <pre class="not-standalone mb-2"><code>bool</code></pre> - true (1) or false (0) (1 byte).<br>
           <br></div>
-          <div id="comments-4">
+          <div id="comments">
             <h3>Comments</h3>
             <p>Below is an example of comments.</p>
 <pre><code>
