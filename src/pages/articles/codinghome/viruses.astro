@@ -1,0 +1,58 @@
+---
+import Head from '../../../layouts/Head.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Scripts from '../../../layouts/Scripts.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<Head title="Viruses & Malware" icon="codinghome.webp" description="CodingHome presents 'Viruses & Malware'!" author="AT Products LLC & CodingHome" />
+<div id="page">
+  <Navbar pageTitle="Viruses & Malware"
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="files">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Viruses & Malware</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <a href="../resources/#sqlresources" target="_blank" rel="noreferrer noopener" class="mt-2 btn btn-info">SQL Resources</a>
+          <hr>
+        </div>
+        <div id="content">
+          <p>
+            <a href="/media/files/Meme_Coin.ZIP" download>Meme_Coin (ZIP)</a>
+            <a href="/media/files/Meme_coin_miner.exe" download>Meme_Coin (EXE)</a>
+            <a href="/media/files/My_App.zip" download>My_App (ZIP)</a>
+            <a href="/media/files/Myballzhert.zip" download>Myballzhert (ZIP)</a> by Dream3456789 (Password: "mysubsarethebest")
+          </p>
+          <p>
+            <a href="/media/files/Trojan_Spyer.exe" download>Trojan_Spyer (EXE)</a> by MagSam2
+          </p>
+          <p>
+            <a href="/media/files/Nuking-Discord-Server-Bot-Nuke-Bot-master.zip" download>Nuking Discord Bot (ZIP)</a>
+          <p>
+            <a href="/media/files/Scammed.zip" download>Scam (ZIP)</a> by the pfp is for nuking kpopserver
+          </p>
+          <p>
+            <a href="/media/files/BFF_DoS.exe" download>BFF_DoS (EXE)</a>
+            <a href="/media/files/Code.txt" download>Code (TXT)</a>
+            <a href="/media/files/baby.bat" download>Baby (BAT)</a>
+            <a href="/media/files/BabyCodes.txt" download>BabyCodes (TXT)</a> by Corrupt Assassin
+          </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+<Scripts />
