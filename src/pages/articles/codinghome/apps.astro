@@ -1,0 +1,82 @@
+---
+import Head from '../../../layouts/Head.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Scripts from '../../../layouts/Scripts.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<Head title="Apps & Software" icon="codinghome.webp" description="CodingHome presents 'Apps & Software'!" author="AT Products LLC & CodingHome" />
+<div id="page">
+  <Navbar pageTitle="Apps & Software"
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="app">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Apps & Software</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+          <div id="disclaimer">
+            <h2> Disclaimer </h2>
+            <p> We do not take responsibility for any damage or legal issues with these files here at AT Products LLC, and the other communities at the Ethical Hacking Society, The Script Community, CodingHome, or the Noodle Hackerspace. <br>
+              <br> Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM. <br>
+              <br> If it's an APK file, use an emulator. <br>
+              <br>
+              <a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a>
+              <br>
+              <a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div id="content">
+          <p>
+            <a href="/media/files/sms_bomb.apk" download>SMS Bomb (APK)</a> (<a href="/sms">Site</a>) by CodingLive
+          </p>
+          <h3>Veilo by CodingLive</h3>
+          <p>
+            <a href="https://veilo.protdos.com/download">Veilo</a>
+          </p>
+          <p>
+            <a href="/redirect/veilo">Veilo Download</a>
+          </p>
+          <h3>Encochat by CodingLive</h3>
+          <p>
+            <a href="https://github.com/ProtDos/encochat">Encochat v1</a>
+          </p>
+          <p>
+            <a href="https://github.com/ProtDos/PrivateChatOld">Encochat v2</a>
+          </p>
+          <p>
+            <a href="https://github.com/ProtDos/PrivateChat">Encochat v3</a>
+          </p>
+          <p>
+            <a href="https://app.protdos.com/">Encochat Website</a>
+          </p>
+          <p>
+            <a href="/redirect/encochat">Encochat Download</a>
+          </p>
+          <h3>vpnchecker by CodingLive</h3>
+          <p><b>Use caution upon entering these links as they grab your personal information upon entering.</b></p>
+          <p>
+            <a href="https://github.com/ProtDos/vpnchecker">vpnchecker</a> (<a href="https://github.com/ProtDos/vpnchecker/archive/refs/heads/main.zip">HTML | ZIP</a>)
+          <p>
+            <a href="https://protdos.github.io/vpnchecker">vpnchecker Website</a>
+          </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+<Scripts />
