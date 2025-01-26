@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="JavaScript Basics" icon="vibrant2.png" description="THe Script Community presents 'JavaScript Basics'!" author="AT Products LLC & The Script Community" highlight="true" />
+<DefaultBody title="JavaScript Basics" icon="vibrant2.png" description="THe Script Community presents 'JavaScript Basics'!" author="AT Products LLC & The Script Community" highlight="true" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="JavaScript Basics" 
     link={[
@@ -90,4 +89,4 @@ var person = &lbrace;
   </div>
   <BackToTop />
 </div>
-<Scripts scrollspy="true" highlight="true" />
+</DefaultBody>

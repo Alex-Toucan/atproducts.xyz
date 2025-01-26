@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="AMD GPU Fix for Flash Player" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'AMD GPU Fix for Flash Player'!" author="AT Products LLC & Flash Documentation" />
+<DefaultBody title="AMD GPU Fix for Flash Player" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'AMD GPU Fix for Flash Player'!" author="AT Products LLC & Flash Documentation" />
 <div id="page">
   <Navbar pageTitle="AMD GPU Fix for Flash Player" 
     link={[
@@ -42,4 +41,4 @@ NUL & echo DisableHardwareAcceleration "WINDIR% \SysWoW64\Macromed\Flash\mms.cfg
   </div>
   <BackToTop />
 </div>
-<Scripts scrollspy="true" />
+</DefaultBody>

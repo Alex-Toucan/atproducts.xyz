@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Google Dorking" icon="vibrant2.png" description="The Script Community presents 'Google Dorking'!" author="AT Products LLC & The Script Community" />
+<DefaultBody title="Google Dorking" icon="vibrant2.png" description="The Script Community presents 'Google Dorking'!" author="AT Products LLC & The Script Community" />
 <div id="page">
   <Navbar pageTitle="Google Dorking"
     link={[
@@ -56,4 +55,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

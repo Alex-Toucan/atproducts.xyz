@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="SQL Basics" icon="codinghome.webp" description="CodingHome presents 'SQL Basics'!" author="AT Products LLC & CodingHome" highlight="true" />
+<DefaultBody title="SQL Basics" icon="codinghome.webp" description="CodingHome presents 'SQL Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="SQL Basics" 
     link={[
@@ -151,4 +150,4 @@ CREATE TABLE t (
   </div>
   <BackToTop />
 </div>
-<Scripts scrollspy="true" highlight="true" />
+</DefaultBody>

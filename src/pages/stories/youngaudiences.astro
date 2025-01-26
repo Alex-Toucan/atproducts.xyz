@@ -1,12 +1,11 @@
 ---
-import Head from '../../layouts/Head.astro';
+import DefaultBody from '../../layouts/DefaultBody.astro';
 import Navbar from '../../layouts/stories/Navbar.astro';
 import Scrollspy from '../../layouts/stories/Scrollspy.astro';
-import Scripts from '../../layouts/Scripts.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head title="Technology Influences Young Audiences" description="AT Products LLC's BookViewer presents 'Technology Influences Young Audiences'!" author="Alex Toucan" />
+<DefaultBody title="Technology Influences Young Audiences" description="AT Products LLC's BookViewer presents 'Technology Influences Young Audiences'!" author="Alex Toucan" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="Technology Influences Young Audiences" />
   <div id="main-content">
@@ -106,4 +105,4 @@ import BackToTop from '../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

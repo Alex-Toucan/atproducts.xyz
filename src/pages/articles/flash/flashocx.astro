@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="How to fix the &quot;missing Flash.ocx&quot; error after Windows 2000" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'How to fix the &quot;missing Flash.ocx&quot; error after Windows 2000'!" author="AT Products LLC & Flash Documentation" />
+<DefaultBody title="How to fix the &quot;missing Flash.ocx&quot; error after Windows 2000" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'How to fix the &quot;missing Flash.ocx&quot; error after Windows 2000'!" author="AT Products LLC & Flash Documentation" />
 <div id="page">
   <Navbar pageTitle="How to fix the &quot;missing Flash.ocx&quot; error after Windows 2000" 
     link={[
@@ -52,4 +51,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts scrollspy="true" />
+</DefaultBody>

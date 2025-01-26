@@ -1,13 +1,12 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Hero     from '../components/Hero.astro';
 import Navbar    from '../components/Navbar.astro';
 import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="AT's ROM Games" heroid="roms" description="AT's ROM Games is a discontinued collection of ROMs from back in 2021." keywords="ROMS, AT's ROM Games, AT Products" author="Alex Toucan" />
+<DefaultBody title="AT's ROM Games" heroid="roms" description="AT's ROM Games is a discontinued collection of ROMs from back in 2021." keywords="ROMS, AT's ROM Games, AT Products" author="Alex Toucan" />
 <div id="page">
   <Navbar />
   <div class="alert alert-dark mb-0" role="alert">
@@ -65,4 +64,4 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

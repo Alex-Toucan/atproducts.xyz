@@ -1,13 +1,12 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Hero     from '../components/Hero.astro';
 import Navbar    from '../components/Navbar.astro';
 import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="SMS Bomb" heroid="sms" description="AT Products & ProtDos presents SMS Bomb. Download now to annoy your Android friends!" keywords="SMS, SMS Bomb, AT Products" author="Alex Toucan & CodingLive" />
+<DefaultBody title="SMS Bomb" heroid="sms" description="AT Products & ProtDos presents SMS Bomb. Download now to annoy your Android friends!" keywords="SMS, SMS Bomb, AT Products" author="Alex Toucan & CodingLive" />
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -47,4 +46,4 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

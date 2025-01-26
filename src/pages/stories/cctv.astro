@@ -1,12 +1,11 @@
 ---
-import Head from '../../layouts/Head.astro';
+import DefaultBody from '../../layouts/DefaultBody.astro';
 import Navbar from '../../layouts/stories/Navbar.astro';
 import Scrollspy from '../../layouts/stories/Scrollspy.astro';
-import Scripts from '../../layouts/Scripts.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head title="CCTV Interception" description="AT Products LLC's BookViewer presents 'CCTV Interception'!" author="Pynx" />
+<DefaultBody title="CCTV Interception" description="AT Products LLC's BookViewer presents 'CCTV Interception'!" author="Pynx" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="CCTV Interception" id="cctv"
     link={[
@@ -292,4 +291,4 @@ import BackToTop from '../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

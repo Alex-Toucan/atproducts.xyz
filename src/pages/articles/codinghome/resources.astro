@@ -1,14 +1,13 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
 import Accordion from '../../../components/accordion/Accordion.astro';
 import AccordionItem from '../../../components/accordion/AccordionItem.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Resources" icon="codinghome.webp" description="CodingHome presents 'Resources'!" author="AT Products LLC & CodingHome" highlight="true" />
+<DefaultBody title="Resources" icon="codinghome.webp" description="CodingHome presents 'Resources'!" author="AT Products LLC & CodingHome" highlight="true" accordion="true" />
 <div id="page">
   <Navbar pageTitle="Resources" 
     link={[
@@ -1024,4 +1023,4 @@ FLUSH PRIVILEGES;
   </div>
   <BackToTop />
 </div>
-<Scripts highlight="true" accordion="true" />
+</DefaultBody>

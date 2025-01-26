@@ -1,13 +1,12 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Hero   from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="Flash Documentation" heroid="flash" icon="Adobe_Flash_Player_32.svg.png" description="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!" keywords="Flash Documentation, AT Products" author="Alex Toucan" />
+<DefaultBody title="Flash Documentation" heroid="flash" icon="Adobe_Flash_Player_32.svg.png" description="Flash might be no longer supported by Adobe, but we'll keep Flash Player going until the end of time!" keywords="Flash Documentation, AT Products" author="Alex Toucan" />
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -70,4 +69,4 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

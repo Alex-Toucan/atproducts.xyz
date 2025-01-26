@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Python Basics" icon="codinghome.webp" description="CodingHome presents 'Python Basics'!" author="AT Products LLC & CodingHome" highlight="true" />
+<DefaultBody title="Python Basics" icon="codinghome.webp" description="CodingHome presents 'Python Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="Python Basics" 
     link={[
@@ -103,4 +102,4 @@ print(type(y))
   </div>
   <BackToTop />
 </div>
-<Scripts scrollspy="true" highlight="true" />
+</DefaultBody>
