@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Pynx Technologies" icon="noodle.webp" description="Noodle Hackerspace presents 'Pynx Technologies'!" author="AT Products LLC & Noodle Hackerspace" />
+<DefaultBody title="Pynx Technologies" icon="noodle.webp" description="Noodle Hackerspace presents 'Pynx Technologies'!" author="AT Products LLC & Noodle Hackerspace" />
 <div id="page">
   <Navbar pageTitle="Pynx Technologies" 
     link={[
@@ -38,4 +37,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts highlight="true" />
+</DefaultBody>

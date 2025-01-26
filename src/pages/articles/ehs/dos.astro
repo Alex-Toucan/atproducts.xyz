@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Denial of Service" description="Ethical Hacking Society presents 'Denial of Service'!" author="AT Products LLC & Ethical Hacking Society" />
+<DefaultBody title="Denial of Service" description="Ethical Hacking Society presents 'Denial of Service'!" author="AT Products LLC & Ethical Hacking Society" />
 <div id="page">
   <Navbar pageTitle="Denial of Service" 
     link={[
@@ -58,4 +57,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts highlight="true" />
+</DefaultBody>

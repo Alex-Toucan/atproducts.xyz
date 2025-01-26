@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="How to use Flash after 2021" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'How to use Flash after 2021'!" author="AT Products LLC & Flash Documentation" />
+<DefaultBody title="How to use Flash after 2021" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'How to use Flash after 2021'!" author="AT Products LLC & Flash Documentation" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="How to use Flash after 2021" 
     link={[
@@ -88,4 +87,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts scrollspy="true" />
+</DefaultBody>

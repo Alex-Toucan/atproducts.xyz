@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Browsers that support the Flash Player plug-in" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'Browsers that support the Flash Player plug-in'!" author="AT Products LLC & Flash Documentation" />
+<DefaultBody title="Browsers that support the Flash Player plug-in" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'Browsers that support the Flash Player plug-in'!" author="AT Products LLC & Flash Documentation" />
 <div id="page">
   <Navbar pageTitle="Browsers that support the Flash Player plug-in" 
     link={[
@@ -43,4 +42,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts scrollspy="true" />
+</DefaultBody>

@@ -1,6 +1,5 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Hero from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -9,7 +8,7 @@ import SecondPaidCard from '../components/secondary/SecondPaidCard.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="Paid Services" heroid="web" description="Get stuff done with AT Products!" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan"/>
+<DefaultBody title="Paid Services" heroid="web" description="Get stuff done with AT Products!" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan"/>
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -128,4 +127,4 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

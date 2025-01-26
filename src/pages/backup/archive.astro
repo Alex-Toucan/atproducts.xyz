@@ -1,12 +1,11 @@
 ---
-import Head from '../../layouts/Head.astro';
-import Scripts from '../../layouts/Scripts.astro';
+import DefaultBody from '../../layouts/DefaultBody.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head title="Public Archive" description="This is the Public Archive to archive any old versions and retired pages." author="Alex Toucan" />
+<DefaultBody title="Public Archive" description="This is the Public Archive to archive any old versions and retired pages." author="Alex Toucan" />
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -351,4 +350,4 @@ import BackToTop from '../../components/BackToTop.astro';
 </div>
 <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

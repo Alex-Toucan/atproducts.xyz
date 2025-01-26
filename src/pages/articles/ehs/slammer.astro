@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Slammer" description="Ethical Hacking Society presents 'Slammer'!" author="AT Products LLC & Ethical Hacking Society" />
+<DefaultBody title="Slammer" description="Ethical Hacking Society presents 'Slammer'!" author="AT Products LLC & Ethical Hacking Society" />
 <div id="page">
   <Navbar pageTitle="Slammer" 
     link={[
@@ -54,4 +53,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts highlight="true" />
+</DefaultBody>

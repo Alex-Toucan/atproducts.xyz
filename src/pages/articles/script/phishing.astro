@@ -1,14 +1,13 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
 import Accordion from '../../../components/accordion/Accordion.astro';
 import AccordionItem from '../../../components/accordion/AccordionItem.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Phishing" icon="vibrant2.png" description="The Script Community presents 'Phishing'!" author="AT Products LLC & The Script Community" />
+<DefaultBody title="Phishing" icon="vibrant2.png" description="The Script Community presents 'Phishing'!" author="AT Products LLC & The Script Community" accordion="true" />
 <div id="page">
   <Navbar pageTitle="Phishing"
     link={[
@@ -82,4 +81,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts accordion="true" />
+</DefaultBody>

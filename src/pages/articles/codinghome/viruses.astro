@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Viruses & Malware" icon="codinghome.webp" description="CodingHome presents 'Viruses & Malware'!" author="AT Products LLC & CodingHome" />
+<DefaultBody title="Viruses & Malware" icon="codinghome.webp" description="CodingHome presents 'Viruses & Malware'!" author="AT Products LLC & CodingHome" />
 <div id="page">
   <Navbar pageTitle="Viruses & Malware"
     link={[
@@ -68,4 +67,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

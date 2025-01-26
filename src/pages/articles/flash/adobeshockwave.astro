@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="Adobe Shockwave" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'Adobe Shockwave'!" author="AT Products LLC & Flash Documentation" />
+<DefaultBody title="Adobe Shockwave" icon="Adobe_Flash_Player_32.svg.png" description="Flash Documentation presents 'Adobe Shockwave'!" author="AT Products LLC & Flash Documentation" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="Adobe Shockwave" 
     link={[
@@ -52,4 +51,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts scrollspy="true" />
+</DefaultBody>

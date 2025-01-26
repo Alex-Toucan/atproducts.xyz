@@ -1,12 +1,11 @@
 ---
-import Head from '../../../layouts/Head.astro';
+import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
-import Scripts from '../../../layouts/Scripts.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<Head title="HTML Basics" icon="vibrant2.png" description="The Script Community presents 'HTML Basics'!" author="AT Products LLC & The Script Community" highlight="true" />
+<DefaultBody title="HTML Basics" icon="vibrant2.png" description="The Script Community presents 'HTML Basics'!" author="AT Products LLC & The Script Community" highlight="true" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="HTML Basics" 
     link={[
@@ -83,4 +82,4 @@ import BackToTop from '../../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts scrollspy="true" highlight="true" />
+</DefaultBody>

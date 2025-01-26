@@ -1,13 +1,12 @@
 ---
-import Head from '../layouts/Head.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Hero   from '../components/Hero.astro';
-import Scripts from '../layouts/Scripts.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="The Script Community" heroid="script" icon="vibrant2.png" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus"/>
+<DefaultBody title="The Script Community" heroid="script" icon="vibrant2.png" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus"/>
 <div id="page"> 
   <Navbar />
   <div class="alert alert-dark mb-0" role="alert">
@@ -79,4 +78,4 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>
