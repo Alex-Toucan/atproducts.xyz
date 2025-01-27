@@ -1,5 +1,5 @@
 ---
-const { highlight, title, heroid, icon, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy } = Astro.props;
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -69,6 +69,9 @@ const { highlight, title, heroid, icon, bulletin, description, keywords, author,
       )}
       <meta property="og:title" content={title}>
       <meta property="og:description" content={description}>
+      {color && (
+        <meta name="theme-color" content={color}>
+      )}
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <Fragment set:html={additionalContent}>
