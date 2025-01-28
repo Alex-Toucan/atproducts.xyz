@@ -1,0 +1,70 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Viruses & Malware" icon="codinghome.webp" description="CodingHome presents 'Viruses & Malware'!" author="AT Products LLC & CodingHome" />
+<div id="page">
+  <Navbar pageTitle="Viruses & Malware"
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="files">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Viruses & Malware</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+          <div id="disclaimer">
+            <h2> Disclaimer </h2>
+            <p> We do not take responsibility for any damage or legal issues with these files here at AT Products LLC, and the other communities at the Ethical Hacking Society, The Script Community, CodingHome, or the Noodle Hackerspace. <br>
+              <br> Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM. <br>
+              <br> If it's an APK file, use an emulator. <br>
+              <br>
+              <a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a>
+              <br>
+              <a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div id="content">
+          <p>
+            <a href="/media/files/Meme_Coin.ZIP" download>Meme_Coin (ZIP)</a><br>
+            <a href="/media/files/Meme_coin_miner.exe" download>Meme_Coin (EXE)</a><br>
+            <a href="/media/files/My_App.zip" download>My_App (ZIP)</a><br>
+            <a href="/media/files/Myballzhert.zip" download>Myballzhert (ZIP)</a> (Password: "mysubsarethebest")<br>
+            by Dream3456789
+          </p>
+          <p>
+            <a href="/media/files/Trojan_Spyer.exe" download>Trojan_Spyer (EXE)</a> by MagSam2
+          </p>
+          <p>
+            <a href="/media/files/Nuking-Discord-Server-Bot-Nuke-Bot-master.zip" download>Nuking Discord Bot (ZIP)</a>
+          <p>
+            <a href="/media/files/Scammed.zip" download>Scam (ZIP)</a> by the pfp is for nuking kpopserver
+          </p>
+          <p>
+            <a href="/media/files/BFF_DoS.exe" download>BFF_DoS (EXE)</a><br>
+            <a href="/media/files/Code.txt" download>Code (TXT)</a><br>
+            <a href="/media/files/baby.bat" download>Baby (BAT)</a><br>
+            <a href="/media/files/BabyCodes.txt" download>BabyCodes (TXT)</a><br>
+            by Corrupt Assassin
+          </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

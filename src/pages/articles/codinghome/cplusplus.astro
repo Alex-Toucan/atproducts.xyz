@@ -1,0 +1,114 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="C++ Basics" icon="codinghome.webp" description="CodingHome presents 'C++ Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="C++ Basics" 
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="cpp" 
+      scrollcontent={[ 
+        { name: "Strings" , href: "#str" }, 
+        { name: "Integers" , href: "#integers" }, 
+        { name: "Print" , href: "#print" }, 
+        { name: "Other Data Types" , href: "#data" },
+        { name: "Comments" , href: "#comments" }
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">C++ Basics</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <div class="d-flex flex-wrap gap-2 pt-2">
+            <a href="../resources/#learningresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">C++ Resources</a>
+            <a href="https://gist.github.com/VenenJean/8e8a0c7fcaee8713d8aaf7230b28d6b6" target="_blank" rel="noreferrer noopener" class="btn btn-info">VenenJean's Notes</a>
+          </div>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="strings">
+            <h2>Strings</h2>
+            <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
+            <p>
+<pre><code> 
+#include &lt;ostream&gt;
+#include &lt;string&gt;
+
+int main() &lbrace; 
+    // Declare a string variable
+    std&colon;&colon;string str = "codinghome"; 
+&rbrace; 
+</code></pre>
+            </p>
+          </div>
+          <div id="integers">
+            <h2>Integers and Floating Point Numbers</h2>
+            <p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple. </p>
+
+<pre><code> 
+#include &lt;iostream&gt;
+
+int main() &lbrace; 
+  // Declare an integer variable 
+  int num = 10; 
+
+  // Declare a floating-point variable float 
+  fnum = 10.5; 
+&rbrace; 
+</code></pre>
+          </div>
+          <div id="print">
+            <h2>Print</h2>
+            <p> Printing an output to the terminal/console: </p>
+<pre><code>
+#include &lt;iostream&gt;
+
+int main() &lbrace;
+  // Declare an integer variable
+  int num = 10;
+  // Declare a floating-point variable
+  float fnum = 10.5;
+  
+  std::cout &lt;&lt; "num: " &lt;&lt; num &lt;&lt; std::endl; // &lt;-- Prints the integer variable (variable num)
+  std::cout &lt;&lt; "fnum: " &lt;&lt; fnum &lt;&lt; std::endl; // &lt;-- Prints the floating point variable (variable fnum)
+  
+  return 0;
+&rbrace;
+</code></pre>
+          </div>
+          <div id="data">
+            <h2>Other Data Types</h2>
+            <p>As previously listed:</p>
+            <pre class="not-standalone"><code>string</code></pre> - Integers (whole number) (2 or 4 bytes).<br>
+            <pre class="not-standalone"><code>int</code></pre> - floating point number (4 bytes).<br>
+            <pre class="not-standalone"><code>float</code></pre> - Stores strings (Text) (use &apos;).<br><br>
+            <p>But there are other data types in C++, such as:</p>
+            <pre class="not-standalone"><code>double</code></pre> - Stores strings (Text) (use &quot;).<br>
+            <pre class="not-standalone"><code>char</code></pre> - floating point number (8 bytes).<br>
+            <pre class="not-standalone mb-2"><code>bool</code></pre> - true (1) or false (0) (1 byte).<br>
+          <br></div>
+          <div id="comments">
+            <h2>Comments</h2>
+            <p>Below is an example of comments.</p>
+<pre><code>
+// This is a single line comment
+/*
+* This is a multi-line comment
+* that spans multiple lines
+*/
+</code></pre>
+          </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

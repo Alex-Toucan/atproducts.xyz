@@ -1,0 +1,58 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Google Dorking" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Google Dorking'!" author="AT Products LLC & The Script Community" />
+<div id="page">
+  <Navbar pageTitle="Google Dorking"
+    link={[
+     { name: "The Script Community" , href: "/script" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="google">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Google Dorking</h1>
+          <h5 class="text-start"><b>Made by:</b> <a href="/script">The Script Community</a>.</h5>
+          <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <a href="https://www.exploit-db.com/google-hacking-database" target="_blank" rel="noreferrer noopener" class="btn btn-info mt-2">Exploit-DB.com</a>
+          <hr>
+        </div>
+        <div id="content">
+          <p> Google hacking, also named Google dorking, is a hacker technique that uses Google Search and other Google applications to find security holes in the configuration and computer code that websites are using. Google dorking could also be used for <a href="#osint">OSINT (Open Source Intelligence)</a>.
+            This can be used to find information that was made public on accident. You can find more information about your targets this way. This can be very entertaining: finding public cameras, password lists, peoples files and passwords, gov documents, admin panels, and much more.
+          </p>         
+          <h2>Basics of Google Dorking</h2>
+          <p> 
+            <code>"search string"</code> - web pages that contain the exact same string
+            <br><br><code>string | string</code> - between queries will return results for each string 
+            <br><br><code>site: wikipedia.org</code> - search for certain words on a website
+            <br><br><code>-site: wikipedia.org</code> - do not show results for a website
+            <br><br><code>inurl:"view.shtml" "Network Camera"</code> - find network cameras
+            <br><br><code>?intitle:index.of? mp3 artist_name</code> - find mp3 files of songs
+            <br><br><code>intitle:"index of" inurl:ftp</code> - find exposed FTP servers
+            <br><br><code>filetype:txt inurl:"email.txt"</code> - email lists (Government emails can be found)
+            <br><br><code>filetype:ppt gulf war</code> - find <a href="https://developers.google.com/search/docs/crawling-indexing/indexable-file-types">supported</a> files
+            <br><br><code>allintext:username filetype:log</code> - find usernames and password logfiles
+            <br><br><code>intitle:"Index of..etc" passwd</code> - Linux machines with directory exposed 
+            <br><br><code>index of any-show-name</code> - Find shows and movies for free 
+            <br><br><code>ethical hacking site:drive.google.com</code> - Find free courses 
+            <br><br><code>index of software-name</code> - Find free software <br> <br>
+            <code>ext:log “Software: Microsoft Internet Information Services *.*”</code> - Microsoft ISS server logs (online activity)
+          </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>The Script Community is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

@@ -1,0 +1,54 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="How to fix the &quot;missing Flash.ocx&quot; error after Windows 2000" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'How to fix the &quot;missing Flash.ocx&quot; error after Windows 2000'!" author="AT Products LLC & Flash Documentation" />
+<div id="page">
+  <Navbar pageTitle="How to fix the &quot;missing Flash.ocx&quot; error after Windows 2000" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="oc">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">How to fix the &quot;missing Flash.ocx&quot; error after Windows 2000</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/flash">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <p>
+              If you are having errors that say cannot create, or find <code>flash.ocx</code>, follow these steps.
+          </p>
+          <ol>
+              <li>
+                  If you haven't installed Flash Player yet, please <a href="#" data-bs-target="#ft" data-bs-toggle="modal" data-bs-dismiss="modal">click here</a>.
+              </li>
+              <li>
+                  Find in Windows Explorer: <code>C:\Windows\SysWOW64\Macromed\Flash</code>, and find the file <code>Flash.ocx</code> (may look different depending on which version flash is). If you can't find it, look in instead: <code>C:\Windows\System32\Macromed\Flash</code>, <code>System32</code>, or <code>SysWOW64</code>.
+              </li>
+              <li>
+                  If you still can't find <code>Flash.ocx</code> anywhere, you may have to <a href="/media/files/flash32_32_0_0_371.ocx">download it</a>, then put it in <code>C:\Windows\SysWOW64\Macromed\Flash</code>.
+              </li>
+              <li>
+                  Copy the file, then rename said copied file to <code>flash.ocx</code>, <b>DO NOT RENAME OR MOVE THE ORIGINAL FILE</b>, and paste it in both: <code>System32</code> and/or <code>SysWOW64</code>. [The <code>flash.ocx</code> file should look like <code>flashversion.ocx</code> (for example <code>flash9.ocx</code>)]
+              </li>
+          </ol>
+          <p>Try the program, or screensaver, out now to see if it works.</p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

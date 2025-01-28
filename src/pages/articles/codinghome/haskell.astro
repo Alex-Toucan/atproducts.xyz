@@ -1,0 +1,105 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Haskell Basics" icon="codinghome.webp" description="CodingHome presents 'Haskell Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="Haskell Basics" 
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="hs" 
+      scrollcontent={[ 
+        { name: "Data Types" , href: "#data" }, 
+        { name: "Function Type Declartion" , href: "#ftd" }, 
+        { name: "Function Defintion" , href: "#fde" }, 
+        { name: "Functional Principles" , href: "#fpr" }, 
+        { name: "Comments" , href: "#com" }, 
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Haskell Basics</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <a href="../resources/#learningresources" target="_blank" rel="noreferrer noopener" class="mt-2 btn btn-info">Haskell Resources</a>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="data">
+            <h2>Data Types</h2>
+            <p>In Haskell, types are how you describe the data your program will work with. Types can be simple, like:</p>
+            <ul>
+              <li>Bool: boolean True or False.</li>
+              <li>Char: one character.</li>
+              <li>Int: fixed-precision signed integer (usually 64-bit)</li>
+              <li>Float / Double: floating-point values.</li>
+            </ul>
+            <p>Or, they can be composed with constructs, like:</p>
+            <ul>
+              <li>String: shortcut for [Char].</li>
+              <li>[a]: list of <code>a</code>s (where a is a general type). </li>
+              <li>(a, b): tuple composed of <code>a</code> and <code>b</code>
+              </li>
+              <li>Just a: Maybe monad with the <code>Just</code> option </li>
+            </ul>
+          </div>
+          <div id="ftd">
+            <h2>Function Type Declaration</h2>
+            <p>Haskell's functions will usually have 2 parts: a type declaration, and the implementation of the function itself (the type part can also be inferred):</p>
+<pre><code> 
+-- type declaration 
+-- constraints =&gt; type -&gt; ... -&gt; returnType (the last type will always be the return type) 
+countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int
+-- implementation 
+countIns x = length . filter (== x)
+</code></pre>
+            <ul><li>Bool: boolean True or False.</li><li>Char: one character.</li><li>Int: fixed-precision signed integer (usually 64-bit)</li><li>Float / Double: floating-point values.</li>
+            </ul>
+            <p>Notice the type declaration has 2 types of "arrows": <code>=&gt;</code> and <code>-&gt;</code>. </p>
+            <ul><li>=&gt; : used for giving additional context of what rules <code>a</code> should follow (in the example above, we see a should be part of the <code>Eq</code> class, which allows for comparison)</li><li>-&gt; : used for actually declaring the type of the function (in the above example, we see the first argument is <code>a</code>, a general, comparable type, then a list of as and then finally it outputs an <code>Int</code>eger)</li>
+            </ul>
+          </div>
+          <div id="fde">
+            <h2>Function Definition</h2>
+            <p>Functions are defined similar to:</p> <pre class="not-standalone"><code>functionName argument(s) = expression</code></pre> <p>Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
+<pre><code> 
+-- type declaration 
+countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int 
+-- implementation 
+-- function args = expression 
+countIns x = length . filter (== x) 
+</code></pre>
+          </div>
+          <div id="fpr">
+            <h2>Functional Principles</h2>
+            <p>Haskell restricts to the functional paradigm, meaning Haskell enforces:</p>
+            <ul><li><b>Immutability:</b> when the <code>data</code> has to be defined again for it to "change"</li><li><b>Purity:</b> functions must be pure, producing no side-effects (like modifying a global variable), and must be deterministic (<code>f(x) = y</code>, no matter when <code>f</code> is called)</li><li><b>Higher-order functions:</b> functions must be first-class, meaning they can be passed as arguments to other functions. This allows for higher-order functions. which take a function and other data and apply the function to the data in different ways.</li><li><b>Disciplined state </b> trying to minimize the use of mutable state and trying to make it local when possible.</li>
+            </ul>
+          </div>
+          <div id="com">
+            <h2>Comments</h2>
+            <p>In-line comments are made with <code>--</code> and block comments with <code>&lbrace;- -&rbrace;</code>: </p>
+<pre><code>
+-- inline
+commentHere = False &lbrace;
+- block commentHere = True -&rbrace; </code>
+</pre>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

@@ -1,0 +1,65 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Nitrologging & Tokenlogging" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Nitrologging & Tokenlogging'!" author="AT Products LLC & The Script Community" />
+<div id="page">
+  <Navbar pageTitle="Nitrologging & Tokenlogging"
+    link={[
+     { name: "The Script Community" , href: "/script" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="nitro">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Nitrologging & Tokenlogging</h1>
+          <h5 class="text-start"><b>Made by:</b> <a href="/script">The Script Community</a>.</h5>
+          <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+          <div id="disclaimer">
+            <h2> Disclaimer </h2>
+            <p> 
+            We do not take responsibility for any damage or legal issues with these files here at AT Products LLC, and the other communities at the Ethical Hacking Society, The Script Community, CodingHome, or the Noodle Hackerspace. <br><br>
+            Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM.<br><br>
+            If it's an APK file, use an emulator.<br><br><a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a><br><a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div id="content">
+          <p>Nitrologging is logging when a Nitro gift is sent and snipes it, and tokenlogging is logging a Discord user token to access a account.</p>
+          <p>
+            <a href="https://github.com/Delgan/loguru">Delgan</a><br>
+            <a href="https://github.com/metachris/logzero">MetaChris</a><br>
+            <a href="https://githxub.com/wodxgod/Discord-Token-Grabber">wodxgod</a><br>
+            <a href="https://github.com/Its-Vichy/Batched-Grabber">It's Vichy</a><br>
+            <a href="https://github.com/KLDiscord/JustaGrabber">KLDiscord</a><br>
+            <a href="https://github.com/Monst3red/Discord-Ethereum-Grabber">Monst3red</a> <br>
+            <a href="https://github.com/Alphalius/Discord-RAGE">Alphalius's Rage</a> <br>
+            <a href="https://github.com/billythegoat356/Riot">BillyTheGoat356's Riot</a> <br>
+            <a href="https://github.com/billythegoat356/Plague">BillyTheGoat356's Plague</a> <br>
+            <a href="https://github.com/billythegoat356/Rage">BillyTheGoat356's Rage</a> <br>
+            <a href="https://github.com/NotSaksh/Discord-Server-Cloner">NotSaksh</a> <br>
+            <a href="https://github.com/ecriminal/Exploit-Discord-Cache-System-PoC">ECriminal</a> <br>
+            <a href="https://github.com/verlox/Discord-QR-Token-Logger">Verlox</a> <br>
+            <a href="https://github.com/KanekiWeb/Powerfull-Token-Stealer">KanekiWeb</a> <br>
+            <a href="https://github.com/WCBandit/Intersel">Discord Injector (WCBandit)</a> <br>
+            <a href="https://github.com/ZaikoARG/TokenGuard">Discord Token Stealer Malware Protection (ZaikoARD)</a> <br>
+            <a href="https://github.com/uvipen/ASCII-generator">Uvipen's ASCII Generator</a><br>
+          </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>The Script Community is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

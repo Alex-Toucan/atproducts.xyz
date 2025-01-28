@@ -1,0 +1,26 @@
+---
+const { id, scrollcontent } = Astro.props;
+---
+
+<main id={id}>
+  {scrollcontent ? (
+    <div class="bd-toc col-md-3 p-3 pb-0 story-top-buttons">
+      <div id={`${id}-list`} class="list-group story-buttons">
+        {scrollcontent.map(({ name, href, additionalClasses }, index) => (
+          <a class={`list-group-item list-group-item-action ${additionalClasses}`} href={href} key={index}>
+            {name}
+          </a>
+        ))}
+      </div>
+    </div>
+  ) : (
+    <div class="bd-toc col-md-3 d-none d-md-block p-md-3">
+      <strong>There are no sections to scroll to in this story/article.</strong>
+    </div>
+  )}
+  <div class="col-md-9 p-3 story-top-scroll story-top-body story-scroll" tabindex="0" data-bs-smooth-scroll="true" data-bs-target={`${id}-list`} data-bs-spy="scroll">
+    <div class="mx-lg-auto text-justify container-story">
+      <slot name="scrollspy-content" />
+    </div>
+  </div>
+</main>

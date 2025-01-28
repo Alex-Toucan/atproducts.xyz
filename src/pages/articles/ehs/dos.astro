@@ -1,0 +1,60 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Denial of Service" description="Ethical Hacking Society presents 'Denial of Service'!" author="AT Products LLC & Ethical Hacking Society" />
+<div id="page">
+  <Navbar pageTitle="Denial of Service" 
+    link={[
+     { name: "Ethical Hacking Society" , href: "/ehs" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="dos">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Denial of Service</h1>
+          <h5 class="text-start"><b>Made by:</b> <a href="/ehs">Ethical Hacking Society</a>.</h5>
+          <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+          <div id="disclaimer">
+            <h2> Disclaimer </h2>
+            <p> We do not take responsibility for any damage or legal issues with these files here at AT Products LLC, and the other communities at the Ethical Hacking Society, The Script Community, CodingHome, or the Noodle Hackerspace. <br>
+              <br> Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM. <br>
+              <br> If it's an APK file, use an emulator. <br>
+              <br>
+              <a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a>
+              <br>
+              <a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div id="content">
+          <p>
+            <b>From <a href="/script">The Script Community</a>: </b> A denial-of-service (DoS) attack is a type of cyber attack in which a malicious actor aims to render a computer or other device unavailable to its intended users by interrupting the device's normal functioning. DoS attacks typically function by overwhelming or flooding a targeted machine with requests until normal traffic is unable to be processed, resulting in denial-of-service to addition users. A DoS attack is characterized by using a single computer to launch the attack.
+          </p>
+          <p>
+            <a href="/media/files/http.py" download>HTTP Flooder (Python)</a> by Nasus
+          </p>
+          <p>
+            <b>These files are a private paid DDPS.</b><br>
+            <a href="/media/files/requirements.txt" download>Requirements (TXT)</a><br>
+            <a href="/media/files/MHViP.py" download>MHViP (Python)</a><br>
+            <a href="/media/files/README.md" download>README (MD)</a>.
+          </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>Ethical Hacking Society is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

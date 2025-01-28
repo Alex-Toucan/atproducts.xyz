@@ -1,0 +1,114 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Code Samples" icon="codinghome.webp" description="CodingHome presents 'Code Samples'!" author="AT Products LLC & CodingHome" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="Code Samples"
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="code"
+      scrollcontent={[ 
+        { name: "Main Samples", href: "#main-code" },
+        { name: "ncrypt.c", href: "#ncrypt" },
+        { name: "Other OSINT Guides", href: "#other" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Code Samples</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="main-code">
+            <p>
+              <a href="https://github.com/FordArthur/insitucs">Insitux Compiler</a><br>
+              <a href="https://github.com/FordArthur/chess-ix">Chess I (Insitux)</a><br>
+              <a href="/media/files/chess.ix" download>Chess II (Insitux)</a><br>
+              <a href="https://github.com/FordArthur/ballistics-ix">Ballstics I (Insitux)</a><br>
+              <a href="https://github.com/FordArthur/Insitux-math-libs">Math Libs for Insitux</a><br>
+              <a href="https://github.com/FordArthur/svelte-app">svelte-app</a><br>
+              <a href="/media/files/RosettaCode.ix" download>Rosetta Code (Insitux)</a><br>
+              <a href="/media/files/polinomic-solver.ix" download>Polinomic Solver (Insitux)</a><br>
+              <a href="/media/files/ambiguous-operator.ix" download>Ambiguous Operator (Insitux)</a><br>
+              <a href="/media/files/rockpaperscissors.ix" download>Rock Paper Scissors (Insitux)</a>
+              by Al-Ford Arthur
+            </p>
+            <p>
+              <a href="/media/files/rockpaperscissors.py" download>Rock Paper Scissors (Python)</a> by Sezieru
+            </p>
+            <p>
+              <a href="https://github.com/Savageboitim13/UMS-WF/">UMS-WF</a><br>
+              <a href="https://github.com/Savageboitim13/Principles-CSharp">Principles for C# & Java</a>
+              by venenjean
+            </p>
+            <p>
+              <a href="https://github.com/phunanon/ip3">IP3</a> by Patrick
+            </p>
+            <p>
+              <a href="https://github.com/JSman225/ROTL">ROTL</a> by JSman225
+            </p>
+            <p>
+              <a href="/media/files/test-OBFUSCATED.py" download>ISS Obfuscator (Python 3.9)</a> by vesper
+            </p>
+            <p>
+              <a href="/media/files/long_snakes_long_code_.py" download>Snake Game in One Line of Code (Python)</a> by ByThon
+            </p>
+            <p>
+              <a href="https://github.com/ProtDos/ScammerPayback">ScammerPayback</a><br>
+              <a href="/media/files/tic.py" download>Tic Tac Toe (Python)</a><br>
+              <a href="https://github.com/ProtDos/Flask-PayPal/archive/refs/heads/main.zip" download>Flask PayPal (Python | ZIP)</a><br>
+              <a href="/media/files/stress.py" download>Apache Stress Tester (Python)</a><br>
+              <a href="/media/files/bestree.py" download>bestree (Python)</a><br>
+              <a href="/media/files/protect.py" download>SSL Protection (Python)</a><br>
+              <a href="https://github.com/ProtDos/SeedPhraseHack/archive/refs/heads/main.zip" download>SeedPhraseHack (Python | ZIP)</a><br>
+              <a href="/media/files/checker.py" download>Domain Checker (Python)</a><br>
+              <a href="https://github.com/ProtDos/DiscordMassDM">Discord Mass DM</a> (<a href="https://github.com/ProtDos/DiscordMassDM/archive/refs/heads/main.zip">Python | ZIP</a>)<br>
+              <a href="https://github.com/ProtDos/IP-Address-Generator-Checker">IP Address Generator Checker</a> (<a href="https://github.com/ProtDos/IP-Address-Generator-Checker/archive/refs/heads/main.zip">Python | ZIP</a>)<br>
+              <a href="https://github.com/ProtDos/ClashOfClans-Wrapper">Clash of Clans Wrapper</a> (<a href="https://github.com/ProtDos/ClashOfClans-Wrapper/archive/refs/heads/main.zip">Python | ZIP</a>)<br> 
+              <a href="https://github.com/ProtDos/Crunch-PasswordGenerator/archive/refs/heads/main.zip" download>Crunch Password Generator (Python | ZIP)</a><br>
+              <a href="https://github.com/ProtDos/Mint">Mint (OSINT)</a> (<a href="https://github.com/ProtDos/Mint/archive/refs/heads/main.zip">Python | ZIP</a>)<br>
+              <a href="https://github.com/ProtDos/WebcamSearch/archive/refs/heads/main.zip" download>Webcam Search (Python | ZIP)</a><br>
+              <a href="https://github.com/ProtDos/Discord-Token-Onliner">Discord Token Onliner</a> (<a href="https://github.com/ProtDos/Discord-Token-Onliner/archive/refs/heads/main.zip">Python | ZIP</a>)<br>
+              <a href="https://github.com/ProtDos/boosint">boosint (OSINT)</a> (<a href="https://github.com/ProtDos/boosint/archive/refs/heads/main.zip">Python | ZIP</a>)<br>
+              <a href="https://github.com/ProtDos/ntru">ntru</a> (<a href="https://github.com/ProtDos/ntru/archive/refs/heads/main.zip">Python | ZIP</a>)<br>
+              <a href="https://github.com/ProtDos/pq-ntru">pq-ntru</a> (<a href="https://github.com/ProtDos/pq-ntru/archive/refs/heads/main.zip">Python | ZIP</a>) 
+              by CodingLive
+            </p>
+          </div>
+          <div id="ncrypt">
+          <h2>ncrypt.c by Sezieru</h2> 
+            <p>This is a relatively simple example for using <code>crypt()</code> on Linux to generate Linux-compatible password hashes. This is useful for replacing a lost password hash, for example. </p>
+            <p>
+              <a href="/media/files/ncrypt.c" download>ncrypt.c Download</a>
+            </p>
+          </div>
+          <div id="other">
+            <h2>Other OSINT Guides</h2>
+            <p>
+              <a href="https://github.com/ProtDos/VanishGuide">VanishGuide</a><br>
+              <a href="https://github.com/ProtDos/discord-phishing-links">Discord Phishing Links</a><br>
+              <a href="https://github.com/ProtDos/IP-Address-List">IP Address List</a>
+              by CodingLive
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

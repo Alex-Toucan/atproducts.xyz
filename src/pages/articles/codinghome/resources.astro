@@ -1,0 +1,1030 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Accordion from '../../../components/accordion/Accordion.astro';
+import AccordionItem from '../../../components/accordion/AccordionItem.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Resources" icon="codinghome.webp" description="CodingHome presents 'Resources'!" author="AT Products LLC & CodingHome" highlight="true" accordion="true" />
+<div id="page">
+  <Navbar pageTitle="Resources" 
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="Resources">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Resources</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+          <div id="disclaimer">
+            <h2> Disclaimer </h2>
+            <p> We do not take responsibility for any damage or legal issues with these files here at AT Products LLC, and the other communities at the Ethical Hacking Society, The Script Community, CodingHome, or the Noodle Hackerspace. <br>
+              <br> Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM. <br>
+              <br> If it's an APK file, use an emulator. <br>
+              <br>
+              <a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a>
+              <br>
+              <a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div id="content" class="text-start">
+          <div class="d-grid gap-2 my-2 text-center">
+            <div class="d-flex flex-wrap row-cols-3 rounded-2 overflow-hidden text-white">
+              <b class="col-12 py-2 bg-secondary">Contributors</b>
+              <div class="col py-2 bg-secondary">#1</div>
+              <div class="col py-2 bg-secondary">#2</div>
+              <div class="col py-2 bg-secondary">#3</div>
+              <a href="https://github.com/Savageboitim13" class="btn btn-primary rounded-0 py-2 col">venenjean</a>
+              <a href="https://zoezo.dev" class="btn btn-primary rounded-0 py-2 col">Zoezo</a>
+              <a href="https://tryhackme.com/p/social" class="btn btn-primary rounded-0 py-2 col">Social</a>
+            </div>
+            <div class="d-flex mt-2 flex-wrap row-cols-3 rounded-2 overflow-hidden text-white">
+              <b class="col-12 py-2 bg-secondary align-middle">Additional Sources</b>
+              <a href="https://discord.gg/pYa87Bhau9" class="btn btn-primary rounded-0 py-2 col-lg col-12 align-middle">Royal Stack Alliance</a>
+              <a href="https://discord.com/invite/ring-zer0-827712340954578954" class="btn btn-primary rounded-0 py-2 col-lg col-12 align-middle">Ring Zer0</a>
+            </div>
+          </div>
+          <figure class="figure mt-2 mb-0">
+            <img src="/media/files/400px-QR_Code_Structure_Example_3.svg.png" alt="QR Code" width="100%" class="bg-white rounded-1 p-1" style="max-width: 375px;">
+            <figcaption class="figure-caption mt-2"><a href="https://commons.wikimedia.org/wiki/File:QR_Code_Structure_Example_3.svg">QR Code Structure Example 3</a> by BobMath is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a></figcaption>
+          </figure>
+          <p class="my-3">Please note that if a link is a <a href="javascript:void(0)" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German. </p>
+          <Accordion parent="resourcesAccordion">
+            <Fragment slot="accordion-content">
+              <AccordionItem title="Learning Resources" id="learningresources" parent="resourcesAccordion">
+                <Fragment slot="accordion-item-content">
+                  <h3>Learning Resources</h3>
+                  <p>
+                    <a href="https://w3schools.com/">W3Schools</a><br>
+                    <a href="https://www.tutorialsteacher.com/">TutorialsTeacher</a><br>
+                    <a href="https://stackexchange.com/">StackExchange</a><br>
+                    <a href="https://www.stackoverflow.com/">StackOverflow</a><br>
+                    <a href="https://chat.openai.com/chat">ChatGPT</a><br>
+                    <a href="https://www.codecademy.com/">CodeAcademy</a><br>
+                    <a href="https://www.freecodecamp.org/">FreeCodeCamp</a><br>
+                    <a href="https://devdocs.io/">DevDocs</a><br>
+                    <a href="https://leetcode.com/">Leetcode</a><br>
+                    <a href="https://imposterdevs.com/">Imposter Devs</a><br>
+                    <a href="https://www.edx.org/learn">EDX Courses</a><br>
+                    <a href="https://books.goalkicker.com/">GoalKicker Programming Books</a><br>
+                    <a href="https://www.sporcle.com/games/moogles/programlanguages">Programming Quiz</a><br>
+                    <a href="https://progle.net/">progle()</a><br>
+                    <a href="https://roadmap.sh/">Roadmaps for Languages</a><br>
+                    <a href="https://www.youtube.com/watch?v=rYnbspEcKJw">Organizing Code</a><br>
+                    <a href="https://github.com/codecrafters-io/build-your-own-x">Build your own X</a><br>
+                    <a href="https://github.com/donnemartin/system-design-primer">System Design Primer</a><br>
+                    <a href="https://github.com/trimstray/the-book-of-secret-knowledge">Book of Secret Knowledge</a><br>
+                    <a href="https://github.com/practical-tutorials/project-based-learning">Project Based Learning</a><br>
+                    <a href="https://www.digitalocean.com/community/tutorials">Digital Ocean - Community Resources</a><br>
+                    <a href="https://learn.microsoft.com/en-us/docs/">Microsoft's Documentation</a><br>
+                    <a href="https://github.com/donnemartin/system-design-primer">Learn System Design</a><br>
+                    <a href="https://en.wikibooks.org/">WikiBooks</a><br>
+                    <a href="https://youtube.com/playlist?list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9pe-&si=EYMJrwqxIqlYXCZw">Learning PHP The Right Way</a><br>
+                    <a href="https://caniuse.com/">CanIUse?</a><br>
+                    <a href="https://refactoring.guru/">Refactoring Guru</a><br>
+                    <a href="https://sourcemaking.com/">Source Making</a><br>
+                    <a href="https://youtu.be/3wsVLG-dxg8?si=tKSH_9fla-15defj">Cursor AI - Software Devs are Cooked</a><br>
+                    <a href="https://sadh.life/post/ast/">Tushar's Learning Blog</a><br>
+                    <a href="https://opendir.cloud/">OpenDir (Resource Cloud)</a><br>
+                    <a href="https://pikuma.com/blog/isometric-projection-in-games">Isometric Project in Games</a><br>
+                    <a href="https://www.rfc-editor.org/">RFC Editor</a><br>
+                    <a href="https://youtu.be/NmM9HA2MQGI">How to do Secret Key Exchange</a><br>
+                    <a href="https://www.youtube.com/watch?v=7mdc-lRrW1c">Series and Parallel Circuits</a><br>
+                    <a href="https://youtube.com/shorts/nZuWCo52wTg?si=k3P9AgZfFjkslhvz">Architectural Patterns</a><br>
+                    <a href="https://www.youtube.com/watch?v=2qlcY9LkFik">Software Planning and Technical Documentation</a><br>
+                  </p>
+                  <Accordion parent="learningresourcesAccordion">
+                    <Fragment slot="accordion-content">
+                      <AccordionItem title="Python Resources" id="pythonresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Python Resources</h4>
+                          <p>
+                            <a href="https://www.w3schools.com/python/">W3Schools Python Resources</a><br>
+                            <a href="https://runestone.academy/ns/books/published/pythonds3/index.html">Problem Solving with Algorithms and Data Structures using Python</a><br>
+                            <a href="https://code-maven.com/catch-control-c-in-python">Signal handling: Catch Ctrl-C in Python</a><br>
+                            <a href="https://www.youtube.com/watch?v=-zsV0_QrfTw">__new__ vs __init__ in Python</a><br>
+                            <a href="https://www.programiz.com/python-programming/user-defined-exception">Python Custom Exceptions</a><br>
+                            <a href="https://blog.miguelgrinberg.com/post/the-ultimate-guide-to-python-decorators-part-i-function-registration">The Ultimate Guide to Python Decorators, Part I: Function Registration</a><br>
+                            <a href="https://youtu.be/vRhPOE2uTGA">Port Scanning Tool w/ Python</a><br>
+                            <a href="https://www.youtube.com/watch?v=-29xf_deQQus">40 Python Libraries Explained</a><br>
+                            <a href="https://github.com/extremecoders-re/nuitka-extractor">Nuitka Extractor</a><br>
+                            <a href="https://github.com/idapython/src">IDAPython Plugin</a><br>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Haskell Resources" id="haskellresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Haskell Resources</h4>
+                          <p>
+                            <a href="https://www.haskell.org/">Haskell Documentation</a><br>
+                            <a href="https://wiki.haskell.org/">Haskell Wiki</a><br>
+                            <a href="https://hoogle.haskell.org/">Haskell Packages</a><br>
+                            <a href="https://hackage.haskell.org/">Learning about Haskell Packages</a><br>
+                            <a href="https://mmhaskell.com/">Monday Morning Haskell</a><br>
+                            <a href="http://learnyouahaskell.com/">LearnYouAHaskell</a><br>
+                            <a href="https://devtut.github.io/haskell">DevTut Haskell Tutorials</a><br>
+                            <a href="https://youtu.be/Vgu82wiiZ90?list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV">Haskell Basics</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="C / C++ Resources" id="cppresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>C Resources</h4>
+                          <p>
+                            <a href="https://www.w3schools.com/c/index.php">W3Schools C Tutorials</a><br>
+                            <a href="https://www.learnc.org">LearnC.org</a><br>
+                            <a href="https://www.learnc.net">LearnC.net</a>
+                          </p>
+                          <h4>C++ Resources</h4>
+                          <p>
+                            <a href="https://www.w3schools.com/cpp/default.asp">W3Schools C++ Tutorials</a><br>
+                            <a href="https://www.learncpp.com/">learncpp</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="C# Resources" id="csharpresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>C# Resources</h4>
+                          <p>
+                            <a href="https://learn.microsoft.com/en-us/dotnet/csharp">C# / dotnetDocumentation</a><br>
+                            <a href="https://www.c-sharpcorner.com/">C# Corner</a><br>
+                            <a href="https://www.c-sharpcorner.com/csharp-tutorials">C# Corner - Tutorials</a><br>
+                            <a href="https://www.tutorialsteacher.com/csharp/">C# TutorialsTeacher</a><br>
+                            <a href="https://sharplab.io">C# Compiler Playground</a><br>
+                            <a href="https://learn.microsoft.com/en-us/dotnet/api/system.configuration.configurationmanager?view=windowsdesktop-7.0">ConfigurationManager C#</a><br>
+                            <a href="https://scottkuhl.medium.com/building-production-ready-applications-24405c706707">Making Production Ready C# Applications</a><br>
+                            <a href="https://auth0.com/blog/introduction-to-async-programming-in-csharp/">Async I/O in C#</a><br>
+                            <a href="https://www.youtube.com/watch?v=z4SB5BkQX7M">Making IDs safer in C#</a><br>
+                            <a href="https://www.youtube.com/watch?v=sGwfwtkaDfk">Testing Tests (C#)</a><br>
+                            <a href="https://stryker-mutator.io/docs/stryker-net/getting-started/">Mutational Testing</a>
+                          </p>
+                          <h4>C# Hashing with Salt and Pepper</h4>
+                          <p>
+                            <a href="https://www.vb-paradise.de/index.php/Thread/133457-Sha256-hashing-von-Userdaten-Name-Pwd-inkl-Salt-und-Pepper-Hab-ich-das-korrekt-u/" class="link-warning">Source (German)</a>
+                          </p>
+                          <p> There are outdated files on the source, if you need to, use the updated files of the <a href="/media/files/csharpsaltpepper.1.cs">first code block</a> and the <a href="/media/files/csharpsaltpepper.2.cs">second code block</a>. </p>
+                          <h4>Inversion of Control Series</h4>
+                          <p>
+                            <a href="https://dotnettutorials.net/lesson/introduction-to-inversion-of-control/">Introduction</a>
+                            <br>
+                            <a href="https://dotnettutorials.net/lesson/inversion-of-control/">Inversion of Control</a>
+                            <br>
+                            <a href="https://dotnettutorials.net/lesson/dependency-inversion-principle-csharp-ioc/">IoC with Dependency Inversion Principle</a>
+                            <br>
+                            <a href="https://dotnettutorials.net/lesson/dependency-injection-design-pattern/">Dependency Injection</a>
+                            <br>
+                            <a href="htstps://dotnettutorials.net/lesson/ioc-container-in-csharp/">IoC container</a>
+                          </p>
+                          <h4>Dependency Injection for AvaloniaUI</h4>
+                          <strong>Sources</strong>
+                          <br>
+                          <br>
+                          <p>
+                            <a href="https://github.com/Kaharonus/Avalonia.Extensions.DependencyInjection">GitHub</a><br>
+                            <a href="https://www.reddit.com/r/AvaloniaUI/comments/ssplp9/microsoftextensionsdependencyinjection_to_inject/">Reddit + GitHub</a><br>
+                            <a href="https://dev.to/ingvarx/avaloniaui-dependency-injection-4aka">Dev.to</a>
+                          </p>
+                          <p>
+                            <a href="https://www.youtube.com/watch?v=q6lFGr2DeHQ&amp;t=199s">MammaMiaDev - YouTube</a> - Explains some possibilities.
+                          </p>
+                          <p>
+                            <a href="https://github.com/MammaMiaDev/avaloniaui-the-series/blob/main/AvaloniaApplication/App.axaml.cs">MammaMiaDev - GitHub</a> - Example repository for DI in context with Views &amp; ViewModels | <code>Showing App.xaml.cs</code>
+                          </p>
+                          <p>
+                            <strong>REQUIRED</strong>: Implement the <code>RegisterViewFactory</code> from <code>ViewLocator.cs</code>. It can be used for other stuff except Views &amp; ViewModels.
+                          </p>
+                          <hr>
+                          <strong>Setup for Rider</strong>
+                          <br>
+                          <br>
+                          <p>
+                            <b>Pre-conditions:</b> Add package source (image1).
+                          </p>
+                          </p>
+                          <hr>
+                          <strong>Instructions</strong>
+                          <br>
+                          <br>
+                          <p>Source Values:</p>
+                          <ul>
+                            <li>
+                              <b>Name:</b> Windows Community Toolkit Labs (or decide as you want)
+                            </li>
+                            <li>
+                              <b>URL:</b>
+                              <a class="text-wrap" href="https://pkgs.dev.azure.com/dotnet/CommunityToolkit/_packaging/CommunityToolkit-Labs/nuget/v3/index.json">https://pkgs.dev.azure.com/dotnet/CommunityToolkit/_packaging/CommunityToolkit-Labs/nuget/v3/index.json</a> | <strong>REQUIRED</strong>
+                            </li>
+                            <li>
+                              <b>User:</b> Rider account name
+                            </li>
+                            <li>
+                              <b>Password:</b> Rider account password
+                            </li>
+                          </ul>
+                          <hr>
+                          <strong>Background Information</strong>
+                          <br>
+                          <br>
+                          <p>By this action you are modifying the NetGet.config file, which applies configurations to the NuGet package manager on your local machine.</p>
+                          <p>Afterwards install the package from Rider&#39;s NuGet Window as usual and you&#39;re off to the races.</p>
+                          <hr>
+                          <strong>Other GitHub Repos</strong>
+                          <br>
+                          <br>
+                          <p>
+                            <a href="https://github.com/CommunityToolkit/WindowsCommunityToolkit/wiki/Preview-Packages#toolkit-labs-">Official Instructions on adding the Community Toolkit as a NuGet packages source</a> - Instructions are derived from this.
+                          </p>
+                          <p>
+                            <a href="https://github.com/stevemonaco/AvaloniaViewModelFirstDemos?tab=readme-ov-file">Create an AOT-friendly ViewLocator</a> - MammaMiaDev is derived from this.
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="SQL Resources" id="sqlresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>SQL Resources</h4>
+                          <p>
+                            <a href="https://www.w3schools.com/sql/default.asp">W3Schools SQL Tutorials</a><br>
+                            <a href="https://www.litedb.org/docs/getting-started/">LiteDB</a><br>
+                            <a href="https://docs.oracle.com/cd/E17952_01/connector-net-en/index.html">.NET SQL Connecter Documentation</a><br>
+                            <a href="https://mysqlconnector.net/">MySQLConnecter</a><br>
+                            <a href="https://www.youtube.com/watch?v=4q-keGvUnag">DB Relation Models</a><br>
+                            <a href="https://www.dbdiagram.io/home">Code Like DB Visualization</a><br>
+                            <a href="https://www.sqlstyle.guide">SQL Style Guide</a><br>
+                            <a href="https://goteleport.com/blog/securing-postgres-postgresql/">Securing Your PostgreSQL Database</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title=".NET Resources" id="dotnetresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>.NET Resources</h4>
+                          <p>
+                            <a href="https://learn.microsoft.com/en-us/dotnet/csharp">C# / dotnetDocumentation</a><br>
+                            <a href="https://dotnettutorials.net">DotNet Tutorials</a><br>
+                            <a href="https://dotnet.microsoft.com/en-us/download">Download .NET</a><br>
+                            <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework">Download .NET Framework</a><br>
+                            <a href="https://www.newtonsoft.com/json">JSON.NET</a><br>
+                            <a href="https://github.com/sshnet/SSH.NET">SSH.NET</a><br>
+                            <a href="https://docs.oracle.com/cd/E17952_01/connector-net-en/index.html">.NET SQL Connecter Documentation</a><br>
+                            <a href="https://codinghelmet.com/articles/threadexc">How to Handle Exceptions from Background Worker Thread in .NET</a><br>
+                            <a href="https://dotnettutorials.net/lesson/unit-of-work-pattern-in-asp-net-core-mvc-using-ef-core">Unit of Work Pattern</a><br>
+                            <a href="https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application">UoW Pattern + Repo Docs</a>
+                          </p>
+                          <h4>Clean Project Architecture</h4>
+                          <figure class="figure mb-2">
+                            <img src="/media/images/CleanArchitecture.webp" alt="Clean Architecture Diagram" width="100%" class="bg-white rounded-1 p-1" style="max-width: 375px;">
+                            <figcaption class="figure-caption mt-2">This Clean Architecture Diagram is directly from the <a href="/media/pdf/clean-architecture-a-craftsmans-guide-to-software-structure-and-design_compress.pdf">PDF Guide</a> by <a href="https://www.linkedin.com/in/robert-martin-7395b0">Robert Martin</a>.</figcaption>
+                          </figure>
+                          <p>
+                            <a href="/media/pdf/clean-architecture-a-craftsmans-guide-to-software-structure-and-design_compress.pdf">PDF Guide</a><br>
+                            <a href="https://github.com/jasontaylordev/CleanArchitecture">Template 1</a><br>
+                            <a href="https://github.com/ardalis/CleanArchitecture">Template 2</a><br>
+                            <a href="https://github.com/amantinband/clean-architecture">Template 3</a><br>
+                            <a href="https://stackoverflow.com/questions/74781704/how-to-make-nlog-v5-work-with-avalonia-android">StackOverflow w/ NLog</a><br>
+                            <a href="https://www.youtube.com/watch?v=YiVqwoFMieg">Explanation Video</a>
+                          </p>
+                          <p>
+                            <a href="https://tutorials.eu/c-sharp-solution-structure/">Tutorials EU - C# Solution Strucure</a><br>
+                            <a href="https://www.jamesmichaelhickey.com/how-to-structure-your-dot-net-solutions-design-and-trade-offs/">.NET Architecture: How To Structure Your Solutions - Design </a><br>
+                            <a href="https://www.reddit.com/r/csharp/comments/k21qjv/can_anyone_show_me_the_proper_project_structure/?rdt=60419">Redit - Proper project strucure</a><br>
+                          </p>
+                          <p>
+                            <a href="https://gist.github.com/davidfowl/ed7564297c61fe9ab814">David Fowl's Gist</a><br>
+                            <a href="https://www.youtube.com/watch?v=YiVqwoFMieg">Nick Chapsas - How to structure a .NET Solution (project separation &amp; architecture)</a>
+                          </p>
+                          <h4>Installing .NET 8.0 SDK on Ubuntu Server 24.04 LTS</h4>
+<pre><code>wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/keyrings/microsoft.gpg</code></pre>
+                          <p>Create a file -&gt; <pre><code>/etc/apt/sources.list.d/microsoft.sources</code></pre></p>
+                          <p>Paste content (JavaScript):<br>
+<pre><code>
+Types: deb
+URIs: https://packages.microsoft.com/ubuntu/22.04/prod/
+Suites: jammy
+Components: main
+Architectures: amd64
+Signed-By: /etc/apt/keyrings/microsoft.gpg
+</code></pre>
+                          <br>
+                          Then (Console):<br>
+                          <pre><code>sudo apt update</code></pre>
+                          </p>
+                          <h5>Fixing libicu dependency package issue</h5>
+                          <p>Package is at this date & time not available for Ubuntu 24.04 LTS. Paste content (Console):<br>
+<pre><code>
+echo "deb http://archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/libicu-jammy.list<br>
+</code></pre>
+                          <br>
+                          Pinning to lower priority to avoid conflicts with with main 24.04 repositories. Paste content (Console):<br>
+<pre><code>
+sudo tee /etc/apt/preferences.d/libicu &lt;&lt;EOF
+Package: libicu*
+Pin: release n=jammy
+Pin-Priority: 100
+EOF<br>
+</code></pre>
+                          <br>
+                          Update system & install .NET SDK. Paste content (Console):</p>
+<pre><code>
+sudo apt update && sudo apt install dotnet-sdk-8.0
+</code></pre>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Rust Resources" id="rustresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Rust Resources</h4>
+                          <p>
+                            <a href="https://www.rust-lang.org/learn">Learn Rust</a><br>
+                            <a href="https://github.com/rust-lang/miri">Miri</a><br>
+                            <a href="https://blessed.rs/">blessed.rs</a><br>
+                            <a href="https://github.com/ex0dus-0x/awesome-rust-security">Rust Security</a><br>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Other Language Resources" id="otherlanguageresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Web Resources</h4>
+                          <p>
+                            <a href="https://practicalseries.com/">Website Building Manual</a><br>
+                            <a href="https://university.webflow.com/">Webflow University</a><br>
+                            <a href="https://developer.mozilla.org/">MDN Web Docs</a><br>
+                            <a href="https://framer.com/">Web Design Tool with Publishing</a>
+                          </p>
+                          <h4>JavaScript Resources</h4>
+                          <p>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">Mozilla JS Tutorials</a><br>
+                            <a href="https://javascript.info/">Modern JavaScript Tutorial</a>
+                            <a href="https://it-tools.tech/regex-memo">JS Regex Cheatsheet</a>
+                          </p>
+                          <h4>TypeScript Resources</h4>
+                          <p>
+                            <a href="https://typehero.dev/explore">Learn TypeScript</a>
+                          </p>
+                          <h4>Lua Resources</h4>
+                          <p>
+                            <a href="https://devhints.io/lua">Lua Cheatsheet</a>
+                          </p>
+                          <h4>Markdown Resources</h4>
+                          <p>
+                            <a href="https://devhints.io/lua">Lua Cheatsheet</a>
+                          </p>
+                          <h4>Other Language Resources</h4>
+                          <p>
+                            <a href="https://university.webflow.com/">Webflow University</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Game Dev Resources" id="gamedevresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Game Dev Resources</h4>
+                          <p>
+                            <a href="https://characterdesignreferences.com/visual-library">Visual Library</a><br>
+                            <a href="https://kenny.nl">Free Assets</a><br>
+                            <a href="https://www.youtube.com/watch?v=zEfBPmPDUVc">Using AI to Generate Game Assets For Free</a><br>
+                            <a href="https://www.youtube.com/watch?v=UfSw6428bcc">Painterly Animations in Blender 3D</a><br>
+                            <a href="https://www.perforce.com/indie-studio-pack">https://www.perforce.com/indie-studio-pack</a><br>
+                            <a href="https://github.com/Alex-Toucan/atproducts.xyz/tree/main/public/media/md/bingai.md">Bing AI on: What has to be on a model design sheet, so I can work with it in Blender?</a>
+                          </p>
+                          <h4>Godot Resources</h4>
+                          <p>
+                            <a href="https://docs.godotengine.org/">Godot Docs</a><br>
+                            <a href="https://www.youtube.com/watch?v=WmZq3UgOGKY">Godot UI Setup</a><br>
+                            <a href="https://www.youtube.com/watch?v=rS88FPBtqBk">Godot Toolbox</a><br>
+                          </p>
+                          <h4>Godot Materials</h4>
+                          <p>The full &quot;stack&quot; of components in a 3D project can be visualized as:</p>
+                          <ul>
+                            <li><strong>Model/Mesh:</strong> Structure of the object.</li>
+                            <li><strong>Material/Shader/Texture:</strong> How the object looks and interacts with light.</li>
+                            <li><strong>Rig/Animation:</strong> How the object moves.</li>
+                            <li><strong>Scene/Light/Camera:</strong> How the object is viewed and interacts in the environment.</li>
+                            <li><strong>Physics/Collider:</strong> How the object interacts physically with other objects.</li>
+                            <li><strong>Scripts/Assets/Particles/Sound:</strong> Control behaviors, effects, and environmental immersion.</li>
+                          </ul>
+                          <h4>Godot Scenes</h4>
+                          <p>
+                            <a href="https://www.youtube.com/watch?v=PcAkWClET4U">Mohsen Zare - MTerrain</a><br>
+                            <a href="https://www.youtube.com/watch?v=9olfCkPs1WU">Mohsen Zare - Terrain Approach</a><br>
+                            <a href="https://www.youtube.com/watch?v=MYINKjJV_G0&amp;t=403s">Jen Jell - OWG</a><br>
+                            <a href="https://www.youtube.com/watch?v=rcsIMlet7Fw">Wandering Clipmap with LOD</a><br>
+                            <a href="https://www.youtube.com/watch?v=oV8c9alXVwU&amp;t=551s">Terrain3D</a><br>
+                            <a href="https://www.youtube.com/watch?v=1ho6tbxGt4c&amp;t=28s">Wojtek - Forest Scene</a><br>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Discord Resources" id="discordresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Discord Resources</h4>
+                          <p>
+                            <a href="https://discord.js.org/">Discord.js Website</a><br>
+                            <a href="https://discordjs.guide/">Discord.js Guide</a><br>
+                            <a href="https://discord.com/developers/docs/intro">Discord Developers Portal</a><br>
+                            <a href="https://discord.id/">Discord ID</a><br>
+                            <a href="https://discords.com/emoji-list/">Discord Icons</a>
+                            <a href="https://www.authorityhunter.com/how-to-revive-dead-discord-server/">Discord Server Revival</a><br>
+                            <a href="https://r.3v.fi/discord-timestamps/">Discord Timestamp Creator</a><br>
+                            <a href="https://discordresources.com/">Other Discord Resources</a><br>
+                            <a href="https://www.youtube.com/watch?v=c_arQ-6ElYI">Discord as Storage</a><br>
+                            <a href="https://dev.to/gogamic/how-to-run-discord-bot-24-7-in-ubuntu-3do0">How to run Discord Bots 24/7 w/ Ubuntu</a><br>
+                            <a href="https://discord.gg/QqWuTbEUrD">The Merchant's Shop!</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Linux / Arch Resources" id="linuxarchresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Linux Resources</h4>
+                          <p>
+                            <a href="https://phoenixnap.com/kb/install-ftp-server-on-ubuntu-vsftpd">How to Install FTP Server on Ubuntu with vsftpd</a><br>
+                            <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps">How to install and manage supervisor on Ubuntu and Debian VPS</a><br>
+                            <a href="https://sysprog21.github.io/lkmpg/">Linux Kernel Module Programming Guide</a><br>
+                            <a href="https://www.youtube.com/watch?v=cC1CqyCN9Q0">How to Fit In with Linux Users</a>
+                          </p>
+                          <h4>Arch Resources</h4>
+                          <p>
+                            <a href="https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans))">Pacman Tips and Tricks (Arch)</a><br>
+                            <a href="https://averagelinuxuser.com/clean-arch-linux/#1-clean-package-cache">Arch Linux Clean Instructions</a>
+                          </p>
+                          <h4>Astonishing GNOME customization</h4>
+                          <p>
+                            <a href="https://www.youtube.com/watch?v=3XHIV2RF2Yc">Glassmorphism</a>
+                            <br>
+                            <a href="https://www.youtube.com/watch?v=49_ZUgpMMFA">Everforest</a>
+                            <br>
+                            <a href="https://www.youtube.com/watch?v=bDTUbBoIoUQ">Fluent</a>
+                            <br>
+                            <a href="https://www.youtube.com/watch?v=qC0mnGprbeM">Orchis GTK</a>
+                            <br>
+                            <a href="https://www.youtube.com/watch?v=1doqD4t7xVs">Evergreen</a>
+                          </p>
+                          <h4>Apache, MariaDB and PHP (LAMP) Installation for Arch-based Distros</h4>
+                          <p>
+                            <a href="https://forum.manjaro.org/t/howto-install-apache-mariadb-mysql-php-lamp/13000">[HowTo] Install Apache, MariaDB (MySQL), PHP (LAMP)</a>
+                          </p>
+                          <blockquote class="ps-3">
+                            <p>&gt; PS: You must add a <code>phpmyadmin</code> DB and import <code>/usr/share/webapps/phpmyadmin/sql/create_tables.sql</code> there - on Linux. <br> &gt; And also modify / add some lines in your <code>.../phpmyadmin/config.inc.php</code> to tell <code>phpmyadmin</code> to use this DB for it&#39;s configuration storage: </p>
+                          </blockquote>
+                          <h3>Under the <code>phpMyAdmin configuration storage settings</code>-section </h3>
+                          <p>Un-comment all tables matching the pattern below - but check in your DB, if they were created by the <code>create_table.sql</code>. </p>
+<pre><code> 
+// REQUIRED User - uncomment as well!!!
+// Replace &#39;pma&#39; and &#39;pmapass&#39; with the username &amp; password of a MySQL user that contains the appropriate privileges on the phpmyadmin database.
+$cfg[&#39;Servers&#39;][$i][&#39;controluser&#39;] = &#39;pma&#39;; 
+$cfg[&#39;Servers&#39;][$i][&#39;controlpass&#39;] = &#39;pmapass&#39;;
+// Pattern 
+$cfg[&#39;Servers&#39;][$i][&#39;tableName&#39;] = &#39;tableName&#39;; 
+</code></pre>      
+                          <h5>Optional: Create the User</h5>
+<pre><code> 
+CREATE USER 'pma'@'localhost' IDENTIFIED BY'pmapass';
+GRANT SELECT, INSERT, UPDATE, DELETE ON phpmyadmin.* TO 'pma'@'localhost'; 
+FLUSH PRIVILEGES;
+</code></pre>
+                          <p>Problems or using Windows? <br> =&gt; Refer to the Docs: <code>http://yourServerNameOrIPAddr/phpmyadmin/doc/html/setup.html#phpmyadmin-configuration-storage</code>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Mega.nz Resources" id="meganzresources" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Mega.nz Resources</h4>
+                          <p>
+                            <a href="https://controlc.com/60860490">Udemy Mega.nz 12 Parts Courses Collection</a><br>
+                            <a href="https://controlc.com/1a365e0f">4 TB Mega.nz Courses Collection</a><br>
+                            <a href="https://controlc.com/aedfca1f">14 TB Mega.nz Courses Collection</a><br>
+                            <a href="https://mega.nz/folder/zGJT1QQQ#O-8yiH845GN26ajAvkoLkA">Additional CyberSecurity Files</a><br>
+                            <a href="https://mega.nz/folder/dLIWkbCB#0MH4CBGlj0JUA6n00EbpDg">150 Interview Problems (AlgoExpert Course 1)</a><br>
+                            <a href="https://mega.nz/folder/oWAwAR5Y#WsyNfvNK_SkoFXS4WJKcTA">Systems Design Fundamentals (AlgoExpert Course 2)</a><br>
+                            <a href="https://mega.nz/folder/RGBgHJIS#qOsdOXynX41S5TFOP0PqHg">Data Structures Crash Course (AlgoExpert Course 3)</a><br>
+                            <a href="https://mega.nz/folder/5bQAFTCZ#q3HkgHHDSjPk_q0Uq0QQ4w">Become an Algorithms Expert (AlgoExpert Course 4)</a><br>
+                            <a href="https://mega.nz/folder/YXIC2DqA#_A9kVgMPzl652Qfqi9lhlA">Interview Preparation Course (Part 1) (AlgoExpert Course 5)</a><br>
+                            <a href="https://mega.nz/folder/JeZ2RTTI#s4jjLfA1ef27bIQH_1ei3Q">Interview Preparation Course (Part 2) (AlgoExpert Course 6)</a><br>
+                            <a href="https://mega.nz/folder/UGRQnTaI#L6B62U_3jUOuRkCEH4DZvw">Interview Tips (AlgoExpert Course 7)</a><br>
+                          </p>
+                          <p>
+                            <a href="https://mega.nz/folder/dbwmwS6b#p9nGMhSXETZBAEYGoKty8Q">Code With Mosh</a> (Code: p9nGMhSXETZBAEYGoKty8Q)
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="All Guides VenenJean used to Install VirtualBox under Manjaro" id="vbmanjaro" parent="learningresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>All Guides VenenJean used to Install VisualBox under Manjaro</h4>
+                          <p>
+                            <a href="https://wiki.manjaro.org/index.php/VirtualBox#Configuring_the_host">Guide 1 (Manjaro Wiki)</a><br>
+                            <a href="https://hibbard.eu/install-ubuntu-virtual-box">Guide 2 (Hibbard)</a><br>
+                            <a href="https://www.cherryservers.com/blog/how-to-install-and-start-using-mariadb-on-ubuntu-20-04">Guide 3 (CherryServers)</a><br>
+                            <a href="https://www.ibm.com/docs/en/spectrum-lsf-rtm/10.2.0?topic=ssl-configuring-default-root-password-mysqlmariadb">Guide 4 (IBM)</a><br>
+                            <a href="https://linuxiac.com/how-to-install-virtualbox-on-manjaro-linux/">Guide 5 (LinuxIAC)</a><br>
+                            <a href="https://mariadb.org/download/?t=repo-config&d=22.04+%22jammy%22&v=11.1&r_m=23Media">Guide 6 (MariaDB)</a><br>
+                            <a href="https://phoenixnap.com/kb/ssh-with-key">SSH Public Key Connection Setup</a><br>
+                            <a href="https://wiki.manjaro.org/">Manjaro Wiki</a>
+                          <p>
+                            <a href="https://www.youtube.com/watch?v=V2N1nrULjcY">Fixing VBox Users: The Screen Scaling Problem</a>
+                          </p>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                    </Fragment>
+                  </Accordion>
+                </Fragment>
+              </AccordionItem>
+              <AccordionItem title="Other Resources" id="otherresources" parent="resourcesAccordion">
+                <Fragment slot="accordion-item-content">
+                  <h3>Other Resources</h3>
+                  <p>
+                    <a href="https://www.datensen.com/blog/">Data Management Blog</a><br>
+                    <a href="https://phish.report">Report Phishing</a><br>
+                    <a href="https://codebeautify.org/">CodeBeautify</a><br>
+                    <a href="https://www.sonarsource.com/products/sonarlint/features/visual-studio/">SonarLint</a><br>
+                    <a href="https://www.freesoff.com/">FreeSoff (Free Software)</a><br>
+                    <a href="https://www.wolframalpha.com">Math, Science, Tech, Culture, and Life API</a><br>
+                    <a href="https://tinywow.com">Free AI Writing, PDF, Image, and Other Online Tools</a><br>
+                    <a href="https://www.opensourcealternative.to">Open Source Alternatives</a><br>
+                    <a href="https://www.jotform.com">Free Letter Forms</a><br>
+                    <a href="https://www.nirsoft.net/panel/">NirSoft</a><br>
+                    <a href="https://www.commontools.org/">Commontools.org</a><br>
+                    <a href="https://pmichaels.net/2021/08/29/compiling-code-files-in-c-using-roslyn/">CS2DLL</a><br>
+                    <a href="https://app.eraser.io/">Eraser (Planning)</a><br>
+                    <a href="https://github.com/bytemate/chatapi-single">ChatGPT-API-Server</a><br>
+                    <a href="https://fathy.fr/carbonyl">Chrome Render to Terminal</a><br>
+                    <a href="https://dontasktoask.com/">Don't ask to ask, just ask</a><br>
+                    <a href="https://insights.stackoverflow.com/survey/">StackOverflow Yearly Surveys</a><br>
+                    <a href="https://survey.devographics.com/en-US">State of Language Survey</a><br>
+                  </p>
+                  <Accordion parent="otherresourcesAccordion">
+                    <Fragment slot="accordion-content">
+                      <AccordionItem title="Designer Resources" id="designerresources" parent="otherresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Designer Resources</h4>
+                          <p>
+                            <a href="https://figma.com">Figma</a><br>
+                            <a href="https://www.youtube.com/watch?v=HMntFTgy8Is">Simple Table in Figma</a><br>
+                            <a href="https://www.youtube.com/watch?v=IHy57Lrzkb4">The Pro Tutorials you've never seen if you use Blender</a><br>     
+                            <a href="https://www.blenderkit.com/">Materials for Blender</a><br>
+                            <a href="https://namelix.com/">Business Name Generator</a><br>
+                            <a href="https://app.brandmark.io/v3/">BrandMark.Io</a><br>
+                            <a href="https://www.canva.com/colors/color-wheel/">Canva Color Wheel</a><br>
+                            <a href="https://www.spycolor.com/">SpyColor</a><br>
+                            <a href="https://coolbackgrounds.io/">CoolBackgrounds</a><br>
+                            <a href="https://uigradients.com/">UIgradients</a><br>
+                            <a href="https://cssgradient.io/">CSS Gradients</a><br>
+                            <a href="https://www.svgbackgrounds.com/">SVG Gradients</a><br>
+                            <a href="https://iconscout.com/">Iconscout</a><br>
+                            <a href="https://www.ilovepdf.com/">ILovePDF</a><br>
+                            <a href="https://jpg2png.com/">JPG2PNG</a><br>
+                            <a href="https://png2pdf.com/">PNG2PDF</a><br>
+                            <a href="https://pdf2png.com/">PDF2PNG</a><br>
+                            <a href="https://www.zamzar.com/convert/xlsx-to-pdf/">XLSX2PDF</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Git Resources" id="gitresources" parent="otherresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Git Resources</h4>
+                          <p>
+                            <a href="https://git-scm.com/">Git</a><br>
+                            <a href="https://github.com/">GitHub</a><br>
+                            <a href="https://youtube.com/shorts/y7fwyTh0F7Y?si=1YktIy5eP2h4vF1k">GitHub in VSCode</a><br>
+                            <a href="https://gitlab.com/">GitLab</a><br>
+                            <a href="https://www.gitkraken.com/">GitKraken</a><br>
+                            <a href="https://bitbucket.org/">BitBucket</a><br>
+                            <a href="https://youtu.be/RxHJdapz2p0?si=H3teosorRjwVNE7P">How Git Actually Works</a><br>
+                            <a href="https://about.gitlab.com/images/press/git-cheat-sheet.pdf">Git Cheat Sheet</a><br>
+                            <a href="https://ohshitgit.com/">Little Git Tricks</a><br>
+                            <a href="https://gitmoji.dev">GitMoji</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Web Resources" id="webresources" parent="otherresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Web Resources</h4>
+                          <p>
+                            <a href="http://www.denic.de/en/domains/whois-service/web-whois.html">WHOIS Lookup</a><br>
+                            <a href="https://www.immuniweb.com/websec/">Web Security Testing</a><br>
+                            <a href="https://css-tricks.com/probably-dont-base64-svg/">CSS Data URI</a><br>
+                            <a href="https://www.urldecoder.io/">URL Decoder</a><br>
+                            <a href="https://webformatter.com/">Web Formatter</a><br>
+                            <a href="https://loremipsum.io/">Lorem Ipsum Generator</a><br>
+                            <a href="https://astro.build/">Astro</a><br>
+                            <a href="https://getbootstrap.com">Bootstrap</a><br>
+                            <a href="https://tailwindcss.com/">Tailwind.css</a><br>
+                            <a href="https://jquery.com/">JQuery JS</a><br>
+                            <a href="http://vanilla-js.com/">Vanilla-JS Framework</a><br>
+                            <a href="https://bulma.io/">Bulma CSS Framework</a><br>
+                            <a href="https://framer.com/">Web Design Tool with Publishing</a><br>
+                            <a href="https://addr.tools/">Internet Tools</a><br>
+                            <a href="https://www.netlify.com/">Netlify</a><br>
+                            <a href="https://vercel.com/">Vercel</a><br>
+                            <a href="https://www.webbyawards.com/">Webby Awards</a><br>
+                            <a href="https://pagespeed.web.dev/">PageSpeed Insights</a><br>
+                            <a href="https://www.webbyawards.com/">Webby Awards</a><br>
+                            <a href="https://axiom.ai">No Code Browser Automation</a><br>
+                            <a href="https://www.youtube.com/watch?v=9ElrcTtAxzA">The Secret Science of Perfect Spacing Part 1</a><br>
+                            <a href="https://www.youtube.com/watch?v=r1DANFZYJDw">The Secret Science of Perfect Spacing Part 2</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Code Editors" id="codeeditors" parent="otherresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Code Editors</h4>
+                          <p>
+                            <a href="https://atom.io">Atom</a><br>
+                            <a href="https://code.visualstudio.com/download">Visual Studio Code (VSCode)</a>
+                            <a href="https://youtube.com/shorts/y7fwyTh0F7Y?si=1YktIy5eP2h4vF1k">GitHub in VSCode</a><br>
+                            <a href="https://www.sublimetext.com/download">Sublime Text</a><br>
+                            <a href="https://github.com/WerWolv/ImHex">Hex Editor (ImHex)</a><br>
+                            <a href="https://www.vim.org/download.php">Vim</a><br>
+                            <a href="https://www.jetbrains.com/pycharm/">Pycharm (Python IDE)</a><br>
+                            <a href="https://www.eclipse.org/downloads/">Eclipse (Java IDE)</a><br>
+                            <a href="https://www.jetbrains.com/idea/download/">Intellij (Java IDE)</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Fonts" id="fontsitem" parent="otherresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Fonts</h4>
+                          <p>
+                            <a href="https://gwfh.mranftl.com/fonts">Google WebFonts Helper</a><br>
+                            <a href="https://www.cufonfonts.com/font/segoe-ui-4">Segoe UI</a><br>
+                            <a href="https://www.cufonfonts.com/font/force-commander">Force Commander</a><br>
+                            <a href="https://www.cufonfonts.com/search/Oswald">Oswald</a><br>
+                            <a href="https://fonts.google.com/specimen/Oswald">Oswald from Google</a><br>
+                            <a href="https://www.cufonfonts.com/search/kanit">Kanit</a><br>
+                            <a href="https://fonts.google.com/specimen/Kanit">Kanit from Google</a><br>
+                            <a href="https://zyro.com/blog/clean-fonts/">More Clean Fonts</a><br>
+                            <a href="https://typographyhandbook.com/#introduction">Typography Handbook</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Discord Glitches" id="discordgitches" parent="otherresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Discord Glitches</h4>
+                          <p>
+                            <a href="https://github.com/PanIntegralus/discord.webm-compilation">Glitched WEBMs</a>
+                            <br>
+                            <a href="https://gist.github.com/ghostrider-05/8f1a0bfc27c7c4509b4ea4e8ce718af0">Discord Link Protocols</a>
+                            <br>
+                            <a href="https://drive.google.com/drive/folders/18-9X13abayITCKmToARWDljynvMzBXob">Fake Nitro Links</a>
+                          </p>
+                          <p>
+                            <a href="https://www.youtube.com/watch?v=MDSscZjzXb4">Much more in this video</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                    </Fragment>
+                  </Accordion>
+                </Fragment>
+              </AccordionItem>
+              <AccordionItem title="YouTube Creators" id="youtubecreators" parent="resourcesAccordion">
+                <Fragment slot="accordion-item-content">
+                  <h3>YouTube Creators</h3>
+                  <p>This section will not be categorized by accordions.</p>
+                  <h4>C#</h4>
+                  <p>
+                    <a href="https://www.youtube.com/@IAmTimCorey">IAmTimCorey</a><br>
+                    <a href="https://www.youtube.com/@tutorialsEUC">tutorialsEU</a>
+                  </p>
+                  <h4>JavaScript</h4>
+                  <p>
+                    <a href="https://www.youtube.com/@ColorCodeio">ColorCode</a>
+                  </p>
+                  <h4>General</h4>
+                  <p>
+                    <a href="https://www.youtube.com/@Cleancoders/videos">Clean Coders</a><br>
+                    <a href="https://www.youtube.com/@Coderized">Coderized</a><br>
+                    <a href="https://www.youtube.com/@wndtn/videos">Winderton</a><br>
+                    <a href="https://www.youtube.com/@CodeAesthetic">CodeAesthetic</a><br>
+                    <a href="https://www.youtube.com/@StudyingWithAlex">Studying with Alex</a><br>
+                    <a href="https://www.youtube.com/watch?v=NuyzuNBFWxQ">Fireship</a>
+                  </p>
+                  <h4>Computer Science</h4>
+                  <p>
+                    <a href="https://www.youtube.com/cs50">CS50 | Harvard University</a><br>
+                    <a href="https://www.youtube.com/channel/UC1szFCBUWXY3ESff8dJjjzw">Loi Liang Yang</a>
+                  </p>
+                  <h4>Web Development</h4>
+                  <p>
+                    <a href="https://www.youtube.com/@KevinPowell">Kevin Powell <a href="https://www.youtube.com/@WebDevSimplified">Web Dev Simplified</a><br>
+                    <a href="https://www.youtube.com/@thewebsitearchitect">The Website Architect</a><br>
+                    <a href="https://www.youtube.com/@javascriptmastery">Javascript Mastery - YT</a><br>
+                    <a href="https://www.jsmastery.pro/">Javascript Mastery - Website</a>
+                  </p>
+                  <h4>Networks/Cybersecurity</h4>
+                  <p>
+                    <a href="https://www.youtube.com/@NetworkChuck">NetworkChuck</a>
+                  </p>
+                  <h4>Indie App Development</h4>
+                  <p>
+                    <a href="https://www.youtube.com/@craftzdog">Takuya Matsuyama</a><br>
+                    <a href="https://www.youtube.com/@devaslife">DevAsLife</a>
+                  </p>
+                  <h4>NeoVim Usage</h4>
+                  <p>
+                    <a href="https://www.devas.life/effective-neovim-setup-for-web-development-towards-2024/">Takuya Matsuyama</a>
+                  </p>
+                </Fragment>
+              </AccordionItem>
+              <AccordionItem title="Hacking Resources" id="hackingresources" parent="resourcesAccordion">
+                <Fragment slot="accordion-item-content">
+                  <h3>Hacking Resources</h3>
+                  <p>
+                    <a href="https://www.youtube.com/watch?v=mPVG3tXjMgI">Making the Hacker Mindset</a><br>
+                    <a href="https://hackingthe.cloud">Hacking The Cloud</a><br>
+                    <a href="https://hacktricks.xyz">HackTricks</a><br>
+                    <a href="https://trickest.com/">Trickest</a><br>
+                    <a href="https://www.hackthebox.com/">HackTheBox</a><br>
+                    <a href="http://picoctf.com">CTF Hacking for Beginners</a><br>
+                    <a href="http://www.liveoverflow.com">LiveOverflow</a><br>
+                    <a href="https://malapi.io">Malapi</a><br>
+                    <a href="https://unprotect.it">Unprotect Project</a><br>
+                    <a href="https://0dayfans.com/">0DayFans</a><br>
+                    <a href="/media/files/MOOCs_Courses_Download_Access_To_500_Courses.txt">MOOC Courses</a><br>
+                    <a href="https://cheat.sh">Cheat.sh Repos</a><br>
+                    <a href="https://thehackerdev.com/windows-api-function-naming-convention">Windows API Function Naming Convention</a><br>
+                    <a href="https://www.youtube.com/watch?v=5g137gsB9Wk">File Path Race Condition & How To Prevent It - bin 0x31 (LiveOverflow)</a><br>
+                    <a href="http://www.insecam.org">InSeCam</a><br>
+                    <a href="https://tools.intigriti.io/redirector/">Open Redirector/SSRF Payload Generator</a><br>
+                    <a href="https://uops.info/table.html">CPU/IP Table</a><br>
+                    <a href="https://journal.opendataplayground.com/cyberhack-2023/">CyberHack 2023</a><br>
+                    <a href="https://gtfobins.github.io/">List of UNIX Binaries for Priv Escalation</a><br>
+                    <a href="https://pwk.hide01.ir/">Linux & Bash Hacking</a><br>
+                    <a href="https://gchq.github.io/CyberChef/">CyberChef</a><br>
+                    <a href="https://app.any.run/">Hacking Stats</a><br>
+                    <a href="https://pastebin.com">PasteBin</a><br>
+                    <a href="https://pastebin.com/pApryWbx">Hijack URLS</a><br>
+                    <a href="https://spidersuite.github.io">Developing CyberSecurity Solutions</a><br>
+                    <a href="https://zer1t0.gitlab.io/posts/attacking_ad/">Attacking Ad</a><br>
+                    <a href="https://cyber.bgu.ac.il/new-malware-jumps-air-gapped-devices-by-turning-power-supplies-into-speakers/">Power Supplies to Speakers</a><br>
+                    <a href="https://cyber.bgu.ac.il/advanced-cyber/airgap">AirGap</a><br>
+                    <a href="https://fccid.io/">FCC ID Database</a><br>
+                    <a href="https://sploitus.com">Sploitus</a><br>
+                    <a href="https://reddit.com/r/netsec">r/netsec</a><br>
+                    <a href="https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list">OSINT start.me 1</a><br>
+                    <a href="https://start.me/p/L1rEYQ/osint4all">OSINT start.me 2</a><br>
+                    <a href="https://youtu.be/S9JGmA5_unY">How Secure is 256-bit Security?</a><br>
+                    <a href="https://youtu.be/nFZm4sVsPXk?si=7J_GzfZe-UOqic4b">TailOS Setup</a><br>
+                    <a href="https://youtu.be/PbVaagSWzgM">Hijacking account with Open Redirect in OAuth 2.0 - Stealing Access Tokens</a><br>
+                    <a href="https://youtu.be/09hrHtBLVeA">Discovering API and Analyzing Endpoints Using Postman and Browser w/ crAPI</a><br>
+                    <a href="https://youtu.be/Op6QvVMj4fw">Exploiting SQL Injection in GraphQL</a><br>
+                    <a href="https://www.youtube.com/watch?v=JbEPJv7Ybcs">Learn before CyberSecurity</a><br>
+                    <a href="https://www.youtube.com/watch?v=Mt4PYoyiqB0">Tips before CyberSecurity</a><br>
+                    <a href="https://youtu.be/In-XF5sY1Yo">Graphql Endpoint Analysis</a><br>
+                    <a href="https://youtube.com/playlist?list=PL4wZd4YK_64FeEvmdSkORNRLrgS5DavgT">WireShark Videos</a><br>
+                    <a href="https://anonfiles.com/eby53a7by7/Dhop.py">Win10 VM Rat</a><br>
+                    <a href="/media/files/SPOILER_VirusShare_00e8704830ff0331d16f7d392b2efcbd.zip">Analyzing Data 1</a><br>
+                    <a href="/media/files/SPOILER_VirusShare_00ee48b8a32ce81fd8ebfc33cf36d9c2.zip">Analyzing Data 2</a><br>
+                    <a href="/media/files/SPOILER_VirusShare_b4027a690167090b8c9eb5bc4a507742.zip">Analyzing Data 3</a>
+                  </p>
+                  <Accordion parent="hackingresourcesAccordion">
+                    <Fragment slot="accordion-content">
+                      <AccordionItem title="Network Attack" id="networkattack" parent="hackingresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Network Attack</h4>
+                          <p>
+                            <a href="https://crypto.stanford.edu/cs155old/cs155-spring11/lectures/08-tcp-dns.pdf">Stanford</a><br>
+                            <a href="https://www.cl.cam.ac.uk/~rja14/Papers/SEv2-c21.pdf">Cambridge</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Network Fundamentals" id="networkfundamentals" parent="hackingresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Network Fundamentals</h4>
+                          <p>
+                            <a href="https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi">Old-Fashioned</a><br>
+                            <a href="https://www.youtube.com/playlist?list=PLDQaRcbiSnqF5U8ffMgZzS7fq1rHUI3Q8">Modern</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Obfuscating Programs" id="obfuscatingpro" parent="hackingresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Obfuscating Programs</h4>
+                          <p>
+                            <a href="https://crates.io/crates/secmem-proc">Process Hardening</a><br>
+                            <a href="https://crates.io/crates/debugoff">Debug Off</a><br>
+                            <a href="https://crates.io/crates/goldberg">GoldBerg</a><br>
+                            <a href="https://crates.io/crates/cryptify">Cryptify</a><br>
+                            <a href="https://crates.io/crates/encrust">Mem Encrytion</a><br>
+                            <a href="https://crates.io/crates/stronghold-runtime">Stronghold-Runtime</a><br>
+                            <a href="https://crates.io/crates/Hela">Hela</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="CTF/RE Resources & Challenges" id="ctfreresources" parent="hackingresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>CTF/RE Resources & Challenges</h4>
+                          <p>
+                            <a href="https://411hall.github.io/assets/files/CTF_template.ctb">CherryTree Template for CTF Enumeration</a><br>
+                            <a href="https://ctf101.org/">CTF Compact Guide</a><br>
+                            <a href="https://ctftime.org/">CTF Events</a><br>
+                            <a href="https://ctftime.org/ctf-wtf/">CTF Learning 1</a><br>
+                            <a href="http://ctflearn.com/">CTF Learning 2</a><br>
+                            <a href="http://captf.com/practice-ctf/">CTF Challenges</a><br>
+                            <a href="https://reverse.put.as/crackmes/">Reverse Engineering</a><br>
+                            <a href="https://challenges.re/">RE Challenges</a><br>
+                            <a href="https://breachdirectory.tk">RE BreachDirectory</a><br>
+                            <a href="http://pwnable.tw/">pwnable.tr</a><br>
+                            <a href="http://reversing.kr/">Challenge 1</a><br>
+                            <a href="https://w3challs.com/">Challenge 2</a><br>
+                            <a href="https://pwn0.com">Challenge 3</a><br>
+                            <a href="https://w3challs.com/">Challenge 4</a><br>
+                            <a href="https://io.netgarage.org/">Challenge 5</a><br>
+                            <a href="http://ringzer0team.com/">Challenge 6</a><br>
+                            <a href="http://www.hellboundhackers.org/">Challenge 7</a><br>
+                            <a href="http://www.overthewire.org/wargames/">Challenge 8</a><br>
+                            <a href="http://counterhack.net/Counter_Hack/Challenges.html">Challenge 9</a><br>
+                            <a href="http://www.hackthissite.org/">Challenge 10</a><br>
+                            <a href="http://vulnhub.com/">Challenge 11</a><br>
+                            <a href="http://ctf.komodosec.com">Challenge 12</a><br>
+                            <a href="https://maxkersten.nl/binary-analysis-course/">Challenge 13</a><br>
+                            <a href="https://pwnadventure.com">Challenge 14</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="GitHub Resources" id="githubresources" parent="hackingresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>GitHub Resources</h4>
+                          <p>
+                            <a href="https://github.com/SkyPenguin-Solutions/SkyLine">CyberSecurity Programming Language</a><br>
+                            <a href="https://github.com/bmullan/CIAB.Full-Mesh.VPN.Wireguard.FRR.BGP.VXLAN.Internet.Overlay.Architecture">Cloud In A Box (CIAB)</a><br>
+                            <a href="https://github.com/LimerBoy/Impulse">Impulse (DoS Toolkit)</a><br>
+                            <a href="https://github.com/oracio-tech/doenerium">Data Stealer</a><br>
+                            <a href="https://github.com/lukasbalazik123/mantua">AntiDebug, AntiVM, AntiAV C Linux Library</a><br>
+                            <a href="https://github.com/eric-therond/webunpack">Vulnerable Module Detector</a><br>
+                            <a href="https://github.com/ffuf/ffuf">Web Fuzzer (Go)</a><br>
+                            <a href="https://github.com/freddiebarrsmith/Buffer-Overflow-Exploit-Development-Practice">OSCP Training</a><br>
+                            <a href="https://github.com/OlivierLaflamme/Cheatsheet-God">OSCP/PTP/PTX Cheatsheet</a><br>
+                            <a href="https://github.com/CorentinJ/Real-Time-Voice-Cloning">Voice Cloning</a><br>
+                            <a href="https://github.com/uppusaikiran/awesome-cctf-cheatsheet">CTF Cheatsheet</a><br>
+                            <a href="https://github.com/Voorivex/pentest-guide">Pentest Guide</a><br>
+                            <a href="https://github.com/sctreaak/keyhacks">KeyHacks</a><br>
+                            <a href="https://github.com/TomNomNom">TomNomNom</a><br>
+                            <a href="https://github.com/swisskyrepo/PayloadsAllTheThings">Payloading</a><br>
+                            <a href="https://github.com/bee-san/pyWhat">pyWhat</a><br>
+                            <a href="https://github.com/martinmarinov/TempestSDR">TempestSDR</a><br>
+                            <a href="https://github.com/SaumyajeetDas/GodGenesis">GodGenesis</a><br>
+                            <a href="https://github.com/rly0nheart/osinteye">OSINTeye</a><br>
+                            <a href="https://github.com/r4wd3r/Suborner">Suborner</a><br>
+                            <a href="https://github.com/whoami15/FBI-Tools">FBI Tools</a><br>
+                            <a href="https://github.com/secgroundzero/CS-Aggressor-Scripts">Aggressor Scripts 1</a><br>
+                            <a href="https://github.com/Und3rf10w/Aggressor-scripts">Aggressor Scripts 2</a><br>
+                            <a href="https://github.com/harleyQu1nn/AggressorScripts">Aggressor Scripts 3</a><br>
+                            <a href="https://github.com/rasta-mouse/Aggressor-Script">Aggressor Scripts 4</a><br>
+                            <a href="https://github.com/RhinoSecurityLabs/Aggressor-Scripts">Aggressor Scripts 5</a><br>
+                            <a href="https://github.com/bluscreenofjeff/AggressorScripts">Aggressor Scripts 6</a><br>
+                            <a href="https://github.com/001SPARTaN/aggressor_scripts">Aggressor Scripts 7</a><br>
+                            <a href="https://github.com/360-A-Team/CobaltStrike-Toolset">CobaltStrike Toolset for Aggressor Scripts</a><br>
+                            <a href="https://github.com/Hacking-the-Cloud/htc-ctfs/tree/main/aws/cicdont">CICDont</a><br>
+                            <a href="https://hackingthe.cloud/aws/capture_the_flag/cicdont/">CICDont Capture the Flag</a><br>
+                            <a href="https://github.com/b1-team/superma">Superma</a><br>
+                            <a href="https://github.com/3nock/SpiderSuite">SpiderSuite</a><br>
+                            <a href="https://github.com/struppigel/PortexAnalyzerGUI">Portex Analyzer GUI</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Medium Resources" id="mediumresources" parent="hackingresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Medium Resources</h4>
+                          <p>
+                            <a href="https://medium.com/@rickarentsen/rock-paper-scissors-game-made-with-tkinter-with-python-e4003f697e0c">Rock Paper Scissors (Python Tutorial)</a><br>
+                            <a href="https://medium.com/@rickarentsen/5-interesting-facts-about-the-internet-b78b656f1a63 feedback is appreciated">5 Internet Facts</a><br>
+                            <a href="https://medium.com/@viveik.chauhan/blind-remote-code-execution-b9c4e119f7c3">Blind Remote Code Execution</a><br>
+                            <a href="https://medium.com/@dmxinajeansuit/elf-binary-mangling-part-1-concepts-e00cb1352301">Elf Binary Mangling (Part 1)</a><br>
+                            <a href="https://medium.com/@dmxinajeansuit/elf-binary-mangling-pt-2-golfin-7e5c82bb482c">Elf Binary Mangling (Part 2)</a><br>
+                            <a href="https://medium.com/@dmxinajeansuit/elf-binary-mangling-part-3-weaponization-6e11971108b3">Elf Binary Mangling (Part 3)</a>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                      <AccordionItem title="Almond Force Videos" id="almondforce" parent="hackingresourcesAccordion">
+                        <Fragment slot="accordion-item-content">
+                          <h4>Almond Force Videos</h4>
+                          <p>
+                            <a href="https://www.youtube.com/watch?v=LNnVlwWDe-M&list=PLUrAjkLbvTpJmHslr1BljYnm5Lnuug9jF">BCACTF 3</a><br>
+                            <a href="https://www.youtube.com/watch?v=I7ugaarsN9M&list=PLUrAjkLbvTpKw5ZC-jryJI6wQpHvH_naE">HeroCTF v4</a><br>
+                            <a href="https://www.youtube.com/watch?v=0dXv4mgFvEo&list=PLUrAjkLbvTpJvQddU6MZooARtnKtcI6Li">Incognito 3</a><br>
+                            <a href="https://www.youtube.com/watch?v=A9ACD-DGM2U&list=PLUrAjkLbvTpKNt1wDghHXqWGrt7p3nFfP">MidnightFlag - INFEKTION</a><br>
+                            <a href="https://www.youtube.com/watch?v=YljnMU6iswU&list=PLUrAjkLbvTpIID1I8sdwwe4fgFJOZCGhV">Hacky Holidays 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=4UzHNuhTJbs&list=PLUrAjkLbvTpLJGPdxueL5uRvUVwmr4SnY">Hack the Boo 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=j1CYn74wCXU&list=PLUrAjkLbvTpJK0qbXAE7H73H8WkY26OwD">CTF After Dark - Fall 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=TKFgnuftyrs&list=PLUrAjkLbvTpKOlxddIlVkOBvydnEw7qVS">Digital Overdose 2022 Autumn CTF</a><br>
+                            <a href="https://www.youtube.com/watch?v=kYcEAeek_Wk&list=PLUrAjkLbvTpIQLKVQHi1XJBGaBp6UAjQM">DEADFACE CTF 2022</a><br>
+                            <a href="https://m.youtube.com/watch?v=BjtVkYRhCHU&list=PLUrAjkLbvTpKN8YKY6ZBEag_EAOGBa9jQ">HTB Business CTF</a><br>
+                            <a href="https://www.youtube.com/watch?v=K1dOFkvOjiA&list=PLUrAjkLbvTpJ10Wol8D8HQM7oq6mOtUBP">Tenable CTF 2022</a><br>
+                            <a href="https://youtu.be/wOLkE6HyKqY">TyphoonCon CTF 2022 (KeyGenMe)</a><br>
+                            <a href="https://www.youtube.com/watch?v=ppvNiujCtlo&list=PLUrAjkLbvTpK_2XGiUTkrRvUhr1kVlZak">Cyber Apocalypse 2022 (HackTheBox)</a><br>
+                            <a href="https://www.youtube.com/watch?v=bDEXY_MY_Wk&feature=youtu.be">Hack The Box - Starting Point (Tier 0): Fawn</a><br>
+                            <a href="https://www.youtube.com/watch?v=yt_jfx4D1gY">Hack The Box - Starting Point (Tier 0): Meow & Almond Force Channel Updates</a><br>
+                            <a href="https://www.youtube.com/watch?v=7Ln4Ga8WBG8">HackTheBox Marshal in the Middle</a><br>
+                            <a href="https://www.youtube.com/watch?v=n4RK09OZbAw&list=PLUrAjkLbvTpLUHxP0zFq7kwRqs4NZIFvW">11 HackTheBox Videos</a><br>
+                            <a href="https://www.youtube.com/watch?v=w8MJitt3irc&list=PLUrAjkLbvTpLtLloI8Pqk1P3n8p1sCRw2">TJCTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=nSAJmtLbD-k&list=PLUrAjkLbvTpLT35eSB5anERpDAx2ogSCJangstrom">BYU CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=lI4gpyz09PE&list=PLUrAjkLbvTpJoJ5mVa0lf_UtoSetcwylu">Digital Overdose CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=-MdxtbXvDGI&list=PLUrAjkLbvTpLnJzdh8v4ONJI4TE14hhkq">NahamCon CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=BpX0TwnDTQY&list=PLUrAjkLbvTpI6p83T4HEx8rc3RBMuYw10">Boilers CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=0SnelTGKfDM&list=PLUrAjkLbvTpJgi2wc03ElMfgk9iAv7vSd">PatriotCTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=9uxuPygnEwk&list=PLUrAjkLbvTpIX9ZMshTxR3cJyW_kkOFIg">TAMUctf 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=UbAaLQz38T4&list=PLUrAjkLbvTpKnj4AARb4MeBb3hjOjF6BN">picoCTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=yeGdAOd4mEw&list=PLUrAjkLbvTpKS3VsD_G6GOD648aaYj46l">Metared CTF 2022 Stage 1</a><br>
+                            <a href="https://www.youtube.com/watch?v=cEhL-N6fPfs&list=PLUrAjkLbvTpLEz-ZjJDSNmUyD8apzG16m">Metared CTF 2022 Stage 2</a><br>
+                            <a href="https://youtu.be/crz0VYlV1eg">Metared CTF 2022 Stage 3</a><br>
+                            <a href="https://youtu.be/Y05VYgaVzz0">Metared CTF 2022 Stage 4</a><br>
+                            <a href="https://www.youtube.com/watch?v=lFNXm-hj53c&list=PLUrAjkLbvTpIkDrQ4zC2Hc9QUVl6xAe4s">Blackhat MEA CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=J6Zyn7B3FS0">WRECKCTF2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=6pMl2EB7Y7A&list=PLUrAjkLbvTpLIMsikAb4WY0wQPlaZ9jpo">DownUnderCTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=0KEj7GNXfQ8&list=PLUrAjkLbvTpJMEg0f8qDzWJpTOfm1i41B">CSAW CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=_nriNzpVrgQ&list=PLUrAjkLbvTpI4BFDBOFZnMr7Z61y0Ejvs">Inter-Galactic CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=fIcuIE1C-FY&list=PLUrAjkLbvTpIcQaDPx4sOGOUca4IpWLDI">SHELL CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=o2b33EMBM5w">Whack-a-frog corCTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=PmBTMNqUTys&list=PLUrAjkLbvTpK4ixlkQxZDrsj9mASlz26N">T3N4CI0US CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=6OANStAZEss&list=PLUrAjkLbvTpIOn4XCn7F9V5SXMXve766b">TFC CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=_w5qd0Rh9sg">MITRE Cyber Academy CTF 2022</a><br>
+                            <a href="https://www.youtube.com/watch?v=j8CVLGuNlwk&list=PLUrAjkLbvTpKbRFTCCxpqtCYVh3cfo0-v">picoCTF 2023</a><br>
+                            <a href="https://www.youtube.com/watch?v=pbdC-POk-XU&list=PLUrAjkLbvTpKBgf4uRsc2JWhs8OZeswah">Cyber Apocalypse 2023</a><br>
+                            <a href="https://www.youtube.com/watch?v=6S0v8lIk9oA">CTFGuide to CyberChef</a><br>
+                            <a href="https://www.youtube.com/watch?v=zH7GwcaCktA">Are Certs Worth It?</a><br>
+                          </p>
+                        </Fragment>
+                      </AccordionItem>
+                    </Fragment>
+                  </Accordion>
+                </Fragment>
+              </AccordionItem>
+              <AccordionItem title="Downloadable Resources" id="downloadableresources" parent="resourcesAccordion">
+                <Fragment slot="accordion-item-content">
+                  <h3>Downloadable Resources</h3>
+                  <div class="my-1">
+                    <h4>Windows Kernel Programming</h4>
+                    <a class="btn btn-primary" href="/media/files/Windows_Kernel_Programming_-_PDF_Room.pdf">View</a>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>Practical IoT Accessing</h4>
+                    <a class="btn btn-primary" href="/media/files/Practical_IoT_Hacking.pdf">View</a>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>Black Hat w/ Python</h4>
+                    <a class="btn btn-primary" href="/media/files/Black_Hat_Python_Python_Programming_for_Hackers_and_Pentesters.pdf">View</a>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>DoD for CyberSecurity</h4>
+                    <a class="btn btn-primary" href="https://media.defense.gov/2023/May/09/2003218554/-1/-1/0/JOINT_CSA_HUNTING_RU_INTEL_SNAKE_MALWARE_20230509.PDF">View</a>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>Race Conditions for Web Pentesting</h4>
+                    <a class="btn btn-primary" href="https://book.hacktricks.xyz/pentesting-web/race-condition">View</a>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>Digital Systems (10th Edition PDF)</h4>
+                    <div class="d-sm-flex gap-2">
+                      <a class="btn btn-primary" href="https://doc.lagout.org/electronics/Digital%20Systems%20Principles%20And%20Applications%20%20%5Bby%20Ronald%20Tocci%5D.pdf">View</a>
+                      <a class="btn btn-secondary" href="https://doc.lagout.org">doc.lagout.org</a>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>Clean Architecture: Structuring your Applications for Minimal Effort & Maximal Result.</h4>
+                    <a class="btn btn-primary" href="/media/pdf/clean-architecture-a-craftsmans-guide-to-software-structure-and-design_compress.pdf">View</a>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>Free Coding Handbooks!</h4>
+                    <a class="btn btn-primary" href="https://flaviocopes.com/access/">View</a>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>Free coding books!</h4>
+                    <a class="btn btn-primary" href="https://books.goalkicker.com/">View</a>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>1,000 I.T books!</h4>
+                    <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1F7D5c30nP-y_Q7SFqoRTRvJ7tl0UcY3q">View</a>
+                  </div>
+                  <hr>
+                  <div class="my-1">
+                    <h4>Over 8M+ eBooks!</h4>
+                    <a class="btn btn-primary" href="https://z-lib.io/">View</a>
+                  </div>
+                </Fragment>
+              </AccordionItem>
+            </Fragment>
+          </Accordion>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

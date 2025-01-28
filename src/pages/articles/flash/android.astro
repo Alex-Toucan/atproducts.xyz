@@ -1,0 +1,39 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Flash Player for Android" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Flash Player for Android'!" author="AT Products LLC & Flash Documentation" />
+<div id="page">
+  <Navbar pageTitle="Flash Player for Android" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="ao">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Flash Player for Android</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/flash">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <p>Adobe AIR and Adobe Flash Player for Android are no longer supported. You can download them using these APK files and make it work past their expiration dates.</p>
+          <a href="/media/files/com.adobe.flashplayer-11.1.115.81-11111508.apk" download>Adobe Flash Player for Android (v11)</a> <br>
+          <a href="/media/files/com.adobe.air.apk" download>Adobe AIR</a>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

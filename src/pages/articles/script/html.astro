@@ -1,0 +1,85 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="HTML Basics" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'HTML Basics'!" author="AT Products LLC & The Script Community" highlight="true" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="HTML Basics" 
+    link={[
+     { name: "The Script Community" , href: "/script" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="html" 
+      scrollcontent={[ 
+        { name: "Example Document", href: "#example" },
+        { name: "HTML Text", href: "#text" },
+        { name: "HTML Headings", href: "#head" },
+        { name: "HTML Links", href: "#links" },
+        { name: "HTML Images", href: "#img" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">HTML Basics</h1>
+          <h5 class="text-start"><b>Made by:</b> <a href="/script">The Script Community</a>.</h5>
+          <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="example">
+            <h2>Example Document</h2>
+            <p>
+<pre><code>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt; This is a heading &lt;/h1&gt;
+    &lt;p&gt; This is text &lt;/p&gt;
+    &lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;
+    &lt;img src="at.png" width="99.99% alt="Example Image"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code> </pre>
+            </p>
+            <p>We got to first lay down the very first thing to know. The <code>&lt;!DOCTYPE html&gt;</code> tag represents the Document Type and helps some browsers display correctly with your website, must only be used once. Some elements do need a closing tag, like <code>&lt;/center&gt;</code>.</p>
+            <p>The <code>&lt;head&gt;</code> tag is needed to represent the head of the website. The <code>&lt;body&gt;</code> tag is the same thing, but it's the body.</p>
+          </div>
+          <div id="text">
+            <h2>HTML Text</h2>
+            <p>Some elements are meant to show text like <code>&lt;text&gt;</code>, and <code>&lt;p&gt;</code>.</p>
+            <p><code>&lt;p&gt; This is text &lt;/p&gt;</code></p>
+          </div>
+          <div id="head">
+            <h2>HTML Headings</h2>
+            <p>The <code>&lt;h&gt;</code> tag has 6 different sizes, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.</p>
+            <p>1 is the hugest, to 6 is the smallest.</p>
+            <p><code>&lt;h1&gt; This is a heading &lt;/h1&gt;</code></p>
+          </div>
+          <div id="link">
+            <h2>HTML Links</h2>
+            <p>The <code>&lt;a&gt;</code> is a text element to represent links. Once clicked on the hyperlink, will redirect the user to a new link.</p>
+            <p><code>&lt;a href="atproducts.tk"&gt;Example Website&lt;/a&gt;</code></p>
+          </div>
+          <div id="img">
+            <h2>HTML Images</h2>
+            <p>The <code>&lt;img&gt;</code> tag is to show a image. The width or height description can be used by pixels or percentages by displays. The <code>alt</code> tag shows up when the image doesn't load or can't load, it shows the description.</p>
+            <pre><code>&lt;img src="at.png" width="99.99% alt="Example Image"&gt;</code></pre>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>The Script Community is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

@@ -1,0 +1,75 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Token Grabbers" description="Ethical Hacking Society presents 'Token Grabbers'!" author="AT Products LLC & Ethical Hacking Society" />
+<div id="page">
+  <Navbar pageTitle="Token Grabbers" 
+    link={[
+     { name: "Ethical Hacking Society" , href: "/ehs" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="token">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Token Grabbers</h1>
+          <h5 class="text-start"><b>Made by:</b> <a href="/ehs">Ethical Hacking Society</a>.</h5>
+          <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+          <div id="disclaimer">
+            <h2> Disclaimer </h2>
+            <p> We do not take responsibility for any damage or legal issues with these files here at AT Products LLC, and the other communities at the Ethical Hacking Society, The Script Community, CodingHome, or the Noodle Hackerspace. <br>
+              <br> Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM. <br>
+              <br> If it's an APK file, use an emulator. <br>
+              <br>
+              <a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a>
+              <br>
+              <a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div id="content">
+          <p>
+            <b>From <a href="/script">The Script Community</a>: </b> A Token Grabber are supposed to grab people on Discord's tokens, to hack their account.
+          </p>
+          <p>
+            <a href="/media/files/token-grabber.py" download>Token Grabber (Python)</a> by Alex Toucan
+          </p>
+          <p>
+            <a href="/media/files/token.py" download>Token Grabber (Python)</a> by wodxgod
+          </p>
+          <p>
+            <a href="/media/files/tokengrab.py" download>Token Grabber (Python)</a> by Wever
+          </p>
+          <p>
+            <a href="/media/files/token.7z" download>Token Grabber (7Z)</a><br>
+            <a href="/media/files/Token_grabber4.py" download>Token Grabber (Python)</a> by CobraCommander
+          </p>
+          <p>
+            <a href="/media/files/tokencyb.js" download>Token Grabber (JavaScript)</a> by CУБΞЯC
+          </p>
+          <p>
+            <a href="/media/files/brutetoken.py" download>Token Bruteforcer (Python)</a> by Social404
+          </p>
+          <p>
+            <b>Other Recommended Files/Steps </b><br>
+            <a href="https://github.com/ii7x/IMAGE-DISCORD-TOKEN-GRABBER-BY-II7X">Token Grabber.js</a><br>
+            <a href="https://github.com/Nimplex/ss-grabber.js">ss-grabber.js</a>
+          </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>Ethical Hacking Society is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

@@ -1,0 +1,45 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Browsers that support the Flash Player plug-in" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Browsers that support the Flash Player plug-in'!" author="AT Products LLC & Flash Documentation" />
+<div id="page">
+  <Navbar pageTitle="Browsers that support the Flash Player plug-in" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="br">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Browsers that support the Flash Player plug-in</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/flash">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <p>
+              To use <a href="flash2021">a working version of Flash Player</a>, you would have to find browsers that support the Flash Player plug-in. But since the Flash shutdown of 2021, major browsers like Chrome, Edge, Firefox, and more do not support the flash player plug-in. You can see some of the browsers that support the plug-in here.
+          </p>
+          <a href="https://basilisk-browser.org/" target="_blank" rel="noopener noreferrer">Basilisk</a> <br>
+          <a href="https://www.waterfox.net/" target="_blank" rel="noopener noreferrer">Waterfox</a> <br>
+          <a href="https://www.palemoon.org/" target="_blank" rel="noopener noreferrer">Pale Moon</a> <br>
+          <a href="https://www.mypal-browser.org/" target="_blank" rel="noopener noreferrer">Mypal</a> <br>
+          <a href="http://kmeleonbrowser.org/" target="_blank" rel="noopener noreferrer">K-Meleon</a> <br>
+          <a href="https://www.opera.com/" target="_blank" rel="noopener noreferrer">Opera (Older versions 12.00 - 12.17)</a> <br>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

@@ -1,0 +1,91 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Adobe AIR Logo History" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Adobe AIR Logo History'!" author="AT Products LLC & Flash Documentation" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="Adobe AIR Logo History" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="al" 
+      scrollcontent={[ 
+        { name: "1996 - 2002", href: "#1996" },
+        { name: "2002 - 2006", href: "#2002" },
+        { name: "2006 - 2008", href: "#2006" },
+        { name: "2008 - 2010", href: "#2008" },
+        { name: "2010 - 2013", href: "#2010" },
+        { name: "2013 - 2015", href: "#2013" },
+        { name: "2015 - 2020", href: "#2015" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Adobe AIR Logo History</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/flash">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="1996">
+            <h2> 1996 - 2002 </h2>
+            <h3> Versions 1 - 5 </h3>
+            <img src="/media/images/Macromedia_Flash_Player.png" width="200" height="200" alt="1996-2002 | versions 1-5"> <br> <br>
+            <img src="/media/images/Logo_macromedia_flash_player_logo_1996-2002.jpg" alt="1996-2002 | versions 1-5 banner">
+          </div>
+          <br>
+          <div id="2002">
+            <h2> 2002 - 2006 </h2>
+            <h3> Versions 6 - 8 </h3>
+            <img src="/media/images/Fl-player6.png" width="200" height="200" alt="2002-2006 | versions 6-8"> <br> <br>
+            <img src="/media/images/Logo_macromedia_flash_player.jpg" width="107.34" height="120" alt="2002-2006 | versions 6-8 alt">
+            <img src="/media/images/Logo_flash_player_mx_120x120.gif" alt="2002-2006 | versions 6-8 alt (gif)">
+          </div>
+          <br>
+            <div id="2006">
+            <h2> 2006 - 2008 </h2>
+            <h3> Versions 8.5 - 9 </h3>
+            <img src="/media/images/FlashPlayer_2006.png" width="200" height="200" alt="2006-2008 | versions 8.5-9">
+          </div>
+          <br>
+            <div id="2008">
+            <h2> 2008 - 2010 </h2>
+            <h3> Version 10 </h3>
+            <img src="/media/images/Flash-10.png" width="200" height="200" alt="2008-2010 | versions 10">
+          </div>
+          <br>
+            <div id="2010">
+            <h2> 2010 - 2013 </h2>
+            <h3> Versions 11 - 11.9 </h3>
+            <img src="/media/images/Adobe_Flash_Player_SVG.png" width="200" height="200" alt="2010-2013 | versions 11-11.9">
+          </div>
+          <br>
+            <div id="2013">
+            <h2> 2013 - 2015 </h2>
+            <h3> Versions 12 - 17 </h3>
+            <img src="/media/images/FlashPlayer_2013.png" width="200" height="200" alt="2013-2015 | versions 12-17">
+          </div>
+          <br>
+            <div id="2015">
+            <h2> 2015 - 2020 </h2>
+            <h3> Versions 18 - 32; 50 (Enterprise) </h3>
+            <img src="/media/images/Adobe_Flash_Player_32.svg.png" width="200" height="200" alt="2015-2020 | versions 18-32; 50"> <br> <br>
+            <img src="/media/images/Flash_box.png" alt="2015-2020 | versions 18-32; 50 installer"> <br>
+            <sub>Installer</sub>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>

@@ -1,0 +1,54 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Adobe Shockwave" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Adobe Shockwave'!" author="AT Products LLC & Flash Documentation" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="Adobe Shockwave" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="aw"
+      scrollcontent={[ 
+        { name: "What is Adobe Shockwave", href: "#what" },
+        { name: "How to use Adobe Shockwave past 2019", href: "#download" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Adobe Shockwave</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/Flash Documentation">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <figure class="figure">
+            <img src="/media/images/Shockwave.png" width="12.5%" style="min-width: 125px;" alt="Shockwave logo" class="flash">
+            <figcaption class="figure-caption mt-1">Adobe Shockwave Logo</figcaption>
+          </figure>
+          <p> On this page, we will review Adobe Shockwave. </p>
+          <div id="what">
+            <h2> What is Adobe Shockwave </h2>
+            <p>Adobe Shockwave is mostly Adobe Director, however, it's a browser plug-in like Adobe Flash. It also supports DIR, DCR, DXR files. It can also help companies build multimedia apps. The latest version is 12.3.5.205 released on April 9th, 2019. Adobe discontinued Shockwave on the same day.</p>
+          </div>
+          <div id="download">
+            <h2> How to use Adobe Shockwave past 2019 </h2>
+            <p>There's a <a href="/media/files/Shockwave_Installer_Full.exe" download>full version</a> and a <a href="/media/files/Shockwave_Installer_Slim.exe" download>slim version</a> you can install (recommended to have Windows Vista or 7). These versions are both 12.3.5.205. If you need older versions, <a href="http://www.oldversion.com/windows/adobe-shockwave/">click here</a>.  </p>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

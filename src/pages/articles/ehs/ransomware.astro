@@ -1,0 +1,63 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Ransomware" description="Ethical Hacking Society presents 'Ransomware'!" author="AT Products LLC & Ethical Hacking Society" />
+<div id="page">
+  <Navbar pageTitle="Ransomware" 
+    link={[
+     { name: "Ethical Hacking Society" , href: "/ehs" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="ransom">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Ransomware</h1>
+          <h5 class="text-start"><b>Made by:</b> <a href="/ehs">Ethical Hacking Society</a>.</h5>
+          <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+          <div id="disclaimer">
+            <h2> Disclaimer </h2>
+            <p> We do not take responsibility for any damage or legal issues with these files here at AT Products LLC, and the other communities at the Ethical Hacking Society, The Script Community, CodingHome, or the Noodle Hackerspace. <br>
+              <br> Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM. <br>
+              <br> If it's an APK file, use an emulator. <br>
+              <br>
+              <a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a>
+              <br>
+              <a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div id="content">
+          <p>
+            <a href="/media/files/DCQPKX.exe" download>DCQPKX (EXE)</a><br>
+            <a href="/media/files/Wannacry.exe" download>WannaCry (EXE)</a><br>
+            <a href="/media/files/Wannacry2.exe" download>WannaCry 2 (EXE)</a><br>
+            <a href="/media/files/MYDOOM.idb" download>MyDOOM (IDB)</a><br>
+            <a href="/media/files/grandcab.bin" download>GrandCab (BIN)</a><br>
+            <a href="/media/files/unknown" download>Unknown</a><br>
+            <a href="/media/files/windows8-rt.msu" download>Windows 8 RT Virus (MSU)</a><br>
+            <a href="/media/files/mydoom.c" download>MYDOOM (C)</a><br>
+            <a href="/media/files/RnVjayB5b3UgCg.bat" id="new">Infect Files (BAT)</a><br>
+            <a href="/media/files/Ransomware.exe" download>Homemade (EXE)</a> by CobraCommander
+          </p>
+          <p>
+            <a href="https://github.com/Endermanch/MalwareDatabase">Collection</a> by Endermanch
+          </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>Ethical Hacking Society is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

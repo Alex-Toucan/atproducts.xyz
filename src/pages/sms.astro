@@ -1,13 +1,12 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Hero     from '../components/Hero.astro';
 import Navbar    from '../components/Navbar.astro';
 import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="SMS Bomb" heroid="sms" description="AT Products & ProtDos presents SMS Bomb. Download now to annoy your Android friends!" keywords="SMS, SMS Bomb, AT Products" author="Alex Toucan & CodingLive" />
+<DefaultBody title="SMS Bomb" heroid="sms" color="#5b5d6e" icon="ya.png" description="AT Products LLC presents SMS Bomb. Download now to annoy your Android friends!" keywords="SMS, SMS Bomb, AT Products" author="Alex Toucan & CodingLive" />
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -34,7 +33,7 @@ import BackToTop from '../components/BackToTop.astro';
         <p>SMS Bomb can spam messages to your friends! Only supported on Android, using an APK Installation file. <br>
           <br> It'll use your phone number to spam SMS messages to the phone number you will input into the app. The only way to stop the SMS Bombing is to shutdown/reset the host phone/device.<br>
           <br> We are not responsible for any damage done to you or who you sent messages using this app, meaning we are not responsible for making you lose a friend. <br>
-          <br> Made by <a href="https://discord.com/users/786495827827752990">@CodingLive on Discord</a> at <a href="codinghome">CodingHome</a>.
+          <br> Made by <a href="https://discord.com/users/786495827827752990">@CodingLive on Discord</a> at <a href="/codinghome">CodingHome</a>.
         </p>
       </div>
       <hr>
@@ -47,4 +46,4 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

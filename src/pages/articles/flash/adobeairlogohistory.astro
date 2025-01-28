@@ -1,0 +1,64 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Adobe AIR Logo History" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Adobe AIR Logo History'!" author="AT Products LLC & Flash Documentation" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="Adobe AIR Logo History" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="al" 
+      scrollcontent={[ 
+        { name: "2008", href: "#2008" },
+        { name: "2010", href: "#2010" },
+        { name: "2013", href: "#2013" },
+        { name: "2015", href: "#2015" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Adobe AIR Logo History</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/flash">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="2008">
+            <h2> 2008 - 2010 </h4>
+            <img src="/media/images/Adobe_air_2008.webp" width="200" height="200" alt="2008-2010">
+          </div>
+          <br>
+          <div id="2010">
+            <h2> 2010 - 2013 </h4>
+            <img src="/media/images/Adobe_air_2010.webp" width="200" height="200" alt="2010-2013">
+          </div>
+          <br>
+          <div id="2013">
+            <h2> 2013 - 2015 </h4>
+            <img src="/media/images/Adobe_air_2013.webp" width="200" height="200" alt="2013-2015">
+          </div>
+          <div id="2015">
+          <br>
+            <h2> 2015 - Present </h4>
+            <img src="/media/images/Adobe_air_2015.webp" width="200" height="200" alt="2015-now"> <br> 
+            <img src="/media/images/24406.png" width="200" height="200" alt="2015-now installer"> <br>
+            <sub> Installer </sub>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

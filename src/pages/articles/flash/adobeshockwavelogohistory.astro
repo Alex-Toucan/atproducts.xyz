@@ -1,0 +1,92 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Adobe Shockwave Logo History" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Adobe Shockwave Logo History'!" author="AT Products LLC & Flash Documentation" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="Adobe Shockwave Logo History" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="sl" 
+      scrollcontent={[ 
+        { name: "Macromedia Player", href: "#mptitle", additionalClasses: "fw-bolder" },
+        { name: "199? - 1995", href: "#199u" },
+        { name: "Macromedia Shockwave", href: "#mstitle", additionalClasses: "fw-bolder" },
+        { name: "1995 - 1997", href: "#1995" },
+        { name: "1997 - 2005", href: "#1997" },
+        { name: "Adobe Shockwave", href: "#astitle", additionalClasses: "fw-bolder" },
+        { name: "2005 - 2011", href: "#2005" },
+        { name: "2011 - 2013", href: "#2011" },
+        { name: "2013 - 2015", href: "#2013" },
+        { name: "2015 - Now", href: "#2015" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Adobe Shockwave Logo History</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/flash">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="player">
+            <h2 id="mptitle"> Macromedia Player </h2>
+            <div id="199u">
+              <h3>199? - 1995</h3>
+              <img src="/media/images/Macromedia_Player.webp" width="207" height="77" alt="199?-1995">  
+            </div>
+          </div>
+          <hr>
+          <div id="shockwave">
+            <h2 id="mstitle"> Macromedia Shockwave </h2>
+            <div id="1995">
+              <h3>1995 - 1997</h3>
+              <img src="/media/images/Macromedia_Shockwave.webp" width="200" height="200" alt="1995-1997">  
+            </div>
+            <br>
+            <div id="1997">
+              <h3>1997 - 2005</h3>
+              <img src="/media/images/Macromedia_Shockwave_Enabled.webp" width="200" height="200" alt="1997-2005">  
+            </div>
+          </div>
+          <hr>
+          <div id="adobeshockwave">
+            <h2 id="astitle"> Adobe Shockwave </h2>
+            <div id="2005">
+              <h3>2005 - 2011</h3>
+              <img src="/media/images/Adobe_Shockwave.webp" width="200" height="116" alt="2005 - 2011">  
+            </div>
+            <br>
+            <div id="2011">
+              <h3>2011 - 2013</h3>
+              <img src="/media/images/2011-shock.webp" width="200" height="190" alt="2011-2013">  
+            </div>
+            <br>
+            <div id="2013">
+              <h3>2013 - 2015</h3>
+              <img src="/media/images/Flash_Shockwave.svg" width="200" height="200" alt="2013-2015">  
+            </div>
+            <br>
+            <div id="2015">
+              <h3>2015 - Now</h3>
+              <img src="/media/images/Shockwave.png" width="200px" height="195px" alt="2015-Now">  
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

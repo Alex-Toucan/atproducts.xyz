@@ -1,0 +1,105 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Python Basics" icon="codinghome.webp" description="CodingHome presents 'Python Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="Python Basics" 
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="py" 
+      scrollcontent={[ 
+        { name: "Comments" , href: "#com" }, 
+        { name: "Data Types" , href: "#data" }, 
+        { name: "Strings" , href: "#str" }, 
+        { name: "Numbers" , href: "#num" }, 
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Python Basics</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <a href="../resources/#learningresources" target="_blank" rel="noreferrer noopener" class="mt-2 btn btn-info">Python Resources</a>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="com">
+            <h2>Comments</h2>
+            <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes. </p>
+<pre><code> 
+# This is a comment 
+</code></pre>
+          </div>
+          <div id="data">
+            <h2>Data Types</h2>
+            <p>Variables can store data of different types, and different types can do different things.</p>
+            <p>Python has the following data types built-in by default, in these categories: <br> Text Type: <code>str</code>
+              <br> Numeric Types: <code>int, float, complex</code>
+              <br> Sequence Types: <code>list, tuple, range</code>
+              <br> Mapping Type: <code>dict</code>
+              <br> Set Types: <code>set, frozenset</code>
+              <br> Boolean Type: <code>bool</code>
+              <br> Binary Types: <code>bytes, bytearray, memoryview</code>
+            </p>
+            <p>We will go more in-depth on some of these types in the next few sections.</p>
+            <p>You can print the data type of a variable with the <code>type()</code> function:</p>
+<pre><code>
+x = 5 <br> print(type(x)) 
+</code></pre>
+          </div>
+          <div id="str">
+            <h2>Strings</h2>
+            <p>Strings are surrounded by either single quotation marks, or double quotation marks.:
+<pre><code>  
+x = "hello" 
+y = 'hello'
+# single quotations and double quotation marks are the same
+x == y # returns True 
+</code></pre>
+            <p>You can assign a multiline string to a variable by using three quotes: </p>
+<pre><code> 
+x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""  
+</code>
+</pre>
+            <p>You can check the length of a string using the len() function: </p>
+<pre><code>  
+x = "hello" 
+print(len(text)) # returns 5
+</code></pre>
+          </div>
+          <div id="num">
+            <h2>Numbers</h2>
+            <p>There are 2 primary, <code>int</code> and <code>float</code>
+            </p>
+<pre><code> 
+x = 2   # int
+y = 2.8 # float 
+</code></pre>
+            <p>To verify the type of an object in Python, use the type() function:</p>
+<pre><code> 
+print(type(x)) 
+print(type(y)) 
+</code></pre>
+            <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
+            <p>Float is a number, positive or negative, containing one or more decimals.</p>
+            <p>Both strings and numbers are built-in data types.</p>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

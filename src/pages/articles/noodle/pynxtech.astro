@@ -1,0 +1,40 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Pynx Technologies" icon="noodle.webp" color="#f1b856" description="Noodle Hackerspace presents 'Pynx Technologies'!" author="AT Products LLC & Noodle Hackerspace" />
+<div id="page">
+  <Navbar pageTitle="Pynx Technologies" 
+    link={[
+     { name: "Noodle Hackerspace" , href: "/noodle" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="pynx">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Pynx Technologies</h1>
+          <h5 class="text-start"><b>Made by:</b> <a href="/noodle">Noodle Hackerspace</a>.</h5>
+          <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <p><a href="https://2983u2.site/">Pynx Technologies</a> is a company that has cybersecurity tools, pentesting tools, etc. It sells at the moment 
+          SSkullzv2 and Skullzv3.</p>
+
+          <p>It also also produced all the <a href="/pynx">Pynx Projects</a>, such as <a href"/BxPP">BxPP</a>, <a href="/inferno">Inferno</a>, <a href="/pson">PSON</a>, and <a href="/nyaos">NyaOS</a>.</p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>Noodle Hackerspace is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

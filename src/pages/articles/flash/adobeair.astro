@@ -1,0 +1,55 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Adobe AIR" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Adobe AIR'!" author="AT Products LLC & Flash Documentation" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="Adobe AIR" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="ai"
+      scrollcontent={[ 
+        { name: "What is Adobe AIR", href: "#what" },
+        { name: "How to use Adobe AIR past 2021", href: "#download" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Adobe AIR</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/flash">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <figure class="figure">
+            <img src="/media/images/adobeair.png" width="12.5%" style="min-width: 125px;" alt="AIR logo" class="flash">
+            <figcaption class="figure-caption mt-1">Adobe AIR Logo</figcaption>
+          </figure>
+          <p> On this page, we will review Adobe AIR. </p>
+          <div id="what">
+            <h2> What is Adobe AIR </h2>
+            <p> Adobe AIR (codenamed Apollo) runtime enables developers to use HTML, JavaScript, Adobe Flash software, and ActionScript to build web applications that run as standalone client applications without the constraints of a browser. This supports AIR files for installation. <a href="adobeairlogohistory">Adobe AIR's logo history</a> falls under <a href="adobeflashlogohistory">Adobe's Flash Player logo history</a>, having similar logos. Adobe AIR was discontinued at the same time that Flash Player was discontinued, on January 1st, 2021.</p> 
+          </div>
+          <div id="download">
+            <h2> How to use Adobe AIR past 2021 </h2>
+            <p> You can download the most recent version of <a href="/media/files/AdobeAIR.exe">Adobe AIR here</a>, or install <a href="http://www.oldversion.com/windows/adobe-air/">older versions</a>.</p>
+            <p> If you need to uninstall it, open Command Prompt or Run in Windows, use <code>path to AdobeAIRInstaller.exe -uninstall</code> and enter. Otherwise, use this <a href="https://support.microsoft.com/en-us/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">Microsoft blog post</a>.</p>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

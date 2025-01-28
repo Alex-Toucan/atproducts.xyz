@@ -1,0 +1,77 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="JSON Basics" icon="codinghome.webp" description="CodingHome presents 'JSON Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="JSON Basics" 
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="json" 
+      scrollcontent={[ 
+        { name: "Example Documents", href: "#example" },
+        { name: "Importing JSON", href: "#import" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">JSON Basics</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="example">
+            <h2>Example Document</h2>
+<pre><code>
+&lbrace;
+  "foo"&colon; "bar",
+  "array"&colon; [
+    "foo",
+    "bar"
+  ]
+&rbrace;
+</code></pre>
+            <p>All JSON files are surrounded by &lbrace; and &rbrace;, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
+          </div>
+          <div id="import">
+            <h2>Importing JSON</h2>
+            <table class="table table-hover mb-2">
+              <tbody>
+              <tr>
+                <th scope="row">JavaScript</th>
+                <td class="text-break"><pre class="not-standalone"><code class="not-standalone">fetch('example.json')</code></pre></td>
+              </tr>
+              <tr>
+                <th scope="row">Node.js</th>
+                <td class="text-break"><pre class="not-standalone"><code class="not-standalone">import('./example.json')</code></pre></td>
+              </tr>
+              <tr>
+                <th scope="row">TypeScript + Node.js</th>
+                <td class="text-break"><pre class="not-standalone"><code class="not-standalone">import data from 'example.json'</code></pre></td>
+              </tr>
+              <tr>
+                <th scope="row">Python</th>
+                <td class="text-break"><pre class="not-standalone"><code class="not-standalone">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></pre></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

@@ -1,0 +1,41 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Tools for Flash Player" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Tools for Flash Player'!" author="AT Products LLC & Flash Documentation" />
+<div id="page">
+  <Navbar pageTitle="Tools for Flash Player" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="tf">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Tools for Flash Player</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/flash">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <p>These tools can be used for Flash Player.</p>
+          <a href="https://github.com/KuromeSan/FlashPatcher/releases/tag/v1.7" target="_blank" rel="noopener noreferrer">FlashPatcher</a> <br>
+          <a href="https://github.com/jindrapetrik/jpexs-decompiler">Flash Decompiler</a> <br>
+          <a href="/media/files/swftoexe_setup.exe">SWF to EXE Converter</a> <br>
+          <a href="/media/files/exe2swf.exe">EXE to SWF Converter</a>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

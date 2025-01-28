@@ -1,0 +1,153 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="SQL Basics" icon="codinghome.webp" description="CodingHome presents 'SQL Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="SQL Basics" 
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="sql" 
+      scrollcontent={[ 
+        { name: "Querying Data from a Table", href: "#query" },
+        { name: "Modifying Data", href: "#mod" },
+        { name: "Table Management", href: "#table" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">SQL Basics</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <a href="../resources/#learningresources" target="_blank" rel="noreferrer noopener" class="mt-2 btn btn-info">SQL Resources</a>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="query">
+            <h2>Querying Data from a Table</h2>
+            <p>Query Data in Columns c1, c2 from a Table</p>
+<pre><code>
+SELECT c1, c2 FROM t;
+</code></pre><br><br>
+            <p>Query All Rows and Columns from a Table</p>
+<pre><code>SELECT * FROM t;</code></pre><br><br>
+            <p>Query Data and Filter Rows with a Condition</p>
+<pre><code>
+SELECT c1, c2 FROM t
+WHERE condition;
+</code></pre><br><br>
+            <p>Query Distinct Rows from a Table</p>
+<pre><code>
+SELECT DISTINCT c1 FROM t
+WHERE condition;
+</code></pre><br><br>
+            <p>Sort the Result Set in Ascending or Descending Order</p>
+<pre><code>
+SELECT c1, c2 FROM t<br>
+ORDER BY c1 ASC [DESC];
+</code></pre><br><br>
+            <p>Skip Offset of Rows and Return the Next n Rows</p>
+<pre><code>
+SELECT c1, c2 FROM t
+ORDER BY c1
+LIMIT n OFFSET offset;
+</code></pre><br><br>
+            <p>Group Rows using an Aggregate Function</p>
+<pre><code>
+SELECT c1, aggregate(c2)
+FROM t
+GROUP BY c1;
+</code></pre><br><br>
+            <p>Filter Groups using <b>Having</b> Clause</p>
+<pre><code>
+SELECT c1, aggregate(c2)
+FROM t
+GROUP BY c1
+HAVING condition;
+</code></pre><br><br>
+          </div>
+          <div id="mod">
+            <h2>Modifying Data</h2>
+            <p>Insert One Row into a Table</p>
+<pre><code>
+INSERT INTO t(column_list)
+VALUES(value_list);
+</code></pre><br><br>
+            <p>Insert Multiple Rows into a Table</p>
+<pre><code>
+INSERT INTO t(column_list)<br>
+VALUES (value_list),
+(value_list), …;
+</code></pre><br><br>
+            <p>Insert Rows from t2 into t1</p>
+<pre><code>
+INSERT INTO t1(column_list)
+SELECT column_list
+FROM t2;
+</code></pre><br><br>
+            <p>Update New Value in the Column c1 for All Rows</p>
+<pre><code>
+UPDATE t
+SET c1 = new_value;
+</code></pre><br><br>
+            <p>Update Values in the Column c1, c2 that Match the Condition</p>
+<pre><code>
+UPDATE t
+SET c1 = new_value,
+c2 = new_value
+WHERE condition;
+</code></pre><br><br>
+            <p>Delete All Data in a Table</p>
+<pre><code>DELETE FROM t;</code></pre>
+            <p>Delete Subset of Rows in a Table</p>
+<pre><code>
+DELETE FROM t
+WHERE condition;
+</code></pre><br><br>
+          </div>
+          <div id="table">
+            <h2>Table Management</h2>
+            <p>Create a new Table with Three Columns</p>
+<pre>
+<code>
+CREATE TABLE t (
+  id INT PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  price INT DEFAULT 0
+);<br>
+</code></pre><br><br>
+            <p>Delete the Table from the Database</p>
+<pre><code>DROP TABLE t ;</code></pre><br><br>
+            <p>Add a new Column to the Table</p>
+<pre><code>ALTER TABLE t ADD column;</code></pre><br><br>
+            <p>Drop Column c from the Table</p>
+<pre><code>ALTER TABLE t DROP COLUMN c ;</code></pre><br><br>
+            <p>Add a Constraint</p>
+<pre><code>ALTER TABLE t ADD constraint;</code></pre><br><br>
+            <p>Drop a Constraint</p>
+<pre><code>ALTER TABLE t DROP constraint;</code></pre><br><br>
+            <p>Rename a Table from t1 to t2</p>
+<pre><code>ALTER TABLE t1 RENAME TO t2;</code></pre><br><br>
+            <p>Rename Column c1 to c2</p>
+<pre><code>ALTER TABLE t1 RENAME c1 TO c2 ;</code></pre><br><br>
+            <p>Remove all Data in a Table</p>
+<pre><code>TRUNCATE TABLE t;</code></pre>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

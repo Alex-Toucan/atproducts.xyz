@@ -1,12 +1,11 @@
 ---
-import Head from '../../layouts/Head.astro';
+import DefaultBody from '../../layouts/DefaultBody.astro';
 import Navbar from '../../layouts/stories/Navbar.astro';
 import Scrollspy from '../../layouts/stories/Scrollspy.astro';
-import Scripts from '../../layouts/Scripts.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head title="Sci-Fi Stories Reflect Reality" description="AT Products LLC's BookViewer presents 'Sci-Fi Stories Reflect Reality'!" author="Alex Toucan" />
+<DefaultBody title="Sci-Fi Stories Reflect Reality" description="AT Products LLC's BookViewer presents 'Sci-Fi Stories Reflect Reality'!" author="Alex Toucan" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="Sci-Fi Stories Reflect Reality" />
   <div id="main-content">
@@ -58,4 +57,4 @@ import BackToTop from '../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

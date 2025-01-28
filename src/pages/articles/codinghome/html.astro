@@ -1,0 +1,86 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="HTML Basics" icon="codinghome.webp" description="CodingHome presents 'HTML Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="HTML Basics" 
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="html" 
+      scrollcontent={[ 
+        { name: "Example Document", href: "#example" },
+        { name: "HTML Headings", href: "#head" },
+        { name: "HTML Paragraphs", href: "#text" },
+        { name: "HTML Links", href: "#links" },
+        { name: "HTML Images", href: "#img" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">HTML Basics</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <a href="../resources/#otherresources" target="_blank" rel="noreferrer noopener" class="mt-2 btn btn-info">Web Resources</a>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="example">
+            <h2>Example Document</h2>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My first Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags). The <code>&lt;!DOCTYPE&gt;</code> declaration is not case sensitive. </p>
+          </div>
+          <div id="head">
+            <h2>HTML Headings</h2>
+            <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.
+            <code>&lt;h1&gt;</code>defines the most important heading. <code>&lt;h6&gt;</code> defines the least important heading:<br>
+<pre><code>
+&lt;h1&gt;Big&lt;/h1&gt;<br>
+&lt;h6&gt;Small&lt;/h6&gt;
+</code></pre> </p>
+          </div>
+          <div id="text">
+            <h2>HTML Paragraphs</h2>
+            <p>HTML paragraphs are defined with the <code>&lt;p&gt;</code> tag:
+<pre><code>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+</code></pre>
+            </p>
+          </div>
+          <div id="links">
+            <h2>HTML Links</h2>
+            <p>HTML links are defined with the &lt;a&gt; tag:<br>
+            <pre><code>&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;</code></pre></p>
+          </div>
+          <div id="img">
+            <h2>HTML Images</h2>
+            <p>HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width, and height are provided as attributes:<br>
+            <pre><code>&lt;img src="example.jpg" alt="example.com" width="104" height="142"&gt;</code></pre></p>
+          </div>  
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

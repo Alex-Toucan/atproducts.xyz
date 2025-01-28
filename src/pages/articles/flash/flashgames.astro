@@ -1,0 +1,61 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="Flash Games for Today's Times" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Flash Games for Today's Times'!" author="AT Products LLC & Flash Documentation" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="Flash Games for Today's Times" 
+    link={[
+     { name: "Flash Documentation" , href: "/flash" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="fg"
+      scrollcontent={[ 
+        { name: "Browser Games", href: "#browser" },
+        { name: "App Games", href: "#app" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">Flash Games for Today's Times</h1>
+          <h5 class="text-start"><b>Featured In:</b> <a href="/flash">Flash Documentation</a>.</h5>
+          <h5 class="text-start"><b>Made & Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="browser">
+            <h2>Browser Games</h2>
+            <p>Browser games are not that popular due to the 2020s having modern and widely used browsers not supporting the original Flash Engine. Either websites went to HTML5 games or replaced their engines with <a href="https://ruffle.rs/">Ruffle</a> or others.</p>
+            <p><a href="https://www.newgrounds.com/">Newgrounds</a>. This is a special one as they allow any users to post content. They replaced their engine with their <a href="https://www.newgrounds.com/flash/player">downloadable one</a>.</p>
+            <p>There's tons of generic flash games, like the following:<br>
+                <a href="https://www.crazygames.com/t/flash">CrazyGames</a><br>
+                <a href="https://armorgames.com/category/flash-games">Armor Games</a><br>
+                <a href="https://www.kongregate.com/flash-games">Kongregate</a><br>
+                <a href="https://poki.com/en/flash">Poki</a><br>
+                <a href="https://www.addictinggames.com/">Addicting Games</a><br>
+                <a href="https://www.numuki.com/games/flash/">NuMuKi</a>
+            </p>
+            <p>If you want to support high quality games, you can do so on <a href="https://store.steampowered.com/curator/41097579-Adobe-Flash-Games/">Steam</a>.</p>
+          </div>
+          <div id="app">
+            <h2>App Games</h2>
+            <p>Not many Flash games are on apps, mostly after 2020.</p>
+            <p><a href="https://flashpointarchive.org/">Flashpoint</a>, it contains a ton, mostly flash games.<br>
+                <a href="https://archive.org/details/softwarelibrary_flash_games">Archive.org</a>, it contains tons of SWF files for the <a href="flash2021">App installation</a>.</p>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>This article/story was featured in Flash Documentation and AT Products LLC is author & publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

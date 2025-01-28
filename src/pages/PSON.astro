@@ -1,13 +1,12 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import HeroPynx      from '../components/secondary/HeroPynx.astro';
 import Navbar    from '../components/Navbar.astro';
 import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="PSON" heroid="ehs" description="PSON; The better JSON." keywords="Inferno, PSON, BxPP, AT Products LLC" author="Alex Toucan & Pynx" />
+<DefaultBody title="PSON" heroid="ehs" description="PSON; The better JSON." keywords="Inferno, PSON, BxPP, AT Products LLC" author="Alex Toucan & Pynx" />
 <div id="page">
 	<Navbar />
 	<div id="main-content">
@@ -107,4 +106,4 @@ import BackToTop from '../components/BackToTop.astro';
 	</div>
 	<BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

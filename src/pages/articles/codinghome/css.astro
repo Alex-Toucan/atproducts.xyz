@@ -1,0 +1,157 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="CSS Basics" icon="codinghome.webp" description="CodingHome presents 'CSS Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="CSS Basics" 
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="css" 
+      scrollcontent={[ 
+        { name: "Example Document", href: "#example" },
+        { name: "CSS Rulesets", href: "#rules" },
+        { name: "Selectors", href: "#selectors" },
+        { name: "Classes", href: "#classes" },
+        { name: "Text Elements", href: "#text" },
+        { name: "Padding Elements", href: "#pad" },
+        { name: "Color Elements", href: "#color" },
+        { name: "Comments", href: "#com" },
+        { name: "Extra: Centering Images", href: "#eci" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">CSS Basics</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <div class="d-flex flex-wrap gap-2 mt-2">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noreferrer noopener" class="btn btn-info">Source (Mozilla)</a>
+            <a href="../resources/#otherresources" target="_blank" rel="noreferrer noopener" class="btn btn-info">Web Resources</a>
+          </div>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="example">
+            <h2>Example Document</h2>
+<pre class="m-0"><code>
+h1 &lbrace;
+  color&colon; black;
+  text-align&colon; center;
+  font-size&colon; 26px;
+  font-family&colon; verdana;
+&rbrace;
+</code></pre>
+<pre><code>&lt;p style="font-size:10px"&gt;</code></pre>
+            <p>To put CSS files in HTML, use:</p>
+            <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+            <p>To put CSS code in HTML, use:</p>
+<pre><code>
+&lt;style&gt;
+  .class &lbrace;
+    color: red;
+  &rbrace;
+&lt;/style&gt;
+</code></pre>
+          </div>
+          <div id="rules">
+            <h2>CSS Rulesets</h2>
+            <p>
+            </p><div class="d-flex"><div class="col-4"><p>Selector</p></div><div class="col"><div class="me-auto"><pre class="not-standalone"><code class="not-standalone">p &lbrace; </code></pre></div></div></div>
+            <div class="d-flex"><div class="col-4"><p>Property</p></div><div class="col"><div class="me-auto"><pre class="not-standalone"><code class="not-standalone">  color&colon; red; </code></pre></div></div></div>
+            <div class="d-flex"><div class="col-4"><p>Declaration</p></div><div class="col"><div class="me-auto"><pre class="not-standalone"><code class="not-standalone">&rbrace;</code></div></div></div>  
+            <p></p>
+            <p><b>Properties</b> - With these, you can style a HTML element, like for example; color. <br>
+            <b>Property Value</b> - This chooses one of the possible options for a given property, like red for color.</p>
+            <p>You can also write CSS like:</p> 
+            <pre><code>html&lbrace;color&colon;red;&rbrace;</code></pre>
+            <p>You can also put styles in HTML elements:</p>
+            <pre><code>&lt;h1 style="font-color:white;"&gt;</code></pre>
+            <p>You can also select multiple elements with commas at once like...</p>
+<pre><code>
+h1, h4, h6, h2 &lbrace;
+  color&colon; red;
+&rbrace;
+</code></pre><br><br>
+          </div>
+          <div id="classes">
+            <h2>Classes</h2>
+            <p>Think of classes like custom HTML elements, they can be applied in HTML:</p>
+            <pre><code>&lt;p class="text-red"&gt;</code></pre>
+            <p>Classes begin with a dot or period (.) to begin the selector.</p>
+<pre><code>
+.text-red &lbrace;
+  color&colon; red;
+&rbrace;
+</code></pre><br><br>
+          </div>
+          <div id="selectors">
+            <h2>Selectors</h2>
+            <p>There are more ways to select elements and classes apart from their name. Here's some common ones:</p>
+            <pre class="not-standalone"><code>&colon;hover</code></pre> - Applies the CSS rules if the element is selected.<br>
+            <pre class="not-standalone"><code>&colon;first-child</code></pre> - Selects the first child element if it is inside a parent element.<br>
+            <pre class="not-standalone"><code>&colon;last-child</code></pre> - Selects the last child element if it is inside a parent element.<br>
+            <pre class="not-standalone"><code>&colon;nth-child(n)</code></pre> - Selects elements based on position, replace <code>n</code> with a number.<br>
+            <pre class="not-standalone"><code>&colon;focus</code></pre> - Selects elements if it is focused, usually by using the <code>TAB</code>. <br>
+            <pre class="not-standalone"><code>&colon;has(+ element)</code></pre> - Selects the element if the selected element is before it.<br><br>
+          </div>
+          <div id="text">
+            <h2>Text Elements</h2>
+            <pre class="not-standalone"><code>font-size&colon; 10px;</code></pre> - Text size, can be in pixels.<br>
+            <pre class="not-standalone"><code>font-family&colon; verdana;</code></pre> - Fonts<br>
+            <pre class="not-standalone"><code>text-align&colon; center;</code></pre> - Can align to the left side, right side, or in the center of the webpage. <br>
+            <pre class="not-standalone"><code>text-shadow&colon; 3px black</code></pre> - Shadow of text. It can be in pixels and colors.<br><br>
+          </div>
+          <div id="pad">
+            <h2>Padding Elements</h2>
+            <pre class="not-standalone"><code>padding-top&colon; 50px;</code></pre> - Separation. It can be top, left, right, and bottom in pixels.<br>
+            <pre class="not-standalone"><code>margin&colon; 50px;</code></pre> - A margin. It can be in pixels.<br>
+            <pre class="not-standalone"><code>border-width&colon; 5px;</code></pre> - Border width. Can be thin, medium, thick, or just pixels.<br>
+            <pre class="not-standalone"><code>border-style&colon; dotted;</code></pre> - Border style. Can be dotted, dashed, solid, double, groove, ridge, inset, outset, none, or hidden. Can also be colored.<br>
+            <pre class="not-standalone"><code>width=500px;</code></pre> - Width of the element. It can be pixels or percentages.
+          </div>
+          <div id="color">
+            <h2>Color Elements</h2>
+            <p><pre class="not-standalone"><code>color&colon; red;</code></pre> - The color of the element, can be hexadecimal, or RGB.<br>
+              <pre class="not-standalone"><code>background-color&colon; white;</code></pre> - Background color of the element.<br><br>
+          </div>
+          <div id="com">
+            <h2>Comments</h2>
+            <p>Comments are commonly used to explain the code and may help when you edit the source code later and are ignored by browsers.
+            <br><br>
+            A CSS comment starts with <code>/*</code> and ends with <code>*/</code>, and no changes are needed to make it multiple lines.</p>
+<pre><code>
+/* This is a single-line comment */
+
+/* This is
+a multi-line
+comment */
+</code></pre><br><br>
+          </div>
+          <div id="eci">
+            <h2>Extra: Centering Images</h2>
+<pre><code>
+img &lbrace;
+  margin&colon; 0 auto;
+  display&colon; block;
+&rbrace;
+</code></pre>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+<DefaultBody/>

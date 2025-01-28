@@ -1,0 +1,46 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="OSINT" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'OSINT'!" author="AT Products LLC & The Script Community" />
+<div id="page">
+  <Navbar pageTitle="OSINT"
+    link={[
+     { name: "The Script Community" , href: "/script" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="osint">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">OSINT</h1>
+          <h5 class="text-start"><b>Made by:</b> <a href="/script">The Script Community</a>.</h5>
+          <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <a href="https://osint.org/" target="_blank" rel="noreferrer noopener" class="btn btn-info mt-2">Osint.org</a>
+          <hr>
+        </div>
+        <div id="content">
+          <p> Open source intelligence (OSINT) is the practice of collecting information from published or otherwise publicly available sources. This can be used to learn more about your targets. </p>
+          <p>
+            <a href="http://www.tineye.com/">Reverse Image Lookup</a><br>
+            <a href="https://www.macvendorlookup.com/">Mac Address Lookup</a> <br>
+            <a href="http://exifdata.com/">EXIF Data</a> <br>
+            <a href="https://haveibeenpwned.com/">Database Lookup</a> <br>
+            <a href="https://whatismyipaddress.com/ip-lookup">IP Lookup</a> <br>
+            <a href="https://archive.org/index.php">Archive.org</a>
+          </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>The Script Community is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

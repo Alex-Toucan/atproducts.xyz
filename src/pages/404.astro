@@ -1,13 +1,12 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Hero     from '../components/Hero.astro';
 import Navbar    from '../components/Navbar.astro';
 import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="Error 404" heroid="web" description="The content that the publisher attempted to share, doesn't exist. This is a 404 page after all..." author="Alex Toucan" />
+<DefaultBody title="Error 404" heroid="web" description="The content that the publisher attempted to share, doesn't exist. This is a 404 page after all..." author="Alex Toucan" fourofour="true" />
   <div id="page">
     <Navbar />
     <div id="main-content">
@@ -27,4 +26,4 @@ import BackToTop from '../components/BackToTop.astro';
     </div>
     <BackToTop />
   </div>
-<Scripts fourofour="true" />
+</DefaultBody>

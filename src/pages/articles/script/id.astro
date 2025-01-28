@@ -1,0 +1,38 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="ID Creation Time" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'ID Creation Time'!" author="AT Products LLC & The Script Community" />
+<div id="page">
+  <Navbar pageTitle="ID Creation Time"
+    link={[
+     { name: "The Script Community" , href: "/script" },
+    ]} 
+  />
+  <div id="main-content">
+    <Scrollspy id="id">
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">ID Creation Time</h1>
+          <h5 class="text-start"><b>Made by:</b> <a href="/script">The Script Community</a>.</h5>
+          <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <p>Channels, users, servers and categories have IDs also known as snowflakes. You can easily calculate when that item was created. </p>
+          <p> <a href="/media/files/idcheck.py" download>ID Creation Time (Python)</a> by Nasus </p>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>The Script Community is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>

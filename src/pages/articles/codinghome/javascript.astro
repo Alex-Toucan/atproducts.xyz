@@ -1,0 +1,99 @@
+---
+import DefaultBody from '../../../layouts/DefaultBody.astro';
+import Navbar from '../../../layouts/articles/Navbar.astro';
+import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+---
+
+<DefaultBody title="JavaScript Basics" icon="codinghome.webp" description="CodingHome presents 'JavaScript Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="JavaScript Basics" 
+    link={[
+     { name: "CodingHome" , href: "/codinghome" },
+    ]}
+  />
+  <div id="main-content">
+    <Scrollspy id="js" 
+      scrollcontent={[ 
+        { name: "Including JavaScript in an HTML Page", href: "#html" },
+        { name: "Call an External JavaScript File", href: "#call" },
+        { name: "Including Comments", href: "#com" },
+        { name: "Variables", href: "#var" },
+        { name: "Data Types", href: "data" },
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">JavaScript Basics</h1>
+          <h5><b>Made by:</b> <a href="/codinghome">CodingHome</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <div id="html">
+            <h2>Including JavaScript in an HTML Page</h2>
+            <p>
+<pre><code>
+&lt;script type="text/javascript"&gt;
+  //JS code goes here 
+&lt;/script&gt; 
+</code></pre>
+            </p>
+          </div>
+          <div id="call">
+            <h2>Call an External JavaScript File</h2>
+            <p>
+<pre><code>
+&lt;script src="myscript.js"&gt;&lt;/script&gt;
+</code></pre>
+            </p>
+          </div>
+          <div id="com">
+            <h2>Including Comments</h2>
+            <p>Single line comments - <code>// Comment</code> <br>
+            Multi-line comments - <code>/* comment here */</code></p>
+          </div>
+          <div id="var">
+            <h2>Variables</h2>
+            <p>
+            <code>var, const, let</code><br>
+            <code>var</code> — The most common variable. It can be reassigned but only accessed within a function. Variables defined with var move to the top when code is executed.<br>
+            <code>const</code> — Can not be reassigned and not accessible before they appear within the code.<br>
+            <code>let</code> — Similar to const, however, let variable can be reassigned but not re-declared.<br>
+            </p>
+          </div>
+          <div id="data">
+            <h2>Data Types</h2>
+            <p>
+            Numbers — <pre class="not-standalone"><code>var age = 23</code></pre> <br>
+            Variables — <pre class="not-standalone"><code>var x</code></pre><br>
+            Text (strings) — <pre class="not-standalone"><code>var a = "init"</code></pre><br>
+            Operations — <pre class="not-standalone"><code>var b = 1 + 2 + 3</code></pre><br>
+            True or false statements — <pre class="not-standalone"><code>var c = true</code></pre><br>
+            Constant numbers — <pre class="not-standalone"><code>const PI = 3.14</code></pre><br>
+            Objects — <pre class="not-standalone"><code>var name = &lbrace;firstName&colon; "John", lastName&colon; "Doe"&rbrace;</code></pre>
+            </p>
+
+            <p><b>Objects Example</b> <br>
+<pre><code>
+var person = &lbrace;
+  firstName&colon; "John",
+  lastName&colon; "Doe",
+  age&colon; 20,
+  nationality&colon; "American"
+&rbrace;
+</code></pre>
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>CodingHome is the author and AT Products LLC is publisher of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>
