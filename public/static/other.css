@@ -7098,3 +7098,7 @@ html.fixedtopnavimage {
 .container-story iframe {
 	padding-bottom: 1rem;
 }
+
+.tab {
+	text-indent: 3rem;
+}
