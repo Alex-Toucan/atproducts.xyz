@@ -34,51 +34,6 @@ html, body {
   filter: drop-shadow(2px 4px 6px black)
 }
 
-.hero-web {
-  background: url('/media/images/hero-web.webp');
-}
-
-.hero-stories {
-  background: url('/media/images/hero-stories.webp');
-}
-
-.hero-flash {
-  background: url('/media/images/hero-flash.webp');
-}
-
-.hero-main {
-	background: url('/media/images/hero.webp');
-  background-position: top center !important;
-}
-
-.hero-codinghome  {
-	background: url('/media/images/hero-codinghome.webp');
-}
-
-.hero-ehs {
-	background: url('/media/images/hero-ehs.webp');
-}
-
-.hero-script {
-	background: url('/media/images/hero-script.webp');
-}
-
-.hero-noodle {
-	background: url('/media/images/hero-noodle.webp');
-} 
-
-.hero-sms {
-	background: url('/media/images/hero-sms.webp');
-}
-
-.hero-mdickie {
-	background: url('/media/images/hero-mdickie.webp');
-} 
-
-.hero-roms {
-	background: url('/media/images/hero-roms.webp');
-} 
-
 .accordion-body p:last-child {
   margin-bottom: 0 !important;
 }
