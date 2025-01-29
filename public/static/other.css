@@ -48,6 +48,7 @@ html, body {
 
 .hero-main {
 	background: url('/media/images/hero.webp');
+  background-position: top center !important;
 }
 
 .hero-codinghome  {
