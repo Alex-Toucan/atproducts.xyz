@@ -1,0 +1,59 @@
+---
+import DefaultBody from '../../layouts/DefaultBody.astro';
+import Navbar from '../../layouts/stories/Navbar.astro';
+import Scrollspy from '../../layouts/stories/Scrollspy.astro';
+import BackToTop from '../../components/BackToTop.astro';
+---
+
+<DefaultBody title="The Impact of Informational Technology" description="Technology categories being involved in our daily lives could be good."  author="Alex Toucan" scrollspy="true" />
+<div id="page">
+  <Navbar pageTitle="The Impact of Informational Technology" />
+  <div id="main-content">
+    <Scrollspy id="techcategories" 
+      scrollcontent={[ 
+        { name: "Main Content" , href: "#content" }, 
+        { name: "Sources" , href: "#sources" }, 
+      ]} 
+    >
+      <Fragment slot="scrollspy-content">
+        <div id="intro" class="story-top-scroll">
+          <h1 class="text-start">The Impact of Informational Technology</h1>
+          <h5><a href="/media/pdf/The Impact of Informational Technology.pdf" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i> PDF Download</a></h5><br>
+          <h5><b>Made by:</b> <a href="https://other.atproducts.xyz/portfolio/">Alex Toucan</a>.</h5>
+          <h5><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
+          <h5><b>Published on:</b> February 12th, 2024.</h5>
+          <hr>
+        </div>
+        <div id="content">
+          <p class="tab">Informational technology: people receive it as good or bad. Can technology be good? Of course, in many different ways. Informational technology has many categories that people use for daily activities. People use informational technology for communication, medicine, transportation, safety, and more daily or for other purposes. Modern advancements in technology have significantly improved our lives. With each innovation, there are increasing opportunities for people to benefit from these categories. From communication to medical care, technology offers more advantages than ever.</p>
+          <p class="tab">Starting with communication devices, which began in the 1980s. Devices such as phones/tablets, laptops/desktops, and televisions help us communicate, even if we are so far away, and can help connect friends and family, a company to a client, or do project collaboration, for example. Communication devices are more prevalent in younger generations, but 60.42% of the world has at least one smartphone, which applies to all generations. Schools are implementing ICTs (communication technologies), as researchers stated: “Our study extends the debate on subjects, academic content, and classroom knowledge by addressing the role that ICTs may play in transforming academic content into classroom knowledge, as an added feature that may qualify the transformation process” <a href="#source-1" class="fw-bold">[1]</a>. Not only schools use ICTs, but some government organizations post stuff on social media for the general public, which helps raise awareness on the topic they are posting on; national, state, county, city, and even regional governments use them, and much more. As communication devices rise in popularity, more people will use them, even in areas where society never expected them.</p>
+          <p class="tab">There are more personal devices, such as medical devices, portable medical measurement systems, and alert devices (e.g., beepers). The most popular device for medical device, the beeper device, saves lives by helping raise awareness of a fallen or hurt civilian (typically senior). They (and smartwatches) may also call 911 automatically, saving the effort of civilians or others of manually calling them. Medical measurement systems, as medical devices, can measure certain things in our bodies, such as blood pressure or blood sugar, in our own homes and can be very portable, which is only ever so expanding in today’s world as an industry. Some other medical devices can measure pills, for example, for a specific dosage, and beepers can either beep in case of a fallen citizen (typically seniors) to make others aware, or they can call 911 on themselves. These medical devices are more used towards vulnerable people, such as seniors. Medical devices save lives every day and will only save more as innovations come out, and they get more popular.</p>
+          <p class="tab">What about a category that most of us have to use every day? Transportation has been taking an independent turn since the 2010s. People in the early 1900s only thought about these innovations, but there are now self-driving cars, which people can own or take as a taxi. There are also smartphone apps to order a driver, similar to a cab, but can go much longer distances instead of having a strict zone within borders. Apparently, “self-driving cars may be able to create their own special memories, ones that could help drivers safely navigate new routes in bad weather and unfamiliar environments” <a href="#source-2" class="fw-bold">[2]</a>, making it safer on the roads for the inexperienced in harsh weather. Transportation technology is getting more advanced each day, and it is only getting safer for all of us, experienced or not.</p>
+          <p class="tab">Most of these technology categories can do good, such as improving how people live and interact with others or themselves. Whether it is how people communicate with each other, save people’s lives, or get around, the way technology has increased convenience and accessibility only in the past few decades highlights the positive aspects of people’s lives using it. It will only expand as more innovations come out and become popular.</p>
+        </div>
+        <div id="sources" class="story-top-scroll">
+          <h2>Sources</h2>
+          <div class="d-flex">
+              <div class="col-1 fw-bold" id="source-1">[1]</div>
+              <div class="col">
+                Ramírez, Elena, et al. “Powerful Knowledge, Transposition/Transformation and ICT: An Empirical Study across School Subjects in Primary Education.” <i>Cambridge Journal of Education</i>, vol. 53, no. 6, Dec. 2023, pp. 825–46. EBSCOhost, <a class="text-wrap" href="https://doi.org/10.1080/0305764X.2023.2215185">https://doi.org/10.1080/0305764X.2023.2215185</a>. Accessed 27 January 2025.
+              </div>
+          </div>
+          <br>
+          <div class="d-flex">
+              <div class="col-1 fw-bold" id="source-2">[2]</div>
+              <div class="col">
+                Hsu, Jeremy. “Driverless Cars Safer than Humans – When It’s Light.” <i>New Scientist</i>, vol. 262, no. 3497, June 2024, p. 13. EBSCOhost, <a href="https://research.ebsco.com/linkprocessor/plink?id=a07fb141-e062-3d4e-8603-1716f73235a2">https://research.ebsco.com/linkprocessor/plink?id=a07fb141-e062-3d4e-8603-1716f73235a2</a>. Accessed 30 January 2025.
+              </div>
+          </div>
+        <hr>
+        <div id="copyright">
+          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>AT Products LLC is the publisher and copyright holder of this article/story.</h6>
+        </div>
+      </Fragment>
+    </Scrollspy>
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>
