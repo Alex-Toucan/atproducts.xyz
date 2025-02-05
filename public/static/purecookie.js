@@ -8,7 +8,7 @@ var purecookieButton = "Understood"; // Button text
 
 function pureFadeIn(elem, display) {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    $("#" + elem).addClass('no-motion').css({display: display || "block"});
+    $("#" + elem).css({display: display || "block", opacity: 1});
   } else {
     $("#" + elem).css({opacity: 0, display: display || "block"}).animate({opacity: 1}, 500);
   }
@@ -16,7 +16,7 @@ function pureFadeIn(elem, display) {
 
 function pureFadeOut(elem) {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    $("#" + elem).addClass('no-motion').css("display", "none").delay(1350).queue(function(){
+    $("#" + elem).css({display: "none", opacity: 0}).delay(1350).queue(function(){
       $(this).remove().dequeue();
     });
   } else {
@@ -27,6 +27,7 @@ function pureFadeOut(elem) {
     });
   }
 }
+
 
 function setCookie(name, value, days) {
   var expires = "";

@@ -22,9 +22,3 @@
 	}
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .no-motion {
-    display: block !important;
-    opacity: 1 !important;
-  }
-}
