@@ -1,12 +1,11 @@
 ---
-import Head from '../../layouts/Head.astro';
+import DefaultBody from '../../layouts/DefaultBody.astro';
 import Navbar from '../../layouts/stories/Navbar.astro';
 import Scrollspy from '../../layouts/stories/Scrollspy.astro';
-import Scripts from '../../layouts/Scripts.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head title="How to Center a <div>" description="AT Products LLC's BookViewer presents 'How to Center a &lt;div&gt;'!" author="AT Products LLC" />
+<DefaultBody title="How to Center a <div>" description="Learn about how to center a &lt;div&gt; in HTML and CSS.'!" author="AT Products LLC" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="How to Center a <div>" />
   <div id="main-content">
@@ -143,7 +142,7 @@ import BackToTop from '../../components/BackToTop.astro';
         </div>
         <hr>
         <div id="copyright">
-          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>® <script is:inline src="/static/year.js"></script> AT Products LLC</h6>
           <h6>AT Products LLC is the author and publisher of this article/story.</h6>
         </div>
       </Fragment>
@@ -151,4 +150,4 @@ import BackToTop from '../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

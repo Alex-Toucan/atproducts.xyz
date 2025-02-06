@@ -1,12 +1,11 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Navbar    from '../components/Navbar.astro';
 import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="Title II & VII Policy" description="View our Title II & VII Policy to understand your rights!" author="Alex Toucan" />
+<DefaultBody title="Title II & VII Policy" description="View our Title II & VII Policy to understand your rights!" author="Alex Toucan" />
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -29,4 +28,4 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

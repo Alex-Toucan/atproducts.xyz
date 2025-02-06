@@ -1,15 +1,14 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
-import Hero      from '../components/Hero.astro';
-import Navbar    from '../components/Navbar.astro';
-import Footer    from '../components/Footer.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
+import Hero from '../components/Hero.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 import FirstPaidCard from '../components/secondary/FirstPaidCard.astro';
 import SecondPaidCard from '../components/secondary/SecondPaidCard.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="Paid Services" heroid="web" description="Get stuff done with AT Products!" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan"/>
+<DefaultBody title="Paid Services" heroid="web" description="Get stuff done with AT Products!" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan"/>
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -24,7 +23,7 @@ import BackToTop from '../components/BackToTop.astro';
           <p>"Where innovation meets quality. Experience the difference with our cutting-edge technology, impeccable craftsmanship, and unwavering commitment to customer satisfaction. Elevate your expectations and unlock a world of possibilities with AT Products LLC."</p>
         </blockquote>
         <figcaption class="blockquote-footer">
-        <cite title="Quote Source"> JSman255 from <a href="https://deltasoftai.com">Deltasoft</a>.</cite>
+          <cite title="Quote Source"> JSman255 from <a href="/codinghome">CodingHome</a>.</cite>
         </figcaption>
       </figure>
       <div class="d-md-flex d-grid gap-3 flex-wrap row-cols-2-md mb-3">
@@ -32,33 +31,78 @@ import BackToTop from '../components/BackToTop.astro';
           <FirstPaidCard 
             title="Website Design" 
             price="$20-500*" 
-            description="Your website can have the most modern stuff on the market with HTML5 &amp; CSS3, Bootstrap v5, responsive layout, and will be compatible with all browsers with the Website Design package! (Estimates will be provided)" 
-            btnhref="/contact/" 
-            btntext="Contact us" 
-            footertext="* Prices may be raised dependent on the requested project, these are not guaranteed prices." 
+            description="Your website can have the most modern stuff on the market with HTML5 &amp; CSS3, Bootstrap v5, responsive layout, and will be compatible with most major browsers with the Website Design package! (Estimates will be provided)" 
+            additionalContent="<div class='accordion text-start d-md-none mb-3' id='defintionsAccordion-1'><div class='accordion-item'><h2 class='accordion-header'><button class='accordion-button collapsed fw-bold' type='button' data-bs-toggle='collapse' data-bs-target='#defintions-1' aria-expanded='false' aria-controls='defintions-1'>What does any of this stuff mean?</button></h2><div id='defintions-1' class='accordion-collapse collapse' data-bs-parent='#defintionsAccordion-2'><div class='accordion-body'><div class='d-grid gap-3'><div class='d-flex'><img src='/media/images/HTML.webp' alt='HTML5' width='60px' height='60px' class='d-block d-md-inline mb-mmd-2 me-2 object-fit-contain'><div class='col my-auto'><strong>HTML5</strong> is the most recent version of HTML. More information about it can be found <a href='https://www.graycelltech.com/why-use-html-5/' target='_blank' rel='noopener noreferrer'>here</a>.</div></div><div class='d-flex'><img src='/media/images/CSS.webp' alt='CSS3' width='60px' height='60px' class='d-block d-md-inline mb-mmd-2 me-2 object-fit-contain'><div class='col my-auto'><strong>CSS3</strong> is the most recent version of CSS. More information about it can be found <a href='https://www.geeksforgeeks.org/advantage-of-css3-over-css/'>here</a>.</div></div><div class='d-flex'><img src='/media/images/bootstrap.webp' alt='Bootstrap' width='60px' height='60px' class='d-block d-md-inline mb-mmd-2 me-2 object-fit-contain'><div class='col my-auto'><strong>Bootstrap</strong> is a popular choice in CSS frameworks, as it brings a modern design to websites. Their official site is <a href='https://getbootstrap.com/'>here</a>.</div></div><div><strong>Responsive layout</strong> is a layout that is compatible with any screen, from phones, to tablets, laptops, desktops, etc.</div><div><strong>Compatible with most major browsers</strong>, note this is more including Google Chrome, Microsoft Edge, Mozilla Firefox, Opera, or any browser that contains the modern HTML, CSS, and JS standards. We no longer support Internet Explorer.</div></div></div></div></div></div>"
+            buttonHref="/contact/" 
+            buttonText="Contact us" 
+            footerText="* Prices may be raised dependent on the requested project, these are not guaranteed prices." 
           />
         </div>
         <div class="col-md">
           <FirstPaidCard 
             title="Website Hosting" 
             price="$1-75*<small class='text-body-secondary fw-light'>/week or month</small>" 
-            secondaryprice="<b>$1-50/week or month</b> with the &quot;Website Design&quot; package." 
-            description="Keep your website up with our services! This package includes security certificate renewals." 
-            btnhref="/contact/" 
-            btntext="Contact us" 
-            footertext="* These are not guaranteed prices." 
+            secondaryPrice="<b>$1-50/week or month</b> with the &quot;Website Design&quot; package." 
+            description="Keep your website up with our services! This package includes security certificate renewals and updates to your Content Security Policy." 
+            additionalContent="<div class='accordion text-start d-md-none mb-3' id='defintionsAccordion-2'><div class='accordion-item'><h2 class='accordion-header'><button class='accordion-button collapsed fw-bold' type='button' data-bs-toggle='collapse' data-bs-target='#defintions-2' aria-expanded='false' aria-controls='defintions-2'>What does any of this stuff mean?</button></h2><div id='defintions-2' class='accordion-collapse collapse' data-bs-parent='#defintionsAccordion-2'><div class='accordion-body'><div class='d-grid gap-3'><div><strong>Security certificate renewals</strong>, to keep your website secure as possible with HTTPS.</div><div><strong>Content security policy</strong>, to block out which sources you do not want to be on your website. You can learn more about it <a href='https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP'>here.</a></FirstPaidCard></div></div></div></div></div></div>"
+            buttonHref="/contact/" 
+            buttonText="Contact us" 
+            footerText="* These are not guaranteed prices." 
           />
+        </div>
+        <div class="accordion col-12 text-start d-none d-md-block" id="defintionsAccordion-3">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#defintions-3" aria-expanded="false" aria-controls="defintions-3"> What does any of this stuff mean? </button>
+            </h2>
+            <div id="defintions-3" class="accordion-collapse collapse" data-bs-parent="#defintionsAccordion-3">
+              <div class="accordion-body">
+                <div class="d-grid gap-3">
+                  <div class="d-flex">
+                    <img src="/media/images/HTML.webp" alt="HTML5" width="60px" height="60px" class="d-block d-md-inline mb-mmd-2 me-2 object-fit-contain">
+                    <div class="col my-auto">
+                      <strong>HTML5</strong> is the most recent version of HTML. More information about it can be found <a href="https://www.graycelltech.com/why-use-html-5/" target="_blank" rel="noopener noreferrer">here</a>.
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <img src="/media/images/CSS.webp" alt="CSS3" width="60px" height="60px" class="d-block d-md-inline mb-mmd-2 me-2 object-fit-contain">
+                    <div class="col my-auto">
+                      <strong>CSS3</strong> is the most recent version of CSS. More information about it can be found <a href="https://www.geeksforgeeks.org/advantage-of-css3-over-css/">here</a>.
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <img src="/media/images/bootstrap.webp" alt="Bootstrap" width="60px" height="60px" class="d-block d-md-inline mb-mmd-2 me-2 object-fit-contain">
+                    <div class="col my-auto">
+                      <strong>Bootstrap</strong> is a popular choice in CSS frameworks, as it brings a modern design to websites. Their official site is <a href="https://getbootstrap.com/">here</a>.
+                    </div>
+                  </div>
+                  <div>
+                    <strong>Responsive layout</strong> is a layout that is compatible with any screen, from phones, to tablets, laptops, desktops, etc.
+                  </div>
+                  <div>
+                    <strong>Compatible with most major browsers</strong>, note this is more including Google Chrome, Microsoft Edge, Mozilla Firefox, Opera, or any browser that contains the modern HTML, CSS, and JS standards. We no longer support Internet Explorer.
+                  </div>
+                  <div>
+                    <strong>Security certificate renewals</strong>, to keep your website secure as possible with HTTPS.
+                  </div>
+                  <div>
+                    <strong>Content security policy</strong>, to block out which sources you do not want to be on your website. You can learn more about it <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">here.</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <SecondPaidCard 
           title="Other Services" 
           description="These are other services that we offer as secondary services." 
-          btnhref="/contact/" 
-          btntext="Contact us"   
-          footertext="* These are not guaranteed prices."
+          buttonHref="/contact/" 
+          buttonText="Contact us"   
+          footerText="* These are not guaranteed prices."
         >
           <div slot="paid-card-content">
             <p><b>Website Maintenance:</b> Price varies (Min: $10, max: $250)*; this package will help your site become more up-to-date and fix bugs if needed. Note that you do not need a primary package before buying this.</p>
-            <p class="mb-0"><b>Email Creation:</b> $20 (No DNS Setup), $30 (DNS Setup); this package will create up to 5 users for your domain under Zoho Mail. Note that you do not need a primary package before buying this, and we need access to your DNS settings.</p>
+            <p class="mb-0"><b>Email Creation:</b> $20 (No DNS Setup), $30 (DNS Setup); this package will create up to 5 users for your domain under Zoho Mail. Note that you do not need a primary package before buying this, and we need access to your DNS settings (typically in your registar's [where you got the domain] settings).</p>
           </div>
         </SecondPaidCard>
         <SecondPaidCard 
@@ -83,4 +127,4 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

@@ -1,13 +1,12 @@
 ---
-import Head from '../../layouts/Head.astro';
-import Scripts from '../../layouts/Scripts.astro';
+import DefaultBody from '../../layouts/DefaultBody.astro';
 import CardPage  from '../../layouts/stories/CardPage.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head title="Stories" description="Read about AT Products' stories related to Informational Technology." keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" />
+<DefaultBody title="Stories" description="Read about AT Products' stories related to Informational Technology." keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" />
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -19,6 +18,7 @@ import BackToTop from '../../components/BackToTop.astro';
           { cardTitle: "The Internet Now is Dull and Gray", cardDescription: "Take a peek on how Alex Toucan feels about how websites are designed in the modern world.", cardHref: "websites", pdfHref: "/media/pdf/The Internet Now is Dull and Gray.pdf" },
           { cardTitle: "Technology Influences Young Audiences", cardDescription: "Technology can influence young audiences in many ways with psychological effects.", cardHref: "youngaudiences", pdfHref: "/media/pdf/Technology Influences Young Audiences.pdf" },
           { cardTitle: "Sci-Fi Stories Reflect Reality", cardDescription: "See how Sci-Fi as a genre becomes our modern reality.", cardHref: "scifi", pdfHref: "/media/pdf/Sci-Fi Stories Reflect Reality.pdf" },
+          { cardTitle: "The Impact of Informational Technology", cardDescription: "Technology categories being involved in our daily lives could be good.", cardHref: "techcategories", pdfHref: "/media/pdf/The Impact of Informational Technology.pdf" },
         ]} 
       />
     </main>
@@ -26,4 +26,4 @@ import BackToTop from '../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts index="true" />
+</DefaultBody>
