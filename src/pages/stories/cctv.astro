@@ -1,12 +1,11 @@
 ---
-import Head from '../../layouts/Head.astro';
+import DefaultBody from '../../layouts/DefaultBody.astro';
 import Navbar from '../../layouts/stories/Navbar.astro';
 import Scrollspy from '../../layouts/stories/Scrollspy.astro';
-import Scripts from '../../layouts/Scripts.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<Head title="CCTV Interception" description="AT Products LLC's BookViewer presents 'CCTV Interception'!" author="Pynx" />
+<DefaultBody title="CCTV Interception" description="Learn about how to intercept CCTV for educational purposes." author="Pynx" scrollspy="true" />
 <div id="page">
   <Navbar pageTitle="CCTV Interception" id="cctv"
     link={[
@@ -284,7 +283,7 @@ import BackToTop from '../../components/BackToTop.astro';
         </div>
         <hr>
         <div id="copyright">
-          <h6>&reg; AT Products (LLC) 2019-<script is:inline src="/static/year.js"></script></h6>
+          <h6>® <script is:inline src="/static/year.js"></script> AT Products LLC</h6>
           <h6>AT Products LLC is the publisher of this article/story.</h6>
         </div>
       </Fragment>
@@ -292,4 +291,4 @@ import BackToTop from '../../components/BackToTop.astro';
   </div>
   <BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

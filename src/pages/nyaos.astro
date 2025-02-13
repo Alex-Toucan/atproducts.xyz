@@ -1,13 +1,12 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import HeroPynx from '../components/secondary/HeroPynx.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="NyaOS" heroid="ehs" description="NyaOS; a Hobby OS." keywords="Inferno, NyaOS, BxPP, AT Products LLC" author="Alex Toucan & Pynx" />
+<DefaultBody title="NyaOS" heroid="ehs" description="NyaOS; a Hobby OS." keywords="Inferno, NyaOS, BxPP, AT Products LLC" author="Alex Toucan & Pynx" />
 <div id="page">
 	<Navbar />
 	<div id="main-content">
@@ -26,7 +25,7 @@ import BackToTop from '../components/BackToTop.astro';
 	  <main id="nyaos" class="container">
 	    <div id="general-info">
 	      <h2> General Information </h2>
-	      <p><strong>NyaOS is still experimental; be warned of bugs and glitches. If you find any, please get in touch with us at our <a href="/contact">Contact Form</a>.</strong> NyaOS is a 32-bit hobby OS, purely made for fun, as the bootloader is made with <a href="https://osdev.org/">OSDev</a>. Test this OS in a virtual machine!</p>
+	      <p><strong>NyaOS is no longer being worked on, but was never finalized; be warned of bugs and glitches.</strong> NyaOS is a 32-bit hobby OS, purely made for fun, as the bootloader is made with <a href="https://osdev.org/">OSDev</a>. Test this OS in a virtual machine!</p>
         <span><strong>The minimum requirements for NyaOS is:</strong></span>
         <ul>
           <li><strong>CPU:</strong> At least 1 core.</li>
@@ -75,4 +74,4 @@ cd &lt;dirname&gt;     # changes the current directory
 	</div>
 	<BackToTop />
 </div>
-<Scripts />
+</DefaultBody>

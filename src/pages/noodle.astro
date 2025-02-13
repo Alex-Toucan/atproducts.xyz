@@ -1,15 +1,12 @@
-
 ---
-import Head from '../layouts/Head.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Hero   from '../components/Hero.astro';
-import Scripts from '../layouts/Scripts.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import Modal  from '../components/Modal.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="Noodle Hackerspace" heroid="noodle" icon="noodle.webp" description="Noodle Hackerspace is a community of resources!" keywords="Scripts, viruses, coding," author="Alex Toucan & Pynx"/>
+<DefaultBody title="Noodle Hackerspace" heroid="noodle" icon="noodle.webp" color="#f1b856" description="Noodle Hackerspace is a community of resources!" keywords="Scripts, viruses, coding," author="Alex Toucan & Pynx"/>
 <div id="page">
   <Navbar />
   <div class="alert alert-dark mb-0" role="alert">
@@ -40,34 +37,22 @@ import BackToTop from '../components/BackToTop.astro';
       <div id="resources">
         <h2> Resources </h2>
         <p> What do you want to know about today? </p>
-        <Modal title="Pynx Technologies" id="pynx">
-          <Fragment slot="modal-content">
-            <p><a href="https://2983u2.site/">Pynx Technologies</a> is a company that has cybersecurity tools, pentesting tools, etc. It sells at the moment 
-            SSkullzv2 and Skullzv3.</p>
-          </Fragment>
-        </Modal>
-        <Modal title="Stories" id="stories">
-          <Fragment slot="modal-content">
-            <p><a href="/stories/cctv">CCTV Interception</a></p>
-          </Fragment>
-        </Modal>  
-        <Modal title="Viruses &amp; Malware" id="files">
-          <Fragment slot="modal-content">
-            <p> <a href="/media/files/root.sh" download>Root Password Phishing (Bash)</a> <a href="/media/files/alias.sh">Alias Command Version</a> <a href="/media/files/instruct.txt">Instructions</a> by Lynx </p>
-            <p> <a href="/media/files/login.py" download>Example Login Program (Python)</a>, (Password is "password"), by Lynx </p>
-            <p> <a href="/media/files/Cerbios.py" download>Cerbios Ransomware (Python)</a> by Pynx </p>
-            <p> <a href="/media/files/sshbrute-main.zip" download>SSH Brute (Python [ZIP])</a> by Pynx </p>
-          </Fragment>
-        </Modal>
-        <Modal title="Apps &amp; Software" id="app">
-          <Fragment slot="modal-content">
-            <p> <a href="https://tokyochat.pynxthegoat.repl.co/">Tokyo Chat</a> by Pynx </p>
-        </Fragment>
-      </Modal>
+        <a class="btn btn-dl btn-resource" type="button" href="/articles/noodle/pynxtech">
+          Pynx Technology
+        </a>
+        <a class="btn btn-dl btn-resource" type="button" href="/stories/cctv">
+          CCTV Interception
+        </a>
+        <a class="btn btn-dl btn-resource" type="button" href="/articles/noodle/viruses">
+          Viruses & Malware
+        </a>
+        <a class="btn btn-dl btn-resource" type="button" href="https://tokyochat.pynxthegoat.repl.co/">
+          Tokyo Chat
+        </a>
       </div>  
     </main>
     <Footer author="Alex Toucan & Pynx" />
   </div>
   <BackToTop />
 </div>
-<Scripts modal="true" />
+</DefaultBody>
