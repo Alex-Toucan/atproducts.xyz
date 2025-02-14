@@ -1,5 +1,5 @@
 ---
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy } = Astro.props;
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy, form } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -111,6 +111,14 @@ const { highlight, title, heroid, icon, color, bulletin, description, keywords, 
       {index && (
         <script is:inline src="/static/index.js"></script>
       )}    
+      {form && (
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+          function onSubmit(token) {
+            document.getElementById("contact-form").submit();
+          }
+        </script>
+      )}
     </Fragment>
   </body>
 </html>
