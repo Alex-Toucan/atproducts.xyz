@@ -6,12 +6,23 @@ import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<DefaultBody title="FentaMini" heroid="ehs" description="FentaMini; another programming language from Pynx." keywords="Inferno, FentaMini, BxPP, AT Products LLC" author="Alex Toucan & Pynx">
+<DefaultBody title="FentaMini" heroid="ehs" description="FentaMini; another programming language." keywords="Inferno, FentaMini, BxPP, AT Products LLC" author="Alex Toucan & Pynx">
   <div id="page">
     <Navbar />
     <div id="main-content">
-      <HeroPynx title="FentaMini" description="Made by Pynx&semi; another programming language from Pynx." buttons={[ { href: "#downloads" , text: "Downloads" , type: "primary" }, { href: "https://github.com/throne-hub/FentaMini" , text: "<i class='bi bi-github fs-6 me-2'></i> GitHub Repo" , type: "secondary" }, ]}, dropdownItems={[ { navigationDesc: "General Information" , navigationLink: "#general-info" }, { navigationDesc: "Downloads & Installs" , navigationLink: "#downloads" }, ]}, />
-      <main id="bxpp" class="container">
+      <HeroPynx title="FentaMini" description="Made by Pynx&semi; another programming language" 
+        buttons={[ 
+          { href: "#downloads" , text: "Downloads" , type: "primary" }, 
+          { href: "https://github.com/throne-hub/FentaMini" , text: "<i class='bi bi-github fs-6 me-2'></i> GitHub Repo" , type: "secondary" }, 
+        ]}, 
+        dropdownItems={[ 
+          { navigationDesc: "General Information" , navigationLink: "#general-info" }, 
+          { navigationDesc: "Features" , navigationLink: "#features" }, 
+          { navigationDesc: "Installation" , navigationLink: "#installation" }, 
+          { navigationDesc: "Usage" , navigationLink: "#usage" }, 
+        ]}, 
+      />
+      <main id="fenta" class="container">
         <div id="general-info">
           <h2>General Information</h2>
           <p>
