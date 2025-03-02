@@ -1,0 +1,77 @@
+---
+import DefaultBody from '../layouts/DefaultBody.astro';
+import HeroPynx  from '../components/secondary/HeroPynx.astro';
+import Navbar    from '../components/Navbar.astro';
+import Footer    from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+
+<DefaultBody title="FentaMini" heroid="ehs" description="FentaMini; another programming language." keywords="Inferno, FentaMini, BxPP, AT Products LLC" author="Alex Toucan & Pynx">
+  <div id="page">
+    <Navbar />
+    <div id="main-content">
+      <HeroPynx title="FentaMini" description="Made by Pynx&semi; another programming language" 
+        buttons={[ 
+          { href: "#downloads" , text: "Downloads" , type: "primary" }, 
+          { href: "https://github.com/throne-hub/FentaMini" , text: "<i class='bi bi-github fs-6 me-2'></i> GitHub Repo" , type: "secondary" }, 
+        ]}, 
+        dropdownItems={[ 
+          { navigationDesc: "General Information" , navigationLink: "#general-info" }, 
+          { navigationDesc: "Features" , navigationLink: "#features" }, 
+          { navigationDesc: "Installation" , navigationLink: "#installation" }, 
+          { navigationDesc: "Usage" , navigationLink: "#usage" }, 
+        ]}, 
+      />
+      <main id="fenta" class="container">
+        <div id="general-info">
+          <h2>General Information</h2>
+          <p>
+            <strong>From Pynx Himself:</strong> This simple JavaScript-based programming language was written everytime I got extremely sad so this language seems a bit rushed and that was the point for it to make me genuienly happy inside again.
+          </p>
+          <p>To undertand the code you can follow the <code>\examples\</code> directory OR look at <code>main.js</code>, everything is semi-documented well. </p>
+          <p>
+            <b>Programmed In:</b> JavaScript
+          </p>
+        </div>
+        <hr>
+        <div id="features">
+          <h2>Features</h2>
+          <ul>
+            <li>
+              <strong>Function Definition</strong>: Define reusable functions using the <code>$</code> syntax.
+            </li>
+            <li>
+              <strong>Variable Assignment</strong>: Assign values to variables using the <code>=</code> operator.
+            </li>
+            <li>
+              <strong>Control Flow</strong>: Use <code>if</code> statements for conditional execution and <code>jmp</code> for jumping to defined functions.
+            </li>
+            <li>
+              <strong>Print Statements</strong>: Output messages to the console with support for special characters (e.g., newline, tab).
+            </li>
+            <li>
+              <strong>Error Handling</strong>: Built-in error reporting for undefined functions and invalid commands.
+            </li>
+            <li>
+              <strong>Exit and Restart</strong>: Control the execution flow with <code>Exit</code> and <code>Restart</code> functions.
+            </li>
+          </ul>
+        </div>
+        <hr>
+        <div id="installation">
+          <h2>Installation</h2>
+          <p>To use the Simple Interpreter, ensure you have <a href="https://nodejs.org/">Node.js</a> installed on your machine. Clone the repository and navigate to the project directory: </p>
+<pre><code>git clone https://github.com/throne-hub/FentaMini.git
+cd simple-interpreter</code></pre>
+        </div>
+        <hr>
+        <div id="usage">
+          <h2>Usage</h2>
+<pre><code>node FentaMini.js your_script.txt</code></pre>
+        </div>
+      </main>
+      <Footer author="Alex Toucan & Pynx" />
+    </div>
+    <BackToTop />
+  </div>
+</DefaultBody>
