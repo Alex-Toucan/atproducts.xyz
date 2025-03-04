@@ -8,7 +8,7 @@
     {
       "packagePatterns": ["*"],
       "groupName": "all dependencies",
-      "rangeStrategy": "update-lockfile"
+      "rangeStrategy": "bump"
     }
   ],
   "lockFileMaintenance": {
