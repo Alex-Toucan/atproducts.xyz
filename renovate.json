@@ -6,8 +6,6 @@
   "labels": ["dependencies"],
   "packageRules": [
     {
-      "packagePatterns": ["*"],
-      "groupName": "all dependencies",
       "rangeStrategy": "bump"
     }
   ],
