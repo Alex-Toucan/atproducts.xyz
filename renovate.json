@@ -10,9 +10,5 @@
       "groupName": "all dependencies",
       "rangeStrategy": "bump"
     }
-  ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["before 3am every day"]
-  }
+  ]
 }
