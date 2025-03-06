@@ -6818,7 +6818,7 @@ img.astro-image {
   }
 
   [data-bs-theme=dark] & {
-    content: url('/media/images/astro.png');
+    content: url('/media/images/astro.webp');
   }
 }
 
