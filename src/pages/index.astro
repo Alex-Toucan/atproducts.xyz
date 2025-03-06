@@ -198,18 +198,16 @@ index="true">
       <hr>
       <div id="credits">
         <h2>Credits</h2>
-        <div class="bg-dark index-border p-dark-0 p-1 rounded-2 text-white" data-bs-theme="dark">
-          <div class="p-2 text-mmd-center">
+        <div class="d-grid gap-4 gap-md-3">
+          <div class="text-mmd-center">
             <a href="https://getbootstrap.com">
               <img src="/media/images/bootstrap.webp" alt="Bootstrap" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">Bootstrap</a> has provided their CSS library for us to use.</div>
           </div>
-          <hr class="m-2 d-md-none">
-          <div class="p-2 text-mmd-center">
+          <div class="text-mmd-center">
             <a href="https://astro.build">
-              <img src="/media/images/astro.webp" alt="Astro" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 px-1 ms-1 me-2"><div class="d-inline">Astro</a> has provided their framework which powers our site!</div>
+              <img src="/media/images/astro.webp" alt="Astro" height="60px" class="astro-image d-block mx-mmd-auto d-md-inline mb-mmd-2 px-1 ms-1 me-2"><div class="d-inline">Astro</a> has provided their framework which powers our site!</div>
           </div>
-          <hr class="m-2">
-          <Accordion parent="resourcesAccordion" additionalClasses="m-2" theme="dark">
+          <Accordion parent="resourcesAccordion">
             <Fragment slot="accordion-content">
               <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne" parent="resourcesAccordion">
                 <Fragment slot="accordion-item-content">
@@ -239,7 +237,7 @@ index="true">
               </AccordionItem>
             </Fragment>
           </Accordion>
-        </div>
+        </div> 
       </div>
       <hr>
       <div id="history">

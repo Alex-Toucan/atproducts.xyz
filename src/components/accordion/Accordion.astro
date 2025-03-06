@@ -1,14 +1,7 @@
 ---
-const { parent, additionalClasses, theme } = Astro.props;
-const classes = additionalClasses ? `accordion ${additionalClasses}` : 'accordion';
+const { parent } = Astro.props;
 ---
 
-<div class={classes} id={parent}>
-  {theme ? (
-    <div data-bs-theme={theme}>
-      <slot name="accordion-content" />
-    </div>
-  ) : (
-    <slot name="accordion-content" />
-  )}
+<div id={parent}>
+  <slot name="accordion-content" />
 </div>
