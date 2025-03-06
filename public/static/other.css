@@ -6814,11 +6814,11 @@ html.fixedtopnavimage {
 
 img.astro-image {
   & {
-    content: url('/static/images/astro.webp');
+    content: url('/static/images/astro-dark.webp');
   }
 
   [data-bs-theme=dark] & {
-    content: url('/static/images/astro-dark.png');
+    content: url('/static/images/astro.png');
   }
 }
 
