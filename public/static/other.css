@@ -6812,6 +6812,10 @@ html.fixedtopnavimage {
    filter: invert(1);
 }
 
+[data-bs-theme=dark] img.astro-image {
+  content: url('/static/images/astro-dark.png');
+}
+
 .permhr {
   color: #adb5bd;
 }
