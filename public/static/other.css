@@ -6812,8 +6812,14 @@ html.fixedtopnavimage {
    filter: invert(1);
 }
 
-[data-bs-theme=dark] img.astro-image {
-  content: url('/static/images/astro-dark.png');
+img.astro-image {
+  & {
+    content: url('/static/images/astro.webp');
+  }
+
+  [data-bs-theme=dark] & {
+    content: url('/static/images/astro-dark.png');
+  }
 }
 
 .permhr {
