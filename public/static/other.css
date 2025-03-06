@@ -7030,13 +7030,14 @@ img.astro-image {
 }
 
 .dropdown-menu li+li {
-    margin-top: 0.125rem;
+  margin-top: 0.125rem;
 }
-.products-border {
-    --bs-border-width: 2.5px;	
-    border-width: 2.5px !important;	
-    border-style: solid;
-    border-color: var(--bs-light-border-subtle) !important;
+.products-content {
+  background-color: #323232;
+}
+
+.products-tab-content {
+  background-color: #505050;
 }
 
 .glow-text {
