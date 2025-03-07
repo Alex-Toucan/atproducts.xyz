@@ -122,7 +122,11 @@ index="true">
                 </div>
               </div>
               <div class="products-2 tab-pane fade" id="products-2" role="tabpanel" aria-labelledby="products-2-tab" tabindex="0">
-                <div class="bg-white rounded-2 mb-2"><img class=" rounded-2" src="/media/images/flashdoc.webp" alt="Flash Documentation"></div>
+                <div class="hero hero-flash rounded-2 mb-2">
+                  <div class="hero-back h-100 position-relative rounded-2 border-0">
+                    <img class="my-2 rounded-2 bg-light p-1 bg-opacity-50" src="/media/images/flashdoc.webp" alt="Flash Documentation Logo">
+                  </div>
+                </div>
                 <h2>Flash Documentation</h2>
                 <p class="mb-0">Here are some things about Adobe Flash!</p>
                 <div class="tab-link">
@@ -201,70 +205,57 @@ index="true">
       <hr>
       <div id="allies">
         <h2>Allies</h2>
-        <div class="bg-dark index-border p-1 p-dark-0 rounded-2 text-white" data-bs-theme="dark">
-          <div class="d-md-flex flex-row">
-            <div class="col-md">
-              <div class="p-2">
-                <div class="mx-md-auto d-table">
-                  <a href="https://discord.gg/pYa87Bhau9" class="d-mmd-flex"><img src="/media/images/RSA.webp" alt="Royal Stack Alliance" height="60px" class="d-inline col-auto me-2"><div class="d-inline my-mmd-auto col">Royal Stack Alliance</div></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md"> 
-              <div class="p-2"> 
-                <div class="mx-md-auto d-table"> 
-                  <a href="https://zoezo.dev" class="d-mmd-flex"><img src="/media/images/zoezo.webp" alt="Zoezo" height="60px" class="d-inline col-auto me-1"><div class="d-inline my-mmd-auto col">Zoezo</div></a> 
-                </div> 
-              </div> 
-            </div>
+        <div class="d-grid gap-3 mt-3">
+          <div>
+            <a href="https://discord.gg/pYa87Bhau9" class="d-mmd-flex"><img src="/media/images/RSA.webp" alt="Royal Stack Alliance" height="60px" class="d-inline me-2"><div class="d-inline my-mmd-auto col">Royal Stack Alliance</div></a>
           </div>
+          <div>
+            <a href="https://zoezo.dev" class="d-mmd-flex"><img src="/media/images/zoezo.webp" alt="Zoezo" height="60px" class="d-inline me-1"><div class="d-inline my-mmd-auto col">Zoezo</div></a> 
+          </div> 
         </div>
       </div>
       <hr>
       <div id="credits">
         <h2>Credits</h2>
-        <div class="bg-dark index-border p-dark-0 p-1 rounded-2 text-white" data-bs-theme="dark">
-          <div class="p-2 text-mmd-center">
+        <div class="d-grid gap-3 mt-3">
+          <div class="d-flex gap-2">
             <a href="https://getbootstrap.com">
-              <img src="/media/images/bootstrap.webp" alt="Bootstrap" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">Bootstrap</a> has provided their CSS library for us to use.</div>
+            <img src="/media/images/bootstrap.webp" alt="Bootstrap" height="60px">
+            <div class="my-auto">Bootstrap</a> has provided their CSS library for us to use.</div>
           </div>
-          <hr class="m-2 d-md-none">
-          <div class="p-2 text-mmd-center">
+          <div class="d-flex gap-2">
             <a href="https://astro.build">
-              <img src="/media/images/astro.webp" alt="Astro" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 px-1 ms-1 me-2"><div class="d-inline">Astro</a> has provided their framework which powers our site!</div>
+            <img src="/media/images/astro.webp" alt="Astro" height="60px">
+            <div class="my-auto">Astro</a> has provided their framework which powers our site.</div>
           </div>
-          <hr class="m-2">
-          <Accordion parent="resourcesAccordion" additionalClasses="m-2" theme="dark">
+          <Accordion parent="resourcesAccordion">
             <Fragment slot="accordion-content">
               <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne" parent="resourcesAccordion">
                 <Fragment slot="accordion-item-content">
-                  <div class="p-2 text-mmd-center d-block">
+                  <div class="p-3">
                     <p class="mb-0"><a href="https://uigradients.com/">uiGradients</a> for providing gradients for the carousel images when we are lazy to do it ourselves.</p>
                   </div>
                 </Fragment>
               </AccordionItem>
               <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo" parent="resourcesAccordion">
                 <Fragment slot="accordion-item-content">
-                  <div class="p-2 text-mmd-center">
-                    <div class="p-2">
-                      <p class="d-inline">
-                        <a href="https://w3schools.com"><img src="/media/images/w3schools.webp" alt="W3Schools" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">W3Schools</a> has provided the former navigation buttons.</p></div>
+                  <div class="d-grid gap-3 p-3">
+                    <div class="d-flex gap-2">
+                      <a href="https://w3schools.com">
+                      <img src="/media/images/w3schools.webp" alt="W3Schools" height="60px">
+                      <div class="my-auto">W3Schools</a> has provided the former navigation buttons.</div>
                     </div>
-                    <div class="mb-md-2"></div>
-                    <hr class="m-2 d-md-none">
-                    <div class="p-2">
-                      <p class="d-inline">
-                        <a href="https://tinkercad.com">
-                          <img src="/media/images/tinkercad.webp" alt="TinkerCAD" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">TinkerCAD</a> has provided their 3D building tool to build our past logo.
-                      </p>
-                    </div>
+                    <div class="d-flex gap-2">
+                      <a href="https://tinkercad.com">
+                      <img src="/media/images/tinkercad.webp" alt="TinkerCAD" height="60px">
+                      <div class="my-auto">TinkerCAD</a> has provided their 3D building tool to build our past logo.</div>
                     </div>
                   </div>
                 </Fragment>
               </AccordionItem>
             </Fragment>
           </Accordion>
-        </div>
+        </div> 
       </div>
       <hr>
       <div id="history">
