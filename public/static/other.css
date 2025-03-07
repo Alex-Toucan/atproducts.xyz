@@ -7014,14 +7014,19 @@ html.fixedtopnavimage {
 	}
 }
 
-.dropdown-menu li+li {
-    margin-top: 0.125rem;
+.tab-pane h2:not(.hero + h2) {
+  padding-top: 0.5rem;
 }
+
+.dropdown-menu li+li {
+  margin-top: 0.125rem;
+}
+
 .products-border {
-    --bs-border-width: 2.5px;	
-    border-width: 2.5px !important;	
-    border-style: solid;
-    border-color: var(--bs-light-border-subtle) !important;
+  --bs-border-width: 2.5px;	
+  border-width: 2.5px !important;	
+  border-style: solid;
+  border-color: var(--bs-light-border-subtle) !important;
 }
 
 .glow-text {
