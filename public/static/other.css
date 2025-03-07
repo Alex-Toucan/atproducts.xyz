@@ -6932,13 +6932,6 @@ html.fixedtopnavimage {
 	}
 }
 
-@media (max-width:767.98px) and (min-height: 675.98px) {
-	.story-scroll {
-		height: calc(100vh - 448px);
-		overflow-y: scroll;
-	}
-}
-
 @media (max-width:767.98px) {
 	.back-to-top {
 		bottom: 60px !important;
