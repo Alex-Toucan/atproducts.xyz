@@ -6996,7 +6996,7 @@ html.fixedtopnavimage {
 }
 
 .products-3 img {
-	max-width: 260px;
+	max-width: 225px;
 }
 
 .products-4 img {
@@ -7004,7 +7004,7 @@ html.fixedtopnavimage {
 }
 
 .products-6 img {
-	max-width: 250px;
+	max-width: 225px;
 }
 
 @media (max-width:767.98px) {
@@ -7014,7 +7014,7 @@ html.fixedtopnavimage {
 	}
 	.products-3 img, .products-6 img {
 		width: 50%;
-		max-width: 250px;
+		max-width: 225px;
 	}
 	.products-4 img {
 		max-width: 150px;
