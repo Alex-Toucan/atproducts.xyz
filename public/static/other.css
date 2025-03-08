@@ -7015,8 +7015,8 @@ html.fixedtopnavimage {
 }
 
 @media (min-width: 767.98px) {
-  .tab-pane h2:not(.hero + h2) {
-    padding-top: 0.25rem;
+  .tabpane .hero + h2 {
+    padding-top: 0.5rem;
   }
 }
 
