@@ -16,7 +16,7 @@ bulletin={[
   { bulletinImage: "221-021225-3.webp" },
   { bulletinImage: "221-021225-4.webp" },
 ]} 
-index="true" />
+index="true">
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -101,72 +101,86 @@ index="true" />
       <hr>
       <div id="products">
         <h2>Products</h2>
-        <div class="products-border rounded-2 p-1">
-          <div class="d-md-flex">
-            <div class="nav flex-column nav-pills col-md-4 me-md-1" id="products-tab" role="tablist" aria-orientation="vertical">
-              <button class="nav-link active" id="products-1-tab" data-bs-toggle="pill" data-bs-target="#products-1" type="button" role="tab" aria-controls="products-1" aria-selected="true">Paid Services</button>
-              <button class="nav-link" id="products-2-tab" data-bs-toggle="pill" data-bs-target="#products-2" type="button" role="tab" aria-controls="products-2" aria-selected="false" tabindex="-1">Flash Documentation</button>
-              <button class="nav-link" id="products-3-tab" data-bs-toggle="pill" data-bs-target="#products-3" type="button" role="tab" aria-controls="products-3" aria-selected="false" tabindex="-1">MDickie Projects</button>
-              <button class="nav-link" id="products-4-tab" data-bs-toggle="pill" data-bs-target="#products-4" type="button" role="tab" aria-controls="products-4" aria-selected="false" tabindex="-1">SMS Bomb</button>
-              <button class="nav-link" id="products-5-tab" data-bs-toggle="pill" data-bs-target="#products-5" type="button" role="tab" aria-controls="products-5" aria-selected="false" tabindex="-1">Pynx's Projects</button>
-              <button class="nav-link" id="products-6-tab" data-bs-toggle="pill" data-bs-target="#products-6" type="button" role="tab" aria-controls="products-6" aria-selected="false" tabindex="-1">AT's ROM Games</button>
-              <button class="nav-link" id="products-7-tab" data-bs-toggle="pill" data-bs-target="#products-7" type="button" role="tab" aria-controls="products-7" aria-selected="false" tabindex="-1">Public Archive</button>
+        <div class="rounded-2">
+          <div class="d-grid d-md-flex gap-2">
+            <div class="nav flex-column nav-pills col-md-4 col-lg-3 justify-content-between" id="products-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link text-md-start active" id="products-1-tab" data-bs-toggle="pill" data-bs-target="#products-1" type="button" role="tab" aria-controls="products-1" aria-selected="true">Paid Services</button>
+              <button class="nav-link text-md-start" id="products-2-tab" data-bs-toggle="pill" data-bs-target="#products-2" type="button" role="tab" aria-controls="products-2" aria-selected="false" tabindex="-1">Flash Documentation</button>
+              <button class="nav-link text-md-start" id="products-3-tab" data-bs-toggle="pill" data-bs-target="#products-3" type="button" role="tab" aria-controls="products-3" aria-selected="false" tabindex="-1">MDickie Projects</button>
+              <button class="nav-link text-md-start" id="products-4-tab" data-bs-toggle="pill" data-bs-target="#products-4" type="button" role="tab" aria-controls="products-4" aria-selected="false" tabindex="-1">SMS Bomb</button>
+              <button class="nav-link text-md-start" id="products-5-tab" data-bs-toggle="pill" data-bs-target="#products-5" type="button" role="tab" aria-controls="products-5" aria-selected="false" tabindex="-1">Pynx's Projects</button>
+              <button class="nav-link text-md-start" id="products-6-tab" data-bs-toggle="pill" data-bs-target="#products-6" type="button" role="tab" aria-controls="products-6" aria-selected="false" tabindex="-1">AT's ROM Games</button>
+              <button class="nav-link text-md-start" id="products-7-tab" data-bs-toggle="pill" data-bs-target="#products-7" type="button" role="tab" aria-controls="products-7" aria-selected="false" tabindex="-1">Public Archive</button>
             </div>
-            <div class="vr disbr me-1"></div>
-            <hr class="opacity-25 my-1 d-md-none">
-            <div class="tab-content col-md text-center products-tabContent" id="products-tabContent">
+            <div class="tab-content col-md text-center products-tabContent bg-body-secondary rounded-2 p-3" id="products-tabContent">
               <div class="products-1 tab-pane fade active show" id="products-1" role="tabpanel" aria-labelledby="products-1-tab" tabindex="0">
                 <h2>Paid Services</h2>
                 <p>View our Paid Services!</p>
                 <p>Current primary services are Website Design and Website Hosting.</p>
                 <div class="tab-link">
-                  <a href="/paid" class="btn btn-primary w-100">Visit</a>
+                  <a href="/paid" class="btn btn-primary btn-lg w-100">Visit</a>
                 </div>
               </div>
               <div class="products-2 tab-pane fade" id="products-2" role="tabpanel" aria-labelledby="products-2-tab" tabindex="0">
-                <div class="bg-white rounded-2 mb-2"><img class=" rounded-2" src="/media/images/flashdoc.webp" alt="Flash Documentation"></div>
+                <div class="hero hero-flash rounded-2 mb-2">
+                  <div class="hero-back h-100 position-relative rounded-2 border-0">
+                    <img class="my-2 rounded-2 bg-light p-1 bg-opacity-50" src="/media/images/flashdoc.webp" alt="Flash Documentation Logo">
+                  </div>
+                </div>
                 <h2>Flash Documentation</h2>
                 <p class="mb-0">Here are some things about Adobe Flash!</p>
                 <div class="tab-link">
-                  <a href="/flash" class="btn btn-primary w-100 mb-2">Visit</a>
+                  <a href="/flash" class="btn btn-primary btn-lg w-100">Visit</a>
                 </div>
               </div>
               <div class="products-3 tab-pane fade" id="products-3" role="tabpanel" aria-labelledby="products-3-tab" tabindex="0">
-                <div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/mdickiepro.webp" alt="MDickie Projects"></div>
+                <div class="hero hero-mdickie rounded-2 mb-2">
+                  <div class="hero-back h-100 position-relative rounded-2 border-0">
+                    <img class="my-2 rounded-2 bg-light p-1 bg-opacity-50" src="/media/images/mdickiepro.webp" alt="MDickie Projects Logo">
+                  </div>
+                </div>
                 <h2>MDickie Projects</h2>
                 <p class="mb-0">This is a fanmade site about what MDickie has developed since the 1990s!</p>
                 <div class="tab-link">
-                  <a href="/mdickie" class="btn btn-primary w-100">Visit</a>
+                  <a href="/mdickie" class="btn btn-primary btn-lg w-100">Visit</a>
                 </div>
               </div>
               <div class="products-4 tab-pane fade" id="products-4" role="tabpanel" aria-labelledby="products-4-tab" tabindex="0">
-                <div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/ya.png" alt="SMS Bomb"></div>
+                <div class="hero hero-sms rounded-2 mb-2">
+                  <div class="hero-back h-100 position-relative rounded-2 border-0">
+                    <img class="my-2" src="/media/images/ya.png" alt="SMS Bomb Logo">
+                  </div>
+                </div>
                 <h2>SMS Bomb</h2>
                 <p class="mb-0">This is for Android Devices. You can spam message your friends!</p>
                 <div class="tab-link">
-                  <a href="/sms" class="btn btn-primary w-100">Visit</a>
+                  <a href="/sms" class="btn btn-primary btn-lg w-100">Visit</a>
                 </div>
               </div>
               <div class="products-5 tab-pane fade" id="products-5" role="tabpanel" aria-labelledby="products-5-tab" tabindex="0">
                 <h2>Pynx's Projects</h2>
                 <p class="mb-0">Partnered with <a href="https://2983u2.site/">PynxTech</a>, we released these projects!</p>
                 <div class="tab-link">
-                  <a href="/pynx" class="btn btn-primary w-100">Visit</a>
+                  <a href="/pynx" class="btn btn-primary btn-lg w-100">Visit</a>
                 </div>
               </div>
               <div class="products-6 tab-pane fade" id="products-6" role="tabpanel" aria-labelledby="products-6-tab" tabindex="0">
-                <div class="bg-white rounded-2 mb-2"><img class="py-1 rounded-2" src="/media/images/AT-ROM-Games-with-logo.webp" alt="AT's ROM Games"></div>
+                <div class="hero hero-roms rounded-2 mb-2">
+                  <div class="hero-back h-100 position-relative rounded-2 border-0">
+                    <img class="my-2 rounded-2 bg-light p-1 bg-opacity-50" src="/media/images/AT-ROM-Games-with-logo.webp" alt="AT's ROM Games Logo">
+                  </div>
+                </div>
                 <h2>AT's ROM Games</h2>
                 <p class="mb-0">A <strong>discontinued</strong> collection of ROMs from back in 2021!</p>
                 <div class="tab-link">
-                  <a href="/roms" class="btn btn-primary w-100">Visit</a>
+                  <a href="/roms" class="btn btn-primary btn-lg w-100">Visit</a>
                 </div>
               </div>
               <div class="products-7 tab-pane fade" id="products-7" role="tabpanel" aria-labelledby="products-7-tab" tabindex="0">
                 <h2>Public Archive</h2>
                 <p class="mb-0">View most of our old versions here!</p>
                 <div class="tab-link">
-                  <a href="/backup/archive" class="btn btn-primary w-100">Visit</a>
+                  <a href="/backup/archive" class="btn btn-primary btn-lg w-100">Visit</a>
                 </div>
               </div>
             </div>
@@ -176,70 +190,57 @@ index="true" />
       <hr>
       <div id="allies">
         <h2>Allies</h2>
-        <div class="bg-dark index-border p-1 p-dark-0 rounded-2 text-white" data-bs-theme="dark">
-          <div class="d-md-flex flex-row">
-            <div class="col-md">
-              <div class="p-2">
-                <div class="mx-md-auto d-table">
-                  <a href="https://discord.gg/pYa87Bhau9" class="d-mmd-flex"><img src="/media/images/RSA.webp" alt="Royal Stack Alliance" height="60px" class="d-inline col-auto me-2"><div class="d-inline my-mmd-auto col">Royal Stack Alliance</div></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md"> 
-              <div class="p-2"> 
-                <div class="mx-md-auto d-table"> 
-                  <a href="https://zoezo.dev" class="d-mmd-flex"><img src="/media/images/zoezo.webp" alt="Zoezo" height="60px" class="d-inline col-auto me-1"><div class="d-inline my-mmd-auto col">Zoezo</div></a> 
-                </div> 
-              </div> 
-            </div>
+        <div class="d-grid gap-3 mt-3">
+          <div>
+            <a href="https://discord.gg/pYa87Bhau9" class="d-mmd-flex"><img src="/media/images/RSA.webp" alt="Royal Stack Alliance" height="60px" class="d-inline me-2"><div class="d-inline my-mmd-auto col">Royal Stack Alliance</div></a>
           </div>
+          <div>
+            <a href="https://zoezo.dev" class="d-mmd-flex"><img src="/media/images/zoezo.webp" alt="Zoezo" height="60px" class="d-inline me-1"><div class="d-inline my-mmd-auto col">Zoezo</div></a> 
+          </div> 
         </div>
       </div>
       <hr>
       <div id="credits">
         <h2>Credits</h2>
-        <div class="bg-dark index-border p-dark-0 p-1 rounded-2 text-white" data-bs-theme="dark">
-          <div class="p-2 text-mmd-center">
+        <div class="d-grid gap-3 mt-3">
+          <div class="d-flex gap-2">
             <a href="https://getbootstrap.com">
-              <img src="/media/images/bootstrap.webp" alt="Bootstrap" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">Bootstrap</a> has provided their CSS library for us to use.</div>
+            <img src="/media/images/bootstrap.webp" alt="Bootstrap" height="60px">
+            <div class="my-auto">Bootstrap</a> has provided their CSS library for us to use.</div>
           </div>
-          <hr class="m-2 d-md-none">
-          <div class="p-2 text-mmd-center">
+          <div class="d-flex gap-2">
             <a href="https://astro.build">
-              <img src="/media/images/astro.webp" alt="Astro" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 px-1 ms-1 me-2"><div class="d-inline">Astro</a> has provided their framework which powers our site!</div>
+            <img src="/media/images/astro.webp" alt="Astro" height="60px" width="75px" class="object-fit-scale">
+            <div class="my-auto">Astro</a> has provided their framework which powers our site.</div>
           </div>
-          <hr class="m-2">
-          <Accordion parent="resourcesAccordion" additionalClasses="m-2" theme="dark">
+          <Accordion parent="resourcesAccordion">
             <Fragment slot="accordion-content">
               <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne" parent="resourcesAccordion">
                 <Fragment slot="accordion-item-content">
-                  <div class="p-2 text-mmd-center d-block">
+                  <div class="p-3">
                     <p class="mb-0"><a href="https://uigradients.com/">uiGradients</a> for providing gradients for the carousel images when we are lazy to do it ourselves.</p>
                   </div>
                 </Fragment>
               </AccordionItem>
               <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo" parent="resourcesAccordion">
                 <Fragment slot="accordion-item-content">
-                  <div class="p-2 text-mmd-center">
-                    <div class="p-2">
-                      <p class="d-inline">
-                        <a href="https://w3schools.com"><img src="/media/images/w3schools.webp" alt="W3Schools" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">W3Schools</a> has provided the former navigation buttons.</p></div>
+                  <div class="d-grid gap-3 p-3">
+                    <div class="d-flex gap-2">
+                      <a href="https://w3schools.com">
+                      <img src="/media/images/w3schools.webp" alt="W3Schools" height="60px">
+                      <div class="my-auto">W3Schools</a> has provided the former navigation buttons.</div>
                     </div>
-                    <div class="mb-md-2"></div>
-                    <hr class="m-2 d-md-none">
-                    <div class="p-2">
-                      <p class="d-inline">
-                        <a href="https://tinkercad.com">
-                          <img src="/media/images/tinkercad.webp" alt="TinkerCAD" height="60px" class="d-block mx-mmd-auto d-md-inline mb-mmd-2 me-2"><div class="d-inline">TinkerCAD</a> has provided their 3D building tool to build our past logo.
-                      </p>
-                    </div>
+                    <div class="d-flex gap-2">
+                      <a href="https://tinkercad.com">
+                      <img src="/media/images/tinkercad.webp" alt="TinkerCAD" height="60px">
+                      <div class="my-auto">TinkerCAD</a> has provided their 3D building tool to build our past logo.</div>
                     </div>
                   </div>
                 </Fragment>
               </AccordionItem>
             </Fragment>
           </Accordion>
-        </div>
+        </div> 
       </div>
       <hr>
       <div id="history">
@@ -261,7 +262,7 @@ index="true" />
             </div>
           </div>
         </div>
-        <div class="tab-content products-border rounded-2 p-2" id="history-tabs">
+        <div class="tab-content rounded-2 p-2 bg-body-secondary" id="history-tabs">
           <div class="tab-pane fade show active" id="history-1-pane">
             <h3>2020</h3>
             <p class="m-0">AT Products was just a simple thought around this time, a company owned by Alex Toucan. It would become genuine with the help of <a href="https://discord.com">Discord</a>, as it gave Alex Toucan some reputation.</p>
