@@ -1,0 +1,10 @@
+---
+const { language, highlight_as, code } = Astro.props;
+---
+
+<div class="bg-dark-subtle rounded-2"><div class="py-2 px-3 border-bottom d-flex justify-content-between">
+  <span class="font-monospace my-auto">{language}</span>
+  <i class="bi bi-clipboard btn btn-clipboard p-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy to Clipboard"></i>
+  </div>
+<pre class="p-3"><code class={`language-${highlight_as}`}><slot name="code-example" /></code></pre>
+</div>
