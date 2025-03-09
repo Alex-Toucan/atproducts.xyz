@@ -1,8 +1,8 @@
 {
   "name": "atproducts.xyz",
-  "version": "2.21.1",
+  "version": "2.22",
   "config": {
-    "version_short": "2.21"
+    "version_short": "2.22"
   },
   "scripts": {
     "dev": "astro dev",
