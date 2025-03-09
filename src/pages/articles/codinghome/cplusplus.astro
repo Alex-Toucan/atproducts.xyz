@@ -2,6 +2,7 @@
 import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import CodeBlock from '../../../components/CodeBlock.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
@@ -38,23 +39,21 @@ import BackToTop from '../../../components/BackToTop.astro';
             <h2>Strings</h2>
             <p> A string is a sequence of characters representing text. Strings are typically enclosed in quotation marks and can be stored in variables for later use in a program. </p>
             <p>
-<pre><code> 
-#include &lt;ostream&gt;
+<CodeBlock language="C++" highlight_as="cpp"><Fragment slot="code-example">#include &lt;ostream&gt;
 #include &lt;string&gt;
 
 int main() &lbrace; 
-    // Declare a string variable
-    std&colon;&colon;string str = "codinghome"; 
+  // Declare a string variable
+  std&colon;&colon;string str = "codinghome"; 
 &rbrace; 
-</code></pre>
+</Fragment></CodeBlock>
             </p>
           </div>
           <div id="integers">
             <h2>Integers and Floating Point Numbers</h2>
             <p>Simply said, Integers are used for numbers without a decimal, and Float is used for numbers with decimals, <b>simply said</b>. There is more to that but we are keeping it simple. </p>
 
-<pre><code> 
-#include &lt;iostream&gt;
+<CodeBlock language="C++" highlight_as="cpp"><Fragment slot="code-example">#include &lt;iostream&gt;
 
 int main() &lbrace; 
   // Declare an integer variable 
@@ -63,13 +62,12 @@ int main() &lbrace;
   // Declare a floating-point variable float 
   fnum = 10.5; 
 &rbrace; 
-</code></pre>
+</Fragment></CodeBlock>
           </div>
           <div id="print">
             <h2>Print</h2>
             <p> Printing an output to the terminal/console: </p>
-<pre><code>
-#include &lt;iostream&gt;
+<CodeBlock language="C++" highlight_as="cpp"><Fragment slot="code-example">#include &lt;iostream&gt;
 
 int main() &lbrace;
   // Declare an integer variable
@@ -82,7 +80,7 @@ int main() &lbrace;
   
   return 0;
 &rbrace;
-</code></pre>
+</Fragment></CodeBlock>
           </div>
           <div id="data">
             <h2>Other Data Types</h2>
@@ -98,13 +96,13 @@ int main() &lbrace;
           <div id="comments">
             <h2>Comments</h2>
             <p>Below is an example of comments.</p>
-<pre><code>
-// This is a single line comment
-/*
+<CodeBlock language="C++" highlight_as="cpp"><Fragment slot="code-example">&#47;&#47; This is a single line comment
+  
+&#47;*
 * This is a multi-line comment
 * that spans multiple lines
-*/
-</code></pre>
+*&#47;
+</Fragment></CodeBlock>
           </div>
         </div>
         <hr>
@@ -117,4 +115,5 @@ int main() &lbrace;
   </div>
   <BackToTop />
 </div>
+
 </DefaultBody>

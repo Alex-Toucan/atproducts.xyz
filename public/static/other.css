@@ -7104,3 +7104,7 @@ html.fixedtopnavimage {
 .tab {
 	text-indent: 3rem;
 }
+
+.btn-clipboard.btn:hover {
+  color: var(--bs-link-hover-color);
+}
