@@ -78,6 +78,10 @@ html, body {
 	background: url('/media/images/hero-roms.webp');
 } 
 
+.hero-blue {
+  background: url('/media/images/Screenshot_8-3-2025_233010_other.atproducts.xyz.jpeg');
+}
+
 .accordion-body p:last-child {
   margin-bottom: 0 !important;
 }
@@ -6992,7 +6996,7 @@ html.fixedtopnavimage {
 	max-width: 225px;
 }
 
-.products-4 img {
+.products-4 img, .products-7 img  {
 	max-width: 125px;
 }
 
@@ -7009,7 +7013,7 @@ html.fixedtopnavimage {
 		width: 50%;
 		max-width: 225px;
 	}
-	.products-4 img {
+	.products-4 img, .products-7 img  {
 		max-width: 150px;
 	}
 }
@@ -7103,4 +7107,8 @@ html.fixedtopnavimage {
 
 .tab {
 	text-indent: 3rem;
+}
+
+.btn-clipboard.btn:hover {
+  color: var(--bs-link-hover-color);
 }
