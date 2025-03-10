@@ -7,7 +7,7 @@ import Accordion from '../components/accordion/Accordion.astro';
 import AccordionItem from '../components/accordion/AccordionItem.astro';
 ---
 
-<DefaultBody title="Licenses" description="Licenses of all our resources." author="Alex Toucan" accordion="true" />
+<DefaultBody title="Licenses" description="Licenses of all our resources." author="Alex Toucan" accordion="true">
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -15,7 +15,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
       <h1 class="title">Licenses</h1>
       <h5> Last Updated: <time>January 6th, 2025</time>. </h5>
       <h5> Into Effect: <time>February 12th, 2025</time>. </h5>
-      <br>
+      <div class="py-2" />
       <Accordion parent="licensesAccordion">
         <Fragment slot="accordion-content">
           <AccordionItem title="AT Products LLC & atproducts.xyz License" id="atproductsxyz" parent="licensesAccordion">
