@@ -4,7 +4,10 @@ $(document).ready(function () {
       const codeElement = parentContainer.find('code');
       if (codeElement.length) {
           const htmlCode = codeElement.html();
-          const cleanedCode = htmlCode.replace(/<span.*?>|<\/span>/g, '');
+          const cleanedCode = htmlCode
+              .replace(/&lt;/g, '<')
+              .replace(/&gt;/g, '>')
+              .replace(/<span.*?>|<\/span>/g, '');
 
           navigator.clipboard.writeText(cleanedCode).then(() => {
               const clipboardIcon = $(this);
