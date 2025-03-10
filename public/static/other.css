@@ -6996,12 +6996,8 @@ html.fixedtopnavimage {
 	max-width: 225px;
 }
 
-.products-4 img {
+.products-4 img, .products-7 img {
 	max-width: 125px;
-}
-
-.products-7 img  {
-	max-width: 75px;
 }
 
 .products-6 img {
@@ -7017,8 +7013,11 @@ html.fixedtopnavimage {
 		width: 50%;
 		max-width: 225px;
 	}
-	.products-4 img, .products-7 img  {
+	.products-4 img {
 		max-width: 150px;
+	}
+	.products-7 img {
+		max-width: 100px:
 	}
 }
 
