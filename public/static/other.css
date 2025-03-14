@@ -6493,6 +6493,13 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   }
 }
 
+@media (min-width: 1455.98px) {
+  .row-cols-custom-5 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+
 .border-bottom-custom {
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
 }
@@ -7017,7 +7024,7 @@ html.fixedtopnavimage {
 		max-width: 150px;
 	}
 	.products-7 img {
-		max-width: 100px:
+		max-width: 100px;
 	}
 }
 
@@ -7097,7 +7104,6 @@ html.fixedtopnavimage {
 	.rounded-md-pill {
 		border-radius: var(--bs-border-radius-pill);
 	}
-	
 }
 
 .rounded-6 {

@@ -9,7 +9,7 @@ const { id, title, description, cardLinks } = Astro.props;
       {description && (
         <p class="fs-4 mt-0 mb-3 text-body-secondary container">{description}</p>
       )}
-      <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 mx-2 justify-content-center">
+      <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-custom-5 mx-2 justify-content-center">
         {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, pdfHref, additionalImageClasses }, index) => (
           <div class="col mt-1 mb-3 m-1">
             <div class="card text-center permcard shadow-sm h-100">
