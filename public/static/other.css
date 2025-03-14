@@ -6496,7 +6496,7 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 @media (min-width: 1455.98px) {
   .row-cols-custom-5 > * {
     flex: 0 0 auto;
-    width: 25%;
+    width: 20%;
   }
 }
 
