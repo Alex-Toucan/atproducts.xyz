@@ -1,5 +1,5 @@
 ---
-const { id, title, description, cardLinks, size } = Astro.props;
+const { id, title, description, cardLinks } = Astro.props;
 ---
 
 <div class={`hero hero-${id}`} data-bs-theme="dark">
@@ -9,9 +9,9 @@ const { id, title, description, cardLinks, size } = Astro.props;
       {description && (
         <p class="fs-4 mt-0 mb-3 text-body-secondary container">{description}</p>
       )}
-      <div class={`d-${size}-flex flex-wrap mx-2`}>
+      <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 mx-2 justify-content-center">
         {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, pdfHref, additionalImageClasses }, index) => (
-          <div class="col-md mt-1 mb-3 m-1">
+          <div class="col mt-1 mb-3 m-1">
             <div class="card text-center permcard shadow-sm h-100">
               {cardImage && (
                 <div class="bg-white card-img-top">
