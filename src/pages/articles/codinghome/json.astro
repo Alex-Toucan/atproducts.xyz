@@ -2,10 +2,11 @@
 import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import CodeBlock from '../../../components/CodeBlock.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="JSON Basics" icon="codinghome.webp" description="CodingHome presents 'JSON Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<DefaultBody title="JSON Basics" icon="codinghome.webp" description="CodingHome presents 'JSON Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true">
 <div id="page">
   <Navbar pageTitle="JSON Basics" 
     link={[
@@ -29,39 +30,23 @@ import BackToTop from '../../../components/BackToTop.astro';
         <div id="content">
           <div id="example">
             <h2>Example Document</h2>
-<pre><code>
-&lbrace;
+<CodeBlock language="JSON" highlight_as="json"><Fragment slot="code-example">&lbrace;
   "foo"&colon; "bar",
   "array"&colon; [
     "foo",
     "bar"
   ]
 &rbrace;
-</code></pre>
+</Fragment></CodeBlock>
             <p>All JSON files are surrounded by &lbrace; and &rbrace;, which means it is a object. Unlike Javascript, you must use double quotes (") for strings, not singular quotes (')</p>
           </div>
           <div id="import">
             <h2>Importing JSON</h2>
-            <table class="table table-hover mb-2">
-              <tbody>
-              <tr>
-                <th scope="row">JavaScript</th>
-                <td class="text-break"><pre class="not-standalone"><code class="not-standalone">fetch('example.json')</code></pre></td>
-              </tr>
-              <tr>
-                <th scope="row">Node.js</th>
-                <td class="text-break"><pre class="not-standalone"><code class="not-standalone">import('./example.json')</code></pre></td>
-              </tr>
-              <tr>
-                <th scope="row">TypeScript + Node.js</th>
-                <td class="text-break"><pre class="not-standalone"><code class="not-standalone">import data from 'example.json'</code></pre></td>
-              </tr>
-              <tr>
-                <th scope="row">Python</th>
-                <td class="text-break"><pre class="not-standalone"><code class="not-standalone">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</code></pre></td>
-              </tr>
-              </tbody>
-            </table>
+            <p>Importing JSON is different in different languages. Here are some examples:</p>
+            <CodeBlock language="JavaScript" highlight_as="javascript"><Fragment slot="code-example">fetch('example.json')</Fragment></CodeBlock>
+            <CodeBlock language="Node.js" highlight_as="javascript"><Fragment slot="code-example">import('./example.json')</Fragment></CodeBlock>
+            <CodeBlock language="TypeScript" highlight_as="typescript"><Fragment slot="code-example">import data from 'example.json'</Fragment></CodeBlock>
+            <CodeBlock language="Python" highlight_as="python"><Fragment slot="code-example">import 'json'; with open('data.json', 'r') as f: data = json.load(f)</Fragment></CodeBlock>
           </div>
         </div>
         <hr>
