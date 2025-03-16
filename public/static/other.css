@@ -6823,6 +6823,10 @@ html.fixedtopnavimage {
    filter: invert(1);
 }
 
+[data-bs-theme=dark] img.astro {
+  content: url("/media/images/astro.webp");
+}
+
 .permhr {
   color: #adb5bd;
 }
