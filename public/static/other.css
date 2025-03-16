@@ -261,10 +261,10 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 
 .dropdown-menu {
   padding: var(--bs-border-radius-sm);
-  animation-duration: 0.3s;
   -webkit-animation-duration: 0.3s;
-  animation-fill-mode: both;
+  animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @keyframes slideIn {
