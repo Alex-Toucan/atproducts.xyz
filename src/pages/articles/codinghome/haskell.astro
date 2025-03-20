@@ -2,10 +2,11 @@
 import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import CodeBlock from '../../../components/CodeBlock.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Haskell Basics" icon="codinghome.webp" description="CodingHome presents 'Haskell Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true" />
+<DefaultBody title="Haskell Basics" icon="codinghome.webp" description="CodingHome presents 'Haskell Basics'!" author="AT Products LLC & CodingHome" highlight="true" scrollspy="true">
 <div id="page">
   <Navbar pageTitle="Haskell Basics" 
     link={[
@@ -52,13 +53,12 @@ import BackToTop from '../../../components/BackToTop.astro';
           <div id="ftd">
             <h2>Function Type Declaration</h2>
             <p>Haskell's functions will usually have 2 parts: a type declaration, and the implementation of the function itself (the type part can also be inferred):</p>
-<pre><code> 
--- type declaration 
+<CodeBlock language="Haskell" highlight_as="haskell"><Fragment slot="code-example">-- type declaration 
 -- constraints =&gt; type -&gt; ... -&gt; returnType (the last type will always be the return type) 
 countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int
 -- implementation 
 countIns x = length . filter (== x)
-</code></pre>
+</Fragment></CodeBlock>
             <ul><li>Bool: boolean True or False.</li><li>Char: one character.</li><li>Int: fixed-precision signed integer (usually 64-bit)</li><li>Float / Double: floating-point values.</li>
             </ul>
             <p>Notice the type declaration has 2 types of "arrows": <code>=&gt;</code> and <code>-&gt;</code>. </p>
@@ -67,14 +67,13 @@ countIns x = length . filter (== x)
           </div>
           <div id="fde">
             <h2>Function Definition</h2>
-            <p>Functions are defined similar to:</p> <pre class="not-standalone"><code>functionName argument(s) = expression</code></pre> <p>Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
-<pre><code> 
--- type declaration 
+            <p class="mb-0">Functions are defined similar to:</p> <pre class="not-standalone"><code class="language-haskell">functionName argument(s) = expression</code></pre> <br><br><p>Haskell forces declarative style, so functions are (usually) composed of just an expression (always returns a value). </p>
+<CodeBlock language="Haskell" highlight_as="haskell"><Fragment slot="code-example">-- type declaration 
 countIns :: Eq a =&gt; a -&gt; [a] -&gt; Int 
 -- implementation 
 -- function args = expression 
 countIns x = length . filter (== x) 
-</code></pre>
+</Fragment></CodeBlock>
           </div>
           <div id="fpr">
             <h2>Functional Principles</h2>
@@ -85,11 +84,10 @@ countIns x = length . filter (== x)
           <div id="com">
             <h2>Comments</h2>
             <p>In-line comments are made with <code>--</code> and block comments with <code>&lbrace;- -&rbrace;</code>: </p>
-<pre><code>
--- inline
+<CodeBlock language="Haskell" highlight_as="haskell"><Fragment slot="code-example">-- inline
 commentHere = False &lbrace;
-- block commentHere = True -&rbrace; </code>
-</pre>
+- block commentHere = True -&rbrace; 
+</Fragment></CodeBlock>
           </div>
         </div>
         <hr>

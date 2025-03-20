@@ -2,10 +2,11 @@
 import DefaultBody from '../../../layouts/DefaultBody.astro';
 import Navbar from '../../../layouts/articles/Navbar.astro';
 import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import CodeBlock from '../../../components/CodeBlock.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Python Basics" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Python Basics'!" author="AT Products LLC & The Script Community" highlight="true" scrollspy="true" />
+<DefaultBody title="Python Basics" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Python Basics'!" author="AT Products LLC & The Script Community" highlight="true" scrollspy="true">
 <div id="page">
   <Navbar pageTitle="Python Basics" 
     link={[
@@ -32,9 +33,7 @@ import BackToTop from '../../../components/BackToTop.astro';
           <div id="com">
             <h2>Comments</h2>
             <p>You can write text that the program will ignore by beginning the line with a #, this helps with reminding you what certain code does or for explaining purposes.</p>
-<pre><code>
-# This is a comment
-</code></pre>
+<CodeBlock language="Python" highlight_as="python"><Fragment slot="code-example"># This is a comment</Fragment></CodeBlock>
           </div>
           <div id="data">
             <h2>Data Types</h2>
@@ -49,47 +48,36 @@ import BackToTop from '../../../components/BackToTop.astro';
             Binary Types: <code>bytes, bytearray, memoryview</code></p>
             <p>We will go more in-depth on some of these types in the next few sections.</p>
             <p>You can print the data type of a variable with the <code>type()</code> function:</p>
-<pre><code>
-x = 5 <br>
+<CodeBlock language="Python" highlight_as="python"><Fragment slot="code-example">x = 5
 print(type(x))
-</code></pre>
-            </p>
+</Fragment></CodeBlock>
           </div>
           <div id="str">
             <h2>Strings</h2>
             <p>Strings are surrounded by either single quotation marks, or double quotation marks.</p>
-<pre><code>
-x = "hello" <br>
-y = 'hello' <br>
-# single quotations and double quotation marks are the same<br>
+<CodeBlock language="Python" highlight_as="python"><Fragment slot="code-example">x = "hello"
+y = 'hello' 
+# single quotations and double quotation marks are the same
 x == y # returns True
-</code></pre>
+</Fragment></CodeBlock>
             <p>You can assign a multiline string to a variable by using three quotes:</p>
-<pre><code>
-x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""
-</code></pre>
+<CodeBlock language="Python" highlight_as="python"><Fragment slot="code-example">x = """The FitnessGram Pacer test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter Pacer test will begin in 30 seconds."""</Fragment></CodeBlock>
             <p>You can check the length of a string using the len() function:</p>
-<pre><code>
-py<br>
-x = "hello"<br>
-print(len(text)) # returns 5<br>
-</code></pre>
+<CodeBlock language="Python" highlight_as="python"><Fragment slot="code-example">x = "hello"
+print(len(text)) # returns 5
+</Fragment></CodeBlock>
             </p>
           </div>
           <div id="num">
             <h2>Numbers</h2>
             <p>There are 2 primary, <code>int</code> and <code>float</code></p>
-<pre><code>
-py
-x = 2 # int
-y = 2.8 # float</code>
-</pre>
+<CodeBlock language="Python" highlight_as="python"><Fragment slot="code-example">x = 2 # int
+y = 2.8 # float
+</Fragment></CodeBlock>
               <p>To verify the type of an object in Python, use the <code>type()</code> function:
-<pre><code>
-py
-print(type(x))
+<CodeBlock language="Python" highlight_as="python"><Fragment slot="code-example">print(type(x))
 print(type(y))
-</code></pre>
+</Fragment></CodeBlock>
             </p>
             <p>Int, or integers, are whole numbers, positive or negative, without decimals.</p>
             <p>Float is a number, positive or negative, containing one or more decimals.</p>
