@@ -34,8 +34,8 @@ const flexSize = size ? size : 'md';
               <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
             )}
           </div>
-          <p class="fs-4 m-3 text-body-secondary" set:html={description}></p>
-          <div class="mx-auto justify-content-between container" id="links">
+          <p class="fs-4 m-3 mb-0 text-body-secondary" set:html={description}></p>
+          <div class="mx-auto justify-content-between container mt-3" id="links">
             <div class={`d-${flexSize}-flex d-grid gap-2`}>
               {errorButton && (
                 <Fragment set:html={errorButton} />
