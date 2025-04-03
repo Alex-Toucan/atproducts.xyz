@@ -1,6 +1,6 @@
 {
   "scanSettings": {
-    "baseBranches": []
+    "baseBranches": ["main", "beta"]
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
@@ -8,7 +8,7 @@
     "useMendCheckNames": true
   },
   "issueSettings": {
-    "minSeverityLevel": "LOW",
+    "minSeverityLevel": "MEDIUM",
     "issueType": "DEPENDENCY"
   }
 }
