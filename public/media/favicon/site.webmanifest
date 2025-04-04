@@ -1,7 +1,7 @@
 {
-  "name": "AT Products LLC",
-  "short_name": "AT Products LLC",
-  "theme_color": "#212529",
+  "name": "For Elizabeth",
+  "short_name": "For Elizabeth",
+  "theme_color": "#f82e5f",
   "background_color": "#ffffff",
   "display": "standalone",
   "id": "2.20.2",
@@ -9,12 +9,7 @@
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "/media/favicon/favicon.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "/media/favicon/web-app-manifest-192x192.png",
+      "src": "/media/images/download.png",
       "sizes": "192x192",
       "type": "image/png"
     }
