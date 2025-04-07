@@ -12,6 +12,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/portfolio"
+  to = "https://portfolio.atproducts.xyz"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
