@@ -3,7 +3,7 @@ var pureAlert2Type = "alert-dark"; // Color
 var pureAlert2Title = "ALEX TOUCAN'S PORTFOLIO:"; // Title
 var pureAlert2Icon = 'bi-plus-lg'; // Icon
 var pureAlert2Desc = "The creator of the site, Alex Toucan, now has a portfolio!"; // Description
-var pureAlert2Link = 'https://other.atproducts.xyz/portfolio'; // Link
+var pureAlert2Link = 'https://portfolio.atproducts.xyz'; // Link
 var pureAlert2LinkDesc = 'Check it out now!'; // Link text
 var pureAlert2Enabled = false; // Switch to enable/disable alert
 // ---        --- //
