@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<DefaultBody title="The Script Community" heroid="script" icon="vibrant2.png" color="#404eed" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus">
+<DefaultBody title="The Script Community" heroid="script" icon="vibrant2.png" color="#404eed" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus" figure="true">
 <div id="page"> 
   <Navbar />
   <div class="alert alert-dark mb-0" role="alert">
@@ -14,7 +14,7 @@ import BackToTop from '../components/BackToTop.astro';
   </div>
   <div id="main-content">
     <Hero id="script" title="The Script Community" description="The Script Community is for hacking enthusiasts to share their knowledge." imageSrc="/media/images/vibrant2.png" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3" />
-    <main id="script" class="text-center container">
+    <main id="script" class="container">
       <div id="disclaimer">
         <h2> Disclaimer </h2>
         <p> 
@@ -22,6 +22,16 @@ import BackToTop from '../components/BackToTop.astro';
         Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM.<br><br>
         If it's an APK file, use an emulator.<br><br><a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a><br><a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
         </p>
+      </div>
+      <hr>
+      <div id="history">
+        <h2> History </h2>
+        <div id="article" class="h-100"><figure class="figure ms-md-3 mt-0 mb-2 float-md-end">
+          <img src="/media/images/vibrant2.png" alt="Frame of an animation by the U.S. Federal Trade Commission intended to educate citizens about phishing tactics." width="20%" class="rounded-1 mx-auto me-md-0 ms-md-auto" style="max-width: 375px;display: block;"> 
+          <figcaption class="figure-caption mt-2 text-wrap"><a href="https://commons.wikimedia.org/wiki/File:Phish.jpg">Phish</a> by the <a href="https://www.ftc.gov/">U.S. Federal Trade Commission</a> is licensed under the public domain.</figcaption> 
+        </figure>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+        </div>
       </div>
       <hr>
       <div id="resources">

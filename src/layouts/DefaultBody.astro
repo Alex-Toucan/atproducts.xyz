@@ -1,5 +1,5 @@
 ---
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy } = Astro.props;
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy, figure } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -108,6 +108,9 @@ const { highlight, title, heroid, icon, color, bulletin, description, keywords, 
       {scrollspy && (
         <script is:inline src="/static/scrollspy-id.js"></script>
       )}
+      {figure && (
+        <script is:inline src="/static/figure.js" defer></script>
+      )}  
       {index && (
         <script is:inline src="/static/index.js"></script>
       )}    
