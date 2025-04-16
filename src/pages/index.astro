@@ -11,11 +11,9 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <DefaultBody title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-  { bulletinImage: "22201-032325-1.webp" },
-  { bulletinImage: "222-031925-1.webp" },
-  { bulletinImage: "222-031925-2.webp" },
-  { bulletinImage: "222-031925-3.webp" },
-  { bulletinImage: "222Beta.webp" },
+  { bulletinImage: "22202-041625-1.webp" },
+  { bulletinImage: "22202-041625-2.webp" },
+  { bulletinImage: "22202-041625-3.webp" },
 ]} 
 index="true">
 <div id="page">
@@ -49,19 +47,13 @@ index="true">
       <div class="pt-xmd-2 px-xmd-2">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/media/slideshow/22201-032325-1.webp" class="d-block w-100" alt="2.22.0.1 Release Slide 1">
+            <img src="/media/slideshow/22202-041625-1.webp" class="d-block w-100" alt="2.22.0.2 Release Slide 1">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/222-031925-1.webp" class="d-block w-100" alt="2.22 Release Slide 1">
+            <img src="/media/slideshow/22202-041625-2.webp" class="d-block w-100" alt="2.22.0.2 Release Slide 2">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/222-031925-2.webp" class="d-block w-100" alt="2.22 Release Slide 2">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/222-031925-3.webp" class="d-block w-100" alt="2.22 Release Slide 3">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/222Beta.webp" class="d-block w-100" alt="2.22 Preview">
+            <img src="/media/slideshow/22202-041625-3.webp" class="d-block w-100" alt="2.22.0.2 Release Slide 3">
           </div>
         </div>
         <div class="mediarow py-2" aria-label="Carousel-A Controls">
@@ -73,8 +65,6 @@ index="true">
             <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
-            <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
-            <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
           </div>
           <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -90,7 +80,7 @@ index="true">
           <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-carousel"></i></label>
         </div>
         <div class="col px-2 my-auto">
-          <a href="/media/pdf/2.22.0.1 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
+          <a href="/media/pdf/2.22.0.2 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
         </div>
       </div>
     </div>
@@ -191,7 +181,7 @@ index="true">
                 <h2>Blue Ball Machine</h2>
                 <p class="mb-0">Based on <a href="https://web.archive.org/web/20151031072938/http://www.haneke.net/">haneke.net</a>; a fun little site to see blue balls being involved in a cycle!</p>
                 <div class="tab-link">
-                  <a href="https://other.atproducts.xyz/blue" class="btn btn-primary btn-lg w-100">Visit</a>
+                  <a href="https://blue.atproducts.xyz" class="btn btn-primary btn-lg w-100">Visit</a>
                 </div>
               </div>
               <div class="products-8 tab-pane fade" id="products-8" role="tabpanel" aria-labelledby="products-8-tab" tabindex="0">
@@ -311,23 +301,38 @@ index="true">
       <div id="what-new">
         <h2> What's New? </h2>
         <p>
-          <b>Released on:</b> March 23rd, 2025.<br>
-          <b>ATP Database:</b> 2.22.0.1
+          <b>Released on:</b> April 16th, 2025.<br>
+          <b>ATP Database:</b> 2.22.0.2
         </p>
         <b>Changed</b>
         <ul>
-          <li>Updated Astro from v5.5.3 to v5.5.4. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/469" target="_blank" rel="noopener noreferrer">#469</a>)</li>
+          <li>Revamped the Contact Form with Floating Labels. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/475" target="_blank" rel="noopener noreferrer">#475</a>)</li>
+          <li>Updated Bootstrap from v5.3.3 to v5.3.5. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/484" target="_blank" rel="noopener noreferrer">#484</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/489" target="_blank" rel="noopener noreferrer">#489</a>)</li>
+          <li>Updated Astro from v5.5.4 to v5.7.2. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/474" target="_blank" rel="noopener noreferrer">#474</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/482" target="_blank" rel="noopener noreferrer">#482</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/483" target="_blank" rel="noopener noreferrer">#483</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/487" target="_blank" rel="noopener noreferrer">#487</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/495" target="_blank" rel="noopener noreferrer">#495</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/498" target="_blank" rel="noopener noreferrer">#498</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/499" target="_blank" rel="noopener noreferrer">#499</a>)</li>
+          <li>Updated @astrojs/react from v4.2.1 to v4.2.4. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/474" target="_blank" rel="noopener noreferrer">#474</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/482" target="_blank" rel="noopener noreferrer">#482</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/495" target="_blank" rel="noopener noreferrer">#495</a>)</li>
+          <li>Updated React from v19.0.0 to v19.1.0. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/477" target="_blank" rel="noopener noreferrer">#477</a>)</li>
+          <li>Updated Vite from v6.2.1 to v6.2.6. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/471" target="_blank" rel="noopener noreferrer">#471</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/481" target="_blank" rel="noopener noreferrer">#481</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/488" target="_blank" rel="noopener noreferrer">#488</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/492" target="_blank" rel="noopener noreferrer">#492</a>)</li>
+        </ul>
+
+        <b>Removed</b>
+        <ul>
+          <li>Removed Mend. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/496" target="_blank" rel="noopener noreferrer">#496</a>)</li>
+          <li>Removed Git LFS (additionally fixed other issues with such). (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/ba63f55" target="_blank" rel="noopener noreferrer">ba63f55</a>)</li>
         </ul>
 
         <b>Bugs Fixed</b>
         <ul>
-          <li>Fixed the Contact Form submission page not appearing. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/be1f485" target="_blank" rel="noopener noreferrer">be1f485</a>)</li>
-          <li>Fixed margin inconsistencies in Heroes. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/c167d03" target="_blank" rel="noopener noreferrer">c167d03</a>)</li>
-          <li>Fixed padding issue on Web Projects. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/55155b8" target="_blank" rel="noopener noreferrer">55155b8</a>)</li>
-          <li>Fixed issues with the PDF of "How Technology Engages Students In Education". (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/46f6c89" target="_blank" rel="noopener noreferrer">46f6c89</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/b9c0906" target="_blank" rel="noopener noreferrer">b9c0906</a>)</li>
-        </ul>  
+          <li>Fixed dark mode/light mode inconsistencies with Card pages. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/476" target="_blank" rel="noopener noreferrer">#476</a>)</li>
+          <li>Fixed inconsistencies with FentaMini. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/003b2f2" target="_blank" rel="noopener noreferrer">003b2f2</a>)</li>
+        </ul>
 
-        <b><a href="https://2-22.atproducts.xyz/#what-new">View the previous update's changelog (2.22).</a></b>
+        <b>Security Vulnerabilities Patched</b>
+        <ul>
+          <li>Vite v6.2.1: Vite bypasses server.fs.deny when using ?raw?? (<a href="https://github.com/vitejs/vite/security/advisories/GHSA-j6vq-x946-x2fw" target="_blank" rel="noopener noreferrer">CVE-2025-30208</a>) (Patched in <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/471" target="_blank" rel="noopener noreferrer">#471</a>)</li>
+          <li>Vite v6.2.3: Vite has a `server.fs.deny` bypassed for `inline` and `raw` with `?import` query. (<a href="https://github.com/vitejs/vite/security/advisories/GHSA-2m6m-j5cx-pw84" target="_blank" rel="noopener noreferrer">CVE-2025-31125</a>) (Patched in <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/481" target="_blank" rel="noopener noreferrer">#481</a>)</li>
+          <li>Vite v6.2.4: Vite allows server.fs.deny to be bypassed with .svg or relative paths (<a href="https://github.com/vitejs/vite/security/advisories/GHSA-c4cv-wm47-7vwp" target="_blank" rel="noopener noreferrer">CVE-2025-31486</a>) (Patched in <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/488" target="_blank" rel="noopener noreferrer">#488</a>)</li>
+          <li>Vite v6.2.5: Vite has an `server.fs.deny` bypass with an invalid `request-target` (<a href="https://github.com/vitejs/vite/security/advisories/GHSA-3mjv-cp43-4hfq" target="_blank" rel="noopener noreferrer">CVE-2025-32395</a>) (Patched in <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/492" target="_blank" rel="noopener noreferrer">#492</a>)</li>
+        </ul>
       </div>
     </main>
     <Footer />

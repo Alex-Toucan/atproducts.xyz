@@ -2,9 +2,8 @@
 # [[redirects]]
 #   from = "/*"
 #   to = "https://other.atproducts.xyz/maintenance/"
-#   status = 301
+#   status = 302
 #   force = true
-#   conditions = {Language = ["en"], Country = ["US"]}
 
 [[headers]]
   for = "/*"
