@@ -1,11 +1,11 @@
 // --- Config --- //
 var pureAlert1Type = "alert-dark"; // Color
-var pureAlert1Title = "NOTICE:"; // Title
-var pureAlert1Icon = 'bi-dash-lg'; // Icon
-var pureAlert1Desc = "ALL DEPARTMENTS AND SUBSIDARIES WILL SHUT DOWN OPERATIONS THROUGHOUT TODAY DUE TO UNEXPECTED CIRCUMSTANCES, ON WHICH WILL NOT BE SHARED. SOME DEPARTMENTS MAY CONTINUE OPERATING AFTER 4 PM CDT. ALL DEPARTMENTS AND SUBSIDARIES WILL CONTINUE OPERATIONS TOMORROW MORNING. THANK YOU FOR YOUR COOPERATION."; // Description
-var pureAlert1Link = 'https://x.com/ATProductsLLC/status/1845844813892943965'; // Link
-var pureAlert1LinkDesc = 'VIEW TWITTER/X POST FOR OTHER DEPARTMENTS'; // Link text
-var pureAlert1Enabled = false; // Switch to enable/disable alert
+var pureAlert1Title = "NEW CLIENT:"; // Title
+var pureAlert1Icon = 'bi-vinyl'; // Icon
+var pureAlert1Desc = "A newly created rap group from Tacoma, Washington, has a new website designed by us!"; // Description
+var pureAlert1Link = 'https://carboncurrency.netlify.app/'; // Link
+var pureAlert1LinkDesc = 'View now!'; // Link text
+var pureAlert1Enabled = true; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert1Cookie(name, value, days) {
