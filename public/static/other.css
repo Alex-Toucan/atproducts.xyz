@@ -654,6 +654,11 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
   [data-bs-theme=dark] & .carousel-caption {
     color: #fff;
   }
+
+  [data-bs-theme=dark] & .carousel-control-next, 
+  [data-bs-theme=dark] & .carousel-control-prev {
+    filter: invert(0) !important;
+  }
 }
 
 .link-hero, [data-bs-theme=dark] .link-carousel {
