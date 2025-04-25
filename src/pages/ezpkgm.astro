@@ -1,0 +1,53 @@
+---
+import DefaultBody from '../layouts/DefaultBody.astro';
+import HeroPynx from '../components/secondary/HeroPynx.astro';
+import CodeBlock from '../components/CodeBlock.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+---
+
+<DefaultBody title="ezpkgm" heroid="ehs" description="ezpkgm is a JavaScript package manager." keywords="ezpkgm, BxPP, AT Products LLC" author="Alex Toucan & Pynx">
+<div id="page">
+  <Navbar />
+  <div id="main-content">
+    <HeroPynx
+      title="ezpkgm"
+      description="Made by Pynx &semi; A JavaScript package manager."
+      buttons={[
+        { href: "#downloads", text: "Downloads", type: "primary" },
+        { href: "https://github.com/ezpkgm/ezpkgm", text: "<i class='bi bi-github fs-6 me-2'></i> GitHub Repo", type: "secondary" },
+      ]},
+      dropdownItems={[
+        { navigationDesc: "General Information", navigationLink: "#general-info" },
+        { navigationDesc: "Installation", navigationLink: "#installation" },
+      ]}
+    />
+    <main id="ezpkgm" class="container">
+      <div id="general-info">
+        <h2> General Information </h2>
+        <p> ezpkgm, made by Pynx, is a JavaScript/node.js package manager.</p>
+        <p> It simplifies the process of managing dependencies for your JavaScript projects.</p>
+        <p> With ezpkgm, you can easily install packages using a straightforward command-line interface.</p>
+        <p> The tool is lightweight, fast, and designed to work seamlessly with modern JavaScript workflows.</p>
+        <p> For more details, visit the <a href="https://github.com/ezpkgm/ezpkgm" target="_blank" rel="noopener noreferrer">GitHub repository</a>.</p>
+      </div>
+      <hr>
+      <div id="installation">
+        <h2>Installation</h2>
+        <p>First, download and extract the ZIP:</p>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/ezpkgm/ezpkgm/archive/refs/heads/main.zip" download>Download</a></p>
+        <p>It is required that you install Node.js. You can download it from the <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">official Node.js website</a>.</p>
+        <p>Once Node.js is installed, open a terminal and navigate to the extracted folder.</p>
+        <p>Then, install the dependencies by running:</p>
+        <CodeBlock language="Terminal" highlight_as="bash"><Fragment slot="code-example">npm install</Fragment></CodeBlock>
+        <p>ezpkgm can install packages via the following command (available ones are listed on the <a href="https://github.com/ezpkgm/ezpkgm/blob/main/config.json">config.json</a>):</p>
+        <CodeBlock language="Terminal" highlight_as="bash"><Fragment slot="code-example">node ezpkgm.js &lt;package&gt;</Fragment></CodeBlock>
+      </div>
+    </main>
+    <Footer author="Alex Toucan & Pynx" />
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>
+
