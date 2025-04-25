@@ -1,0 +1,3 @@
+impacket>=0.12.0
+iptools>=0.7.0
+yarl>=1.19.0
