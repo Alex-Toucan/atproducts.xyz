@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.5",
-    "astro": "^5.7.5",
+    "astro": "^5.7.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }
