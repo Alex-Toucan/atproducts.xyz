@@ -5,6 +5,10 @@
 #   status = 302
 #   force = true
 
+[build]
+  command = "astro build"
+  publish = "dist/"
+
 [[headers]]
   for = "/*"
   [headers.values]
