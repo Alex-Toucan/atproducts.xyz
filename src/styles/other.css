@@ -587,28 +587,28 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 
   @media (min-width:645.98px) {	
     & {	
-          width: 90%;
-          border-radius: var(--bs-border-radius) !important;
+      width: 90% !important;
+      border-radius: var(--bs-border-radius) !important;
     }	
   }	
   @media (min-width:767.98px) {	
     & {	
-        width: 70%;	
+      width: 70% !important;	
     }	
   }	
   @media (min-width:1024px) {	
     & {	
-        width: 50%;	
+      width: 50% !important;	
     }	
   }
   @media (min-width:1440px) {	
     & {	
-        width: 40%;	
+      width: 40% !important;	
     }	
   }	
   @media (min-width:2000px) {	
     & {	
-        width: 30%;	
+      width: 30% !important;	
     }	
   }	
 
