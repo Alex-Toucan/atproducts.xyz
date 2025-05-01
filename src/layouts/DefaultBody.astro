@@ -5,6 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url"
 
+import jquery from "jquery/dist/jquery.min.js?url";
+import jqueryui from "jqueryui/dist/jquery-ui.min.js?url";
+
 import '../styles/other.css';
 import '../styles/cookie.css';
 
@@ -85,9 +88,9 @@ if (highlight) {
       <slot/>
     </Fragment>
     <Fragment>
-      <script is:inline src={bootstrap}></script>
-      <script is:inline src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-      <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
+      <script src={bootstrap}></script>
+      <script src={jquery}></script>
+      <script src={jqueryui}></script>
       {highlight && (
         <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
