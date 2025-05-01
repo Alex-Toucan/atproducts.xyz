@@ -6613,31 +6613,12 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 }
 
 @media (max-width:425px) {
-   img.script, img.flash {
-      width: 33%
-   }
+  img.script, img.flash {
+    width: 33%
+  }
 }
-
-@media (min-width: 645.98px) {
-	.custom-lrpad {
-		margin-left: 10px !important; 
-		margin-right: 10px !important;
-	}
-}
-
-@media (max-width:645.98px) {
-   .nolrpadding {
-		margin-left: 0 !Important;
-		margin-right: 0 !important;
-   }
-}
-
 .modal .btn {
   padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x) !important;
-}
-
-#404 {
-  text-align: center !important;
 }
 
 .modal {
@@ -6654,18 +6635,7 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
     margin-right: auto !important;
   }
 }
-
-@media (min-width:767.98px) {
-  .padright {
-	margin-right: 5px;
-  }
-  
-  .padleft {
-	margin-left: 5px;
-  }
-}
       
-
 .sw-feature-box {
 	display: flex;
 	flex-wrap: wrap;
@@ -6837,20 +6807,20 @@ html.fixedtopnavimage {
 }
 
 .btn-resource {
-    margin-bottom: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .back-to-top {
-    position: fixed;
-    display: none;
-    right: 30px;
-    bottom: 47.5px;
-    box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
-    z-index: 1050;
-    color: white;
-    background-color: black;
+  position: fixed;
+  display: none;
+  right: 30px;
+  bottom: 47.5px;
+  box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
+  z-index: 1050;
+  color: white;
+  background-color: black;
 }
 
 
@@ -6871,8 +6841,8 @@ html.fixedtopnavimage {
 }
 
 [data-bs-theme=dark] .back-to-top {
-    color: black;
-    background-color: white;
+  color: black;
+  background-color: white;
 }
 
 [data-bs-theme=dark] .back-to-top:hover {
@@ -6933,11 +6903,11 @@ html.fixedtopnavimage {
 	margin-top: 25px;
 }
 .story-top-scroll {
-        scroll-margin-top: 25px;
+  scroll-margin-top: 25px;
 }
 
 .border-fix {
-	    border-bottom: solid 1px #dee2e6;
+  border-bottom: solid 1px #dee2e6;
 }
 
 @media (max-width: 900.98px) {
