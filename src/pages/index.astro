@@ -297,52 +297,58 @@ import Card from '../components/cards/Card.astro';
           <div class="tab-content col-md products-tabContent" id="products-tabContent">
             <div class="tab-pane fade active show" id="about" role="tabpanel" aria-labelledby="about-tab" tabindex="0">
               <h1 class="display-6 fw-bold mb-2">About Me</h1>
-              <p>bla bla bla</p>
-              <h2 class="fw-bold mt-2">Example Projects</h2>
-              <CardLayout>
-                <Fragment slot="card-content">
-                  <Card 
-                    cardContent={[
-                      {
-                        title: "Polygonial Animal",
-                        type: "Illustrator",
-                        date: "2024",
-                        image: [
-                          { src: "Luce_PolygonalAnimal.jpg", alt: "Image" },
-                        ]
-                      }
-                    ]}
-                  />
-                </Fragment>
-              </CardLayout>
-              <CardLayout>
-                <Fragment slot="card-content">
-                  <Card 
-                    cardContent={[
-                      {
-                        title: "Photomontage",
-                        type: "Photoshop",
-                        date: "2025",
-                        image: [
-                          { src: "Photomontage.jpg", alt: "Image" },
-                        ]
-                      }
-                    ]}
-                  />
-                  <Card 
-                    cardContent={[
-                      {
-                        title: "Magazine Cover",
-                        type: "Photoshop",
-                        date: "2025",
-                        image: [
-                          { src: "Luce_Magazine-1.png", alt: "Image" },
-                        ]
-                      }
-                    ]}
-                  />
-                </Fragment>
-              </CardLayout>
+              <p>
+                Hello, I am Christian Luce. Welcome to my Graphic Design Portfolio!
+                I am currently enrolled in the 10th grade within <a href="https://howard.k12.sd.us">Howard High School</a> within Howard, SD.
+                I am very knowledgeable within Informational Technology, as well as Graphic Design.
+              </p> 
+              <div id="example" class="mt-3">
+                <h2 class="fw-bold">Example Projects</h2>
+                <CardLayout>
+                  <Fragment slot="card-content">
+                    <Card 
+                      cardContent={[
+                        {
+                          title: "Polygonial Animal",
+                          type: "Illustrator",
+                          date: "2024",
+                          image: [
+                            { src: "Luce_PolygonalAnimal.jpg", alt: "Image" },
+                          ]
+                        }
+                      ]}
+                    />
+                  </Fragment>
+                </CardLayout>
+                <CardLayout>
+                  <Fragment slot="card-content">
+                    <Card 
+                      cardContent={[
+                        {
+                          title: "Photomontage",
+                          type: "Photoshop",
+                          date: "2025",
+                          image: [
+                            { src: "Photomontage.jpg", alt: "Image" },
+                          ]
+                        }
+                      ]}
+                    />
+                    <Card 
+                      cardContent={[
+                        {
+                          title: "Magazine Cover",
+                          type: "Photoshop",
+                          date: "2025",
+                          image: [
+                            { src: "Luce_Magazine-1.png", alt: "Image" },
+                          ]
+                        }
+                      ]}
+                    />
+                  </Fragment>
+                </CardLayout>
+              </div>
               <div class="custom-br"></div>
             </div>
             <div class="tab-pane fade" id="classes" role="tabpanel" aria-labelledby="classes-tab" tabindex="0">
