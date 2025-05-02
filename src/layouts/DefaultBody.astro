@@ -8,8 +8,6 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url"
 import jquery from "jquery/dist/jquery.min.js?url";
 import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
 
-const scripts = ['message.js', 'scroll.js', 'purecookie.js', 'alert-1.js', 'alert-2.js', 'enabler.js'];
-
 import '../styles/other.css';
 import '../styles/cookie.css';
 
@@ -90,18 +88,21 @@ if (highlight) {
       <slot/>
     </Fragment>
     <Fragment>
-      <script is:inline src={bootstrap}></script>
-      <script is:inline src={jquery}></script>
-      <script is:inline src={jqueryui}></script>
+      <script src={bootstrap}></script>
+      <script src={jquery}></script>
+      <script src={jqueryui}></script>
       {highlight && (
         <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
         <script>hljs.highlightAll();</script>
         <script is:inline src="/static/copy.js"></script>
       )}
-      {scripts.map(script => (
-        <script is:inline src={`/static/${script}`}></script>
-      ))}
+      <script is:inline src="/static/message.js"></script>
+      <script is:inline src="/static/scroll.js"></script>
+      <script is:inline src="/static/purecookie.js"></script>
+      <script is:inline src="/static/alert-1.js"></script>
+      <script is:inline src="/static/alert-2.js"></script>
+      <script is:inline src="/static/enabler.js"></script>
       {fourofour && (
         <script is:inline src="/static/404.js"></script>
       )}
