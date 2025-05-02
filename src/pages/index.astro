@@ -295,49 +295,60 @@ import Card from '../components/cards/Card.astro';
             <h1 class="display-6 fw-bold mb-2">About Me</h1>
             <p>bla bla bla</p>
             <h2 class="text-center fw-bold mt-2">Example Projects</h2>
-              <CardLayout>
-                <Fragment slot="card-content">
-                  <Card 
-                    cardContent={[
-                      {
-                        title: "FAM OVER EVERYTHING",
-                        type: "EP",
-                        comingsoon: [
-                          { date: "2025" },
-                        ],
-                        image: [
-                          { src: "FAMOVEREVERYTHING.webp", alt: "Album Cover" },
-                        ],
-                      }
-                    ]}
-                  />
+            <CardLayout>
+              <Fragment slot="card-content">
+                <Card 
+                  cardContent={[
+                    {
+                      title: "Polygonial Animal",
+                      type: "Illustrator",
+                      date: "2024",
+                      image: [
+                        { src: "Luce_PolygonalAnimal.jpg", alt: "Image" },
+                      ],
+                    }
+                  ]}
+                />
+              </Fragment>
+            </CardLayout>
+            <CardLayout>
+              <Fragment slot="card-content">
+                <Card 
+                  cardContent={[
+                    {
+                      title: "Photomontage",
+                      type: "Photoshop",
+                      date: "2025" },
+                      image: [
+                        { src: "Photomontage.jpg", alt: "Image" },
+                      ],
+                    }
+                  ]}
+                />
+                <Card 
+                  cardContent={[
+                    {
+                      title: "Magazine Cover",
+                      type: "Photoshop",
+                      date: "2025" },
+                      image: [
+                        { src: "Luce_Magazine-1.png", alt: "Image" },
+                      ],
+                    }
+                  ]}
+                />
               </Fragment>
             </CardLayout>
             <div class="custom-br"></div>
           </div>
-          <div class="tab-pane fade" id="atproducts" role="tabpanel" aria-labelledby="atproducts-tab" tabindex="0">
+          <div class="tab-pane fade" id="illustrator" role="tabpanel" aria-labelledby="illustrator-tab" tabindex="0">
             <div class="w-100 atproducts-background rounded-2 mb-3">
               <div class="cover-2 rounded-2 p-sm-4 p-md-5 p-3">
                 <img src="/media/images/longwhite.png" alt="AT Products LLC" class="d-block mx-auto text-center atproducts-image filter">
               </div>
             </div>
-            <h1 class="display-6 fw-bold mb-2">AT Products LLC</h1>
-            <p>
-              <strong>You can find a summarized version of this at <a href="https://atproducts.xyz/#history">atproducts.xyz</a>.</strong>
-            </p>
-            <p>
-              <strong><a href="https://atproducts.xyz">AT Products LLC</a></strong>, otherwise known as AT Products (officially recognized pronunciation: "A.T Products") is an informative technology company that is based in the United States, that contains resources for cybersecurity and malware. This section goes through what you can find on AT Products LLC, the atproducts.xyz section will be about website elements and details.
-            </p>
+            <h1 class="display-6 fw-bold mb-2">Adobe Illustrator</h1>
             <p>AT Products LLC currently serves websites made for customers via our <a href="https://beta.atproducts.xyz/paid">Paid Services</a>. On our Paid Services, we sell Website Design, Website Hosting, Website Maintenance, and Email Creation packages. It also serves my website projects of <a href="https://beta.atproducts.xyz/flash">Flash Documentation</a>, full of Adobe Flash resources, and <a href="https://beta.atproducts.xyz/mdickie">MDickie Projects</a>, a fanmade site about what MDickie has developed since the 1990s. </p>
-            <p>There are also a couple of third-party products made with other people and organizations. <a href="https://atproducts.xyz/sms">SMS Bomb, made with <a href="https://protdos.com">ProtDos</a>, allows you to spam SMS messages to whoever you choose. And <a href="https://atproducts.xyz/pynx">Pynx's Projects</a>, malware collection that includes <a href="https://atproducts.xyz/bxpp">BxPP</a> and <a href="https://atproducts.xyz/inferno">Inferno</a>. </p>
-            <p>AT Products LLC is a resource hub for four technology communities. The <a href="https://atproducts.xyz/ehs">Ethical Hacking Society</a> (defunct as of 2024), which ethically hacks. The <a href="https://atproducts.xyz/script">The Script Community</a> (defunct as of 2021), is for hacking enthusiasts to share their knowledge. <a href="https://atproducts.xyz/codinghome">CodingHome</a> (active), a coding and web development community where tech enthusiasts of all skill levels can come together, and the <a href="https://atproducts.xyz/noodle">Noodle Hackerspace</a> (defunct as of 2023), a community of physical and digital hacking resources. </p>
-            <h2 class="fw-bold mb-2">History</h2>
-            <p>AT Products LLC was being thought about around 2019/2020, just as a thought to create a company, but did not have a reason behind it. I just so happened to like having bodies of power.</p>
-            <p>My first product, <a href="https://backup.atproducts.xyz/roms">AT's ROM Games</a>, was just a bunch of ROMs that I put together around 2019 and started posting on sites like the <a href="https://archive.org">Internet Archive</a> and later <a href="https://code.org">code.org Sites</a>. Once I started taking middle school tech classes, I 3D modeled a basic text logo for AT Products, so there's the logo for that and I also made an AT's ROM Games logo around late 2021. </p>
-            <p>Still in middle school around late 2021, entering into early-2022, now we were making basic HTML and CSS sites (totally nothing like today's site), being made on <a href="https://code.org">code.org</a>, which had the option to publish to the public. As an assignment, I had to create a site with four sections and an image, which AT's ROM Games fit perfectly with that criteria. At that point, I started making sites. You can find more details about those sites and their version at the <strong>atproducts.xyz</strong> tab. </p>
-            <p>At this point, I started collaborating with sites to make the sites for the <a href="https://atproducts.xyz/ehs">Ethical Hacking Society (formerly called the Dark Side) (EHS)</a> and <a href="https://atproducts.xyz/script">The Script Community (formerly called Vi) (TSC)</a> (a server that forked off the EHS). <a href="https://atproducts.xyz/codinghome">CodingHome</a> would come later (which also forked off TSC). Around mid-2022, the <a href="https://atproducts.xyz/noodle">Noodle Hackerspace</a>, and <a href="https://atproducts.xyz/flash">Flash Documentation</a> would be introduced. There was a <a href="https://backup.atproducts.xyz/food">Food Bot</a> that I made around May of 2022, a Discord Bot that serves food images but would quickly be defunct as it requires a bunch of time to maintain. </p>
-            <p>Starting to experiment with logos and such, in August 2022 came the <a href="https://2-6-1.atproducts.xyz/media/images/94952755_padded_logo.png">old logo</a>. Logos, then alliances, with The CodingHome Universe (now the International Developer's Association [defunct May 2024]). </p>
-            <p>2023 came, and <a href="https://beta.atproducts.xyz/pynx">Pynx's Projects and <a href="https://beta.atproducts.xyz/mdickie">MDickie Projects</a> came by. Finally, we changed the logo again in late November. March of 2024, the <a href="https://beta-testing.atproducts.xyz">Department of Beta Testing</a> launched. That's the whole history of the company! </p>
             <div class="custom-br"></div>
           </div>
           <div class="tab-pane fade" id="illustrator" role="tabpanel" aria-labelledby="illustrator-tab" tabindex="0">
@@ -347,44 +358,6 @@ import Card from '../components/cards/Card.astro';
               </div>
             </div>
             <h1 class="display-6 fw-bold mb-2">atproducts.xyz</h1>
-            <p>
-              <strong>You can find a summarized version of this at <a href="https://atproducts.xyz/#history">atproducts.xyz</a>. </strong>
-            </p>
-            <p>
-              <strong><a href="https://atproducts.xyz">atproducts.xyz</a></strong>, is the website for AT Products LLC. The history of the company is the <em>AT Products LLC</em> section, this section will go over the website.
-            </p>
-            <p>atproducts.xyz currently serves every page mentioned in the previous section, plus more pages including <a href="https://atproducts.xyz/backup/archive">Public Archive</a>, <a href="https://atproducts.xyz/stories/cctv">StoryViewer</a> (Noodle Hackerspace only), and documentation/legal documents. </p>
-            <p>atproducts.xyz has the following dependencies:</p>
-            <ul>
-              <li>
-                <b>Astro:</b> v5.1.3
-              </li>
-              <li>
-                <b>React:</b> v18.2.0
-              </li>
-              <li>
-                <b>Bootstrap:</b> v5.3.3
-              </li>
-              <li>
-                <b>Bootstrap Icons:</b> v1.11.3
-              </li>
-              <li>
-                <b>jQuery:</b> v3.7.1
-              </li>
-              <li>
-                <b>jQuery UI:</b> v1.14.1
-              </li>
-            </ul>
-            <p>More information about <a href="https://www.npmjs.com/">npm</a> and <a href="https://nodejs.org/en">Node.js</a> packages can be found in our <a href="https://github.com/Alex-Toucan/atproducts.xyz/blob/main/package.json">package.json file</a>. </p>
-            <h2 class="fw-bold mb-2">History</h2>
-            <p>As previously stated in the AT Products LLC section, the site had basic HTML and CSS, being produced on <a href="https://code.org">code.org</a>. The first few pages were <a href="https://backup.atproducts.xyz/roms">AT's ROM Games</a>, <a href="https://atproducts.xyz/ehs">Ethical Hacking Society (EHS)</a>, <a href="https://atproducts.xyz/script">The Script Community (TSC)</a> and <a href="https://atproducts.xyz/codinghome">CodingHome</a>. Fun fact: AT's ROM Games came first before the index page. You can view the first version <a href="https://1-0.atproducts.xyz">here</a>. </p>
-            <p>Forking off from the previous section now. In February of 2022, I bought the atproducts.org domain (before .xyz) off <a href="https://freenom.com">FreeNom</a>. By this point, I later got into <a href="https://getbootstrap.com">Bootstrap Framework</a>, but v3 of it, so it appears rather old. It started being introduced in <a href="https://2-0-1.atproducts.xyz">ATP Database 2.0</a>. It was modified to become dark by <a href="https://2-1.atproducts.xyz/">2.1</a>. </p>
-            <p>The first reference to icons came around April 2022, appearing in <a href="https://2-3.atproducts.xyz/">2.3</a> (better example: <a href="https://2-3.atproducts.xyz/">2.4</a> with <a href="https://fontawesome.com/">FontAwesome</a> (later to be replaced by <a href="https://icons.getbootstrap.com">Bootstrap Icons</a>). The cookie menu, the one that we all know today, came in version <a href="https://2-4-2.atproducts.xyz/">2.4.2</a>, while <a href="https://2-4-1.atproducts.xyz/">2.4.1</a> had a mention of cookie consent. </p>
-            <p>May of 2022 and June of 2022 were two big months. The <a href="https://atproducts.xyz/noodle">Noodle Hackerspace</a> and <a href="https://atproducts.xyz/flash">Flash Documentation</a> came in version <a href="https://2-5.atproducts.xyz/">2.5</a>. <a href="https://2-5-1.atproducts.xyz/">2.5.1</a> did bring in the old <a href="https://backup.atproducts.xyz/food">Food Bot</a> prior to its removal in <a href="https://2-6-1.atproducts.xyz/">2.6.1</a>, and that version product in <a href="https://atproducts.xyz/mdickie">MDickie Projects</a>. <a href="https://2-6.atproducts.xyz/">2.6</a> overhauled the site with the return of light mode, new navbar, and overall new feel! AT's ROMs Games got removed in <a href="https://2-6-2.atproducts.xyz/">2.6.2</a>, then the current (modified nowadays) footer came in <a href="https://2-6-3.atproducts.xyz/">2.6.3</a>, and the somewhat current navbar in <a href="https://2-7.atproducts.xyz/">2.7</a>. </p>
-            <p>
-              <a href="https://2-7-1.atproducts.xyz/">2.7.1</a> came Paid Services, the first time that we were selling stuff. <a href="https://2-8.atproducts.xyz/">2.8</a> made most communities into modals for content. <a href="https://2-9.atproducts.xyz/">2.8</a> introduced <a href="https://atproducts.xyz/BxPP">BxPP</a> and scrollspies for communities. <a href="https://2-10.atproducts.xyz/">2.10</a> introduced the carousel. <a href="https://2-10-1.atproducts.xyz/">2.10.1</a> introduced the Public Archive (formerly the Old Pages page). And to close out the 2022 season, <a href="https://2-11.atproducts.xyz/">2.11</a> revamped our footer to include JavaScript to render our copyright years and dropdowns.
-            </p>
-            <p>A grand start to 2023, <a href="https://2-12.atproducts.xyz/">2.12</a> added the color modes switch with the return of dark mode, thanks to <a href="https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/">Bootstrap v5.3.0-alpha1</a> releasing a bit earlier. <a href="https://2-13.atproducts.xyz/">2.13</a> brought in cards. <a href="https://2-14.atproducts.xyz/">2.14</a> brought in PWA, Content Security Policy, and a carousel redesign. <a href="https://2-15.atproducts.xyz/">2.15</a> overhauled the introductions with heroes, and <a href="https://2-16.atproducts.xyz/">2.16</a> overhauled them. Finally, <a href="https://2-17-2.atproducts.xyz/">2.17.2</a> replaced HTML with Astro. </p>
             <p>2024 had been a slow year, but stuff still came out for the site at least. The first update released was <a href="https://2-17-2.atproducts.xyz">2.17.2</a>, on January 24th. <a href="https://2-18.atproducts.xyz">2.18</a>, releasing on March 27th, would be the second update of the year, and revamped MDickie Projects entirely. <a href="https://2-19.atproducts.xyz">2.19</a>, released on July 10th, 2024, added new features and resources, including the logo popovers you see here in the history section, redesigned several UI elements, updated various components, removed outdated items, and fixed multiple bugs. <a href="https://2-20.atproducts.xyz">2.20</a>, released on October 10th, readded <a href="/roms">AT's ROM Games</a>, and added code highlighting where needed. Finally, both <a href="https://2-20-1.atproducts.xyz">2.20.1</a> in October and <a href="https://2-20-2.atproducts.xyz">2.20.2</a> in December added 4 stories in total. <a href="https://2-20-2.atproducts.xyz">2.20.2</a> also added a Pynx Project, <a href="/nyaos">NyaOS</a>. That's the atproducts.xyz history!</p>
             <div class="custom-br"></div>
           </div>
@@ -513,6 +486,7 @@ import Card from '../components/cards/Card.astro';
     <script is:inline src="https://cdn.jsdelivr.net/npm/jquery@4.0.0-beta/dist/jquery.min.js"></script>
     <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
     <script is:inline src="/static/message.js"></script>
+    <script is:inline src="/static/index.js"></script>
     <script is:inline>
       (function($) {
         "use strict";
