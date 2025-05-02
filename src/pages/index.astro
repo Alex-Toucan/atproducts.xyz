@@ -157,7 +157,7 @@ import Card from '../components/cards/Card.astro';
         text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1));
       }
       .link-custom:hover, .link-custom:focus {
-        color: RGBA(26, 30, 33, var(--bs-link-opacity, 1));
+        color: RGBA(26, 30f, 33, var(--bs-link-opacity, 1));
         -webkit-text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
         text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
       }
@@ -257,6 +257,10 @@ import Card from '../components/cards/Card.astro';
                           date: "2025",
                           image: [
                             { src: "Photomontage.jpg", alt: "Image" },
+                          ]
+                          download: [
+                            { file: "Luce_PolygonalAnimal.ai", icon: "filetype-ai", alt: ".AI File" },
+                            { file: "Luce_PolygonalAnimal.pdf", icon: "filetype-pdf", alt: ".PDF File" },
                           ]
                         }
                       ]}
