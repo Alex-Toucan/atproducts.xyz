@@ -16,7 +16,7 @@ const { cardContent } = Astro.props;
         <p class="card-text lead mb-0" set:html={type}></p>
         <div class="tab-link d-flex gap-2 mt-2">
           {download && download.map(({ icon, alt, file }, index) => (
-            <a href={`/media/files/${file}`} aria-label={alt} class="fs-2 link-footer" target="_blank" rel="noopener noreferrer"><i class={`bi bi-filetype-${icon}`}></i></a>
+            <a href={`/media/files/${file}`} aria-label={alt} class="fs-2 link-footer" target="_blank" rel="noopener noreferrer"><i class={`bi bi-${icon}`}></i></a>
           ))}
         </div>
       </div>
