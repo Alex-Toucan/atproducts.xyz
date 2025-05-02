@@ -79,21 +79,9 @@ import Card from '../components/cards/Card.astro';
         width: 40%;
       }
 
-      img.codinghome-image, img.rsa-image {
-        min-width: 150px;
-        width: 15%;
-      }
-
       img.toucan-image {
         min-width: 200px;
         width: 30%;
-      }
-
-      img.tpt2-image,
-      .tpt2-image {
-        min-width: 200px;
-        width: 20%;
-        object-fit: cover;
       }
 
       .atproducts-background {
@@ -105,27 +93,6 @@ import Card from '../components/cards/Card.astro';
 
       .toucan-background {
         background-image: url(/media/images/toucanbanner.png);
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-      }
-
-      .atpweather-background {
-        background-image: url(/media/images/sunset.png);
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-      }
-
-      .codinghome-background {
-        background-image: url(/media/images/codinghome.webp);
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-      }
-
-      .rsa-background {
-        background-image: url(/media/images/IDA.webp);
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
@@ -168,11 +135,6 @@ import Card from '../components/cards/Card.astro';
           min-width: 250px;
         }
 
-        img.tpt2-image,
-        .tpt2-image {
-          min-width: 300px;
-        }
-
         img.toucan-image {
           min-width: 250px;
         }
@@ -186,24 +148,6 @@ import Card from '../components/cards/Card.astro';
 
         img.atproducts-image {
           min-width: 290px;
-        }
-
-        img.codinghome-image, img.rsa-image {
-          min-width: 200px;
-          width: 15%;
-        }
-
-        img.tpt2-image,
-        .tpt2-image {
-          min-width: 300px;
-          width: 20%;
-        }
-      }
-
-      @media (min-width: 991.98px) {
-        img.tpt2-image,
-        .tpt2-image {
-          min-width: 400px;
         }
       }
 
@@ -270,8 +214,13 @@ import Card from '../components/cards/Card.astro';
         <div class="vr d-none d-md-block border-3"></div>
         <hr class="d-block d-md-none border-3">
         <div class="col-md text-center">
-          <div class="tab-content col-md products-tabContent" id="products-tabContent">
+          <div class="tab-content col-md products-tabContent container px-5" id="products-tabContent">
             <div class="tab-pane fade active show" id="about" role="tabpanel" aria-labelledby="about-tab" tabindex="0">
+              <div class="w-100 toucan-background rounded-2 mb-3">
+                <div class="cover-5 rounded-2">
+                  <img src="/media/images/the-toucans-white.png" alt="The Toucan Empire" class="d-block mx-auto toucan-image filter rounded-2">
+                </div>
+              </div>
               <h1 class="display-6 fw-bold mb-2">About Me</h1>
               <p>
                 Hello, I am Christian Luce. Welcome to my Graphic Design Portfolio!
