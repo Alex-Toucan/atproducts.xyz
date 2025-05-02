@@ -2,7 +2,7 @@
 const { cardContent } = Astro.props;
 ---
 
-{cardContent && cardContent.map(({ title, type, date, image, icons, comingsoon }, index) => (
+{cardContent && cardContent.map(({ title, date, image, download }, index) => (
   <div class="col-md mt-1 mb-3 m-1 mx-llg-auto" style="max-width: 333.333333px;">
     <div class="card text-center permcard shadow-sm h-100">
       {image && image.map(({ src, alt }, index) => (
@@ -12,26 +12,13 @@ const { cardContent } = Astro.props;
       ))}
       <div class="card-body">
         <h2 class="card-title fw-semibold mb-0">{title}</h2>
-        <p class="card-text lead mb-0" set:html={type}></p>
         {date && (
           <p class="card-text lead" set:html={date}></p>
         )}
-        <div class="tab-link d-grid">
-          {comingsoon && comingsoon.map(({ date }, index) => (
-            <h3 class="card-title fs-3 mb-0">COMING SOON</h3>
-            <p class="card-text display-5" set:html={date}></p>
+        <div class="tab-link d-flex gap-2">
+          {download && download.map(({ icon, alt, file }, index) => (
+            <a href={`/media/files/${file}`} aria-label={alt} class="fs-2 link-footer" target="_blank" rel="noopener noreferrer"><i class={`bi bi-filetype-${icon}`}></i></a>
           ))}
-          {icons && (
-            <div class="text-center tab-link">
-              <div class="d-flex justify-content-evenly">
-                {icons.map(({ href, text, icon }, index) => (
-                  <a class="link-body-emphasis" href={href} aria-label={text} target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title={text}>
-                    <i class={`fs-2 ${icon}`}></i>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>
