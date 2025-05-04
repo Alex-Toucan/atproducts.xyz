@@ -90,6 +90,11 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 	margin-block-start: 0 !important;
 }
 
+a {
+  text-underline-offset: .25rem;
+  text-decoration-color: rgba(var(--bs-link-color-rgb), 0.25);
+}
+
 @media (min-width: 645.98px) {
   .container-xsm, .container-sm, .container {
     max-width: 540px;
