@@ -6681,22 +6681,6 @@ a:hover.footer-info {
   color: #FAF9F6;
 }
 
-body.fixedtopnav {
-  padding-top: 56px;
-}
-
-html.fixedtopnav {
-  scroll-padding-top: calc(56px + 5px);
-}
-
-body.fixedtopnavimage {
-  padding-top: 71px;
-}
-
-html.fixedtopnavimage {
-  scroll-padding-top: calc(71px + 5px);
-}
-
 .modal-body-title, .title {
     padding-top: .625rem;
 }
