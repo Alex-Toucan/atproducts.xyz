@@ -1,6 +1,6 @@
-function updatePadding() {
-    const navbar = document.querySelector(".navbar");
+const navbar = document.querySelector("header");
 
+function updatePadding() {
     if (navbar) {
         const navbarHeight = navbar.offsetHeight;
 
@@ -14,7 +14,6 @@ updatePadding();
 window.addEventListener("resize", updatePadding);
 
 const navbarObserver = new MutationObserver(updatePadding);
-const navbar = document.querySelector(".navbar");
 
 if (navbar) {
     navbarObserver.observe(navbar, { attributes: true, childList: true, subtree: true });
