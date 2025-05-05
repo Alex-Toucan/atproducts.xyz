@@ -35,7 +35,7 @@ function eraseAlert2Cookie(name) {
 
 /* Comment this section if there is no alert loaded */
 $(document).ready(function () {
-    if (pureAlert2Enabled) && !getAlert1Cookie('pureAlert2Dismiss'){
+    if ((pureAlert2Enabled) && !getAlert1Cookie('pureAlert2Dismiss')) { 
         var header = $('header');
         var alert2Container = $('<div class="alert-container"></div>');
         alert2Container.html('<div class="alert ' + pureAlert2Type + ' alert-dismissible fade show mb-0 d-flex gap-2" role="alert"> <i class="bi ' + pureAlert2Icon + ' h-100"></i><div><strong>' + pureAlert2Title + '</strong> ' + pureAlert2Desc + ' <a class="icon-link icon-link-hover" href="' + pureAlert2Link + '">' + pureAlert2LinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlert2Dismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>');
