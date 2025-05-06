@@ -2,16 +2,21 @@ const navbar = document.querySelector("header");
 
 function updatePadding() {
     if (navbar) {
-        const navbarHeight = navbar.offsetHeight;
-
-        document.body.style.paddingTop = `${navbarHeight}px`;
-        document.documentElement.style.scrollPaddingTop = `${navbarHeight}px`;
+        requestAnimationFrame(() => {
+            const navbarHeight = navbar.offsetHeight;
+            document.body.style.paddingTop = `${navbarHeight}px`;
+            document.documentElement.style.scrollPaddingTop = `${navbarHeight}px`;
+        });
     }
 }
 
 updatePadding();
 
-window.addEventListener("resize", updatePadding);
+let resizeTimer;
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(updatePadding, 100);
+});
 
 const navbarObserver = new MutationObserver(updatePadding);
 
