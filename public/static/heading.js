@@ -4,8 +4,10 @@ function updatePadding() {
     if (navbar) {
         requestAnimationFrame(() => {
             const navbarHeight = navbar.offsetHeight;
+            const additionalPadding = 8;
+            
             document.body.style.paddingTop = `${navbarHeight}px`;
-            document.documentElement.style.scrollPaddingTop = `${navbarHeight}px`;
+            document.documentElement.style.scrollPaddingTop = `${navbarHeight + additionalPadding}px`;
         });
     }
 }

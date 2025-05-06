@@ -6686,7 +6686,7 @@ body.fixedtopnav {
 }
 
 html.fixedtopnav {
-  scroll-padding-top: calc(56px + 5px);
+  scroll-padding-top: calc(56px + .5rem);
 }
 
 body.fixedtopnavimage {
@@ -6694,7 +6694,7 @@ body.fixedtopnavimage {
 }
 
 html.fixedtopnavimage {
-  scroll-padding-top: calc(71px + 5px);
+  scroll-padding-top: calc(71px + .5rem);
 }
 
 .modal-body-title, .title {
