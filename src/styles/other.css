@@ -6869,10 +6869,6 @@ html.fixedtopnavimage {
 		height: calc(100vh - 7rem);
 		overflow-y: auto;
 	}
-	
-	.story-top-body {
-		margin-top: 25px;
-	}
 }
 
 
