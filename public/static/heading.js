@@ -18,7 +18,7 @@ updatePadding();
 let resizeTimer;
 window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(updatePadding, 100);
+    resizeTimer = setTimeout(() => requestAnimationFrame(updatePadding), 100);
 });
 
 if (collapseElement) {
@@ -26,7 +26,7 @@ if (collapseElement) {
     collapseElement.addEventListener("hidden.bs.collapse", updatePadding);
 }
 
-const navbarObserver = new MutationObserver(updatePadding);
 if (navbar) {
+    const navbarObserver = new MutationObserver(updatePadding);
     navbarObserver.observe(navbar, { attributes: true, childList: true, subtree: true });
 }
