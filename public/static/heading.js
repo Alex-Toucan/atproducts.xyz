@@ -1,4 +1,5 @@
 const navbar = document.querySelector("header");
+const collapseElement = document.querySelector(".navbar-collapse");
 
 function updatePadding() {
     if (navbar) {
@@ -20,8 +21,12 @@ window.addEventListener("resize", () => {
     resizeTimer = setTimeout(updatePadding, 100);
 });
 
-const navbarObserver = new MutationObserver(updatePadding);
+if (collapseElement) {
+    collapseElement.addEventListener("shown.bs.collapse", updatePadding);
+    collapseElement.addEventListener("hidden.bs.collapse", updatePadding);
+}
 
+const navbarObserver = new MutationObserver(updatePadding);
 if (navbar) {
     navbarObserver.observe(navbar, { attributes: true, childList: true, subtree: true });
 }
