@@ -1,11 +1,11 @@
 // --- Config --- //
 var pureAlert2Type = "alert-dark"; // Color
-var pureAlert2Title = "ALEX TOUCAN'S PORTFOLIO:"; // Title
-var pureAlert2Icon = 'bi-plus-lg'; // Icon
-var pureAlert2Desc = "The creator of the site, Alex Toucan, now has a portfolio!"; // Description
-var pureAlert2Link = 'https://portfolio.atproducts.xyz'; // Link
-var pureAlert2LinkDesc = 'Check it out now!'; // Link text
-var pureAlert2Enabled = false; // Switch to enable/disable alert
+var pureAlert2Title = "TREND WARNING:"; // Title
+var pureAlert2Icon = 'bi-exclamation-triangle-fill'; // Icon
+var pureAlert2Desc = "Avoid inserting lead, metal, or any conductive materials into USB or other ports from computers/laptops. Doing so can trigger short circuits, potentially causing fires, battery overheating, and serious hazards. In some cases, this could even result in criminal charges such as arson—or worse."; // Description
+var pureAlert2Link = 'https://www.msn.com/en-us/news/technology/why-are-students-pushing-pencil-lead-into-chromebooks/ar-AA1Eqa0u?ocid=BingNewsSerp'; // Link
+var pureAlert2LinkDesc = 'Read more.'; // Link text
+var pureAlert2Enabled = true; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert2Cookie(name, value, days) {
