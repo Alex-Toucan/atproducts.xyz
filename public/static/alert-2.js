@@ -1,10 +1,10 @@
 // --- Config --- //
 var pureAlert2Type = "alert-dark"; // Color
-var pureAlert2Title = "ALEX TOUCAN'S PORTFOLIO:"; // Title
-var pureAlert2Icon = 'bi-plus-lg'; // Icon
-var pureAlert2Desc = "The creator of the site, Alex Toucan, now has a portfolio!"; // Description
-var pureAlert2Link = 'https://portfolio.atproducts.xyz'; // Link
-var pureAlert2LinkDesc = 'Check it out now!'; // Link text
+var pureAlert2Title = "TREND WARNING:"; // Title
+var pureAlert2Icon = 'bi-exclamation-triangle-fill'; // Icon
+var pureAlert2Desc = "Do not stick lead, metal, or anything conductive into USB or any kind of ports; they may cause fires due to a short circuit and has a good chance to overheat batteries, which may result in a arson, or worse, terrorism charge."; // Description
+var pureAlert2Link = 'https://www.msn.com/en-us/news/technology/why-are-students-pushing-pencil-lead-into-chromebooks/ar-AA1Eqa0u?ocid=BingNewsSerp'; // Link
+var pureAlert2LinkDesc = 'Read more.'; // Link text
 var pureAlert2Enabled = false; // Switch to enable/disable alert
 // ---        --- //
 
