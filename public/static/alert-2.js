@@ -5,7 +5,7 @@ var pureAlert2Icon = 'bi-exclamation-triangle-fill'; // Icon
 var pureAlert2Desc = "Do not stick lead, metal, or anything conductive into USB or any kind of ports; they may cause fires due to a short circuit and has a good chance to overheat batteries, which may result in a arson, or worse, terrorism charge."; // Description
 var pureAlert2Link = 'https://www.msn.com/en-us/news/technology/why-are-students-pushing-pencil-lead-into-chromebooks/ar-AA1Eqa0u?ocid=BingNewsSerp'; // Link
 var pureAlert2LinkDesc = 'Read more.'; // Link text
-var pureAlert2Enabled = false; // Switch to enable/disable alert
+var pureAlert2Enabled = true; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert2Cookie(name, value, days) {
