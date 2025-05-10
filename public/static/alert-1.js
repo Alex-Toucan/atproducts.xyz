@@ -34,10 +34,15 @@ function eraseAlert1Cookie(name) {
 }
 
 $(document).ready(function () {
-    if (pureAlert1Enabled && window.location.pathname.indexOf("/stories/") === -1 && !getAlert1Cookie('pureAlert1Dismiss')) {
+    if (pureAlert1Enabled &&
+        window.location.pathname.indexOf("/stories/") === -1 &&
+        window.location.pathname.indexOf("/articles/") === -1 &&
+        !getAlert1Cookie('pureAlert1Dismiss')) {
+        
         var header = $('header');
         var alert1Container = $('<div class="alert-container"></div>');
         alert1Container.html('<div class="alert ' + pureAlert1Type + ' alert-dismissible fade show mb-0 d-flex gap-2" role="alert"> <i class="bi ' + pureAlert1Icon + ' h-100"></i><div><strong>' + pureAlert1Title + '</strong> ' + pureAlert1Desc + ' <a class="icon-link icon-link-hover" href="' + pureAlert1Link + '">' + pureAlert1LinkDesc + '<i class="bi bi-arrow-right h-100"></i></a></div><button onclick="pureAlert1Dismiss();" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>');
+        
         header.after(alert1Container);
     }
 });
