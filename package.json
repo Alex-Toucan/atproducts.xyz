@@ -12,8 +12,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.4",
-    "astro": "^5.7.0",
+    "@astrojs/react": "^4.2.7",
+    "astro": "^5.7.12",
+    "bootstrap": "^5.3.6",
+    "bootstrap-icons": "^1.13.1",
+    "jquery": "^3.7.1",
+    "jquery-ui": "^1.14.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
