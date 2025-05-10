@@ -1,54 +1,53 @@
 ---
-import Head from '../layouts/Head.astro';
-import Scripts from '../layouts/Scripts.astro';
+import DefaultBody from '../layouts/DefaultBody.astro';
 import Hero from '../components/Hero.astro';
 import Navbar    from '../components/Navbar.astro';
 import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 ---
 
-<Head title="Links" description="Links for the beta testers of AT Products LLC." author="Alex Toucan"/>
-<div id="page">
-  <Navbar />
-  <div id="main-content">
-    <Hero
-      id="codinghome"
-      title="Links"
-      description="Links for the beta testers of AT Products LLC"
-    />
-    <main id="links" class="container">
-      <p>
-      <h2>2.22 Links</h2>
-      <p class="my-3"><b>Last Updated:</b> 3/10/2025</p>
-      <p>
-      <a href="https://beta.atproducts.xyz">Beta Channel (2.22)</a>
-      <br>
-      <a href="https://github.com/Alex-Toucan/atproducts.xyz/milestone/25">2.22 Milestone</a><be>
-      <a href="https://github.com/Alex-Toucan/atproducts.xyz/discussions/447">2.22 Pull Requests</a><br>
-      <a href="https://github.com/Alex-Toucan/atproducts.xyz/discussions/449">2.22 Changelog</a><br>
-      </p>
-      <hr>
-      <h2>Beta Testing Links</h2>
-      <p>
-          <a href="https://atproducts.xyz">Public Website</a>
+<DefaultBody title="Links" description="Links for the beta testers of AT Products LLC." author="Alex Toucan">
+  <div id="page">
+    <Navbar />
+    <div id="main-content">
+      <Hero
+        id="codinghome"
+        title="Links"
+        description="Links for the beta testers of AT Products LLC"
+      />
+      <main id="links" class="container">
+        <p>
+        <h2>2.22 Links</h2>
+        <p class="my-3"><b>Last Updated:</b> 3/10/2025</p>
+        <p>
+        <a href="https://beta.atproducts.xyz">Beta Channel (2.22)</a>
         <br>
-          <a href="https://beta.atproducts.xyz">Beta Website</a>
-        <br>
-          <a href="https://github.com/Alex-Toucan/atproducts.xyz/pulls">GitHub PRs</a>
-        <br>
-          <a href="https://github.com/Alex-Toucan/atproducts.xyz/tree/beta">Beta Branch</a>
-            <br>
-          <a href="https://discord.gg/NTVd3vGFMS">Alex's Diary (CodingHome @ Discord)</a>
-        <br>
-          <a href="https://twitter.com/ATProductsLLC">ATPLLC's Twitter</a>
-        <br>
-          <a href="https://atproducts.xyz/backup/archive/">Backup Archive (public)</a>
-        <br>
-          <a href="https://beta.atproducts.xyz/backup/archive/">Backup Archive (beta)</a>
-      </p>
-    </main>
-    <Footer />
+        <a href="https://github.com/Alex-Toucan/atproducts.xyz/milestone/25">2.22 Milestone</a><be>
+        <a href="https://github.com/Alex-Toucan/atproducts.xyz/discussions/447">2.22 Pull Requests</a><br>
+        <a href="https://github.com/Alex-Toucan/atproducts.xyz/discussions/449">2.22 Changelog</a><br>
+        </p>
+        <hr>
+        <h2>Beta Testing Links</h2>
+        <p>
+            <a href="https://atproducts.xyz">Public Website</a>
+          <br>
+            <a href="https://beta.atproducts.xyz">Beta Website</a>
+          <br>
+            <a href="https://github.com/Alex-Toucan/atproducts.xyz/pulls">GitHub PRs</a>
+          <br>
+            <a href="https://github.com/Alex-Toucan/atproducts.xyz/tree/beta">Beta Branch</a>
+              <br>
+            <a href="https://discord.gg/NTVd3vGFMS">Alex's Diary (CodingHome @ Discord)</a>
+          <br>
+            <a href="https://twitter.com/ATProductsLLC">ATPLLC's Twitter</a>
+          <br>
+            <a href="https://atproducts.xyz/backup/archive/">Backup Archive (public)</a>
+          <br>
+            <a href="https://beta.atproducts.xyz/backup/archive/">Backup Archive (beta)</a>
+        </p>
+      </main>
+      <Footer />
+    </div>
+    <BackToTop />
   </div>
-  <BackToTop />
-</div>
-<Scripts />
+</DefaultBody>
