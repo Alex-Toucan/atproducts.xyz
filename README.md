@@ -1,6 +1,8 @@
 <div align="center">
   <h1>
-    <a href="https://atproducts.xyz">AT Products LLC</a> | <a href="https://beta-testing.atproducts.xyz">Department of Beta Testing</a>
+    <a href="https://beta-testing.atproducts.xyz">
+      <img src="/public/media/images/DoBT-Logo-White.png" width="75%">
+    </a><br><br>
   </h1>
   <p> 
   <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love"> 
