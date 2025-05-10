@@ -1,10 +1,10 @@
 {
-  "name": "AT Products LLC",
-  "short_name": "AT Products LLC",
+  "name": "Department of Beta Testing",
+  "short_name": "ATPLLC - DoBT",
   "theme_color": "#212529",
   "background_color": "#ffffff",
   "display": "standalone",
-  "id": "2.20.2",
+  "id": "2.5.1",
   "start_url": "/",
   "prefer_related_applications": false,
   "icons": [
