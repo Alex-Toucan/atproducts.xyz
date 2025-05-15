@@ -1,6 +1,6 @@
 {
   "name": "atproducts.xyz",
-  "version": "2.22.0.2",
+  "version": "2.22.1",
   "config": {
     "version_short": "2.22"
   },
@@ -14,7 +14,14 @@
   "dependencies": {
     "@astrojs/react": "^4.2.7",
     "astro": "^5.7.12",
+    "bootstrap": "^5.3.6",
+    "bootstrap-icons": "^1.13.1",
+    "jquery": "^3.7.1",
+    "jquery-ui": "^1.14.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.32"
   }
 }
