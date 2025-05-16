@@ -41,9 +41,12 @@ import '../styles/other.css';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script is:inline src="/static/darkmode.js"></script>
     <style>
+      body, html {
+        height: 100vh;
+      }
+
       body {
         overflow-y: auto;
-        max-height: 100vh;
       }
 
       .back-to-top-alt {
@@ -304,7 +307,7 @@ import '../styles/other.css';
               <h1 class="display-6 fw-bold mb-2">Classes</h1>
               <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow px-0 mx-auto mt-xmd-2 mb-3 pointer-event" style="width:80%!important;" data-bs-ride="carousel">
                 <div class="pt-xmd-2 px-xmd-2">
-                  <div class="carousel-inner">
+                  <div class="carousel-inner object-fit-contain">
                     <div class="carousel-item active" data-bs-interval="10000">
                       <img src="/media/slideshow/slideshow-1.png" class="d-block w-100" alt="Slide 1">
                     </div>
@@ -381,92 +384,60 @@ import '../styles/other.css';
               <div class="custom-br"></div>
             </div>
             <div class="tab-pane fade" id="photoshop" role="tabpanel" aria-labelledby="photoshop-tab" tabindex="0">
-              <div class="w-100 toucan-background rounded-2 mb-3">
-                <div class="cover-5 rounded-2">
-                  <img src="/media/images/the-toucans-white.png" alt="The Toucan Empire" class="d-block mx-auto toucan-image filter rounded-2">
-                </div>
+              <div class="w-100 atproducts-background rounded-2 mb-3"> 
+                <div class="cover-2 rounded-2 p-sm-4 p-md-5 p-3"> 
+                  <p class="mt-2 h1 fw-bold filter">Photoshop</p>
+                </div> 
               </div>
-              <h1 class="display-6 fw-bold mb-2">The Toucan Empire</h1>
-              <p>
-                <strong>The Toucan Empire</strong> has two parts, being on <a href="https://nationstates.net">NationStates</a> as a <a href="https://www.nationstates.net/nation=the_toucans">country</a>, and being a theme park on the hit Roblox game <em><a href="https://www.roblox.com/games/69184822/Theme-Park-Tycoon-2">Theme Park Tycoon 2</a></em>.
-              </p>
-              <h2 class="fw-bold card-title mb-2">
-                <a href="https://www.nationstates.net/nation=the_toucans">NationStates</a>
-              </h2>
-              <p>The main part of <a href="https://www.nationstates.net/nation=the_toucans">The Toucan Empire</a> is being held on <a href="https://nationstates.net">NationStates</a>, a country simulator. The Toucan Empire, a socialist country, existing since November 30th, 2022, is well known for its civil rights and political freedom but more known for its efficient economy combined with its 3.050 billion people, is worth 266 trillion Bird Coins (The Toucan Empire's currency) a year, as the Average income is 92,833 Bird Coins, and evenly distributed, with the richest citizens earning only 2.0 times as much as the poorest. The capital of The Toucan Empire is Newport, whose national animal is the Toucan. Recently, the national religion became <a href="https://aue-religion.org/">Aue</a>, an atheist-based religion. The crime in The Toucans was once 23 crimes committed per hour, down to 2 crimes committed per hour, making it one of the safest countries.
-              <h2 class="fw-bold card-title mb-2">
-                <a href="https://www.roblox.com/games/69184822/Theme-Park-Tycoon-2">Theme Park Tycoon 2</a>
-              </h2>
-              <p>The Toucan Empire is also on the <a href="https://roblox.com">Roblox</a> game <a href="https://www.roblox.com/games/69184822/Theme-Park-Tycoon-2">Theme Park Tycoon 2</a> as a theme park, and has been existing since late 2016 (originally as "The Amazing Theme Park"; before its renaming in early 2023). The park's theme is a highway/city with numerous highways, roads, intersections, and multiple bridges. It has a border, a processing center, numerous departments (transportation, architecture, broadcasting, etc.), train stations, food centers, beaches, and rides. The map below shows the many districts (areas) that The Toucan Empire contains with their special attraction. As theme parks cannot be shared and Alex Toucan must be playing to view the park, a picture album is below. </p>
-              <div class="mt-2" id="tpt2-album">
-                <div class="d-xxl-flex mt-0 mt-xxl-4 px-1 gap-2 justify-content-center">
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/The Toucan Empire Map@3x.png" alt="The theme park map included with districts." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">The theme park map included with districts.</div>
+              <h1 class="display-6 fw-bold mb-2">Photoshop</h1>
+              <div id="carousel-B" class="carousel carousel-main carousel-fade slide shadow px-0 mx-auto mt-xmd-2 mb-3 pointer-event" style="width:80%!important;" data-bs-ride="carousel">
+                <div class="pt-xmd-2 px-xmd-2">
+                  <div class="carousel-inner" style="height:512px;">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                      <img src="/media/slideshow/Brochure-Image-Carousel_0000_Open-Front.png" class="d-block object-fit-contain w-100" style="height:512px;" alt="Brochure Open Front">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                      <img src="/media/slideshow/Brochure-Image-Carousel_0004_Outside.png" class="d-block object-fit-contain w-100" style="height:512px;" alt="Brochure Outside">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                      <img src="/media/slideshow/Brochure-Image-Carousel_0003_Back.png" class="d-block object-fit-contain w-100" style="height:512px;" alt="Brochure Back">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                      <img src="/media/slideshow/Brochure-Image-Carousel_0002_Cover.png" class="d-block object-fit-contain w-100" style="height:512px;" alt="Brochure Cover">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                      <img src="/media/slideshow/Brochure-Image-Carousel_0001_Inside.png" class="d-block object-fit-contain w-100" style="height:512px;" alt="Brochure Inside">
+                    </div>
                   </div>
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Spawn Building.png" alt="The processing and control department as soon as walking in the park." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">The processing and control department as soon as walking in the park.</div>
-                  </div>
-                </div>
-                <div class="d-xxl-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Inside Spawn.png" alt="Inside the processing and control department." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">Inside the processing and control department.</div>
-                  </div>
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Welcome To.png" alt="The welcome sign after the processing and control department building." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">The welcome sign after the processing and control department building.</div>
-                  </div>
-                </div>
-                <div class="d-xxl-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Fountain.png" alt="A fountain in the Ford District recognizing Alex Toucan." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">A fountain in the Ford District recognizing Alex Toucan.</div>
-                  </div>
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Alta Building.png" alt="The Alta Food Court (middle) with the Alta Station (left) in the Alta District." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">The Alta Food Court (middle) with the Alta Station (left) in the Alta District.</div>
+                  <div class="mediarow py-2" aria-label="Carousel-A Controls">
+                    <button class="carousel-control-prev col" type="button" data-bs-target="#carousel-A" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <div class="carousel-indicators col-8 col-xs-6 col-sm-5 text-center">
+                      <div class="d-none">
+                        <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
+                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
+                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
+                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
+                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
+                      </div>
+                    </div>
+                    <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
                   </div>
                 </div>
-                <div class="d-xxl-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Line of Defense.png" alt="The Line of Defense building in the Ford District." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">The Line of Defense building in the Ford District.</div>
+                <div class="d-flex">
+                  <div class="btn-group w-100 p-1" role="group" aria-label="Carousel-A Play/Pause">
+                    <input type="radio" class="btn-check btn-check-dark col playButton" name="btnradio" id="playButton" aria-label="playButton" checked="">
+                    <label class="btn" for="playButton" id="playButtonLabel"><i class="bi bi-play-fill fs-4 link-carousel"></i></label>
+                    <input type="radio" class="btn-check btn-check-dark col pauseButton" name="btnradio" id="pauseButton" aria-label="pauseButton">
+                    <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-carousel"></i></label>
                   </div>
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Advertisement.png" alt="A Ultimate Driving advertisement in the Algonquin District." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">A <a href="https://www.roblox.com/games/54865335/Ultimate-Driving">Ultimate Driving</a> advertisement in the Algonquin District. </div>
-                  </div>
-                </div>
-                <div class="d-xxl-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Roller Coaster.png" alt="A roller coaster full of nature in the Insitux District." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">A roller coaster full of Nature in the Insitux District.</div>
-                  </div>
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Exploding Harper.png" alt="A TNT next to a guest named &quot;Harper&quot; near the Wood Coaster in the Insitux District." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">A TNT next to a guest named &quot;Harper&quot; near the Wood Coaster in the Insitux District.</div>
-                  </div>
-                </div>
-                <div class="d-xxl-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Highway.png" alt="A superhighway intersection (H-41 @ H-2) in the Riverbuild District." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">A superhighway intersection (H-41 @ H-2) in the Riverbuild District.</div>
-                  </div>
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Highway 2.png" alt="A different superhighway intersection (H-9 & H-16 @ H-2) in the Insitux District." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">A different superhighway intersection (H-9 & H-16 @ H-2) in the Insitux District.</div>
-                  </div>
-                </div>
-                <div class="d-xxl-flex mt-0 mt-lg-4 px-1 gap-2 justify-content-center">
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Commodore.png" alt="The Commodore District food court." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">The Commodore District food court.</div>
-                  </div>
-                  <div class="col-xxl-6 mt-4 mt-xxl-auto">
-                    <img src="/media/images/Aris.png" alt="The Aris District complex involving three departments." class="rounded-2 tpt2-image">
-                    <div class="mt-2 figure-caption">The Aris District complex involving three departments.</div>
+                  <div class="col px-2 my-auto">
+                    <a href="/media/pdf/slideshow.pdf" aria-label="PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
                   </div>
                 </div>
               </div>

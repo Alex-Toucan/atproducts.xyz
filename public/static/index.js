@@ -1,30 +1,63 @@
-var playButton = document.querySelector(".playButton");
-var pauseButton = document.querySelector(".pauseButton");
-var nextButton = document.querySelector(".carousel-control-next");
-var previousButton = document.querySelector(".carousel-control-prev");
-var carouselMain = document.querySelector(".carousel-main");
-var slidebtn = document.querySelectorAll(".slidebtn");
+var playButtons = document.querySelectorAll(".playButton");
+var pauseButtons = document.querySelectorAll(".pauseButton");
+var nextButtons = document.querySelectorAll(".carousel-control-next");
+var previousButtons = document.querySelectorAll(".carousel-control-prev");
+var carouselMains = document.querySelectorAll(".carousel-main");
+var slidebtns = document.querySelectorAll(".slidebtn");
+
 $(function () {
-    $(carouselMain).carousel({
-        pause: "false",
-	ride: "true"
+    // Initialize each carousel-main individually
+    $(".carousel-main").each(function () {
+        $(this).carousel({
+            pause: false,
+            ride: true
+        });
     });
-    
-    $(playButton).click(function () {
-        $(carouselMain).carousel('cycle');
+
+    // Attach handlers for each carousel and its controls
+    carouselMains.forEach(function(carousel, idx) {
+        var $carousel = $(carousel);
+        var playButton = playButtons[idx] || playButtons[0];
+        var pauseButton = pauseButtons[idx] || pauseButtons[0];
+        var nextButton = nextButtons[idx] || nextButtons[0];
+        var previousButton = previousButtons[idx] || previousButtons[0];
+        var slidebtn = slidebtns[idx] || slidebtns[0];
+
+        if (playButton) {
+            $(playButton).click(function () {
+                $carousel.carousel('cycle');
+                playButton.checked = true;
+                if (pauseButton) pauseButton.checked = false;
+            });
+        }
+        if (pauseButton) {
+            $(pauseButton).click(function () {
+                $carousel.carousel('pause');
+                pauseButton.checked = true;
+                if (playButton) playButton.checked = false;
+            });
+        }
+        if (nextButton) {
+            $(nextButton).click(function () {
+                $carousel.carousel('next');
+                if (playButton) playButton.checked = true;
+                if (pauseButton) pauseButton.checked = false;
+            });
+        }
+        if (previousButton) {
+            $(previousButton).click(function () {
+                $carousel.carousel('prev');
+                if (playButton) playButton.checked = true;
+                if (pauseButton) pauseButton.checked = false;
+            });
+        }
+        if (slidebtn) {
+            $(slidebtn).click(function () {
+                if (playButton) playButton.checked = true;
+                if (pauseButton) pauseButton.checked = false;
+            });
+        }
     });
-    $(pauseButton).click(function () {
-        $(carouselMain).carousel('pause');
-    });
-	
-		$(nextButton).click(handleButton);
-    $(previousButton).click(handleButton);
-    $(slidebtn).click(handleButton);
-	
-    function handleButton() {
-        playButton.checked = true;
-			  pauseButton.checked = false;
-    };
 });
 
 $(document).ready(function() {
