@@ -374,22 +374,95 @@ import '../styles/other.css';
               </div>
             </div>
             <div class="tab-pane fade" id="illustrator" role="tabpanel" aria-labelledby="illustrator-tab" tabindex="0">
-              <div class="w-100 atproducts-background rounded-2 mb-3">
-                <div class="cover-2 rounded-2 p-sm-4 p-md-5 p-3">
-                  <img src="/media/images/longwhite.png" alt="AT Products LLC" class="d-block mx-auto atproducts-image filter">
-                </div>
+              <div class="w-100 atproducts-background rounded-2 mb-3"> 
+                <div class="cover-2 rounded-2 p-sm-4 p-md-5 p-3"> 
+                  <p class="mt-2 h1 fw-bold filter">Illustrator Projects</p>
+                </div> 
               </div>
-              <h1 class="display-6 fw-bold mb-2">atproducts.xyz</h1>
-              <p>2024 had been a slow year, but stuff still came out for the site at least. The first update released was <a href="https://2-17-2.atproducts.xyz">2.17.2</a>, on January 24th. <a href="https://2-18.atproducts.xyz">2.18</a>, releasing on March 27th, would be the second update of the year, and revamped MDickie Projects entirely. <a href="https://2-19.atproducts.xyz">2.19</a>, released on July 10th, 2024, added new features and resources, including the logo popovers you see here in the history section, redesigned several UI elements, updated various components, removed outdated items, and fixed multiple bugs. <a href="https://2-20.atproducts.xyz">2.20</a>, released on October 10th, readded <a href="/roms">AT's ROM Games</a>, and added code highlighting where needed. Finally, both <a href="https://2-20-1.atproducts.xyz">2.20.1</a> in October and <a href="https://2-20-2.atproducts.xyz">2.20.2</a> in December added 4 stories in total. <a href="https://2-20-2.atproducts.xyz">2.20.2</a> also added a Pynx Project, <a href="/nyaos">NyaOS</a>. That's the atproducts.xyz history!</p>
+              <p class="lead">In Graphic Design I, in the fall semester of 2024, we studied Adobe Illustrator and created some simple projects involving shapes and general design.</p>
+              <CardLayout>
+                <Fragment slot="card-content">
+                  <Card 
+                    cardContent={[
+                      {
+                        title: "Polygonial Animal",
+                        image: [
+                          { src: "Luce_PolygonalAnimal.jpg", alt: "Image" },
+                        ],
+                        download: [
+                          { file: "/media/files/Luce_PolygonalAnimal.ai", icon: "filetype-ai", alt: ".AI File" },
+                          { file: "/media/files/Luce_PolygonalAnimal.pdf", icon: "filetype-pdf", alt: ".PDF File" },
+                        ]
+                      }
+                    ]}
+                  />
+                  <Card 
+                    cardContent={[
+                      {
+                        title: "Keyboard",
+                        image: [
+                          { src: "keyboard-100.jpg", alt: "Image" },
+                        ],
+                        download: [
+                          { file: "https://drive.usercontent.google.com/u/0/uc?id=1-tqtltw4Oi-6_7vXJTTm77f74nFATUrK&export=download", icon: "filetype-ai", alt: ".AI File" },
+                          { file: "https://drive.usercontent.google.com/u/0/uc?id=1uaWa4kL3SJPNDpDfGqybpp6j-7xWPKLM&export=download", icon: "filetype-pdf", alt: ".PDF File" },
+                        ]
+                      }
+                    ]}
+                  />
+                  <Card 
+                    cardContent={[
+                      {
+                        title: "Keyboard",
+                        image: [
+                          { src: "LuceC_AnatomyOfType-1.png", alt: "Image" },
+                        ],
+                        download: [
+                          { file: "LuceC_AnatomyOfType.ai", icon: "filetype-ai", alt: ".AI File" },
+                          { file: "LuceC_AnatomyOfType.pdf", icon: "filetype-pdf", alt: ".PDF File" },
+                        ]
+                      }
+                    ]}
+                  />
+                  <Card 
+                    cardContent={[
+                      {
+                        title: "Typography Poster",
+                        image: [
+                          { src: "LuceC_AnatomyOfType-1.png", alt: "Image" },
+                        ],
+                        download: [
+                          { file: "LuceC_AnatomyOfType.ai", icon: "filetype-ai", alt: ".AI File" },
+                          { file: "LuceC_AnatomyOfType.pdf", icon: "filetype-pdf", alt: ".PDF File" },
+                        ]
+                      }
+                    ]}
+                  />
+                  <Card 
+                    cardContent={[
+                      {
+                        title: "Logo Poster",
+                        image: [
+                          { src: "LuceC_PosterLogo-2.png", alt: "Image" },
+                        ],
+                        download: [
+                          { file: "LuceC_PosterLogo.ai", icon: "filetype-ai", alt: ".AI File" },
+                          { file: "LuceC_PosterLogo.pdf", icon: "filetype-pdf", alt: ".PDF File" },
+                        ]
+                      }
+                    ]}
+                  />
+                </Fragment>
+              </CardLayout>
               <div class="custom-br"></div>
             </div>
             <div class="tab-pane fade" id="photoshop" role="tabpanel" aria-labelledby="photoshop-tab" tabindex="0">
               <div class="w-100 atproducts-background rounded-2 mb-3"> 
                 <div class="cover-2 rounded-2 p-sm-4 p-md-5 p-3"> 
-                  <p class="mt-2 h1 fw-bold filter">Photoshop</p>
+                  <p class="mt-2 h1 fw-bold filter">Photoshop Projects</p>
                 </div> 
               </div>
-              <h1 class="display-6 fw-bold mb-2">Photoshop</h1>
+              <p class="lead">In Graphic Design II, in the spring semester of 2025, we studied Adobe Photoshop and created some simple marketing projects.</p>
               <div id="carousel-B" class="carousel carousel-main carousel-fade slide shadow px-0 mx-auto mt-xmd-2 mb-3 pointer-event" style="width:80%!important;" data-bs-ride="carousel">
                 <div class="pt-xmd-2 px-xmd-2">
                   <div class="carousel-inner" style="height:512px;">
@@ -437,7 +510,7 @@ import '../styles/other.css';
                     <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-carousel"></i></label>
                   </div>
                   <div class="col px-2 my-auto">
-                    <a href="/media/pdf/slideshow.pdf" aria-label="PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
+                    <a href="https://drive.usercontent.google.com/u/0/uc?id=1hUm2xkX4ZY23lt1A44Bn-nbK5vu3R3Ua&export=download" aria-label="PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
                   </div>
                 </div>
               </div>
