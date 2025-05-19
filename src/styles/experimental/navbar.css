@@ -1,0 +1,107 @@
+/*
+ * Custom CSS
+ */
+
+:root {
+  --bs-body-bg: var(--bs-gray-100);
+  --bs-list-group-item-padding-y: 0.5rem;
+  --bs-list-group-item-padding-x: 1rem;
+}
+
+[data-bs-theme='dark'] {
+  .headerimg {
+    filter: invert(1);
+  }
+}
+
+button {
+  border: 0;
+  background: transparent;
+}
+
+.tab-link {
+  position: sticky;
+  top: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-body {
+    height: 100% !important;
+  }
+  .custom-padding {
+    width: 100%;
+    padding: var(--bs-list-group-item-padding-y)
+      var(--bs-list-group-item-padding-x) !important;
+    color: var(--bs-nav-link-color);
+  }
+}
+
+.custom-group {
+  & {
+    display: flex;
+  }
+  & .custom-group-item,
+  & .custom-group-item a {
+    text-decoration: none;
+    color: var(--bs-nav-link-color);
+    padding: var(--bs-list-group-item-padding-x)
+      var(--bs-list-group-item-padding-y);
+  }
+  @media (max-width: 991.98px) {
+    & {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .custom-group-item {
+      position: relative;
+      display: block;
+      width: 100%;
+      border-radius: 0;
+      border-top: 0 !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
+      border-bottom: rgba(var(--bs-secondary-rgb), 0.75) var(--bs-border-width)
+        var(--bs-border-style) !important;
+    }
+
+    & .custom-group-item-action {
+      width: 100%;
+      color: var(--bs-list-group-action-color);
+      text-align: inherit;
+      padding: var(--bs-list-group-item-padding-y)
+        var(--bs-list-group-item-padding-x) !important;
+    }
+
+    & .custom-group-item .dropdown-toggle {
+      width: 100%;
+      text-decoration: none;
+    }
+
+    & .custom-group-item .dropdown-menu .custom-group-item:first-child {
+      border-top: rgba(var(--bs-secondary-rgb), 0.75) var(--bs-border-width)
+        var(--bs-border-style) !important;
+    }
+
+    & .custom-group-item .dropdown-menu .dropdown-menu .custom-group-item {
+      padding-left: calc(var(--bs-list-group-item-padding-x) * 3) !important;
+    }
+
+    & .custom-group-item .dropdown-menu {
+      margin-top: 0 !important;
+    }
+
+    & .dropdown-menu a.custom-group-item,
+    & .custom-group-item .dropdown-menu .dropdown-toggle {
+      padding-left: calc(var(--bs-list-group-item-padding-x) * 2) !important;
+    }
+
+    & .custom-group-item .dropdown-menu & .custom-group-item:last-child {
+      border-bottom: 0 !important;
+    }
+
+    & .custom-group-item:last-child {
+      border-bottom: 0 !important;
+    }
+  }
+}
