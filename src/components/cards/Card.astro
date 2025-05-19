@@ -4,7 +4,7 @@ const { cardContent } = Astro.props;
 
 {cardContent && cardContent.map(({ title, date, type, image, download }, index) => (
   <div class="col-md mt-1 mb-3 m-1 mx-llg-auto" style="max-width: 333.333333px;">
-    <div class="card text-center permcard shadow-sm h-100">
+    <div class="card text-center permcard shadow-sm my-auto">
       {image && image.map(({ src, alt }, index) => (
         <div class="bg-white card-img-top rounded-top-2">
           <img src={`/media/images/${src}`} alt={alt} width="100%" class="img-fluid rounded-top-2">
