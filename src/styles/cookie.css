@@ -1,0 +1,23 @@
+.cookieConsentContainer {
+	z-index: 9999;
+	width: 350px;
+	min-height: 20px;
+	box-sizing: border-box;
+	padding: 2rem;
+	overflow: hidden;
+	position: fixed;
+  	bottom: 30px;
+	left: 30px;
+	display: none;
+}
+
+@media (max-width: 767.98px) {
+	.cookieConsentContainer {
+		bottom: 0px !important;
+		left: 0px !important;
+		width: 100%  !important;
+	}
+	.back-to-top:has(+ .cookieConsentContainer) {
+		bottom: 225px !important;
+	}
+}
