@@ -203,9 +203,6 @@ import '../styles/other.css';
               <button class="nav-link w-100 active" id="about-tab" data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">About Me</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link w-100" id="classes-tab" data-bs-toggle="pill" data-bs-target="#classes" type="button" role="tab" aria-controls="classes" aria-selected="false">Classes</button>
-            </li>
-            <li class="nav-item" role="presentation">
               <button class="nav-link w-100" id="illustrator-tab" data-bs-toggle="pill" data-bs-target="#illustrator" type="button" role="tab" aria-controls="illustrator" aria-selected="false">Illustrator</button>
             </li>
             <li class="nav-item" role="presentation">
@@ -238,6 +235,73 @@ import '../styles/other.css';
                 </p> 
               </div>
               <div id="example" class="mt-4">
+                <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow px-0 mx-auto mt-xmd-2 mb-3 pointer-event" style="width:80%!important;" data-bs-ride="carousel">
+                  <div class="pt-xmd-2 px-xmd-2">
+                    <div class="carousel-inner object-fit-contain">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="/media/slideshow/slideshow-1.png" class="d-block w-100" alt="Slide 1">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="10000">
+                        <img src="/media/slideshow/slideshow-2.png" class="d-block w-100" alt="Slide 2">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="10000">
+                        <img src="/media/slideshow/slideshow-3.png" class="d-block w-100" alt="Slide 3">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="10000">
+                        <img src="/media/slideshow/slideshow-4.png" class="d-block w-100" alt="Slide 4">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="10000">
+                        <img src="/media/slideshow/slideshow-5.png" class="d-block w-100" alt="Slide 5">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="10000">
+                        <img src="/media/slideshow/slideshow-6.png" class="d-block w-100" alt="Slide 6">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="10000">
+                        <img src="/media/slideshow/slideshow-7.png" class="d-block w-100" alt="Slide 7">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="10000">
+                        <img src="/media/slideshow/slideshow-8.png" class="d-block w-100" alt="Slide 8">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="10000">
+                        <img src="/media/slideshow/slideshow-9.png" class="d-block w-100" alt="Slide 9">
+                      </div>
+                    </div>
+                    <div class="mediarow py-2" aria-label="Carousel-A Controls">
+                      <button class="carousel-control-prev col" type="button" data-bs-target="#carousel-A" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <div class="carousel-indicators col-8 col-xs-6 col-sm-5 text-center">
+                        <div class="d-none">
+                          <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
+                          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
+                          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
+                          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
+                          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
+                          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="5" aria-label="Slide 6" class="slidebtn"></button>
+                          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="6" aria-label="Slide 7" class="slidebtn"></button>
+                          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="7" aria-label="Slide 8" class="slidebtn"></button>
+                          <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="8" aria-label="Slide 9" class="slidebtn"></button>
+                        </div>
+                      </div>
+                      <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="btn-group w-100 p-1" role="group" aria-label="Carousel-A Play/Pause">
+                      <input type="radio" class="btn-check btn-check-dark col playButton" name="btnradio" id="playButton" aria-label="playButton" checked="">
+                      <label class="btn" for="playButton" id="playButtonLabel"><i class="bi bi-play-fill fs-4 link-carousel"></i></label>
+                      <input type="radio" class="btn-check btn-check-dark col pauseButton" name="btnradio" id="pauseButton" aria-label="pauseButton">
+                      <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-carousel"></i></label>
+                    </div>
+                    <div class="col px-2 my-auto">
+                      <a href="/media/pdf/slideshow.pdf" aria-label="PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
+                    </div>
+                  </div>
+                </div>
                 <h2 class="fw-bold">Example Projects</h2>
                 <CardLayout>
                   <Fragment slot="card-content">
@@ -297,81 +361,6 @@ import '../styles/other.css';
                 </CardLayout>
               </div>
               <div class="custom-br"></div>
-            </div>
-            <div class="tab-pane fade" id="classes" role="tabpanel" aria-labelledby="classes-tab" tabindex="0">
-              <div class="w-100 atproducts-background rounded-2 mb-3">
-                <div class="cover-2 rounded-2 p-sm-4 p-md-5 p-3">
-                  <img src="/media/images/longwhite.png" alt="AT Products LLC" class="d-block mx-auto atproducts-image filter">
-                </div>
-              </div>
-              <h1 class="display-6 fw-bold mb-2">Classes</h1>
-              <div id="carousel-A" class="carousel carousel-main carousel-fade slide shadow px-0 mx-auto mt-xmd-2 mb-3 pointer-event" style="width:80%!important;" data-bs-ride="carousel">
-                <div class="pt-xmd-2 px-xmd-2">
-                  <div class="carousel-inner object-fit-contain">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                      <img src="/media/slideshow/slideshow-1.png" class="d-block w-100" alt="Slide 1">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                      <img src="/media/slideshow/slideshow-2.png" class="d-block w-100" alt="Slide 2">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                      <img src="/media/slideshow/slideshow-3.png" class="d-block w-100" alt="Slide 3">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                      <img src="/media/slideshow/slideshow-4.png" class="d-block w-100" alt="Slide 4">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                      <img src="/media/slideshow/slideshow-5.png" class="d-block w-100" alt="Slide 5">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                      <img src="/media/slideshow/slideshow-6.png" class="d-block w-100" alt="Slide 6">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                      <img src="/media/slideshow/slideshow-7.png" class="d-block w-100" alt="Slide 7">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                      <img src="/media/slideshow/slideshow-8.png" class="d-block w-100" alt="Slide 8">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                      <img src="/media/slideshow/slideshow-9.png" class="d-block w-100" alt="Slide 9">
-                    </div>
-                  </div>
-                  <div class="mediarow py-2" aria-label="Carousel-A Controls">
-                    <button class="carousel-control-prev col" type="button" data-bs-target="#carousel-A" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <div class="carousel-indicators col-8 col-xs-6 col-sm-5 text-center">
-                      <div class="d-none">
-                        <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
-                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
-                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
-                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
-                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
-                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="5" aria-label="Slide 6" class="slidebtn"></button>
-                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="6" aria-label="Slide 7" class="slidebtn"></button>
-                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="7" aria-label="Slide 8" class="slidebtn"></button>
-                        <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="8" aria-label="Slide 9" class="slidebtn"></button>
-                      </div>
-                    </div>
-                    <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="d-flex">
-                  <div class="btn-group w-100 p-1" role="group" aria-label="Carousel-A Play/Pause">
-                    <input type="radio" class="btn-check btn-check-dark col playButton" name="btnradio" id="playButton" aria-label="playButton" checked="">
-                    <label class="btn" for="playButton" id="playButtonLabel"><i class="bi bi-play-fill fs-4 link-carousel"></i></label>
-                    <input type="radio" class="btn-check btn-check-dark col pauseButton" name="btnradio" id="pauseButton" aria-label="pauseButton">
-                    <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-carousel"></i></label>
-                  </div>
-                  <div class="col px-2 my-auto">
-                    <a href="/media/pdf/slideshow.pdf" aria-label="PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="tab-pane fade" id="illustrator" role="tabpanel" aria-labelledby="illustrator-tab" tabindex="0">
               <div class="w-100 atproducts-background rounded-2 mb-3"> 
