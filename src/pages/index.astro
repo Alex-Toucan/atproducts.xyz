@@ -449,50 +449,56 @@ import '../styles/other.css';
                 </div> 
               </div>
               <p class="lead">In Graphic Design II, in the spring semester of 2025, we studied Adobe Photoshop and created some simple marketing projects.</p>
-              <Card 
-                cardContent={[
-                  {
-                    title: "Warhol",
-                    image: [
-                      { src: "LuceC_WarholProject.jpg", alt: "Image" },
-                    ],
-                    download: [
-                      { file: "https://drive.usercontent.google.com/download?id=12_eSiQanHHsR3H5wEcHqajJJJh0t89xj&export=download&authuser=0", icon: "filetype-psd", alt: ".PSD File" },
-                      { file: "https://drive.usercontent.google.com/download?id=1kuoz9lNtrl1WSwhC-zN7HFJq3fHA3-0i&export=download&authuser=0", icon: "filetype-pdf", alt: ".PDF File" },
-                    ]
-                  }
-                ]}
-              />
+              <CardLayout>
+                <Fragment slot="card-content">
+                  <Card 
+                    cardContent={[
+                      {
+                        title: "Warhol",
+                        image: [
+                          { src: "LuceC_WarholProject.jpg", alt: "Image" },
+                        ],
+                        download: [
+                          { file: "https://drive.usercontent.google.com/download?id=12_eSiQanHHsR3H5wEcHqajJJJh0t89xj&export=download&authuser=0", icon: "filetype-psd", alt: ".PSD File" },
+                          { file: "https://drive.usercontent.google.com/download?id=1kuoz9lNtrl1WSwhC-zN7HFJq3fHA3-0i&export=download&authuser=0", icon: "filetype-pdf", alt: ".PDF File" },
+                        ]
+                      }
+                    ]}
+                  />
+              </Fragment>
             </CardLayout>
             <CardLayout>
-              <Card 
-                cardContent={[
-                  {
-                    title: "Magazine",
-                    image: [
-                      { src: "Luce_Magazine-1.png", alt: "Image" },
-                    ],
-                    download: [
-                      { file: "https://drive.usercontent.google.com/download?id=1zRTj31llpWR78koakPi5Hkbh0RfX4PCz&export=download&authuser=0", icon: "filetype-psd", alt: ".PSD File" },
-                      { file: "/media/files/Luce_Magazine.pdf", icon: "filetype-pdf", alt: ".PDF File" },
-                    ]
-                  }
-                ]}
-              />
-              <Card 
-                cardContent={[
-                  {
-                    title: "Photomontage",
-                    image: [
-                      { src: "Photomontage.jpg", alt: "Image" },
-                    ],
-                    download: [
-                      { file: "https://drive.usercontent.google.com/u/0/uc?id=1Q-VUuCmAhQ-PrOI3M02LZLh2iXI4HpE_&export=download", icon: "filetype-psd", alt: ".PSD File" },
-                      { file: "/media/files/Photomontage.pdf", icon: "filetype-pdf", alt: ".PDF File" },
-                    ]
-                  }
-                ]}
-              />
+              <Fragment slot="card-content">
+                  <Card 
+                    cardContent={[
+                      {
+                        title: "Magazine",
+                        image: [
+                          { src: "Luce_Magazine-1.png", alt: "Image" },
+                        ],
+                        download: [
+                          { file: "https://drive.usercontent.google.com/download?id=1zRTj31llpWR78koakPi5Hkbh0RfX4PCz&export=download&authuser=0", icon: "filetype-psd", alt: ".PSD File" },
+                          { file: "/media/files/Luce_Magazine.pdf", icon: "filetype-pdf", alt: ".PDF File" },
+                        ]
+                      }
+                    ]}
+                  />
+                  <Card 
+                    cardContent={[
+                      {
+                        title: "Photomontage",
+                        image: [
+                          { src: "Photomontage.jpg", alt: "Image" },
+                        ],
+                        download: [
+                          { file: "https://drive.usercontent.google.com/u/0/uc?id=1Q-VUuCmAhQ-PrOI3M02LZLh2iXI4HpE_&export=download", icon: "filetype-psd", alt: ".PSD File" },
+                          { file: "/media/files/Photomontage.pdf", icon: "filetype-pdf", alt: ".PDF File" },
+                        ]
+                      }
+                    ]}
+                  />
+                </Fragment>
+              </CardLayout>
               <div id="carousel-B" class="carousel carousel-main carousel-fade slide shadow px-0 mx-auto mt-xmd-2 mb-3 pointer-event" style="width:80%!important;" data-bs-ride="carousel">
                 <div class="pt-xmd-2 px-xmd-2">
                   <div class="carousel-inner" style="height:512px;">
