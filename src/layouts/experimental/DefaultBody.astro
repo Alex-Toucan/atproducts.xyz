@@ -1,0 +1,125 @@
+---
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy } = Astro.props;
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url"
+
+import jquery from "jquery/dist/jquery.min.js?url";
+import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
+
+import '../styles/other.css';
+import '../styles/cookie.css';
+
+if (highlight) {
+  import '../styles/highlight.css';
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>{title}</title> 
+      <link rel="preload" as="script" href="/static/darkmode.js">
+      <link rel="preload" as="script" href="/static/alert-1.js">
+      <link rel="preload" as="script" href="/static/alert-2.js">
+      {heroid ?
+        <Fragment>
+        <link rel="preload" as="image" href={`/media/images/hero-${heroid}.webp`}>
+        </Fragment>
+        :
+        <Fragment>
+        <link rel="preload" as="image" href={`/media/images/hero.webp`}>
+        </Fragment>
+      }
+      {bulletin && bulletin.map(({ bulletinImage }, index) => (
+        bulletinImage ? (
+            <link rel="preload" as="image" href={`/media/slideshow/${bulletinImage}`} />
+        ) : null
+      ))}
+      {icon ?
+        <Fragment>
+          <link rel="icon" href={`/media/images/${icon}`}>
+          <meta property="og:image" content={`/media/images/${icon}`}>
+          <meta name="twitter:image" content={`/media/images/${icon}`}>
+        </Fragment>
+        :
+        <Fragment>
+          <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
+          <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
+          <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
+          <link rel="icon" type="image/png" href="/media/favicon/android-chrome-192x192.png">
+          <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+          <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+          <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+          <meta property="og:image" content="/media/favicon/iconembed.png">
+          <meta name="twitter:image" content="/media/favicon/iconembed.png">
+        </Fragment>
+      }    
+      <link rel="manifest" href="/media/favicon/site.webmanifest">
+      <meta charset="UTF-8">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="title" content={title}>
+      <meta name="description" content={description}>
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@ATProductsLLC">
+      <meta name="twitter:creator" content="@ATProductsLLC">
+      <meta name="twitter:title" content={title}>
+      <meta name="twitter:description" content={description}>
+      {keywords && (
+        <meta name="keywords" content={keywords}>
+      )}
+      {author && (
+        <meta name="author" content={author}>
+      )}
+      <meta property="og:title" content={title}>
+      <meta property="og:description" content={description}>
+      <meta property="og:site_name" content="AT Products LLC">
+      {color ?
+        <meta name="theme-color" content={color}>
+        :
+        <meta name="theme-color" content="#212529">
+      }
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <Fragment set:html={additionalContent}>
+      <script is:inline src="/static/darkmode.js"></script>
+  </head>
+  <body>
+    <Fragment>  
+      <slot/>
+    </Fragment>
+    <Fragment>
+      <script src={bootstrap}></script>
+      <script src={jquery}></script>
+      <script src={jqueryui}></script>
+      {highlight && (
+        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script is:inline src="/static/copy.js"></script>
+      )}
+      <script is:inline src="/static/message.js"></script>
+      <script is:inline src="/static/scroll.js"></script>
+      <script is:inline src="/static/purecookie.js"></script>
+      <script is:inline src="/static/alert-1.js"></script>
+      <script is:inline src="/static/alert-2.js"></script>
+      <script is:inline src="/static/enabler.js"></script>
+      {fourofour && (
+        <script is:inline src="/static/404.js"></script>
+      )}
+      {modal && (
+        <script is:inline src="/static/modal-id.js"></script>
+      )} 
+      {accordion && (
+        <script is:inline src="/static/accordion-id.js"></script>
+      )}    
+      {scrollspy && (
+        <script is:inline src="/static/scrollspy-id.js"></script>
+      )}
+      {index && (
+        <script is:inline src="/static/index.js"></script>
+      )}    
+    </Fragment>
+  </body>
+</html>
