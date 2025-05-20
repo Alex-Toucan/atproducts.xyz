@@ -1,9 +1,4 @@
-/*
- * Custom CSS
- */
-
 :root {
-  --bs-body-bg: var(--bs-gray-100);
   --bs-list-group-item-padding-y: 0.5rem;
   --bs-list-group-item-padding-x: 1rem;
 }
