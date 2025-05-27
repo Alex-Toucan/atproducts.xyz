@@ -42,6 +42,9 @@ button {
     padding: var(--bs-list-group-item-padding-x)
       var(--bs-list-group-item-padding-y);
   }
+  & .custom-group-item .dropdown-menu {
+    filter: drop-shadow(2px 2px 2px black);
+  }
   @media (max-width: 991.98px) {
     & {
       display: flex;
@@ -97,6 +100,15 @@ button {
 
     & .custom-group-item:last-child {
       border-bottom: 0 !important;
+    }
+
+    & .custom-group-item:only-child {
+      border: 0 !important;
+    }
+
+    & .color-changer {
+      padding: 0 var(--bs-list-group-item-padding-x) !important;
+      color: var(--bs-list-group-action-color);
     }
   }
 }

@@ -257,61 +257,27 @@ import '../../styles/experimental/navbar.css';
                 </div>
               </div>
             </div>
-            <ul class="ms-lg-auto tab-link mb-2 mb-lg-0 navbar-nav">
-              <li class="nav-item dropup" id="colorChanger">
-                <button
-                  class="custom-padding vav-item py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center h-100"
-                  id="bd-theme"
-                  type="button"
-                  aria-expanded="false"
-                  data-bs-toggle="dropdown"
-                  data-bs-display="static"
-                >
-                  <span class="theme-icon-active">
-                    <i class="my-1"></i>
-                  </span>
-                  <span class="d-lg-none" id="bd-theme-text">Toggle theme</span>
-                </button>
-                <ul
-                  class="dropdown-menu dropdown-menu-end dropdown-menu-specific"
-                  aria-labelledby="bd-theme-text"
-                >
-                  <li>
-                    <button
-                      type="button"
-                      class="dropdown-item d-flex align-items-center active"
-                      data-bs-theme-value="light"
-                      aria-pressed="false"
-                    >
-                      <i class="bi bi-sun-fill me-2"></i>
-                      Light
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="dropdown-item d-flex align-items-center"
-                      data-bs-theme-value="dark"
-                      aria-pressed="false"
-                    >
-                      <i class="bi bi-moon-stars-fill me-2"></i>
-                      Dark
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      class="dropdown-item d-flex align-items-center"
-                      data-bs-theme-value="auto"
-                      aria-pressed="true"
-                    >
-                      <i class="bi bi-circle-half me-2"></i>
-                      Auto
-                    </button>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <div class="navbar-nav custom-group justify-content-start ms-auto">
+              <div class="custom-group-item p-0 dropdown-section">
+                <a class="dropdown-toggle custom-group-item-action d-block" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="bd-theme">
+                  <span class="theme-icon-active"><i class="bi bi-sun-fill me-2"></i></span>
+                  <span class="d-lg-none" id="bd-theme-text">Change Theme</span>
+                </a>
+                <div class="dropdown-menu p-0 border-0" data-bs-display="static">
+                  <div class="custom-group">
+                    <a class="custom-group-item custom-group-item-action" href="#" data-bs-theme-value="light">
+                      <i class="bi bi-sun-fill me-2"></i> Light
+                    </a>
+                    <a class="custom-group-item custom-group-item-action" href="#" data-bs-theme-value="dark">
+                      <i class="bi bi-moon-stars-fill me-2"></i> Dark
+                    </a>
+                    <a class="custom-group-item custom-group-item-action" href="#" data-bs-theme-value="auto">
+                      <i class="bi bi-circle-half me-2"></i> Auto
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
