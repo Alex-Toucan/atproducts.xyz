@@ -14,20 +14,26 @@ button {
   background: transparent;
 }
 
-.tab-link {
-  position: sticky;
-  top: 100%;
-}
-
 @media (max-width: 991.98px) {
   .navbar-body {
     height: 100% !important;
   }
-  .custom-padding {
-    width: 100%;
-    padding: var(--bs-list-group-item-padding-y)
-      var(--bs-list-group-item-padding-x) !important;
-    color: var(--bs-nav-link-color);
+
+  .nav-tab-link {
+    position: sticky;
+    top: 100%;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .dropdown-menu a {
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x) !important;
+  }
+
+  .custom-group .custom-group {
+    flex-direction: column !important;
+    gap: .25rem !important;
+    padding: var(--bs-border-radius-sm);
   }
 }
 
@@ -35,12 +41,11 @@ button {
   & {
     display: flex;
   }
-  & .custom-group-item,
-  & .custom-group-item a {
-    text-decoration: none;
-    color: var(--bs-nav-link-color);
+  & .custom-group-item, & .custom-group-item a {
     padding: var(--bs-list-group-item-padding-x)
       var(--bs-list-group-item-padding-y);
+    text-decoration: none;
+    color: var(--bs-nav-link-color);
   }
   & .custom-group-item .dropdown-menu {
     filter: drop-shadow(2px 2px 2px black);
