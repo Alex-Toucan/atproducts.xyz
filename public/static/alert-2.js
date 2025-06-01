@@ -5,7 +5,7 @@ var pureAlert2Icon = 'bi-exclamation-triangle-fill'; // Icon
 var pureAlert2Desc = "AT Products LLC will be temporarily unavailable due to a personal situation involving myself, the owner. My mental health has been affected by a recent breakup; some of you may understand how difficult that can be. The next chapter of my life will be bigger and better. A new update is coming soon with the website, and Mine Falls (a Minecraft world). Thank you for your patience and understanding during this challenging time. I do not currently know how long I will be unavailable, but it may be a while. Again, thank you, for viewing and exploring the website. Shall I grow stronger as a person, and shall we grow stronger as a company!"; // Description
 var pureAlert2Link = '/media/files/final.txt'; // Link
 var pureAlert2LinkDesc = 'Read the other version of this message.'; // Link text
-var pureAlert2Enabled = false; // Switch to enable/disable alert
+var pureAlert2Enabled = true; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert2Cookie(name, value, days) {
