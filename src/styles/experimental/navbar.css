@@ -141,14 +141,19 @@ button {
       border: 0 !important;
     }
 
-    & .color-changer {
-      padding: 0 var(--bs-list-group-item-padding-x) !important;
-      color: var(--bs-list-group-action-color);
-      margin: .5rem;
-      gap: .25rem;
+    & .dropdown, & .dropstart, & .dropend, & .dropup {
+      position: static !important;
     }
+  }
 
-    & .color-changer .dropdown-item:
-      padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+  .color-dropdown {
+    padding: 0 !important;
+    color: var(--bs-list-group-action-color);
+    margin: .5rem;
+    gap: .25rem;
+  }
+
+  .color-dropdown .dropdown-item {
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
   }
 }
