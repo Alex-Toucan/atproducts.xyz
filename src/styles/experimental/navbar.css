@@ -31,7 +31,7 @@ button {
 
 @media (min-width: 991.98px) {
   & .custom-group-item .dropdown-menu {
-    filter: drop-shadow(2px 2px 2px black);
+    border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color) !important;
   }
   
   .dropdown-menu a {
