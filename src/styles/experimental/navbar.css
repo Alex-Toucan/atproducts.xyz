@@ -3,6 +3,10 @@
   --bs-list-group-item-padding-x: 1rem;
 }
 
+body {
+  padding-right: 0 !important;
+}
+
 [data-bs-theme='dark'] {
   .headerimg {
     filter: invert(1);
@@ -76,9 +80,14 @@ button {
   }
   & .custom-group-item, & .custom-group-item a {
     padding: var(--bs-list-group-item-padding-x)
-      var(--bs-list-group-item-padding-y);
+    var(--bs-list-group-item-padding-y);
     text-decoration: none;
+  }
+  & .dropdown:not(.dropdown .subdropdown) a {
     color: var(--bs-nav-link-color);
+  }
+  & .dropdown-item {
+    color: inherit;
   }
   @media (max-width: 991.98px) {
     & {
@@ -97,6 +106,10 @@ button {
       border-bottom: rgba(var(--bs-secondary-rgb), 0.75) var(--bs-border-width)
         var(--bs-border-style) !important;
     }
+
+    & .custom-group-item, & .custom-group-item a {
+      color: var(--bs-nav-link-color);
+    } 
 
     & .custom-group-item-action {
       width: 100%;
@@ -140,20 +153,38 @@ button {
     & .custom-group-item:only-child {
       border: 0 !important;
     }
-
-    & .dropdown, & .dropstart, & .dropend, & .dropup {
-      position: static !important;
+    & .color-dropdown {
+      margin: 0 !important;
     }
   }
+  & .dropdown, & .dropstart, & .dropend, & .dropup {
+    position: static !important;
+  }
+  & .color-dropdown {
+    .dropdown-menu .custom-group {
+      padding: 0 !important;
+      margin: 0 !important;
+      gap: .25rem;
+    }
+    .dropdown-item {
+      padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
+      color: inherit;
+    }
+  }
+}
 
-  .color-dropdown {
-    padding: 0 !important;
-    color: var(--bs-list-group-action-color);
-    margin: .5rem;
-    gap: .25rem;
+.color-dropdown { 
+  & {
+    margin: 0 !important;
   }
 
-  .color-dropdown .dropdown-item {
+  .dropdown-menu {
+    margin: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
+    padding: .25rem !important;
+  }
+
+  .dropdown-item {
     padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
   }
 }
+
