@@ -38,6 +38,10 @@ button {
     padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x) !important;
   }
 
+  .dropdown-menu .dropdown-menu {
+    margin-left: .5rem !important;
+  }
+
   .custom-group .custom-group {
     flex-direction: column !important;
     gap: .25rem !important;
@@ -187,4 +191,3 @@ button {
     padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
   }
 }
-
