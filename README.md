@@ -4,9 +4,9 @@
  <p> 
   <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love"> 
   <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
-  <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-2.22.0.2-blue" alt="Stable Version"></a>
-  <a href="https://beta.atproducts.xyz#what-new"><img src="https://img.shields.io/badge/beta_version-2.22.0.2-red" alt="Beta Version"></a>
-  <a href="https://beta-testing.atproducts.xyz"><img src="https://img.shields.io/badge/DoBT_version-DoBT_v2.5-green" alt="DoBT Version"></a>
+  <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-2.22.1-blue" alt="Stable Version"></a>
+  <a href="https://beta.atproducts.xyz#what-new"><img src="https://img.shields.io/badge/beta_version-2.22.1-red" alt="Beta Version"></a>
+  <a href="https://beta-testing.atproducts.xyz"><img src="https://img.shields.io/badge/DoBT_version-DoBT_v2.5.1-green" alt="DoBT Version"></a>
   <img src="https://github.com/Alex-Toucan/atproducts.xyz/workflows/CodeQL/badge.svg" alt="CodeQL">
   <a href="https://app.netlify.com/sites/atproducts/deploys"><img src="https://api.netlify.com/api/v1/badges/faf5f3b5-bf03-457d-9deb-dbfc4d3b55ee/deploy-status" alt="Netlify"></a> 
  </p>
@@ -28,7 +28,7 @@
 <p>Secondary Weather Account: <a href="https://x.com/ATPWeather">ATPWeather</a></p>
 <hr>
 <h2>About Us</h2>
-AT Products LLC, otherwise known as AT Products, is an informative technology company that is based in the United States that provides files, that contains resources for cybersecurity and malware, and <a href="https://atproducts.xyz/paid">other solutions</a> to your problems!<br><br>
+AT Products LLC, otherwise known as AT Products, is an informative technology company that is based in the United States that provides files that contain resources for cybersecurity and malware, and <a href="https://atproducts.xyz/paid">other solutions</a> to your problems!<br><br>
 The "AT" in AT Products does stand for Alex Toucan.
 <hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#atproductsxyz">View more information</a>.
