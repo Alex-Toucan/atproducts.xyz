@@ -1,0 +1,7 @@
+.qrcode-image, .clear-arch-image, .virus-image, .animation-image, .bank-image, .sms-image {
+    max-width: 375px;
+}
+
+.air-image, .director-image, .shockwave-image {
+    min-width: 125px;
+}

@@ -5,6 +5,8 @@ import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
 import Accordion from '../../../components/accordion/Accordion.astro';
 import AccordionItem from '../../../components/accordion/AccordionItem.astro';
 import BackToTop from '../../../components/BackToTop.astro';
+
+import '../../../styles/imagesizes.css';
 ---
 
 <DefaultBody title="Resources" icon="codinghome.webp" description="CodingHome presents 'Resources'!" author="AT Products LLC & CodingHome" highlight="true" accordion="true">
@@ -53,7 +55,7 @@ import BackToTop from '../../../components/BackToTop.astro';
             </div>
           </div>
           <figure class="figure mt-2 mb-0">
-            <img src="/media/images/400px-QR_Code_Structure_Example_3.svg.png" alt="QR Code" width="100%" class="bg-white rounded-1 p-1" style="max-width: 375px;">
+            <img src="/media/images/400px-QR_Code_Structure_Example_3.svg.png" alt="QR Code" width="100%" class="bg-white rounded-1 p-1 qrcode-image">
             <figcaption class="figure-caption mt-2"><a href="https://commons.wikimedia.org/wiki/File:QR_Code_Structure_Example_3.svg">QR Code Structure Example 3</a> by BobMath is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a></figcaption>
           </figure>
           <p class="my-3">Please note that if a link is a <a href="javascript:void(0)" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German. </p>
@@ -291,7 +293,7 @@ import BackToTop from '../../../components/BackToTop.astro';
                           </p>
                           <h4>Clean Project Architecture</h4>
                           <figure class="figure mb-2">
-                            <img src="/media/images/CleanArchitecture.webp" alt="Clean Architecture Diagram" width="100%" class="bg-white rounded-1 p-1" style="max-width: 375px;">
+                            <img src="/media/images/CleanArchitecture.webp" alt="Clean Architecture Diagram" width="100%" class="bg-white rounded-1 p-1 clear-arch-image">
                             <figcaption class="figure-caption mt-2">This Clean Architecture Diagram is directly from the <a href="/media/pdf/clean-architecture-a-craftsmans-guide-to-software-structure-and-design_compress.pdf">PDF Guide</a> by <a href="https://www.linkedin.com/in/robert-martin-7395b0">Robert Martin</a>.</figcaption>
                           </figure>
                           <p>

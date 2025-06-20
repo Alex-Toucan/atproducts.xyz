@@ -7039,20 +7039,30 @@ html.fixedtopnavimage {
   text-decoration: none !important;
 }
 
-.progress-wrapper, .progress {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 1px !important;
-  z-index: -1;
-}
-
 .historyTabs {
-  display: flex;
-  flex-direction: column;
-  min-width: 300px;
+  & {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+
+  & .progress-wrapper, & .progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 1px !important;
+    z-index: -1;
+  }
+
+  & .progress .proper-center {
+    height: 10px;
+  }
+
+  & .progress-bar {
+    width: 0%;
+  }
 }
 
 .text-wrap {
@@ -7104,4 +7114,26 @@ html.fixedtopnavimage {
 
 .btn-clipboard.btn:hover {
   color: var(--bs-link-hover-color);
+}
+
+.skip-content {
+  z-index: 2000;
+}
+
+.pson-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.latest {
+  line-height: .667 !important;
+}
+
+.canvas-box {
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.info-box {
+  height: 150px;
 }
