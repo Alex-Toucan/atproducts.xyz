@@ -5,6 +5,8 @@ import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
 import Accordion from '../../../components/accordion/Accordion.astro';
 import AccordionItem from '../../../components/accordion/AccordionItem.astro';
 import BackToTop from '../../../components/BackToTop.astro';
+
+import '../../../styles/imagesizes.css'
 ---
 
 <DefaultBody title="Phishing" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Phishing'!" author="AT Products LLC & The Script Community" accordion="true">
@@ -31,11 +33,11 @@ import BackToTop from '../../../components/BackToTop.astro';
         <div id="content">
           <div class="d-md-flex gap-2">
             <figure class="figure mt-0 mb-2 col-md-6">
-              <img src="/media/images/Phish.jpg" alt="Frame of an animation by the U.S. Federal Trade Commission intended to educate citizens about phishing tactics." width="100%" class="rounded-1" style="max-width: 375px;">
+              <img src="/media/images/Phish.jpg" alt="Frame of an animation by the U.S. Federal Trade Commission intended to educate citizens about phishing tactics." width="100%" class="rounded-1 animation-image">
               <figcaption class="figure-caption mt-2"><a href="https://commons.wikimedia.org/wiki/File:Phish.jpg">Phish</a> by the <a href="https://www.ftc.gov/">U.S. Federal Trade Commission</a> is licensed under the public domain.</figcaption>
             </figure>
             <figure class="figure h-100 mt-auto mb-2 col-md-6">
-              <img src="/media/images/Computer_virus_scam.jpg" alt="Computer virus scam" width="100%" class="rounded-1" style="max-width: 375px;">
+              <img src="/media/images/Computer_virus_scam.jpg" alt="Computer virus scam" width="100%" class="rounded-1 virus-image`">
               <figcaption class="figure-caption mt-2"><a href="https://commons.wikimedia.org/wiki/File:Computer_virus_scam.jpg">Computer virus scam</a> by <a href="https://commons.wikimedia.org/wiki/User:Packer1028">Packer1028</a> is licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</a></figcaption>
             </figure>
          </div>
@@ -46,7 +48,7 @@ import BackToTop from '../../../components/BackToTop.astro';
               <AccordionItem title="Email Phishing" id="eph" parent="phishing-accordion">
                 <Fragment slot="accordion-item-content">
                   <figure class="figure mt-0 mb-2">
-                    <img src="/media/images/PhishingTrustedBank.png" alt="Email example of phishing." width="100%" class="rounded-1" style="max-width: 375px;">
+                    <img src="/media/images/PhishingTrustedBank.png" alt="Email example of phishing." width="100%" class="rounded-1 bank-image">
                     <figcaption class="figure-caption mt-2"><a href="https://commons.wikimedia.org/wiki/File:PhishingTrustedBank.png">PhishingTrustedBank</a> by Andrew Levine is licensed under the public domain.</figcaption>
                   </figure>
 
@@ -76,7 +78,7 @@ import BackToTop from '../../../components/BackToTop.astro';
               <AccordionItem title="SMS Phishing" id="smph" parent="phishing-accordion">
                 <Fragment slot="accordion-item-content">
                   <figure class="figure mt-0 mb-2">
-                    <img src="/media/images/Example_phishing_SMS.svg.png" alt="Example SMS phishing" width="100%" class="rounded-1" style="max-width: 375px;">
+                    <img src="/media/images/Example_phishing_SMS.svg.png" alt="Example SMS phishing" width="100%" class="rounded-1 sms-image">
                     <figcaption class="figure-caption mt-2"><a href="https://commons.wikimedia.org/wiki/File:Example_phishing_SMS.svg">Example phishing SMS</a> by <a href="https://commons.wikimedia.org/wiki/User:Belbury">Belbury</a> is licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</a></figcaption>
                   </figure>
 

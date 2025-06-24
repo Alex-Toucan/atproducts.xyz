@@ -3,7 +3,6 @@ import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 /* import compress from "astro-compress"; */
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [
     react()/*, 
@@ -17,6 +16,34 @@ export default defineConfig({
     })
     */
   ],
-
-  adapter: netlify()
-})
+  adapter: netlify(),
+  experimental: {
+    csp: {
+      styleDirective: {
+        resources: [
+          "'self'",
+          "'unsafe-inline'",
+          "https://cdn.jsdelivr.net"
+        ]
+      },
+      scriptDirective: {
+        resources: [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-hashes'",
+          "https://cdn.jsdelivr.net"
+        ]
+      },
+      directives: [
+        "default-src 'none'",
+        "frame-src 'self' https://app.netlify.com/ https://codepen.io",
+        "form-action 'self'",
+        "base-uri 'self'",
+        "manifest-src 'self'",
+        "font-src 'self' data: https://cdn.jsdelivr.net",
+        "object-src 'self'",
+        "img-src 'self' data:"
+      ]
+    }
+  }
+});
