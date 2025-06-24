@@ -6652,8 +6652,10 @@ a {
 
 .sw-link {
 	color: white !important;
+  text-decoration: none !important;
 	text-align: center !important;
 }
+
 .sw-link:hover, .sw-link:active, .sw-link:focus {
 	color: wheat !important;
 }
