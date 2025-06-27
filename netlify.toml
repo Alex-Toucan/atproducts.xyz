@@ -1,22 +1,9 @@
 # Enable if maintenance mode.
 # [[redirects]]
 #   from = "/*"
-#   to = "https://backup.atproducts.xyz/maintenance"
-#   status = 301
+#   to = "https://other.atproducts.xyz/maintenance/"
+#   status = 302
 #   force = true
-#   conditions = {Language = ["en"], Country = ["US"]}
-
-[[redirects]]
-  from = "/blue"
-  to = "https://blue.atproducts.xyz"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/portfolio"
-  to = "https://portfolio.atproducts.xyz"
-  status = 301
-  force = true
 
 [[headers]]
   for = "/*"
@@ -24,36 +11,9 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1"
     X-Content-Type-Options = "nosniff"
-#   Cache-Control = '''
-#     max-age=6000'''
-    Strict-Transport-Security = '''
-      max-age=31536000; 
-      includeSubDomains; 
-      preload'''
-    Content-Security-Policy = '''
-      media-src 'self';
-      default-src 'self'; 
-      frame-src 'self'; 
-      form-action 'self'; 
-      base-uri 'self'; 
-      manifest-src 'self'; 
-      font-src 'self' data: https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; 
-      object-src 'self'; 
-      script-src 'unsafe-inline' 'self' https://atproducts.xyz https://cdn.jsdelivr.net; 
-      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline'; 
-      img-src 'self' data: https://atproducts.xyz;
-      frame-ancestors 'self' '''
-    Features-Policy = "document-domain 'self';"
-    Permissions-Policy = '''
-      fullscreen=(self), 
-      geolocation=(), 
-      camera=(), 
-      browsing-topics=(), 
-      picture-in-picture=(self), 
-      payment=(), 
-      fullscreen=(self), 
-      autoplay=(self), 
-      encrypted-media=(self), 
-      interest-cohort=() '''
+    Content-Security-Policy = "frame-ancestors 'self'"
+#   Cache-Control = "max-age=6000"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     Referrer-Policy = "strict-origin"
     Access-Control-Allow-Origin = "*"
+    X-UA-Compatible = "IE=edge"
