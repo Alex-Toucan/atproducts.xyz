@@ -82,6 +82,10 @@ html, body {
   background: url('/media/images/Screenshot_8-3-2025_233010_other.atproducts.xyz.jpeg');
 }
 
+.hero-tomato {
+  background: url('/media/images/hero-tomato.webp');
+}
+
 .accordion-body p:last-child {
   margin-bottom: 0 !important;
 }
