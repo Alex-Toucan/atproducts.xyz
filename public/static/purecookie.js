@@ -56,8 +56,9 @@ function eraseCookie(name) {
 
 $(document).ready(function() {
   if (!getCookie('purecookieDismiss')) {
-    $('div#page').append('<div class="cookieConsentContainer bg-secondary-subtle rounded-md-3 shadow-lg" id="cookieConsentContainer"><div class="h4">' + purecookieIcon + '' + purecookieTitle + '</div><div class="my-3"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><button class="btn btn-dl" onclick="purecookieDismiss();">Understood</button></div>');
+    $('div#page').append('<div class="cookieConsentContainer bg-secondary-subtle rounded-md-3 shadow-lg" id="cookieConsentContainer"><div class="h4">' + purecookieIcon + '' + purecookieTitle + '</div><div class="my-3"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><button class="btn btn-dl" id="purecookieBtn">Understood</button></div>');
     pureFadeIn("cookieConsentContainer");
+    $('#purecookieBtn').on('click', purecookieDismiss);
   }
 });
 
