@@ -31,5 +31,39 @@
 AT Products LLC, otherwise known as AT Products, is an informative technology company that is based in the United States that provides files that contain resources for cybersecurity and malware, and <a href="https://atproducts.xyz/paid">other solutions</a> to your problems!<br><br>
 The "AT" in AT Products does stand for Alex Toucan.
 <hr>
+<h2>Setup</h2>
+<p>If you wish to contribute to the site and want to copy the repository locally, follow the steps:</p>
+<ul>
+<li>1. Clone the repo in any way you wish. The repository is roughly 5.35 GB in size.</li>
+<li>2. Install packages:
+
+```sh
+npm install
+```
+</li>
+</ul>
+<p>To preview changes, you cannot use <code>astro preview</code> due to @astrojs/netlify being used, you must use Netlify.</p>
+<ul>
+<li>1. Install packages:
+
+```sh
+npm install -g astro netlify-cli
+```
+</li>
+<li>2. Link your Netlify account & project:
+
+```sh
+netlify login
+netlify link
+```
+</li>
+<li>3. Build & preview
+
+```sh
+astro build; netlify dev --dir=dist
+```
+</li>
+</ul>
+<hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#atproductsxyz">View more information</a>.
 <h6>Last Recorded Version: 2.22.1</h6>
