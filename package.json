@@ -12,9 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.5.3",
+    "@astrojs/netlify": "^6.5.4",
     "@astrojs/react": "^4.3.0",
-    "astro": "^5.12.3",
+    "astro": "^5.12.7",
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",
     "jquery": "^3.7.1",
