@@ -1,10 +1,29 @@
 ---
 const { language, highlight_as, code } = Astro.props;
+
+let icon = "";
+if (highlight_as === "css") {
+  icon = "css";
+} else if (highlight_as === "javascript") {
+  icon = "javascript";
+} else if (highlight_as === "typescript") {
+  icon = "typescript";
+} else if (highlight_as === "bash") {
+  icon = "tux";
+} else {
+  icon = "code-slash";
+}
 ---
 
-<div class="bg-dark-subtle rounded-2"><div class="py-2 px-3 border-bottom d-flex justify-content-between">
-  <small class="font-monospace my-auto">{language}</small>
-  <i class="bi bi-clipboard btn btn-clipboard p-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy to Clipboard"></i>
+<div class="bg-dark-subtle rounded-2">
+  <div class="py-2 px-3 border-bottom d-flex justify-content-between">
+    <div>
+      {icon && <i class={`bi bi-${icon} me-2`}></i>}
+      <small class="font-monospace my-auto">
+        <span>{language}</span>
+      </small>
+    </div>
+    <i class="bi bi-clipboard btn btn-clipboard p-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy to Clipboard"></i>
   </div>
-<pre class="p-3"><code class={`language-${highlight_as}`}><slot name="code-example" /></code></pre>
+  <pre class="p-3"><code class={`language-${highlight_as}`}><slot name="code-example" /></code></pre>
 </div>

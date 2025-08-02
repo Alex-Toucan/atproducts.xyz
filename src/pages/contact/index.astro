@@ -3,6 +3,8 @@ import DefaultBody from '../../layouts/DefaultBody.astro';
 import Navbar    from '../../components/Navbar.astro';
 import Footer    from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
+
+import '../../styles/imagesizes.css'
 ---
 
 <DefaultBody title="Contact Form" description="If you don't want to email us on your email client, use this instead. We'll reach out to your email provided." author="Alex Toucan">
@@ -34,7 +36,7 @@ import BackToTop from '../../components/BackToTop.astro';
           </div>
         </div>
         <div class="form-floating mb-2">
-          <textarea name="Text" class="form-control" id="textareaInput" placeholder="Input comments or information to send" style="height:150px;" required></textarea>
+          <textarea name="Text" class="form-control info-box" id="textareaInput" placeholder="Input comments or information to send" required></textarea>
           <label for="textareaInput" class="form-label">Information to Send</label>
         </div>
         <small>If you wish to upload files, you must <a href="mailto:support@atproducts.xyz">email us manually</a> due to Netlify complications. Please allow 72 hours for a response back to your email provided. If your response is considered spam, it may not be responded to.</small>
