@@ -306,32 +306,5 @@ import '../../styles/experimental/navbar.css';
   </div>
 <BackToTop />
 </div>
-<script is:inline>
-  function adjustDropdowns() {
-    const isMobile = window.innerWidth < 992;
-
-    document.querySelectorAll(".subdropdown").forEach(d => {
-      if (isMobile) {
-        d.classList.remove("dropend");
-        d.classList.add("dropdown");
-      } else {
-        d.classList.remove("dropdown");
-        d.classList.add("dropend");
-      }
-    });
-
-    document.querySelectorAll(".color-dropdown").forEach(d => {
-      if (isMobile) {
-        d.classList.remove("dropdown");
-        d.classList.add("dropup");
-      } else {
-        d.classList.remove("dropup");
-        d.classList.add("dropdown");
-      }
-    });
-  }
-
-  window.addEventListener("resize", adjustDropdowns);
-  adjustDropdowns();
-</script>
+<script is:inline src="/static/experimental/navbar.js"></script>
 </DefaultBody>
