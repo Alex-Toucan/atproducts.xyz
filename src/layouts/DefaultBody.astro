@@ -8,6 +8,7 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url"
 import jquery from "jquery/dist/jquery.min.js?url";
 import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
 
+import '../styles/navbar.css';
 import '../styles/other.css';
 import '../styles/cookie.css';
 
@@ -99,6 +100,7 @@ if (highlight) {
         <script>hljs.highlightAll();</script>
         <script is:inline src="/static/copy.js"></script>
       )}
+      <script is:inline src="/static/navbar.js" defer></script>
       <script is:inline src="/static/message.js"></script>
       <script is:inline src="/static/scroll.js"></script>
       <script is:inline src="/static/purecookie.js"></script>
