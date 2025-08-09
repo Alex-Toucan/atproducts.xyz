@@ -6,10 +6,9 @@ import Footer from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
 import Accordion from '../../components/accordion/Accordion.astro';
 import AccordionItem from '../../components/accordion/AccordionItem.astro';
-import CodeBlock from '../../components/CodeBlock.astro';
 ---
 
-<DefaultBody title="TomatoOS" heroid="tomato" icon="tomato.webp" description="TomatoOS; a sequel off the previous Pynx Project: NyaOS." keywords="Inferno, NyaOS, TomatoOS, BxPP, AT Products LLC" author="Alex Toucan & Pynx" highlight="true">
+<DefaultBody title="TomatoOS" heroid="tomato" icon="tomato.webp" description="TomatoOS; a sequel off the previous Pynx Project: NyaOS." keywords="Inferno, NyaOS, TomatoOS, BxPP, AT Products LLC" author="Alex Toucan & Pynx">
 <div id="page">
 	<Navbar />
 	<div id="main-content">
@@ -36,8 +35,6 @@ import CodeBlock from '../../components/CodeBlock.astro';
           <li><strong>RAM:</strong> At least 64mb (or roughly the size of the ISO).</li>
           <li><strong>Storage:</strong> None, since it's all run on the ISO.</li>
         </ul>
-				<p>For now, the latest version of TomatoOS requires <a href="https://www.qemu.org/" target="_blank" rel="noreferrer noopener">QEMU</a>, an example command would be:</p>
-				<CodeBlock language="Bash" highlight_as="bash"><Fragment slot="code-example">qemu-system-i386 -cdrom TomatoOS.iso -boot d -m 128 -serial stdio</Fragment></CodeBlock>
 	    </div>
 	    <hr>
       <div id="commands">
