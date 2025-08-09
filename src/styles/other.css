@@ -86,6 +86,10 @@ html, body {
   background: url('/media/images/hero-tomato.webp');
 }
 
+.hero-minefalls {
+  background: url('/media/images/Screenshot 2025-08-04 173219.png');
+}
+
 .accordion-body p:last-child {
   margin-bottom: 0 !important;
 }
@@ -157,7 +161,6 @@ a {
 @media (min-width:767.98px) {
   .row, .price-row {
     --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
   }
