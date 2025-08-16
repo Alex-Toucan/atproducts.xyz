@@ -7112,3 +7112,20 @@ html.fixedtopnavimage {
 .btn-clipboard.btn:hover {
   color: var(--bs-link-hover-color);
 }
+
+.image {
+  min-width: 225px;
+}
+
+[data-bs-theme=dark] .image {
+    filter: invert(1);
+}
+
+.body-padding {
+  padding-bottom: 5rem;
+}
+
+a {
+    text-underline-offset: .25rem;
+    text-decoration-color: rgba(var(--bs-link-color-rgb), .25);
+}
