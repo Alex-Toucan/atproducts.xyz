@@ -1,0 +1,4 @@
+public/media/files/twc4_setup.exe filter=lfs diff=lfs merge=lfs -text
+public/media/files/wempire_demo.zip filter=lfs diff=lfs merge=lfs -text
+public/media/files/wmhd_setup.exe filter=lfs diff=lfs merge=lfs -text
+public/media/files/Mine[[:space:]]Falls.mcworld filter=lfs diff=lfs merge=lfs -text
