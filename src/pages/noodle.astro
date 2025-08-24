@@ -4,6 +4,8 @@ import Hero   from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
+
+import '../styles/imagesizes.css';
 ---
 
 <DefaultBody title="Noodle Hackerspace" heroid="noodle" icon="noodle.webp" color="#f1b856" description="Noodle Hackerspace is a community of resources!" keywords="Scripts, viruses, coding," author="Alex Toucan & Pynx">
@@ -13,7 +15,7 @@ import BackToTop from '../components/BackToTop.astro';
   This is an inactive community. Expect no new sections or changes without special exceptions.
   </div>
   <div id="main-content">
-    <Hero id="noodle" title="Noodle Hackerspace" description="Noodle Hackerspace is the community of physical and digital hacking resources!" imageSrc="/media/images/noodle.webp" imageWidth="15%" minImageWidth="150px" imageClasses="me-md-3 rounded-2"
+    <Hero id="noodle" title="Noodle Hackerspace" description="Noodle Hackerspace is the community of physical and digital hacking resources!" imageSrc="/media/images/noodle.webp" imageWidth="15%" imageClasses="me-md-3 rounded-2 hero-image"
       buttons={[
         { href: "/pynx", text: "Pynx's Projects", type: "primary" },
         { href: "/backup/noodle", text: "View the all laid out format", type: "secondary" },
