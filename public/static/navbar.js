@@ -66,8 +66,8 @@ function positionDropdownMenus() {
             dropdownMenu.style.minWidth = `${toggleRect.width}px`;
             dropdownMenu.style.width = `${menuWidth}px`;
             dropdownMenu.style.height = `${menuHeight}px`;
+            dropdownMenu.style.margin = `${buffer}px`;
             dropdownMenu.style.transform = 'none';
-            dropdownMenu.style.padding = '8px 12px';
 
             dropdownMenu.style.display = '';
             dropdownMenu.style.visibility = '';
@@ -78,8 +78,8 @@ function positionDropdownMenus() {
             dropdownMenu.style.minWidth = '';
             dropdownMenu.style.width = '';
             dropdownMenu.style.height = '';
+            dropdownMenu.style.margin = '';
             dropdownMenu.style.transform = '';
-            dropdownMenu.style.padding = '';
         }
     });
 }
