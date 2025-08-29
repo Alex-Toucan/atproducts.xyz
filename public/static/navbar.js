@@ -33,20 +33,53 @@ function positionDropdownMenus() {
         if (!dropdownMenu) return;
 
         if (window.innerWidth > 992) {
+            dropdownMenu.style.visibility = 'hidden';
+            dropdownMenu.style.display = 'block';
+
             const toggleRect = dropdownToggle.getBoundingClientRect();
-            const absoluteLeft = toggleRect.left + window.scrollX;
+            const menuWidth = dropdownMenu.offsetWidth;
+            const menuHeight = dropdownMenu.offsetHeight;
+
+            let left = toggleRect.left + window.scrollX;
+            let top = toggleRect.bottom + window.scrollY;
+
+            const buffer = 12;
+            const viewportRight = window.scrollX + window.innerWidth;
+            const viewportBottom = window.scrollY + window.innerHeight;
+
+            if (left + menuWidth + buffer > viewportRight) {
+                left = toggleRect.right - menuWidth + window.scrollX;
+                if (left + menuWidth + buffer > viewportRight) {
+                    left = viewportRight - menuWidth - buffer;
+                }
+                if (left < buffer) left = buffer;
+            }
+
+            if (top + menuHeight + buffer > viewportBottom) {
+                top = toggleRect.top - menuHeight + window.scrollY;
+                if (top < buffer) top = buffer;
+            }
 
             dropdownMenu.style.position = 'absolute';
-            dropdownMenu.style.left = `${absoluteLeft}px`;
-            dropdownMenu.style.top = `56px`;
+            dropdownMenu.style.left = `${left}px`;
+            dropdownMenu.style.top = `${top}px`;
             dropdownMenu.style.minWidth = `${toggleRect.width}px`;
+            dropdownMenu.style.width = `${menuWidth}px`;
+            dropdownMenu.style.height = `${menuHeight}px`;
             dropdownMenu.style.transform = 'none';
+            dropdownMenu.style.padding = '8px 12px';
+
+            dropdownMenu.style.display = '';
+            dropdownMenu.style.visibility = '';
         } else {
             dropdownMenu.style.position = '';
             dropdownMenu.style.left = '';
             dropdownMenu.style.top = '';
             dropdownMenu.style.minWidth = '';
+            dropdownMenu.style.width = '';
+            dropdownMenu.style.height = '';
             dropdownMenu.style.transform = '';
+            dropdownMenu.style.padding = '';
         }
     });
 }
