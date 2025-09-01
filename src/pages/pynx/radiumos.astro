@@ -9,16 +9,17 @@ import AccordionItem from '../../components/accordion/AccordionItem.astro';
 import CodeBlock from '../../components/CodeBlock.astro';
 ---
 
-<DefaultBody title="RadiumOS" heroid="radium" icon="radium.webp" description="RadiumOS; a sequel off the previous Pynx Project: NyaOS." keywords="Inferno, NyaOS, RadiumOS, BxPP, AT Products LLC" author="Alex Toucan & Pynx">
+<DefaultBody title="RadiumOS" heroid="radium" icon="radium.webp" description="RadiumOS; a sequel off the previous Pynx Project: NyaOS." keywords="Inferno, NyaOS, RadiumOS, BxPP, AT Products LLC" author="Alex Toucan & Pynx" highlight="true">
 <div id="page">
 	<Navbar />
 	<div id="main-content">
 		<HeroPynx
 			title="RadiumOS"
-			id="tomato"
-			description="Made by Pynx&semi; based from <a href='nyaos'>NyaOS</a>, RadiumOS is a hobby OS with potential."
+			id="radium"
+			description="Made by Pynx&semi; based from NyaOS, RadiumOS is a hobby OS with potential."
 	    buttons={[
 	      { href: "#downloads", text: "Downloads", type: "primary" },
+				{ href: "https://github.com/RadiumOS-Dev/RadiumOS" , text: "<i class='bi bi-github fs-6 me-2'></i> GitHub Repo" , type: "secondary" }, 
 	    ]},
 	    dropdownItems={[
         { navigationDesc: "General Information", navigationLink: "#general-info" },
@@ -29,7 +30,7 @@ import CodeBlock from '../../components/CodeBlock.astro';
 	  <main id="RadiumOS" class="container">
 	    <div id="general-info">
 	      <h2> General Information </h2>
-	      <p>RadiumOS (formerly TomatoOS) is a 32-bit OS, similar to a former project, <a href="nyaos">NyaOS</a>, developed however completely from scratch. Test this OS in a virtual machine! <b>Note regarding Wi-Fi access, Virtio is supported only.</b></p>
+	      <p>RadiumOS (formerly TomatoOS) is a 32-bit OS, similar to a former project, NyaOS, developed however completely from scratch. Test this OS in a virtual machine! <b>Note regarding Wi-Fi access, Virtio is supported only.</b></p>
         <span><strong>The minimum requirements for RadiumOS is:</strong></span>
         <ul>
           <li><strong>CPU:</strong> At least 1 core.</li>
@@ -41,7 +42,6 @@ import CodeBlock from '../../components/CodeBlock.astro';
       <div id="commands">
         <h2>Commands</h2>
 <pre class="mt-2 p-2 border-2 border-solid rounded-2"><code>-- General Commands --
--- General Commands --
 help             # Displays this message
 clear            # Clears screen
 echo             # Echos back text
@@ -54,14 +54,8 @@ shutdown         # Shuts down the system
 brain            # Spams brains
 brainz           # Theme Menu
 
--- File-related Commands --
-cat              # Displays the contents of a file
-ls               # Lists files
-text             # Edits files
-
 -- Toolkit Commands --
 mempop           # Memory pop toolkit
-mpop             # Memory toolkit
 returnregister   # Register toolkit
 tui              # Opens the TUI interface
 menu             # Enters TUI menu
@@ -92,7 +86,7 @@ brainfuck        # Brainfuck language
   -rtc base=utc,clock=host,driftfix=slew \
   -cdrom RadiumOS.iso \
   -boot order=d \
-  -machine q35 \
+  -machine q35,pcspk-audiodev=audio0 \
   -m 128 \
   -smp 1 \
   -serial stdio \
@@ -101,13 +95,14 @@ brainfuck        # Brainfuck language
   -vga std \
   -display gtk,zoom-to-fit=off,window-close=off \
   -monitor none \
-  -full-screen
+  -audiodev pa,id=audio0
 </Fragment></CodeBlock>
 			<h3>ISO Stats</h3>
 			<ul>
 				<li><strong>Name:</strong> RadiumOS.iso</li>
-				<li><strong>Last Modified:</strong> Saturday, August 30, 2025, 10:35:43 AM</li>
-				<li><strong>Size:</strong> 54.7 MB (57,430,016 bytes) (may differ on disk).</li>
+				<li><strong>Version:</strong> 0.0.1 (Pre-release)</li>
+				<li><strong>Last Modified:</strong> Sunday, August 31, 2025, 6:31:19 PM</li>
+				<li><strong>Size:</strong> 54.7 MB (57,384,960 bytes) (may differ on disk).</li>
 			</ul>
 	    </div>
 			<hr>
