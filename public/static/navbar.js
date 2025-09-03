@@ -3,21 +3,21 @@ function adjustDropdowns() {
 
     document.querySelectorAll(".subdropdown").forEach(d => {
         if (isMobile) {
-        d.classList.remove("dropend");
-        d.classList.add("dropdown");
+            d.classList.remove("dropend");
+            d.classList.add("dropdown");
         } else {
-        d.classList.remove("dropdown");
-        d.classList.add("dropend");
+            d.classList.remove("dropdown");
+            d.classList.add("dropend");
         }
     });
 
     document.querySelectorAll(".color-dropdown").forEach(d => {
         if (isMobile) {
-        d.classList.remove("dropdown");
-        d.classList.add("dropup");
+            d.classList.remove("dropdown");
+            d.classList.add("dropup");
         } else {
-        d.classList.remove("dropup");
-        d.classList.add("dropdown");
+            d.classList.remove("dropup");
+            d.classList.add("dropdown");
         }
     });
 }
@@ -40,24 +40,27 @@ function positionDropdownMenus() {
             const menuWidth = dropdownMenu.offsetWidth;
             const menuHeight = dropdownMenu.offsetHeight;
 
-            let left = toggleRect.left + window.scrollX;
-            let top = toggleRect.bottom + window.scrollY;
+            const offsetParent = dropdownMenu.offsetParent || document.body;
+            const offsetParentRect = offsetParent.getBoundingClientRect();
 
             const buffer = 12;
-            const viewportRight = window.scrollX + window.innerWidth;
-            const viewportBottom = window.scrollY + window.innerHeight;
 
-            if (left + menuWidth + buffer > viewportRight) {
-                left = toggleRect.right - menuWidth + window.scrollX;
-                if (left + menuWidth + buffer > viewportRight) {
-                    left = viewportRight - menuWidth - buffer;
-                }
-                if (left < buffer) left = buffer;
+            // Position relative to offset parent
+            let left = toggleRect.left - offsetParentRect.left;
+            let top = toggleRect.bottom + window.scrollY;
+
+            const parentWidth = offsetParent.clientWidth;
+            const parentHeight = offsetParent.clientHeight;
+
+            // Shift left if overflowing right
+            const overflowX = (left + menuWidth + buffer) - parentWidth;
+            if (overflowX > 0) {
+                left -= overflowX;
             }
 
-            if (top + menuHeight + buffer > viewportBottom) {
-                top = toggleRect.top - menuHeight + window.scrollY;
-                if (top < buffer) top = buffer;
+            // Enforce left buffer
+            if (left < buffer) {
+                left = buffer;
             }
 
             dropdownMenu.style.position = 'absolute';
@@ -66,7 +69,6 @@ function positionDropdownMenus() {
             dropdownMenu.style.minWidth = `${toggleRect.width}px`;
             dropdownMenu.style.width = `${menuWidth}px`;
             dropdownMenu.style.height = `${menuHeight}px`;
-            dropdownMenu.style.margin = `${buffer}px`;
             dropdownMenu.style.transform = 'none';
 
             dropdownMenu.style.display = '';
@@ -78,7 +80,6 @@ function positionDropdownMenus() {
             dropdownMenu.style.minWidth = '';
             dropdownMenu.style.width = '';
             dropdownMenu.style.height = '';
-            dropdownMenu.style.margin = '';
             dropdownMenu.style.transform = '';
         }
     });

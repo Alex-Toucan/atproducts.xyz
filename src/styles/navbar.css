@@ -161,7 +161,13 @@ button {
       border: 0 !important;
     }
     & .color-dropdown {
-      margin: 0 !important;
+      & {
+        margin: 0 !important;
+      }
+
+      & .dropdown-menu {
+        margin: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x) !important;
+      }
     }
   }
   & .dropdown, & .dropstart, & .dropend, & .dropup {
@@ -186,7 +192,6 @@ button {
   }
 
   .dropdown-menu {
-    margin: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
     padding: .25rem !important;
   }
 
