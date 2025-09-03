@@ -47,7 +47,7 @@ function positionDropdownMenus() {
 
             // Position relative to offset parent
             let left = toggleRect.left - offsetParentRect.left;
-            let top = toggleRect.bottom + window.scrollY;
+            const top = toggleRect.bottom + window.scrollY;
 
             const parentWidth = offsetParent.clientWidth;
             const parentHeight = offsetParent.clientHeight;
