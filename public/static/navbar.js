@@ -51,8 +51,8 @@ function positionDropdownMenus() {
             if (left < buffer) {
                 left = buffer;
             }
-            
-            const top = window.scrollY;
+
+            const top = toggleRect.bottom;
 
             dropdownMenu.style.position = 'fixed';
             dropdownMenu.style.left = `${left}px`;
