@@ -58,7 +58,6 @@ function positionDropdownMenus() {
             dropdownMenu.style.left = `${left}px`;
             dropdownMenu.style.top = `${top}px`;
             dropdownMenu.style.minWidth = `${toggleRect.width}px`;
-            dropdownMenu.style.width = `${menuWidth}px`;
             dropdownMenu.style.transform = 'none';
             dropdownMenu.style.zIndex = '1050';
         } else {
