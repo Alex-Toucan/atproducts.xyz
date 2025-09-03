@@ -88,3 +88,4 @@ function positionDropdownMenus() {
 window.addEventListener('DOMContentLoaded', positionDropdownMenus);
 window.addEventListener('resize', positionDropdownMenus);
 window.addEventListener('pageshow', positionDropdownMenus);
+window.addEventListener('scroll', positionDropdownMenus);
