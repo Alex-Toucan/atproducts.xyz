@@ -33,46 +33,34 @@ function positionDropdownMenus() {
         if (!dropdownMenu) return;
 
         if (window.innerWidth > 992) {
-            dropdownMenu.style.visibility = 'hidden';
-            dropdownMenu.style.display = 'block';
-
             const toggleRect = dropdownToggle.getBoundingClientRect();
             const menuWidth = dropdownMenu.offsetWidth;
-            const menuHeight = dropdownMenu.offsetHeight;
 
             const offsetParent = dropdownMenu.offsetParent || document.body;
             const offsetParentRect = offsetParent.getBoundingClientRect();
 
             const buffer = 12;
 
-            // Position relative to offset parent
             let left = toggleRect.left - offsetParentRect.left;
-            const top = toggleRect.bottom + window.scrollY;
-
             const parentWidth = offsetParent.clientWidth;
-            const parentHeight = offsetParent.clientHeight;
 
-            // Shift left if overflowing right
             const overflowX = (left + menuWidth + buffer) - parentWidth;
             if (overflowX > 0) {
                 left -= overflowX;
             }
-
-            // Enforce left buffer
             if (left < buffer) {
                 left = buffer;
             }
+            
+            const top = window.scrollY;
 
-            dropdownMenu.style.position = 'absolute';
+            dropdownMenu.style.position = 'fixed';
             dropdownMenu.style.left = `${left}px`;
             dropdownMenu.style.top = `${top}px`;
             dropdownMenu.style.minWidth = `${toggleRect.width}px`;
             dropdownMenu.style.width = `${menuWidth}px`;
-            dropdownMenu.style.height = `${menuHeight}px`;
             dropdownMenu.style.transform = 'none';
-
-            dropdownMenu.style.display = '';
-            dropdownMenu.style.visibility = '';
+            dropdownMenu.style.zIndex = '1050';
         } else {
             dropdownMenu.style.position = '';
             dropdownMenu.style.left = '';
@@ -81,6 +69,7 @@ function positionDropdownMenus() {
             dropdownMenu.style.width = '';
             dropdownMenu.style.height = '';
             dropdownMenu.style.transform = '';
+            dropdownMenu.style.zIndex = '';
         }
     });
 }
