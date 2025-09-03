@@ -166,6 +166,8 @@ button {
       }
 
       & .dropdown-menu {
+        position: absolute !important;
+        width: -webkit-fill-available !important;
         margin: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x) !important;
       }
     }
