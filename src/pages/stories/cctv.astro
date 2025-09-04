@@ -31,7 +31,7 @@ import BackToTop from '../../components/BackToTop.astro';
         <div id="prenote" class="story-top-scroll">
           <h2>Prenote</h2>
           <h3>Needed Items</h3>
-          <p>A computer with <a href="https://www.Wireshark.org/">Wireshark</a> and <a href="https://www.aircrack-ng.org/">AirCrack</a>, a Wi-Fi adapter that supports monitoring, and sufficient time.</p>
+          <p>A computer with <a href="https://www.Wireshark.org/">Wireshark</a> and <a href="https://www.aircrack-ng.org/">AirCrack</a>, and a Wi-Fi adapter that supports monitoring, and sufficient time. Operating systems are recommended to be Linux based.</p>
           <hr>
           <p>To execute this process, Wireshark will be utilized to capture network traffic between hosts. The objective is to intercept unencrypted HTTP traffic directed to a target computer. <br><br>
           Initially, encryption must be bypassed. Even if the network password is known, connecting immediately is not recommended, as it increases the likelihood of detection. Instead, Wi-Fi keys should be added to Wireshark for decryption. Capturing traffic without connecting to the network ensures a passive attack, reducing exposure to detection. <br><br>
@@ -73,160 +73,20 @@ import BackToTop from '../../components/BackToTop.astro';
           
           <p>This process modifies the interface name by appending "mon" and initiates Airodump-ng, which scans for available wireless networks. The target network must be identified, and its channel noted for subsequent steps. A sample output is provided below:</p>
           
-          <code>
-            CH&nbsp;&nbsp;4 ][ Elapsed: 0 s ][ 2018-12-24 02:42
-          </code>
-          <pre>            
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">BSSID</th>
-                  <th scope="col">PWR</th>
-                  <th scope="col">Beacons</th>
-                  <th scope="col">#Data,</th>
-                  <th scope="col">#/s</th>
-                  <th scope="col">CH</th>
-                  <th scope="col">MB</th>
-                  <th scope="col">ENC</th>
-                  <th scope="col">CIPHER</th>
-                  <th scope="col">AUTH</th>
-                  <th scope="col">ESSID</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>C0:8A:DE:39:CD:D9</td>
-                  <td>-46</td>
-                  <td>2</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>130</td>
-                  <td>WPA2</td>
-                  <td>CCMP</td>
-                  <td>MGT</td>
-                  <td>TWCWiFi-Passpoint</td>
-                </tr>
-                <tr>
-                  <td>C0:8A:DE:F9:CD:D8</td>
-                  <td>-47</td>
-                  <td>2</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>130</td>
-                  <td>OPN</td>
-                  <td></td>
-                  <td></td>
-                  <td>TWCWiFi</td>
-                </tr>
-                <tr>
-                  <td>C0:8A:DE:B9:CD:D8</td>
-                  <td>-46</td>
-                  <td>2</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>130</td>
-                  <td>OPN</td>
-                  <td></td>
-                  <td></td>
-                  <td>SpectrumWiFi</td>
-                </tr>
-                <tr>
-                  <td>C0:8A:DE:39:CD:D8</td>
-                  <td>-47</td>
-                  <td>2</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>130</td>
-                  <td>OPN</td>
-                  <td></td>
-                  <td></td>
-                  <td>CableWiFi</td>
-                </tr>
-                <tr>
-                  <td>78:96:84:00:B5:B0</td>
-                  <td>-42</td>
-                  <td>2</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>130</td>
-                  <td>WPA2</td>
-                  <td>CCMP</td>
-                  <td>PSK</td>
-                  <td>The Daily Planet</td>
-                </tr>
-                <tr>
-                  <td>00:9C:02:D2:5E:B9</td>
-                  <td>-60</td>
-                  <td>3</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>54e.</td>
-                  <td>WPA2</td>
-                  <td>CCMP</td>
-                  <td>PSK</td>
-                  <td>HP-Print-B9-Officejet Pro 8600</td>
-                </tr>
-                <tr>
-                  <td>20:10:7A:92:76:43</td>
-                  <td>-51</td>
-                  <td>2</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>130</td>
-                  <td>WPA2</td>
-                  <td>CCMP</td>
-                  <td>PSK</td>
-                  <td>SBG6580E8</td>
-                </tr>
-                <tr>
-                  <td>DE:F2:86:EC:CA:A0</td>
-                  <td>-45</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>11</td>
-                  <td>195</td>
-                  <td>WPA2</td>
-                  <td>CCMP</td>
-                  <td>PSK</td>
-                  <td>Bourgeois Pig Guest</td>
-                </tr>
-                <tr>
-                  <td>D6:04:CD:BD:33:A1</td>
-                  <td>-55</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>11</td>
-                  <td>130</td>
-                  <td>WPA2</td>
-                  <td>CCMP</td>
-                  <td>PSK</td>
-                  <td>DirtyLittleBirdyFeet</td>
-                </tr>
-                <tr>
-                  <td>BSSID</td>
-                  <td>STATION</td>
-                  <td></td>
-                  <td>PWR</td>
-                  <td>Rate</td>
-                  <td>Frames</td>
-                  <td>Lost</td>
-                  <td></td>
-                  <td>CCMP</td>
-                  <td>Probe</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </pre>
+<pre><code>CH  4 ][ Elapsed: 0 s ][ 2018-12-24 02:42
+
+BSSID               PWR  Beacons  #Data  #/s  CH   MB     ENC   CIPHER  AUTH  ESSID
+C0:8A:DE:39:CD:D9   -46      2      0     0   1   130    WPA2   CCMP    MGT   TWCWiFi-Passpoint
+C0:8A:DE:F9:CD:D8   -47      2      0     0   1   130    OPN                      TWCWiFi
+C0:8A:DE:B9:CD:D8   -46      2      0     0   1   130    OPN                      SpectrumWiFi
+C0:8A:DE:39:CD:D8   -47      2      0     0   1   130    OPN                      CableWiFi
+78:96:84:00:B5:B0   -42      2      0     0   1   130    WPA2   CCMP    PSK   The Daily Planet
+00:9C:02:D2:5E:B9   -60      3      0     0   1   54e.   WPA2   CCMP    PSK   HP-Print-B9-Officejet Pro 8600
+20:10:7A:92:76:43   -51      2      0     0   1   130    WPA2   CCMP    PSK   SBG6580E8
+DE:F2:86:EC:CA:A0   -45      1      0     0  11   195    WPA2   CCMP    PSK   Bourgeois Pig Guest
+D6:04:CD:BD:33:A1   -55      1      0     0  11   130    WPA2   CCMP    PSK   DirtyLittleBirdyFeet
+
+BSSID               STATION        PWR  Rate  Frames  Lost  CCMP  Probe</code></pre>
           
           <p>If the target network operates on channel 11, the following command sets the adapter to the correct channel:</p>
           

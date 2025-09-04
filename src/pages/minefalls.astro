@@ -1,0 +1,80 @@
+---
+import DefaultBody from '../layouts/DefaultBody.astro';
+import Hero     from '../components/Hero.astro';
+import Navbar    from '../components/Navbar.astro';
+import Footer    from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+
+import '../styles/imagesizes.css';
+---
+
+<DefaultBody title="Mine Falls" heroid="minefalls" color="#86d562" description="AT Products LLC presents Mine Falls, a Minecraft world that comprises of many cities and beauty." keywords="minefalls, Mine Falls, AT Products" author="Alex Toucan & CodingLive">
+<div id="page">
+  <Navbar />
+  <div id="main-content">
+    <Hero
+      title="Mine Falls"
+      id="minefalls"
+      description="A Minecraft world that comprises of many cities and beauty."
+      buttons={[
+        { href: "#downloads", text: "Downloads", type: "primary" },
+      ]},
+      dropdownItems={[
+        { navigationDesc: "What is Mine Falls?", navigationLink: "#what" },
+        { navigationDesc: "Downloads", navigationLink: "#downloads" },
+      ]},
+    />
+    <main id="minefalls" class="container">
+      <div id="what">
+        <h2>What is Mine Falls?</h2>
+        <p>Mine Falls is a Minecraft world created by Alex Toucan. It is a vast world that includes many counties, cities, towns, and natural landscapes. The world is designed to be explored and enjoyed, with various features and structures that showcase the creativity of its builders.</p>
+        <p>The world contains 2 main cities, both connected to each other: Mine Falls and Newport. Mine Falls is the main, bigger city, contained on a peninsula, which also contains the local international airport, and hospital. Newport is the South Diamond (parody of South Dakota) capital, which contains the state resources.</p>
+        <p>Both cities contain stores to buy, houses to live, schools to learn, and entertainment, monuments, and parks to enjoy.</p>
+        <p>Down south is the tundra, which also contains cities, towns, and areas, with their own stores, and parks. See the tundra for how it is!</p>
+        <p>The tundra region offers a unique landscape compared to the main cities, featuring snowy plains, frozen lakes, and dense forests. Settlements in the tundra are adapted to the colder climate, with cozy houses, community centers, and specialized shops catering to the needs of its residents. Parks and recreational areas are designed to take advantage of the winter scenery. Exploring the tundra reveals hidden gems, such as small villages, scenic viewpoints, and natural wonders that highlight the diversity of the world.</p>
+        <a class="btn btn-primary btn-lg mt-2 mb-3" href="https://lfs.atproducts.xyz/media/files/minefalls.mcworld" download>.mcworld Download</a>
+        <br><span>Information:</span>
+        <ul> 
+          <li> <b>Version:</b> v1.21.110.23 (Bedrock Preview) </li> 
+          <li> <b>Size:</b> 125 MB </li> 
+          <li> <b>Last Updated:</b> 8/7/2025 </li> 
+        </ul>
+      </div>
+      <hr>
+      <div id="gallery">
+        <h2>Gallery</h2>
+        <div class="mt-4" id="tpt2-album">
+          <div class="row gx-4 gy-4">
+            <div class="col-12 col-xxl-6">
+              <img src="/media/images/Mine Falls Sunset.png" alt="A sunset from the I-90 highway in southern Mine Falls." class="img-fluid rounded-2 w-100">
+              <div class="mt-2 figure-caption">A sunset from the I-90 highway in southern Mine Falls.</div>
+            </div>
+            <div class="col-12 col-xxl-6">
+              <img src="/media/images/Screenshot 2025-08-04 173429.png" alt="3 buildings in Northern Mine Falls alongside SD-41." class="img-fluid rounded-2 w-100">
+              <div class="mt-2 figure-caption">3 buildings in Northern Mine Falls alongside SD-41.</div>
+            </div>
+            <div class="col-12 col-xxl-6">
+              <img src="/media/images/Screenshot 2025-08-04 172535.png" alt="The SD-41 bridge from 15th St. S to Sioux Dr. S (Night)." class="img-fluid rounded-2 w-100">
+              <div class="mt-2 figure-caption">The SD-41 bridge from 15th St. S to Sioux Dr. S (Night).</div>
+            </div>
+            <div class="col-12 col-xxl-6">
+              <img src="/media/images/Screenshot 2025-08-04 173219.png" alt="The SD-41 bridge from 15th St. S to Sioux Dr. S (Day)." class="img-fluid rounded-2 w-100">
+              <div class="mt-2 figure-caption">The SD-41 bridge from 15th St. S to Sioux Dr. S (Day).</div>
+            </div>
+            <div class="col-12 col-xxl-6">
+              <img src="/media/images/Screenshot 2025-08-04 173339.png" alt="Downtown Mine Falls facing south from 3rd Ave. N." class="img-fluid rounded-2 w-100">
+              <div class="mt-2 figure-caption">Downtown Mine Falls facing south from 3rd Ave. N.</div>
+            </div>
+            <div class="col-12 col-xxl-6">
+              <img src="/media/images/Screenshot 2025-08-04 173532.png" alt="Downtown Mine Falls with multiple buildings: the Visiting Center, the MFS-NEW hospital, and the train station from 3rd Ave. S." class="img-fluid rounded-2 w-100">
+              <div class="mt-2 figure-caption">Downtown Mine Falls with multiple buildings: the Visiting Center, the MFS-NEW hospital, and the train station from 3rd Ave. S.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer author="Alex Toucan & CodingLive" />
+  </div>
+  <BackToTop />
+</div>
+</DefaultBody>
