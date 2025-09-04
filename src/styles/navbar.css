@@ -205,3 +205,10 @@ button {
 .navbar .bi-arrow-left-short {
   font-size: 32px;
 }
+
+.custom-group .dropdown-divider {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
