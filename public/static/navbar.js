@@ -56,7 +56,6 @@ function positionDropdownMenus() {
                 left -= overflowX;
             }
 
-            // Enforce left buffer
             if (left < buffer) {
                 left = buffer;
             }
