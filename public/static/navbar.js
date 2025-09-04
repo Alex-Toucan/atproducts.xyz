@@ -33,8 +33,12 @@ function positionDropdownMenus() {
         if (!dropdownMenu) return;
 
         if (window.innerWidth > 992) {
+            dropdownMenu.style.visibility = 'hidden';
+            dropdownMenu.style.display = 'block';
+
             const toggleRect = dropdownToggle.getBoundingClientRect();
             const menuWidth = dropdownMenu.offsetWidth;
+            const menuHeight = dropdownMenu.offsetHeight;
 
             const offsetParent = dropdownMenu.offsetParent || document.body;
             const offsetParentRect = offsetParent.getBoundingClientRect();
@@ -42,24 +46,30 @@ function positionDropdownMenus() {
             const buffer = 12;
 
             let left = toggleRect.left - offsetParentRect.left;
+            const top = toggleRect.bottom;
+
             const parentWidth = offsetParent.clientWidth;
+            const parentHeight = offsetParent.clientHeight;
 
             const overflowX = (left + menuWidth + buffer) - parentWidth;
             if (overflowX > 0) {
                 left -= overflowX;
             }
+
             if (left < buffer) {
                 left = buffer;
             }
 
-            const top = toggleRect.bottom;
-
-            dropdownMenu.style.position = 'fixed';
+            dropdownMenu.style.position = 'absolute';
             dropdownMenu.style.left = `${left}px`;
             dropdownMenu.style.top = `${top}px`;
             dropdownMenu.style.minWidth = `${toggleRect.width}px`;
+            dropdownMenu.style.width = `${menuWidth}px`;
+            dropdownMenu.style.height = `${menuHeight}px`;
             dropdownMenu.style.transform = 'none';
-            dropdownMenu.style.zIndex = '1050';
+
+            dropdownMenu.style.display = '';
+            dropdownMenu.style.visibility = '';
         } else {
             dropdownMenu.style.position = '';
             dropdownMenu.style.left = '';
@@ -68,7 +78,6 @@ function positionDropdownMenus() {
             dropdownMenu.style.width = '';
             dropdownMenu.style.height = '';
             dropdownMenu.style.transform = '';
-            dropdownMenu.style.zIndex = '';
         }
     });
 }
@@ -76,4 +85,3 @@ function positionDropdownMenus() {
 window.addEventListener('DOMContentLoaded', positionDropdownMenus);
 window.addEventListener('resize', positionDropdownMenus);
 window.addEventListener('pageshow', positionDropdownMenus);
-window.addEventListener('scroll', positionDropdownMenus);
