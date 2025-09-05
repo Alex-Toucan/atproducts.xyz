@@ -17,6 +17,7 @@ export default defineConfig({
     */
   ],
   adapter: netlify(),
+  /*
   experimental: {
     csp: {
       styleDirective: {
@@ -46,4 +47,5 @@ export default defineConfig({
       ]
     }
   }
+    */
 });
