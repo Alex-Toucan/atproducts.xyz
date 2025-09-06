@@ -84,7 +84,7 @@ if (highlight) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <Fragment set:html={additionalContent}>
-      <script type="module" src="/static/darkmode.js"></script>
+      <script is:inline src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
     <Fragment>  
@@ -95,32 +95,32 @@ if (highlight) {
       <script src={jquery}></script>
       <script src={jqueryui}></script>
       {highlight && (
-        <script type="module" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-        <script type="module" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
+        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
         <script>hljs.highlightAll();</script>
-        <script type="module" src="/static/copy.js"></script>
+        <script is:inline src="/static/copy.js"></script>
       )}
-      <script type="module" src="/static/navbar.js" defer></script>
-      <script type="module" src="/static/message.js"></script>
-      <script type="module" src="/static/scroll.js"></script>
-      <script type="module" src="/static/purecookie.js"></script>
-      <script type="module" src="/static/alert-1.js"></script>
-      <script type="module" src="/static/alert-2.js"></script>
-      <script type="module" src="/static/enabler.js"></script>
+      <script is:inline src="/static/navbar.js" defer></script>
+      <script is:inline src="/static/message.js"></script>
+      <script is:inline src="/static/scroll.js"></script>
+      <script is:inline src="/static/purecookie.js"></script>
+      <script is:inline src="/static/alert-1.js"></script>
+      <script is:inline src="/static/alert-2.js"></script>
+      <script is:inline src="/static/enabler.js"></script>
       {fourofour && (
-        <script type="module" src="/static/404.js"></script>
+        <script is:inline src="/static/404.js"></script>
       )}
       {modal && (
-        <script type="module" src="/static/modal-id.js"></script>
+        <script is:inline src="/static/modal-id.js"></script>
       )} 
       {accordion && (
-        <script type="module" src="/static/accordion-id.js"></script>
+        <script is:inline src="/static/accordion-id.js"></script>
       )}    
       {scrollspy && (
-        <script type="module" src="/static/scrollspy-id.js"></script>
+        <script is:inline src="/static/scrollspy-id.js"></script>
       )}
       {index && (
-        <script type="module" src="/static/index.js"></script>
+        <script is:inline src="/static/index.js"></script>
       )}    
     </Fragment>
   </body>
