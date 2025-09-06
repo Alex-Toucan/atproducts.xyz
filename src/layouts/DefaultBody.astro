@@ -80,7 +80,7 @@ import '../styles/cookie.css';
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <Fragment set:html={additionalContent}>
-      <script is:inline src="/static/darkmode.js"></script>
+      <script type="module" src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
     <Fragment>  
@@ -90,18 +90,18 @@ import '../styles/cookie.css';
       <script src={bootstrap}></script>
       <script src={jquery}></script>
       <script src={jqueryui}></script>
-      <script is:inline src="/static/navbar.js" defer></script>
-      <script is:inline src="/static/message.js"></script>
-      <script is:inline src="/static/scroll.js"></script>
-      <script is:inline src="/static/purecookie.js"></script>
-      <script is:inline src="/static/alert-1.js"></script>
-      <script is:inline src="/static/alert-2.js"></script>
-      <script is:inline src="/static/enabler.js"></script>
+      <script type="module" src="/static/navbar.js" defer></script>
+      <script type="module" src="/static/message.js"></script>
+      <script type="module" src="/static/scroll.js"></script>
+      <script type="module" src="/static/purecookie.js"></script>
+      <script type="module" src="/static/alert-1.js"></script>
+      <script type="module" src="/static/alert-2.js"></script>
+      <script type="module" src="/static/enabler.js"></script>
       {fourofour && (
-        <script is:inline src="/static/404.js"></script>
+        <script type="module" src="/static/404.js"></script>
       )}
       {index && (
-        <script is:inline src="/static/index.js"></script>
+        <script type="module" src="/static/index.js"></script>
       )}    
     </Fragment>
   </body>
