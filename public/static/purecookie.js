@@ -2,21 +2,32 @@
 var purecookieTitle = "Cookies."; // Title
 var purecookieIcon = '<i class="bi bi-cookie me-2"></i>' // Cookie icon
 var purecookieDesc = "By using this website, you automatically accept that we use cookies."; // Description
-var purecookieLink = '<a href="https://atproducts.xyz/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookie policy link
+var purecookieLink = '<a href="/privacy#cookies" target="_blank" rel="noopener noreferrer">Why?</a>'; // Cookie policy link
 var purecookieButton = "Understood"; // Button text
 // ---        --- //
 
 function pureFadeIn(elem, display) {
-  $("#" + elem).css({opacity: 0, display: display || "block"}).animate({opacity: 1}, 500);
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    $("#" + elem).css({display: display || "block", opacity: 1});
+  } else {
+    $("#" + elem).css({opacity: 0, display: display || "block"}).animate({opacity: 1}, 500);
+  }
 }
 
 function pureFadeOut(elem) {
-  $("#" + elem).animate({opacity: 0}, 500, function(){
-    $(this).css("display", "none").delay(1350).queue(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    $("#" + elem).css({display: "none", opacity: 0}).delay(1350).queue(function(){
       $(this).remove().dequeue();
     });
-  });
+  } else {
+    $("#" + elem).animate({opacity: 0}, 500, function(){
+      $(this).css("display", "none").delay(1350).queue(function(){
+        $(this).remove().dequeue();
+      });
+    });
+  }
 }
+
 
 function setCookie(name, value, days) {
   var expires = "";
@@ -45,8 +56,9 @@ function eraseCookie(name) {
 
 $(document).ready(function() {
   if (!getCookie('purecookieDismiss')) {
-    $('div#page').append('<div class="cookieConsentContainer bg-secondary-subtle rounded-md-3 shadow-lg" id="cookieConsentContainer"><div class="h4">' + purecookieIcon + '' + purecookieTitle + '</div><div class="my-3"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><button class="btn btn-dl" onclick="purecookieDismiss();">Understood</button></div>');
+    $('div#page').append('<div class="cookieConsentContainer bg-secondary-subtle rounded-md-3 shadow-lg" id="cookieConsentContainer"><div class="h4">' + purecookieIcon + '' + purecookieTitle + '</div><div class="my-3"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><button class="btn btn-dl" id="purecookieBtn">Understood</button></div>');
     pureFadeIn("cookieConsentContainer");
+    $('#purecookieBtn').on('click', purecookieDismiss);
   }
 });
 
