@@ -288,9 +288,9 @@ const { link, pageTitle } = Astro.props;
       </div>
     </div>
   </nav>
-  <nav class="py-2 navbar">
+  <nav class="pt-0 pb-2 navbar">
     <div class="container-fluid">
-      <ol class="navbar-nav breadcrumb m-0 pt-0 pb-2 flex-row">
+      <ol class="navbar-nav breadcrumb m-0 flex-row">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         {link && link.map(({ name, href }, index) => (
           <li class="breadcrumb-item"><a href={href}>{name}</a></li>
