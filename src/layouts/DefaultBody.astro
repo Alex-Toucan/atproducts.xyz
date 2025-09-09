@@ -1,5 +1,5 @@
 ---
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy } = Astro.props;
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy, breadcrumb } = Astro.props;
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -18,7 +18,7 @@ if (highlight) {
 ---
 
 <!DOCTYPE html>
-<html class="fixedtopnavimage" lang="en">
+<html class={`${breadcrumb === 'true' ? 'fixedtopnavimage-breadcrumb' : 'fixedtopnavimage'}`} lang="en">
   <head>
       <title>{title}</title> 
       <link rel="preload" as="script" href="/static/darkmode.js">
@@ -86,7 +86,7 @@ if (highlight) {
       <Fragment set:html={additionalContent}>
       <script is:inline src="/static/darkmode.js"></script>
   </head>
-  <body class="fixedtopnavimage">
+  <body class={`${breadcrumb === 'true' ? 'fixedtopnavimage-breadcrumb' : 'fixedtopnavimage'}`}>
     <Fragment>  
       <slot/>
     </Fragment>

@@ -1,7 +1,7 @@
 function adjustDropdowns() {
     const isMobile = window.innerWidth < 992;
 
-    document.querySelectorAll(".subdropdown").forEach(d => {
+    document.querySelectorAll(".navbar .offcanvas .subdropdown").forEach(d => {
         if (isMobile) {
             d.classList.remove("dropend");
             d.classList.add("dropdown");
@@ -11,7 +11,7 @@ function adjustDropdowns() {
         }
     });
 
-    document.querySelectorAll(".color-dropdown").forEach(d => {
+    document.querySelectorAll(".navbar .offcanvas .color-dropdown").forEach(d => {
         if (isMobile) {
             d.classList.remove("dropdown");
             d.classList.add("dropup");
@@ -26,7 +26,7 @@ window.addEventListener("resize", adjustDropdowns);
 adjustDropdowns();
 
 function positionDropdownMenus() {
-    const toggles = document.querySelectorAll('.dropdown-toggle:not(.subdropdown .dropdown-toggle)');
+    const toggles = document.querySelectorAll('.navbar .offcanvas .dropdown-toggle:not(.subdropdown .dropdown-toggle)');
 
     toggles.forEach(dropdownToggle => {
         const dropdownMenu = dropdownToggle.parentElement.querySelector('.dropdown-menu');
@@ -49,8 +49,6 @@ function positionDropdownMenus() {
             const top = toggleRect.bottom;
 
             const parentWidth = offsetParent.clientWidth;
-            const parentHeight = offsetParent.clientHeight;
-
             const overflowX = (left + menuWidth + buffer) - parentWidth;
             if (overflowX > 0) {
                 left -= overflowX;
