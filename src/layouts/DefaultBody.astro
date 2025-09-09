@@ -86,7 +86,7 @@ if (highlight) {
       <Fragment set:html={additionalContent}>
       <script is:inline src="/static/darkmode.js"></script>
   </head>
-  <body class="fixedtopnavimage">
+  <body class={`${breadcrumb === 'true' ? 'fixedtopnavimage-breadcrumb' : 'fixedtopnavimage'}`}>
     <Fragment>  
       <slot/>
     </Fragment>
