@@ -6683,11 +6683,11 @@ html.fixedtopnavimage {
 }
 
 body.fixedtopnavimage-breadcrumb {
-  padding-top: 119px;
+  padding-top: 103px;
 }
 
 html.fixedtopnavimage-breadcrumb {
-  scroll-padding-top: calc(119px + 5px);
+  scroll-padding-top: calc(103px + 5px);
 }
 
 .modal-body-title, .title {
