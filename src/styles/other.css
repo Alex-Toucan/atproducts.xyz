@@ -511,30 +511,6 @@ a {
     margin-right: initial !important;
     width: initial !important;
 	}
-	.m-story-0 {
-		margin: 0 !important;
-	}
-	.ms-story-1 {
-		margin-left: .25rem !important;
-	}
-	.d-story-none {
-		display: none !important;
-	}
-}
-
-@media (max-width: 900.98px) {
-  .second-navbar {
-    padding: 0;
-  }
-  .pb-story-2 {
-    padding-bottom: 1rem;
-  }
-  .dropdown-story {
-    left: initial !important;
-  }
-	.m-story-2 {
-		margin: .5rem !important;
-	}
 }
 
 @media (min-width: 645.98px) {
@@ -6704,6 +6680,14 @@ body.fixedtopnavimage {
 
 html.fixedtopnavimage {
   scroll-padding-top: calc(71px + 5px);
+}
+
+body.fixedtopnavimage-breadcrumb {
+  padding-top: 119px;
+}
+
+html.fixedtopnavimage-breadcrumb {
+  scroll-padding-top: calc(119px + 5px);
 }
 
 .modal-body-title, .title {
