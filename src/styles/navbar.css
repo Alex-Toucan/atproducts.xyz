@@ -3,7 +3,7 @@
   --bs-list-group-item-padding-x: 1rem;
 }
 
-body, nav {
+body, nav, header {
   padding-right: 0 !important;
 }
 

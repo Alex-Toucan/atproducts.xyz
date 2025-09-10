@@ -456,63 +456,6 @@ a {
   border-bottom-left-radius: 0;
 }
 
-.navbar-expand-story .breadcrumb {
-  flex-direction: row !important;
-}
-
-@media (min-width: 900.98px) {
-  .navbar-expand-story {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-  .navbar-expand-story .navbar-nav {
-    flex-direction: row;
-  }
-  .navbar-expand-story .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
-  .navbar-expand-story .navbar-nav .nav-link {
-    padding-right: var(--bs-navbar-nav-link-padding-x);
-    padding-left: var(--bs-navbar-nav-link-padding-x);
-  }
-  .navbar-expand-story .navbar-nav-scroll {
-    overflow: visible;
-  }
-  .navbar-expand-story .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-  .navbar-expand-story .navbar-toggler {
-    display: none;
-  }
-  .navbar-expand-story .offcanvas {
-    position: static;
-    z-index: auto;
-    flex-grow: 1;
-    width: auto !important;
-    height: auto !important;
-    visibility: visible !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    transform: none !important;
-    transition: none;
-  }
-  .navbar-expand-story .offcanvas .offcanvas-header {
-    display: none;
-  }
-  .navbar-expand-story .offcanvas .offcanvas-body {
-    display: flex;
-    flex-grow: 0;
-    padding: 0;
-    overflow-y: visible;
-  }
-  .container-none {
-    margin-left: initial !important;
-    margin-right: initial !important;
-    width: initial !important;
-	}
-}
-
 @media (min-width: 645.98px) {
   .procard {
     margin-left: auto;
@@ -6740,56 +6683,6 @@ html.fixedtopnavimage-breadcrumb {
 	}
 }
 
-.story-header {
-	& {
-	  --bs-bg-opacity: 1;
-	  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-		box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15) !important;
-	}
-
-	[data-bs-theme=dark] & {
-	--bs-bg-opacity: 1;
-	  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-	  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
-	}
-	
-	[data-bs-theme="dark"] &.shadow {
-	  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
-	}
-	
-	[data-bs-theme="dark"] &.shadow-sm {
-	  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
-	}
-	
-	[data-bs-theme="dark"] &.shadow-lg {
-	  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
-	}
-	
-	[data-bs-theme="dark"] &.shadow-xlg {
-	  box-shadow: 0 1rem 3rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(255,255,255,0.15) !important;
-	}
-	
-	&.shadow {  
-		box-shadow: 0 0.25rem 0.5rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15) !important;
-	}
-	
-	&.shadow-sm {
-	  box-shadow: 0 0.125rem 0.25rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15) !important;
-	}
-	
-	&.shadow-lg {
-		 box-shadow: 0 0.5rem 1rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15) !important;
-	}
-		
-	&.shadow-xlg {
-		 box-shadow: 0 1rem 3rem rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.15) !important;
-	}
-	
-	& .main-navbar {
-		box-shadow: initial !important;
-	}
-}
-
 [data-bs-theme=dark] img.footerimg, 
 [data-bs-theme=dark] img.headerimg,
 [data-bs-theme=dark] img.popover-image {
@@ -6853,27 +6746,20 @@ html.fixedtopnavimage-breadcrumb {
   background-color: #bfbfbf;
 }
 
-@media (min-width: 901.98px) {
+@media (min-width: 991.98px) {
 	.bd-toc {
-		position: -webkit-fixed;
 		position: fixed;
 		right: 0;
 		z-index: 2;
 		height: calc(100vh - 7rem);
 		overflow-y: auto;
-	}
-	
-	.story-top-body {
-		margin-top: 25px;
-	}
+  }
 }
 
-
-@media (min-width: 767.98px) and (max-width: 901.98px) {
+@media (min-width: 767.98px) and (max-width: 991.98px) {
 	.bd-toc {
-		position: -webkit-fixed;
 		position: fixed;
-		top: calc(72px + .75rem);
+		top: 103px;
 		right: 0;
 		z-index: 2;
 		height: calc(100vh - 7rem);
@@ -6897,13 +6783,6 @@ html.fixedtopnavimage-breadcrumb {
 	}
 }
 
-.story-top {
-	margin-top: 25px;
-}
-.story-top-scroll {
-  scroll-margin-top: 25px;
-}
-
 .border-fix {
   border-bottom: solid 1px #dee2e6;
 }
@@ -6911,12 +6790,6 @@ html.fixedtopnavimage-breadcrumb {
 @media (max-width: 900.98px) {
 	.text-disappear {
 		display: none !important;
-	}
-	.story-top-scroll {
-		scroll-margin-top: 144px;
-	}
-	.story-end {
-		display: none;
 	}
 }
 
