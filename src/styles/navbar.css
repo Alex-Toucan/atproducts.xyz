@@ -211,3 +211,12 @@ body, nav, header {
 .dropdown-story {
   position: absolute !important;
 }
+
+.navbar .offcanvas .breadcrumb {
+  border-top: rgba(var(--bs-secondary-rgb), 0.75) var(--bs-border-width)
+          var(--bs-border-style) !important;
+  border-bottom: rgba(var(--bs-secondary-rgb), 0.75) var(--bs-border-width)
+          var(--bs-border-style) !important;
+  padding: var(--bs-list-group-item-padding-y)
+          var(--bs-list-group-item-padding-x) !important;
+}

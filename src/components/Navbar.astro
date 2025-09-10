@@ -26,7 +26,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
         tabindex="-1"
         id="offcanvasNavbar"
       >
-        <div class="offcanvas-header pb-2">
+        <div class="offcanvas-header">
           <h5 class="offcanvas-title"><img
           src="/media/images/longblack.webp"
           height="45px"
@@ -263,6 +263,24 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
               </div>
             </div>
           </div>
+          {breadcrumb && (
+            <ol class="navbar-nav breadcrumb m-0 flex-row d-block d-lg-none mt-4">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              {link && link.map(({ name, href }, index) => (
+                <li class="breadcrumb-item dropdown d-inline" key={index}>
+                  <a href={href} class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{name}</a>
+                  {breadcrumbcontent && (
+                    <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
+                      {breadcrumbcontent.map(({ name, href }, index) => (
+                        <li key={index}><a class="dropdown-item" href={href}>{name}</a></li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+              <li class="breadcrumb-item active" aria-current="page">{pageTitle}</li>
+            </ol>
+          )}
           <div class="navbar-nav custom-group justify-content-start ms-auto nav-tab-link mb-2 mb-lg-0 color-changer">
             <div class="custom-group-item p-0 dropup dropdown-section color-dropdown">
               <a class="dropdown-toggle custom-group-item-action color-button d-block" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="bd-theme">
@@ -289,7 +307,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
     </div>
   </nav>
   {breadcrumb && (
-    <nav class="pt-0 pb-2 navbar">
+    <nav class="navbar d-none d-lg-block">
       <div class="container-fluid">
         <ol class="navbar-nav breadcrumb m-0 flex-row">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
