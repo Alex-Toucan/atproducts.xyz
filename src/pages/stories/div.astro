@@ -7,7 +7,11 @@ import BackToTop from '../../components/BackToTop.astro';
 
 <DefaultBody breadcrumb="true" title="How to Center a <div>" description="Learn about how to center a &lt;div&gt; in HTML and CSS.!" author="AT Products LLC" scrollspy="true">
   <div id="page">
-    <Navbar breadcrumb="true" pageTitle="How to Center a <div>" />
+    <Navbar breadcrumb="true" pageTitle="How to Center a <div>" 
+      link={[
+        { name: "Stories" , href: "/stories" },
+      ]}
+    />
     <div id="main-content">
       <Scrollspy id="div" 
         scrollcontent={[ 

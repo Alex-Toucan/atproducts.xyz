@@ -7,8 +7,12 @@ import BackToTop from '../../components/BackToTop.astro';
 
 <DefaultBody breadcrumb="true" title="The Internet Now is Dull and Gray" description="Take a peek on how Alex Toucan feels about how websites are designed in the modern world." author="Alex Toucan" scrollspy="true">
 <div id="page">
-  <Navbar breadcrumb="true" pageTitle="The Internet Now is Dull and Gray" />
-  <div id="main-content">
+  <Navbar breadcrumb="true" pageTitle="The Internet Now is Dull and Gray"  
+      link={[
+        { name: "Stories" , href: "/stories" },
+      ]}
+    />
+    <div id="main-content">
     <Scrollspy id="websites" 
       scrollcontent={[ 
         { name: "Main Content" , href: "#content" }, 

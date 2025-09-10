@@ -7,8 +7,12 @@ import BackToTop from '../../components/BackToTop.astro';
 
 <DefaultBody breadcrumb="true" title="Sci-Fi Stories Reflect Reality" description="See how Sci-Fi as a genre becomes our modern reality." author="Alex Toucan" scrollspy="true">
 <div id="page">
-  <Navbar breadcrumb="true" pageTitle="Sci-Fi Stories Reflect Reality" />
-  <div id="main-content">
+  <Navbar breadcrumb="true" pageTitle="Sci-Fi Stories Reflect Reality"  
+      link={[
+        { name: "Stories" , href: "/stories" },
+      ]}
+    />
+    <div id="main-content">
     <Scrollspy id="scifi" 
       scrollcontent={[ 
         { name: "Main Content" , href: "#content" }, 
