@@ -266,10 +266,10 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
           {breadcrumb && (
             <ol class="navbar-nav breadcrumb m-0 flex-row d-block d-lg-none mt-4">
               <li class="breadcrumb-item"><a href="/">Home</a></li>
-              {link && link.map(({ name, href }, index) => (
-                <li class="breadcrumb-item dropdown d-inline" key={index}>
-                  <a href={href} class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{name}</a>
-                  {breadcrumbcontent && (
+              {link && link.map(({ name, href, dropdown }, index) => (
+                <li class={`breadcrumb-item ${dropdown && breadcrumbcontent ? 'dropdown' : ''}`} key={index}>
+                  <a href={href} class={dropdown && breadcrumbcontent ? 'dropdown-toggle' : ''} data-bs-toggle={dropdown && breadcrumbcontent ? 'dropdown' : undefined} aria-expanded="false">{name}</a>
+                  {dropdown && breadcrumbcontent && (
                     <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
                       {breadcrumbcontent.map(({ name, href }, index) => (
                         <li key={index}><a class="dropdown-item" href={href}>{name}</a></li>
@@ -311,10 +311,10 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
       <div class="container-fluid">
         <ol class="navbar-nav breadcrumb m-0 flex-row">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          {link && link.map(({ name, href }, index) => (
-            <li class="breadcrumb-item dropdown d-inline" key={index}>
-              <a href={href} class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{name}</a>
-              {breadcrumbcontent && (
+          {link && link.map(({ name, href, dropdown }, index) => (
+            <li class={`breadcrumb-item ${dropdown && breadcrumbcontent ? 'dropdown' : ''}`} key={index}>
+              <a href={href} class={dropdown && breadcrumbcontent ? 'dropdown-toggle' : ''} data-bs-toggle={dropdown && breadcrumbcontent ? 'dropdown' : undefined} aria-expanded="false">{name}</a>
+              {dropdown && breadcrumbcontent && (
                 <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
                   {breadcrumbcontent.map(({ name, href }, index) => (
                     <li key={index}><a class="dropdown-item" href={href}>{name}</a></li>

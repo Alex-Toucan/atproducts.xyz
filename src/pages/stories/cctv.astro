@@ -1,6 +1,6 @@
 ---
 import DefaultBody from '../../layouts/DefaultBody.astro';
-import Navbar from '../../layouts/stories/Navbar.astro';
+import Navbar from '../../components/Navbar.astro';
 import Scrollspy from '../../layouts/stories/Scrollspy.astro';
 import CodeBlock from '../../components/CodeBlock.astro';
 import BackToTop from '../../components/BackToTop.astro';
@@ -10,7 +10,8 @@ import BackToTop from '../../components/BackToTop.astro';
 <div id="page">
   <Navbar breadcrumb="true" pageTitle="CCTV Interception" id="cctv"
     link={[
-     { name: "Noodle Hackerspace" , href: "/noodle" },
+     { name: "Stories" , href: "/stories" },
+     { name: "Noodle Hackerspace" , href: "/noodle", dropdown: true },
     ]}
     breadcrumbcontent={[ 
       { name: "Noodle Hackerspace" , href: "/noodle" },
@@ -18,7 +19,20 @@ import BackToTop from '../../components/BackToTop.astro';
     ]} 
   />
   <div id="main-content">
-    <Scrollspy id="cctv" scrollcontent={[ { name: "Prenote" , href: "#prenote" }, { name: "Step 1" , href: "#s1" }, { name: "Step 2" , href: "#s2" }, { name: "Step 3" , href: "#s3" }, { name: "Step 4" , href: "#s4" }, { name: "Step 5" , href: "#s5" }, { name: "Step 6" , href: "#s6" }, { name: "Step 7" , href: "#s7" }, { name: "Step 8" , href: "#s8" }, ]} >
+    <Scrollspy 
+      id="cctv" 
+      scrollcontent={[
+      { name: "Prenote", href: "#prenote" },
+      { name: "Step 1", href: "#s1" },
+      { name: "Step 2", href: "#s2" },
+      { name: "Step 3", href: "#s3" },
+      { name: "Step 4", href: "#s4" },
+      { name: "Step 5", href: "#s5" },
+      { name: "Step 6", href: "#s6" },
+      { name: "Step 7", href: "#s7" },
+      { name: "Step 8", href: "#s8" },
+      ]}
+    >
       <Fragment slot="scrollspy-content">
         <div id="intro" class="story-top-scroll">
           <h1 class="text-start">CCTV Interception</h1>
