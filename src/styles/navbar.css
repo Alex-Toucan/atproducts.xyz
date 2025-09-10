@@ -207,3 +207,7 @@ body, nav, header {
     word-break: break-word;
   }
 }
+
+.dropdown-story {
+  position: absolute !important;
+}
