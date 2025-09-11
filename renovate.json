@@ -14,5 +14,6 @@
         "*"
       ]
     }
-  ]
+  ],
+  "commitMessageSuffix": "[skip netlify]"
 }
