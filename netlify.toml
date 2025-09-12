@@ -5,13 +5,6 @@
 #   status = 302
 #   force = true
 
-# Temporary 24h shutdown.
-[[redirects]]
-  from = "/*"
-  to = "https://other.atproducts.xyz/shutdown/"
-  status = 302
-  force = true
-
 [[headers]]
   for = "/*"
   [headers.values]
