@@ -1,14 +1,14 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import CodeBlock from '../../../components/CodeBlock.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Python Basics" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Python Basics'!" author="AT Products LLC & The Script Community" highlight="true" scrollspy="true">
+<DefaultBody breadcrumb="true" title="Python Basics" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Python Basics'!" author="AT Products LLC & The Script Community" highlight="true" scrollspy="true">
 <div id="page">
-  <Navbar pageTitle="Python Basics" 
+  <Navbar breadcrumb="true" pageTitle="Python Basics" 
     link={[
      { name: "The Script Community" , href: "/script" },
     ]}

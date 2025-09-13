@@ -1,13 +1,13 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Learning Resources & Links" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Learning Resources & Links'!" author="AT Products LLC & The Script Community" scrollspy="true">
+<DefaultBody breadcrumb="true" title="Learning Resources & Links" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Learning Resources & Links'!" author="AT Products LLC & The Script Community" scrollspy="true">
 <div id="page">
-  <Navbar pageTitle="Learning Resources & Links"
+  <Navbar breadcrumb="true" pageTitle="Learning Resources & Links"
     link={[
      { name: "The Script Community" , href: "/script" },
     ]} 

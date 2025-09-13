@@ -1,11 +1,11 @@
 ---
-
+const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
 ---
 
 <a href="#main-content" class="visually-hidden-focusable btn btn-primary position-fixed m-2 hero-filter skip-content" title="Skip to main content">Skip to main content</a>
 
-<header>
-  <nav class="navbar navbar-expand-lg main-navbar fixed-top">
+<header class="main-navbar fixed-top">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="/"
         ><img
@@ -26,7 +26,7 @@
         tabindex="-1"
         id="offcanvasNavbar"
       >
-        <div class="offcanvas-header pb-2">
+        <div class="offcanvas-header">
           <h5 class="offcanvas-title"><img
           src="/media/images/longblack.webp"
           height="45px"
@@ -263,6 +263,24 @@
               </div>
             </div>
           </div>
+          {breadcrumb && (
+            <ol class="navbar-nav breadcrumb m-0 flex-row d-block d-lg-none mt-4">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              {link && link.map(({ name, href, dropdown }, index) => (
+                <li class={`breadcrumb-item ${dropdown && breadcrumbcontent ? 'dropdown' : ''}`} key={index}>
+                  <a href={href} class={dropdown && breadcrumbcontent ? 'dropdown-toggle' : ''} data-bs-toggle={dropdown && breadcrumbcontent ? 'dropdown' : undefined} aria-expanded="false">{name}</a>
+                  {dropdown && breadcrumbcontent && (
+                    <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
+                      {breadcrumbcontent.map(({ name, href }, index) => (
+                        <li key={index}><a class="dropdown-item" href={href}>{name}</a></li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+              <li class="breadcrumb-item active" aria-current="page">{pageTitle}</li>
+            </ol>
+          )}
           <div class="navbar-nav custom-group justify-content-start ms-auto nav-tab-link mb-2 mb-lg-0 color-changer">
             <div class="custom-group-item p-0 dropup dropdown-section color-dropdown">
               <a class="dropdown-toggle custom-group-item-action color-button d-block" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="bd-theme">
@@ -288,6 +306,28 @@
       </div>
     </div>
   </nav>
+  {breadcrumb && (
+    <nav class="navbar pt-0 d-none d-lg-block">
+      <div class="container-fluid">
+        <ol class="navbar-nav breadcrumb m-0 flex-row">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          {link && link.map(({ name, href, dropdown }, index) => (
+            <li class={`breadcrumb-item ${dropdown && breadcrumbcontent ? 'dropdown' : ''}`} key={index}>
+              <a href={href} class={dropdown && breadcrumbcontent ? 'dropdown-toggle' : ''} data-bs-toggle={dropdown && breadcrumbcontent ? 'dropdown' : undefined} aria-expanded="false">{name}</a>
+              {dropdown && breadcrumbcontent && (
+                <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
+                  {breadcrumbcontent.map(({ name, href }, index) => (
+                    <li key={index}><a class="dropdown-item" href={href}>{name}</a></li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+          <li class="breadcrumb-item active" aria-current="page">{pageTitle}</li>
+        </ol>
+      </div>
+    </nav>
+  )}
 </header>
 
 <noscript>

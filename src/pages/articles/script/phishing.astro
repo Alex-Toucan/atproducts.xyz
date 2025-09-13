@@ -1,7 +1,7 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import Accordion from '../../../components/accordion/Accordion.astro';
 import AccordionItem from '../../../components/accordion/AccordionItem.astro';
 import BackToTop from '../../../components/BackToTop.astro';
@@ -9,9 +9,9 @@ import BackToTop from '../../../components/BackToTop.astro';
 import '../../../styles/imagesizes.css'
 ---
 
-<DefaultBody title="Phishing" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Phishing'!" author="AT Products LLC & The Script Community" accordion="true">
+<DefaultBody breadcrumb="true" title="Phishing" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Phishing'!" author="AT Products LLC & The Script Community" accordion="true">
 <div id="page">
-  <Navbar pageTitle="Phishing"
+  <Navbar breadcrumb="true" pageTitle="Phishing"
     link={[
      { name: "The Script Community" , href: "/script" },
     ]} 

@@ -1,13 +1,13 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Adobe Shockwave Logo History" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Adobe Shockwave Logo History'!" author="AT Products LLC & Flash Documentation" scrollspy="true">
+<DefaultBody breadcrumb="true" title="Adobe Shockwave Logo History" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Adobe Shockwave Logo History'!" author="AT Products LLC & Flash Documentation" scrollspy="true">
 <div id="page">
-  <Navbar pageTitle="Adobe Shockwave Logo History" 
+  <Navbar breadcrumb="true" pageTitle="Adobe Shockwave Logo History" 
     link={[
      { name: "Flash Documentation" , href: "/flash" },
     ]}
