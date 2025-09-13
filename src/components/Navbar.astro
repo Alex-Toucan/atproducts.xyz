@@ -9,7 +9,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
     <div class="container-fluid">
       <a class="navbar-brand" href="/"
         ><img
-          src="/media/images/longblack.webp"
+          src={`/media/images/${breadcrumb ? "storyviewer-black.png" : "longblack.webp"}`}
           height="45px"
           alt="AT Products LLC"
           class="headerimg" /></a
