@@ -84,7 +84,7 @@ if (highlight) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <Fragment set:html={additionalContent}>
-      <script is:inline src="/static/darkmode.js"></script>
+      <script is:inline src="/static/darkmode.js" defer async></script>
   </head>
   <body class={`${breadcrumb === 'true' ? 'fixedtopnavimage-breadcrumb' : 'fixedtopnavimage'}`}>
     <Fragment>  
@@ -100,7 +100,7 @@ if (highlight) {
         <script>hljs.highlightAll();</script>
         <script is:inline src="/static/copy.js"></script>
       )}
-      <script is:inline src="/static/navbar.js" defer></script>
+      <script is:inline src="/static/navbar.js" defer async></script>
       <script is:inline src="/static/message.js"></script>
       <script is:inline src="/static/scroll.js"></script>
       <script is:inline src="/static/purecookie.js"></script>
