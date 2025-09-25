@@ -5,7 +5,7 @@ var pureAlert2Icon = 'bi-discord'; // Icon
 var pureAlert2Desc = "Due to recent world events, us as a company has released an statement regarding how we protect minors on our Discord Servers."; // Description
 var pureAlert2Link = 'https://other.atproducts.xyz/minors'; // Link
 var pureAlert2LinkDesc = 'Read the statement.'; // Link text
-var pureAlert2Enabled = true; // Switch to enable/disable alert
+var pureAlert2Enabled = false; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert2Cookie(name, value, days) {
