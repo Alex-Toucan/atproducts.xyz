@@ -60,7 +60,8 @@ netlify link
 <li>3. Build & preview
 
 ```sh
-astro build; netlify dev --dir=dist
+astro build
+netlify dev --dir=dist
 ```
 </li>
 </ul>
