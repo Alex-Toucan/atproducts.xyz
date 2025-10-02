@@ -22,6 +22,7 @@ function adjustDropdowns() {
     });
 }
 
+window.addEventListener('DOMContentLoaded', adjustDropdowns);
 window.addEventListener("resize", adjustDropdowns);
 adjustDropdowns();
 
