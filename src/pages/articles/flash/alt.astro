@@ -1,13 +1,13 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Flash Engines and Alternatives" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Flash Engines and Alternatives'!" author="AT Products LLC & Flash Documentation" scrollspy="true">
+<DefaultBody breadcrumb="true" title="Flash Engines and Alternatives" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Flash Engines and Alternatives'!" author="AT Products LLC & Flash Documentation" scrollspy="true">
 <div id="page">
-  <Navbar pageTitle="Flash Engines and Alternatives" 
+  <Navbar breadcrumb="true" pageTitle="Flash Engines and Alternatives" 
     link={[
      { name: "Flash Documentation" , href: "/flash" },
     ]}

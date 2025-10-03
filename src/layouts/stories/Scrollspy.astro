@@ -16,10 +16,9 @@ const { id, scrollcontent } = Astro.props;
       )}      
     </div>
   </div>
-  <div class="col-md-9 p-3 story-top-scroll story-top-body story-scroll" tabindex="0" data-bs-smooth-scroll="true" data-bs-target={`${id}-list`} data-bs-spy="scroll">
-	<div class="mx-lg-auto text-justify container-story">
-		<slot name="scrollspy-content" />
-        </div>
+  <div class="col-md-9 p-3" tabindex="0" data-bs-smooth-scroll="true" data-bs-target={`${id}-list`} data-bs-spy="scroll">
+    <div class="mx-lg-auto text-justify container-story">
+      <slot name="scrollspy-content" />
     </div>
   </div>
 </main>

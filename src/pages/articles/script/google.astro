@@ -1,13 +1,13 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Google Dorking" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Google Dorking'!" author="AT Products LLC & The Script Community">
+<DefaultBody breadcrumb="true" title="Google Dorking" icon="vibrant2.png" color="#404eed" description="The Script Community presents 'Google Dorking'!" author="AT Products LLC & The Script Community">
 <div id="page">
-  <Navbar pageTitle="Google Dorking"
+  <Navbar breadcrumb="true" pageTitle="Google Dorking"
     link={[
      { name: "The Script Community" , href: "/script" },
     ]} 

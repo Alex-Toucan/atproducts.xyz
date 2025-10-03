@@ -7,24 +7,24 @@ import BackToTop from '../../components/BackToTop.astro';
 ---
 
 <DefaultBody title="Stories" description="Read about AT Products' stories related to Informational Technology." keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan">
-<div id="page">
-  <Navbar />
-  <div id="main-content">
-    <main id="stories" class="text-center">
-      <CardPage id="stories" title="Stories" description="Read about our stories about IT!"
-        cardLinks={[
-          { cardTitle: "CCTV Interception", cardDescription: "Learn about how to intercept CCTV for <strong>educational purposes</strong>.", cardHref: "cctv", pdfHref: "/media/pdf/CCTV Interception.pdf" },
-          { cardTitle: "How to Center a <div>", cardDescription: "Learn about how to center a <code>&lt;div&gt;</code> in HTML and CSS.", cardHref: "div", pdfHref: "/media/pdf/How to Center a _div_.pdf" },
-          { cardTitle: "The Internet Now is Dull and Gray", cardDescription: "Take a peek on how Alex Toucan feels about how websites are designed in the modern world.", cardHref: "websites", pdfHref: "/media/pdf/The Internet Now is Dull and Gray.pdf" },
-          { cardTitle: "Technology Influences Young Audiences", cardDescription: "Technology can influence young audiences in many ways with psychological effects.", cardHref: "youngaudiences", pdfHref: "/media/pdf/Technology Influences Young Audiences.pdf" },
-          { cardTitle: "Sci-Fi Stories Reflect Reality", cardDescription: "See how Sci-Fi as a genre becomes our modern reality.", cardHref: "scifi", pdfHref: "/media/pdf/Sci-Fi Stories Reflect Reality.pdf" },
-          { cardTitle: "The Impact of Informational Technology", cardDescription: "Technology categories being involved in our daily lives could be good.", cardHref: "techcategories", pdfHref: "/media/pdf/The Impact of Informational Technology.pdf" },
-          { cardTitle: "How Technology Engages Students In Education", cardDescription: "Technology has transformed U.S. education, enhancing student learning.", cardHref: "education", pdfHref: "/media/pdf/How Technology Engages Students In Education.pdf" },
-        ]} 
-      />
-    </main>
-    <Footer hr="none" marginTop="true" />
+  <div id="page">
+    <Navbar />
+    <div id="main-content">
+      <main id="stories" class="text-center">
+        <CardPage id="stories" title="Stories" description="Read about our stories about IT!"
+          cardLinks={[
+            { cardTitle: "CCTV Interception", cardDescription: "Learn about how to intercept CCTV for <strong>educational purposes</strong>.", cardHref: "cctv", pdfHref: "/media/pdf/CCTV Interception.pdf" },
+            { cardTitle: "How to Center a <div>", cardDescription: "Learn about how to center a <code>&lt;div&gt;</code> in HTML and CSS.", cardHref: "div", pdfHref: "/media/pdf/How to Center a _div_.pdf" },
+            { cardTitle: "The Internet Now is Dull and Gray", cardDescription: "Take a peek on how Alex Toucan feels about how websites are designed in the modern world.", cardHref: "websites", pdfHref: "/media/pdf/The Internet Now is Dull and Gray.pdf" },
+            { cardTitle: "Technology Influences Young Audiences", cardDescription: "Technology can influence young audiences in many ways with psychological effects.", cardHref: "youngaudiences", pdfHref: "/media/pdf/Technology Influences Young Audiences.pdf" },
+            { cardTitle: "Sci-Fi Stories Reflect Reality", cardDescription: "See how Sci-Fi as a genre becomes our modern reality.", cardHref: "scifi", pdfHref: "/media/pdf/Sci-Fi Stories Reflect Reality.pdf" },
+            { cardTitle: "The Impact of Informational Technology", cardDescription: "Technology categories being involved in our daily lives could be good.", cardHref: "techcategories", pdfHref: "/media/pdf/The Impact of Informational Technology.pdf" },
+            { cardTitle: "How Technology Engages Students In Education", cardDescription: "Technology has transformed U.S. education, enhancing student learning.", cardHref: "education", pdfHref: "/media/pdf/How Technology Engages Students In Education.pdf" },
+          ]} 
+        />
+      </main>
+      <Footer hr="none" marginTop="true" />
+    </div>
+    <BackToTop />
   </div>
-  <BackToTop />
-</div>
 </DefaultBody>

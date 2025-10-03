@@ -60,10 +60,11 @@ netlify link
 <li>3. Build & preview
 
 ```sh
-astro build; netlify dev --dir=dist
+astro build
+netlify dev --dir=dist
 ```
 </li>
 </ul>
 <hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#atproductsxyz">View more information</a>.
-<h6>Last Recorded Version: 2.23.0.1</h6>
+<h6>Last Recorded Version: 2.23.0.2</h6>

@@ -1,13 +1,13 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Worms" description="Ethical Hacking Society presents 'Worms'!" author="AT Products LLC & Ethical Hacking Society">
+<DefaultBody breadcrumb="true" title="Worms" description="Ethical Hacking Society presents 'Worms'!" author="AT Products LLC & Ethical Hacking Society">
 <div id="page">
-  <Navbar pageTitle="Worms" 
+  <Navbar breadcrumb="true" pageTitle="Worms" 
     link={[
      { name: "Ethical Hacking Society" , href: "/ehs" },
     ]} 

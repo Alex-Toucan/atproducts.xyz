@@ -1,13 +1,13 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Pynx Technologies" icon="noodle.webp" color="#f1b856" description="Noodle Hackerspace presents 'Pynx Technologies'!" author="AT Products LLC & Noodle Hackerspace">
+<DefaultBody breadcrumb="true" title="Pynx Technologies" icon="noodle.webp" color="#f1b856" description="Noodle Hackerspace presents 'Pynx Technologies'!" author="AT Products LLC & Noodle Hackerspace">
 <div id="page">
-  <Navbar pageTitle="Pynx Technologies" 
+  <Navbar breadcrumb="true" pageTitle="Pynx Technologies" 
     link={[
      { name: "Noodle Hackerspace" , href: "/noodle" },
     ]} 

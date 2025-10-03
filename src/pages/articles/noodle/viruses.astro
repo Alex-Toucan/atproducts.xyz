@@ -1,13 +1,13 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Viruses & Malware" icon="noodle.webp" color="#f1b856" description="Noodle Hackerspace presents 'Viruses & Malware'!" author="AT Products LLC & Noodle Hackerspace">
+<DefaultBody breadcrumb="true" title="Viruses & Malware" icon="noodle.webp" color="#f1b856" description="Noodle Hackerspace presents 'Viruses & Malware'!" author="AT Products LLC & Noodle Hackerspace">
 <div id="page">
-  <Navbar pageTitle="Viruses & Malware" 
+  <Navbar breadcrumb="true" pageTitle="Viruses & Malware" 
     link={[
      { name: "Noodle Hackerspace" , href: "/noodle" },
     ]} 

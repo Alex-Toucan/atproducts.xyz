@@ -1,13 +1,13 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Flash Games for Today's Times" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Flash Games for Today's Times'!" author="AT Products LLC & Flash Documentation" scrollspy="true">
+<DefaultBody breadcrumb="true" title="Flash Games for Today's Times" icon="Adobe_Flash_Player_32.svg.png" color="#4a0000" description="Flash Documentation presents 'Flash Games for Today's Times'!" author="AT Products LLC & Flash Documentation" scrollspy="true">
 <div id="page">
-  <Navbar pageTitle="Flash Games for Today's Times" 
+  <Navbar breadcrumb="true" pageTitle="Flash Games for Today's Times" 
     link={[
      { name: "Flash Documentation" , href: "/flash" },
     ]}
