@@ -5,7 +5,7 @@ var pureAlert1Icon = 'bi-plus-lg'; // Icon
 var pureAlert1Desc = "There is a new hotfix update available! This is not mentioned in the carousel but is in the 'What's New?' section below."; // Description
 var pureAlert1Link = '/#what-new'; // Link
 var pureAlert1LinkDesc = 'View now!'; // Link text
-var pureAlert1Enabled = true; // Switch to enable/disable alert
+var pureAlert1Enabled = false; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert1Cookie(name, value, days) {
