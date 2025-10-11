@@ -1,14 +1,18 @@
 ---
 import DefaultBody from '../../layouts/DefaultBody.astro';
-import Navbar from '../../layouts/stories/Navbar.astro';
+import Navbar from '../../components/Navbar.astro';
 import Scrollspy from '../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Sci-Fi Stories Reflect Reality" description="See how Sci-Fi as a genre becomes our modern reality." author="Alex Toucan" scrollspy="true">
+<DefaultBody breadcrumb="true" title="Sci-Fi Stories Reflect Reality" description="See how Sci-Fi as a genre becomes our modern reality." author="Alex Toucan" scrollspy="true">
 <div id="page">
-  <Navbar pageTitle="Sci-Fi Stories Reflect Reality" />
-  <div id="main-content">
+  <Navbar breadcrumb="true" pageTitle="Sci-Fi Stories Reflect Reality"  
+      link={[
+        { name: "Stories" , href: "/stories" },
+      ]}
+    />
+    <div id="main-content">
     <Scrollspy id="scifi" 
       scrollcontent={[ 
         { name: "Main Content" , href: "#content" }, 

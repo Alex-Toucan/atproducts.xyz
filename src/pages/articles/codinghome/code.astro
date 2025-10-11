@@ -1,13 +1,13 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 ---
 
-<DefaultBody title="Code Samples" icon="codinghome.webp" description="CodingHome presents 'Code Samples'!" author="AT Products LLC & CodingHome" scrollspy="true">
+<DefaultBody breadcrumb="true" title="Code Samples" icon="codinghome.webp" description="CodingHome presents 'Code Samples'!" author="AT Products LLC & CodingHome" scrollspy="true">
 <div id="page">
-  <Navbar pageTitle="Code Samples"
+  <Navbar breadcrumb="true" pageTitle="Code Samples"
     link={[
      { name: "CodingHome" , href: "/codinghome" },
     ]} 

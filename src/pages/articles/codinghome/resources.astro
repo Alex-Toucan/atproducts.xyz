@@ -1,7 +1,7 @@
 ---
 import DefaultBody from '../../../layouts/DefaultBody.astro';
-import Navbar from '../../../layouts/articles/Navbar.astro';
-import Scrollspy from '../../../layouts/articles/Scrollspy.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Scrollspy from '../../../layouts/stories/Scrollspy.astro';
 import Accordion from '../../../components/accordion/Accordion.astro';
 import AccordionItem from '../../../components/accordion/AccordionItem.astro';
 import BackToTop from '../../../components/BackToTop.astro';
@@ -9,9 +9,9 @@ import BackToTop from '../../../components/BackToTop.astro';
 import '../../../styles/imagesizes.css';
 ---
 
-<DefaultBody title="Resources" icon="codinghome.webp" description="CodingHome presents 'Resources'!" author="AT Products LLC & CodingHome" highlight="true" accordion="true">
+<DefaultBody breadcrumb="true" title="Resources" icon="codinghome.webp" description="CodingHome presents 'Resources'!" author="AT Products LLC & CodingHome" highlight="true" accordion="true">
 <div id="page">
-  <Navbar pageTitle="Resources" 
+  <Navbar breadcrumb="true" pageTitle="Resources" 
     link={[
      { name: "CodingHome" , href: "/codinghome" },
     ]}
@@ -595,6 +595,7 @@ FLUSH PRIVILEGES;
                             <a href="https://www.w3schools.com/colors/colors_picker.asp">W3Schools Color Picker</a><br>
                             <a href="https://uigradients.com/">UIgradients</a><br>
                             <a href="https://cssgradient.io/">CSS Gradients</a><br>
+                            <a href="https://maintainablecss.com/">Maintainable CSS</a><br>
                             <a href="https://www.svgbackgrounds.com/">SVG Gradients</a><br>
                             <a href="https://www.realtimecolors.com/">Realtime Colors</a><br>
                             <a href="https://www.color-hex.com/">Color Hex</a><br>

@@ -11,11 +11,9 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
 <DefaultBody title="AT Products LLC" description="AT Products LLC is an Informational Technology Company, with computer resources" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan" 
 additionalContent="<meta name='google-site-verification' content='8CRfwExNu3kB77SccZhzqhwnETsU2dnm0CACBJSRJ5M'>"
 bulletin={[
-  { bulletinImage: "BETATESTING-A.webp" },
-  { bulletinImage: "223-090325-1.webp" },
-  { bulletinImage: "223-090325-2.webp" },
-  { bulletinImage: "223-090325-3.webp" },
-  { bulletinImage: "223-090325-4.webp" },
+  { bulletinImage: "4YEAR.webp" },
+  { bulletinImage: "22302-101025-1.webp" },
+  { bulletinImage: "22302-101025-2.webp" },
 ]} 
 index="true">
 <div id="page">
@@ -32,7 +30,6 @@ index="true">
       dropdownItems={[
         { navigationDesc: "General Information", navigationLink: "#general-info" },
         { navigationDesc: "Products", navigationLink: "#products" },
-        { navigationDesc: "Allies", navigationLink: "#allies" },
         { navigationDesc: "Credits", navigationLink: "#credits" },
         { navigationDesc: "History", navigationLink: "#history" },
         { navigationDesc: "What's New?", navigationLink: "#what-new" },
@@ -49,19 +46,13 @@ index="true">
       <div class="pt-xmd-2 px-xmd-2">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/media/slideshow/BETATESTING-A.webp" class="d-block w-100" alt="DoBT Beta Testing Slide">
+            <img src="/media/slideshow/4YEAR.webp" class="d-block w-100" alt="4 Year Anniversary Slide">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/223-090325-1.webp" class="d-block w-100" alt="2.23 Release Slide 1">
+            <img src="/media/slideshow/22302-101025-1.webp" class="d-block w-100" alt="2.23 Release Slide 1">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/223-090325-2.webp" class="d-block w-100" alt="2.23 Release Slide 2">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/223-090325-3.webp" class="d-block w-100" alt="2.23 Release Slide 3">
-          </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="/media/slideshow/223-090325-4.webp" class="d-block w-100" alt="2.23 Release Slide 4">
+            <img src="/media/slideshow/22302-101025-2.webp" class="d-block w-100" alt="2.23 Release Slide 2">
           </div>
         </div>
         <div class="mediarow py-2" aria-label="Carousel-A Controls">
@@ -73,8 +64,6 @@ index="true">
             <button aria-label="Slide 1" class="active slidebtn" data-bs-slide-to="0" data-bs-target="#carousel-A" type="button" aria-current="true"></button>
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="1" aria-label="Slide 2" class="slidebtn"></button>
             <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="2" aria-label="Slide 3" class="slidebtn"></button>
-            <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="3" aria-label="Slide 4" class="slidebtn"></button>
-            <button type="button" data-bs-target="#carousel-A" data-bs-slide-to="4" aria-label="Slide 5" class="slidebtn"></button>
           </div>
           <button class="carousel-control-next col" type="button" data-bs-target="#carousel-A" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -90,7 +79,7 @@ index="true">
           <label class="btn" for="pauseButton" id="pauseButtonLabel"><i class="bi bi-pause-fill fs-4 link-carousel"></i></label>
         </div>
         <div class="col px-2 my-auto">
-          <a href="/media/pdf/2.23 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
+          <a href="/media/pdf/2.23.0.2 Patch Notes.pdf" aria-label="Carousel PDF Download" class="fs-2 link-carousel" target="_blank" rel="noopener noreferrer"><i class="bi bi-filetype-pdf"></i></a>
         </div>
       </div>
     </div>
@@ -206,15 +195,6 @@ index="true">
         </div>
       </div>
       <hr>
-      <div id="allies">
-        <h2>Allies</h2>
-        <div class="d-grid gap-3 mt-3">
-          <div>
-            <a href="https://discord.gg/pYa87Bhau9" class="d-mmd-flex"><img src="/media/images/RSA.webp" alt="Royal Stack Alliance" height="60px" class="d-inline me-2"><div class="d-inline my-mmd-auto col">Royal Stack Alliance</div></a>
-          </div>
-        </div>
-      </div>
-      <hr>
       <div id="credits">
         <h2>Credits</h2>
         <div class="d-grid gap-3 mt-3">
@@ -267,7 +247,7 @@ index="true">
                 <div class="progress-bar" id="history-progress"></div>
               </div>
             </div>
-            <div id="history-buttons" class="d-flex justify-content-between">
+            <div id="history-buttons" class="d-flex justify-content-between gap-3">
               <button type="button" class="btn btn-sm btn-primary rounded-3" aria-controls="history-1-pane" aria-label="2020" id="history-1">2020</button>
               <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-2-pane" aria-label="2021" id="history-2">2021</button>
               <button type="button" class="btn btn-sm btn-secondary rounded-3" aria-controls="history-3-pane" aria-label="2022" id="history-3">2022</button>
@@ -307,19 +287,35 @@ index="true">
       <div id="what-new">
         <h2> What's New? </h2>
         <p>
-          <b>Released on:</b> September 4th, 2025.<br>
-          <b>ATP Database:</b> 2.23.0.1
+          <b>Released on:</b> October 10th, 2025.<br>
+          <b>ATP Database:</b> 2.23.0.2
         </p>
+
+        <b>Added</b>
+        <ul>
+          <li>Added resources to CodingHome. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/6d2e4e4c" target="_blank" rel="noopener noreferrer">6d2e4e4c</a>)</li>
+          <li>Added an Onion Link to the Ethical Hacking Society. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/fcf9490d" target="_blank" rel="noopener noreferrer">fcf9490d</a>)</li>
+        </ul>
 
         <b>Changed</b>
         <ul>
-          <li>Replaced the off-canvas navbar header with the ATP logo. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/4809487ffe755446e83aac54fae2c45f74071227" target="_blank" rel="noopener noreferrer">4809487</a>)</li>
+          <li>Updated Astro from v5.13.5 to v5.14.4. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/587" target="_blank" rel="noopener noreferrer">#587</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/588" target="_blank" rel="noopener noreferrer">#588</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/590" target="_blank" rel="noopener noreferrer">#590</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/591" target="_blank" rel="noopener noreferrer">#591</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/592" target="_blank" rel="noopener noreferrer">#592</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/593" target="_blank" rel="noopener noreferrer">#593</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/594" target="_blank" rel="noopener noreferrer">#594</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/595" target="_blank" rel="noopener noreferrer">#595</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/604" target="_blank" rel="noopener noreferrer">#604</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/605" target="_blank" rel="noopener noreferrer">#605</a>)</li>
+          <li>Updated @astrojs/react from v4.3.0 to v4.4.0. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/587" target="_blank" rel="noopener noreferrer">#587</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/594" target="_blank" rel="noopener noreferrer">#594</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/604" target="_blank" rel="noopener noreferrer">#604</a>)</li>
+          <li>Updated @astrojs/netlify from v6.5.9 to v6.5.12. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/587" target="_blank" rel="noopener noreferrer">#587</a>, <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/592" target="_blank" rel="noopener noreferrer">#592</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/604" target="_blank" rel="noopener noreferrer">#604</a>)</li>
+          <li>Updated React from v19.1.1 to v19.2.0. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/596" target="_blank" rel="noopener noreferrer">#596</a>)</li>
+          <li>Updated CodeQL to v4. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/603" target="_blank" rel="noopener noreferrer">#603</a>)</li>
+          <li>Updated yarl on requirements.txt to v1.22.0. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/600" target="_blank" rel="noopener noreferrer">#600</a> & <a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/601" target="_blank" rel="noopener noreferrer">#601</a>)</li>
+          <li>Updated the Privacy Policy. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/afb8f7f" target="_blank" rel="noopener noreferrer">afb8f7f</a>)</li>
+        </ul>
+
+        <b>Removed</b>
+        <ul>
+          <li>Removed the Allies section in the index page. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/9803577" target="_blank" rel="noopener noreferrer">9803577</a>)</li>
         </ul>
 
         <b>Bug Fixes</b>
         <ul>
-          <li>Fixed the navbar dropdowns. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/f3c0f373ff81c5fac141411e5bbf8f383babdb0e" target="_blank" rel="noopener noreferrer">f3c0f37</a>)</li>
-          <li>Fixed overflow issue with subdropdowns. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/commit/a9fd487d9eea83bf8213661ea01040774bcc0107" target="_blank" rel="noopener noreferrer">a9fd487</a>)</li>
+          <li>Fixed the navbar in both Articles and Stories. (<a href="https://github.com/Alex-Toucan/atproducts.xyz/pull/589" target="_blank" rel="noopener noreferrer">#589</a>)</li>
         </ul>
       </div>
     </main>
