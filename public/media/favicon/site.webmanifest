@@ -2,7 +2,7 @@
   "name": "AT Products LLC",
   "short_name": "AT Products LLC",
   "theme_color": "#212529",
-  "background_color": "#ffffff",
+  "background_color": "#212529",
   "display": "standalone",
   "id": "2.20.2",
   "start_url": "/",
