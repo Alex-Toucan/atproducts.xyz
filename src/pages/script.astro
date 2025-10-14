@@ -10,6 +10,7 @@ import BackToTop from '../components/BackToTop.astro';
 <style>
   .btn-resource {
     margin: 0 !important;
+    flex: 1 1 auto !important;
   }
 </style>
 <div id="page"> 
@@ -31,8 +32,8 @@ import BackToTop from '../components/BackToTop.astro';
       <hr>
       <div id="history">
         <h2> History </h2>
-        <div id="article" class="h-100"><figure class="figure ms-md-3 mt-0 mb-2 float-md-end">
-          <img src="/media/images/vibrant2.png" alt="Frame of an animation by the U.S. Federal Trade Commission intended to educate citizens about phishing tactics." width="20%" class="rounded-1 mx-auto me-md-0 ms-md-auto" style="max-width: 375px;display: block;"> 
+        <div id="article" class="h-100"><figure class="figure ms-md-3 mt-0 mb-2 float-md-end" style="width: 150px !important;">
+          <img src="/media/images/vibrant2.png" alt="Frame of an animation by the U.S. Federal Trade Commission intended to educate citizens about phishing tactics." width="30%" class="rounded-1 mx-auto" style="max-width: 375px;display: block;"> 
           <figcaption class="figure-caption mt-2 text-wrap"><a href="https://commons.wikimedia.org/wiki/File:Phish.jpg">Phish</a> by the <a href="https://www.ftc.gov/">U.S. Federal Trade Commission</a> is licensed under the public domain.</figcaption> 
         </figure>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
@@ -94,4 +95,5 @@ import BackToTop from '../components/BackToTop.astro';
   <BackToTop />
 </div>
 </DefaultBody>
+
 
