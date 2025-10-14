@@ -7,6 +7,11 @@ import BackToTop from '../components/BackToTop.astro';
 ---
 
 <DefaultBody title="The Script Community" heroid="script" icon="vibrant2.png" color="#404eed" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus" figure="true">
+<style>
+  .btn-resource {
+    margin: 0 !important;
+  }
+</style>
 <div id="page"> 
   <Navbar />
   <div class="alert alert-dark mb-0" role="alert">
@@ -37,8 +42,8 @@ import BackToTop from '../components/BackToTop.astro';
       <div id="resources">
         <h2> Resources </h2>
         <p> What do you want to know about today? </p>
-        <div>
-          <a class="btn btn-dl btn-resource" type="button" href="/articles/script/links">
+        <div class="d-flex flex-wrap gap-2 justify-content-between">
+          <a class="btn btn-dl btn-resource flex-fill" type="button" href="/articles/script/links">
             Learning Resources & Links
           </a>
           <a class="btn btn-dl btn-resource" type="button" href="/articles/script/python">
@@ -89,3 +94,4 @@ import BackToTop from '../components/BackToTop.astro';
   <BackToTop />
 </div>
 </DefaultBody>
+
