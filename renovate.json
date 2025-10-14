@@ -8,11 +8,20 @@
   ],
   "packageRules": [
     {
-      "groupName": "all dependencies",
-      "rangeStrategy": "bump",
-      "matchPackageNames": [
-        "*"
-      ]
+      "groupName": "React packages",
+      "matchPackagePatterns": ["^react", "^@types/react", "^react-dom"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "groupName": "Astro packages",
+      "matchPackagePatterns": ["^astro", "^@astrojs/"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "groupName": "Other dependencies",
+      "matchPackageNames": ["*"],
+      "excludePackagePatterns": ["^react", "^@types/react", "^react-dom", "^astro", "^@astrojs/"],
+      "rangeStrategy": "bump"
     }
   ],
   "commitMessageSuffix": "[skip netlify]"
