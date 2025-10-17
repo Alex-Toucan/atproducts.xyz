@@ -8,11 +8,40 @@
   ],
   "packageRules": [
     {
-      "groupName": "all dependencies",
-      "rangeStrategy": "bump",
-      "matchPackageNames": [
-        "*"
-      ]
+      "groupName": "React packages",
+      "matchPackagePatterns": ["^react", "^@types/react", "^react-dom"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "groupName": "Astro packages",
+      "matchPackagePatterns": ["^astro", "^@astrojs/"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "groupName": "Bootstrap packages",
+      "matchPackagePatterns": ["^bootstrap", "^bootstrap-icons"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "groupName": "jQuery packages",
+      "matchPackagePatterns": ["^jquery", "^@types/jquery"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "groupName": "Other dependencies",
+      "matchPackageNames": ["*"],
+      "excludePackagePatterns": [
+        "^react",
+        "^@types/react",
+        "^react-dom",
+        "^astro",
+        "^@astrojs/",
+        "^bootstrap",
+        "^bootstrap-icons",
+        "^jquery",
+        "^@types/jquery"
+      ],
+      "rangeStrategy": "bump"
     }
   ],
   "commitMessageSuffix": "[skip netlify]"
