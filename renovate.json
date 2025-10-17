@@ -9,37 +9,50 @@
   "packageRules": [
     {
       "groupName": "React packages",
-      "matchPackagePatterns": ["^react", "^@types/react", "^react-dom"],
-      "rangeStrategy": "bump"
+      "rangeStrategy": "bump",
+      "matchPackageNames": [
+        "/^react/",
+        "/^@types/react/",
+        "/^react-dom/"
+      ]
     },
     {
       "groupName": "Astro packages",
-      "matchPackagePatterns": ["^astro", "^@astrojs/"],
-      "rangeStrategy": "bump"
+      "rangeStrategy": "bump",
+      "matchPackageNames": [
+        "/^astro/",
+        "/^@astrojs//"
+      ]
     },
     {
       "groupName": "Bootstrap packages",
-      "matchPackagePatterns": ["^bootstrap", "^bootstrap-icons"],
-      "rangeStrategy": "bump"
+      "rangeStrategy": "bump",
+      "matchPackageNames": [
+        "/^bootstrap/",
+        "/^bootstrap-icons/"
+      ]
     },
     {
       "groupName": "jQuery packages",
-      "matchPackagePatterns": ["^jquery", "^@types/jquery"],
-      "rangeStrategy": "bump"
+      "rangeStrategy": "bump",
+      "matchPackageNames": [
+        "/^jquery/",
+        "/^@types/jquery/"
+      ]
     },
     {
       "groupName": "Other dependencies",
-      "matchPackageNames": ["*"],
-      "excludePackagePatterns": [
-        "^react",
-        "^@types/react",
-        "^react-dom",
-        "^astro",
-        "^@astrojs/",
-        "^bootstrap",
-        "^bootstrap-icons",
-        "^jquery",
-        "^@types/jquery"
+      "matchPackageNames": [
+        "*",
+        "!/^react/",
+        "!/^@types/react/",
+        "!/^react-dom/",
+        "!/^astro/",
+        "!/^@astrojs//",
+        "!/^bootstrap/",
+        "!/^bootstrap-icons/",
+        "!/^jquery/",
+        "!/^@types/jquery/"
       ],
       "rangeStrategy": "bump"
     }
