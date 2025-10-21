@@ -9,5 +9,5 @@ updates:
     schedule:
       interval: "daily"
     labels:
-      - dependencies
+      - "📦️ dependencies"
     versioning-strategy: increase
