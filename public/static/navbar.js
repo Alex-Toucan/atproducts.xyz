@@ -1,86 +1,68 @@
-function adjustDropdowns() {
-    const isMobile = window.innerWidth < 992;
+const debounce = (fn, d) => {
+  let t;
+  return () => {
+    clearTimeout(t);
+    t = setTimeout(fn, d);
+  };
+};
 
-    document.querySelectorAll(".navbar .offcanvas .subdropdown").forEach(d => {
-        if (isMobile) {
-            d.classList.remove("dropend");
-            d.classList.add("dropdown");
-        } else {
-            d.classList.remove("dropdown");
-            d.classList.add("dropend");
-        }
-    });
+const adjustDropdowns = () => {
+  const m = window.innerWidth < 992;
+  document.querySelectorAll(".navbar .offcanvas .subdropdown").forEach(d =>
+    d.classList.toggle("dropdown", m) || d.classList.toggle("dropend", !m)
+  );
+  document.querySelectorAll(".navbar .offcanvas .color-dropdown").forEach(d =>
+    d.classList.toggle("dropup", m) || d.classList.toggle("dropdown", !m)
+  );
+};
 
-    document.querySelectorAll(".navbar .offcanvas .color-dropdown").forEach(d => {
-        if (isMobile) {
-            d.classList.remove("dropdown");
-            d.classList.add("dropup");
-        } else {
-            d.classList.remove("dropup");
-            d.classList.add("dropdown");
-        }
-    });
-}
+const positionDropdownMenus = () => {
+  document.querySelectorAll('.navbar .offcanvas .dropdown-toggle:not(.subdropdown .dropdown-toggle)').forEach(t => {
+    const m = t.parentElement.querySelector('.dropdown-menu');
+    if (!m) return;
 
-window.addEventListener('DOMContentLoaded', adjustDropdowns);
-window.addEventListener("resize", adjustDropdowns);
-adjustDropdowns();
+    if (window.innerWidth > 992) {
+      m.style.visibility = 'hidden';
+      m.style.display = 'block';
 
-function positionDropdownMenus() {
-    const toggles = document.querySelectorAll('.navbar .offcanvas .dropdown-toggle:not(.subdropdown .dropdown-toggle)');
+      const r = t.getBoundingClientRect(), w = m.offsetWidth, h = m.offsetHeight;
+      const p = m.offsetParent || document.body, pr = p.getBoundingClientRect();
+      const b = 12;
+      let l = r.left - pr.left, top = r.bottom, pw = p.clientWidth;
+      const ox = l + w + b - pw;
+      if (ox > 0) l -= ox;
+      if (l < b) l = b;
 
-    toggles.forEach(dropdownToggle => {
-        const dropdownMenu = dropdownToggle.parentElement.querySelector('.dropdown-menu');
-        if (!dropdownMenu) return;
+      Object.assign(m.style, {
+        position: 'absolute',
+        left: `${l}px`,
+        top: `${top}px`,
+        minWidth: `${r.width}px`,
+        width: `${w}px`,
+        height: `${h}px`,
+        transform: 'none',
+        display: '',
+        visibility: ''
+      });
+    } else {
+      Object.assign(m.style, {
+        position: '',
+        left: '',
+        top: '',
+        minWidth: '',
+        width: '',
+        height: '',
+        transform: ''
+      });
+    }
+  });
+};
 
-        if (window.innerWidth > 992) {
-            dropdownMenu.style.visibility = 'hidden';
-            dropdownMenu.style.display = 'block';
+const init = () => {
+  adjustDropdowns();
+  positionDropdownMenus();
+};
 
-            const toggleRect = dropdownToggle.getBoundingClientRect();
-            const menuWidth = dropdownMenu.offsetWidth;
-            const menuHeight = dropdownMenu.offsetHeight;
-
-            const offsetParent = dropdownMenu.offsetParent || document.body;
-            const offsetParentRect = offsetParent.getBoundingClientRect();
-
-            const buffer = 12;
-
-            let left = toggleRect.left - offsetParentRect.left;
-            const top = toggleRect.bottom;
-
-            const parentWidth = offsetParent.clientWidth;
-            const overflowX = (left + menuWidth + buffer) - parentWidth;
-            if (overflowX > 0) {
-                left -= overflowX;
-            }
-
-            if (left < buffer) {
-                left = buffer;
-            }
-
-            dropdownMenu.style.position = 'absolute';
-            dropdownMenu.style.left = `${left}px`;
-            dropdownMenu.style.top = `${top}px`;
-            dropdownMenu.style.minWidth = `${toggleRect.width}px`;
-            dropdownMenu.style.width = `${menuWidth}px`;
-            dropdownMenu.style.height = `${menuHeight}px`;
-            dropdownMenu.style.transform = 'none';
-
-            dropdownMenu.style.display = '';
-            dropdownMenu.style.visibility = '';
-        } else {
-            dropdownMenu.style.position = '';
-            dropdownMenu.style.left = '';
-            dropdownMenu.style.top = '';
-            dropdownMenu.style.minWidth = '';
-            dropdownMenu.style.width = '';
-            dropdownMenu.style.height = '';
-            dropdownMenu.style.transform = '';
-        }
-    });
-}
-
-window.addEventListener('DOMContentLoaded', positionDropdownMenus);
-window.addEventListener('resize', positionDropdownMenus);
+window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('pageshow', positionDropdownMenus);
+window.addEventListener('resize', debounce(init, 150));
