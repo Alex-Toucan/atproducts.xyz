@@ -12,6 +12,10 @@ import '../styles/navbar.css';
 import '../styles/other.css';
 import '../styles/cookie.css';
 
+/* Preload Scripts */
+import darkmode from '../scripts/darkmode.js?url';
+import navbar from '../scripts/navbar.js?url';
+
 if (highlight) {
   import '../styles/highlight.css';
 }
@@ -21,12 +25,8 @@ if (highlight) {
 <html class={`${breadcrumb === 'true' ? 'fixedtopnavimage-breadcrumb' : 'fixedtopnavimage'}`} lang="en">
   <head>
       <title>{title}</title> 
-      <script is:inline src="/static/darkmode.js"></script>
-      <script is:inline src="/static/navbar.js"></script>
-      <link rel="preload" as="script" href="/static/darkmode.js">
-      <link rel="preload" as="script" href="/static/navbar.js">
-      <link rel="preload" as="script" href="/static/alert-1.js">
-      <link rel="preload" as="script" href="/static/alert-2.js">
+      <script src={darkmode}></script>
+      <script src={navbar}></script>
       {heroid ?
         <Fragment>
         <link rel="preload" as="image" href={`/media/images/hero-${heroid}.webp`}>
@@ -101,28 +101,28 @@ if (highlight) {
         <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
         <script>hljs.highlightAll();</script>
-        <script is:inline src="/static/copy.js"></script>
+        <script src="../scripts/copy.js"></script>
       )}
-      <script is:inline src="/static/message.js"></script>
-      <script is:inline src="/static/scroll.js"></script>
-      <script is:inline src="/static/purecookie.js"></script>
-      <script is:inline src="/static/alert-1.js"></script>
-      <script is:inline src="/static/alert-2.js"></script>
-      <script is:inline src="/static/enabler.js"></script>
+      <script src="../scripts/message.js"></script>
+      <script src="../scripts/scroll.js"></script>
+      <script src="../scripts/purecookie.js"></script>
+      <script src="../scripts/alert-1.js"></script>
+      <script src="../scripts/alert-2.js"></script>
+      <script src="../scripts/enabler.js"></script>
       {fourofour && (
-        <script is:inline src="/static/404.js"></script>
+        <script src="../scripts/404.js"></script>
       )}
       {modal && (
-        <script is:inline src="/static/modal-id.js"></script>
+        <script src="../scripts/modal-id.js"></script>
       )} 
       {accordion && (
-        <script is:inline src="/static/accordion-id.js"></script>
+        <script src="../scripts/accordion-id.js"></script>
       )}    
       {scrollspy && (
-        <script is:inline src="/static/scrollspy-id.js"></script>
+        <script src="../scripts/scrollspy-id.js"></script>
       )}
       {index && (
-        <script is:inline src="/static/index.js"></script>
+        <script src="../scripts/index.js"></script>
       )}    
     </Fragment>
   </body>
