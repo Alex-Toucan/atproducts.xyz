@@ -6,13 +6,13 @@
   "labels": [
     "📦 dependencies"
   ],
-  "packageRules":
+  "packageRules": [
     {
       "groupName": "Astro packages",
       "rangeStrategy": "bump",
       "matchPackageNames": [
         "/^astro/",
-        "/^@astrojs//"
+        "/^@astrojs/"
       ]
     },
     {
@@ -46,7 +46,7 @@
         "!/^@types/react/",
         "!/^react-dom/",
         "!/^astro/",
-        "!/^@astrojs//",
+        "!/^@astrojs/",
         "!/^bootstrap/",
         "!/^bootstrap-icons/",
         "!/^jquery/",
