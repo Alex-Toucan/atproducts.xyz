@@ -4,16 +4,9 @@
     "config:recommended"
   ],
   "labels": [
-    "dependencies"
+    "📦 dependencies"
   ],
-  "packageRules": [
-    {
-      "groupName": "all dependencies",
-      "rangeStrategy": "bump",
-      "matchPackageNames": [
-        "*"
-      ]
-    },
+  "packageRules":
     {
       "groupName": "Astro packages",
       "rangeStrategy": "bump",
