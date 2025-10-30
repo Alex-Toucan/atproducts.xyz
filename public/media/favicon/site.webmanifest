@@ -1,23 +1,23 @@
 {
-  "name": "Department of Beta Testing",
+  "name": "AT Products LLC - Department of Beta Testing",
   "short_name": "ATPLLC - DoBT",
   "theme_color": "#212529",
-  "background_color": "#ffffff",
+  "background_color": "#212529",
   "display": "standalone",
-  "id": "2.5.1",
+  "id": "2.23.0.2",
   "start_url": "/",
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "/media/favicon/favicon.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/media/favicon/android.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/media/favicon/favicon.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
       "src": "/media/favicon/web-app-manifest-192x192.png",
