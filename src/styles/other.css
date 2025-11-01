@@ -6999,3 +6999,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 .info-box {
   height: 150px !important;
 }
+
+.figure-200 {
+  width: 200px !important;
+}
