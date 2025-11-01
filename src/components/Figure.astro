@@ -1,0 +1,11 @@
+ 
+---
+const { image, caption } = Astro.props;
+---
+
+<figure class="figure figure-200 ms-md-3 mt-0 mb-0 mb-mmd-3 float-md-end text-center">
+  {image && image.map(({ src, alt, width, additionalClasses }) => (
+      <img src={src} alt={alt} width={width} class={`mx-auto ${additionalClasses}`} />
+  ))}
+  {caption ? <figcaption class="figure-caption mt-2">{caption}</figcaption> : null}
+</figure>

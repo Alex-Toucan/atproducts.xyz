@@ -4,11 +4,12 @@ import Hero   from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
+import Figure from '../components/Figure.astro';
 
 import '../styles/imagesizes.css';
 ---
 
-<DefaultBody title="The Script Community" heroid="script" icon="vibrant2.png" color="#404eed" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus">
+<DefaultBody title="The Script Community" heroid="script" icon="vibrant2.png" color="#404eed" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus" figure="true">
 <div id="page"> 
   <Navbar />
   <div class="alert alert-dark mb-0" role="alert">
@@ -24,6 +25,17 @@ import '../styles/imagesizes.css';
         Use a virtual machine if it's a computer virus; never open it on your physical machine. As a precaution, download them on your VM.<br><br>
         If it's an APK file, use an emulator.<br><br><a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a><br><a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
         </p>
+      </div>
+      <hr>
+      <div id="history">
+        <h2> History </h2>
+        <div id="article" class="text-start h-100">
+          <Figure 
+            image={[{ src: "/media/images/vibrant2.png", alt: "The Script Community Logo.", width: "50%", additionalClasses: "rounded-1" }]} 
+            caption="The Script Community logo is owned by AT Products LLC. All rights reserved." 
+          />
+          <p>The Script Community was founded around late 2021, and dissolved as early as January of 2022 when the Discord Server got banned. The community focused on numerous Cybersecurity topics, including hacking, programming languages, etc. The creator's nickname at the time was <i>Nasus</i>, but cannot be found on the internet to this very day.</p>
+        </div>
       </div>
       <hr>
       <div id="resources">

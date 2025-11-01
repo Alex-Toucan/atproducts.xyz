@@ -1,9 +1,10 @@
 ---
 import DefaultBody from '../layouts/DefaultBody.astro';
-import Hero      from '../components/Hero.astro';
-import Navbar    from '../components/Navbar.astro';
-import Footer    from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
+import Figure from '../components/Figure.astro';
 
 import '../styles/imagesizes.css';
 ---
@@ -33,6 +34,17 @@ import '../styles/imagesizes.css';
           <br>
           <a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
         </p>
+      </div>
+      <hr>
+            <div id="history">
+        <h2> History </h2>
+        <div id="article" class="h-100">
+          <Figure 
+            image={[{ src: "/media/images/codinghome.webp", alt: "CodingHome Logo.", width: "50%", additionalClasses: "rounded-1" }]} 
+            caption="CodingHome logo is owned by AT Products LLC. All rights reserved." 
+          />
+          <p>CodingHome was founded on June 9th, 2021, and moved servers on March 18th, 2025, and remains the only active ATPLLC Discord community. The community is focused on giving help to mostly new coding beginners, and contains Discord bulletins for ATPLLC! </p>
+        </div>
       </div>
       <hr>
       <div id="resources">

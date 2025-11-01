@@ -1,9 +1,10 @@
 ---
 import DefaultBody from '../layouts/DefaultBody.astro';
-import Hero   from '../components/Hero.astro';
+import Hero from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
+import Figure from '../components/Figure.astro';
 
 import '../styles/imagesizes.css';
 ---
@@ -35,6 +36,17 @@ import '../styles/imagesizes.css';
         If it's an APK file, use an emulator.<br><br><a href="https://www.vmware.com/topics/glossary/content/virtual-machine" target="_blank" rel="noopener noreferrer">More information on Virtual Machines (VM) </a><br><a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
         </p>
       </div> 
+      <hr>
+      <div id="history">
+        <h2> History </h2>
+        <div id="article" class="h-100">
+          <Figure 
+            image={[{ src: "/media/images/noodle.webp", alt: "Noodle Hackerspace Logo.", width: "50%", additionalClasses: "rounded-1" }]} 
+            caption="The Noodle Hackerspace logo is owned by AT Products LLC. All rights reserved." 
+          />
+          <p>The Noodle Hackerspace was founded on May 27th, 2022 from inspiration from <a href="/codinghome">CodingHome</a>, by <a href="/pynx/">Pynx</a> and Lynx. The community was mostly posting their code snippets, and went inactive very early the same year.</p>
+        </div>
+      </div>
       <hr>
       <div id="resources">
         <h2> Resources </h2>
