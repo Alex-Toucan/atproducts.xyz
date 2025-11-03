@@ -263,10 +263,6 @@ a {
   text-align: center;
 }
 
-.modal, .modal-open, .modal-open .navbar {
-  padding-right: 0 !important;
-}
-
 .dropdown-item {
   border-radius: var(--bs-border-radius-sm);
 }
@@ -6542,13 +6538,6 @@ a {
     width: 33%
   }
 }
-.modal .btn {
-  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x) !important;
-}
-
-.modal {
-  text-align: left !important;
-}
 
 .icon-bar a {
 	display: inline-block;
@@ -6627,10 +6616,6 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   html.fixedtopnavimage-breadcrumb, html.fixedtopnavimage-breadcrumb {
     scroll-padding-top: calc(103px + 5px);
   }
-}
-
-.modal-body-title, .title {
-    padding-top: .625rem;
 }
 
 .main-navbar {
