@@ -9,7 +9,7 @@ import Figure from '../components/Figure.astro';
 import '../styles/imagesizes.css';
 ---
 
-<DefaultBody title="The Script Community" heroid="script" icon="vibrant2.png" color="#404eed" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus" figure="true">
+<DefaultBody title="The Script Community" heroid="script" icon="vibrant2.png" color="#404eed" description="The Script Community is for hacking enthusiasts to share their knowledge." keywords="Scripts, viruses, coding," author="Alex Toucan & Nasus">
 <div id="page"> 
   <Navbar />
   <div class="alert alert-dark mb-0" role="alert">
@@ -29,13 +29,18 @@ import '../styles/imagesizes.css';
       <hr>
       <div id="history">
         <h2> History </h2>
-        <div id="article" class="text-md-start h-100">
-          <Figure 
-            image={[{ src: "/media/images/vibrant2.png", alt: "The Script Community Logo.", width: "50%", additionalClasses: "rounded-1" }]} 
-            caption="The Script Community logo is owned by AT Products LLC. All rights reserved." 
-          />
-          <p>The Script Community was founded around late 2021, and dissolved as early as January of 2022 when the Discord Server got banned. The community focused on numerous Cybersecurity topics, including hacking, programming languages, etc. The creator's nickname at the time was <i>Nasus</i>, but cannot be found on the internet to this very day.</p>
-        </div>
+        <Figure 
+          image={[{ src: "/media/images/vibrant2.png", alt: "The Script Community Logo.", width: "50%", additionalClasses: "rounded-1" }]} 
+          caption="The Script Community logo is owned by AT Products LLC. All rights reserved.">
+          <Fragment slot="history-content">
+            <p> The Script Community was founded on October 15th, 2021 by Nasus and Alex Toucan as a community for individuals interested in scripting, coding, and hacking. The community aimed to provide a platform for learning, sharing knowledge, and collaborating on projects related to scripting and ethical hacking practices. <br>
+              <br>
+              Over the years, The Script Community has grown into a vibrant community with members from diverse backgrounds, including students, professionals, and hobbyists. The community has organized various workshops, webinars, and script-sharing events to promote scripting skills and raise awareness about cybersecurity threats. <br>
+              <br>
+              The Script Community continues to evolve, embracing new technologies and methodologies in the field of scripting and ethical hacking. The community remains committed to fostering a safe and supportive environment for its members to learn and grow in their scripting journey.
+            </p>
+          </Fragment>
+        </Figure>
       </div>
       <hr>
       <div id="resources">

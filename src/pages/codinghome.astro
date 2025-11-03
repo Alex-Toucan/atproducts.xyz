@@ -36,15 +36,19 @@ import '../styles/imagesizes.css';
         </p>
       </div>
       <hr>
-            <div id="history">
+      <div id="history">
         <h2> History </h2>
-        <div id="article" class="text-md-start h-100">
-          <Figure 
-            image={[{ src: "/media/images/codinghome.webp", alt: "CodingHome Logo.", width: "50%", additionalClasses: "rounded-1" }]} 
-            caption="CodingHome logo is owned by AT Products LLC. All rights reserved." 
-          />
-          <p>CodingHome was founded on June 9th, 2021, and moved servers on March 18th, 2025, and remains the only active ATPLLC Discord community. The community is focused on giving help to mostly new coding beginners, and contains Discord bulletins for ATPLLC! </p>
-        </div>
+        <Figure 
+          image={[{ src: "/media/images/codinghome.webp", alt: "CodingHome Logo.", width: "50%", additionalClasses: "rounded-1" }]} 
+          caption="CodingHome logo is owned by AT Products LLC. All rights reserved.">
+          <Fragment slot="history-content">
+            <p> CodingHome was founded on June 9th, 2021 by Alex Toucan and CodingLive as a place for coders and web developers to come together and share their knowledge and projects. Over the years, it has grown into a vibrant community with members from all around the world. <br>
+              <br>
+              The community focuses on various programming languages, web development frameworks, and coding best practices. Members can participate in coding challenges, collaborate on open-source projects, and attend virtual meetups and workshops. <br>
+              <br>
+              CodingHome has become a hub for learning and innovation, fostering a supportive environment where both beginners and experienced developers can thrive. The community continues to evolve, embracing new technologies and trends in the ever-changing landscape of coding and web development.
+            </p>
+        </Figure>
       </div>
       <hr>
       <div id="resources">
