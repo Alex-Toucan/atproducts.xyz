@@ -1,0 +1,13 @@
+ ---
+const { image, caption } = Astro.props;
+---
+
+<div id="article" class="text-md-start h-100 d-flex flex-column-reverse flex-md-row">
+  <slot name="history-content" />
+  <figure class="col-5 col-sm-4 col-md-3 col-lg-2 ms-md-3 my-2 mt-md-0 mb-0 mx-auto mb-mmd-3 text-center">
+    {image && image.map(({ src, alt, width, additionalClasses }) => (
+        <img src={src} alt={alt} width={width} class={`mx-auto ${additionalClasses}`} />
+    ))}
+    {caption ? <figcaption class="figure-caption my-2"><a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={caption} class="text-reset text-decoration-dashed">Copyright information</a></figcaption> : null}
+  </figure>
+</div>
