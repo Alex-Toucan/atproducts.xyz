@@ -91,7 +91,7 @@ button {
     color: var(--bs-link-hover-color-rgb) !important;
   }
   & .dropdown:not(.dropdown .subdropdown) a {
-    color: var(--bs-dropdown-link-color);
+    color: var(--bs-dropdown-link-color) !important;
   }
   & .dropdown-item {
     color: inherit;
