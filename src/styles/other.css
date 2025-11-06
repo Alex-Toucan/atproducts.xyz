@@ -7109,3 +7109,7 @@ html.fixedtopnavimage {
 .back-arrow {
 	font-size: 32px;
 }
+
+.text-box {
+  height: 150px !important;
+}
