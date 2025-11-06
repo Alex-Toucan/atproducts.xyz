@@ -8,6 +8,10 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url"
 import jquery from "jquery/dist/jquery.min.js?url";
 import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
 
+/* Preload Scripts */
+import darkmode from '../scripts/darkmode.js?url';
+import navbar from '../scripts/navbar.js?url';
+
 import '../styles/navbar.css';
 import '../styles/other.css';
 import '../styles/cookie.css';
@@ -17,9 +21,8 @@ import '../styles/cookie.css';
 <html class="fixedtopnavimage" lang="en">
   <head>
       <title>{title}</title> 
-      <link rel="preload" as="script" href="/static/darkmode.js">
-      <link rel="preload" as="script" href="/static/alert-1.js">
-      <link rel="preload" as="script" href="/static/alert-2.js">
+      <script src={darkmode}></script>
+      <script src={navbar}></script>
       {heroid ?
         <Fragment>
         <link rel="preload" as="image" href={`/media/images/hero-${heroid}.webp`}>
@@ -80,7 +83,6 @@ import '../styles/cookie.css';
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <Fragment set:html={additionalContent}>
-      <script is:inline src="/static/darkmode.js"></script>
   </head>
   <body class="fixedtopnavimage">
     <Fragment>  
@@ -90,18 +92,17 @@ import '../styles/cookie.css';
       <script src={bootstrap}></script>
       <script src={jquery}></script>
       <script src={jqueryui}></script>
-      <script is:inline src="/static/navbar.js" defer></script>
-      <script is:inline src="/static/message.js"></script>
-      <script is:inline src="/static/scroll.js"></script>
-      <script is:inline src="/static/purecookie.js"></script>
-      <script is:inline src="/static/alert-1.js"></script>
-      <script is:inline src="/static/alert-2.js"></script>
-      <script is:inline src="/static/enabler.js"></script>
+      <script src="../scripts/message.js"></script>
+      <script src="../scripts/scroll.js"></script>
+      <script src="../scripts/purecookie.js"></script>
+      <script src="../scripts/alert-1.js"></script>
+      <script src="../scripts/alert-2.js"></script>
+      <script src="../scripts/enabler.js"></script>
       {fourofour && (
-        <script is:inline src="/static/404.js"></script>
+        <script src="../scripts/404.js"></script>
       )}
       {index && (
-        <script is:inline src="/static/index.js"></script>
+        <script src="../scripts/index.js"></script>
       )}    
     </Fragment>
   </body>
