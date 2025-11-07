@@ -6984,3 +6984,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 .info-box {
   height: 150px !important;
 }
+
+.title {
+  padding-top: .625rem;
+}
