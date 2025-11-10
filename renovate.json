@@ -4,22 +4,15 @@
     "config:recommended"
   ],
   "labels": [
-    "dependencies"
+    "📦 dependencies"
   ],
   "packageRules": [
-    {
-      "groupName": "all dependencies",
-      "rangeStrategy": "bump",
-      "matchPackageNames": [
-        "*"
-      ]
-    },
     {
       "groupName": "Astro packages",
       "rangeStrategy": "bump",
       "matchPackageNames": [
         "/^astro/",
-        "/^@astrojs//"
+        "/^@astrojs/"
       ]
     },
     {
@@ -53,7 +46,7 @@
         "!/^@types/react/",
         "!/^react-dom/",
         "!/^astro/",
-        "!/^@astrojs//",
+        "!/^@astrojs/",
         "!/^bootstrap/",
         "!/^bootstrap-icons/",
         "!/^jquery/",

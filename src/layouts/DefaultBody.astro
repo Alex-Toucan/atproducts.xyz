@@ -1,5 +1,5 @@
 ---
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy, breadcrumb } = Astro.props;
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, fourofour, accordion, scrollspy, breadcrumb } = Astro.props;
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -109,21 +109,18 @@ if (highlight) {
       <script src="../scripts/alert-1.js"></script>
       <script src="../scripts/alert-2.js"></script>
       <script src="../scripts/enabler.js"></script>
-      {fourofour && (
+      {index === true && (
+        <script src="../scripts/index.js"></script>
+      )}    
+      {fourofour === true && (
         <script src="../scripts/404.js"></script>
       )}
-      {modal && (
-        <script src="../scripts/modal-id.js"></script>
-      )} 
       {accordion && (
         <script src="../scripts/accordion-id.js"></script>
       )}    
       {scrollspy && (
         <script src="../scripts/scrollspy-id.js"></script>
       )}
-      {index && (
-        <script src="../scripts/index.js"></script>
-      )}    
     </Fragment>
   </body>
 </html>
