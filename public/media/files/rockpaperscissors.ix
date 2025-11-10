@@ -1,0 +1,14 @@
+(var score {:one 0 :two 0} tally 0)
+
+(function show-input c1 c2 (print "Input recieved: " c1 " against " c2) [c1 c2])
+(function win-by? winner check
+  ([["scissors" "paper"] ["rock" "scissors"] ["paper" "rock"]] args))
+(function add-win to
+  (print to " won!")
+  (var! score update-at [to] inc) 
+  (var! tally inc))
+(function rock-paper-scissors c1 c2
+  (when (= c1 c2) "draw")
+  (if (win-by? c1 c2) (add-win :one) (add-win :two)))
+
+(while (< tally 5) (.. rock-paper-scissors (show-input (prompt "Select your hand, 1") (prompt "Select your hand, 2"))))
