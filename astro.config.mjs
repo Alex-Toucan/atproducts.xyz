@@ -25,7 +25,7 @@ export default defineConfig({
         ]
       },
       directives: [
-        "default-src 'none'",
+        "default-src 'self'",
         "frame-src 'self' https://app.netlify.com/ https://codepen.io",
         "form-action 'self'",
         "base-uri 'self'",
