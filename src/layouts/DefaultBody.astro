@@ -1,6 +1,4 @@
 ---
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, fourofour, accordion, scrollspy, breadcrumb } = Astro.props;
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url"
@@ -12,12 +10,10 @@ import '../styles/navbar.css';
 import '../styles/other.css';
 import '../styles/cookie.css';
 
-/* Preload Scripts */
-import darkmode from '../scripts/darkmode.js?url';
-import navbar from '../scripts/navbar.js?url';
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, fourofour, accordion, scrollspy, breadcrumb } = Astro.props;
 
 if (highlight) {
-  import '../styles/highlight.css';
+  import('../styles/highlight.css');
 }
 ---
 
@@ -25,8 +21,8 @@ if (highlight) {
 <html class={`${breadcrumb === 'true' ? 'fixedtopnavimage-breadcrumb' : 'fixedtopnavimage'}`} lang="en">
   <head>
       <title>{title}</title> 
-      <script src={darkmode}></script>
-      <script src={navbar}></script>
+      <script is:inline src="/scripts/darkmode.js"></script>
+      <script is:inline src="/scripts/navbar.js"></script>
       {heroid ?
         <Fragment>
         <link rel="preload" as="image" href={`/media/images/hero-${heroid}.webp`}>
@@ -80,11 +76,11 @@ if (highlight) {
       <meta property="og:title" content={title}>
       <meta property="og:description" content={description}>
       <meta property="og:site_name" content="AT Products LLC">
-      {color ?
+      {color ? (
         <meta name="theme-color" content={color}>
-        :
+      ) : (
         <meta name="theme-color" content="#212529">
-      }
+      )}
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <Fragment set:html={additionalContent} />
@@ -98,28 +94,30 @@ if (highlight) {
       <script src={jquery}></script>
       <script src={jqueryui}></script>
       {highlight && (
-        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
-        <script>hljs.highlightAll();</script>
-        <script src="../scripts/copy.js"></script>
+        <Fragment>
+          <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+          <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
+          <script is:inline>hljs.highlightAll();</script>
+          <script is:inline src="/scripts/copy.js"></script>
+        </Fragment>
       )}
-      <script src="../scripts/message.js"></script>
-      <script src="../scripts/scroll.js"></script>
-      <script src="../scripts/purecookie.js"></script>
-      <script src="../scripts/alert-1.js"></script>
-      <script src="../scripts/alert-2.js"></script>
-      <script src="../scripts/enabler.js"></script>
+      <script is:inline src="/scripts/message.js"></script>
+      <script is:inline src="/scripts/scroll.js"></script>
+      <script is:inline src="/scripts/purecookie.js"></script>
+      <script is:inline src="/scripts/alert-1.js"></script>
+      <script is:inline src="/scripts/alert-2.js"></script>
+      <script is:inline src="/scripts/enabler.js"></script>
       {index && (
-        <script src="../scripts/index.js"></script>
+        <script is:inline src="/scripts/index.js"></script>
       )}    
       {fourofour && (
-        <script src="../scripts/404.js"></script>
+        <script is:inline src="/scripts/404.js"></script>
       )}
       {accordion && (
-        <script src="../scripts/accordion-id.js"></script>
+        <script is:inline src="/scripts/accordion-id.js"></script>
       )}    
       {scrollspy && (
-        <script src="../scripts/scrollspy-id.js"></script>
+        <script is:inline src="/scripts/scrollspy-id.js"></script>
       )}
     </Fragment>
   </body>
