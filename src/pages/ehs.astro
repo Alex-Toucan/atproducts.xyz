@@ -4,6 +4,7 @@ import Hero   from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
+import Figure from '../components/Figure.astro';
 ---
 
 <DefaultBody title="Ethical Hacking Society" heroid="ehs" description="The Ethical Hacking Society is about ethical hacking as a whole." keyword="scripts, viruses, coding," author="Alex Toucan & CobraCommander">
@@ -32,6 +33,22 @@ import BackToTop from '../components/BackToTop.astro';
           <br>
           <a href="https://developer.android.com/studio/run/emulator" target="_blank" rel="noopener noreferrer">More information on APK Emulators</a>
         </p>
+      </div>
+      <hr>
+      <div id="history">
+        <h2> History </h2>
+        <Figure 
+          image={[{ src: "/media/images/ehs.webp", alt: "Ethical Hacking Society Logo.", width: "50%", additionalClasses: "rounded-1" }]} 
+          caption="The Ethical Hacking Society logo is owned by AT Products LLC. All rights reserved.">
+          <Fragment slot="history-content">
+            <p> The Ethical Hacking Society (EHS) was founded in August 12th, 2021 by CobraCommander and Alex Toucan as a community for individuals interested in ethical hacking and cybersecurity. The society aimed to provide a platform for learning, sharing knowledge, and collaborating on projects related to ethical hacking practices. <br>
+              <br>
+              Over the years, EHS has grown into a vibrant community with members from diverse backgrounds, including students, professionals, and hobbyists. The society has organized various workshops, webinars, and hackathons to promote ethical hacking skills and raise awareness about cybersecurity threats. <br>
+              <br>
+              EHS continues to evolve, embracing new technologies and methodologies in the field of ethical hacking. The community remains committed to fostering a safe and supportive environment for its members to learn and grow in their cybersecurity journey.
+            </p>
+          </Fragment>
+        </Figure>
       </div>
       <hr>
       <div id="resources" class="text-center">

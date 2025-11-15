@@ -1,6 +1,4 @@
 ---
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy, breadcrumb } = Astro.props;
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url"
@@ -12,8 +10,10 @@ import '../styles/navbar.css';
 import '../styles/other.css';
 import '../styles/cookie.css';
 
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, fourofour, accordion, scrollspy, breadcrumb } = Astro.props;
+
 if (highlight) {
-  import '../styles/highlight.css';
+  import('../styles/highlight.css');
 }
 ---
 
@@ -21,9 +21,8 @@ if (highlight) {
 <html class={`${breadcrumb === 'true' ? 'fixedtopnavimage-breadcrumb' : 'fixedtopnavimage'}`} lang="en">
   <head>
       <title>{title}</title> 
-      <link rel="preload" as="script" href="/static/darkmode.js">
-      <link rel="preload" as="script" href="/static/alert-1.js">
-      <link rel="preload" as="script" href="/static/alert-2.js">
+      <script is:inline src="/scripts/darkmode.js"></script>
+      <script is:inline src="/scripts/navbar.js"></script>
       {heroid ?
         <Fragment>
         <link rel="preload" as="image" href={`/media/images/hero-${heroid}.webp`}>
@@ -50,6 +49,7 @@ if (highlight) {
           <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
           <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
           <link rel="icon" type="image/png" href="/media/favicon/android-chrome-192x192.png">
+          <link rel="icon" type="image/png" sizes="192x192" href="/media/favicon/android.png">
           <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
           <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
           <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
@@ -76,16 +76,14 @@ if (highlight) {
       <meta property="og:title" content={title}>
       <meta property="og:description" content={description}>
       <meta property="og:site_name" content="AT Products LLC">
-      {color ?
+      {color ? (
         <meta name="theme-color" content={color}>
-        :
+      ) : (
         <meta name="theme-color" content="#212529">
-      }
+      )}
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <Fragment set:html={additionalContent} />
-      <script is:inline src="/static/darkmode.js"></script>
-      <script is:inline src="/static/navbar.js"></script>
   </head>
   <body class={`${breadcrumb === 'true' ? 'fixedtopnavimage-breadcrumb' : 'fixedtopnavimage'}`}>
     <Fragment>  
@@ -96,32 +94,31 @@ if (highlight) {
       <script src={jquery}></script>
       <script src={jqueryui}></script>
       {highlight && (
-        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
-        <script>hljs.highlightAll();</script>
-        <script is:inline src="/static/copy.js"></script>
+        <Fragment>
+          <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+          <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
+          <script is:inline>hljs.highlightAll();</script>
+          <script is:inline src="/scripts/copy.js"></script>
+        </Fragment>
       )}
-      <script is:inline src="/static/message.js"></script>
-      <script is:inline src="/static/scroll.js"></script>
-      <script is:inline src="/static/purecookie.js"></script>
-      <script is:inline src="/static/alert-1.js"></script>
-      <script is:inline src="/static/alert-2.js"></script>
-      <script is:inline src="/static/enabler.js"></script>
+      <script is:inline src="/scripts/message.js"></script>
+      <script is:inline src="/scripts/scroll.js"></script>
+      <script is:inline src="/scripts/purecookie.js"></script>
+      <script is:inline src="/scripts/alert-1.js"></script>
+      <script is:inline src="/scripts/alert-2.js"></script>
+      <script is:inline src="/scripts/enabler.js"></script>
+      {index && (
+        <script is:inline src="/scripts/index.js"></script>
+      )}    
       {fourofour && (
-        <script is:inline src="/static/404.js"></script>
+        <script is:inline src="/scripts/404.js"></script>
       )}
-      {modal && (
-        <script is:inline src="/static/modal-id.js"></script>
-      )} 
       {accordion && (
-        <script is:inline src="/static/accordion-id.js"></script>
+        <script is:inline src="/scripts/accordion-id.js"></script>
       )}    
       {scrollspy && (
-        <script is:inline src="/static/scrollspy-id.js"></script>
+        <script is:inline src="/scripts/scrollspy-id.js"></script>
       )}
-      {index && (
-        <script is:inline src="/static/index.js"></script>
-      )}    
     </Fragment>
   </body>
 </html>
