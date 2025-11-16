@@ -1,0 +1,14 @@
+---
+const games = [
+  { name: "lorem", href: "#lorem" },
+  { name: "ipsum", href: "#ipsum" }
+];
+---
+
+<div class="d-grid gap-2 list-group">
+  <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search" id="searchInput" />
+  <hr class="my-2">
+  {games && games.map(({ name, href }, index) => (
+    <a class="list-group-item list-group-item-action" type="button" href={href}>{name}</a>
+  ))}
+</div>

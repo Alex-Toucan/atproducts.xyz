@@ -1,12 +1,10 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   integrations: [
     react(),
   ],
-  adapter: netlify(),
   experimental: {
     csp: {
       styleDirective: {
@@ -26,7 +24,7 @@ export default defineConfig({
       },
       directives: [
         "default-src 'self'",
-        "frame-src 'self' https://app.netlify.com/ https://codepen.io",
+        "frame-src 'self' https://app.netlify.com/ https://codepen.io https://javaspence.github.io/",
         "form-action 'self'",
         "base-uri 'self'",
         "manifest-src 'self'",

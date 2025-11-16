@@ -1,0 +1,50 @@
+:root {
+  --bs-btn-border-radius: .25rem;
+}
+
+.main-table {
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 70px 1fr
+}
+
+.primary-section {
+  background-color: #17191C;
+}
+
+.secondary-section {
+  background-color: #1d2124;
+}
+
+.list-group {
+  & .list-group-item {
+    border-width: 1px !important;
+    border-radius: var(--bs-btn-border-radius) !important;
+  }
+}
+
+button.link-game {
+  background: transparent;
+  border: 0;
+}
+
+.link-game {
+    color: RGBA(var(--bs-dark-rgb, var(--bs-link-opacity, 1)));
+    -webkit-text-decoration-color: RGBA(var(--bs-dark-rgb),var(--bs-link-underline-opacity, 1));
+    text-decoration-color: RGBA(var(--bs-dark-rgb),var(--bs-link-underline-opacity, 1))
+}
+
+[data-bs-theme=dark] .link-game {
+    color: var(--bs-secondary-color)!important
+}
+
+.link-game:hover,.link-game:focus {
+    color: RGBA(26,30,33,var(--bs-link-opacity, 1));
+    -webkit-text-decoration-color: RGBA(26,30,33,var(--bs-link-underline-opacity, 1));
+    text-decoration-color: RGBA(26,30,33,var(--bs-link-underline-opacity, 1))
+}
+
+[data-bs-theme=dark] .link-game:hover, [data-bs-theme=dark] .link-game:focus  {
+  color: #d6dade !important;
+  -webkit-text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
+  text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
+}
