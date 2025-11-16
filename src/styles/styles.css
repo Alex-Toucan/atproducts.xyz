@@ -22,6 +22,10 @@
   }
 }
 
+[data-bs-theme=dark] .main-image {
+  filter: invert(1);
+}
+
 button.link-game {
   background: transparent;
   border: 0;
