@@ -19,7 +19,7 @@
       includeSubDomains; 
       preload'''
     Content-Security-Policy = '''
-      default-src 'self'; 
+      default-src 'self' data:; 
       frame-src 'self' https://app.netlify.com/ https://codepen.io; 
       form-action 'self'; 
       base-uri 'self'; 
