@@ -20,6 +20,7 @@
       preload'''
     Content-Security-Policy = '''
       default-src 'self' data:; 
+      connect-src 'self' data: https://cdnjs.cloudflare.com;
       media-src 'self' data: https://raw.githubusercontent.com/daleharvey;
       frame-src 'self' https://app.netlify.com/ https://codepen.io; 
       form-action 'self'; 
