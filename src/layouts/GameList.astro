@@ -1,9 +1,18 @@
 ---
 const games = [
+  { name: "2048", href: "/2048" },
+  { name: "Among Us", href: "/amongus" },
+  { name: "BitLife", href: "/bitlife" },
+  { name: "Chrome Dino", href: "/chromedino" },
   { name: "Cookie Clicker", href: "/cookieclicker" },
+  { name: "Doodle Jump", href: "/doodlejump" },
+  { name: "Flappy Bird", href: "/flappybird" },
+  { name: "Mario", href: "/mario" },
+  { name: "Pacman", href: "/pacman" },
   { name: "Retro Bowl", href: "/retrobowl" },
-  { name: "Slope", href: "/slope" }
-];
+  { name: "Slope", href: "/slope" },
+  { name: "Subway Surfers", href: "/subwaysurfers" },
+].sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <div class="d-grid gap-2 list-group">
