@@ -15,7 +15,6 @@ const { title, description, keywords, author, additionalContent } = Astro.props;
 <html class="fixedtopnavimage" lang="en">
   <head>
       <title>{title}</title> 
-      <script is:inline src="/scripts/darkmode.js"></script>
       <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
       <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
       <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
@@ -61,6 +60,7 @@ const { title, description, keywords, author, additionalContent } = Astro.props;
 
       <script is:inline src="/scripts/fullscreen.js"></script>
       <script is:inline src="/scripts/search.js"></script>
+      <script is:inline src="/scripts/enabler.js"></script>
     </Fragment>
   </body>
 </html>
