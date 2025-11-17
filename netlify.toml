@@ -9,7 +9,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "ALLOW"
     X-XSS-Protection = "1"
     X-Content-Type-Options = "nosniff"
 #   Cache-Control = '''
