@@ -40,6 +40,12 @@ const { title, link, scrolling } = Astro.props;
               <span class="visually-hidden">Fullscreen</span>
             </button>
           </div>
+          <div class="d-flex gap-2">
+            <a href={link} class="link-game" id="fullScreenBtn" type="button" target="_blank" rel="noopener noreferrer" aria-label="Play in a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="New Tab">
+              <i class="bi bi-box-arrow-in-up-right" aria-hidden="true"></i>
+              <span class="visually-hidden">New Tab</span>
+            </a>
+          </div>
         </div>
         {link && (
           <div id="game" class="mt-3 rounded-2 ratio ratio-16x9">
