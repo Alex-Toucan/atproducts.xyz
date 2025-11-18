@@ -32,6 +32,7 @@ const { title, link, scrolling } = Astro.props;
     <!-- Bottom right: main content -->
     <div class="main-content p-4">
       <div class="container">
+        {link && (
         <div class="d-flex justify-content-between">
           <h2>{title}</h2>
           <div class="d-flex gap-2">
@@ -50,6 +51,7 @@ const { title, link, scrolling } = Astro.props;
             <iframe class="rounded-2 d-block mx-auto" scrolling={`${scrolling === 'true' ? 'yes' : 'no'}`} frameborder="0" allowtransparency="true" src={link} id="full-screen"></iframe>
           </div>
         )}
+      )}
       </div>
     </div>
   </div>
