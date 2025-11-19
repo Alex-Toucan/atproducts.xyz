@@ -9,7 +9,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1"
     X-Content-Type-Options = "nosniff"
     Strict-Transport-Security = '''
