@@ -46,3 +46,4 @@
     Access-Control-Allow-Origin = "*"
     X-UA-Compatible = "IE=edge"
     Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
