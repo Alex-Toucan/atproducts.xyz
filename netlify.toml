@@ -12,8 +12,6 @@
     X-Frame-Options = "ALLOW"
     X-XSS-Protection = "1"
     X-Content-Type-Options = "nosniff"
-#   Cache-Control = '''
-#     max-age=6000'''
     Strict-Transport-Security = '''
       max-age=31536000; 
       includeSubDomains; 
@@ -47,3 +45,5 @@
     Referrer-Policy = "strict-origin"
     Access-Control-Allow-Origin = "*"
     X-UA-Compatible = "IE=edge"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
