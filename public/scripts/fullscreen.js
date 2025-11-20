@@ -4,11 +4,3 @@ $('#fullScreenBtn').on('click', function() {
         elem.requestFullscreen();
     }
 });
-
-// Select the first ruffle-object on the page
-const ruffleEl = document.querySelector("ruffle-object");
-
-// Add the id
-if (ruffleEl) {
-  ruffleEl.id = "full-screen";
-}
