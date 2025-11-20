@@ -2,13 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new MutationObserver((mutations, obs) => {
     const ruffleObj = document.querySelector("ruffle-object");
     if (ruffleObj) {
-      // Add the id to the ruffle-object itself
+      // Add the id
       ruffleObj.id = "full-screen";
 
-      // Target the outer #container (not inside ruffle-object)
-      const container = document.querySelector("ruffle-object #container canvas");
-      if (container) {
-        container.classList.add("rounded-2");
+      // Access the shadow DOM and add class to #container
+      if (ruffleObj.shadowRoot) {
+        const container = ruffleObj.shadowRoot.querySelector("#container");
+        if (container) {
+          container.classList.add("rounded-2");
+        }
       }
 
       // Stop observing once we've done our job
