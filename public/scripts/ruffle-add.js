@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new MutationObserver((mutations, obs) => {
     const ruffleObj = document.querySelector("ruffle-object");
@@ -20,4 +19,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // Observe the whole document for added nodes
   observer.observe(document.body, { childList: true, subtree: true });
 });
-</script>
