@@ -1,5 +1,5 @@
 ---
-const { title, link, scrolling } = Astro.props;
+const { title, link, scrolling, ruffle } = Astro.props;
 ---
 
 <div class="d-lg-grid vh-100 main-table">
@@ -47,8 +47,24 @@ const { title, link, scrolling } = Astro.props;
             </div>
           </div>
           <div id="game" class="mt-3 rounded-2 ratio ratio-16x9">
-            <iframe class="rounded-2 d-block mx-auto" scrolling={`${scrolling === 'true' ? 'yes' : 'no'}`} frameborder="0" allowtransparency="true" src={link} id="full-screen"></iframe>
-          </div>
+						{ruffle ? (
+            	<object
+              	class="rounded-2 d-block mx-auto"
+              	data={link}
+              	type="application/x-shockwave-flash"
+              	width="100%"
+            		height="100%"
+            	>
+              	<param name="allowScriptAccess" value="sameDomain" />
+              	<param name="allowFullScreen" value="true" />
+             	 	<param name="wmode" value="direct" />
+              	<!-- Fallback message -->
+              	Flash content requires Ruffle. If you see this, Ruffle did not initialize.
+            	</object>
+						) : (
+            	<iframe class="rounded-2 d-block mx-auto" scrolling={`${scrolling === 'true' ? 'yes' : 'no'}`} frameborder="0" allowtransparency="true" src={link} id="full-screen"></iframe>
+          	)}
+					</div>
         ) : (
           <slot name="page-content" />
         )}
