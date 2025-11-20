@@ -16,32 +16,6 @@
       max-age=31536000; 
       includeSubDomains; 
       preload'''
-    Content-Security-Policy = '''
-      default-src 'self' data:; 
-      connect-src 'self' data: https://cdnjs.cloudflare.com;
-      media-src 'self' data: https://raw.githubusercontent.com https://i.imgur.com;
-      frame-src 'self' https://app.netlify.com/ https://codepen.io; 
-      form-action 'self'; 
-      base-uri 'self'; 
-      manifest-src 'self'; 
-      font-src 'self' data: https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; 
-      object-src 'self'; 
-      script-src 'unsafe-inline' 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'unsafe-eval' blob:; 
-      style-src 'unsafe-hashes' 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline'; 
-      img-src 'self' data: https://i.imgur.com;
-      frame-ancestors 'self' '''
-    Features-Policy = "document-domain 'self';"
-    Permissions-Policy = '''
-      fullscreen=(self), 
-      geolocation=(), 
-      camera=(), 
-      browsing-topics=(), 
-      picture-in-picture=(self), 
-      payment=(), 
-      fullscreen=(self), 
-      autoplay=(self), 
-      encrypted-media=(self), 
-      interest-cohort=() '''
     Referrer-Policy = "strict-origin"
     Access-Control-Allow-Origin = "*"
     X-UA-Compatible = "IE=edge"
