@@ -8,7 +8,7 @@ import '../styles/styles.css';
 import jquery from "jquery/dist/jquery.min.js?url";
 import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
 
-const { title, description, keywords, author, additionalContent } = Astro.props;
+const { title, description, keywords, author, additionalContent, ruffle } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -58,9 +58,10 @@ const { title, description, keywords, author, additionalContent } = Astro.props;
       <script src={jquery}></script>
       <script src={jqueryui}></script>
       
-      <script is:inline src="https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.2.0-nightly.2025.11.20/ruffle.min.js"></script>
-      <script is:inline src="/scripts/ruffle-add.js"></script>
-
+      {ruffle && (
+ 	     <script is:inline src="https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.2.0-nightly.2025.11.20/ruffle.min.js"></script>
+  	     <script is:inline src="/scripts/ruffle-add.js"></script>
+      )}
       <script is:inline src="/scripts/fullscreen.js"></script>
       <script is:inline src="/scripts/search.js"></script>
       <script is:inline src="/scripts/enabler.js"></script>
