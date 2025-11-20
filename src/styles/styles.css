@@ -102,3 +102,7 @@ button.link-game {
   -webkit-text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
   text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1));
 }
+
+#container {
+	border-radius: .375rem !important;
+}
