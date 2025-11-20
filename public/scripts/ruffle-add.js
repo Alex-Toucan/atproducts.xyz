@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ruffleObj.id = "full-screen";
 
       // Target the outer #container (not inside ruffle-object)
-      const container = document.querySelector("#container");
+      const container = document.querySelector("canvas");
       if (container) {
         container.classList.add("rounded-2");
       }
