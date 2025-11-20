@@ -1,21 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const observer = new MutationObserver((mutations, obs) => {
-    const ruffleObj = document.querySelector("ruffle-object");
-    if (ruffleObj) {
-      // Add the id
-      ruffleObj.id = "full-screen";
+  // Apply to any existing ruffle-object immediately
+  document.querySelectorAll("ruffle-object").forEach(tweakRuffleObject);
 
-      // Apply border-radius to #container inside it
-      const container = ruffleObj.querySelector("#container");
-      if (container) {
-        container.style.borderRadius = ".375rem";
-      }
-
-      // Stop observing once we've done our job
-      obs.disconnect();
-    }
+  // Watch for ruffle-object elements injected later
+  const rootObserver = new MutationObserver(() => {
+    document.querySelectorAll("ruffle-object").forEach(tweakRuffleObject);
   });
+  rootObserver.observe(document.body, { childList: true, subtree: true });
 
-  // Observe the whole document for added nodes
-  observer.observe(document.body, { childList: true, subtree: true });
+  function tweakRuffleObject(el) {
+    // Add id once
+    if (!el.id) el.id = "full-screen";
+
+    const findContainer = () =>
+      el.querySelector(".container") ||
+      (el.shadowRoot && el.shadowRoot.querySelector(".container"));
+
+    const applyRadius = (node) => {
+      node.style.borderRadius = ".375rem";
+    };
+
+    const container = findContainer();
+    if (container) {
+      applyRadius(container);
+      return;
+    }
+
+    // If container isn't there yet, observe inside the element (and its shadowRoot if present)
+    const innerObserver = new MutationObserver(() => {
+      const c = findContainer();
+      if (c) {
+        applyRadius(c);
+        innerObserver.disconnect();
+      }
+    });
+
+    innerObserver.observe(el, { childList: true, subtree: true });
+    if (el.shadowRoot) {
+      innerObserver.observe(el.shadowRoot, { childList: true, subtree: true });
+    }
+  }
 });
