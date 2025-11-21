@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const container = ruffleObj.shadowRoot.querySelector("#container");
         if (container) {
           console.log("Found #container inside shadowRoot:", container);
-          container.classList.add("rounded-2");
-          console.log("Added class 'rounded-2' to #container");
+          container.style.borderRadius = ".375rem";
+          console.log("Applied style 'border-radius: .875rem' to #container");
         } else {
           console.log("No #container found yet inside shadowRoot");
         }
