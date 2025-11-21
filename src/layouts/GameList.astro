@@ -31,7 +31,7 @@ const games = [
 ].sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<div class="d-grid gap-2 list-group" style="height: calc(100vh - 80px - 4rem - 28.8px); overflow-y: auto">
+<div class="d-grid gap-2 list-group">
   <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search" id="searchInput" />
   <hr class="my-2">
   {games && games.map(({ name, href }, index) => (
