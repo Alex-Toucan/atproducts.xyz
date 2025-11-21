@@ -49,7 +49,8 @@ const { title, link, scrolling, ruffle } = Astro.props;
           <div id="game" class="mt-3 rounded-2 ratio ratio-16x9">
 						{ruffle ? (
             	<object
-              	class="rounded-2 d-block mx-auto"
+              	class="d-block mx-auto"
+                style="border-radius: .375rem;"
               	data={link}
               	type="application/x-shockwave-flash"
               	width="100%"
