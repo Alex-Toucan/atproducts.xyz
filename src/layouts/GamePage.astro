@@ -47,7 +47,7 @@ const { title, link, scrolling, ruffle, emulator } = Astro.props;
             </div>
           </div>
           <div id="game" class="mt-3 rounded-2 ratio ratio-16x9">
-		{emulator && (
+		{emulator ? (
 			<div id="emulator-game" />
 		) : ruffle ? (
             	<object
