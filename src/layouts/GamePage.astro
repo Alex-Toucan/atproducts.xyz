@@ -1,5 +1,5 @@
 ---
-const { title, link, scrolling, ruffle } = Astro.props;
+const { title, link, scrolling, ruffle, emulator } = Astro.props;
 ---
 
 <div class="d-lg-grid vh-100 main-table">
@@ -47,7 +47,10 @@ const { title, link, scrolling, ruffle } = Astro.props;
             </div>
           </div>
           <div id="game" class="mt-3 rounded-2 ratio ratio-16x9">
-						{ruffle ? (
+		{emulator && (
+			<div id="emulator-game" />
+		)}
+		{ruffle && (
             	<object
               	class="d-block mx-auto"
                 style="border-radius: .375rem;"
@@ -62,7 +65,8 @@ const { title, link, scrolling, ruffle } = Astro.props;
               	<!-- Fallback message -->
               	Flash content requires Ruffle. If you see this, Ruffle did not initialize.
             	</object>
-						) : (
+		)}
+		{link && (
             	<iframe class="rounded-2 d-block mx-auto" scrolling={`${scrolling === 'true' ? 'yes' : 'no'}`} frameborder="0" allowtransparency="true" src={link} id="full-screen"></iframe>
           	)}
 					</div>

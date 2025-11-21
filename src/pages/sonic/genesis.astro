@@ -1,0 +1,24 @@
+---
+import DefaultBody from "../../layouts/DefaultBody.astro";
+import GamePage from "../../layouts/GamePage.astro";
+import GameList from "../../layouts/GameList.astro";
+---
+
+<DefaultBody title="Sonic" description="Sonic the Hedgehog for the Sega Genesis is a fast-paced platformer starring the blue blur, Sonic, as he battles Dr. Robotnik to free animals from robotic captivity. Known for its speed, loop-de-loops, colorful zones, and catchy soundtrack, it became Sega’s flagship title and a cornerstone of 16-bit gaming." keywords="onic the Hedgehog, Sega Genesis, Sonic, Dr. Robotnik, retro gaming, platformer, 16-bit era, fast gameplay, Green Hill Zone, Sega classic, iconic video game" author="AT Products LLC" emulator="true">
+  <GamePage>
+    <GameList />
+  </GamePage emulator="true">
+  <Fragment slot="emulator-script">
+    <script type='text/javascript'>
+    EJS_player = '#emulator-game';
+    // Can also be fceumm or nestopia
+    EJS_core = 'segaMD';
+    // Lightgun
+    EJS_lightgun = false; // can be true or false
+    // URL to BIOS file
+    EJS_gameUrl = '/games/sonic/sonicgenesis.bin'; // https://dl.dropboxusercontent.com/s/[random-code]/Sonic.nes
+    // Path to the data directory
+    EJS_pathtodata = '/scripts/emulatorjs/data/';
+</script>
+  </Fragment>
+</DefaultBody>
