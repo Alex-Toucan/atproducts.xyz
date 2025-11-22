@@ -363,6 +363,16 @@
     left: 25%;
 }
 
+.ejs_menu_bar {
+    align-content: end !important;
+    flex-wrap: wrap !important;
+}
+
+.ejs_start_button {
+    position: absolute !important;
+    transform: translate(-50%, 400%) !important;
+}
+
 .ejs_small_screen .ejs_menu_bar {
     transition: opacity .4s ease-in-out, transform .4s ease-in-out;
     position: absolute;

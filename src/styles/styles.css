@@ -106,3 +106,7 @@ button.link-game {
 #container {
 	border-radius: .375rem !important;
 }
+
+.emulator::before {
+  padding-top: 0 !important;
+}

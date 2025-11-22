@@ -1,0 +1,27 @@
+---
+import DefaultBody from "../../layouts/DefaultBody.astro";
+import GamePage from "../../layouts/GamePage.astro";
+import GameList from "../../layouts/GameList.astro";
+---
+
+<DefaultBody title="Sonic Advance 2" 
+description="Turn speed into pure flow with blistering level design, new character moves, and massive bosses. Unlock Cream the Rabbit, race through sprawling acts, and perfect precision platforming in the fastest entry of the Sonic Advance trilogy." 
+keywords="Sonic Advance, Sonic Advance 2, Game Boy Advance, GBA, Sonic the Hedgehog, 2D platformer, classic Sonic, Chaos Emeralds, Chao Garden, spin dash, ring collecting, zone acts, boss fights, side-scrolling, retro platforming, SEGA handheld" 
+author="AT Products LLC" emulator="true">
+  <GamePage title="Sonic Advance 2" emulator="true" emulatorsource="/games/sonic/advance2.gba">
+    <GameList />
+  </GamePage>
+  <Fragment slot="emulator-script">
+    <script type='text/javascript'>
+    EJS_player = '#full-screen';
+    // Can also be fceumm or nestopia
+    EJS_core = 'gba';
+    // Lightgun
+    EJS_lightgun = false; // can be true or false
+    // URL to BIOS file
+    EJS_gameUrl = '/games/sonic/advance2.gba'; // https://dl.dropboxusercontent.com/s/[random-code]/Sonic.nes
+    // Path to the data directory
+    EJS_pathtodata = '/scripts/emulatorjs/data/';
+</script>
+  </Fragment>
+</DefaultBody>

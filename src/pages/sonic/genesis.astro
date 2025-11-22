@@ -5,12 +5,12 @@ import GameList from "../../layouts/GameList.astro";
 ---
 
 <DefaultBody title="Sonic" description="Sonic the Hedgehog for the Sega Genesis is a fast-paced platformer starring the blue blur, Sonic, as he battles Dr. Robotnik to free animals from robotic captivity. Known for its speed, loop-de-loops, colorful zones, and catchy soundtrack, it became Sega’s flagship title and a cornerstone of 16-bit gaming." keywords="onic the Hedgehog, Sega Genesis, Sonic, Dr. Robotnik, retro gaming, platformer, 16-bit era, fast gameplay, Green Hill Zone, Sega classic, iconic video game" author="AT Products LLC" emulator="true">
-  <GamePage>
+  <GamePage title="Sonic (Genesis)" emulator="true" emulatorsource="/games/sonic/sonicgenesis.bin">
     <GameList />
-  </GamePage emulator="true">
+  </GamePage>
   <Fragment slot="emulator-script">
     <script type='text/javascript'>
-    EJS_player = '#emulator-game';
+    EJS_player = '#full-screen';
     // Can also be fceumm or nestopia
     EJS_core = 'segaMD';
     // Lightgun

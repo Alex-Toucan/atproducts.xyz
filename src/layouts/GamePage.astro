@@ -1,5 +1,5 @@
 ---
-const { title, link, scrolling, ruffle, emulator } = Astro.props;
+const { title, link, scrolling, ruffle, emulator, emulatorsource } = Astro.props;
 ---
 
 <div class="d-lg-grid vh-100 main-table">
@@ -8,7 +8,7 @@ const { title, link, scrolling, ruffle, emulator } = Astro.props;
     <div class="offcanvas offcanvas-start border-0 secondary-section h-lg-100" id="offcanvasNavbar">
       <div class="offcanvas-body d-grid p-0" style="flex-grow: initial !important;">
         <div class="primary-section d-flex align-content-center flex-wrap justify-content-lg-center justify-content-between px-4 px-lg-0" style="height: 70px;">
-          <a href="/"><img src="/media/images/signature.png" height="30px" class="main-image"></a>
+          <a href="/"><img src="/media/images/signature.png" height="30px" class="main-image" /></a>
           <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close" style="height: initial !important;"></button>
         </div>
         <div class="p-4 secondary-section">
@@ -32,42 +32,89 @@ const { title, link, scrolling, ruffle, emulator } = Astro.props;
     <!-- Bottom right: main content -->
     <div class="main-content p-4">
       <div class="container">
-        {link ? (
-          <div class="d-flex justify-content-between">
-            <h2>{title}</h2>
-            <div class="d-flex gap-3">
-              <button class="link-game" id="fullScreenBtn" aria-label="Enter fullscreen mode" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Fullscreen">
-                <i class="bi bi-fullscreen" aria-hidden="true"></i>
-                <span class="visually-hidden">Fullscreen</span>
-              </button>
-              <a href={link} class="link-game d-flex align-content-center flex-wrap" id="fullScreenBtn" type="button" target="_blank" rel="noopener noreferrer" aria-label="Play in a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="New Tab">
-                <i class="bi bi-arrow-up-right-square" aria-hidden="true"></i>
-                <span class="visually-hidden">New Tab</span>
-              </a>
+        {link || emulator ? (
+          <>
+            <div class="d-flex justify-content-between">
+              <h2>{title}</h2>
+              <div class="d-flex gap-3">
+                <button
+                  class="link-game"
+                  id="fullScreenBtn"
+                  aria-label="Enter fullscreen mode"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  data-bs-title="Fullscreen"
+                >
+                  <i class="bi bi-fullscreen" aria-hidden="true"></i>
+                  <span class="visually-hidden">Fullscreen</span>
+                </button>
+                {link && (
+                  <a
+                    href={link}
+                    class="link-game d-flex align-content-center flex-wrap"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Play in a new tab"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    data-bs-title="New Tab"
+                  >
+                    <i class="bi bi-arrow-up-right-square" aria-hidden="true"></i>
+                    <span class="visually-hidden">New Tab</span>
+                  </a>
+                )}
+                {emulator && emulatorsource && (
+                  <a
+                    href={emulatorsource}
+                    class="link-game d-flex align-content-center flex-wrap"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Download ROM"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    data-bs-title="Download ROM"
+                  >
+                    <i class="bi bi-download" aria-hidden="true"></i>
+                    <span class="visually-hidden">Download ROM</span>
+                  </a>
+                )}
+              </div>
             </div>
-          </div>
-          <div id="game" class="mt-3 rounded-2 ratio ratio-16x9">
-		{emulator ? (
-			<div id="emulator-game" />
-		) : ruffle ? (
-            	<object
-              	class="d-block mx-auto"
-                style="border-radius: .375rem;"
-              	data={link}
-              	type="application/x-shockwave-flash"
-              	width="100%"
-            		height="100%"
-            	>
-              	<param name="allowScriptAccess" value="sameDomain" />
-              	<param name="allowFullScreen" value="true" />
-             	 	<param name="wmode" value="direct" />
-              	<!-- Fallback message -->
-              	Flash content requires Ruffle. If you see this, Ruffle did not initialize.
-            	</object>
-		) : (
-            	<iframe class="rounded-2 d-block mx-auto" scrolling={`${scrolling === 'true' ? 'yes' : 'no'}`} frameborder="0" allowtransparency="true" src={link} id="full-screen"></iframe>
-          	)}
-					</div>
+
+            {emulator ? (
+              <div id="game" class="mt-3">
+                <div id="full-screen" class="rounded-2 ratio ratio-16x9"></div>
+              </div>
+            ) : ruffle ? (
+              <div id="game" class="mt-3 rounded-2 ratio ratio-16x9">
+                <object
+                  class="d-block mx-auto"
+                  style="border-radius: .375rem;"
+                  data={link}
+                  type="application/x-shockwave-flash"
+                  width="100%"
+                  height="100%"
+                >
+                  <param name="allowScriptAccess" value="sameDomain" />
+                  <param name="allowFullScreen" value="true" />
+                  <param name="wmode" value="direct" />
+                  <!-- Fallback message -->
+                  Flash content requires Ruffle. If you see this, Ruffle did not initialize.
+                </object>
+              </div>
+            ) : (
+              <div id="game" class="mt-3 rounded-2 ratio ratio-16x9">
+                <iframe
+                  class="rounded-2 d-block mx-auto"
+                  scrolling={scrolling === "true" ? "yes" : "no"}
+                  frameborder="0"
+                  allowtransparency="true"
+                  src={link}
+                  id="full-screen"
+                ></iframe>
+              </div>
+            )}
+          </>
         ) : (
           <slot name="page-content" />
         )}
