@@ -4,23 +4,18 @@ import GamePage from "../layouts/GamePage.astro";
 import GameList from "../layouts/GameList.astro";
 ---
 
-<DefaultBody title="AT's Unblocked Games" description="Play AT's Unblocked Games online, the addictive sliding tile puzzle game where you combine numbers to reach the elusive AT's Unblocked Games tile. Challenge your mind and improve your strategic thinking skills!" keywords="AT's Unblocked Games, AT's Unblocked Games online, Play AT's Unblocked Games, Sliding tile puzzle, Number puzzle game, AT's Unblocked Games strategy, Brain teaser game, Free AT's Unblocked Games game" author="AT Products LLC">
+<DefaultBody title="AT's Unblocked Games" 
+description="Play unblocked games instantly: puzzle, arcade, casual, and series favorites like Papa’s, Riddle School, Sonic, Mario, Super Mario 64, and more. Organized for quick access and compatible via HTML5, Ruffle (Flash), and Emulator.js (console)." 
+keywords="unblocked games, play online, puzzle games, arcade classics, casual games, endless runners, Papa's Series, Riddle School, Sonic Advance, Sonic Genesis, Mario, Super Mario 64, Pacman, Minesweeper, 2048, Bloxorz, Chrome Dino, Flappy Bird, Doodle Jump, Slope, Subway Surfers, Snow Rider 3D, Retro Bowl, Bloons TD, school friendly games, browser games, HTML5, Ruffle, Emulator.js" 
+author="AT Products LLC">
   <GamePage title="AT's Unblocked Games">
     <GameList />
     <Fragment slot="page-content">
-      <h1 class="text-center display-3 fw-bold mb-2">AT's Unblocked Games</h1>
+      <h1 class="text-center display-3 fw-bold mb-4">AT's Unblocked Games</h1>
       <div class="text-center">
         <i class="fs-1 bi bi-controller mb-4"></i>
         <p class="fs-3 fw-semibold m-0">Browse by category and start playing instantly.</p>
         <p class="fs-5 text-muted">All games are organized for quick access — puzzle, arcade, casual, Papa’s Series, and more.</p>
-      </div>
-      <div class="text-center">
-        <p class="fs-6 text-muted my-3">
-          Made possible by 
-          <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank" rel="noopener">HTML5</a>, 
-          <a href="https://ruffle.rs/" target="_blank" rel="noopener">Ruffle</a>, and 
-          <a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank" rel="noopener">Emulator.js</a>.
-        </p>
       </div>
       <div class="d-flex gap-2 flex-items-2 flex-wrap">
         <div class="accordion col" id="gameAccordion">
@@ -140,6 +135,36 @@ import GameList from "../layouts/GameList.astro";
           </div>
 
         </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <h2 class="fs-2 fw-bold mb-3">
+          <i class="bi bi-envelope-fill me-2"></i> Contact & Requests
+        </h2>
+        <p class="text-muted">
+          <i class="bi bi-envelope-open me-1"></i>
+          Have a game request or feedback? Reach out at 
+          <a href="mailto:support@atproducts.xyz">support@atproducts.xyz</a>.
+        </p>
+        <p class="text-muted">
+          <i class="bi bi-github me-1"></i>
+          View the source code on 
+          <a href="https://github.com/Alex-Toucan/atproducts.xyz/tree/games" target="_blank" rel="noopener">GitHub</a>.
+        </p>
+      </div>
+      <hr>
+      <div class="text-center mt-4">
+        <p class="fw-semibold fs-6 text-muted">
+          &reg; 2025 AT Products LLC. All rights reserved. <br><br>
+          <i class="bi bi-layout-text-sidebar me-1"></i>
+          This website, its design, catalog structure, and descriptions are the property of AT Products LLC. <br>
+          <i class="bi bi-controller me-1"></i>
+          Games featured remain the property of their respective creators and are provided here for educational and entertainment purposes only. <br><br>
+          <i class="bi bi-code-slash me-1"></i>
+          Compatibility powered by HTML5, 
+          <a href="https://ruffle.rs/" target="_blank" rel="noopener">Ruffle</a>, and 
+          <a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank" rel="noopener">Emulator.js</a>.
+        </p>
       </div>
     </Fragment>
   </GamePage>
