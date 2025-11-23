@@ -48,7 +48,7 @@ const { title, link, scrolling, ruffle, emulator, emulatorsource } = Astro.props
                   <i class="bi bi-fullscreen" aria-hidden="true"></i>
                   <span class="visually-hidden">Fullscreen</span>
                 </button>
-                {link && (
+                {link && typeof ruffle === "undefined" && (
                   <a
                     href={link}
                     class="link-game d-flex align-content-center flex-wrap"
@@ -76,6 +76,21 @@ const { title, link, scrolling, ruffle, emulator, emulatorsource } = Astro.props
                   >
                     <i class="bi bi-download" aria-hidden="true"></i>
                     <span class="visually-hidden">Download ROM</span>
+                  </a>
+                )}
+                {ruffle && link && (
+                  <a
+                    href={link}
+                    class="link-game d-flex align-content-center flex-wrap"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Download .swf"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    data-bs-title="Download .swf"
+                  >
+                    <i class="bi bi-download" aria-hidden="true"></i>
+                    <span class="visually-hidden">Download .swf</span>
                   </a>
                 )}
               </div>
