@@ -1,5 +1,5 @@
 ---
-const { title, link, scrolling, ruffle, emulator, emulatorsource } = Astro.props;
+const { title, link, author, authorlink, scrolling, ruffle, emulator, emulatorsource } = Astro.props;
 ---
 
 <div class="d-lg-grid vh-100 main-table">
@@ -48,7 +48,7 @@ const { title, link, scrolling, ruffle, emulator, emulatorsource } = Astro.props
                   <i class="bi bi-fullscreen" aria-hidden="true"></i>
                   <span class="visually-hidden">Fullscreen</span>
                 </button>
-                {link && typeof ruffle === "undefined" && (
+                {link && !ruffle && (
                   <a
                     href={link}
                     class="link-game d-flex align-content-center flex-wrap"
@@ -122,12 +122,15 @@ const { title, link, scrolling, ruffle, emulator, emulatorsource } = Astro.props
                 <iframe
                   class="rounded-2 d-block mx-auto"
                   scrolling={scrolling === "true" ? "yes" : "no"}
-                  frameborder="0"
-                  allowtransparency="true"
+                  frameBorder="0"
+                  allowTransparency="true"
                   src={link}
                   id="full-screen"
                 ></iframe>
               </div>
+            )}
+            {author && authorlink && (
+              <small class="d-flex justify-content-center mt-3 fw-bold text-center"><span>Made by <a href={authorlink}>{author}</a>.</span></small>
             )}
           </>
         ) : (

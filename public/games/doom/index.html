@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Ustym Ukhman">
+    <meta name="theme-color" content="#00CC00">
+    <meta name="msapplication-TileColor" content="#00CC00">
+    <meta name="keywords" content="Ustym,Ukhman,Ustym Ukhman,WebAssembly,DOOM,webDOOM">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <title>webDOOM</title>
+
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <script type="text/javascript" src="./index.js"></script>
+  </head>
+
+  <body>
+    <canvas id="doom"></canvas>
+
+    <div id="loader">
+      <span>Loading...</span>
+      <span id="progress">0.0%</span>
+    </div>
+
+    <button id="fullscreen"><i class="bi bi-arrows-fullscreen"></i></button>
+
+    <div id="preview">
+      <div data-game="1" class="doom one"><h1>1</h1></div>
+      <div data-game="2" class="doom two"><h1>2</h1></div>
+    </div>
+  </body>
+</html>
