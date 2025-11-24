@@ -3,99 +3,85 @@
 (function () {
   var preview = null;
   var doomCanvas = null;
-  var fullscreenButton = null;
 
   window.Module = {
-    monitorRunDependencies: function (toLoad) {
-      this.dependencies = Math.max(this.dependencies, toLoad);
-    },
-
-    inFullscreen: false,
-    dependencies: 0,
-    
+    canvas: null,
     setStatus: null,
     progress: null,
-
-    loader: null,
-    canvas: null
+    loader: null
   };
 
-  function getCanvas () {
-    doomCanvas.addEventListener('webglcontextlost', function (event) {
-      alert('WebGL context lost. You need to reload the page.');
-      event.preventDefault();
-    }, false);
+  function onGameClick(game) {
+    var doomScript = document.createElement('script');
+    doomScript.type = 'text/javascript';
+    doomScript.src = game + '.js';
+    document.body.appendChild(doomScript);
 
-    doomCanvas.addEventListener('contextmenu', function (event) {
-      event.preventDefault();
-    });
-
-    fullscreenButton.addEventListener('click', function () {
-      Module.requestFullscreen(true, false);
-    });
-
-    return doomCanvas;
+    preview.classList.add('hidden');
   }
 
-  function getStatus (status) {
-    var loading = status.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+  function enablePointerLock() {
+    // Request pointer lock and focus canvas immediately
+    doomCanvas.addEventListener('mousedown', function () {
+      if (doomCanvas.requestPointerLock) {
+        doomCanvas.requestPointerLock();
+      } else if (doomCanvas.mozRequestPointerLock) {
+        doomCanvas.mozRequestPointerLock();
+      } else if (doomCanvas.webkitRequestPointerLock) {
+        doomCanvas.webkitRequestPointerLock();
+      }
+      doomCanvas.focus();
+    });
 
+    // Re‑focus canvas whenever pointer lock is acquired
+    document.addEventListener('pointerlockchange', function () {
+      if (document.pointerLockElement === doomCanvas) {
+        doomCanvas.focus();
+      }
+    });
+    document.addEventListener('mozpointerlockchange', function () {
+      if (document.mozPointerLockElement === doomCanvas) {
+        doomCanvas.focus();
+      }
+    });
+    document.addEventListener('webkitpointerlockchange', function () {
+      if (document.webkitPointerLockElement === doomCanvas) {
+        doomCanvas.focus();
+      }
+    });
+  }
+
+  function getStatus(status) {
+    var loading = status.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
     if (loading) {
       var progress = loading[2] / loading[4] * 100;
       Module.progress.innerHTML = progress.toFixed(1) + '%';
 
       if (progress === 100) {
         setTimeout(function () {
-          fullscreenButton.classList.add('visible');
           Module.loader.classList.add('completed');
           doomCanvas.classList.add('ready');
         }, 500);
-
-        setTimeout(function () {
-          Module.canvas.dispatchEvent(new Event('mousedown'));
-        }, 2000);
       }
     }
   }
 
-  function onPointerLockChange () {
-    Module.inFullscreen = !Module.inFullscreen;
-
-    if (!Module.inFullscreen) {
-      doomCanvas.classList.remove('centered');
-    } else {
-      doomCanvas.classList.add('centered');
-    }
-  }
-
-  function onGameClick (game) {
-    var doomScript = document.createElement('script');
-    document.body.appendChild(doomScript);
-    doomScript.type = 'text/javascript';
-
-    preview.classList.add('hidden');
-    doomScript.src = game + '.js';
-  }
-
   window.addEventListener('DOMContentLoaded', function () {
     var games = document.getElementsByClassName('doom');
-      preview = document.getElementById('preview');
+    preview = document.getElementById('preview');
+    doomCanvas = document.getElementById('doom');
 
-    document.exitPointerLock = document.exitPointerLock || document.mozExitPointerLock || document.webkitExitPointerLock;
-    document.exitFullscreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitCancelFullScreen;
+    // Make canvas focusable for keyboard events
+    doomCanvas.setAttribute('tabindex', '0');
 
-    document.addEventListener('mozpointerlockchange', onPointerLockChange, false);
-    document.addEventListener('pointerlockchange', onPointerLockChange, false);
+    Module.canvas = doomCanvas;
+    Module.progress = document.getElementById('progress');
+    Module.loader = document.getElementById('loader');
+    Module.setStatus = getStatus;
 
     games[0].addEventListener('click', onGameClick.bind(null, 'doom1'));
     games[1].addEventListener('click', onGameClick.bind(null, 'doom2'));
-    
-    fullscreenButton = document.getElementById('fullscreen');
-    Module.progress = document.getElementById('progress');
-    Module.loader = document.getElementById('loader');
-    doomCanvas = document.getElementById('doom');
 
-    Module.setStatus = getStatus;
-    Module.canvas = getCanvas();
+    enablePointerLock();
   });
 })();
