@@ -1,5 +1,6 @@
 <div align="center">
- <a href="https://atproducts.xyz"><img src="/public/media/images/whitelogo.png" alt="AT Products LLC" width="50%"></a>
+ <img src="/public/media/images/longwhite.png" />
+ <h1>AT's Unblocked Games</h1>
  <br><br>
  <p> 
   <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love"> 
@@ -17,7 +18,7 @@
   <a href="https://jquery.com/" target="_blank"><img src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white" alt="JQuery"></a>
   <a href="https://github.com/dependabot"><img src="https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white"></a>
  </p>
- <a href="https://atproducts.xyz">atproducts.xyz</a>
+ <a href="https://games.atproducts.xyz">games.atproducts.xyz</a>
 </div>
 <hr>
 <h2>Contact Links</h2>
