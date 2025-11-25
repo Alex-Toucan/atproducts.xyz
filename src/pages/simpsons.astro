@@ -1,0 +1,14 @@
+---
+import DefaultBody from "../layouts/DefaultBody.astro";
+import GamePage from "../layouts/GamePage.astro";
+import GameList from "../layouts/GameList.astro";
+---
+
+<DefaultBody title="Simpsons" ruffle="true"
+keywords="Simpsons, online game, play Simpsons, free Simpsons game"
+description="Play Simpsons online for free! Enjoy the classic adventures of the Simpsons family in this entertaining game."
+ author="AT Products LLC">
+  <GamePage title="Simpsons" link="/games/simphome.swf" ruffle="true">
+    <GameList />
+  </GamePage>
+</DefaultBody>
