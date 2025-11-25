@@ -8,7 +8,7 @@ import '../styles/styles.css';
 import jquery from "jquery/dist/jquery.min.js?url";
 import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
 
-const { title, description, keywords, author, additionalContent, ruffle, emulator } = Astro.props;
+const { title, description, keywords, author, additionalContent, ruffle, emulator, fourofour } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -66,8 +66,11 @@ const { title, description, keywords, author, additionalContent, ruffle, emulato
       <script is:inline src="/scripts/search.js"></script>
       <script is:inline src="/scripts/enabler.js"></script>
       {emulator && (
- 	<script is:inline src="/scripts/emulatorjs/data/loader.js"></script>
-	<slot name="emulator-script" />
+        <script is:inline src="/scripts/emulatorjs/data/loader.js"></script>
+        <slot name="emulator-script" />
+      )}
+      {fourofour && (
+        <script is:inline src="/scripts/404.js"></script>
       )}
     </Fragment>
   </body>
