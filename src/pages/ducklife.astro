@@ -1,0 +1,14 @@
+---
+import DefaultBody from "../layouts/DefaultBody.astro";
+import GamePage from "../layouts/GamePage.astro";
+import GameList from "../layouts/GameList.astro";
+---
+
+<DefaultBody title="Duck Life" ruffle="true" 
+keywords="Duck Life, block rolling game, 3D puzzle, logic game, spatial reasoning, platformer"
+description="Play Duck Life online, the fun and engaging game where you train your duck to roll through challenging levels. Test your spatial reasoning and platforming skills in this exciting 3D puzzle adventure!"
+ author="AT Products LLC">
+  <GamePage title="Duck Life" link="/games/ducklife.swf" ruffle="true">
+    <GameList />
+  </GamePage>
+</DefaultBody>

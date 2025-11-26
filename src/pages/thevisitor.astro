@@ -1,0 +1,13 @@
+---
+import DefaultBody from "../layouts/DefaultBody.astro";
+import GamePage from "../layouts/GamePage.astro";
+import GameList from "../layouts/GameList.astro";
+---
+
+<DefaultBody title="The Visitor" ruffle="true"
+keywords="The Visitor, online game, play The Visitor, free The Visitor game"
+description="Play The Visitor online for free! Experience the thrilling adventures of The Visitor in this captivating game.">
+  <GamePage title="The Visitor" link="/games/thevisitor.swf" ruffle="true" warning>
+    <GameList />
+  </GamePage>
+</DefaultBody>
