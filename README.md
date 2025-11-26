@@ -35,7 +35,7 @@ The "AT" in AT Products does stand for Alex Toucan.
 <h2>Setup</h2>
 <p>If you wish to contribute to the site and want to copy the repository locally, follow the steps:</p>
 <ul>
-<li>1. Clone the repo in any way you wish. The repository is roughly 5.35 GB in size.</li>
+<li>1. Clone the repo in any way you wish. The repository is roughly 10.50 GB in size.</li>
 <li>2. Install packages:
 
 ```sh
