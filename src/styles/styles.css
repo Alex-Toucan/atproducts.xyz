@@ -110,3 +110,22 @@ button.link-game {
 .emulator::before {
   padding-top: 0 !important;
 }
+
+.main-header {
+  font-size: 20vw;
+  background-clip: text;
+  background-image: url(/media/images/hero.webp);
+  color: transparent;
+  background-position: center;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    font-size: 15vw;
+  }
+}
+
+.secondary-header {
+  font-size: 3rem;
+}
