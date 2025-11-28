@@ -42,34 +42,33 @@ import CodeBlock from '../../components/CodeBlock.astro';
       <div id="commands">
         <h2>Commands</h2>
 <pre class="mt-2 p-2 border-2 border-solid rounded-2"><code>-- General Commands --
-help             # Displays this message
-clear            # Clears screen
-echo             # Echos back text
-date             # Shows the current date and time
-time             # Shows current time
-timestamp        # Shows unix timestamp
-exit             # Exits the OS
-reboot           # Reboots the system
-shutdown         # Shuts down the system
-brain            # Spams brains
-brainz           # Theme Menu
+help             # shows a help message
+clear            # clears screen
+date		 # shows current date and time
+radifetch	 # system information
+reboot 		 # reboots the system
+settings 	 # opens settings menu
 
--- Toolkit Commands --
-mpop 		 # Mpop language
-mempop           # Memory pop toolkit
-returnregister   # Register toolkit
-tui              # Opens the TUI interface
-menu             # Enters TUI menu
-onan             # Text editor
+-- File-related Commands --
+ls 		 # lists files
+cat &lt;filename&gt;   # displays the contents of a file
+rm &lt;filename&gt;    # deletes a file
+onan &lt;filename&gt;	 # text editor
 
 -- Network Commands --
-wifi             # WiFi management commands
-network          # System network lookup
+ping &lt;address&gt;   # pings an address
+ifconfig         # shows network configuration
+arp &nbsp; &lt;address&gt;  # shows the ARP table
+curl &lt;url&gt;       # HTTP client
 
--- System Commands --
-radifetch        # System info lookup
-settings         # Enter settings
-brainfuck        # Brainfuck language
+-- Utilities --
+echo &lt;string&gt;    # echos back said string(s)
+cowsay 		 # ASCII cow
+script  	 # runs a script
+mpop &nbsp; &lt;url&gt;     # memory operations
+brainfuck 	 # Brainfuck interpreter
+tui              # GUI launcher
+rsh              # RadiumOS shell scripting
 </code></pre>
       </div>
       <hr>
