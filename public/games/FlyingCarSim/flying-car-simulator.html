@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<html>
+  
+    <title>Игра Симулятор Летающего Автомобиля 3Д - Vseigru.net</title>
+    <link rel="stylesheet" href="gameloader.css" />
+    <script src="gameloader.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <h1>Loading...</h1>
+    <script src="build.js"></script>
+    <script>
+      b64DATA = "data:application/zip;base64," + b64DATA;
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/yomotsu/ZipLoader@master/dist/zip-loader.min.js"></script>
+
+    <script type="text/javascript">
+
+var loader = new ZipLoader(b64DATA);
+loader.on( 'progress', function ( e ) {
+
+console.log(
+  'loading',
+  e.loaded / e.total * 100 + '%',
+  'time:' + e.elapsedTime + 'ms'
+);
+
+} );
+
+
+
+
+loader.on( 'load', function ( e ) {
+
+Object.keys( loader.files ).forEach( function ( filename ) {
+
+   console.log(filename);
+
+var dat = {
+  dataUrl: loader.extractAsBlobUrl("FlyingCarSimulator.data.unityweb","application/octet-stream"),
+  wasmCodeUrl: loader.extractAsBlobUrl("FlyingCarSimulator.wasm.code.unityweb","application/octet-stream"),
+  wasmFrameworkUrl: loader.extractAsBlobUrl("FlyingCarSimulator.wasm.framework.unityweb","application/octet-stream"),
+  unityLoaderUrl: loader.extractAsBlobUrl("UnityLoader.js","text/javascript")
+}
+console.log(dat);
+
+var JSONdata = {
+"companyName": "BlueAxis",
+"productName": "FlyingCarSimulator",
+"productVersion": "1.0",
+"dataUrl": dat.dataUrl,
+"wasmCodeUrl": dat.wasmCodeUrl,
+"wasmFrameworkUrl": dat.wasmFrameworkUrl,
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.1.4f1"
+}
+      var options = {
+        author: "Vseigru",
+        logo: "logo.jpg",
+        gameName: "Игра Симулятор Летающего Автомобиля 3Д",
+        gameNameEu: "Flying Car Simulator 3D",
+        gameUrl: "27004",
+        moreLink: "http://vseigru.net",
+        allowFullscreen: true,
+        locale: "ru_RU",
+        loader: "5.6.x",
+        loaderOptions: {
+          moduleJsonUrl: "data:text/json;base64,"+btoa(JSON.stringify(JSONdata)),
+          unityLoaderUrl: dat.unityLoaderUrl,
+        },
+      };
+      GameInit.load(options);
+
+} );
+
+
+
+} );
+
+loader.load();
+    </script>
+        
+  </body>
+</html>
