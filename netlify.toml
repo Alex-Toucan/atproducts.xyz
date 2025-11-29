@@ -28,7 +28,7 @@
       object-src 'self'; 
       script-src 'unsafe-inline' 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'unsafe-eval' blob:; 
       style-src 'unsafe-hashes' 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline'; 
-      img-src 'self' data: https://i.imgur.com https://cdnjs.cloudflare.com/;
+      img-src 'self' data: https://i.imgur.com https://cdnjs.cloudflare.com/ blob:;
       frame-ancestors 'self' '''
     Features-Policy = "document-domain 'self';"
     Permissions-Policy = '''
