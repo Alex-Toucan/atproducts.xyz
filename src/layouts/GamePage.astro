@@ -38,7 +38,7 @@ const { title, link, author, authorlink, scrolling, ruffle, emulator, emulatorso
               <h2>{title}</h2>
               <div class="d-flex gap-3">
                 <button
-                  class="link-game"
+                  class="link-game p-0"
                   id="fullScreenBtn"
                   aria-label="Enter fullscreen mode"
                   data-bs-toggle="tooltip"
@@ -47,6 +47,17 @@ const { title, link, author, authorlink, scrolling, ruffle, emulator, emulatorso
                 >
                   <i class="bi bi-fullscreen" aria-hidden="true"></i>
                   <span class="visually-hidden">Fullscreen</span>
+                </button>
+                <button
+                  class="link-game p-0"
+                  id="lockBtn"
+                  aria-label="Mouse lock"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  data-bs-title="Mouse Lock"
+                >
+                  <i class="bi bi-mouse" aria-hidden="true"></i>
+                  <span class="visually-hidden">Mouse Lock</span>
                 </button>
                 {link && !ruffle && (
                   <a
@@ -127,6 +138,7 @@ const { title, link, author, authorlink, scrolling, ruffle, emulator, emulatorso
                   allowTransparency="true"
                   src={link}
                   id="full-screen"
+                  allow="pointer-lock"
                 ></iframe>
               </div>
             )}
