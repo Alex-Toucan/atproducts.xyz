@@ -1,1 +1,0 @@
-export const copyPositionsArray = (positions: string[][]) => positions.map((rank) => rank.map((file) => file));
