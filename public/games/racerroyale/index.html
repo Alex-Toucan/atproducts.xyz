@@ -1,0 +1,94 @@
+<!DOCTYPE html><html><head>
+  <script src="p5.js"></script>
+  <script src="p5.dom.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+<script src="./p5.play.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <script src="JS/Form.js"></script> 
+  <script src="JS/Game.js"></script>
+  <script src="JS/Player.js"></script>
+  <script src="Lobby.js"></script>
+  <script src="Manager.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+  <script>
+      
+      var firebaseConfig = {
+        apiKey: "AIzaSyBhR9cjp3Wl1OZyodrfRWgR9CLnh2KQtnc",
+        authDomain: "car-racing-b38fe.firebaseapp.com",
+        databaseURL: "https://car-racing-b38fe.firebaseio.com",
+        projectId: "car-racing-b38fe",
+        storageBucket: "car-racing-b38fe.appspot.com",
+        messagingSenderId: "987500225126",
+        appId: "1:987500225126:web:2340ecdcf8234f43f003a7"
+      };
+      
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+    <style>
+      /* Styling for Racer Royale title */
+      #start {
+        font-family: 'Arial', sans-serif;
+        font-size: 5rem;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        margin-top: 20px;
+        text-shadow: 
+          0 0 2px #fff, 
+          0 0 4px #ff6347, 
+          0 0 6px #ff6347, 
+          0 0 8px #1e90ff, 
+          0 0 10px #1e90ff;
+        background: linear-gradient(135deg, #1e90ff, #ff6347);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: sharp-glow 1.5s infinite alternate;
+      }
+    
+      /* Sharper glowing animation */
+      @keyframes sharp-glow {
+        from {
+          text-shadow: 
+            0 0 1px #fff, 
+            0 0 2px #ff6347, 
+            0 0 3px #1e90ff, 
+            0 0 4px #1e90ff, 
+            0 0 5px #1e90ff;
+        }
+        to {
+          text-shadow: 
+            0 0 3px #fff, 
+            0 0 6px #ff6347, 
+            0 0 9px #1e90ff, 
+            0 0 12px #1e90ff, 
+            0 0 15px #1e90ff;
+        }
+      }
+    
+      /* Adjust body for alignment and design */
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #000428, #004e92);
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        overflow: hidden;
+      }
+    </style>
+    
+    
+</head>
+<body>
+  <h1 id="start">Racer Royale</h1>
+    <script src="sketch.js"></script>
+    
+
+</body>
+
+</html>

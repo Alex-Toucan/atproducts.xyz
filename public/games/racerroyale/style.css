@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #1e90ff, #ff6347);
+  color: #fff;
+  text-align: center;
+}
+
+/* Form Title */
+.form-title {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Input Field */
+.form-input {
+  width: 60%;
+  max-width: 400px;
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  outline: none;
+  text-align: center;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+/* Buttons */
+.form-button {
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.play-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.play-button:hover {
+  background-color: #45d36d;
+}
+
+.reset-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.reset-button:hover {
+  background-color: #ff6b6b;
+}
+
+/* Greeting */
+.form-greeting {
+  font-size: 24px;
+  margin-top: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.player-name {
+  color: #ffeb3b;
+  font-weight: bold;
+}
+
+/* Rules Section */
+.form-rules {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.form-rules ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.form-rules li {
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.popup-message {
+  font-size: 1.5rem;
+  color: #dc3545; /* Red color for alert */
+  margin-bottom: 20px;
+}
+
+.popup-close {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-close:hover {
+  background-color: #45d36d;
+}
+
+.form-total-games {
+  font-size: 18px; 
+  color: white; /* White text */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 10px 15px; /* Add some padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center the text */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Soft shadow effect */
+}
