@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Passion+One|Raleway&display=swap");
+
+body,
+p {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+
+    /* background: url("../img/cardBG.jpg");*/
+}
+
+
+body.wLogo:after {
+    content: "";
+    background: linear-gradient(to top, rgb(47, 61, 47), #f8f8f8);
+    position: fixed;
+    z-index: -1;
+
+
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://web-presence.biz/img/MA_Logo.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+
+    filter: grayscale(100%);
+    opacity: .2;
+
+}
+
+.btn-group.block,
+.btn-block {
+    width: 100%;
+    padding: 0px;
+}
+
+.error {
+    border: 1px #ff0000 solid;
+}
+
+ul.decimal {
+    list-style-type: decimal;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+body:after {
+    content: "";
+    background: url("../img/cardBG.jpg");
+
+    opacity: .3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+footer a {
+    text-shadow: 1px 1px 2px black, 0 0 .21em #fff, 0 0 0.2em rgb(206, 206, 242);
+}
+
+[data-sound='true'] {
+    color: green;
+}
+
+[data-sound='false'] {
+    color: red;
+}
+
+
+/*START FOOTER*/
+footer {
+    box-shadow: 0 -4px 3px rgb(0 0 0 / 8%);
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+}
+
+
+#socialList a i {
+    font-size: 1.5rem;
+    padding: 12px 10px;
+
+}
+
+ul.inline li {
+    display: inline-block;
+}
+
+
+.btn-group.block {
+    width: 100%;
+    padding: 0px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Passion One", cursive;
+}
+
+.hide {
+    display: none !important;
+}
+
+.btn-group.form-control {
+    padding: 0;
+
+}
+
+/*START GLOBAL ALERT CSS*/
+
+#globalAlert {
+    width: 100%;
+    position: fixed;
+    top: 20%;
+    z-index: 5;
+}
+
+/*END GLOBAL ALERT CSS*/
+/*start loader animation*/
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #333;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+/*START MOBILE CSS*/
+
+.desktopOnly {
+    display: block;
+}
+
+.mobileOnly {
+    display: none !important;
+}
+
+
+.mobileBlock {
+    width: auto;
+}
+
+
+@media (max-width: 768px) {
+    #socialList a i {
+        padding: 12px 10px 25px 10px;
+    }
+
+    #gameLinks .btn {
+        font-size: .75rem;
+        --bs-btn-font-size: .75rem;
+    }
+
+
+    #globalAlert {
+        top: 40%;
+    }
+
+    .desktopOnly {
+        display: none !important;
+    }
+
+    .mobileOnly {
+        display: block;
+    }
+
+    .mobileBlock {
+        display: block;
+        width: 100%;
+    }
+}
+
+/*end 768*/
