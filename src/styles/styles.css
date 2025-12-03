@@ -2,10 +2,6 @@
   --bs-btn-border-radius: .25rem;
 }
 
-body {
-  background-color: #1d2124 !important;
-}
-
 @media (min-width: 991.98px) {
   .main-table {
     display: grid;
@@ -67,10 +63,6 @@ body {
 
 .secondary-section, .offcanvas.secondary-section {
   background-color: #1d2124 !important; 
-}
-
-.right-column, .main-content {
-  background-color: #212529 !important; 
 }
 
 .list-group {
