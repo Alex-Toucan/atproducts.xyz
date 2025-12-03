@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #1d2124!important
+  background-color: #1d2124 !important;
 }
 
 @media (min-width: 991.98px) {
@@ -58,7 +58,6 @@ body {
   
   .right-column {
     grid-column: 2; grid-row: 1 / span 2; display: grid; grid-template-rows: 70px 1fr;
-    background-color: #212529 !important;
   }
 }
 
@@ -68,6 +67,10 @@ body {
 
 .secondary-section, .offcanvas.secondary-section {
   background-color: #1d2124 !important; 
+}
+
+.right-column, .main-content {
+  background-color: ##212529 !important; 
 }
 
 .list-group {
