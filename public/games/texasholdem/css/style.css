@@ -1,0 +1,9 @@
+.playersRow [data-status] {
+    min-height: 85px;
+}
+
+@media (max-width: 768px) {
+    .playersRow [data-status] {
+        min-height: auto;
+    }
+}

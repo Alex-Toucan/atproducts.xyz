@@ -1,0 +1,305 @@
+.ace-spades,
+.two-spades,
+.three-spades,
+.four-spades,
+.five-spades,
+.six-spades,
+.seven-spades,
+.eight-spades,
+.nine-spades,
+.ten-spades,
+.jack-spades,
+.queen-spades,
+.king-spades,
+
+/*START HEARTS*/
+.ace-hearts,
+.two-hearts,
+.three-hearts,
+.four-hearts,
+.five-hearts,
+.six-hearts,
+.seven-hearts,
+.eight-hearts,
+.nine-hearts,
+.ten-hearts,
+.jack-hearts,
+.queen-hearts,
+.king-hearts,
+
+
+/*START DIAMONDS*/
+.ace-diamonds,
+.two-diamonds,
+.three-diamonds,
+.four-diamonds,
+.five-diamonds,
+.six-diamonds,
+.seven-diamonds,
+.eight-diamonds,
+.nine-diamonds,
+.ten-diamonds,
+.jack-diamonds,
+.queen-diamonds,
+.king-diamonds,
+
+/*START CLUBS*/
+.ace-clubs,
+.two-clubs,
+.three-clubs,
+.four-clubs,
+.five-clubs,
+.six-clubs,
+.seven-clubs,
+.eight-clubs,
+.nine-clubs,
+.ten-clubs,
+.jack-clubs,
+.queen-clubs,
+.king-clubs {
+    background-image: url('../img/cards.png');
+    background-repeat: no-repeat;
+    padding: 5px;
+    margin: 0px 5px;
+    display: inline-block;
+    height: 107px;
+    width: 73px;
+    border: .5px solid #999;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+}
+
+/*START SPADES*/
+.ace-spades {
+    background-position: -7px -7px;
+}
+
+.two-spades {
+
+    background-position: -85px -7px;
+}
+
+.three-spades {
+    background-position: -163px -7px;
+}
+
+.four-spades {
+    background-position: -242px -7px;
+}
+
+.five-spades {
+    background-position: -320px -7px;
+}
+
+.six-spades {
+    background-position: -398px -7px;
+}
+
+.seven-spades {
+    background-position: -476px -7px;
+}
+
+.eight-spades {
+    background-position: -554px -7px;
+}
+
+.nine-spades {
+    background-position: -632px -7px;
+}
+
+.ten-spades {
+    background-position: -712px -7px;
+}
+
+.jack-spades {
+    background-position: -790px -7px;
+}
+
+.queen-spades {
+    background-position: -868px -7px;
+}
+
+.king-spades {
+    background-position: -946px -7px;
+}
+
+
+/*START HEARTS*/
+.ace-hearts {
+    background-position: -7px -121px;
+}
+
+.two-hearts {
+
+    background-position: -85px -121px;
+}
+
+.three-hearts {
+    background-position: -163px -121px;
+}
+
+.four-hearts {
+    background-position: -241px -121px;
+}
+
+.five-hearts {
+    background-position: -320px -121px;
+}
+
+.six-hearts {
+    background-position: -398px -121px;
+}
+
+.seven-hearts {
+    background-position: -476px -121px;
+}
+
+.eight-hearts {
+    background-position: -555px -121px;
+}
+
+.nine-hearts {
+    background-position: -632px -121px;
+}
+
+.ten-hearts {
+    background-position: -712px -121px;
+}
+
+.jack-hearts {
+    background-position: -790px -121px;
+}
+
+.queen-hearts {
+    background-position: -868px -121px;
+}
+
+.king-hearts {
+    background-position: -946px -121px;
+}
+
+/*START DIAMONDS*/
+.ace-diamonds {
+    background-position: -7px -237px;
+}
+
+.two-diamonds {
+
+    background-position: -85px -235px;
+}
+
+.three-diamonds {
+    background-position: -163px -236px;
+}
+
+.four-diamonds {
+    background-position: -241px -236px;
+}
+
+.five-diamonds {
+    background-position: -320px -235px;
+}
+
+.six-diamonds {
+    background-position: -398px -235px;
+}
+
+.seven-diamonds {
+    background-position: -476px -235px;
+}
+
+.eight-diamonds {
+    background-position: -555px -236px;
+}
+
+.nine-diamonds {
+    background-position: -633px -236px;
+}
+
+.ten-diamonds {
+    background-position: -711px -236px;
+}
+
+.jack-diamonds {
+    background-position: -790px -235px;
+}
+
+.queen-diamonds {
+    background-position: -868px -235px;
+}
+
+.king-diamonds {
+    background-position: -946px -235px;
+}
+
+/*START CLUBS*/
+.ace-clubs {
+    background-position: -7px -350px;
+}
+
+.two-clubs {
+
+    background-position: -85px -350px;
+}
+
+.three-clubs {
+    background-position: -163px -350px;
+}
+
+.four-clubs {
+    background-position: -241px -350px;
+}
+
+.five-clubs {
+    background-position: -320px -350px;
+}
+
+.six-clubs {
+    background-position: -398px -350px;
+}
+
+.seven-clubs {
+    background-position: -476px -350px;
+}
+
+.eight-clubs {
+    background-position: -554px -350px;
+}
+
+.nine-clubs {
+    background-position: -632px -350px;
+}
+
+.ten-clubs {
+    background-position: -711px -350px;
+}
+
+.jack-clubs {
+    background-position: -790px -350px;
+}
+
+.queen-clubs {
+    background-position: -868px -350px;
+}
+
+.king-clubs {
+    background-position: -946px -350px;
+}
+
+.hiddenDealerCard {
+    padding: 5px;
+    margin: 0px 5px;
+    display: inline-block;
+    height: 108px;
+    width: 72px;
+    background-color: #dc4c16;
+    border-radius: 10px;
+    border: 1px #999 solid;
+    background-image: url("https://web-presence.biz/img/MA_Logo.png");
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+
+    filter: grayscale(1);
+}
