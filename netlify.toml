@@ -18,7 +18,7 @@
       preload'''
     Content-Security-Policy = '''
       default-src 'self' data:; 
-      connect-src 'self' data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net;
+      connect-src 'self' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net;
       media-src 'self' data: https://raw.githubusercontent.com https://i.imgur.com;
       frame-src 'self' https://app.netlify.com/ https://codepen.io; 
       form-action 'self'; 
