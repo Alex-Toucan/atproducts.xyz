@@ -1,0 +1,14 @@
+---
+import DefaultBody from "../layouts/DefaultBody.astro";
+import GamePage from "../layouts/GamePage.astro";
+import GameList from "../layouts/GameList.astro";
+---
+
+<DefaultBody title="Chess" 
+description="Play chess online for free! Enjoy classic chess games against friends or AI opponents. Improve your skills with our interactive chess tutorials and puzzles."
+keywords="chess, online chess, play chess, chess games, chess puzzles, chess tutorials"
+  author="AT Products LLC">
+  <GamePage title="Chess" link="/games/chess/index.html" scrolling="true">
+    <GameList />
+  </GamePage>
+</DefaultBody>
