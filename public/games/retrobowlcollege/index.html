@@ -122,7 +122,39 @@
 
     <!-- NO POKI -->
     <!-- <script>window.onload = GameMaker_Init;</script> -->
+    <script>
+        (function () {
+            // Helper function to finalize initialization
+            function fin(ok) {
+                // Always set the flag, no sitelock check
+                window.PokiSDK_OK = ok;
+        
+                // Start the GameMaker game
+                GameMaker_Init();
+            }
+        
+            // Run after page load
+            window.addEventListener("load", function () {
+                window.PokiSDK_loadState = 0;
+        
+                if (window.PokiSDK) {
+                    // Try to initialize PokiSDK
+                    PokiSDK.init()
+                        .then(function () {
+                            fin(true);  // success
+                        })
+                        .catch(function () {
+                            fin(false); // failure
+                        });
+                } else {
+                    // If PokiSDK not available
+                    window.PokiSDK = null;
+                    fin(false);
+                }
+            });
+        })();
 
+    </script>
     <!-- YES POKI -->
     <!-- Poki start -->
     <script src="poki-sdk.js"></script>
