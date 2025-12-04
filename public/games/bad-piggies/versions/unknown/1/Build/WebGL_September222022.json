@@ -1,0 +1,14 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Bad Piggies WebGL",
+"dataUrl": "WebGL_September222022.data.unityweb",
+"wasmCodeUrl": "WebGL_September222022.wasm.code.unityweb",
+"wasmFrameworkUrl": "WebGL_September222022.wasm.framework.unityweb",
+"wasmSymbolsUrl": "WebGL_September222022.wasm.symbols.unityweb",
+"TOTAL_MEMORY": 536870912,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}
