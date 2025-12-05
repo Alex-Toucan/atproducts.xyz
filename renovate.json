@@ -4,7 +4,7 @@
     "config:recommended"
   ],
   "labels": [
-    "📦 dependencies"
+    "dependencies"
   ],
   "packageRules": [
     {
