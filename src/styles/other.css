@@ -6988,3 +6988,31 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 .title {
   padding-top: .625rem;
 }
+
+.page-404 {
+  & .btn.rounded-pill {
+    width: 150px;
+  }
+
+  & .main-header {
+    font-size: 20vw;
+    color: white;
+    filter: drop-shadow(2px 4px 6px black)
+  }
+
+  & .secondary-header {
+    font-size: 3rem
+  }
+
+  @media(min-width: 768px) {
+    & .main-header {
+      font-size:15vw;
+    }
+  }
+
+  @media(min-width: 991px) {
+    & .main-header {
+      font-size:12.5vw;
+    }
+  }
+}
