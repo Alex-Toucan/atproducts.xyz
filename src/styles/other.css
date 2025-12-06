@@ -6817,29 +6817,25 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 	top: 100%;
 }
 
-.products-tabContent {
-  height: 21rem !important;
-}
-
 .products-3 img, .products-4 img, .products-7 img {
-	width: 35%;
+	width: 40%;
 }
 
 .products-2 img {
-  max-width: 250px;
+  max-width: 300px;
 	width: 70%;
 }
 
 .products-3 img {
-	max-width: 225px;
+	max-width: 270px;
 }
 
 .products-4 img, .products-8 img {
-	max-width: 125px;
+	max-width: 150px;
 }
 
 .products-7 img {
-	max-width: 225px;
+	max-width: 250px;
 }
 
 @media (max-width:767.98px) {
@@ -6857,6 +6853,9 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 	.products-8 img {
 		max-width: 100px;
 	}
+  .products-tabContent {
+    height: 21rem !important;
+  }
 }
 
 @media (min-width: 767.98px) {
