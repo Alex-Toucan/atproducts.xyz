@@ -15,22 +15,6 @@
         }
 
         window.onload = initGame;
-
-        // Adjust game size on window resize
-        window.addEventListener('resize', function() {
-            if (gameInstance) {
-                gameInstance.Module.SetFullscreen(1);
-            }
-        });
-
-        // Listen for the Esc key to exit fullscreen
-        window.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                if (gameInstance) {
-                    gameInstance.Module.SetFullscreen(0); // Exit fullscreen
-                }
-            }
-        });
     </script>
     <style>
         html {
