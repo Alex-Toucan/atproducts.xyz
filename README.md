@@ -61,4 +61,4 @@ astro dev
 </ul>
 <hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#atproductsxyz">View more information</a>.
-<h6>Last Recorded Version: </h6>
+<h6>Last Recorded Version: games@v1.1.1</h6>
