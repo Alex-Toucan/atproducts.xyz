@@ -5,9 +5,8 @@
  <p> 
   <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love"> 
   <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
-  <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-2.23.1-blue" alt="Stable Version"></a>
-  <a href="https://beta.atproducts.xyz#what-new"><img src="https://img.shields.io/badge/beta_version-2.23.1-red" alt="Beta Version"></a>
-  <a href="https://beta-testing.atproducts.xyz"><img src="https://img.shields.io/badge/DoBT_version-DoBT_v2.6-green" alt="DoBT Version"></a>
+  <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-1.1.1-blue" alt="Stable Version"></a>
+  <a href="https://beta.atproducts.xyz#what-new"><img src="https://img.shields.io/badge/beta_version-1.1.1-red" alt="Beta Version"></a>
   <img src="https://github.com/Alex-Toucan/atproducts.xyz/workflows/CodeQL/badge.svg" alt="CodeQL">
   <a href="https://app.netlify.com/sites/atproducts/deploys"><img src="https://api.netlify.com/api/v1/badges/faf5f3b5-bf03-457d-9deb-dbfc4d3b55ee/deploy-status" alt="Netlify"></a> 
  </p>
@@ -43,26 +42,20 @@ npm install
 ```
 </li>
 </ul>
-<p>To preview changes, you cannot use <code>astro preview</code> due to @astrojs/netlify being used, you must use Netlify.</p>
+<p>To preview changes, you can use Astro's built-in commands.</p>
 <ul>
 <li>1. Install packages:
 
 ```sh
-npm install -g astro netlify-cli
+npm install -g astro
 ```
 </li>
-<li>2. Link your Netlify account & project:
-
-```sh
-netlify login
-netlify link
-```
 </li>
-<li>3. Build & preview
+<li>2. Build (and/or) preview
 
 ```sh
 astro build
-netlify dev --dir=dist
+astro dev
 ```
 </li>
 </ul>
