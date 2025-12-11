@@ -1,0 +1,14 @@
+---
+import DefaultBody from "../layouts/DefaultBody.astro";
+import GamePage from "../layouts/GamePage.astro";
+import GameList from "../layouts/GameList.astro";
+---
+
+<DefaultBody title="Feed the Head" 
+  description="Play Feed the Head, a fun 3D dash game where you control a character navigating through obstacles to feed its head!"
+  keywords="feed the head, game, head, feeding"
+  author="AT Products LLC" ruffle="true">
+  <GamePage title="Feed the Head" link="/games/feedthehead/headInner.swf" ruffle="true">
+    <GameList />
+  </GamePage>
+</DefaultBody>
