@@ -1,5 +1,5 @@
 <div align="center">
- <img src="/public/media/images/longwhite.png" />
+ <img src="https://beta.atproducts.xyz/media/images/longwhite@2x.png" height="150px" />
  <h1>AT's Unblocked Games</h1>
  <br><br>
  <p> 
