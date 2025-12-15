@@ -1,5 +1,5 @@
 /*FOOTER DATE*/
-const idNum = "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I";
+const idNum = "AIzaSyBxvGBPN_lRhoYskabk_lZ5FAo4GIowU6I"
 const today = new Date();
 let highScore = 0;
 if (localStorage.getItem("highScore", highScore)) {
@@ -19,18 +19,20 @@ if (document.getElementById("highScoreTarget")) {
     ckHighScore();
 }
 
-document.getElementById("year").innerHTML =
-    "<i><small><a href='https://web-presence.biz/?src=web-presence-games#contact' class='text-primary' target='_bank'><i class='fas fa-paper-plane'></i> Contact me.</a></small></i>";
+document.getElementById("year").innerHTML = "<i><small><a href='https://web-presence.biz/?src=web-presence-games#contact' class='text-primary' target='_bank'><i class='fas fa-paper-plane'></i> Contact me.</a></small></i>";
 
-/*REMOVE THEMES – stripped out Bootswatch logic*/
-
-/* Game links */
+/*GAME LINKS*/
+let url = window.location;
+let gaParam = "";
+if (url.toString().indexOf("exclude") !== -1) {
+    gaParam = "exclude=true&";
+}
 const gameLinks = [
-    { link: "https://aaronrs2002.github.io/black-jack/?", game: "21" },
-    { link: "https://aaronrs2002.github.io/texas-holdem/?", game: "Poker" },
-    { link: "https://aaronrs2002.github.io/bingo/?", game: "Bingo" },
-    { link: "https://aaronrs2002.github.io/javascript-slot-machine/?", game: "Slots" },
-    { link: "https://aaronrs2002.github.io/word-game/?", game: "WordFun" }
+    { link: "https://aaronrs2002.github.io/black-jack/?" + gaParam, game: "21" },
+    { link: "https://aaronrs2002.github.io/texas-holdem/?" + gaParam, game: "Poker" },
+    { link: "https://aaronrs2002.github.io/bingo/?" + gaParam, game: "Bingo" },
+    { link: "https://aaronrs2002.github.io/javascript-slot-machine/?" + gaParam, game: "Slots" },
+    { link: "https://aaronrs2002.github.io/word-game/?" + gaParam, game: "WordFun" }
 ];
 
 function navigateGames(selected) {
@@ -43,7 +45,6 @@ function navigateGames(selected) {
 
 function setGameLinks() {
     let gameHTML = "";
-    let url = window.location;
     for (let i = 0; i < gameLinks.length; i++) {
         let active = "";
         let hrefStr = gameLinks[i].game.toLowerCase();
@@ -51,26 +52,26 @@ function setGameLinks() {
         if (hrefStr === "21") hrefStr = "black-jack";
         if (hrefStr === "wordfun") hrefStr = "word-";
         if (hrefStr === "slots") hrefStr = "javascript-slot-machine";
+        if (url.toString().indexOf("poker") !== -1 && gameLinks[i].game === "Poker") {
+            active = "active";
+            color = "primary";
+        }
+        if (url.toString().indexOf("texas-holdem") !== -1 && gameLinks[i].game == "Poker") {
+            active = "active";
+            color = "primary";
+        }
         if (url.toString().indexOf(hrefStr) !== -1) {
             active = "active";
             color = "primary";
         }
-        gameHTML +=
-            "<button onClick='javascript:navigateGames(" +
-            i +
-            ")' class='btn btn-" +
-            color +
-            " " +
-            active +
-            "'>" +
-            gameLinks[i].game +
-            "</button>";
+        gameHTML = gameHTML + "<button onClick='javascript:navigateGames(" + i + ")' class='btn btn-" + color + " " + active + "'>" + gameLinks[i].game + "</button>";
     }
 
     if (document.querySelector("#gameLinks")) {
         document.querySelector("#gameLinks").innerHTML = gameHTML;
     }
 }
+setGameLinks();
 
 /*START NAVIGATING ANIMATION*/
 function tadaRollover(element) {
@@ -92,11 +93,12 @@ const socialMedia = [
 
 let socialHTML = "";
 for (let i = 0; i < socialMedia.length; i++) {
-    socialHTML += `<a class="p-2 text-primary" href="${socialMedia[i].link}" target="_blank" title="${socialMedia[i].title}">
-        <i class="${socialMedia[i].theClass} animated"
-           onmouseover="javascript:tadaRollover('${socialMedia[i].theClass}')"
-           onmouseout="javascript:tadaRollout('${socialMedia[i].theClass}')"
-           data-tada="${socialMedia[i].theClass}"></i></a>`;
+    socialHTML = socialHTML + `<a class="p-2 text-primary"  href="${socialMedia[i].link + (socialMedia[i].link.indexOf("?") !== -1 ? gaParam : "")
+        }" target="_blank" title="${socialMedia[i].title}" ><i class="${socialMedia[i].theClass
+        } animated"  onmouseover="javascript:tadaRollover('${socialMedia[i].theClass
+        }')" onmouseout="javascript:tadaRollout('${socialMedia[i].theClass
+        }')" data-tada="${socialMedia[i].theClass
+        }"></i></a>`;
 }
 document.querySelector("#socialList").innerHTML = socialHTML;
 
