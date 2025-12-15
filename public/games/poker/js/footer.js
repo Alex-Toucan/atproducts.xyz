@@ -47,16 +47,6 @@ function changeTheme() {
         gaParam = "exclude=true";
     }
     let whichTheme = document.getElementById("themes").value;
-    if (whichTheme === "default") {
-        return false;
-    } else {
-        // document.getElementById("themedStyle").setAttribute("href", "https://bootswatch.com/5/" + whichTheme + "/bootstrap.css");
-        chosenTheme = whichTheme.replace("https://bootswatch.com/5/", "").replace("/bootstrap.css");
-        localStorage.setItem("theme", chosenTheme);
-        //setGameLinks(chosenTheme);
-        //  window.location = "?" + gaParam + "&theme=" + chosenTheme + "&balance=" + localStorage.getItem("balance") + "&";
-        window.location = "?" + gaParam + "&theme=" + chosenTheme + "&";
-    }
 
 }
 /*SPLIT PARAMS*/
@@ -93,10 +83,6 @@ if (localStorage.getItem("theme")) {
         needAddress = "";
     }
     setGameLinks(localStorage.getItem("theme"));
-
-    if (tempTheme.indexOf("bootstrap.css") !== -1) {
-        tempTheme = tempTheme.replace("/bootstrap.css", "");
-    }
 
     document.getElementById("themedStyle").setAttribute("href", needAddress + tempTheme + "/bootstrap.css");
 } else {
