@@ -28,7 +28,7 @@
       object-src 'self'; 
       script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://pagead2.googlesyndication.com; 
       style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net 'unsafe-inline'; 
-      img-src 'self' data: https://placehold.co/;
+      img-src 'self' data: https://placehold.co/ https://atproducts.xyz;
       frame-ancestors 'self' '''
     Features-Policy = "document-domain 'self';"
     Permissions-Policy = '''
