@@ -29,8 +29,8 @@
       script-src 'unsafe-inline' 'unsafe-eval' 'self' https://cdn.jsdelivr.net https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google/; 
       style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net 'unsafe-inline'; 
       img-src 'self' data: https://atproducts.xyz https://pagead2.googlesyndication.com;
-      connect-src 'self' https://ep1.adtrafficquality.google;
-      frame-ancestors 'self' '''
+      connect-src 'self' https://ep1.adtrafficquality.google https://cdn.jsdelivr.net;
+      frame-ancestors 'self' ''' 
     Features-Policy = "document-domain 'self';"
     Permissions-Policy = '''
       fullscreen=(self), 
