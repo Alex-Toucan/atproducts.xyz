@@ -20,13 +20,13 @@
       preload'''
     Content-Security-Policy = '''
       default-src 'self' https://cdn.jsdelivr.net/; 
-      frame-src 'self' https://app.netlify.com/ https://codepen.io; 
+      frame-src 'self' https://app.netlify.com/ https://codepen.io https://googleads.g.doubleclick.net/; 
       form-action 'self'; 
       base-uri 'self'; 
       manifest-src 'self'; 
       font-src 'self' data: https://cdn.jsdelivr.net; 
       object-src 'self'; 
-      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://pagead2.googlesyndication.com; 
+      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google/; 
       style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net 'unsafe-inline'; 
       img-src 'self' data: https://atproducts.xyz https://pagead2.googlesyndication.com;
       connect-src 'self' https://ep1.adtrafficquality.google;
