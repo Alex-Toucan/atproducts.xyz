@@ -19,14 +19,14 @@
       includeSubDomains; 
       preload'''
     Content-Security-Policy = '''
-      default-src 'none'; 
+      default-src 'none' https://cdn.jsdelivr.net/; 
       frame-src 'self' https://app.netlify.com/ https://codepen.io; 
       form-action 'self'; 
       base-uri 'self'; 
       manifest-src 'self'; 
       font-src 'self' data: https://cdn.jsdelivr.net; 
       object-src 'self'; 
-      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net; 
+      script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://pagead2.googlesyndication.com; 
       style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net 'unsafe-inline'; 
       img-src 'self' data: https://placehold.co/;
       frame-ancestors 'self' '''
