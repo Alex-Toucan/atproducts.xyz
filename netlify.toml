@@ -27,7 +27,7 @@
       font-src 'self' data: https://cdn.jsdelivr.net; 
       object-src 'self'; 
       script-src 'unsafe-inline' 'unsafe-eval' 'self' https://cdn.jsdelivr.net https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google/; 
-      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net 'unsafe-inline'; 
+      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://atproducts.xyz 'unsafe-inline'; 
       img-src 'self' data: https://atproducts.xyz https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google;
       connect-src 'self' https://ep1.adtrafficquality.google https://cdn.jsdelivr.net;
       frame-ancestors 'self' ''' 
