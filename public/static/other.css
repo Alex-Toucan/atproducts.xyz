@@ -14,6 +14,7 @@
 
 html, body {
   overflow-x: hidden !important;
+  height: 100vh !important;
 }
 
 .hero {
@@ -6987,7 +6988,7 @@ html.fixedtopnavimage {
 
 .tab-link {
 	position: sticky;
-	top: 100%;
+	top: 95%;
 }
 
 .products-tabContent {
@@ -7125,3 +7126,5 @@ html.fixedtopnavimage {
 .btn-clipboard.btn:hover {
   color: var(--bs-link-hover-color);
 }
+
+
