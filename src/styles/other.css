@@ -6557,6 +6557,7 @@ a {
 	background-color: grey;
 	padding: 10px;
 	border: 1px solid black;
+  min-width: 85px;
 }
 
 .sw-link {
