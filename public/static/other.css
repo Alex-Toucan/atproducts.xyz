@@ -47,8 +47,15 @@ html, body {
   background: url('/media/images/hero-flash.webp');
 }
 
-.hero-main {
-	background: url('/media/images/hero.webp');
+@media (min-width: 767.98px) {
+  .hero-main {
+    background-image: url(/media/images/hero.webp) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    filter: drop-shadow(2px 4px 6px black);
+    
+  }
 }
 
 .hero-codinghome  {
