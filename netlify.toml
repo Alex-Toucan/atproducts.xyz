@@ -7,13 +7,8 @@
 #   conditions = {Language = ["en"], Country = ["US"]}
 
 [[redirects]]
-  from = "/pvz/music/*"
-  to = "/games/pvz/music/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/pvz/properties/*"
-  to = "/games/pvz/properties/:splat"
+  from = "/pvz/*"
+  to = "/games/pvz/:splat"
   status = 200
 
 [[headers]]
