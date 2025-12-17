@@ -1,0 +1,14 @@
+---
+import DefaultBody from "../layouts/DefaultBody.astro";
+import GamePage from "../layouts/GamePage.astro";
+import GameList from "../layouts/GameList.astro";
+---
+
+<DefaultBody title="Plants Vs. Zombies" ruffle="true" 
+keywords="Plants Vs. Zombies, block rolling game, 3D puzzle, logic game, spatial reasoning, platformer"
+description="Play Plants Vs. Zombies online, the fun and engaging game where you defend your home from waves of zombies using a variety of plants with unique abilities. Strategically place your plants to stop the zombie invasion in this exciting tower defense adventure!"
+ author="AT Products LLC">
+  <GamePage title="Plants Vs. Zombies" link="/games/pvz/pvz.swf" ruffle="true">
+    <GameList />
+  </GamePage>
+</DefaultBody>
