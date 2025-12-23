@@ -2,7 +2,7 @@
 # [[redirects]]
 #   from = "/*"
 #   to = "https://other.atproducts.xyz/maintenance/"
-#   status = 302
+#   status = 307
 #   force = true
 
 [[headers]]
