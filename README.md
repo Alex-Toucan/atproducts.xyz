@@ -32,8 +32,9 @@ AT Products LLC, otherwise known as AT Products, is an informative technology co
 The "AT" in AT Products does stand for Alex Toucan.
 <hr>
 <h2>Links</h2>
+
 | Title                       | Link                                                                 |
-|----------------------------|----------------------------------------------------------------------|
+|:----------------------------|:----------------------------------------------------------------------|
 | Main Site                  | [https://atproducts.xyz](https://atproducts.xyz)                     |
 | Beta Viewing               | [https://beta.atproducts.xyz](https://beta.atproducts.xyz)           |
 | Department of Beta Testing | [https://beta-testing.atproducts.xyz](https://beta-testing.atproducts.xyz) |
