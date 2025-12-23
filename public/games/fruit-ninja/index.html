@@ -1,121 +1,135 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <script src="poki-sdk.js"></script>
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Fruit Ninja" />
+    <meta name="apple-mobile-web-app-title" content="Fruit Ninja" />
+    <meta name="msapplication-starturl" content="./" />
+    <!-- <script type="text/javascript" src="https://storms.com/lib/h5Sdk/v1/h5Sdk.js"></script> -->
+
     <title>Fruit Ninja</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      @font-face {
+        font-family: gangofchinese;
+        src: url('assets/font/gangofchinese.ttf');
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100% !important;
+        margin: 0;
+        background-color: #000000 !important;
+      }
+
+      .fontLoader{
+          position: absolute;
+          left: -1000px;
+          visibility: hidden;
+      }
+
+      #phaser-canvas{
+          margin: 0 auto;
+          background-color: #000000;
+      }
+
+      body,#content{
+          height: 100vh !important;
+          max-height: 100vh !important;
+      }
+
+      #divAds, #tempads{
+          display: none;
+      }
+
+      /* canvas{
+          width: 100%;
+          height: 100%;
+          display: grid !important;
+          grid-area: 1/1;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+          padding: 0 !important;
+          max-width: 100% !important;
+          max-height: 100vh !important;
+      } */
+
+      #enable3d-three-canvas, #enable3d-phaser-canvas {
+          min-width: 100%;
+          max-width: 100%;
+          max-width: -webkit-fill-available;
+          max-width: -moz-available;
+          max-width: -webkit-fill-available;
+          max-width: fill-available;
+          margin: 0 auto;
+        }
+
+      /* @media screen and (max-width: 768px) {
+        #enable3d-three-canvas, #enable3d-phaser-canvas {
+          min-width: auto !important;
+          max-width: auto;
+          width: 960px;
+          height: auto;
+          margin: 0 auto;
+        }
+      } */
+
+      @media (min-aspect-ratio: 1.85) {
+        #enable3d-three-canvas, #enable3d-phaser-canvas {
+          width: 960px;
+          min-width: 640px;
+        }
+      }
+
+      @media (min-aspect-ratio: 8/4) {
+        #enable3d-three-canvas, #enable3d-phaser-canvas {
+          min-width: 640px;
+          /* background-color: aquamarine; */
+        }
+      }
+
+    </style>
+
+    <noscript>Please enable javascript to continue using this application.</noscript>
+
+    <!-- <script async
+        data-ad-client="ca-pub-6934234812187351"
+        data-ad-frequency-hint= "30s"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+    </script>
+    <script>window.adsbygoogle = window.adsbygoogle || [];
+        const adBreak =  adConfig = function(o) {adsbygoogle.push(o);}
+    </script> -->
+    <!-- installs the serviceWorker -->
+    <!-- <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+        })
+      }
+    </script> -->
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=980 height=540></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">FruitNinja</div>
-      </div>
+    <div class="fontLoader" style="font-family: gangofchinese;">-</div>
+    <div class="fontLoader" style="font-family: gangofchinese;">-</div>
+    <div id="content">
+        <div id="phaser-canvas"></div>
     </div>
-    <script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
-
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
-
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/fruit.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/fruit.data",
-        frameworkUrl: buildUrl + "/fruit.framework.js",
-        codeUrl: buildUrl + "/fruit.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "FruitNinja",
-        productVersion: "0.1",
-        showBanner: unityShowBanner,
-      };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
-
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-        canvas.style.width = "980px";
-        canvas.style.height = "540px";
-      }
-
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
+    <!-- <div id="phaser-game"></div> -->
+  <style id="injectStyles">html, body{ background: none !important; }</style>
+<script type="text/javascript" src="vendors.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
 </html>
