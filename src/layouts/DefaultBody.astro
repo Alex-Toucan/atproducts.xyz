@@ -47,9 +47,10 @@ const { title, description, keywords, author, additionalContent, ruffle, emulato
       <meta name="theme-color" content="#212529">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <script is:inline src="/scripts/darkmode.js"></script>
       <Fragment set:html={additionalContent} />
   </head>
-  <body class="vh-100 fixedtopnavimage" data-bs-theme="dark">
+  <body class="vh-100 fixedtopnavimage">
     <Fragment>  
       <slot />
     </Fragment>

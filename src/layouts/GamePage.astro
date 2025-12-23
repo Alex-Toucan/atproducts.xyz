@@ -22,11 +22,45 @@ const { title, link, author, authorlink, scrolling, ruffle, emulator, emulatorso
   <!-- Right column wrapper -->
   <div class="right-column">
     <!-- Top right: header -->
-    <div class="secondary-section d-flex align-items-center justify-content-between justify-content-lg-center text-center px-4 px-lg-0" style="height: 70px;">
+    <div class="secondary-section align-items-center justify-content-between justify-content-lg-center text-center px-4 d-flex" style="height: 70px;">
       <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <h1 class="display-6 fs-3 m-0">Unblocked Games</h1>
+
+      <h1 class="display-6 fs-3 m-0 text-center flex-grow-1">Unblocked Games</h1>
+
+      <!-- Theme Switcher Added Here -->
+      <div class="navbar-nav ms-auto color-changer">
+        <div class="p-0 dropdown dropdown-section color-dropdown">
+          <a class="nav-link dropdown-toggle color-button d-block"
+            href="javascript:void(0)"
+            role="button"
+            data-bs-toggle="dropdown"
+            data-bs-auto-close="outside"
+            id="bd-theme"
+            aria-label="Change theme">
+            <span class="theme-icon-active">
+              <i class="bi bi-sun-fill me-1"></i>
+            </span>
+            <span class="d-none" id="bd-theme-text">Change theme</span>
+          </a>
+
+          <div class="dropdown-menu" data-bs-display="static" data-bs-popper="static">
+            <div class="custom-group">
+              <a class="dropdown-item" href="javascript:void(0)" data-bs-theme-value="light">
+                <i class="bi bi-sun-fill me-2"></i> Light
+              </a>
+              <a class="dropdown-item" href="javascript:void(0)" data-bs-theme-value="dark">
+                <i class="bi bi-moon-stars-fill me-2"></i> Dark
+              </a>
+              <a class="dropdown-item" href="javascript:void(0)" data-bs-theme-value="auto">
+                <i class="bi bi-circle-half me-2"></i> Auto
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Theme Switcher -->
     </div>
 
     <!-- Bottom right: main content -->
