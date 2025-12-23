@@ -33,15 +33,15 @@ The "AT" in AT Products does stand for Alex Toucan.
 <hr>
 <h2>Links</h2>
 
-| Title                       | Link                                                                 |
-|:----------------------------|:----------------------------------------------------------------------|
-| Main Site                  | [https://atproducts.xyz](https://atproducts.xyz)                     |
-| Beta Viewing               | [https://beta.atproducts.xyz](https://beta.atproducts.xyz)           |
-| Department of Beta Testing | [https://beta-testing.atproducts.xyz](https://beta-testing.atproducts.xyz) |
-| AT's Unblocked Games       | [https://games.atproducts.xyz](https://games.atproducts.xyz)         |
-| Alex Toucan's Portfolio    | [https://portfolio.atproducts.xyz](https://portfolio.atproducts.xyz) |
-| Maintenance Mode           | [https://maintenance.atproducts.xyz](https://maintenance.atproducts.xyz) |
-| Blue Ball Machine          | [https://blue.atproducts.xyz](https://blue.atproducts.xyz)           |
+| Title                       | Link                                                                 | Branch                                                                 |
+|:----------------------------|:----------------------------------------------------------------------|:-------------------------------------------------------------------------|
+| Main Site                  | [atproducts.xyz](https://atproducts.xyz)                             | [main](https://github.com/Alex-Toucan/atproducts.xyz/tree/main)        |
+| Beta Viewing               | [beta.atproducts.xyz](https://beta.atproducts.xyz)                   | [beta](https://github.com/Alex-Toucan/atproducts.xyz/tree/beta)        |
+| Department of Beta Testing | [beta-testing.atproducts.xyz](https://beta-testing.atproducts.xyz)   | [beta-testing](https://github.com/Alex-Toucan/atproducts.xyz/tree/beta-testing) |
+| AT's Unblocked Games       | [games.atproducts.xyz](https://games.atproducts.xyz)                 | [games](https://github.com/Alex-Toucan/atproducts.xyz/tree/games)      |
+| Alex Toucan's Portfolio    | [portfolio.atproducts.xyz](https://portfolio.atproducts.xyz)         | [portfolio](https://github.com/Alex-Toucan/atproducts.xyz/tree/portfolio) |
+| Maintenance Mode           | [maintenance.atproducts.xyz](https://maintenance.atproducts.xyz)     | [maintenance](https://github.com/Alex-Toucan/atproducts.xyz/tree/maintenance) |
+| Blue Ball Machine          | [blue.atproducts.xyz](https://blue.atproducts.xyz)                   | [blue](https://github.com/Alex-Toucan/atproducts.xyz/tree/blue)        |
 <hr>
 <h2>Setup</h2>
 <p>If you wish to contribute to the site and want to copy the repository locally, follow the steps:</p>
