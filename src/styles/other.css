@@ -6557,6 +6557,7 @@ a {
 	background-color: grey;
 	padding: 10px;
 	border: 1px solid black;
+  min-width: 85px;
 }
 
 .sw-link {
@@ -6817,29 +6818,25 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 	top: 100%;
 }
 
-.products-tabContent {
-  height: 21rem !important;
-}
-
-.products-3 img, .products-4 img, .products-6 img {
-	width: 35%;
+.products-3 img, .products-4 img, .products-7 img {
+	width: 40%;
 }
 
 .products-2 img {
-  max-width: 250px;
+  max-width: 300px;
 	width: 70%;
 }
 
 .products-3 img {
-	max-width: 225px;
+	max-width: 270px;
 }
 
-.products-4 img, .products-7 img {
-	max-width: 125px;
+.products-4 img, .products-8 img {
+	max-width: 150px;
 }
 
-.products-6 img {
-	max-width: 225px;
+.products-7 img {
+	max-width: 250px;
 }
 
 @media (max-width:767.98px) {
@@ -6847,16 +6844,19 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 		width: 75%;
 		max-width: 275px;
 	}
-	.products-3 img, .products-6 img {
+	.products-3 img, .products-7 img {
 		width: 50%;
 		max-width: 225px;
 	}
 	.products-4 img {
 		max-width: 150px;
 	}
-	.products-7 img {
+	.products-8 img {
 		max-width: 100px;
 	}
+  .products-tabContent {
+    height: 21rem !important;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -6987,4 +6987,32 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 
 .title {
   padding-top: .625rem;
+}
+
+.page-404 {
+  & .btn.rounded-pill {
+    width: 150px;
+  }
+
+  & .main-header {
+    font-size: 20vw;
+    color: white;
+    filter: drop-shadow(2px 4px 6px black)
+  }
+
+  & .secondary-header {
+    font-size: 3rem
+  }
+
+  @media(min-width: 768px) {
+    & .main-header {
+      font-size:15vw;
+    }
+  }
+
+  @media(min-width: 991px) {
+    & .main-header {
+      font-size:12.5vw;
+    }
+  }
 }

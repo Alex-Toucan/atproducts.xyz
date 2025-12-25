@@ -1,11 +1,11 @@
 <div align="center">
- <a href="https://atproducts.xyz"><img src="/public/media/images/whitelogo.png" alt="AT Products LLC" width="50%"></a>
+ <a href="https://atproducts.xyz"><img src="/public/media/images/longwhite@2x.png" alt="AT Products LLC" height="150px"></a>
  <br><br>
  <p> 
   <img src="https://img.shields.io/badge/made%20with-love-E760A4.svg" alt="Made with love"> 
   <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
-  <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-2.23.1-blue" alt="Stable Version"></a>
-  <a href="https://beta.atproducts.xyz#what-new"><img src="https://img.shields.io/badge/beta_version-2.23.1-red" alt="Beta Version"></a>
+  <a href="https://atproducts.xyz#what-new"><img src="https://img.shields.io/badge/stable_version-2.23.2-blue" alt="Stable Version"></a>
+  <a href="https://beta.atproducts.xyz#what-new"><img src="https://img.shields.io/badge/beta_version-2.23.2-red" alt="Beta Version"></a>
   <a href="https://beta-testing.atproducts.xyz"><img src="https://img.shields.io/badge/DoBT_version-DoBT_v2.6.1-green" alt="DoBT Version"></a>
   <img src="https://github.com/Alex-Toucan/atproducts.xyz/workflows/CodeQL/badge.svg" alt="CodeQL">
   <a href="https://app.netlify.com/sites/atproducts/deploys"><img src="https://api.netlify.com/api/v1/badges/faf5f3b5-bf03-457d-9deb-dbfc4d3b55ee/deploy-status" alt="Netlify"></a> 
@@ -30,6 +30,18 @@
 <h2>About Us</h2>
 AT Products LLC, otherwise known as AT Products, is an informative technology company that is based in the United States that provides files that contain resources for cybersecurity and malware, and <a href="https://atproducts.xyz/paid">other solutions</a> to your problems!<br><br>
 The "AT" in AT Products does stand for Alex Toucan.
+<hr>
+<h2>Links</h2>
+
+| Title                       | Link                                                                 | Branch                                                                 |
+|:----------------------------|:----------------------------------------------------------------------|:-------------------------------------------------------------------------|
+| Main Site                  | [atproducts.xyz](https://atproducts.xyz)                             | [main](https://github.com/Alex-Toucan/atproducts.xyz/tree/main)        |
+| Beta Viewing               | [beta.atproducts.xyz](https://beta.atproducts.xyz)                   | [beta](https://github.com/Alex-Toucan/atproducts.xyz/tree/beta)        |
+| Department of Beta Testing | [beta-testing.atproducts.xyz](https://beta-testing.atproducts.xyz)   | [beta-testing](https://github.com/Alex-Toucan/atproducts.xyz/tree/beta-testing) |
+| AT's Unblocked Games       | [games.atproducts.xyz](https://games.atproducts.xyz)                 | [games](https://github.com/Alex-Toucan/atproducts.xyz/tree/games)      |
+| Alex Toucan's Portfolio    | [portfolio.atproducts.xyz](https://portfolio.atproducts.xyz)         | [portfolio](https://github.com/Alex-Toucan/atproducts.xyz/tree/portfolio) |
+| Maintenance Mode           | [maintenance.atproducts.xyz](https://maintenance.atproducts.xyz)     | [maintenance](https://github.com/Alex-Toucan/atproducts.xyz/tree/maintenance) |
+| Blue Ball Machine          | [blue.atproducts.xyz](https://blue.atproducts.xyz)                   | [blue](https://github.com/Alex-Toucan/atproducts.xyz/tree/blue)        |
 <hr>
 <h2>Setup</h2>
 <p>If you wish to contribute to the site and want to copy the repository locally, follow the steps:</p>
@@ -67,4 +79,4 @@ netlify dev --dir=dist
 </ul>
 <hr>
 <h6>atproducts.xyz is under a MIT license. <a href="https://atproducts.xyz/licenses#atproductsxyz">View more information</a>.
-<h6>Last Recorded Version: 2.23.1</h6>
+<h6>Last Recorded Version: 2.23.2</h6>
