@@ -1,0 +1,37 @@
+---
+const { title, author, date, image } = Astro.props;
+---
+
+<div id="intro" class="mb-4">
+  {image && (
+    <figure class="mb-3">
+      <img 
+        src={image} 
+        alt={title} 
+        class="img-fluid rounded-2 border border-secondary d-block mx-auto hero-img"
+      />
+    </figure>
+  )}
+  <h1 class="display-6 mb-3">{title}</h1>
+  <div class="d-flex">
+    {author && author.map(({ image: authorImage, name }) => (
+      <div class="d-flex me-3 gap-2">
+        <img 
+          src={authorImage} 
+          width="40" 
+          height="40" 
+          class="rounded-2 border-2 border-solid border-secondary my-auto"
+        />
+        <div class="d-md-flex d-grid align-items-center gap-md-2">
+          <span>
+            <span class="text-body-secondary"> By</span> {name}
+          </span>
+          <span>
+            <span class="text-body-secondary"> Published</span> {date}
+          </span>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+<hr>

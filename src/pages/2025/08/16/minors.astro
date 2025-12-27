@@ -1,136 +1,91 @@
 ---
-import Navbar from '../../../../components/Navbar.astro';
-import Footer from '../../../../components/Footer.astro';
+import DefaultBody from "../../../../layouts/DefaultBody.astro"
+import BlogIntro from "../../../../layouts/BlogIntro.astro"
 ---
 
-<html class="h-100 fixedtopnavimage" lang="en" data-bs-theme="dark">
-  <head>
-    <title>How We Protect Minors on Our Discord Servers</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/static/cookie.css">
-    <link rel="stylesheet" href="/static/other.css">
-    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="preload" as="style" href="/static/other.css">
-    <link rel="preload" as="script" href="/static/darkmode.js">
-    <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
-    <link rel="icon" type="image/png" href="/media/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
-    <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta property="og:image" content="/media/favicon/iconembed.png">
-    <meta name="twitter:image" content="/media/favicon/iconembed.png">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <link rel="manifest" href="/media/favicon/site.webmanifest">
-    <meta charset="UTF-8">
-    <meta name="title" content="How We Protect Minors on Our Discord Servers">
-    <meta name="description" content="Learn about the policies and rules AT Products LLC enforces to protect minors on our Discord servers.">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@ATProductsLLC">
-    <meta name="twitter:creator" content="@ATProductsLLC">
-    <meta name="twitter:title" content="How We Protect Minors on Our Discord Servers">
-    <meta name="twitter:description" content="Learn about the policies and rules AT Products LLC enforces to protect minors on our Discord servers.">
-    <meta name="author" content="Alex Toucan">
-    <meta property="og:title" content="How We Protect Minors on Our Discord Servers">
-    <meta property="og:description" content="Learn about the policies and rules AT Products LLC enforces to protect minors on our Discord servers.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script is:inline src="/static/darkmode.js"></script>
-  </head>
-  <body class="h-100 fixedtopnavimage">
-    <div id="page" class="h-100 mt-4">
-      <main id="maintenance" class="container">
-        <Navbar />
-        <div>
-          <div id="intro" class="mb-4">
-            <h1 class="display-6 mb-3">How We Protect Minors on Our Discord Servers</h1>
-            <div class="d-flex"> 
-              <img src="/media/favicon/iconembed.png" width="40px" height="40px" class="rounded-2 border-2 border-solid border-secondary me-2 my-auto"> 
-              <div class="h-100 my-auto">
-                <div class="d-md-flex d-grid"> 
-                  <span class="me-md-4"> <span class="text-body-secondary">By</span> Alex Toucan</span> 
-                  <span> <span class="text-body-secondary">Published</span> Aug 16, 2025</span> 
-                </div>
-              </div>
-            </div> 
-          </div>
-          <hr>
-          <div id="body" class="mt-4">
-            <h2 id="tl-dr">TL;DR</h2>
-            <ul>
-              <li>Users under 13: Immediate ban per Discord ToS.</li>
-              <li>Users under 18: Protected from any form of sexualization or exploitation.</li>
-              <li>Any predatory behavior: Instant ban, no appeal, and reported to authorities.</li>
-            </ul>
-            <h2>Our PSA</h2>
-            <p>
-              <strong>This is an important public safety announcement. Please, read as everyone under the age of 18 is affected by this.</strong>
-            </p>
-            <p>Following certain controversies, we would like to reinforce our policies and rules that protect everyone, especially users who are under the age of 18. This applies to all AT Products LLC-owned/based Discord servers.</p>
-            <p>The following documents will be discussed: </p>
-            <ul>
-              <li>
-                <a href="https://discord.com/terms">https://discord.com/terms</a>
-              </li>
-              <li>
-                <a href="https://discord.com/guidelines">https://discord.com/guidelines</a>
-              </li>
-              <li>
-                <a href="https://atproducts.xyz/discord">https://atproducts.xyz/discord</a>
-              </li>
-            </ul>
-            <p></p>
-            <p>As we all know, in the U.S., anybody below the age of 18 is legally considered a minor and still a child. Please keep that definition in mind, as it will be discussed multiple times. Anybody who has an attraction to a minor is considered a pedophile, which will also be discussed below.</p>
-            <p>Please note that we take these policies seriously. If you have any concerns or questions, please do not hesitate to let me know.</p>
-            <p>If you find any of these rule breaks, notify an staff member immediately. If you are curious about how we handle these situations, scroll below.</p>
-            <h3>Policies/Rules</h3>
-            <p>The following rules/policies are in place:</p>
-            <h4>Users under the age of 13</h4>
-            <p>Any users found (or suspected) to be under the age of 13 will be banned immediately as per the <a href="https://discord.com/terms#2">Discord Terms of Service</a>, no exceptions. </p>
-            <h4>Users under the age of 18</h4>
-            <p>Once again, in the U.S., anybody below the age of 18 is legally considered a minor, and anybody who has an attraction to a minor is considered a pedophile. Anybody to be found (or suspected) of conducting pedophilic behavior or who has a previous history of such behavior will be banned immediately, following the <a href="https://discord.com/guidelines">Discord Community Guidelines</a> and <a href="https://atproducts.xyz/discord/">ATP Discord Rules</a>.
-            </p>
-            <p>The following citations define the rule in place here in CodingHome v2, the first one being the <a href="https://discord.com/guidelines">Discord Community Guidelines</a>: </p>
-            <blockquote class="blockquote">
-              <p>Do not solicit, share, or make any attempt to distribute content that depicts, promotes, or attempts to normalize child sexual abuse. Also, do not post content or engage in conduct that in any way sexualizes children. This includes real as well as manipulated media, animation (such as lolicon), and any type of digital creation (note that this includes AI-generated media).</p>
-            </blockquote>
-            <p>And the second one being from the <a href="https://atproducts.xyz/discord/">ATP Discord Rules</a>, please note that it also shares on how we enforce it: </p>
-            <blockquote class="blockquote">
-              <p>Zoophilia, pedophilia, necrophilia, and any other forms of illegal behavior with/without paraphilias, such as exploitation of minors/animals, will not be tolerated under any circumstances. Any such activity will result in an instant ban if mentioned in any form and may be reported to Discord staff, law enforcement authorities, and/or the National Center for Exploited and Missing Children, respectively. Any other sexual attractions (even if they are not necessarily illegal) shall not be shared and will also result in a punishment (dependent on the Server's policy) if mentioned in any form.</p>
-            </blockquote>
-            <h3>Enforcement</h3>
-            <p>
-              As discussed, here is how we enforce it:
-            </p>
-            <h4>What You Should Do</h4>
-            <ol>
-              <li>Report the inappropriate behavior in any means necessary, either by direct messaging us, pinging us, or <a href="https://atproducts.xyz/contact" target="_blank" rel="noopener noreferrer">contact us</a>. </li>
-              <li>Please show evidence of how the behavior is taking place, either by screenshots or screen recordings.</li>
-              <li>We will handle it from here and out. We will notify you if any action is taken and what it will be.</li>
-            </ol>
-            <h4>What We Do</h4>
-            <ol>
-              <li>We will investigate the evidence of what happened or what we currently have.</li>
-              <li>If the behavior is indeed what we think it is, an instant ban will occur <strong>with zero chance to appeal, with zero warnings</strong>, and we will report all messages referring to such. </li>
-              <li>We will make a <a href="https://report.cybertip.org/">https://report.cybertip.org/</a> report, which is owned by the US National Center for Missing &amp; Exploited Children. </li>
-              <li>Contact Discord Staff via email or any other way necessary.</li>
-            </ol>
 
-            <p class="mt-3">
-              Thank you for reading, 
-              <br>— Alex Toucan, Founder and Owner of AT Products LLC
-            </p>
-          </div>
-        </div>
+<DefaultBody
+  title="How We Protect Minors on Our Discord Servers"
+  description="Learn about the policies and rules AT Products LLC enforces to protect minors on our Discord servers."
+  author="Alex Toucan"
+  keywords="Discord safety, minor protection, AT Products LLC, CodingHome, community guidelines, moderation policies"
+  color="#212529"
+>
+  <Fragment slot="main-content">
+    <div>
+      <BlogIntro 
+        title="How We Protect Minors on Our Discord Servers" 
+        author={[
+          {name: "Alex Toucan", image: "/media/favicon/iconembed.png"},
+        ]}
+        date="August 16th, 2025"
+      />
+      <div id="body" class="mt-4">
+        <h2 id="tl-dr">TL;DR</h2>
+        <ul>
+          <li>Users under 13: Immediate ban per Discord ToS.</li>
+          <li>Users under 18: Protected from any form of sexualization or exploitation.</li>
+          <li>Any predatory behavior: Instant ban, no appeal, and reported to authorities.</li>
+        </ul>
+        <h2>Our PSA</h2>
+        <p>
+          <strong>This is an important public safety announcement. Please, read as everyone under the age of 18 is affected by this.</strong>
+        </p>
+        <p>Following certain controversies, we would like to reinforce our policies and rules that protect everyone, especially users who are under the age of 18. This applies to all AT Products LLC-owned/based Discord servers.</p>
+        <p>The following documents will be discussed: </p>
+        <ul>
+          <li>
+            <a href="https://discord.com/terms">https://discord.com/terms</a>
+          </li>
+          <li>
+            <a href="https://discord.com/guidelines">https://discord.com/guidelines</a>
+          </li>
+          <li>
+            <a href="https://atproducts.xyz/discord">https://atproducts.xyz/discord</a>
+          </li>
+        </ul>
+        <p></p>
+        <p>As we all know, in the U.S., anybody below the age of 18 is legally considered a minor and still a child. Please keep that definition in mind, as it will be discussed multiple times. Anybody who has an attraction to a minor is considered a pedophile, which will also be discussed below.</p>
+        <p>Please note that we take these policies seriously. If you have any concerns or questions, please do not hesitate to let me know.</p>
+        <p>If you find any of these rule breaks, notify an staff member immediately. If you are curious about how we handle these situations, scroll below.</p>
+        <h3>Policies/Rules</h3>
+        <p>The following rules/policies are in place:</p>
+        <h4>Users under the age of 13</h4>
+        <p>Any users found (or suspected) to be under the age of 13 will be banned immediately as per the <a href="https://discord.com/terms#2">Discord Terms of Service</a>, no exceptions. </p>
+        <h4>Users under the age of 18</h4>
+        <p>Once again, in the U.S., anybody below the age of 18 is legally considered a minor, and anybody who has an attraction to a minor is considered a pedophile. Anybody to be found (or suspected) of conducting pedophilic behavior or who has a previous history of such behavior will be banned immediately, following the <a href="https://discord.com/guidelines">Discord Community Guidelines</a> and <a href="https://atproducts.xyz/discord/">ATP Discord Rules</a>.
+        </p>
+        <p>The following citations define the rule in place here in CodingHome v2, the first one being the <a href="https://discord.com/guidelines">Discord Community Guidelines</a>: </p>
+        <blockquote class="blockquote">
+          <p>Do not solicit, share, or make any attempt to distribute content that depicts, promotes, or attempts to normalize child sexual abuse. Also, do not post content or engage in conduct that in any way sexualizes children. This includes real as well as manipulated media, animation (such as lolicon), and any type of digital creation (note that this includes AI-generated media).</p>
+        </blockquote>
+        <p>And the second one being from the <a href="https://atproducts.xyz/discord/">ATP Discord Rules</a>, please note that it also shares on how we enforce it: </p>
+        <blockquote class="blockquote">
+          <p>Zoophilia, pedophilia, necrophilia, and any other forms of illegal behavior with/without paraphilias, such as exploitation of minors/animals, will not be tolerated under any circumstances. Any such activity will result in an instant ban if mentioned in any form and may be reported to Discord staff, law enforcement authorities, and/or the National Center for Exploited and Missing Children, respectively. Any other sexual attractions (even if they are not necessarily illegal) shall not be shared and will also result in a punishment (dependent on the Server's policy) if mentioned in any form.</p>
+        </blockquote>
+        <h3>Enforcement</h3>
+        <p>
+          As discussed, here is how we enforce it:
+        </p>
+        <h4>What You Should Do</h4>
+        <ol>
+          <li>Report the inappropriate behavior in any means necessary, either by direct messaging us, pinging us, or <a href="https://atproducts.xyz/contact" target="_blank" rel="noopener noreferrer">contact us</a>. </li>
+          <li>Please show evidence of how the behavior is taking place, either by screenshots or screen recordings.</li>
+          <li>We will handle it from here and out. We will notify you if any action is taken and what it will be.</li>
+        </ol>
+        <h4>What We Do</h4>
+        <ol>
+          <li>We will investigate the evidence of what happened or what we currently have.</li>
+          <li>If the behavior is indeed what we think it is, an instant ban will occur <strong>with zero chance to appeal, with zero warnings</strong>, and we will report all messages referring to such. </li>
+          <li>We will make a <a href="https://report.cybertip.org/">https://report.cybertip.org/</a> report, which is owned by the US National Center for Missing &amp; Exploited Children. </li>
+          <li>Contact Discord Staff via email or any other way necessary.</li>
+        </ol>
 
-      </main>
-      <Footer />
+        <p class="mt-3">
+          Thank you for reading, 
+          <br>— Alex Toucan, Founder and Owner of AT Products LLC
+        </p>
+      </div>
     </div>
-
-    <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/jquery@4.0.0-beta/dist/jquery.min.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
-    <script is:inline src="/static/message.js"></script>
-  </body>
-</html>
+  </Fragment>
+</DefaultBody>

@@ -5,7 +5,7 @@ var pureAlert1Icon = 'bi-exclamation-triangle-fill'; // Icon
 var pureAlert1Desc = "This is an experimental page, which contains new unfinished elements, or testing elements, for potential to be added into future updates. Except bugs and glitches."; // Description
 var pureAlert1Link = 'mailto:support@atproducts.xyz'; // Link
 var pureAlert1LinkDesc = 'Contact support@atproducts.xyz for more information.'; // Link text
-var pureAlert1Enabled = true; // Switch to enable/disable alert
+var pureAlert1Enabled = false; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert1Cookie(name, value, days) {

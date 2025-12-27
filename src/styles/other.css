@@ -82,6 +82,10 @@ html, body {
   background: url('/media/images/Screenshot_8-3-2025_233010_other.atproducts.xyz.jpeg');
 }
 
+.skip-btn {
+  z-index: 2000;
+}
+
 .accordion-body p:last-child {
   margin-bottom: 0 !important;
 }
@@ -7104,4 +7108,19 @@ html.fixedtopnavimage {
 
 .btn-clipboard.btn:hover {
   color: var(--bs-link-hover-color);
+}
+
+.article-body {
+  @media (min-width: 767.98px) {
+    img.article-image {
+      width: 70% !important;
+    }
+  }
+  h2 {
+    padding-top: .5rem;
+  }
+  img.hero-img {
+    max-height: 500px;
+    object-fit: contain;
+  }
 }
