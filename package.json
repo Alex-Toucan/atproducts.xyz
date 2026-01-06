@@ -16,6 +16,7 @@
     "@astrojs/react": "^4.2.4",
     "astro": "^5.7.4",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "stripe": "^20.1.0"
   }
 }
