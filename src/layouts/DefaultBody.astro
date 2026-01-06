@@ -1,37 +1,18 @@
 ---
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, fourofour, index, modal, accordion, scrollspy } = Astro.props;
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url"
+
+import jquery from "jquery/dist/jquery.min.js?url";
+import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
+
+const { title, icon, color, description, keywords, author, additionalContent } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html class="fixedtopnavimage" lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
       <title>{title}</title> 
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-      {highlight && (
-        <link rel="stylesheet" href="/static/highlight.css">
-      )}
-      <link rel="stylesheet" href="/static/cookie.css">
-      <link rel="stylesheet" href="/static/other.css">
-      <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css">
-      <link rel="preload" as="style" href="/static/other.css">
-      <link rel="preload" as="script" href="/static/darkmode.js">
-      <link rel="preload" as="script" href="/static/alert-1.js">
-      <link rel="preload" as="script" href="/static/alert-2.js">
-      {heroid ?
-        <Fragment>
-        <link rel="preload" as="image" href={`/media/images/hero-${heroid}.webp`}>
-        </Fragment>
-        :
-        <Fragment>
-        <link rel="preload" as="image" href={`/media/images/hero.webp`}>
-        </Fragment>
-      }
-      {bulletin && bulletin.map(({ bulletinImage }, index) => (
-        bulletinImage ? (
-            <link rel="preload" as="image" href={`/media/slideshow/${bulletinImage}`} />
-        ) : null
-      ))}
       {icon ?
         <Fragment>
           <link rel="icon" href={`/media/images/${icon}`}>
@@ -44,6 +25,7 @@ const { highlight, title, heroid, icon, color, bulletin, description, keywords, 
           <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
           <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
           <link rel="icon" type="image/png" href="/media/favicon/android-chrome-192x192.png">
+          <link rel="icon" type="image/png" sizes="192x192" href="/media/favicon/android.png">
           <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
           <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
           <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
@@ -69,49 +51,24 @@ const { highlight, title, heroid, icon, color, bulletin, description, keywords, 
       )}
       <meta property="og:title" content={title}>
       <meta property="og:description" content={description}>
-      {color && (
+      <meta property="og:site_name" content="AT Products LLC">
+      {color ? (
         <meta name="theme-color" content={color}>
+      ) : (
+        <meta name="theme-color" content="#212529">
       )}
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <Fragment set:html={additionalContent}>
-      <script is:inline src="/static/darkmode.js"></script>
+      <Fragment set:html={additionalContent} />
   </head>
-  <body class="fixedtopnavimage">
+  <body>
     <Fragment>  
       <slot/>
     </Fragment>
     <Fragment>
-      <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
-      <script is:inline src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-      <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
-      {highlight && (
-        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-        <script is:inline src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/11.9.0/languages/go.min.js"></script>
-        <script>hljs.highlightAll();</script>
-        <script is:inline src="/static/copy.js"></script>
-      )}
-      <script is:inline src="/static/message.js"></script>
-      <script is:inline src="/static/scroll.js"></script>
-      <script is:inline src="/static/purecookie.js"></script>
-      <script is:inline src="/static/alert-1.js"></script>
-      <script is:inline src="/static/alert-2.js"></script>
-      <script is:inline src="/static/enabler.js"></script>
-      {fourofour && (
-        <script is:inline src="/static/404.js"></script>
-      )}
-      {modal && (
-        <script is:inline src="/static/modal-id.js"></script>
-      )} 
-      {accordion && (
-        <script is:inline src="/static/accordion-id.js"></script>
-      )}    
-      {scrollspy && (
-        <script is:inline src="/static/scrollspy-id.js"></script>
-      )}
-      {index && (
-        <script is:inline src="/static/index.js"></script>
-      )}    
+      <script src={bootstrap}></script>
+      <script src={jquery}></script>
+      <script src={jqueryui}></script>
     </Fragment>
   </body>
 </html>

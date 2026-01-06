@@ -1,0 +1,11 @@
+.full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+}
+
+.fs-16 {
+  font-size: 6.25rem !important;
+}
+

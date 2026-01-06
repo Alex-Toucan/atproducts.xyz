@@ -1,0 +1,41 @@
+---
+import DefaultBody from '../layouts/DefaultBody.astro';
+import BuyButton from '../components/BuyButton.astro';
+import { products } from "../data/products.ts";
+---
+
+<DefaultBody 
+  title="Test Mode Checkout" 
+  description="Use Stripe test mode to simulate payments." 
+  author="Alex Toucan"
+>
+  <div id="page">
+    <div id="main-content">
+      <main id="test-mode" class="container text-center my-4">
+
+        <h1 class="mb-3">Stripe Test Mode</h1>
+        <p class="text-body-secondary fs-5">
+          This page uses Stripe’s <strong>Test Mode</strong>.  
+          No real charges will be made.
+        </p>
+
+        <div class="my-4">
+          <BuyButton product={products[0]} />
+        </div>
+				<div class="my-4">
+					<BuyButton products={[products[1], products[2]]} />
+				</div>
+				<div class="my-4">
+          <BuyButton product={products[2]} />
+        </div>
+
+        <hr class="mx-2 mt-5">
+
+        <p class="figure-caption">
+          Use Stripe’s test cards such as <code>4242 4242 4242 4242</code> to simulate payments.
+        </p>
+
+      </main>
+    </div>
+  </div>
+</DefaultBody>

@@ -1,0 +1,40 @@
+---
+const { product, products } = Astro.props;
+
+// Normalize into a single array
+const items = products ?? (product ? [product] : []);
+---
+<button class="checkout-btn" data-items={JSON.stringify(items)}>
+  Buy {items.length === 1 ? items[0].name : `${items.length} items`}
+</button>
+
+<script type="module">
+  document.querySelectorAll(".checkout-btn").forEach((btn) => {
+    const raw = btn.dataset.items;
+    if (!raw) return;
+
+    const items = JSON.parse(raw);
+
+    btn.addEventListener("click", async () => {
+      const payload = {
+        items: items.map((p) => ({
+          id: p.id,
+          quantity: 1
+        }))
+      };
+
+      const res = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+      if (data.url) {
+        window.location = data.url;
+      } else {
+        alert("Checkout failed: " + data.error);
+      }
+    });
+  });
+</script>
