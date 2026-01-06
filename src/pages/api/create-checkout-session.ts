@@ -87,13 +87,17 @@ export const POST: APIRoute = async ({ request }) => {
     const hasSubscription = lineItems.some((i) => i.price);
     const mode = hasSubscription ? "subscription" : "payment";
 
+    const isDonationOnly = items.every((i) => i.id === "donation");
+
     const session = await stripe.checkout.sessions.create({
       mode,
       payment_method_types: ["card"],
       ...(mode === "payment" && { customer_creation: "always" }),
       line_items: lineItems,
-      success_url: "http://localhost:4322/success",
-      cancel_url: "http://localhost:4322/cancel"
+      success_url: isDonationOnly
+        ? `https://pay.atproducts.xyz/donation-success?amount=${items[0].amount}`
+        : `https://pay.atproducts.xyz/success`,
+      cancel_url: "https://pay.atproducts.xyz/cancel"
     });
 
     return new Response(JSON.stringify({ url: session.url }), {
