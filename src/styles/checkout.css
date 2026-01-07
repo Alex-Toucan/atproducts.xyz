@@ -9,3 +9,8 @@
   font-size: 6.25rem !important;
 }
 
+.donate-page {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+}

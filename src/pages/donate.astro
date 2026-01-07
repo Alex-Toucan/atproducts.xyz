@@ -1,5 +1,6 @@
 ---
 import DefaultBody from "../layouts/DefaultBody.astro";
+import "../styles/checkout.css";
 ---
 
 <DefaultBody 
@@ -7,63 +8,43 @@ import DefaultBody from "../layouts/DefaultBody.astro";
   description="Support our work with a custom donation."
   author="Alex Toucan"
 >
-  <div class="container my-5" style="max-width: 600px;">
+  <div class="container my-5 donate-page text-center">
     <h1 class="mb-4 text-center">Make a Donation</h1>
 
+    <p class="text-center text-muted mb-4">
+      Every contribution helps sustain our work. You can enter any amount above $1,
+      and your payment will be processed securely through Stripe.
+    </p>
+
     <div class="mb-3">
-      <label for="donation-amount" class="form-label">Donation Amount (USD)</label>
+      <label for="donation-amount" class="form-label text-muted"><small>Donation Amount ($USD)</small></label>
       <input 
         type="number" 
-        class="form-control" 
-        id="donation-amount" 
-        min="1" 
+        class="form-control"
+        id="donation-amount"
+        min="1"
         placeholder="Enter amount (e.g., 25)"
+        required
       />
+      <div class="invalid-feedback">
+        Please enter a valid amount of at least $1.
+      </div>
     </div>
 
     <button id="donate-btn" class="btn btn-primary w-100">
       Donate
     </button>
 
+    <a class="icon-link icon-link-hover fs-5 mt-3" href="https://atproducts.xyz/paid">
+      Return to Paid Services
+      <i class="bi bi-arrow-right h-100"></i>
+    </a>
+
+
     <p class="text-muted mt-3 text-center">
       Payments are processed securely through Stripe.
     </p>
   </div>
 
-  <script type="module">
-    const btn = document.getElementById("donate-btn");
-
-    btn.addEventListener("click", async () => {
-      const input = document.getElementById("donation-amount");
-      const amount = Number(input.value);
-
-      if (!amount || amount < 1) {
-        alert("Please enter a valid donation amount.");
-        return;
-      }
-
-      // Convert dollars → cents
-      const amountInCents = Math.round(amount * 100);
-
-      const res = await fetch("/api/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          items: [
-            {
-              id: "donation",
-              amount: amountInCents
-            }
-          ]
-        })
-      });
-
-      const data = await res.json();
-      if (data.url) {
-        window.location = data.url;
-      } else {
-        alert("Checkout failed: " + data.error);
-      }
-    });
-  </script>
+  <script is:inline src="/static/donate.js"></script>
 </DefaultBody>
