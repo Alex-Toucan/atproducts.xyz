@@ -19,18 +19,19 @@
       includeSubDomains; 
       preload'''
     Content-Security-Policy = '''
-      default-src 'self' https://cdn.jsdelivr.net/; 
-      frame-src 'self' https://app.netlify.com/ https://codepen.io https://googleads.g.doubleclick.net/ https://ep2.adtrafficquality.google https://www.google.com; 
-      form-action 'self'; 
-      base-uri 'self'; 
-      manifest-src 'self'; 
-      font-src 'self' data: https://cdn.jsdelivr.net; 
-      object-src 'self'; 
-      script-src 'unsafe-inline' 'unsafe-eval' 'self' https://cdn.jsdelivr.net https://pagead2.googlesyndication.com https://ep2.adtrafficquality.google/; 
-      style-src 'unsafe-hashes' 'self' https://cdn.jsdelivr.net https://atproducts.xyz 'unsafe-inline'; 
-      img-src 'self' data: https://atproducts.xyz https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google;
-      connect-src 'self' https://ep1.adtrafficquality.google https://cdn.jsdelivr.net https://pagead2.googlesyndication.com;
-      frame-ancestors 'self' ''' 
+      default-src 'self' https://cdn.jsdelivr.net;    
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://www.googletagservices.com https://tpc.googlesyndication.com https://securepubads.g.doubleclick.net;
+      style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://atproducts.xyz;
+      img-src 'self' data: https://atproducts.xyz https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com;
+      frame-src 'self' https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://www.google.com https://app.netlify.com;
+      connect-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://cdn.jsdelivr.net;
+      font-src 'self' data: https://cdn.jsdelivr.net;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      manifest-src 'self';
+      frame-ancestors 'self';
+    '''
     Features-Policy = "document-domain 'self';"
     Permissions-Policy = '''
       fullscreen=(self), 
