@@ -34,7 +34,7 @@ const flexSize = size ? size : 'md';
                 <img src={imageSrc} width={imageWidth} alt="icon" class={imageClasses} alt={`${imageAlt ? imageAlt : 'icon'}`} />
               )}
               {title && (
-                <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-2 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
+                <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-4 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
               )}
             </div>
             <p class="fs-4 m-3 mb-0 text-body-secondary" set:html={description}></p>
