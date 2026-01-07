@@ -8,42 +8,51 @@ import "../styles/checkout.css";
   description="Support our work with a custom donation."
   author="Alex Toucan"
 >
-  <div class="container my-5 donate-page text-center">
-    <h1 class="mb-4 text-center">Make a Donation</h1>
-
-    <p class="text-center text-muted mb-4">
-      Every contribution helps sustain our work. You can enter any amount above $1,
-      and your payment will be processed securely through Stripe.
-    </p>
-
-    <div class="mb-3">
-      <label for="donation-amount" class="form-label text-muted"><small>Donation Amount ($USD)</small></label>
-      <input 
-        type="number" 
-        class="form-control"
-        id="donation-amount"
-        min="1"
-        placeholder="Enter amount (e.g., 25)"
-        required
-      />
-      <div class="invalid-feedback">
-        Please enter a valid amount of at least $1.
-      </div>
+  <div class="position-absolute top-0 mt-3">
+    <div class="mx-auto" style="width: fit-content;">
+      <a href="https://atproducts.xyz" aria-label="AT Products LLC Homepage">
+        <img src="/media/images/longwhite.png" width="45%" class="image mx-auto d-block" alt="AT Products LLC Logo">
+      </a>
     </div>
+  </div>
+  <div class="container h-100 d-grid d-md-flex justify-content-center align-items-center my-0 text-center">
+    <div>
+      <h1 class="mb-4 text-center">Make a Donation</h1>
 
-    <button id="donate-btn" class="btn btn-primary w-100">
-      Donate
-    </button>
+      <p class="text-center text-muted mb-4">
+        Every contribution helps sustain our work. You can enter any amount above $1,
+        and your payment will be processed securely through Stripe.
+      </p>
 
-    <a class="icon-link icon-link-hover fs-5 mt-3" href="https://atproducts.xyz/paid">
-      Return to Paid Services
-      <i class="bi bi-arrow-right h-100"></i>
-    </a>
+      <div class="mb-3">
+        <label for="donation-amount" class="form-label text-muted"><small>Donation Amount ($USD)</small></label>
+        <input 
+          type="number" 
+          class="form-control"
+          id="donation-amount"
+          min="1"
+          placeholder="Enter amount (e.g., 25)"
+          required
+        />
+        <div class="invalid-feedback">
+          Please enter a valid amount of at least $1.
+        </div>
+      </div>
+
+      <button id="donate-btn" class="btn btn-primary w-100">
+        Donate
+      </button>
+
+      <a class="icon-link icon-link-hover fs-5 mt-3" href="https://atproducts.xyz/paid">
+        Return to Paid Services
+        <i class="bi bi-arrow-right h-100"></i>
+      </a>
 
 
-    <p class="text-muted mt-3 text-center">
-      Payments are processed securely through Stripe.
-    </p>
+      <p class="text-muted mt-3 text-center">
+        Payments are processed securely through Stripe.
+      </p>
+    </div>
   </div>
 
   <script is:inline src="/static/donate.js"></script>

@@ -10,7 +10,7 @@ const { title, icon, color, description, keywords, author, additionalContent } =
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark" class="h-100">
   <head>
       <title>{title}</title> 
       {icon ?
@@ -60,7 +60,7 @@ const { title, icon, color, description, keywords, author, additionalContent } =
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <Fragment set:html={additionalContent} />
   </head>
-  <body>
+  <body class="h-100">
     <Fragment>  
       <slot/>
     </Fragment>
