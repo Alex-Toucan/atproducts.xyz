@@ -15,12 +15,16 @@ import '../../styles/imagesizes.css'
       <h1 class="title">Contact Form</h1>
       <p>You may either use this or <a href="mailto:support@atproducts.xyz">email us manually</a>. You can use this instead if you don't want to email us on your email client. We'll make sure to reach out to the email address provided. <strong>Your IP address gets logged upon submitting</strong>, please view the <a href="/privacy#ip">Privacy Policy</a> for more information.</p>
       <form
-      name="Contact Form" 
-      action="/contact/success"
-      method="POST"
-      data-netlify="true"
-      enctype="multipart/form-data"
+        name="Contact Form" 
+        action="/contact/success"
+        method="POST"
+        data-netlify="true"
+        enctype="multipart/form-data"
+        data-netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value="Contact Form">
+        <input type="hidden" name="bot-field">
+
         <div class="d-sm-flex gap-2">
           <div class="col">
             <div class="form-floating mb-3">
@@ -39,7 +43,19 @@ import '../../styles/imagesizes.css'
           <textarea name="Text" class="form-control info-box" id="textareaInput" placeholder="Input comments or information to send" required></textarea>
           <label for="textareaInput" class="form-label">Information to Send</label>
         </div>
-        <small>If you wish to upload files, you must <a href="mailto:support@atproducts.xyz">email us manually</a> due to Netlify complications. Please allow 72 hours for a response back to your email provided. If your response is considered spam, it may not be responded to.</small>
+        <div class="mb-4">
+          <label for="attachment" class="form-label small text-muted">
+            Attach an Image (optional)
+          </label>
+          <input 
+            type="file" 
+            id="attachment" 
+            name="file" 
+            class="form-control"
+            accept="image/*"
+          >
+        </div>
+        <small>If you wish to more than one image or additional files, you must <a href="mailto:support@atproducts.xyz">email us manually</a> due to Netlify complications. Please allow 72 hours for a response back to your email provided. If your response is considered spam, it may not be responded to.</small>
         <button type="submit" class="mt-2 btn btn-lg btn-primary col-12">Send</button>
       </form>
     </main>
