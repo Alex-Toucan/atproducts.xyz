@@ -15,6 +15,7 @@ import "../styles/checkout.css";
       </a>
     </div>
   </div>
+
   <div class="container donate-page h-100 d-grid d-md-flex justify-content-center align-items-center my-0 text-center">
     <div>
       <h1 class="mb-4 text-center">Make a Donation</h1>
@@ -25,15 +26,19 @@ import "../styles/checkout.css";
       </p>
 
       <div class="mb-3">
-        <label for="donation-amount" class="form-label text-muted"><small>Donation Amount ($USD)</small></label>
+        <label for="donation-amount" class="form-label text-muted">
+          <small>Donation Amount ($USD)</small>
+        </label>
+
+        <!-- Updated to type="text" for currency formatting -->
         <input 
-          type="number" 
+          type="text"
           class="form-control"
           id="donation-amount"
-          min="1"
-          placeholder="Enter amount (e.g., 25)"
+          placeholder="$2.00"
           required
         />
+
         <div class="invalid-feedback">
           Please enter a valid amount of at least $1.
         </div>
@@ -47,7 +52,6 @@ import "../styles/checkout.css";
         Return to Paid Services
         <i class="bi bi-arrow-right h-100"></i>
       </a>
-
 
       <p class="text-muted mt-3 text-center">
         Payments are processed securely through Stripe.

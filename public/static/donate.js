@@ -1,52 +1,75 @@
 const btn = document.getElementById("donate-btn");
-    const input = document.getElementById("donation-amount");
+const input = document.getElementById("donation-amount");
 
-    btn.addEventListener("click", async () => {
-      const amount = Number(input.value);
+// Format raw cents into $X.XX
+const formatUSD = (rawCents) => {
+  const number = Number(rawCents);
+  if (isNaN(number)) return "";
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2
+  }).format(number / 100);
+};
 
-      // Reset validation state
-      input.classList.remove("is-invalid");
+// Handle typing → auto-format as dollars
+input.addEventListener("input", () => {
+  const digits = input.value.replace(/[^\d]/g, ""); // keep only numbers
 
-      if (!amount || amount < 1) {
-        input.classList.add("is-invalid");
-        return;
-      }
+  if (!digits) {
+    input.value = "";
+    return;
+  }
 
-      const amountInCents = Math.round(amount * 100);
+  input.value = formatUSD(digits);
+});
 
-      const res = await fetch("/api/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          items: [
-            {
-              id: "donation",
-              amount: amountInCents
-            }
-          ]
-        })
-      });
+// Handle donation button click
+btn.addEventListener("click", async () => {
+  // Remove formatting → get numeric dollars
+  const numeric = Number(input.value.replace(/[^0-9.]/g, ""));
 
-      const data = await res.json();
+  input.classList.remove("is-invalid");
 
-      if (data.url) {
-        window.location = data.url;
-      } else {
-        // Show specific error messages
-        let message = "Checkout failed.";
+  if (!numeric || numeric < 1) {
+    input.classList.add("is-invalid");
+    return;
+  }
 
-        if (data.error === "amount_too_small") {
-          message = "Your donation must be at least $1.";
-          input.classList.add("is-invalid");
-        } else if (data.error) {
-          message = "Checkout failed: " + data.error;
+  const amountInCents = Math.round(numeric * 100);
+
+  const res = await fetch("/api/create-checkout-session", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      items: [
+        {
+          id: "donation",
+          amount: amountInCents
         }
+      ]
+    })
+  });
 
-        alert(message);
-      }
-    });
+  const data = await res.json();
 
-    // Remove validation error when user edits the field
-    input.addEventListener("input", () => {
-      input.classList.remove("is-invalid");
-    });
+  if (data.url) {
+    window.location = data.url;
+  } else {
+    let message = "Checkout failed.";
+
+    if (data.error === "amount_too_small") {
+      message = "Your donation must be at least $1.";
+      input.classList.add("is-invalid");
+    } else if (data.error) {
+      message = "Checkout failed: " + data.error;
+    }
+
+    alert(message);
+  }
+});
+
+// Remove validation error when user edits
+input.addEventListener("input", () => {
+  input.classList.remove("is-invalid");
+});
