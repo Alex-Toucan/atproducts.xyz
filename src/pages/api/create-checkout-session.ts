@@ -24,6 +24,9 @@ export const POST: APIRoute = async ({ request }) => {
 
       const quantity = cartItem.quantity ?? 1;
 
+      // -----------------------------
+      // DONATION (NO TAX)
+      // -----------------------------
       if (product.type === "donation") {
         if (!cartItem.amount || cartItem.amount < 1) {
           return new Response(JSON.stringify({ error: "Donation amount missing or invalid" }), { status: 400 });
@@ -33,8 +36,7 @@ export const POST: APIRoute = async ({ request }) => {
           price_data: {
             currency: "usd",
             product_data: {
-              name: "Donation",
-              tax_code: "txcd_20030000"
+              name: "Donation"
             },
             unit_amount: cartItem.amount
           },
@@ -70,7 +72,7 @@ export const POST: APIRoute = async ({ request }) => {
           },
           product_data: {
             name: product.name,
-            tax_code: "txcd_20030000" // digital service
+            tax_code: "txcd_20030000"
           }
         });
 
@@ -96,7 +98,9 @@ export const POST: APIRoute = async ({ request }) => {
 
       line_items: lineItems,
 
-      automatic_tax: { enabled: true },
+      ...(isDonationOnly
+        ? {}
+        : { automatic_tax: { enabled: true } }),
 
       ...(isDonationOnly
         ? {}
