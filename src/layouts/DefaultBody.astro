@@ -11,7 +11,40 @@ const { highlight, title, heroid, icon, color, bulletin, description, keywords, 
       {highlight && (
         <link rel="stylesheet" href="/static/highlight.css">
       )}
-      <link rel="stylesheet" href="https://atproducts.xyz/_astro/apps.BtwKQDq_.css">
+      <style>
+        .hero {
+          width: 100%;
+          position: relative;
+          z-index: 1046;
+          background-size: cover !important;
+          background-position: center center !important;
+          background-repeat: no-repeat !important;   
+        }
+
+        .hero-main {
+          background: url('/media/images/hero.webp');
+        }
+      </style>
+      <style>
+        .ad-grid {
+          display: grid;
+          gap: 20px;
+        }
+        @media (max-width: 767px) {
+          .ad-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        @media (min-width: 768px) {
+          .ad-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        .ad-item {
+          display: flex;
+          justify-content: center;
+        }
+      </style>
       <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css">
       <link rel="preload" as="script" href="/static/alert-1.js">
       <link rel="preload" as="script" href="/static/alert-2.js">
@@ -155,8 +188,6 @@ const { highlight, title, heroid, icon, color, bulletin, description, keywords, 
       <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
       <script is:inline src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
       <script is:inline src="https://cdn.jsdelivr.net/npm/jquery-ui/dist/jquery-ui.min.js"></script>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3200651997791532"
-     crossorigin="anonymous"></script>
       <script is:inline>
         $(document).ready(function() {
           // Define the color variables using CSS custom properties

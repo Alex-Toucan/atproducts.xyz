@@ -1,110 +1,141 @@
---- 
-import DefaultBody from '../layouts/DefaultBody.astro'; 
---- 
+---
+import DefaultBody from '../layouts/DefaultBody.astro';
+---
 
-<DefaultBody title="Advertisements" description="Support AT Products LLC with advertisements on our site." keywords="advertisements, support, AT Products LLC" author="AT Products LLC">
+<DefaultBody 
+  title="Advertisements" 
+  description="Support AT Products LLC with advertisements on our site." 
+  keywords="advertisements, support, AT Products LLC" 
+  author="AT Products LLC"
+>
   <div class="container pt-4 vh-100">
-    <h1 class="text-center fw-bolder">Advertisements from <a href="https://atproducts.xyz">AT Products LLC</a></h1>
+    <h1 class="text-center fw-bolder">
+      Advertisements from <a href="https://atproducts.xyz">AT Products LLC</a>
+    </h1>
+
     <p class="text-center mt-3 fw-semibold fs-6">
-      Support us by viewing advertisements on this page—we keep our other sites ad-free for your convenience. 💖
+      Support us by viewing advertisements on this page—we keep our other sites ad-free for your convenience.
     </p>
-    <!-- Example Ad Placement -->
-    <div class="my-3">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3200651997791532" data-ad-slot="1122334455" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>
-        (window as any).adsbygoogle = (window as any).adsbygoogle || [];
-        (window as any).adsbygoogle.push({});
-      </script>
-    </div>
-    <div class="my-3">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3200651997791532" data-ad-slot="1122334455" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>
-        (window as any).adsbygoogle = (window as any).adsbygoogle || [];
-        (window as any).adsbygoogle.push({});
-      </script>
-    </div>
-    <!-- Additional Ad Sections -->
-    <div class="my-3">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3200651997791532" data-ad-slot="1122334455" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>
-        (window as any).adsbygoogle = (window as any).adsbygoogle || [];
-        (window as any).adsbygoogle.push({});
-      </script>
-    </div>
-    <!-- 4th Ad Section -->
-    <div class="my-3">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3200651997791532" data-ad-slot="5566778899" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>
-        (window as any).adsbygoogle = (window as any).adsbygoogle || [];
-        (window as any).adsbygoogle.push({});
-      </script>
+
+    <!-- Responsive Adsterra Grid -->
+    <div class="ad-grid my-4">
+      <Fragment set:html={`
+        <script>
+          window.atOptions = {
+            key: '158bbd11ec1f205737043f4832348e20',
+            format: 'iframe',
+            height: 250,
+            width: 300,
+            params: {}
+          };
+        </script>
+      `} />
+
+      <div class="ad-grid my-4">
+        <div class="ad-item">
+          <Fragment set:html={`<script src="https://www.highperformanceformat.com/158bbd11ec1f205737043f4832348e20/invoke.js"></script>`} />
+        </div>
+        <div class="ad-item">
+          <Fragment set:html={`<script src="https://www.highperformanceformat.com/158bbd11ec1f205737043f4832348e20/invoke.js"></script>`} />
+        </div>
+        <div class="ad-item">
+          <Fragment set:html={`<script src="https://www.highperformanceformat.com/158bbd11ec1f205737043f4832348e20/invoke.js"></script>`} />
+        </div>
+        <div class="ad-item">
+          <Fragment set:html={`<script src="https://www.highperformanceformat.com/158bbd11ec1f205737043f4832348e20/invoke.js"></script>`} />
+        </div>
+      </div>
     </div>
   </div>
-  <!-- Buttons -->
+
+  <!-- Bottom Buttons + Footer -->
   <div class="d-flex position-fixed bottom-0 mb-3 justify-content-between w-100">
     <div class="start-0 ms-3" id="information-btn">
-      <button class="btn btn-secondary py-2 d-flex align-items-center shadow-lg" id="bd-information" type="button" data-bs-toggle="modal" data-bs-target="#informationModal">
-        <span>
-          <i class="my-1 bi bi-info"></i>
-        </span>
+      <button class="btn btn-secondary py-2 d-flex align-items-center shadow-lg" 
+              id="bd-information" 
+              type="button" 
+              data-bs-toggle="modal" 
+              data-bs-target="#informationModal">
+        <span><i class="my-1 bi bi-info"></i></span>
         <span class="visually-hidden" id="bd-information-text">Toggle information modal</span>
       </button>
     </div>
+
     <footer class="text-center tab-link d-flex align-self-center">
-      <span>2025 &reg; <a href="https://atproducts.xyz">AT Products LLC</a>
-      </span>
+      <span>2025 &reg; <a href="https://atproducts.xyz">AT Products LLC</a></span>
     </footer>
-    <!-- Theme switcher -->
+
     <div class="dropup end-0 me-3">
-      <button class="btn btn-secondary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+      <button class="btn btn-secondary py-2 dropdown-toggle d-flex align-items-center" 
+              id="bd-theme" 
+              type="button" 
+              aria-expanded="false" 
+              data-bs-toggle="dropdown" 
+              data-bs-display="static">
         <span class="theme-icon-active">
           <i class="bi bi-sun-fill me-2"></i>
         </span>
         <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
       </button>
+
       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-specific" aria-labelledby="bd-theme-text">
         <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="false">
-            <i class="bi bi-sun-fill me-2"></i> Light </button>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light">
+            <i class="bi bi-sun-fill me-2"></i> Light
+          </button>
         </li>
         <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <i class="bi bi-moon-stars-fill me-2"></i> Dark </button>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+            <i class="bi bi-moon-stars-fill me-2"></i> Dark
+          </button>
         </li>
         <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
-            <i class="bi bi-circle-half me-2"></i> Auto </button>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+            <i class="bi bi-circle-half me-2"></i> Auto
+          </button>
         </li>
       </ul>
     </div>
   </div>
+
+  <!-- Modal -->
   <div class="modal fade" id="informationModal" tabindex="-1" aria-labelledby="informationModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="informationModalLabel">Information & Credits</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
+
         <div class="modal-body">
           <div class="hero hero-main p-md-4 rounded-2 mb-3">
-            <div class="bg-dark p-2 rounded-2 d-grid mx-auto" style="width: 217px;filter: drop-shadow(2px 4px 6px black);">
+            <div class="bg-dark p-2 rounded-2 d-grid mx-auto" style="width: 217px; filter: drop-shadow(2px 4px 6px black);">
               <span class="text-center fw-bold fs-4 text-white mb-2">Made by:</span>
-              <a class="btn btn-dark py-2" type="button" href="https://atproducts.xyz" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn-dark py-2" href="https://atproducts.xyz" target="_blank" rel="noopener noreferrer">
                 <img alt="AT Products LLC" src="https://atproducts.xyz/media/images/longwhite.png" width="175px">
               </a>
             </div>
           </div>
+
           <h2>Information</h2>
           <div class="text-justify">
-            <p class="tab">This page is dedicated to supporting <a href="https://atproducts.xyz"><strong>AT Products LLC</strong></a> through advertisements. Since we believe in providing an ad-free experience across all our sites, we've created this dedicated space where you can view advertisements to help us continue offering quality services. </p>
-            <p class="tab">Your support through viewing these ads directly contributes to the maintenance and development of our platforms. We appreciate your understanding and generosity in helping us sustain our projects.</p>
-            <p class="tab">If you wish to support us further, please consider visiting our <a href="https://atproducts.xyz/paid">Paid Products</a>. </p>
+            <p class="tab">
+              This page is dedicated to supporting <a href="https://atproducts.xyz"><strong>AT Products LLC</strong></a> through advertisements.
+            </p>
+            <p class="tab">
+              Your support directly contributes to the maintenance and development of our platforms.
+            </p>
+            <p class="tab">
+              If you wish to support us further, please consider visiting our <a href="https://atproducts.xyz/paid">Paid Products</a>.
+            </p>
           </div>
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
+
 </DefaultBody>
