@@ -14,3 +14,11 @@
   margin: 0 auto;
   display: block;
 }
+
+.width-fit-content {
+  width: fit-content;
+}
+
+.min-width-200 {
+  min-width: 200px;
+}
