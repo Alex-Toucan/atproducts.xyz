@@ -1,7 +1,7 @@
 const btn = document.getElementById("donate-btn");
 const input = document.getElementById("donation-amount");
+const feedback = input.nextElementSibling;
 
-// Format raw cents into $X.XX
 const formatUSD = (rawCents) => {
   const number = Number(rawCents);
   if (isNaN(number)) return "";
@@ -12,9 +12,8 @@ const formatUSD = (rawCents) => {
   }).format(number / 100);
 };
 
-// Handle typing → auto-format as dollars
 input.addEventListener("input", () => {
-  const digits = input.value.replace(/[^\d]/g, ""); // keep only numbers
+  const digits = input.value.replace(/[^\d]/g, "");
 
   if (!digits) {
     input.value = "";
@@ -22,16 +21,16 @@ input.addEventListener("input", () => {
   }
 
   input.value = formatUSD(digits);
+  input.classList.remove("is-invalid");
 });
 
-// Handle donation button click
 btn.addEventListener("click", async () => {
-  // Remove formatting → get numeric dollars
   const numeric = Number(input.value.replace(/[^0-9.]/g, ""));
 
   input.classList.remove("is-invalid");
 
   if (!numeric || numeric < 1) {
+    feedback.textContent = "Please enter a valid amount of at least $1.";
     input.classList.add("is-invalid");
     return;
   }
@@ -55,21 +54,14 @@ btn.addEventListener("click", async () => {
 
   if (data.url) {
     window.location = data.url;
-  } else {
-    let message = "Checkout failed.";
-
-    if (data.error === "amount_too_small") {
-      message = "Your donation must be at least $1.";
-      input.classList.add("is-invalid");
-    } else if (data.error) {
-      message = "Checkout failed: " + data.error;
-    }
-
-    alert(message);
+    return;
   }
-});
 
-// Remove validation error when user edits
-input.addEventListener("input", () => {
-  input.classList.remove("is-invalid");
+  if (data.error === "amount_too_small") {
+    feedback.textContent = "Your donation must be at least $1.";
+    input.classList.add("is-invalid");
+  } else if (data.error) {
+    feedback.textContent = "Checkout failed: " + data.error;
+    input.classList.add("is-invalid");
+  }
 });
