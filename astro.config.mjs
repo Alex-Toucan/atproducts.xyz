@@ -3,6 +3,13 @@ import react from '@astrojs/react';
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
+  vite: {
+    resolve: {
+      alias: {
+        jquery: '/node_modules/jquery'
+      }
+    }
+  },
   integrations: [
     react(),
   ],
@@ -21,6 +28,7 @@ export default defineConfig({
           "'self'",
           "'unsafe-inline'",
           "'unsafe-hashes'",
+          "data:",
           "https://cdn.jsdelivr.net"
         ]
       },
