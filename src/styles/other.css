@@ -7106,6 +7106,28 @@ html.fixedtopnavimage {
   color: var(--bs-link-hover-color);
 }
 
+
 .versions-tab {
-  height: 15rem !important;
+  height: 30rem !important;
+}
+
+.versions-sidebar {
+  overflow-y: auto;
+}
+
+@media (max-width: 767.98px) {
+  .versions-sidebar {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .versions-sidebar {
+    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+}
+
+.versions-sidebar .nav-link:hover {
+  background: #0b5ed7;
+  color: #fff;
 }

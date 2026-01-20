@@ -38,9 +38,9 @@ function isLatestVersion(v: VersionItem) {
 }
 ---
 
-<div class="versions-wrapper d-flex flex-column flex-md-row border border-2 rounded-3 shadow-sm">
+<div class="versions-wrapper versions-tab d-flex flex-column flex-md-row border border-2 rounded-3 shadow-sm">
   <!-- Sidebar -->
-  <aside class="versions-sidebar p-3 border-end d-none d-md-block">
+  <aside class="versions-sidebar col-md-3 p-3 d-md-block">
     <ul class="nav nav-pills flex-column gap-2">
       {versions.map((v, i) => (
         <li class="nav-item">
@@ -64,31 +64,6 @@ function isLatestVersion(v: VersionItem) {
     </ul>
   </aside>
 
-  <!-- Mobile Tabs -->
-  <div class="d-md-none p-3">
-    <ul class="nav nav-pills gap-2">
-      {versions.map((v, i) => (
-        <li class="nav-item">
-          <button
-            class={`nav-link ${i === 0 ? "active" : ""}`}
-            id={`${v.id}-tab-mobile`}
-            data-bs-toggle="tab"
-            data-bs-target={`#${v.id}-pane`}
-            type="button"
-            role="tab"
-            aria-controls={`${v.id}-pane`}
-            aria-selected={i === 0}
-          >
-            {v.title}
-            {isLatestVersion(v) && (
-              <span class="badge bg-success ms-2">Latest</span>
-            )}
-          </button>
-        </li>
-      ))}
-    </ul>
-  </div>
-
   <!-- Content -->
   <section class="flex-grow-1 p-4">
     <div class="tab-content">
@@ -101,9 +76,6 @@ function isLatestVersion(v: VersionItem) {
         >
           <h2 class="fw-bold">
             {v.title}
-            {isLatestVersion(v) && (
-              <span class="badge bg-success ms-2">Latest</span>
-            )}
           </h2>
 
           {v.dates && <p class="text-muted">{v.dates}</p>}
@@ -120,25 +92,12 @@ function isLatestVersion(v: VersionItem) {
               ))}
             </div>
           )}
+
+          {v.description && (
+            <p class="my-4" set:html={v.description} />
+          )}
         </div>
       ))}
     </div>
   </section>
 </div>
-
-<style>
-  .versions-sidebar .nav-link.active,
-  .nav-pills .nav-link.active {
-    background: #0d6efd;
-    color: #fff;
-  }
-
-
-  .versions-sidebar .nav-link:hover {
-    background: #0b5ed7;
-  }
-
-  .btn-outline-primary {
-    border-width: 2px;
-  }
-</style>
