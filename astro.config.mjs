@@ -1,9 +1,15 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import netlify from '@astrojs/netlify';
 /* import compress from "astro-compress"; */
 
 export default defineConfig({
+  vite: {
+    resolve: {
+      alias: {
+        jquery: '/node_modules/jquery'
+      }
+    }
+  },
   integrations: [
     react()/*, 
     compress({
@@ -16,7 +22,6 @@ export default defineConfig({
     })
     */
   ],
-  adapter: netlify(),
   experimental: {
     csp: {
       styleDirective: {

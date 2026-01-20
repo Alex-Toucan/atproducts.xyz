@@ -7105,3 +7105,7 @@ html.fixedtopnavimage {
 .btn-clipboard.btn:hover {
   color: var(--bs-link-hover-color);
 }
+
+.versions-tab {
+  height: 15rem !important;
+}

@@ -1,0 +1,144 @@
+---
+interface VersionLink {
+  label: string;
+  url: string;
+}
+
+interface VersionItem {
+  id: string;
+  title: string;
+  dates?: string;
+  links?: VersionLink[];
+}
+
+const { versions } = Astro.props;
+
+// Parse semantic versions
+function parseVersion(v: string) {
+  return v.split(".").map(n => parseInt(n, 10) || 0);
+}
+
+function compareVersions(a: string, b: string) {
+  const av = parseVersion(a);
+  const bv = parseVersion(b);
+  for (let i = 0; i < Math.max(av.length, bv.length); i++) {
+    const diff = (av[i] || 0) - (bv[i] || 0);
+    if (diff !== 0) return diff;
+  }
+  return 0;
+}
+
+// Flatten all link labels across all versions
+const allLabels = versions.flatMap(v => v.links?.map(link => link.label) || []);
+const latestLabel = allLabels.sort(compareVersions).pop();
+
+// Helper: does this version contain the latest link?
+function isLatestVersion(v: VersionItem) {
+  return v.links?.some(link => link.label === latestLabel);
+}
+---
+
+<div class="versions-wrapper d-flex flex-column flex-md-row border border-2 rounded-3 shadow-sm">
+  <!-- Sidebar -->
+  <aside class="versions-sidebar p-3 border-end d-none d-md-block">
+    <ul class="nav nav-pills flex-column gap-2">
+      {versions.map((v, i) => (
+        <li class="nav-item">
+          <button
+            class={`nav-link w-100 text-start ${i === 0 ? "active" : ""}`}
+            id={`${v.id}-tab`}
+            data-bs-toggle="tab"
+            data-bs-target={`#${v.id}-pane`}
+            type="button"
+            role="tab"
+            aria-controls={`${v.id}-pane`}
+            aria-selected={i === 0}
+          >
+            {v.title}
+            {isLatestVersion(v) && (
+              <span class="badge bg-success ms-2">Latest</span>
+            )}
+          </button>
+        </li>
+      ))}
+    </ul>
+  </aside>
+
+  <!-- Mobile Tabs -->
+  <div class="d-md-none p-3">
+    <ul class="nav nav-pills gap-2">
+      {versions.map((v, i) => (
+        <li class="nav-item">
+          <button
+            class={`nav-link ${i === 0 ? "active" : ""}`}
+            id={`${v.id}-tab-mobile`}
+            data-bs-toggle="tab"
+            data-bs-target={`#${v.id}-pane`}
+            type="button"
+            role="tab"
+            aria-controls={`${v.id}-pane`}
+            aria-selected={i === 0}
+          >
+            {v.title}
+            {isLatestVersion(v) && (
+              <span class="badge bg-success ms-2">Latest</span>
+            )}
+          </button>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- Content -->
+  <section class="flex-grow-1 p-4">
+    <div class="tab-content">
+      {versions.map((v, i) => (
+        <div
+          class={`tab-pane fade ${i === 0 ? "show active" : ""}`}
+          id={`${v.id}-pane`}
+          role="tabpanel"
+          aria-labelledby={`${v.id}-tab`}
+        >
+          <h2 class="fw-bold">
+            {v.title}
+            {isLatestVersion(v) && (
+              <span class="badge bg-success ms-2">Latest</span>
+            )}
+          </h2>
+
+          {v.dates && <p class="text-muted">{v.dates}</p>}
+
+          {v.links && v.links.length > 0 && (
+            <div class="d-flex flex-wrap gap-3 my-4">
+              {v.links.map(link => (
+                <a href={link.url} class="btn btn-outline-primary">
+                  {link.label}
+                  {link.label === latestLabel && (
+                    <span class="badge bg-success ms-2">Latest</span>
+                  )}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+</div>
+
+<style>
+  .versions-sidebar .nav-link.active,
+  .nav-pills .nav-link.active {
+    background: #0d6efd;
+    color: #fff;
+  }
+
+
+  .versions-sidebar .nav-link:hover {
+    background: #0b5ed7;
+  }
+
+  .btn-outline-primary {
+    border-width: 2px;
+  }
+</style>
