@@ -47,7 +47,8 @@ export default defineConfig({
         "manifest-src 'self'",
         "font-src 'self' data: https://cdn.jsdelivr.net",
         "object-src 'self'",
-        "img-src 'self' data:"
+        "img-src 'self' data:",
+        "media-src 'self'"
       ]
     }
   }
