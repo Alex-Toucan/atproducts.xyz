@@ -29,4 +29,3 @@ desktop.ini
 
 # Netlify files
 .netlify
-deno.lock
