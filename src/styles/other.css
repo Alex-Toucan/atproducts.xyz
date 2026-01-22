@@ -7106,11 +7106,6 @@ html.fixedtopnavimage {
   color: var(--bs-link-hover-color);
 }
 
-
-.versions-tab {
-  height: 30rem !important;
-}
-
 .versions-sidebar {
   overflow-y: auto;
 }
@@ -7118,12 +7113,16 @@ html.fixedtopnavimage {
 @media (max-width: 767.98px) {
   .versions-sidebar {
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    height: 20rem !important;
   }
 }
 
 @media (min-width: 767.98px) {
   .versions-sidebar {
     border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+  .versions-tab {
+    height: 30rem !important;
   }
 }
 
