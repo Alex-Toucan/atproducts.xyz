@@ -8,6 +8,7 @@ interface VersionItem {
   id: string;
   title: string;
   dates?: string;
+  betalinks?: VersionLink[];
   links?: VersionLink[];
 }
 
@@ -29,12 +30,15 @@ function compareVersions(a: string, b: string) {
 }
 
 // Flatten all link labels across all versions
-const allLabels = versions.flatMap(v => v.links?.map(link => link.label) || []);
+const allLabels = versions.flatMap(v => [
+  ...(v.links?.map(link => link.label) || []),
+  ...(v.betalinks?.map(link => link.label) || [])
+]);
 const latestLabel = allLabels.sort(compareVersions).pop();
 
 // Helper: does this version contain the latest link?
 function isLatestVersion(v: VersionItem) {
-  return v.links?.some(link => link.label === latestLabel);
+  return v.links?.some(link => link.label === latestLabel) || v.betalinks?.some(link => link.label === latestLabel);
 }
 ---
 
@@ -79,6 +83,19 @@ function isLatestVersion(v: VersionItem) {
           </h2>
 
           {v.dates && <p class="text-muted">{v.dates}</p>}
+
+          {v.betalinks && v.betalinks.length > 0 && (
+            <div class="d-flex flex-wrap gap-3 my-4">
+              {v.betalinks.map((link: VersionLink) => (
+                <a href={link.url} class="btn btn-outline-warning">
+                  {link.label}
+                  {link.label === latestLabel && (
+                    <span class="badge bg-success ms-2">Latest</span>
+                  )}
+                </a>
+              ))}
+            </div>
+          )}
 
           {v.links && v.links.length > 0 && (
             <div class="d-flex flex-wrap gap-3 my-4">
