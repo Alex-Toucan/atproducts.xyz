@@ -40,13 +40,15 @@ const latestLabel = allLabels.sort(compareVersions).pop();
 function isLatestVersion(v: VersionItem) {
   return v.links?.some(link => link.label === latestLabel) || v.betalinks?.some(link => link.label === latestLabel);
 }
+
+const sortedVersions = [...versions].reverse();
 ---
 
 <div class="versions-wrapper versions-tab d-flex flex-column flex-md-row border border-2 rounded-3 shadow-sm">
   <!-- Sidebar -->
   <aside class="versions-sidebar col-md-3 p-3 d-md-block">
     <ul class="nav nav-pills flex-column gap-2">
-      {versions.map((v, i) => (
+      {sortedVersions.map((v, i) => (
         <li class="nav-item">
           <button
             class={`nav-link w-100 text-start ${i === 0 ? "active" : ""}`}
@@ -71,7 +73,7 @@ function isLatestVersion(v: VersionItem) {
   <!-- Content -->
   <section class="flex-grow-1 p-4">
     <div class="tab-content">
-      {versions.map((v, i) => (
+      {sortedVersions.map((v, i) => (
         <div
           class={`tab-pane fade ${i === 0 ? "show active" : ""}`}
           id={`${v.id}-pane`}
