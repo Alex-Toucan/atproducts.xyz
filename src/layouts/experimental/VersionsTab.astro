@@ -1,25 +1,11 @@
 ---
-interface VersionLink {
-  label: string;
-  url: string;
-}
-
-interface VersionItem {
-  id: string;
-  title: string;
-  dates?: string;
-  betalinks?: VersionLink[];
-  links?: VersionLink[];
-}
-
 const { versions } = Astro.props;
 
-// Parse semantic versions
-function parseVersion(v: string) {
+function parseVersion(v) {
   return v.split(".").map(n => parseInt(n, 10) || 0);
 }
 
-function compareVersions(a: string, b: string) {
+function compareVersions(a, b) {
   const av = parseVersion(a);
   const bv = parseVersion(b);
   for (let i = 0; i < Math.max(av.length, bv.length); i++) {
@@ -29,39 +15,39 @@ function compareVersions(a: string, b: string) {
   return 0;
 }
 
-// Flatten all link labels across all versions
 const allLabels = versions.flatMap(v => [
-  ...(v.links?.map(link => link.label) || []),
-  ...(v.betalinks?.map(link => link.label) || [])
+  ...(v.links?.map(l => l.label) || []),
+  ...(v.betalinks?.map(l => l.label) || [])
 ]);
+
 const latestLabel = allLabels.sort(compareVersions).pop();
 
-// Helper: does this version contain the latest link?
-function isLatestVersion(v: VersionItem) {
-  return v.links?.some(link => link.label === latestLabel) || v.betalinks?.some(link => link.label === latestLabel);
+function isLatestVersion({ links = [], betalinks = [] }) {
+  return (
+    links.some(l => l.label === latestLabel) ||
+    betalinks.some(l => l.label === latestLabel)
+  );
 }
-
-const sortedVersions = [...versions].reverse();
 ---
 
 <div class="versions-wrapper versions-tab d-flex flex-column flex-md-row border border-2 rounded-3 shadow-sm">
   <!-- Sidebar -->
   <aside class="versions-sidebar col-md-3 p-3 d-md-block">
     <ul class="nav nav-pills flex-column gap-2">
-      {sortedVersions.map((v, i) => (
+      {versions.map(({ id, title, links, betalinks }, index) => (
         <li class="nav-item">
           <button
-            class={`nav-link w-100 text-start ${i === 0 ? "active" : ""}`}
-            id={`${v.id}-tab`}
+            class={`nav-link w-100 text-start ${index === 0 ? "active" : ""}`}
+            id={`${id}-tab`}
             data-bs-toggle="tab"
-            data-bs-target={`#${v.id}-pane`}
+            data-bs-target={`#${id}-pane`}
             type="button"
             role="tab"
-            aria-controls={`${v.id}-pane`}
-            aria-selected={i === 0}
+            aria-controls={`${id}-pane`}
+            aria-selected={index === 0}
           >
-            {v.title}
-            {isLatestVersion(v) && (
+            {title}
+            {isLatestVersion({ links, betalinks }) && (
               <span class="badge bg-success ms-2">Latest</span>
             )}
           </button>
@@ -73,25 +59,23 @@ const sortedVersions = [...versions].reverse();
   <!-- Content -->
   <section class="flex-grow-1 p-4">
     <div class="tab-content">
-      {sortedVersions.map((v, i) => (
+      {versions.map(({ id, title, dates, description, betalinks, links }, index) => (
         <div
-          class={`tab-pane fade ${i === 0 ? "show active" : ""}`}
-          id={`${v.id}-pane`}
+          class={`tab-pane fade ${index === 0 ? "show active" : ""}`}
+          id={`${id}-pane`}
           role="tabpanel"
-          aria-labelledby={`${v.id}-tab`}
+          aria-labelledby={`${id}-tab`}
         >
-          <h2 class="fw-bold">
-            {v.title}
-          </h2>
+          <h2 class="fw-bold">{title}</h2>
 
-          {v.dates && <p class="text-muted">{v.dates}</p>}
+          {dates && <p class="text-muted">{dates}</p>}
 
-          {v.betalinks && v.betalinks.length > 0 && (
+          {betalinks && (
             <div class="d-flex flex-wrap gap-3 my-4">
-              {v.betalinks.map((link: VersionLink) => (
-                <a href={link.url} class="btn btn-outline-warning">
-                  {link.label}
-                  {link.label === latestLabel && (
+              {betalinks.map(({ label, url }) => (
+                <a href={url} class="btn btn-outline-warning">
+                  {label}
+                  {label === latestLabel && (
                     <span class="badge bg-success ms-2">Latest</span>
                   )}
                 </a>
@@ -99,12 +83,12 @@ const sortedVersions = [...versions].reverse();
             </div>
           )}
 
-          {v.links && v.links.length > 0 && (
+          {links && (
             <div class="d-flex flex-wrap gap-3 my-4">
-              {v.links.map(link => (
-                <a href={link.url} class="btn btn-outline-primary">
-                  {link.label}
-                  {link.label === latestLabel && (
+              {links.map(({ label, url }) => (
+                <a href={url} class="btn btn-outline-primary">
+                  {label}
+                  {label === latestLabel && (
                     <span class="badge bg-success ms-2">Latest</span>
                   )}
                 </a>
@@ -112,8 +96,8 @@ const sortedVersions = [...versions].reverse();
             </div>
           )}
 
-          {v.description && (
-            <p class="my-4" set:html={v.description} />
+          {description && (
+            <p class="my-4" set:html={description} />
           )}
         </div>
       ))}
