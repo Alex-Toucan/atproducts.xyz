@@ -20,7 +20,7 @@
     border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
   }
   & .other-services {
-    min-height: 250px !important;
+    height: 100% !important;
   }
   & .custom-hr {
     margin: .5rem !important;
