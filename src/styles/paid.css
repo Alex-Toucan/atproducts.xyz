@@ -10,6 +10,10 @@
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
     gap: .5rem;
   }
+  & .custom-hr {
+    margin: 0 !important;
+  }
+  
  }
  @media (min-width: 768px) {
   & {
@@ -17,6 +21,9 @@
   }
   & .other-services {
     min-height: 250px !important;
+  }
+  & .custom-hr {
+    margin: .5rem !important;
   }
  }
 }

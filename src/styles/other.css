@@ -6909,10 +6909,6 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   word-break: break-all;
 }
 
-.custom-hr {
-  margin: 8px;
-}
-
 @media (min-width: 767.98px) {
 	.rounded-md-1 {
 		border-radius: var(--bs-border-radius-sm) !important;
