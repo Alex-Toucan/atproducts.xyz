@@ -1,0 +1,31 @@
+.custom-card-header {
+ & {
+  padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+  margin-bottom: 0;
+  color: var(--bs-card-cap-color);
+  background-color: var(--bs-card-cap-bg);
+ }
+ @media (max-width: 768px) {
+  & {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    gap: .5rem;
+  }
+ }
+ @media (min-width: 768px) {
+  & {
+    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+  & .other-services {
+    min-height: 250px !important;
+  }
+ }
+}
+
+.client-img {
+  min-height: 200px;
+}
+
+.short-img {
+  min-height: 40px;
+  max-height: 125px;
+}

@@ -6,6 +6,8 @@ import Footer from '../components/Footer.astro';
 import FirstPaidCard from '../components/secondary/FirstPaidCard.astro';
 import SecondPaidCard from '../components/secondary/SecondPaidCard.astro';
 import BackToTop from '../components/BackToTop.astro';
+
+import '../styles/paid.css'
 ---
 
 <DefaultBody title="Paid Services" heroid="web" description="Get stuff done with AT Products!" keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan">
@@ -50,6 +52,41 @@ import BackToTop from '../components/BackToTop.astro';
             footerText="* These are not guaranteed prices." 
           />
         </div>
+      <SecondPaidCard 
+        title="Other Services"
+        description="These are other services that we offer as secondary services."
+        footerText="* These are not guaranteed prices."
+        buttonHref="/contact/" 
+        buttonText="Contact us" 
+      >
+          <div slot="paid-card-content" class="d-grid gap-4">
+
+            <!-- Website Maintenance -->
+            <div class="p-3 rounded border bg-light-subtle">
+              <h5 class="fw-bold mb-2">Website Maintenance</h5>
+              <p class="mb-1 text-body">
+                $10 - $150 (varies)
+              </p>
+              <p class="mb-0 text-body-secondary">
+                Keep your site up-to-date, fix bugs, and ensure everything runs smoothly.  
+                No primary package is required before purchasing this service.
+              </p>
+            </div>
+
+            <!-- Email Creation -->
+            <div class="p-3 rounded border bg-light-subtle">
+              <h5 class="fw-bold mb-2">Email Creation</h5>
+              <p class="mb-1 text-body">
+                $20 (No DNS Setup) • $30 (DNS Setup)
+              </p>
+              <p class="mb-0 text-body-secondary">
+                We create up to 5 users for your domain using Zoho Mail.  
+                DNS access is required (usually in your registrar’s settings).
+              </p>
+            </div>
+
+          </div>
+        </SecondPaidCard>
         <div class="accordion col-12 text-start d-none d-md-block" id="defintionsAccordion-3">
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -94,15 +131,36 @@ import BackToTop from '../components/BackToTop.astro';
           </div>
         </div>
         <SecondPaidCard 
-          title="Other Services" 
-          description="These are other services that we offer as secondary services." 
-          buttonHref="/contact/" 
-          buttonText="Contact us"   
-          footerText="* These are not guaranteed prices."
+          title="Clients"
+          description="These are our clients who have requested a site, and got a site!"
         >
-          <div slot="paid-card-content">
-            <p><b>Website Maintenance:</b> Price varies (Min: $10, max: $250)*; this package will help your site become more up-to-date and fix bugs if needed. Note that you do not need a primary package before buying this.</p>
-            <p class="mb-0"><b>Email Creation:</b> $20 (No DNS Setup), $30 (DNS Setup); this package will create up to 5 users for your domain under Zoho Mail. Note that you do not need a primary package before buying this, and we need access to your DNS settings (typically in your registar's [where you got the domain] settings).</p>
+          <div slot="paid-card-content" class="d-grid gap-4">
+            <div class="card bg-light-subtle shadow-sm overflow-hidden border d-flex flex-md-row flex-column">
+              <div class="col-md-5">
+                <img 
+                  src="/media/images/Screenshot_25-1-2026_191158_stephanystreasures.com.jpeg" 
+                  alt="Stephany's Treasures website preview"
+                  class="w-100 h-100 object-fit-cover client-img"
+                >
+              </div>
+              <div class="col-md-7 d-flex flex-column p-4">
+                <div class="d-flex flex-wrap flex-column align-items-center gap-3">
+                  <img src="/media/images/short-step.webp" width ="15%" alt="Stephany's Treasures' icon" class="short-img">
+                  <h3 class="fw-bold mb-2">Stephany's Treasures</h3>
+                </div>
+                <p class="text-body py-1 mb-3">
+                  An antique, jewelry, and home décor store with a modern, responsive website built by AT Products LLC.
+                </p>
+                <a 
+                  href="http://stephanystreasures.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn btn-primary mt-auto w-100"
+                >
+                  Visit Website
+                </a>
+              </div>
+            </div>
           </div>
         </SecondPaidCard>
         <SecondPaidCard 

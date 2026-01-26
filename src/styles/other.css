@@ -486,13 +486,6 @@ a {
     border-radius: var(--bs-card-border-radius);;
 }
 
-.custom-card-header { /* Custom */
-  padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
-  margin-bottom: 0;
-  color: var(--bs-card-cap-color);
-  background-color: var(--bs-card-cap-bg);
-}
-
 .popover {
     box-shadow: var(--bs-box-shadow-lg);
 }
