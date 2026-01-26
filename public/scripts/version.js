@@ -1,1 +1,1 @@
-document.write("2.23.2");
+document.write("2.24");
