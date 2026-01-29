@@ -5,9 +5,10 @@ import Footer    from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
 
 import '../../styles/imagesizes.css'
+import '../../styles/contact.css'
 ---
 
-<DefaultBody title="Contact Form" description="If you don't want to email us on your email client, use this instead. We'll reach out to your email provided." author="Alex Toucan">
+<DefaultBody title="Contact Form" description="If you don't want to email us on your email client, use this instead. We'll reach out to your email provided." author="Alex Toucan" contact>
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -39,19 +40,27 @@ import '../../styles/imagesizes.css'
             </div>
           </div>
         </div>
-        <div class="form-floating mb-2">
+        <div class="form-floating mb-3">
           <textarea name="Text" class="form-control info-box" id="textareaInput" placeholder="Input comments or information to send" required></textarea>
           <label for="textareaInput" class="form-label">Information to Send</label>
         </div>
-        <div class="mb-2">
-          <label for="attachment" class="form-label small text-muted">
-            Attach a File (optional)
+        <div class="my-2">
+          <label 
+            for="attachment" 
+            id="attachment-label"
+            tabindex="0"
+            class="form-control file-box d-flex justify-content-between align-items-center small"
+            style="cursor: pointer;"
+          >
+            <span class="text-muted">Attach a File (optional)</span>
+            <span id="attachment-filename"></span>
           </label>
+
           <input 
             type="file" 
             id="attachment" 
             name="file" 
-            class="form-control"
+            class="d-none"
             accept="image/*,video/*,audio/*"
           >
         </div>
