@@ -6950,10 +6950,6 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   filter: drop-shadow(2px 4px 6px black);
 }
 
-.info-box {
-  height: 150px !important;
-}
-
 .title {
   padding-top: .625rem;
 }
