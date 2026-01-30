@@ -1,0 +1,42 @@
+.versions-sidebar {
+  overflow-y: auto;
+}
+
+@media (max-width: 767.98px) {
+  .versions-sidebar {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    height: 20rem !important;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .versions-sidebar {
+    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+  .versions-tab {
+    height: 30rem !important;
+  }
+}
+
+.versions-sidebar .nav-link:hover {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+.versions-wrapper {
+  & .btn-outline-primary:hover {
+    background-color: rgba(13, 110, 253, 0.2);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+  & .btn-outline-warning:hover {
+    background-color: rgba(255, 193, 7, 0.25);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    color: #ffc107;
+    border-color: #ffc107;
+  }
+}

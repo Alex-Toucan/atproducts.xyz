@@ -10,7 +10,7 @@ import '../styles/navbar.css';
 import '../styles/other.css';
 import '../styles/cookie.css';
 
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, fourofour, accordion, scrollspy, breadcrumb } = Astro.props;
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, contact, fourofour, accordion, scrollspy, breadcrumb } = Astro.props;
 
 if (highlight) {
   import('../styles/highlight.css');
@@ -109,7 +109,10 @@ if (highlight) {
       <script is:inline src="/scripts/enabler.js"></script>
       {index && (
         <script is:inline src="/scripts/index.js"></script>
-      )}    
+      )}  
+      {contact && (
+        <script is:inline src="/scripts/contact.js"></script>
+      )}   
       {fourofour && (
         <script is:inline src="/scripts/404.js"></script>
       )}
