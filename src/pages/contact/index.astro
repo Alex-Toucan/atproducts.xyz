@@ -54,7 +54,9 @@ import '../../styles/contact.css'
             <span class="text-muted">Attach a File (optional)</span>
             <span id="attachment-filename" class="text-end text-break">Select a File</span>
           </label>
-
+          <div id="attachment-feedback" class="invalid-feedback d-none">
+            File must be 10MB or smaller.
+          </div>
           <input 
             type="file" 
             id="attachment" 
