@@ -1,5 +1,5 @@
 .info-box {
-  height: 150px !important;
+  min-height: 150px !important;
 }
 
 .file-box {
