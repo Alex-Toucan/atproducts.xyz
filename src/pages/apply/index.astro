@@ -4,9 +4,11 @@ import Hero from '../../components/Hero.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
+
+import '../../styles/contact.css'
 ---
 
-<DefaultBody title="Applying for the DoBT" description="Apply for the Department of Beta Testing of AT Products LLC." author="Alex Toucan">
+<DefaultBody title="Applying for the DoBT" description="Apply for the Department of Beta Testing of AT Products LLC." author="Alex Toucan" apply="true">
   <div id="page">
     <Navbar />
     <div id="main-content">
@@ -32,7 +34,7 @@ import BackToTop from '../../components/BackToTop.astro';
         <div id="form">
           <h2>Application Form</h2>
               <p>To apply for the Department of Beta Testing, please fill out the form below. This form is specifically for applying to become a beta tester and should not be used for general inquiries. If you have general questions or feedback, please use the <a href="https://atproducts.xyz/contact/">main website's contact form</a> or <a href="mailto:support@atproducts.xyz">email us directly</a>.</p>
-              <p>Your IP address gets logged upon submitting, please view the <a href="https://atproducts.xyz/privacy#ip">Privacy Policy</a> for more information.</p>
+              <p><b>Reminder, submitting this form sends us the information you provide, plus additional data.</b> For details on how submissions are handled, please view the <a href="https://atproducts.xyz/privacy#ip">Privacy Policy</a> for more information.</p>
           <form
             name="DoBT Apply Form" 
             action="/apply/success"
@@ -54,11 +56,32 @@ import BackToTop from '../../components/BackToTop.astro';
                 </div>
               </div>
             </div>
-            <div class="mb-2 form-floating">
-              <textarea name="Text" class="form-control text-box" id="textareaInput" placeholder="Put your application here." required></textarea>
+            <div class="mb-3 form-floating">
+              <textarea name="Text" class="form-control info-box" id="textareaInput" placeholder="Put your application here." required></textarea>
               <label for="textareaInput" class="form-label">Application</label>
             </div>
-            <small>If you wish to upload files, you will have to resort to <a href="mailto:support@atproducts.xyz">emailing us manually</a> due to Netlify complications.</small>
+            <div class="mb-2">
+              <label 
+                for="attachment" 
+                id="attachment-label"
+                tabindex="0"
+                class="form-control file-box d-flex justify-content-between align-items-center small"
+              >
+                <span class="text-muted">Attach a File (optional)</span>
+                <span id="attachment-filename" class="text-end text-break">Select a File</span>
+              </label>
+              <div id="attachment-feedback" class="invalid-feedback d-none">
+                File must be 10MB or smaller.
+              </div>
+              <input 
+                type="file" 
+                id="attachment" 
+                name="file" 
+                class="d-none"
+                accept="image/*,video/*,audio/*"
+              >
+            </div>
+            <small>If you wish to include more than one file, you must <a href="mailto:support@atproducts.xyz">email us manually</a> due to Netlify complications. Please allow 72 hours for a response back to your email provided. If your response is considered spam, it may not be responded to.</small>
             <button type="submit" class="mt-2 btn btn-lg btn-primary col-12">Submit</button>
           </form>
         </div>
