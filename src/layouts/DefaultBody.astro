@@ -28,21 +28,15 @@ const { highlight, title, heroid, icon, color, bulletin, description, keywords, 
       <style>
         .ad-grid {
           display: grid;
-          gap: 20px;
+          gap: 1.5rem;
+          justify-content: center;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
-        @media (max-width: 767px) {
-          .ad-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-        @media (min-width: 768px) {
-          .ad-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
+
         .ad-item {
           display: flex;
           justify-content: center;
+          align-items: center;
         }
       </style>
       <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css">
