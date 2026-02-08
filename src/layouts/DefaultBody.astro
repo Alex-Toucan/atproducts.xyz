@@ -11,21 +11,38 @@ const { highlight, title, heroid, icon, color, bulletin, description, keywords, 
       {highlight && (
         <link rel="stylesheet" href="/static/highlight.css">
       )}
-      <style>
-        .hero {
-          width: 100%;
-          position: relative;
-          z-index: 1046;
-          background-size: cover !important;
-          background-position: center center !important;
-          background-repeat: no-repeat !important;   
+      <style is:inline>
+        body {
+          margin-bottom: 7rem;
         }
 
-        .hero-main {
-          background: url('/media/images/hero.webp');
+        .bottom-section {
+          width: -webkit-fill-available !important;
+          z-index: 9999;
         }
-      </style>
-      <style>
+
+        @media (min-width: 767.98px) {
+          .hero {
+            width: 100%;
+            position: relative;
+            z-index: 1046;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;   
+          }
+
+          .hero-main {
+            background: url('/media/images/hero.webp');
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          .bottom-section {
+            border-radius: 0.5rem !important;
+            background-color: var(--bs-secondary-bg-subtle) !important;
+          }
+        }
+
         .ad-grid {
           display: grid;
           gap: 1.5rem;
