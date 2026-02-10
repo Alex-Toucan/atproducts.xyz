@@ -2,27 +2,22 @@
 
 (function () {
   let targetEl = null;
-  const lockBtn = document.getElementById('lockBtn');
-  const lockIcon = lockBtn.querySelector('i');
+  let $lockBtn = null;
+  let $lockIcon = null;
 
-  // Resolve target element: canvas if present, otherwise iframe itself
   function resolveTarget() {
-    // 1) Direct DOM canvas
-    const pageCanvas = document.querySelector('canvas');
+    const pageCanvas = $('canvas')[0];
     if (pageCanvas) return pageCanvas;
 
-    // 2) Ruffle shadow DOM canvas
-    const ruffle = document.querySelector('ruffle-object');
+    const ruffle = $('ruffle-object')[0];
     if (ruffle && ruffle.shadowRoot) {
       const ruffleCanvas = ruffle.shadowRoot.querySelector('canvas');
       if (ruffleCanvas) return ruffleCanvas;
     }
 
-    // 3) Iframe fallback: always lock the iframe element itself
-    const iframe = document.querySelector('iframe');
+    const iframe = $('iframe')[0];
     if (iframe) return iframe;
 
-    // Nothing found
     return null;
   }
 
@@ -39,9 +34,6 @@
       targetEl.setAttribute('tabindex', '0');
       targetEl.focus();
       targetEl.requestPointerLock();
-      console.log('Pointer lock requested on:', targetEl);
-
-      // Optimistic icon update; final state confirmed by events
       updateIcon(true);
     } catch (err) {
       console.warn('Pointer lock request failed:', err);
@@ -50,54 +42,54 @@
   }
 
   function updateIcon(locked) {
+    if (!$lockIcon) return;
+
     if (locked) {
-      lockIcon.className = 'bi bi-mouse-fill';
-      lockBtn.setAttribute('aria-label', 'Exit pointer lock');
-      lockBtn.setAttribute('data-bs-title', 'Exit Lock');
+      $lockIcon.removeClass().addClass('bi bi-mouse-fill');
+      $lockBtn.attr('aria-label', 'Exit pointer lock');
+      $lockBtn.attr('data-bs-title', 'Exit Lock');
     } else {
-      lockIcon.className = 'bi bi-mouse';
-      lockBtn.setAttribute('aria-label', 'Enter pointer lock');
-      lockBtn.setAttribute('data-bs-title', 'Pointer Lock');
+      $lockIcon.removeClass().addClass('bi bi-mouse');
+      $lockBtn.attr('aria-label', 'Enter pointer lock');
+      $lockBtn.attr('data-bs-title', 'Pointer Lock');
     }
   }
 
-  function enableLockButton() {
-    lockBtn.addEventListener('click', requestLock);
-
-    lockBtn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        requestLock();
-      }
-    });
-  }
-
   function setupPointerLockSync() {
-    document.addEventListener('pointerlockchange', () => {
+    $(document).on('pointerlockchange', () => {
       const active = !!document.pointerLockElement;
       updateIcon(active);
-      if (active) {
-        console.log('Pointer lock active on:', document.pointerLockElement);
-      } else {
-        console.log('Pointer lock released.');
-      }
     });
 
-    document.addEventListener('pointerlockerror', () => {
-      console.warn('Pointer lock error.');
+    $(document).on('pointerlockerror', () => {
       updateIcon(false);
     });
 
-    // ESC key: ensure icon resets when lock is gone
-    document.addEventListener('keydown', (e) => {
+    $(document).on('keydown', (e) => {
       if (e.key === 'Escape' && !document.pointerLockElement) {
         updateIcon(false);
       }
     });
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
-    enableLockButton();
+  $(document).ready(() => {
+    $lockBtn = $('#lockBtn');
+    $lockIcon = $lockBtn.find('i');
+
+    if ($lockBtn.length === 0 || $lockIcon.length === 0) {
+      console.warn('Lock button or icon not found.');
+      return;
+    }
+
+    $lockBtn.on('click', requestLock);
+
+    $lockBtn.on('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        requestLock();
+      }
+    });
+
     setupPointerLockSync();
   });
 })();
