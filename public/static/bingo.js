@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var infoBtn = document.getElementById('infoBtn');
     if (infoBtn) {
         new bootstrap.Tooltip(infoBtn, {
-            title: 'Click for more information about Bingo Counter!',
+            title: 'Information',
             placement: 'bottom',
             trigger: 'hover'
         });
