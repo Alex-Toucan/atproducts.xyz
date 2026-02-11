@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (ttsEnabled) {
             icon.classList.remove('bi-volume-mute');
             icon.classList.add('bi-volume-up');
-            soundBtn.setAttribute('data-bs-title', 'Toggle Music Off');
-            tooltip && tooltip.setContent({ '.tooltip-inner': 'Toggle Music Off' });
+            soundBtn.setAttribute('data-bs-title', 'Toggle TTS Off');
+            tooltip && tooltip.setContent({ '.tooltip-inner': 'Toggle TTS Off' });
         } else {
             icon.classList.remove('bi-volume-up');
             icon.classList.add('bi-volume-mute');
-            soundBtn.setAttribute('data-bs-title', 'Toggle Music On');
-            tooltip && tooltip.setContent({ '.tooltip-inner': 'Toggle Music On' });
+            soundBtn.setAttribute('data-bs-title', 'Toggle TTS On');
+            tooltip && tooltip.setContent({ '.tooltip-inner': 'Toggle TTS On' });
         }
     });
 
