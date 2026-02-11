@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <option value="2000" selected>2 seconds</option>
                 <option value="3000">3 seconds</option>
                 <option value="5000">5 seconds</option>
+                <option value="10000">10 seconds</option>
             </select>
             <div class="form-check mb-3">
                 <input class="form-check-input" type="checkbox" id="manualMode">
