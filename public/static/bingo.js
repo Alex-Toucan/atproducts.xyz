@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function enableManualButton() {
         if (!manualNextBtn) {
             manualNextBtn = document.createElement('button');
-            manualNextBtn.className = "btn btn-secondary position-absolute top-50 start-75 translate-middle-y ms-5";
+            manualNextBtn.className = "btn btn-secondary position-absolute top-50 start-75 translate-middle-y";
             manualNextBtn.textContent = "Next";
             manualNextBtn.onclick = nextNumber;
             document.body.appendChild(manualNextBtn);
