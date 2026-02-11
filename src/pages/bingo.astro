@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="h-100" data-bs-theme="dark">
+    <head>
+        <title>Bingo Counter</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link href="/static/bingo.css" rel="stylesheet">
+        <script src="/static/darkmode.js" is:inline />
+        <link rel="shortcut icon" type="image/png" href="/media/favicon/favicon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/media/favicon/favicon.png">
+        <link rel="icon" type="image/png" href="/media/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/media/favicon/android.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+        <link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta property="og:image" content="/media/favicon/iconembed.png">
+        <meta name="twitter:image" content="/media/favicon/iconembed.png">
+        <link rel="manifest" href="/media/favicon/site.webmanifest">
+        <meta charset="UTF-8">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="title" content="Bingo Counter">
+        <meta name="description" content="Testing out a new bingo counter idea.">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@ATProductsLLC">
+        <meta name="twitter:creator" content="@ATProductsLLC">
+        <meta name="twitter:title" content="Bingo Counter">
+        <meta name="twitter:description" content="Testing out a new bingo counter idea.">
+        <meta name="author" content="Alex Toucan">
+        <meta property="og:title" content="Bingo Counter">
+        <meta property="og:description" content="Testing out a new bingo counter idea.">
+        <meta property="og:site_name" content="AT Products LLC">
+        <meta name="theme-color" content="#212529">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </head>
+    <body class="h-100">
+        <header class="p-4 mb-auto">
+            <div class="d-flex justify-content-between">
+                <text class="h2 float-start mb-0">Bingo!</text>
+                <div class="d-flex gap-4">
+                    <button class="link-bingo p-0" id="soundBtn" aria-label="Toggle Music Off" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Toggle Music Off">
+                        <i class="bi bi-volume-up" aria-hidden="true"></i>
+                        <span class="visually-hidden">Toggle Music Off</span>
+                    </button>
+                    <button class="link-bingo p-0" id="chanBtn" aria-label="Change Background" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Change Background">
+                        <i class="bi bi-file-image" aria-hidden="true"></i>
+                        <span class="visually-hidden">Change Background</span>
+                    </button>
+                    <button class="link-bingo p-0" id="adjustBtn" aria-label="Adjust Counting" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Adjust Counting">
+                        <i class="bi bi-clock" aria-hidden="true"></i>
+                        <span class="visually-hidden">Adjust Counting</span>
+                    </button>
+                    <button class="link-bingo p-0" id="infoBtn" aria-label="Information" data-bs-toggle="modal" data-bs-target="#informationModal" data-bs-placement="bottom" data-bs-title="Information">
+                        <i class="bi bi-info-circle" aria-hidden="true"></i>
+                        <span class="visually-hidden">Information</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <button class="position-absolute top-50 start-50 btn btn-lg btn-primary translate-middle bingo-button">Start</button>
+        <button class="position-absolute top-50 start-25 btn btn-lg btn-danger translate-middle d-none stop-button">Stop</button>
+        <button class="position-absolute top-50 start-25 btn btn-lg btn-success translate-middle d-none resume-button">Resume</button>
+
+        <div class="position-absolute top-50 start-50 translate-middle bingo-card d-none"></div>
+
+        <div class="modal fade" id="informationModal" tabindex="-1" aria-labelledby="informationModalLabel" aria-modal="true" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="informationModalLabel">About Bingo Counter</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="hero hero-main p-md-4 rounded-2 mb-3">
+                            <div class="bg-dark p-2 rounded-2 d-grid mx-auto" style="width: 217px;filter: drop-shadow(2px 4px 6px black);">
+                                <span class="text-center fw-bold fs-4 text-white mb-2">Made by:</span>
+                                <a class="btn btn-dark py-2" type="button" href="https://atproducts.xyz" target="_blank" rel="noopener noreferrer">
+                                <img alt="AT Products LLC" src="https://atproducts.xyz/media/images/longwhite.png" width="175px">
+                                </a>
+                            </div>
+                        </div>
+                        <p class="mb-3">Bingo Counter is a simple web tool for counting and tracking bingo numbers. Use the controls above to toggle music, change the background image, adjust counting, or view this information. Enjoy a streamlined bingo experience!</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="file" id="bgUpload" accept="image/*" class="d-none">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="/static/enabler.js" is:inline />
+        <script src="/static/bingo.js" is:inline />
+    </body>
+</html>
