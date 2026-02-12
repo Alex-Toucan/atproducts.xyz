@@ -5,7 +5,7 @@ var pureAlert1Icon = 'bi-plus-lg'; // Icon
 var pureAlert1Desc = "There is a new blog post, describing our 2025 review and what's coming in 2026!"; // Description
 var pureAlert1Link = 'https://blog.atproducts.xyz/2025/12/27/2025review'; // Link
 var pureAlert1LinkDesc = 'View now!'; // Link text
-var pureAlert1Enabled = true; // Switch to enable/disable alert
+var pureAlert1Enabled = false; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert1Cookie(name, value, days) {
