@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let autoSpeed = 2000;
     let ttsEnabled = true;
     let gameStarted = false;
+    let manualMode = false;
 
     function speak(text) {
         if (!ttsEnabled) return;
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const utter = new SpeechSynthesisUtterance(text);
         utter.rate = 1.25;
         utter.pitch = 1.0;
-        setTimeout(() => speechSynthesis.speak(utter), 1);
+        setTimeout(() => speechSynthesis.speak(utter), 0);
     }
 
     function nextNumber() {
@@ -40,7 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
             stopAuto();
             ttsEnabled = false;
 
-            display.textContent = "All numbers used!";
+            display.textContent = "";
+            display.classList.add('d-none');
+            startBtn.classList.remove('d-none');
             allUsedMsg.classList.remove('d-none');
 
             stopBtn.classList.add('d-none');
@@ -99,7 +102,25 @@ document.addEventListener('DOMContentLoaded', function () {
         reader.readAsDataURL(file);
     });
 
-    adjustBtn.addEventListener('click', showAdjustMenu);
+    // FIXED: Adjust button no longer forces Stop to appear before Start
+    adjustBtn.addEventListener('click', () => {
+
+        if (gameStarted) {
+            stopAuto();
+            disableManualButton();
+
+            // Only show Stop if auto mode was running
+            if (autoInterval !== null) {
+                stopBtn.classList.remove('d-none');
+            } else {
+                stopBtn.classList.add('d-none');
+            }
+
+            resumeBtn.classList.add('d-none');
+        }
+
+        showAdjustMenu();
+    });
 
     function showAdjustMenu() {
         const menu = document.createElement('div');
@@ -137,16 +158,25 @@ document.addEventListener('DOMContentLoaded', function () {
             const manual = document.getElementById('manualMode').checked;
 
             menu.remove();
-            if (!gameStarted) return;
 
-            if (manual) {
+            if (!gameStarted) {
+                manualMode = manual;
+                return;
+            }
+
+            manualMode = manual;
+
+            if (manualMode) {
                 stopAuto();
+                disableManualButton();
                 enableManualButton();
+
                 stopBtn.classList.add('d-none');
                 resumeBtn.classList.add('d-none');
             } else {
                 disableManualButton();
                 startAuto();
+
                 resumeBtn.classList.add('d-none');
                 stopBtn.classList.remove('d-none');
             }
@@ -156,10 +186,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function enableManualButton() {
         if (!manualNextBtn) {
             manualNextBtn = document.createElement('button');
-            manualNextBtn.className = "btn btn-secondary position-absolute top-50 start-75 translate-middle-y";
+            manualNextBtn.className = "btn btn-secondary position-absolute translate-middle top-75 top-md-50 start-50 start-md-25";
             manualNextBtn.textContent = "Next";
             manualNextBtn.onclick = nextNumber;
-            document.body.appendChild(manualNextBtn);
+
+            display.parentElement.appendChild(manualNextBtn);
         }
     }
 
@@ -173,17 +204,27 @@ document.addEventListener('DOMContentLoaded', function () {
     startBtn.addEventListener('click', () => {
         usedNumbers.clear();
         allUsedMsg.classList.add('d-none');
+        display.textContent = "";
         ttsEnabled = true;
 
         gameStarted = true;
 
         startBtn.classList.add('d-none');
-        stopBtn.classList.remove('d-none');
         display.classList.remove('d-none');
 
-        nextNumber();
-        startAuto();
+        if (manualMode) {
+            stopBtn.classList.add('d-none');
+            resumeBtn.classList.add('d-none');
+            enableManualButton();
+            nextNumber();
+        } else {
+            stopBtn.classList.remove('d-none');
+            resumeBtn.classList.add('d-none');
+            nextNumber();
+            startAuto();
+        }
     });
+
 
     stopBtn.addEventListener('click', () => {
         stopAuto();

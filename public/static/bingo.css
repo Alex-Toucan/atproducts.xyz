@@ -35,12 +35,12 @@ body {
   font-size: 2rem;
 }
 
-.start-75 {
-  left: 75%;
+.top-25 {
+  top: 25%;
 }
 
-.start-25 {
-  left: 25%;
+.top-75 {
+  top: 75%;
 }
 
 .hero-main {
@@ -54,5 +54,12 @@ body {
     background-position: center center !important;
     background-repeat: no-repeat !important;
     filter: drop-shadow(2px 4px 6px black);
+  }
+  .start-md-75 {
+    left: 75%;
+  }
+
+  .start-md-25 {
+    left: 25%;
   }
 }
