@@ -1,0 +1,14 @@
+.info-box {
+  min-height: 150px !important;
+}
+
+.file-box {
+  font-size: 1rem;
+  padding: 1rem .75rem;
+  cursor: pointer;
+}
+
+.file-selected {
+  outline: 0;
+  box-shadow: var(--bs-focus-ring-x, 0) var(--bs-focus-ring-y, 0) var(--bs-focus-ring-blur, 0) var(--bs-focus-ring-width) var(--bs-focus-ring-color);
+}
