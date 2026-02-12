@@ -12,7 +12,7 @@ body {
   background: transparent;
   border: 0;
   color: var(--bs-body-color) !important;
-  font-size: 1.1rem !important;
+  font-size: 1.25rem !important;
 }
 
 .bingo-card {
@@ -35,12 +35,24 @@ body {
   font-size: 2rem;
 }
 
+.start-25 {
+  left: 25% !important;
+}
+
 .top-25 {
-  top: 25%;
+  top: 25% !important;
+}
+
+.top-33 {
+  top: 33.3333% !important;
+}
+
+.top-66 {
+  top: 66.6667% !important;
 }
 
 .top-75 {
-  top: 75%;
+  top: 75% !important;
 }
 
 .hero-main {
@@ -56,10 +68,25 @@ body {
     filter: drop-shadow(2px 4px 6px black);
   }
   .start-md-75 {
-    left: 75%;
+    left: 75% !important;
   }
 
   .start-md-25 {
-    left: 25%;
+    left: 25% !important;
+  }
+
+  .start-md-33 {
+    left: 33.3333% !important;
+  }
+
+  .top-md-50 {
+    top: 50% !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .row-cols-mmd-3>* {
+      flex: 0 0 auto;
+      width: 33.33333333%;
   }
 }
