@@ -36,9 +36,17 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => speechSynthesis.speak(utter), 0);
     }
 
+    function updateDebugIfVisible() {
+        const debugEl = document.getElementById('debugInfo');
+        if (!debugEl || debugEl.classList.contains('d-none')) return;
+        const remaining = 75 - usedNumbers.size;
+        debugEl.textContent = `Numbers remaining: ${remaining}`;
+    }
+
     function nextNumber() {
         if (usedNumbers.size >= 75) {
             stopAuto();
+            speak("All numbers used!");
             ttsEnabled = false;
 
             display.textContent = "";
@@ -51,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             disableManualButton();
 
             startBtn.classList.remove('d-none');
+            updateDebugIfVisible();
             return;
         }
 
@@ -62,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         usedNumbers.add(num);
         display.textContent = num;
         speak(num.toString());
+        updateDebugIfVisible();
     }
 
     function startAuto() {
@@ -102,14 +112,12 @@ document.addEventListener('DOMContentLoaded', function () {
         reader.readAsDataURL(file);
     });
 
-    // FIXED: Adjust button no longer forces Stop to appear before Start
     adjustBtn.addEventListener('click', () => {
 
         if (gameStarted) {
             stopAuto();
             disableManualButton();
 
-            // Only show Stop if auto mode was running
             if (autoInterval !== null) {
                 stopBtn.classList.remove('d-none');
             } else {
@@ -186,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function enableManualButton() {
         if (!manualNextBtn) {
             manualNextBtn = document.createElement('button');
-            manualNextBtn.className = "btn btn-secondary position-absolute translate-middle top-75 top-md-50 start-50 start-md-25";
+            manualNextBtn.className = "btn btn-secondary position-absolute translate-middle top-66 top-md-50 start-50 start-md-33";
             manualNextBtn.textContent = "Next";
             manualNextBtn.onclick = nextNumber;
 
@@ -212,6 +220,8 @@ document.addEventListener('DOMContentLoaded', function () {
         startBtn.classList.add('d-none');
         display.classList.remove('d-none');
 
+        updateDebugIfVisible();
+
         if (manualMode) {
             stopBtn.classList.add('d-none');
             resumeBtn.classList.add('d-none');
@@ -224,7 +234,6 @@ document.addEventListener('DOMContentLoaded', function () {
             startAuto();
         }
     });
-
 
     stopBtn.addEventListener('click', () => {
         stopAuto();
@@ -241,6 +250,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
         resumeBtn.classList.add('d-none');
         stopBtn.classList.remove('d-none');
+    });
+
+    let debugBuffer = "";
+
+    function showDebugInfo() {
+        const remaining = 75 - usedNumbers.size;
+        let debugEl = document.getElementById('debugInfo');
+
+        if (!debugEl) {
+            debugEl = document.createElement('p');
+            debugEl.id = 'debugInfo';
+            debugEl.className = 'mt-3 text-warning';
+            document.body.appendChild(debugEl);
+        }
+
+        debugEl.textContent = `Numbers remaining: ${remaining}`;
+        debugEl.classList.remove('d-none');
+    }
+
+    document.addEventListener('keydown', (e) => {
+        const key = e.key.toUpperCase();
+        if (key.length === 1 && key >= 'A' && key <= 'Z') {
+            debugBuffer += key;
+
+            if (debugBuffer.endsWith('DEBUG')) {
+                showDebugInfo();
+            }
+
+            if (debugBuffer.length > 10) {
+                debugBuffer = debugBuffer.slice(-10);
+            }
+        }
     });
 
 });

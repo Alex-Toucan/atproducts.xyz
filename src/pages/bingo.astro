@@ -37,7 +37,7 @@
         <header class="p-4 mb-auto">
             <div class="d-flex justify-content-between">
                 <text class="h2 float-start mb-0">Bingo Counter</text>
-                <div class="d-flex gap-4">
+                <div class="d-flex gap-2 gap-md-4 flex-wrap row-cols-mmd-3 justify-content-end">
                     <button class="link-bingo p-0" id="soundBtn" aria-label="Toggle Music Off" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Toggle Music Off">
                         <i class="bi bi-volume-up" aria-hidden="true"></i>
                         <span class="visually-hidden">Toggle TTS Off</span>
@@ -59,11 +59,12 @@
         </header>
 
         <button class="position-absolute top-50 start-50 btn btn-lg btn-primary translate-middle bingo-button">Start</button>
-        <button class="position-absolute top-25 top-md-50 start-50 start-md-25 btn btn-lg btn-danger translate-middle d-none stop-button">Stop</button>
-        <button class="position-absolute top-25 top-md-50 start-50 start-md-25 btn btn-lg btn-success translate-middle d-none resume-button">Resume</button>
+        <button class="position-absolute top-33 top-md-50 start-50 start-md-33 btn btn-lg btn-danger translate-middle d-none stop-button">Stop</button>
+        <button class="position-absolute top-33 top-md-50 start-50 start-md-33 btn btn-lg btn-success translate-middle d-none resume-button">Resume</button>
 
         <div class="position-absolute top-50 start-50 translate-middle bingo-card d-none"></div>
         <p id="allUsedMsg" class="text-center text-warning mt-3 d-none"> All numbers used! </p>
+        <p id="debugInfo" class="mt-3 d-none fw-semibold text-center"></p>
 
         <div class="modal fade" id="informationModal" tabindex="-1" aria-labelledby="informationModalLabel" aria-modal="true" role="dialog">
             <div class="modal-dialog">
