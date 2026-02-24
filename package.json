@@ -23,6 +23,6 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.33"
+    "@types/jquery": "^4.0.0"
   }
 }
