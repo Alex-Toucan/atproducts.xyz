@@ -1,8 +1,8 @@
 ---
-const { title, price, secondaryPrice, description, buttonHref, buttonText, footerText, additionalContent } = Astro.props;
+const { title, id, price, secondaryPrice, description, buttonHref, buttonText, footerText, additionalContent } = Astro.props;
 ---
 
-  <div class="card h-md-100 rounded-3 shadow-sm">
+  <div class="card h-md-100 rounded-3 shadow-sm" id={id}>
     <div class="card-header py-3">
       <h2 class="my-0 fw-normal">{title}</h2>
     </div>
