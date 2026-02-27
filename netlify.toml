@@ -13,11 +13,8 @@
     X-XSS-Protection = "1"
     X-Content-Type-Options = "nosniff"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-
-    Content-Security-Policy = "default-src 'self' https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://offevasionrecruit.com https://www.highperformanceformat.com https://pl28664642.effectivegatecpm.com https://weirdopt.com/ https://preferencenail.com/ https://www.effectivegatecpm.com https://pl28664685.effectivegatecpm.com https://pl28664708.effectivegatecpm.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net https://atproducts.xyz; img-src 'self' data: https:; frame-src 'self' https://www.highperformanceformat.com https://app.netlify.com; connect-src 'self' https:; child-src https://www.highperformanceformat.com; font-src 'self' data: https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'; form-action 'self'; manifest-src 'self'; frame-ancestors 'self'"
-
+    Content-Security-Policy = "default-src 'self' https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://playintegrityrailing.com https://wayfarerorthodox.com https://offevasionrecruit.com https://www.highperformanceformat.com https://pl28664642.effectivegatecpm.com https://weirdopt.com/ https://preferencenail.com/ https://www.effectivegatecpm.com https://pl28664685.effectivegatecpm.com https://pl28664708.effectivegatecpm.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net https://atproducts.xyz; img-src 'self' data: https:; frame-src 'self' https://www.highperformanceformat.com https://app.netlify.com; connect-src 'self' https:; child-src https://www.highperformanceformat.com; font-src 'self' data: https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'; form-action 'self'; manifest-src 'self'; frame-ancestors 'self'"
     Permissions-Policy = "fullscreen=(self), geolocation=(), camera=(), browsing-topics=(), picture-in-picture=(self), payment=(), autoplay=(self), encrypted-media=(self), interest-cohort=()"
-
     Referrer-Policy = "strict-origin"
     Access-Control-Allow-Origin = "*"
     X-UA-Compatible = "IE=edge"
