@@ -24,7 +24,8 @@
   "optionalDependencies": {
     "axios": "^1.13.6",
     "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "puppeteer": "^24.37.5"  
   },
   "devDependencies": {
     "@types/jquery": "^3.5.33",
