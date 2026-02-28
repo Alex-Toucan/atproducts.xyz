@@ -13,13 +13,18 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
-    "astro": "^5.17.1",
+    "astro": "^5.18.0",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "jquery": "^3.7.1",
     "jquery-ui": "^1.14.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
+  },
+  "optionalDependencies": {
+    "axios": "^1.13.6",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.33",
