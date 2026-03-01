@@ -32,6 +32,7 @@ import '../styles/paid.css'
         <div class="col-md">
           <FirstPaidCard 
             title="Website Design" 
+            id="website-design"
             price="$20-500*" 
             description="Your website can have the most modern stuff on the market with HTML5 &amp; CSS3, Bootstrap v5, responsive layout, and will be compatible with most major browsers with the Website Design package! (Estimates will be provided)" 
             additionalContent="<div class='accordion text-start d-md-none mb-3' id='defintionsAccordion-1'><div class='accordion-item'><h2 class='accordion-header'><button class='accordion-button collapsed fw-bold' type='button' data-bs-toggle='collapse' data-bs-target='#defintions-1' aria-expanded='false' aria-controls='defintions-1'>What does any of this stuff mean?</button></h2><div id='defintions-1' class='accordion-collapse collapse' data-bs-parent='#defintionsAccordion-2'><div class='accordion-body'><div class='d-grid gap-3'><div class='d-flex'><img src='/media/images/HTML.webp' alt='HTML5' width='60px' height='60px' class='d-block d-md-inline mb-mmd-2 me-2 object-fit-contain'><div class='col my-auto'><strong>HTML5</strong> is the most recent version of HTML. More information about it can be found <a href='https://www.graycelltech.com/why-use-html-5/' target='_blank' rel='noopener noreferrer'>here</a>.</div></div><div class='d-flex'><img src='/media/images/CSS.webp' alt='CSS3' width='60px' height='60px' class='d-block d-md-inline mb-mmd-2 me-2 object-fit-contain'><div class='col my-auto'><strong>CSS3</strong> is the most recent version of CSS. More information about it can be found <a href='https://www.geeksforgeeks.org/advantage-of-css3-over-css/'>here</a>.</div></div><div class='d-flex'><img src='/media/images/bootstrap.webp' alt='Bootstrap' width='60px' height='60px' class='d-block d-md-inline mb-mmd-2 me-2 object-fit-contain'><div class='col my-auto'><strong>Bootstrap</strong> is a popular choice in CSS frameworks, as it brings a modern design to websites. Their official site is <a href='https://getbootstrap.com/'>here</a>.</div></div><div><strong>Responsive layout</strong> is a layout that is compatible with any screen, from phones, to tablets, laptops, desktops, etc.</div><div><strong>Compatible with most major browsers</strong>, note this is more including Google Chrome, Microsoft Edge, Mozilla Firefox, Opera, or any browser that contains the modern HTML, CSS, and JS standards. We no longer support Internet Explorer.</div></div></div></div></div></div>"
@@ -42,7 +43,8 @@ import '../styles/paid.css'
         </div>
         <div class="col-md">
           <FirstPaidCard 
-            title="Website Hosting" 
+            title="Website Hosting"
+            id="website-hosting" 
             price="$1-75*<small class='text-body-secondary fw-light'>/week or month</small>" 
             secondaryPrice="<b>$1-50/week or month</b> with the &quot;Website Design&quot; package." 
             description="Keep your website up with our services! This package includes security certificate renewals and updates to your Content Security Policy." 
@@ -54,6 +56,7 @@ import '../styles/paid.css'
         </div>
       <SecondPaidCard 
         title="Other Services"
+        id="other-services"
         description="These are other services that we offer as secondary services."
         footerText="* These are not guaranteed prices."
         buttonHref="/contact/" 
@@ -127,10 +130,11 @@ import '../styles/paid.css'
           </div>
         </div>
         <SecondPaidCard 
+          id="clients"
           title="Clients"
           description="These are our clients who have requested a site, and got a site!"
         >
-          <div slot="paid-card-content" class="d-grid gap-4">
+          <div slot="paid-card-content" class="d-grid gap-2">
             <div class="card bg-light-subtle shadow-sm overflow-hidden border d-flex flex-md-row flex-column">
               <div class="col-md-5">
                 <img 
@@ -157,10 +161,37 @@ import '../styles/paid.css'
                 </a>
               </div>
             </div>
+            <div class="card bg-light-subtle shadow-sm overflow-hidden border d-flex flex-md-row flex-column">
+              <div class="col-md-5">
+                <img 
+                  src="/media/images/Screenshot_25-2-2026_9023_carboncurrency.netlify.app.jpeg" 
+                  alt="Carbon Currency website preview"
+                  class="w-100 h-100 object-fit-cover client-img"
+                >
+              </div>
+              <div class="col-md-7 d-flex flex-column p-4">
+                <div class="d-flex flex-wrap flex-column align-items-center gap-3">
+                  <img src="/media/images/group.png" width="30%" alt="Carbon Currency's icon" class="card-img rounded-2">
+                  <h3 class="fw-bold mb-2">Carbon Currency</h3>
+                </div>
+                <p class="text-body py-1 mb-3">
+                  A Washington‑state–based rap duo who needed a website built by AT Products LLC.
+                </p>
+                <a 
+                  href="https://carboncurrency.netlify.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn btn-primary mt-auto w-100"
+                >
+                  Visit Website
+                </a>
+              </div>
+            </div>
           </div>
         </SecondPaidCard>
         <SecondPaidCard 
           title="Donation Box" 
+          id="donation-box"
           description="If you would like to donate without buying our packages, you can do so here!"
         >
           <div slot="paid-card-content">
