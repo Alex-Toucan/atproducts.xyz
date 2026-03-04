@@ -146,12 +146,6 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 }
 
 @media (min-width:767.98px) {
-  .row, .price-row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
   .herorow {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;

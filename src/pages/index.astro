@@ -97,7 +97,6 @@
           background-position: center center !important;
           background-repeat: no-repeat !important;
           filter: drop-shadow(2px 4px 6px black);
-          
         }
       }
 
@@ -138,6 +137,124 @@
       </div>
     </div>
 
+    <div class="position-fixed bottom-0 end-0 me-3" style="margin-bottom: calc(1rem * 5.6 + 42px);" id="preset-btn">
+      <button class="btn btn-secondary py-2 d-flex align-items-center shadow-lg" id="bd-presets" type="button" data-bs-toggle="modal" data-bs-target="#presetModal">
+        <span>
+          <i class="my-1 bi bi-palette-fill"></i>
+        </span>
+        <span class="visually-hidden">Open presets</span>
+      </button>
+    </div>
+
+    <div class="modal fade" id="presetModal" tabindex="-1" aria-labelledby="presetModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-light">
+
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="presetModalLabel">Blue Ball Machine Presets</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+
+            <h5 class="mb-3">Background Themes</h5>
+            <div class="row g-3">
+
+              <div class="col-6 col-md-4">
+                <div class="card bg-secondary text-light preset-bg preset-linked" 
+                    data-bg="/media/images/image.gif" 
+                    data-music="/media/images/sound.mp3"
+                    data-loop="true">
+                  <img src="/media/images/image.gif" class="card-img-top object-fit-cover" height="70px">
+                  <div class="card-body p-2 text-center"><small>Classic Machine</small></div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="card bg-secondary text-light preset-bg preset-linked" 
+                    data-bg="/media/images/blueballtragedy.gif"
+                    data-music="/media/images/blueballtragedy.mp3"
+                    data-loop="false">
+                  <img src="/media/images/blueballtragedy.gif" class="card-img-top object-fit-cover" height="70px">
+                  <div class="card-body p-2 text-center"><small>Blue Ball Tragedy</small></div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="card bg-secondary text-light preset-bg preset-linked" 
+                    data-bg="/media/images/tiger.gif"
+                    data-music="/media/images/tiger.mp3"
+                    data-loop="true">
+                  <img src="/media/images/tiger.gif" class="card-img-top object-fit-cover" height="70px">
+                  <div class="card-body p-2 text-center"><small>Tiger Handheld</small></div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="card bg-secondary text-light preset-bg preset-linked" 
+                    data-bg="/media/images/lazy.gif"
+                    data-music="/media/images/sound.mp3"
+                    data-loop="true">
+                  <img src="/media/images/lazy.gif" class="card-img-top object-fit-cover" height="70px">
+                  <div class="card-body p-2 text-center"><small>Lazy Mode</small></div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="card bg-secondary text-light preset-bg preset-linked" 
+                    data-bg="/media/images/jones.gif"
+                    data-music="/media/images/sound.mp3"
+                    data-loop="true">
+                  <img src="/media/images/jones.gif" class="card-img-top object-fit-cover" height="70px">
+                  <div class="card-body p-2 text-center"><small>Indiana Jones</small></div>
+                </div>
+              </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <h5 class="mb-3">Music Remixes</h5>
+            <ul class="list-group list-group-flush">
+
+              <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-between preset-music" data-music="/media/images/sound.mp3">
+                <span>Original Soundtrack</span>
+                <div>
+                  <button class="btn btn-outline-light btn-sm preview-btn">Preview</button>
+                  <button class="btn btn-outline-light btn-sm apply-music-btn ms-2">Apply</button>
+                </div>
+              </li>
+
+              <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-between preset-music" data-music="/media/images/rock.mp3">
+                <span>Rock Version</span>
+                <div>
+                  <button class="btn btn-outline-light btn-sm preview-btn">Preview</button>
+                  <button class="btn btn-outline-light btn-sm apply-music-btn ms-2">Apply</button>
+                </div>
+              </li>
+
+              <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-between preset-music" data-music="/media/images/tiger.mp3">
+                <span>Tiger Handheld Version</span>
+                <div>
+                  <button class="btn btn-outline-light btn-sm preview-btn">Preview</button>
+                  <button class="btn btn-outline-light btn-sm apply-music-btn ms-2">Apply</button>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" id="applyPresetBtn">Apply Preset</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
     <div class="modal fade" id="informationModal" tabindex="-1" aria-labelledby="informationModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -163,11 +280,22 @@
             <p><b>Release Date:</b> April 7th, 2025</p>
             <h2>History</h2>
             <div class="text-justify">
-              <p class="tab">The Blue Ball Machine first appeared on <a href="http://blueballfixed.ytmnd.com/">YTMND</a> in 2005, which YTMND, an initialism for "You're the Man Now, Dog", is an online community centered on the creation of hosted memetic web pages. The site was created or at least owned by <a href="https://web.archive.org/web/20060426005946/http://ytmnd.com/users/profile/40320">the account of Earthbounder</a>. The site would later stop working, according to archives around 2009.</p>
+              <p class="tab">The Blue Ball Machine first appeared on <a href="http://blueballfixed.ytmnd.com/">YTMND</a> in 2005, a community platform where "You're the Man Now, Dog" users create and share meme based web pages. Andorion originally developed the concept, designing a template and sample tiles while inviting community contributions. Hundreds of participants from the Something Awful forums subsequently created the individual images.</p>
+              <p class="tab">Immediately after its creation, the site gained popularity on YTMND, which resulted in various spinoffs, and its own <a href="https://wiki.ytmnd.com/Blue_Ball_Machine">wiki page</a>. The site was created or at least owned by <a href="https://web.archive.org/web/20060426005946/http://ytmnd.com/users/profile/40320">the account of Earthbounder</a>. The site would later stop working, according to archives around 2009.</p>
               <p class="tab">The site would later be brought to <a href="https://web.archive.org/web/20121231200144/http://www.haneke.net/">haneke.net</a> from mid-2008, to its demise in early 2017. The site used to be a <a href="https://web.archive.org/web/20030320100006/http://haneke.net/">German "Internetportal"</a> in 2003, and <a href="https://web.archive.org/web/20031206074816/http://www.haneke.net/#">was a red button that opened a pop-up with the text "HANEKE"</a> later that same year. The site later become the <a href="https://web.archive.org/web/20080420084457/http://www.haneke.net/"></a>Blue Ball Machine that we all know and love from early-mid 2008</a>.</p>
               <p class="tab">The site exploded in popularity from late 2012, which even appeared on the <a href="https://theuselessweb.com/">The Useless Web</a> at one point, according to <a href="https://web.archive.org/web/20141103194304/http://www.theuselessweb.com/js/uselessweb.js">its list from 2013-2014</a>. The site sadly disappeared in mid-2017. The site is now a <a href="http://www.haneke.net/">nest box live camera</a> from 2021, and still exists in 2025.</p>
               <p class="tab">However, <a href="http://blueballfixed.ytmnd.com/">the YTMND site would be revived</a> in mid-2019, as they switched from Flash to HTML5, which appears to now be maintained <a href="https://ytmnd.com/users/benjabean1">by a user called benjabean1</a>. The site reads that the GIF's origin is "... unknown, but it has been used on many YTMNDs before." And the sound is from "Pee Wee's Big Adventure".</p>
             </div>
+            <h2>Spin-offs</h2> 
+              <p>These spin-offs can also be found on the <i class="bi bi-palette-fill"></i> button.</p>
+              <ul>
+                <li><a href="https://web.archive.org/web/20070118052006/http://blueballhandheld.ytmnd.com/">Blue Ball Tiger Handheld</a></li>
+                <li><a href="https://blueballtragedy.ytmnd.com/">Tragedy at the Blue Ball Factory!</a></li>
+                <li><a href="https://indyblueballs.ytmnd.com/">Indiana Jones Can't Stop The Blue Ball Machine</a></li>
+                <li><a href="http://blueballlazy.ytmnd.com/">Blue Ball Machine (Lazy version)</a></li>
+                <li><a href="http://metalblueballfactory.ytmnd.com/">Blue Ball Tiger Handheld</a></li>
+
+              </ul>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -186,128 +314,307 @@
     </div>
   
     <script>
-      (() => {
-        'use strict';
+    (() => {
+      'use strict';
 
-        let audio = null;
+      let audio = null;
 
-        const setCookie = (name, value, days) => {
-          const date = new Date();
-          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-          const expires = `; expires=${date.toUTCString()}`;
-          document.cookie = `${name}=${value || ''}${expires}; path=/`;
-        };
+      const setCookie = (name: string, value: string, days: number) => {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = `; expires=${date.toUTCString()}`;
+      document.cookie = `${name}=${value || ''}${expires}; path=/`;
+      };
 
-        const getCookie = (name) => {
-          const nameEQ = `${name}=`;
-          const ca = document.cookie.split(';');
-          for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-          }
-          return null;
-        };
+      const getCookie = (name: string) => {
+      const nameEQ = `${name}=`;
+      const ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+      };
 
-        const playAudio = () => {
-          if (!audio) {
-            audio = new Audio('/media/images/sound.mp3');
-            audio.loop = true;
-            // Update Media Session metadata
-            if ('mediaSession' in navigator) {
-              navigator.mediaSession.metadata = new MediaMetadata({
-                title: 'Blue Ball Machine',
-                artist: 'Alex Toucan',
-                album: 'Blue Ball Machine Soundtrack',
-                artwork: [
-                  { src: '/media/favicon/blueball.png', sizes: '192x192', type: 'image/png' }
-                ]
-              });
-              
-              navigator.mediaSession.setActionHandler('play', playAudio);
-              navigator.mediaSession.setActionHandler('pause', pauseAudio);
-            }
-          }
-          audio.play().then(() => updateButtonIcon(true)).catch(error => console.log('Audio play was prevented by the browser:', error));
-        };
+      const playAudio = () => {
+      if (!audio) {
+        audio = new Audio('/media/images/sound.mp3');
+        audio.loop = true;
 
-        const pauseAudio = () => {
-          if (audio) {
-            audio.pause();
-            updateButtonIcon(false);
-          }
-        };
-
-        const toggleAudio = () => {
-          const icon = document.querySelector('.audio-icon-active i');
-          if (icon.classList.contains('bi-volume-up-fill')) {
-            pauseAudio();
-          } else {
-            playAudio();
-          }
-        };
-
-        const updateButtonIcon = (isPlaying) => {
-          const icon = document.querySelector('.audio-icon-active i');
-          if (isPlaying) {
-            icon.classList.remove('bi-volume-mute-fill');
-            icon.classList.add('bi-volume-up-fill');
-          } else {
-            icon.classList.remove('bi-volume-up-fill');
-            icon.classList.add('bi-volume-mute-fill');
-          }
-        };
-
-        const showNotification = () => {
-          const notification = document.getElementById('audio-notification');
-          if (notification) {
-            notification.style.display = 'block';
-            notification.classList.add('fade-in');
-          }
-        };
-
-        const hideNotification = () => {
-          const notification = document.getElementById('audio-notification');
-          if (notification) {
-            notification.classList.add('fade-out');
-            notification.addEventListener('animationend', () => {
-              notification.style.display = 'none';
-            });
-          }
-        };
-
-        const dismissNotification = () => {
-          hideNotification();
-          setCookie('audioNotificationDismissed', 'true', 7);
-        };
-
-        window.addEventListener('load', () => {
-          const audioButton = document.getElementById('bd-audio');
-          const closeButton = document.getElementById('close-notification');
-          audioButton.addEventListener('click', () => {
-            toggleAudio();
-            dismissNotification();
-          });
-          closeButton.addEventListener('click', () => {
-            dismissNotification();
-          });
-
-          if (!getCookie('audioNotificationDismissed')) {
-            showNotification();
-          }
-
-          if ('mediaSession' in navigator) {
-            navigator.mediaSession.setActionHandler('play', () => {
-              playAudio();
-              dismissNotification();
-            });
-            navigator.mediaSession.setActionHandler('pause', () => {
-              pauseAudio();
-            });
-          }
+        if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: 'Blue Ball Machine',
+          artist: 'Alex Toucan',
+          album: 'Blue Ball Machine Soundtrack',
+          artwork: [
+          { src: '/media/favicon/blueball.png', sizes: '192x192', type: 'image/png' }
+          ]
         });
-      })();
+
+        navigator.mediaSession.setActionHandler('play', playAudio);
+        navigator.mediaSession.setActionHandler('pause', pauseAudio);
+        }
+      }
+      audio.play().then(() => updateButtonIcon(true)).catch((err: any) => console.log('Audio play prevented:', err));
+      };
+
+      const pauseAudio = () => {
+      if (audio) {
+        audio.pause();
+        updateButtonIcon(false);
+      }
+      };
+
+      const toggleAudio = () => {
+      const icon = document.querySelector('.audio-icon-active i');
+      if (icon?.classList.contains('bi-volume-up-fill')) {
+        pauseAudio();
+      } else {
+        playAudio();
+      }
+      };
+
+      const updateButtonIcon = (isPlaying: boolean) => {
+      const icon = document.querySelector('.audio-icon-active i');
+      if (isPlaying) {
+        icon?.classList.remove('bi-volume-mute-fill');
+        icon?.classList.add('bi-volume-up-fill');
+      } else {
+        icon?.classList.remove('bi-volume-up-fill');
+        icon?.classList.add('bi-volume-mute-fill');
+      }
+      };
+
+      const showNotification = () => {
+      const notification = document.getElementById('audio-notification');
+      if (notification) {
+        notification.style.display = 'block';
+        notification.classList.add('fade-in');
+      }
+      };
+
+      const hideNotification = () => {
+      const notification = document.getElementById('audio-notification');
+      if (notification) {
+        notification.classList.add('fade-out');
+        notification.addEventListener('animationend', () => {
+        notification.style.display = 'none';
+        });
+      }
+      };
+
+      const dismissNotification = () => {
+      hideNotification();
+      setCookie('audioNotificationDismissed', 'true', 7);
+      };
+
+      const resetGif = () => {
+      const body = document.body;
+      const bgImage = body.style.backgroundImage;
+      body.style.backgroundImage = 'none';
+      setTimeout(() => {
+        body.style.backgroundImage = bgImage;
+      }, 10);
+      };
+
+      window.addEventListener('load', () => {
+
+      const audioButton = document.getElementById('bd-audio');
+      const closeButton = document.getElementById('close-notification');
+
+      audioButton?.addEventListener('click', () => {
+        toggleAudio();
+        dismissNotification();
+      });
+
+      closeButton?.addEventListener('click', () => {
+        dismissNotification();
+      });
+
+      if (!getCookie('audioNotificationDismissed')) {
+        showNotification();
+      }
+
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.setActionHandler('play', () => {
+        playAudio();
+        dismissNotification();
+        });
+        navigator.mediaSession.setActionHandler('pause', () => {
+        pauseAudio();
+        });
+      }
+
+      let selectedBackground: string | null = null;
+      let selectedMusic: string | null = null;
+      let previewAudio: HTMLAudioElement | null = null;
+
+      const stopPreview = () => {
+        if (previewAudio) {
+        previewAudio.pause();
+        previewAudio.currentTime = 0;
+        previewAudio = null;
+        }
+      };
+
+      const pauseMainAudioForPreview = () => {
+        if (audio && !audio.paused) {
+        audio.pause();
+        updateButtonIcon(false);
+        }
+      };
+
+      document.querySelectorAll('.preset-bg').forEach((card) => {
+        card.addEventListener('click', () => {
+
+        stopPreview();
+
+        selectedBackground = (card as HTMLElement).dataset.bg || null;
+
+        if (card.classList.contains('preset-linked') && (card as HTMLElement).dataset.music) {
+          selectedMusic = (card as HTMLElement).dataset.music || null;
+
+          document.querySelectorAll('.preset-music').forEach((i) => {
+          i.classList.toggle('active', (i as HTMLElement).dataset.music === selectedMusic);
+          });
+        }
+
+        document.body.style.backgroundImage = `url(${selectedBackground})`;
+
+        const shouldLoop = (card as HTMLElement).dataset.loop !== "false";
+        if (!shouldLoop) {
+          document.body.style.backgroundRepeat = "no-repeat";
+          document.body.style.backgroundSize = "contain";
+        } else {
+          document.body.style.backgroundRepeat = "repeat";
+          document.body.style.backgroundSize = "auto";
+        }
+
+        resetGif();
+
+        const icon = document.querySelector('.audio-icon-active i');
+        const userWantedAudio = icon?.classList.contains('bi-volume-up-fill');
+
+        if (selectedMusic) {
+          if (!audio) {
+          audio = new Audio(selectedMusic);
+          audio.loop = true;
+          } else {
+          audio.src = selectedMusic;
+          }
+
+          if (userWantedAudio) {
+          audio.play().then(() => updateButtonIcon(true));
+          }
+        }
+
+        const modalInstance = (window as any).bootstrap.Modal.getInstance(document.getElementById('presetModal'));
+        modalInstance?.hide();
+        });
+      });
+
+      document.querySelectorAll('.preset-music').forEach((item) => {
+        item.addEventListener('click', () => {
+        stopPreview();
+        document.querySelectorAll('.preset-music').forEach((i) => i.classList.remove('active'));
+        item.classList.add('active');
+        selectedMusic = (item as HTMLElement).dataset.music || null;
+        });
+      });
+
+      document.querySelectorAll('.preview-btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        const music = (btn.closest('.preset-music') as HTMLElement).dataset.music;
+
+        stopPreview();
+        pauseMainAudioForPreview();
+
+        previewAudio = new Audio(music);
+        previewAudio.play();
+        });
+      });
+
+      document.querySelectorAll('.apply-music-btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        stopPreview();
+
+        const music = (btn.closest('.preset-music') as HTMLElement).dataset.music;
+        selectedMusic = music || null;
+
+        document.querySelectorAll('.preset-music').forEach((i) => i.classList.remove('active'));
+        btn.closest('.preset-music')?.classList.add('active');
+
+        if (!audio) {
+          audio = new Audio(selectedMusic!);
+          audio.loop = true;
+        } else {
+          audio.src = selectedMusic!;
+        }
+
+        audio.play().then(() => updateButtonIcon(true));
+
+        const modalInstance = (window as any).bootstrap.Modal.getInstance(document.getElementById('presetModal'));
+        modalInstance?.hide();
+        });
+      });
+
+      const presetModal = document.getElementById('presetModal');
+      presetModal?.addEventListener('hidden.bs.modal', () => {
+        stopPreview();
+      });
+
+      document.getElementById('applyPresetBtn')?.addEventListener('click', () => {
+
+        stopPreview();
+
+        if (selectedBackground) {
+        document.body.style.backgroundImage = `url(${selectedBackground})`;
+
+        const selectedCard = document.querySelector(`.preset-bg[data-bg="${selectedBackground}"]`) as HTMLElement;
+        const shouldLoop = selectedCard && selectedCard.dataset.loop !== "false";
+
+        if (!shouldLoop) {
+          document.body.style.backgroundRepeat = "no-repeat";
+          document.body.style.backgroundSize = "contain";
+        } else {
+          document.body.style.backgroundRepeat = "repeat";
+          document.body.style.backgroundSize = "auto";
+        }
+
+        resetGif();
+        }
+
+        if (selectedMusic) {
+        if (!audio) {
+          audio = new Audio(selectedMusic);
+          audio.loop = true;
+        } else {
+          audio.src = selectedMusic;
+        }
+
+        const icon = document.querySelector('.audio-icon-active i');
+        const userWantedAudio = icon?.classList.contains('bi-volume-up-fill');
+
+        if (userWantedAudio) {
+          audio.play().then(() => updateButtonIcon(true));
+        }
+        }
+
+        const modalInstance = (window as any).bootstrap.Modal.getInstance(presetModal!);
+        modalInstance?.hide();
+      });
+
+      });
+
+    })();
     </script>
+
+
     <script is:inline src="/static/message.js"></script>
     
 
