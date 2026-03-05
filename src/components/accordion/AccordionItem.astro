@@ -5,18 +5,14 @@ const classes = additionalClasses ? `accordion-item ${additionalClasses}` : 'acc
 
 <div class={classes}>
   <h2 class="accordion-header">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${id}`} aria-expanded="false" aria-controls={id}>
-      {title}
-    </button>
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${id}`} aria-expanded="false" aria-controls={id} set:html={title} />
   </h2>
   <div id={id} class={`accordion-collapse collapse`} data-bs-parent={`#${parent}`}>
     {bodyVisible !== 'none' ? (
-      /* If bodyVisible is not 'none' */
       <div class="accordion-body">
         <slot name="accordion-item-content" />
       </div>
     ) : (
-      /* If bodyVisible is 'none' */
       <slot name="accordion-item-content" />
     )}
   </div>

@@ -1,8 +1,8 @@
 ---
-const { title, description, buttonHref, buttonText, footerText } = Astro.props;
+const { title, id, description, buttonHref, buttonText, footerText } = Astro.props;
 ---
 
-<div class="card shadow-sm col-12">
+<div class="card shadow-sm col-12" id={id}>
   <div class="d-flex flex-column">
 
     <div class="d-md-flex flex-md-row">

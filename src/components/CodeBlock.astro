@@ -2,23 +2,37 @@
 const { language, highlight_as, code } = Astro.props;
 
 let icon = "";
-if (highlight_as === "css") {
-  icon = "css";
-} else if (highlight_as === "javascript") {
-  icon = "javascript";
-} else if (highlight_as === "typescript") {
-  icon = "typescript";
-} else if (highlight_as === "bash") {
-  icon = "tux";
+if (language === "CSS") {
+  icon = "devicon-css3-plain";
+} else if (language === "HTML") {
+  icon = "devicon-html5-plain";
+} else if (language === "JavaScript") {
+  icon = "devicon-javascript-plain";
+} else if (language === "TypeScript") {
+  icon = "devicon-typescript-plain";
+} else if (language === "Bash") {
+  icon = "devicon-bash-plain";
+} else if (language === "SQL") {
+  icon = "devicon-sqldeveloper-plain";
+} else if (language === "Haskell") {
+  icon = "devicon-haskell-plain";
+} else if (language === "C++") {
+  icon = "devicon-cplusplus-plain";
+} else if (language === "Python") {
+  icon = "devicon-python-plain";
+} else if (language === "JSON") {
+  icon = "devicon-json-plain";
+} else if (language === "Node.js") {
+  icon = "devicon-nodejs-plain";
 } else {
-  icon = "code-slash";
+  icon = "bi bi-code-slash";
 }
 ---
 
 <div class="bg-dark-subtle rounded-2">
   <div class="py-2 px-3 border-bottom d-flex justify-content-between">
-    <div>
-      {icon && <i class={`bi bi-${icon} me-2`}></i>}
+    <div class="d-flex gap-2">
+      {icon && <i class={`${icon} my-auto`}></i>}
       <small class="font-monospace my-auto">
         <span>{language}</span>
       </small>

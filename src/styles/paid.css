@@ -26,6 +26,10 @@
     margin: .5rem !important;
   }
  }
+ .card-img {
+    max-width: 150px;
+    max-height: 150px;
+  }
 }
 
 .client-img {
@@ -34,5 +38,10 @@
 
 .short-img {
   min-height: 40px;
+  max-height: 125px;
+}
+
+.card-img {
+  max-width: 125px;
   max-height: 125px;
 }
