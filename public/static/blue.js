@@ -140,27 +140,9 @@
 
     let selectedBackground = null;
     let selectedMusic = null;
-    let previewAudio = null;
-
-    const stopPreview = () => {
-      if (previewAudio) {
-        previewAudio.pause();
-        previewAudio.currentTime = 0;
-        previewAudio = null;
-      }
-    };
-
-    const pauseMainAudioForPreview = () => {
-      if (audio && !audio.paused) {
-        audio.pause();
-        updateButtonIcon(false);
-      }
-    };
 
     document.querySelectorAll('.preset-bg').forEach((card) => {
       card.addEventListener('click', () => {
-
-        stopPreview();
 
         selectedBackground = card.dataset.bg || null;
 
@@ -211,32 +193,15 @@
 
     document.querySelectorAll('.preset-music').forEach((item) => {
       item.addEventListener('click', () => {
-        stopPreview();
         document.querySelectorAll('.preset-music').forEach((i) => i.classList.remove('active'));
         item.classList.add('active');
         selectedMusic = item.dataset.music || null;
       });
     });
 
-    document.querySelectorAll('.preview-btn').forEach((btn) => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-
-        const music = btn.closest('.preset-music').dataset.music;
-
-        stopPreview();
-        pauseMainAudioForPreview();
-
-        previewAudio = new Audio(music);
-        previewAudio.play();
-      });
-    });
-
     document.querySelectorAll('.apply-music-btn').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
-
-        stopPreview();
 
         const music = btn.closest('.preset-music').dataset.music;
         selectedMusic = music || null;
@@ -259,14 +224,9 @@
     });
 
     const presetModal = document.getElementById('presetModal');
-    presetModal?.addEventListener('hidden.bs.modal', () => {
-      stopPreview();
-    });
 
+  
     document.getElementById('applyPresetBtn')?.addEventListener('click', () => {
-
-      stopPreview();
-
       if (selectedBackground) {
         document.body.style.backgroundImage =
           `url("${selectedBackground}?t=${Date.now()}")`;
