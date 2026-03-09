@@ -11,7 +11,7 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "frame-ancestors 'self'"
+    Content-Security-Policy = "frame-ancestors 'self'; default-src 'self'; frame-src 'self' https://app.netlify.com/ https://codepen.io; form-action 'self'; base-uri 'self'; manifest-src 'self'; font-src 'self' data: https://cdn.jsdelivr.net; object-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-hashes' data: https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;"
 #   Cache-Control = "max-age=6000"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     Referrer-Policy = "strict-origin"
