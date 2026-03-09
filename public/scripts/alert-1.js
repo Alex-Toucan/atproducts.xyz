@@ -1,11 +1,11 @@
 // --- Config --- //
 var pureAlert1Type = "alert-dark"; // Color
-var pureAlert1Title = "2025 REVIEW:"; // Title
+var pureAlert1Title = "MID-Q1 BREAK:"; // Title
 var pureAlert1Icon = 'bi-plus-lg'; // Icon
-var pureAlert1Desc = "There is a new blog post, describing our 2025 review and what's coming in 2026!"; // Description
-var pureAlert1Link = 'https://blog.atproducts.xyz/2025/12/27/2025review'; // Link
+var pureAlert1Desc = "As part of our mid‑Q1 break, we will be unavailable from March 9th to March 13th. Email and contact form responses will be significantly delayed, and some messages may not be answered until after the break. Thank you for your understanding!"; // Description
+var pureAlert1Link = 'https://x.com/i/status/2019057093106454943'; // Link
 var pureAlert1LinkDesc = 'View now!'; // Link text
-var pureAlert1Enabled = false; // Switch to enable/disable alert
+var pureAlert1Enabled = true; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert1Cookie(name, value, days) {
