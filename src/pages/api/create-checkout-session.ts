@@ -98,9 +98,11 @@ export const POST: APIRoute = async ({ request }) => {
 
       line_items: lineItems,
 
+      /*
       ...(isDonationOnly
         ? {}
         : { automatic_tax: { enabled: true } }),
+        */
 
       ...(isDonationOnly
         ? {}
