@@ -12,7 +12,7 @@ const { id, title, description, cardLinks } = Astro.props;
       <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-custom-5 mx-2 justify-content-center">
         {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, pdfHref, additionalImageClasses }, index) => (
           <div class="col mt-1 mb-3 m-1">
-            <div class="card text-center permcard shadow-sm h-100">
+            <div class="card text-center permcard mx-auto shadow-sm h-100">
               {cardImage && (
                 <div class="bg-white card-img-top">
                   <img src={cardImage} alt={cardTitle} class={additionalImageClasses} width="100%">
@@ -21,8 +21,8 @@ const { id, title, description, cardLinks } = Astro.props;
               <div class="card-body">
                 <h2 class="card-title">{cardTitle}</h2>
                 <p class="card-text" set:html={cardDescription}></p>
-                <div class="tab-link d-flex gap-2">
-                  <a href={cardHref} class="btn-solid theme-primary w-100 d-grid">
+                <div class="tab-link d-flex w-100 gap-2">
+                  <a href={cardHref} class="btn-solid theme-primary d-grid flex-grow-1">
                     <span class="align-self-center">Visit</span>
                   </a>
                   <a href={pdfHref} class="btn-solid theme-secondary px-2 py-1 fs-lg" target="_blank" rel="noopener noreferrer">
