@@ -60,8 +60,8 @@ const positionDropdownMenus = () => {
 */
 
 const init = () => {
-  /* adjustDropdowns(); */
-  positionDropdownMenus();
+  adjustDropdowns();
+  /* positionDropdownMenus(); */
 };
 
 window.addEventListener('DOMContentLoaded', init);

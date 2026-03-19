@@ -1,6 +1,6 @@
 :root {
-  --bs-list-group-item-padding-y: 0.5rem;
-  --bs-list-group-item-padding-x: 1rem;
+  --bs-list-group-item-padding-y: 0.375rem;
+  --bs-list-group-item-padding-x: .5rem;
 }
 
 body, nav, header {
@@ -83,7 +83,7 @@ body, nav, header {
     & {
       display: flex;
     }
-    & .custom-group-item, & .custom-group-item a {
+    & .custom-group-item a {
       padding: var(--bs-list-group-item-padding-x)
       var(--bs-list-group-item-padding-y);
       text-decoration: none;
@@ -169,7 +169,6 @@ body, nav, header {
         & .dropdown-menu {
           position: absolute !important;
           width: -webkit-fill-available !important;
-          margin: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x) !important;
         }
       }
     }
@@ -219,4 +218,8 @@ body, nav, header {
           var(--bs-border-style) !important;
   padding: var(--bs-list-group-item-padding-y)
           var(--bs-list-group-item-padding-x) !important;
+}
+
+.dropdown-menu {
+  z-index: 2500 !important;
 }

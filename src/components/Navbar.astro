@@ -5,220 +5,138 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
 <a href="#main-content" class="visually-hidden-focusable btn-solid theme-primary position-fixed m-2 hero-filter skip-content" title="Skip to main content">Skip to main content</a>
 
 <header class="main-navbar fixed-top">
+
   <nav class="navbar navbar-expand-lg bg-1 fg-2">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/"
-        ><img
-          src={`/media/images/${breadcrumb ? "storyviewer-black.png" : "longblack.webp"}`}
-          height="45px"
-          alt="AT Products LLC"
-          class="headerimg" /></a
-      >
+      <a class="navbar-brand" href="/">
+        <img src="/media/images/longblack.webp" height="45px" alt="AT Products LLC" class="headerimg">
+      </a>
       <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarLeftDrawer" aria-controls="navbarLeftDrawer" aria-expanded="false" aria-label="Toggle navigation">
         <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M1 3.5h14M1 8h14M1 12.5h14"/></svg>
       </button>
-      <div
-        class="offcanvas offcanvas-start overflow-auto"
-        tabindex="-1"
-        id="offcanvasNavbar"
-        aria-labelledby="mainNavbarLabel"
-      >
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarLeftDrawer" aria-labelledby="navbarLeftDrawerLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title"><img
-            src={`/media/images/${breadcrumb ? "storyviewer-black.png" : "longblack.webp"}`}
-            height="45px"
-            alt="AT Products LLC"
-            class="headerimg" 
-            id="mainNavbarLabel"
-          />
+          <h5 class="offcanvas-title" id="navbarLeftDrawerLabel">
+            <img src="/media/images/longblack.webp" height="45px" alt="AT Products LLC" class="headerimg">
+          </h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none">
-              <path fill="currentcolor" d="M12 0a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4zm-.646 4.646a.5.5 0 0 0-.707 0L8 7.293 5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.647a.5.5 0 1 0 .708.707L8 8.707l2.647 2.646a.5.5 0 1 0 .707-.707L8.707 8l2.646-2.646a.5.5 0 0 0 0-.708z"/>
-            </svg>
-          </button>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none">
+        <path fill="currentcolor" d="M12 0a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4zm-.646 4.646a.5.5 0 0 0-.707 0L8 7.293 5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.647a.5.5 0 1 0 .708.707L8 8.707l2.647 2.646a.5.5 0 1 0 .707-.707L8.707 8l2.646-2.646a.5.5 0 0 0 0-.708z"/>
+      </svg>
+      </button>
         </div>
-        <div class="navbar-body d-lg-flex gap-2">
-          <div class="navbar-nav justify-content-start">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-container="body" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-container="body" aria-expanded="false">
                 Products
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="/paid" >Paid Services</a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle subdropdown" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    Web Projects
-                  </a>
+                <li><a class="dropdown-item" href="/paid">Paid Services</a></li>
+                <li class="dropdown-submenu">
+                  <button class="dropdown-item" type="button">Web Projects</button>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="/flash">Flash Documentation</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/mdickie">MDickie Projects</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="https://games.atproducts.xyz">AT's Unblocked Games</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/roms">AT's ROM Games</a>
-                    </li>
+                    <li><a class="dropdown-item" href="/flash">Flash Documentation</a></li>
+                    <li><a class="dropdown-item" href="/mdickie">MDickie Projects</a></li>
+                    <li><a class="dropdown-item" href="https://games.atproducts.xyz/">AT's Unblocked Games</a></li>
+                    <li><a class="dropdown-item" href="/roms">AT's ROM Games</a></li>
                   </ul>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/stories">Stories</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/sms">SMS Bomb</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/minefalls">Mine Falls</a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle subdropdown" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    Pynx Projects
-                  </a>
+                </li>                
+                <li><a class="dropdown-item" href="/stories">Stories</a></li>
+                <li><a class="dropdown-item" href="/sms">SMS Bomb</a></li>
+                <li><a class="dropdown-item" href="/minefalls">Mine Falls</a></li>
+                <li class="dropdown-submenu">
+                  <button class="dropdown-item" type="button">Pynx Projects</button>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="/pynx/radiumos">RadiumOS</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pynx/ezpkgm">ezpkgm</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pynx/pson">PSON</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pynx/bxpp">BxPP</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pynx/fenta">FentaMini</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/pynx/inferno">Inferno</a>
-                    </li>
+                    <li><a class="dropdown-item" href="/pynx/radiumos">RadiumOS</a></li>
+                    <li><a class="dropdown-item" href="/pynx/ezpkgm">ezpkgm</a></li>
+                    <li><a class="dropdown-item" href="/pynx/pson">PSON</a></li>
+                    <li><a class="dropdown-item" href="/pynx/bxpp">BxPP</a></li>
+                    <li><a class="dropdown-item" href="/pynx/fentamini">FentaMini</a></li>
+                    <li><a class="dropdown-item" href="/pynx/inferno">Inferno</a></li>
                   </ul>
-                </li>
+                </li>                
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-container="body" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-container="body" aria-expanded="false">
                 Departments
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="https://beta-testing.atproducts.xyz">Department of Beta Testing</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="https://portfolio.atproducts.xyz/#toucanempire">The Toucan Empire</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="https://portfolio.atproducts.xyz/#atpweather">ATPWeather</a>
-                </li>
+                <li><a class="dropdown-item" href="https://beta-testing.atproducts.xyz/">Department of Beta Testing</a></li>
+                <li><a class="dropdown-item" href="https://portfolio.atproducts.xyz/#toucanempire">The Toucan Empire</a></li>
+                <li><a class="dropdown-item" href="https://portfolio.atproducts.xyz/#atpweather">ATPWeather</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-container="body" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-container="body" aria-expanded="false">
                 Communities
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="/ehs">Ethical Hacking Society</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/script">The Script Community</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/codinghome">CodingHome</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/noodle">Noodle Hackerspace</a>
-                </li>
+                <li><a class="dropdown-item" href="/ehs">Ethical Hacking Society</a></li>
+                <li><a class="dropdown-item" href="/script">The Script Community</a></li>
+                <li><a class="dropdown-item" href="/codinghome">CodingHome</a></li>
+                <li><a class="dropdown-item" href="/noodle">Noodle Hackerspace</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-container="body" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-container="body" aria-expanded="false">
                 Documentation
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="/terms">Terms of Service</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/discord">Discord Rules</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/privacy">Privacy Policy</a>
-                </li>
-                <li>
-                  <a class="dropdown-item dropdown-toggle subdropdown" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    Other Policies
-                  </a>
+                <li><a class="dropdown-item" href="/terms">Terms of Service</a></li>
+                <li><a class="dropdown-item" href="/discord">Discord Rules</a></li>
+                <li><a class="dropdown-item" href="/privacy">Privacy Policy</a></li>
+                <li class="dropdown-submenu">
+                  <button class="dropdown-item" type="button">Other Policies</button>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item text-wrap" href="/paidterms">Paid Services & Website Creation Policies and Terms</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/titleiiandvii">Title II & VII</a>
-                    </li>
+                    <li><a class="dropdown-item" href="/paidterms">Paid Services & Website Creation Policies and Terms</a></li>
+                    <li><a class="dropdown-item" href="/titleiiandvii">Title II & VII Policy</a></li>
                   </ul>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/licenses">Licenses</a>
-                </li>
+                </li>                
+                <li><a class="dropdown-item" href="/licenses">Licenses</a></li>
               </ul>
             </li>
-            {breadcrumb && (
-              <ol class="navbar-nav breadcrumb m-0 flex-row d-block d-lg-none mt-4">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-divider">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </ul>
+
+          {breadcrumb && (
+            <ol class="navbar-nav breadcrumb m-0 flex-row d-block d-lg-none mt-4">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              {link && link.map(({ name, href, dropdown }, index) => (
+                <li class={`breadcrumb-item ${dropdown && breadcrumbcontent ? 'dropdown' : ''}`} key={index}>
+                  <a href={href} class={dropdown && breadcrumbcontent ? 'dropdown-toggle' : ''} data-bs-toggle={dropdown && breadcrumbcontent ? 'dropdown' : undefined} aria-expanded="false">{name}</a>
+                  {dropdown && breadcrumbcontent && (
+                    <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
+                      {breadcrumbcontent.map(({ name, href }, index) => (
+                        <li key={index}><a class="dropdown-item" href={href}>{name}</a></li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
-                {link && link.map(({ name, href, dropdown }, index) => (
-                  <li class={`breadcrumb-item ${dropdown && breadcrumbcontent ? 'dropdown' : ''}`} key={index}>
-                    <a href={href} class={dropdown && breadcrumbcontent ? 'dropdown-toggle' : ''} data-bs-toggle={dropdown && breadcrumbcontent ? 'dropdown' : undefined} aria-expanded="false">{name}</a>
-                    {dropdown && breadcrumbcontent && (
-                      <ul class="dropdown-menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                        {breadcrumbcontent.map(({ name, href }, index) => (
-                          <li key={index}><a class="dropdown-item" href={href}>{name}</a></li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                  <li class="breadcrumb-divider">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </li>
-                ))}
-                <li class="breadcrumb-item active" aria-current="page">{pageTitle}</li>
-              </ol>
-            )}
-            <div class="navbar-nav custom-group justify-content-start ms-auto nav-tab-link mb-2 mb-lg-0 color-changer">
-              <div class="dropdown color-dropdown">
-                <a class="dropdown-toggle custom-group-item-action color-button d-block" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="bd-theme">
-                  <span class="theme-icon-active"><i class="bi bi-sun-fill me-2"></i></span>
-                  <span class="d-lg-none" id="bd-theme-text">Change theme</span>
-                </a>
-                <ul class="dropdown-menu" data-bs-display="static" data-bs-popper="static">
-                  <li>
-                    <a class="dropdown-item" href="javascript:void(0)" data-bs-theme-value="light">
-                      <i class="bi bi-sun-fill me-2"></i> Light
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="javascript:void(0)" data-bs-theme-value="dark">
-                      <i class="bi bi-moon-stars-fill me-2"></i> Dark
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="javascript:void(0)" data-bs-theme-value="auto">
-                      <i class="bi bi-circle-half me-2"></i> Auto
-                    </a>
-                  </li>
-                </ul>
+              ))}
+              <li class="breadcrumb-item active" aria-current="page">{pageTitle}</li>
+            </ol>
+          )}
+
+          <div class="navbar-nav custom-group justify-content-start ms-lg-auto nav-tab-link mb-0 color-changer">
+            <div class="custom-group-item p-0 dropdown dropdown-section color-dropdown">
+              <a class="dropdown-toggle custom-group-item-action color-button d-block" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="bd-theme">
+                <span class="theme-icon-active"><i class="bi bi-sun-fill me-2"></i></span>
+                <span class="d-lg-none" id="bd-theme-text">Change theme</span>
+              </a>
+              <div class="dropdown-menu p-0" data-bs-display="static" data-bs-popper="static">
+                <div class="custom-group">
+                  <a class="dropdown-item" href="javascript:void(0)" data-bs-theme-value="light">
+                    <i class="bi bi-sun-fill me-2"></i> Light
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0)" data-bs-theme-value="dark">
+                    <i class="bi bi-moon-stars-fill me-2"></i> Dark
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0)" data-bs-theme-value="auto">
+                    <i class="bi bi-circle-half me-2"></i> Auto
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -226,6 +144,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
       </div>
     </div>
   </nav>
+
   {breadcrumb && (
     <nav class="navbar pt-0 d-none d-lg-block">
       <div class="container-fluid">

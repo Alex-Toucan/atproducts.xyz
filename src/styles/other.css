@@ -21,6 +21,21 @@ html, body {
   --bs-navbar-brand-padding-y: .3125rem;
 }
 
+.nav-link {
+  display: block !important;
+}
+
+.dropdown-toggle:after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
 .hero {
   width: 100%;
   position: relative;
@@ -3792,6 +3807,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
     display: flex;
     flex-direction: column;
     min-width: 300px;
+    width: max-content;
   }
 
   & .progress-wrapper, & .progress {
@@ -3900,4 +3916,14 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
       font-size:12.5vw;
     }
   }
+}
+
+@media(min-width: 400px) and (max-width: 991.98px) {
+  .mx-xsm-5 {
+    margin-inline: 3rem;
+  }
+}
+
+.text-wrap-auto {
+  text-wrap: auto
 }
