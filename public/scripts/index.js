@@ -8,8 +8,8 @@ var slidebtn = document.querySelectorAll(".slidebtn");
 
 $(function () {
     $(carouselMain).carousel({
-        pause: "false",
-	ride: "true"
+      pause: "false",
+	    ride: "true"
     });
     
     $(playButton).click(function () {
@@ -79,8 +79,8 @@ $(document).ready(function() {
     // Remove the "active" class from all buttons and update classes
     yearButtons.each((index, button) => {
       $(button).toggleClass("active", index + 1 == year)
-        .toggleClass("btn-secondary", index + 1 > year)
-        .toggleClass("btn-primary", index + 1 <= year);
+        .toggleClass("theme-secondary", index + 1 > year)
+        .toggleClass("theme-primary", index + 1 <= year);
       $(`#history-${index + 1}-pane`).toggleClass("active", index + 1 == year).removeClass("show");
     });
 
