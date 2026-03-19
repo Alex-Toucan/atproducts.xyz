@@ -15,7 +15,7 @@ const { title, id, price, secondaryPrice, description, buttonHref, buttonText, f
       {additionalContent && (
         <div set:html={additionalContent} />
       )}
-      <a class="tab-link w-100 btn btn-lg btn-primary" href={buttonHref}>{buttonText}</a>
+      <a class="tab-link w-100 btn btn-lg btn-solid theme-primary" href={buttonHref}>{buttonText}</a>
     </div>
     <div class="card-footer text-body-secondary" set:html={footerText} />
   </div>

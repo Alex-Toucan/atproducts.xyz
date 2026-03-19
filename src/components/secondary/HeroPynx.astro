@@ -22,12 +22,12 @@ const {
           <div class="d-md-flex d-grid gap-2 container">
             {buttons && (
               buttons.map(({ href, text, type }, index) => (
-                <a href={href} class={`btn ${type === 'primary' ? 'btn-primary' : 'btn-secondary'} col-md`} set:html={text}></a>
+                <a href={href} class={`btn ${type === 'primary' ? 'btn-solid theme-primary' : 'btn-solid theme-secondary'} col-md`} set:html={text}></a>
               ))
             )}
             {dropdownItems && (
               <div class="dropdown col-md">
-                <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
+                <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn-solid theme-secondary dropdown-toggle w-100">
                   Navigation
                 </button>
                 <ul class="dropdown-menu w-100 white-space-normal">

@@ -15,7 +15,7 @@ const { title, id, description, buttonHref, buttonText, footerText } = Astro.pro
           <div class="d-flex gap-3 flex-column flex-wrap align-items-stretch other-services">
             <p class="mb-0">{description}</p>
             {buttonHref && buttonText && (
-              <a class="w-100 btn btn-lg btn-primary my-auto" href={buttonHref}>
+              <a class="w-100 btn btn-lg btn-solid theme-primary my-auto" href={buttonHref}>
                 {buttonText}
               </a>
             )}
