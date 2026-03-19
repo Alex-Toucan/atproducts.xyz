@@ -329,6 +329,7 @@ a {
 .navbar .dropdown-menu {
   -webkit-animation-name: slideIn;
   animation-name: slideIn;
+  z-index: 2900;
 }
 
 .btn-group,
@@ -457,7 +458,7 @@ a {
 
   & .carousel-control-next, 
   & .carousel-control-prev {
-    filter: invert(0) grayscale(100);
+    filter: invert(1) grayscale(100);
   }
 
   & .carousel-products .carousel-control-prev,
@@ -486,7 +487,7 @@ a {
 
   [data-bs-theme=dark] & .carousel-control-next, 
   [data-bs-theme=dark] & .carousel-control-prev {
-    filter: invert(1) !important;
+    filter: invert(0) !important;
   }
 }
 
@@ -3640,40 +3641,12 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   bottom: 47.5px;
   box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
   z-index: 1050;
-  color: white;
-  background-color: black;
 }
-
 
 @media (min-width:1079.98px) {
   .back-to-top {
     bottom: 30px !important;
   }
-}
-
-.back-to-top:hover {
-  color: white;
-  background-color: #262626;
-}
-
-.back-to-top:active {
-  color: white;
-  background-color: #404040;
-}
-
-[data-bs-theme=dark] .back-to-top {
-  color: black;
-  background-color: white;
-}
-
-[data-bs-theme=dark] .back-to-top:hover {
-  color: black;
-  background-color: #f2f2f2;
-}
-
-[data-bs-theme=dark] .back-to-top:active {
-  color: black;
-  background-color: #bfbfbf;
 }
 
 @media (min-width: 991.98px) {

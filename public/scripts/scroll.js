@@ -6,6 +6,7 @@
               $('.back-to-top').css('display', 'block');
           } else {
               $('.back-to-top').fadeIn('slow');
+              $('.back-to-top').css('display', 'flex');
           }
       } else {
           if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

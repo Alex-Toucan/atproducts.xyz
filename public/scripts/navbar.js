@@ -15,7 +15,7 @@ const adjustDropdowns = () => {
     d.classList.toggle("dropup", m) || d.classList.toggle("dropdown", !m)
   );
 };
-
+/*
 const positionDropdownMenus = () => {
   document.querySelectorAll('.navbar .offcanvas .dropdown-toggle:not(.subdropdown .dropdown-toggle)').forEach(t => {
     const m = t.parentElement.querySelector('.dropdown-menu');
@@ -57,12 +57,13 @@ const positionDropdownMenus = () => {
     }
   });
 };
+*/
 
 const init = () => {
-  adjustDropdowns();
+  /* adjustDropdowns(); */
   positionDropdownMenus();
 };
 
 window.addEventListener('DOMContentLoaded', init);
-window.addEventListener('pageshow', positionDropdownMenus);
+/* window.addEventListener('pageshow', positionDropdownMenus); */
 window.addEventListener('resize', debounce(init, 150));
