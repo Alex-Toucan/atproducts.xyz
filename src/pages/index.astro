@@ -235,16 +235,14 @@ index="true">
             <img src="/media/images/astro-dark.webp" alt="Astro" height="60px" width="75px" class="astro object-fit-scale">
             <div class="my-auto">Astro</a> has provided their framework which powers our site.</div>
           </div>
-          <Accordion parent="resourcesAccordion">
+          <Accordion id="resourcesAccordion">
             <Fragment slot="accordion-content">
-              <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne" parent="resourcesAccordion">
+              <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne">
                 <Fragment slot="accordion-item-content">
-                  <div class="p-3">
-                    <p class="mb-0"><a href="https://uigradients.com/">uiGradients</a> for providing gradients for the carousel images when we are lazy to do it ourselves.</p>
-                  </div>
+                  <p class="mb-0"><a href="https://uigradients.com/">uiGradients</a> for providing gradients for the carousel images when we are lazy to do it ourselves.</p>
                 </Fragment>
               </AccordionItem>
-              <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo" parent="resourcesAccordion">
+              <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo">
                 <Fragment slot="accordion-item-content">
                   <div class="d-grid gap-3 p-3">
                     <div class="d-flex gap-2">

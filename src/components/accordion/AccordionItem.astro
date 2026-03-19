@@ -3,17 +3,12 @@ const { title, id, parent, additionalClasses, bodyVisible } = Astro.props;
 const classes = additionalClasses ? `accordion-item ${additionalClasses}` : 'accordion-item';
 ---
 
-<div class={classes}>
-  <h2 class="accordion-header">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#${id}`} aria-expanded="false" aria-controls={id} set:html={title} />
-  </h2>
-  <div id={id} class={`accordion-collapse collapse`} data-bs-parent={`#${parent}`}>
-    {bodyVisible !== 'none' ? (
-      <div class="accordion-body">
-        <slot name="accordion-item-content" />
-      </div>
-    ) : (
-      <slot name="accordion-item-content" />
-    )}
+<details class={classes}>
+  <summary class="accordion-header">
+    <Fragment set:html={title} />
+    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+  </summary>
+  <div class={`accordion-body ${bodyVisible ? 'p-3' : ''}`}>
+    <slot name="accordion-item-content" />
   </div>
-</div>
+</details>

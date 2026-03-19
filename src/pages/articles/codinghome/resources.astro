@@ -59,9 +59,9 @@ import '../../../styles/imagesizes.css';
             <figcaption class="figure-caption mt-2"><a href="https://commons.wikimedia.org/wiki/File:QR_Code_Structure_Example_3.svg">QR Code Structure Example 3</a> by BobMath is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a></figcaption>
           </figure>
           <p class="my-3">Please note that if a link is a <a href="javascript:void(0)" class="link-warning">warning link</a>, the resource is not in the primary language here of English and is instead German. </p>
-          <Accordion parent="resourcesAccordion">
+          <Accordion id="resourcesAccordion">
             <Fragment slot="accordion-content">
-              <AccordionItem title="<i class='bi bi-book-fill me-2'></i> Learning Resources" id="learningresources" parent="resourcesAccordion">
+              <AccordionItem title="<i class='bi bi-book-fill me-2'></i> Learning Resources" id="learningresources">
                 <Fragment slot="accordion-item-content">
                   <h3>Learning Resources</h3>
                   <p>
@@ -119,9 +119,9 @@ import '../../../styles/imagesizes.css';
                     <a href="https://youtube.com/shorts/nZuWCo52wTg?si=k3P9AgZfFjkslhvz">Architectural Patterns</a><br>
                     <a href="https://www.youtube.com/watch?v=2qlcY9LkFik">Software Planning and Technical Documentation</a><br>
                   </p>
-                  <Accordion parent="learningresourcesAccordion">
+                  <Accordion id="learningresourcesAccordion">
                     <Fragment slot="accordion-content">
-                      <AccordionItem title="<i class='devicon-python-plain me-2'></i> Python Resources" id="pythonresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-python-plain me-2'></i> Python Resources" id="pythonresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Python Resources</h4>
                           <p>
@@ -139,7 +139,7 @@ import '../../../styles/imagesizes.css';
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-haskell-plain me-2'></i> Haskell Resources" id="haskellresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-haskell-plain me-2'></i> Haskell Resources" id="haskellresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Haskell Resources</h4>
                           <p>
@@ -154,7 +154,7 @@ import '../../../styles/imagesizes.css';
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-c-plain me-2'></i> C / C++ Resources" id="cppresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-c-plain me-2'></i> C / C++ Resources" id="cppresources">
                         <Fragment slot="accordion-item-content">
                           <h4>C Resources</h4>
                           <p>
@@ -165,7 +165,7 @@ import '../../../styles/imagesizes.css';
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-cplusplus-plain me-2'></i> C++ Resources" id="cplusplusresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-cplusplus-plain me-2'></i> C++ Resources" id="cplusplusresources">
                         <Fragment slot="accordion-item-content">
                           <h4>C++ Resources</h4>
                           <p>
@@ -175,7 +175,7 @@ import '../../../styles/imagesizes.css';
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-csharp-plain me-2'></i> C# Resources" id="csharpresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-csharp-plain me-2'></i> C# Resources" id="csharpresources">
                         <Fragment slot="accordion-item-content">
                           <h4>C# Resources</h4>
                           <p>
@@ -272,7 +272,7 @@ import '../../../styles/imagesizes.css';
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-sqldeveloper-plain me-2'></i> SQL Resources" id="sqlresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-sqldeveloper-plain me-2'></i> SQL Resources" id="sqlresources">
                         <Fragment slot="accordion-item-content">
                           <h4>SQL Resources</h4>
                           <p>
@@ -288,7 +288,7 @@ import '../../../styles/imagesizes.css';
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-dot-net-plain me-2'></i> .NET Resources" id="dotnetresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-dot-net-plain me-2'></i> .NET Resources" id="dotnetresources">
                         <Fragment slot="accordion-item-content">
                           <h4>.NET Resources</h4>
                           <p>
@@ -362,7 +362,7 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
 </code></pre>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-rust-plain me-2'></i> Rust Resources" id="rustresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-rust-plain me-2'></i> Rust Resources" id="rustresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Rust Resources</h4>
                           <p>
@@ -373,7 +373,7 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-globe me-2'></i> Web Resources" id="otherlanguageresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-globe me-2'></i> Web Resources" id="otherlanguageresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Web Resources</h4>
                           <p>
@@ -385,7 +385,7 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-javascript-plain me-2'></i> JavaScript Resources" id="javascriptresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-javascript-plain me-2'></i> JavaScript Resources" id="javascriptresources">
                         <Fragment slot="accordion-item-content">
                           <h4>JavaScript Resources</h4>
                           <p>
@@ -397,7 +397,7 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-typescript-plain me-2'></i> TypeScript Resources" id="typescriptresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-typescript-plain me-2'></i> TypeScript Resources" id="typescriptresources">
                         <Fragment slot="accordion-item-content">
                           <h4>TypeScript Resources</h4>
                           <p>
@@ -410,7 +410,7 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-lua-plain me-2'></i> Lua Resources" id="luaresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-lua-plain me-2'></i> Lua Resources" id="luaresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Lua Resources</h4>
                           <p>
@@ -422,7 +422,7 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='devicon-markdown-plain me-2'></i> Markdown Resources" id="markdownresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='devicon-markdown-plain me-2'></i> Markdown Resources" id="markdownresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Markdown Resources</h4>
                           <p>
@@ -433,7 +433,7 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-joystick me-2'></i> Game Dev Resources" id="gamedevresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-joystick me-2'></i> Game Dev Resources" id="gamedevresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Game Dev Resources</h4>
                           <p>
@@ -472,7 +472,7 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-discord me-2'></i> Discord Resources" id="discordresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-discord me-2'></i> Discord Resources" id="discordresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Discord Resources</h4>
                           <p>
@@ -490,7 +490,7 @@ sudo apt update && sudo apt install dotnet-sdk-8.0
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-tux me-2'></i> Linux / Arch Resources" id="linuxarchresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-tux me-2'></i> Linux / Arch Resources" id="linuxarchresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Linux Resources</h4>
                           <p>
@@ -543,7 +543,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-archive-fill me-2'></i> Mega.nz Resources" id="meganzresources" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-archive-fill me-2'></i> Mega.nz Resources" id="meganzresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Mega.nz Resources</h4>
                           <p>
@@ -564,7 +564,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-pc-display me-2'></i> All Guides VenenJean used to Install VirtualBox under Manjaro" id="vbmanjaro" parent="learningresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-pc-display me-2'></i> All Guides VenenJean used to Install VirtualBox under Manjaro" id="vbmanjaro">
                         <Fragment slot="accordion-item-content">
                           <h4>All Guides VenenJean used to Install VisualBox under Manjaro</h4>
                           <p>
@@ -586,7 +586,7 @@ FLUSH PRIVILEGES;
                   </Accordion>
                 </Fragment>
               </AccordionItem>
-              <AccordionItem title="<i class='bi bi-gear-fill me-2'></i> Other Resources" id="otherresources" parent="resourcesAccordion">
+              <AccordionItem title="<i class='bi bi-gear-fill me-2'></i> Other Resources" id="otherresources">
                 <Fragment slot="accordion-item-content">
                   <h3>Other Resources</h3>
                   <p>
@@ -611,9 +611,9 @@ FLUSH PRIVILEGES;
                     <a href="https://insights.stackoverflow.com/survey/">StackOverflow Yearly Surveys</a><br>
                     <a href="https://survey.devographics.com/en-US">State of Language Survey</a>
                   </p>
-                  <Accordion parent="otherresourcesAccordion">
+                  <Accordion id="otherresourcesAccordion">
                     <Fragment slot="accordion-content">
-                      <AccordionItem title="<i class='bi bi-palette-fill me-2'></i> Designer Resources" id="designerresources" parent="otherresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-palette-fill me-2'></i> Designer Resources" id="designerresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Designer Resources</h4>
                           <p>
@@ -652,7 +652,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-git me-2'></i> Git Resources" id="gitresources" parent="otherresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-git me-2'></i> Git Resources" id="gitresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Git Resources</h4>
                           <p>
@@ -670,7 +670,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-globe me-2'></i> Web Resources" id="webresources" parent="otherresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-globe me-2'></i> Web Resources" id="webresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Web Resources</h4>
                           <p>
@@ -709,7 +709,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-pencil-fill me-2'></i> Code Editors" id="codeeditors" parent="otherresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-pencil-fill me-2'></i> Code Editors" id="codeeditors">
                         <Fragment slot="accordion-item-content">
                           <h4>Code Editors</h4>
                           <p>
@@ -732,7 +732,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-fonts me-2'></i> Fonts" id="fontsitem" parent="otherresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-fonts me-2'></i> Fonts" id="fontsitem">
                         <Fragment slot="accordion-item-content">
                           <h4>Fonts</h4>
                           <p>
@@ -749,7 +749,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-discord me-2'></i> Discord Glitches" id="discordgitches" parent="otherresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-discord me-2'></i> Discord Glitches" id="discordgitches">
                         <Fragment slot="accordion-item-content">
                           <h4>Discord Glitches</h4>
                           <p>
@@ -768,7 +768,7 @@ FLUSH PRIVILEGES;
                   </Accordion>
                 </Fragment>
               </AccordionItem>
-              <AccordionItem title="<i class='bi bi-youtube me-2'></i> YouTube Creators" id="youtubecreators" parent="resourcesAccordion">
+              <AccordionItem title="<i class='bi bi-youtube me-2'></i> YouTube Creators" id="youtubecreators">
                 <Fragment slot="accordion-item-content">
                   <h3>YouTube Creators</h3>
                   <p>This section will not be categorized by accordions.</p>
@@ -817,7 +817,7 @@ FLUSH PRIVILEGES;
                   </p>
                 </Fragment>
               </AccordionItem>
-              <AccordionItem title="<i class='bi bi-shield-lock-fill me-2'></i> Hacking Resources" id="hackingresources" parent="resourcesAccordion">
+              <AccordionItem title="<i class='bi bi-shield-lock-fill me-2'></i> Hacking Resources" id="hackingresources">
                 <Fragment slot="accordion-item-content">
                   <h3>Hacking Resources</h3>
                   <p>
@@ -941,9 +941,9 @@ FLUSH PRIVILEGES;
                     <a href="https://github.com/bot984397/eepy">eepy sleep obfuscator for linux (64-bit)</a><br>
                     <a href="https://github.com/Cr0mb/BHU-GitHub-Directory">BHU GitHub Directory</a><br>
                   </p>
-                  <Accordion parent="hackingresourcesAccordion">
+                  <Accordion id="hackingresourcesAccordion">
                     <Fragment slot="accordion-content">
-                      <AccordionItem title="<i class='bi bi-wifi me-2'></i> Network Attack" id="networkattack" parent="hackingresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-wifi me-2'></i> Network Attack" id="networkattack">
                         <Fragment slot="accordion-item-content">
                           <h4>Network Attack</h4>
                           <p>
@@ -952,7 +952,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-geo-alt-fill me-2'></i> Network Fundamentals" id="networkfundamentals" parent="hackingresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-geo-alt-fill me-2'></i> Network Fundamentals" id="networkfundamentals">
                         <Fragment slot="accordion-item-content">
                           <h4>Network Fundamentals</h4>
                           <p>
@@ -961,7 +961,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-lock-fill me-2'></i> Obfuscating Programs" id="obfuscatingpro" parent="hackingresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-lock-fill me-2'></i> Obfuscating Programs" id="obfuscatingpro">
                         <Fragment slot="accordion-item-content">
                           <h4>Obfuscating Programs</h4>
                           <p>
@@ -975,7 +975,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-clipboard2-check-fill me-2'></i> CTF/RE Resources & Challenges" id="ctfreresources" parent="hackingresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-clipboard2-check-fill me-2'></i> CTF/RE Resources & Challenges" id="ctfreresources">
                         <Fragment slot="accordion-item-content">
                           <h4>CTF/RE Resources & Challenges</h4>
                           <p>
@@ -1006,7 +1006,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-github me-2'></i> GitHub Resources" id="githubresources" parent="hackingresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-github me-2'></i> GitHub Resources" id="githubresources">
                         <Fragment slot="accordion-item-content">
                           <h4>GitHub Resources</h4>
                           <p>
@@ -1047,7 +1047,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-medium me-2'></i> Medium Resources" id="mediumresources" parent="hackingresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-medium me-2'></i> Medium Resources" id="mediumresources">
                         <Fragment slot="accordion-item-content">
                           <h4>Medium Resources</h4>
                           <p>
@@ -1060,7 +1060,7 @@ FLUSH PRIVILEGES;
                           </p>
                         </Fragment>
                       </AccordionItem>
-                      <AccordionItem title="<i class='bi bi-youtube me-2'></i> Almond Force Videos" id="almondforce" parent="hackingresourcesAccordion">
+                      <AccordionItem title="<i class='bi bi-youtube me-2'></i> Almond Force Videos" id="almondforce">
                         <Fragment slot="accordion-item-content">
                           <h4>Almond Force Videos</h4>
                           <p>
@@ -1114,7 +1114,7 @@ FLUSH PRIVILEGES;
                   </Accordion>
                 </Fragment>
               </AccordionItem>
-              <AccordionItem title="<i class='bi bi-download me-2'></i> Downloadable Resources" id="downloadableresources" parent="resourcesAccordion">
+              <AccordionItem title="<i class='bi bi-download me-2'></i> Downloadable Resources" id="downloadableresources">
                 <Fragment slot="accordion-item-content">
                   <h3>Downloadable Resources</h3>
                   <div class="my-1">
