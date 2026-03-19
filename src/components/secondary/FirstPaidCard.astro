@@ -9,7 +9,7 @@ const { title, id, price, secondaryPrice, description, buttonHref, buttonText, f
     <div class="card-body">
       <h1 class="card-title pricing-card-title" set:html={price} />
       {secondaryPrice && (
-        <p class="mt-2 text-body-secondary fw-light fs-5" set:html={secondaryPrice} />
+        <p class="mt-2 text-body-secondary fw-light fs-lg" set:html={secondaryPrice} />
       )}
       <p class="list-unstyled mt-3 mb-4">{description}</p>
       {additionalContent && (

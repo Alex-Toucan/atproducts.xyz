@@ -34,10 +34,10 @@ const flexSize = size ? size : 'md';
                 <img src={imageSrc} width={imageWidth} alt="icon" class={imageClasses} alt={`${imageAlt ? imageAlt : 'icon'}`} />
               )}
               {title && (
-                <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-4 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
+                <h1 class={`fs-4xl fs-md-5xl fw-bold ${imageSrc ? 'mt-mmd-4 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
               )}
             </div>
-            <p class="fs-4 m-3 mb-0 text-body-secondary" set:html={description}></p>
+            <p class="fs-lg m-3 mb-0 fg-2" set:html={description}></p>
             <div class="mx-auto justify-content-between container mt-3" id="links">
               <div class={`d-${flexSize}-flex d-grid gap-2`}>
                 {errorButton && (

@@ -639,43 +639,7 @@ a {
   border-style: solid;
 }
 
-.fs-7 {
-  font-size: 1.75rem !important;
-}
-
-.fs-8 {
-  font-size: 2rem !important;
-}
-
-.fs-9 {
-  font-size: 2.50rem !important;
-}
-
-.fs-10 {
-  font-size: 3.25rem !important;
-}
-
-.fs-11 {
-  font-size: 4rem !important;
-}
-
-.fs-12 {
-  font-size: 4.75rem !important;
-}
-
-.fs-13 {
-  font-size: 5.50rem !important;
-}
-
-.fs-14 {
-  font-size: 5.75rem !important;
-}
-
-.fs-15 {
-  font-size: 6rem !important;
-}
-
-.fs-16 {
+.contact-check {
   font-size: 6.25rem !important;
 }
 
@@ -6410,8 +6374,8 @@ a {
   .text-light-start {
     text-align: left !important;
   }
-  .text-light-end {
-    text-align: right !important;
+  .fs-md-5xl {
+    font-size: clamp(3rem, 2rem + 5vw, 4rem);
   }
   .text-light-center {
     text-align: center !important;

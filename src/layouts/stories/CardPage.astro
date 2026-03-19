@@ -7,7 +7,7 @@ const { id, title, description, cardLinks } = Astro.props;
     <div class="hero-filter">
       <h1 class="display-4 fw-bold title pt-3 pb-2" set:html={title}></h1>
       {description && (
-        <p class="fs-4 mt-0 mb-3 text-body-secondary container">{description}</p>
+        <p class="fs-lg mt-0 mb-3 text-body-secondary container">{description}</p>
       )}
       <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4 row-cols-custom-5 mx-2 justify-content-center">
         {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, pdfHref, additionalImageClasses }, index) => (
