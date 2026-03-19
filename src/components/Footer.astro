@@ -1,6 +1,7 @@
 ---
 const { author, hr, marginTop } = Astro.props;
 ---
+
 <footer>
   {hr !== 'none' && <hr>}
   <div class={`container-footer ${marginTop === 'true' ? 'mt-mxl-3' : ''}`}>
@@ -16,39 +17,39 @@ const { author, hr, marginTop } = Astro.props;
         <div class="col-lg-2 mt-mxl-2 me-lg-2 text-centertostart-lg">
           <h2 class="h5">Products</h2>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="/paid" class="nav-link p-0 text-body-secondary">Paid Services</a></li>
-            <li class="nav-item mb-2"><a href="/web" class="nav-link p-0 text-body-secondary">Web Projects</a></li>
-            <li class="nav-item mb-2"><a href="/stories" class="nav-link p-0 text-body-secondary">Stories</a></li>
-            <li class="nav-item mb-2"><a href="/sms" class="nav-link p-0 text-body-secondary">SMS Bomb</a></li>
-            <li class="nav-item mb-2"><a href="/minefalls" class="nav-link p-0 text-body-secondary">Mine Falls</a></li>
-            <li class="nav-item mb-2"><a href="/pynx" class="nav-link p-0 text-body-secondary">Pynx's Projects</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/paid" class="nav-link p-0 text-normal">Paid Services</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/web" class="nav-link p-0 text-wrap-auto">Web Projects</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/stories" class="nav-link p-0 text-wrap-auto">Stories</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/sms" class="nav-link p-0 text-wrap-auto">SMS Bomb</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/minefalls" class="nav-link p-0 text-wrap-auto">Mine Falls</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/pynx" class="nav-link p-0 text-wrap-auto">Pynx's Projects</a></li>
           </ul>
         </div>
         <div class="col-lg-2 mt-mxl-2 me-lg-2 text-centertostart-lg">
           <h2 class="h5">Departments</h2>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="https://beta-testing.atproducts.xyz" class="nav-link p-0 text-body-secondary">Department of Beta Testing</a></li>
-            <li class="nav-item mb-2"><a href="https://portfolio.atproducts.xyz/#toucanempire" class="nav-link p-0 text-body-secondary">The Toucan Empire</a></li>
-            <li class="nav-item mb-2"><a href="https://portfolio.atproducts.xyz/#atpweather" class="nav-link p-0 text-body-secondary">ATPWeather</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="https://beta-testing.atproducts.xyz" class="nav-link p-0 text-wrap-auto">Department of Beta Testing</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="https://portfolio.atproducts.xyz/#toucanempire" class="nav-link p-0 text-wrap-auto">The Toucan Empire</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="https://portfolio.atproducts.xyz/#atpweather" class="nav-link p-0 text-wrap-auto">ATPWeather</a></li>
           </ul>
         </div>
         <div class="col-lg-2 mt-mxl-2 me-lg-2 text-centertostart-lg">
           <h2 class="h5">Communities</h2>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="/script" class="nav-link p-0 text-body-secondary">The Script Community</a></li>
-            <li class="nav-item mb-2"><a href="/ehs" class="nav-link p-0 text-body-secondary">Ethical Hacking Society</a></li>
-            <li class="nav-item mb-2"><a href="/codinghome" class="nav-link p-0 text-body-secondary">CodingHome</a></li>
-            <li class="nav-item mb-2"><a href="/noodle" class="nav-link p-0 text-body-secondary">Noodle Hackerspace</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/script" class="nav-link p-0 text-wrap-auto">The Script Community</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/ehs" class="nav-link p-0 text-wrap-auto">Ethical Hacking Society</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/codinghome" class="nav-link p-0 text-wrap-auto">CodingHome</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/noodle" class="nav-link p-0 text-wrap-auto">Noodle Hackerspace</a></li>
           </ul>
         </div>
         <div class="col-lg-2 mt-mxl-2 me-lg-2 text-centertostart-lg">
           <h2 class="h5">Documentation</h2>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
-            <li class="nav-item mb-2"><a href="/discord" class="nav-link p-0 text-body-secondary">Discord Rules</a></li>
-            <li class="nav-item mb-2"><a href="/privacy" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
-            <li class="nav-item mb-2"><a href="/policies" class="nav-link p-0 text-body-secondary">Other Policies</a></li>
-            <li class="nav-item mb-2"><a href="/licenses" class="nav-link p-0 text-body-secondary">Licenses</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/terms" class="nav-link p-0 text-normal">Terms of Service</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/discord" class="nav-link p-0 text-wrap-auto">Discord Rules</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/privacy" class="nav-link p-0 text-wrap-auto">Privacy Policy</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/policies" class="nav-link p-0 text-wrap-auto">Other Policies</a></li>
+            <li class="nav-item mb-2 d-block mx-3 mx-xsm-5 mx-lg-0"><a href="/licenses" class="nav-link p-0 text-wrap-auto">Licenses</a></li>
           </ul>
         </div>
       </div>
@@ -58,7 +59,7 @@ const { author, hr, marginTop } = Astro.props;
           Information
           </a>
           <div class="ms-3 pt-2 col-lg-6 collapse" id="footerinfo">
-            <div class="card card-body text-start">
+            <div class="card card-body text-start d-block">
               <b>Version:</b> <script is:inline src="/scripts/version.js"></script><br>
               {author ?
                 <>
