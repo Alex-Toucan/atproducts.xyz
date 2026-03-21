@@ -3807,7 +3807,6 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
     display: flex;
     flex-direction: column;
     min-width: 300px;
-    width: max-content;
   }
 
   & .progress-wrapper, & .progress {
