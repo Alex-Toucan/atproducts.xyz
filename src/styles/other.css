@@ -21,8 +21,8 @@ html, body {
   --bs-navbar-brand-padding-y: .3125rem;
 }
 
-.nav-link {
-  display: block !important;
+.nav-link, .dropdown-item {
+  display: block;
 }
 
 .dropdown-toggle:after {
