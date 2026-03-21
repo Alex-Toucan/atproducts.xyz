@@ -103,6 +103,9 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
           {breadcrumb && (
             <ol class="navbar-nav breadcrumb m-0 flex-row d-block d-lg-none mt-4">
               <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </li>
               {link && link.map(({ name, href, dropdown }, index) => (
                 <li class={`breadcrumb-item ${dropdown && breadcrumbcontent ? 'dropdown' : ''}`} key={index}>
                   <a href={href} class={dropdown && breadcrumbcontent ? 'dropdown-toggle' : ''} data-bs-toggle={dropdown && breadcrumbcontent ? 'dropdown' : undefined} aria-expanded="false">{name}</a>
@@ -113,6 +116,9 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
                       ))}
                     </ul>
                   )}
+                </li>
+                <li class="breadcrumb-divider">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </li>
               ))}
               <li class="breadcrumb-item active" aria-current="page">{pageTitle}</li>
@@ -146,7 +152,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
   </nav>
 
   {breadcrumb && (
-    <nav class="navbar pt-0 d-none d-lg-block">
+    <nav class="navbar bg-1 pt-0 d-none d-lg-block">
       <div class="container-fluid">
         <ol class="navbar-nav breadcrumb m-0 flex-row">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
