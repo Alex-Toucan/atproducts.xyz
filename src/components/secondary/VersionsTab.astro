@@ -75,7 +75,7 @@ const reversedVersions = versions.reverse();
           {betalinks && (
             <div class="d-flex flex-wrap gap-3 my-4">
               {betalinks.map(({ label, url }) => (
-                <a href={url} class="btn btn-outline-warning">
+                <a href={url} class="btn-subtle theme-warning">
                   {label}
                   {label === latestLabel && (
                     <span class="badge bg-success ms-2">Latest</span>
@@ -88,7 +88,7 @@ const reversedVersions = versions.reverse();
           {links && (
             <div class="d-flex flex-wrap gap-3 my-4">
               {links.map(({ label, url }) => (
-                <a href={url} class="btn btn-outline-primary">
+                <a href={url} class="btn-subtle theme-primary">
                   {label}
                   {label === latestLabel && (
                     <span class="badge bg-success ms-2">Latest</span>
