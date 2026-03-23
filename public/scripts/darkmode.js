@@ -20,13 +20,14 @@
   setTheme(getPreferredTheme())
 
   const swapIcon = (activeIcon, sourceIcon) => {
+    const newIconClass = [...sourceIcon.classList].find(cls => cls.startsWith('bi-'))
+    if (!newIconClass) return
+
     activeIcon.classList.forEach(cls => {
-      if (cls.startsWith('bi')) activeIcon.classList.remove(cls)
+      if (cls.startsWith('bi-')) activeIcon.classList.remove(cls)
     })
 
-    sourceIcon.classList.forEach(cls => {
-      if (cls.startsWith('bi')) activeIcon.classList.add(cls)
-    })
+    activeIcon.classList.add(newIconClass)
   }
 
   const showActiveTheme = (theme, focus = false) => {
@@ -55,7 +56,7 @@
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (storedTheme !== 'light' || storedTheme !== 'dark') {
+    if (storedTheme !== 'light' && storedTheme !== 'dark') {
       setTheme(getPreferredTheme())
     }
   })
