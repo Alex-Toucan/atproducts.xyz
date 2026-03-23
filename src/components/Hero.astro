@@ -49,14 +49,14 @@ const flexSize = size ? size : 'md';
                   ))
                 )}
                 {dropdownItems && (
-                    <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn-solid theme-secondary dropdown-toggle w-100">
                   <div class="dropdown md:col">
+                    <button aria-expanded="false" data-bs-toggle="menu" type="button" class="btn-solid theme-secondary dropdown-toggle w-100">
                       Navigation
                     </button>
-                    <ul class="dropdown-menu w-100 white-space-normal">
+                    <ul class="menu w-100 white-space-normal">
                       {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
                         <li>
-                          <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
+                          <a class="menu-item" href={navigationLink}>{navigationDesc}</a>
                         </li>
                       ))}
                     </ul>
