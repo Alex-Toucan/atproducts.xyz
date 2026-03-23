@@ -39,7 +39,7 @@ const flexSize = size ? size : 'md';
             </div>
             <p class="fs-lg m-3 mb-0 fg-2" set:html={description}></p>
             <div class="mx-auto justify-content-between container mt-3" id="links">
-              <div class={`d-${flexSize}-flex d-grid gap-2`}>
+              <div class={`${flexSize}:d-flex d-grid gap-2`}>
                 {errorButton && (
                   <Fragment set:html={errorButton} />
                 )}
