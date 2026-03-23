@@ -34,7 +34,7 @@ const flexSize = size ? size : 'md';
                 <img src={imageSrc} width={imageWidth} alt="icon" class={imageClasses} alt={`${imageAlt ? imageAlt : 'icon'}`} />
               )}
               {title && (
-                <h1 class={`fs-4xl fs-md-5xl fw-bold ${imageSrc ? 'mt-mmd-4 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
+                <h1 class={`fs-4xl md:fs-5xl fw-bold ${imageSrc ? 'mt-4 md:mt-0 d-block md:d-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
               )}
             </div>
             <p class="fs-lg m-3 mb-0 fg-2" set:html={description}></p>
@@ -45,12 +45,12 @@ const flexSize = size ? size : 'md';
                 )}
                 {buttons && (
                   buttons.map(({ href, text, type }, index) => (
-                    <a href={href} class={`btn-solid theme-${type} col-md`}>{text}</a>
+                    <a href={href} class={`btn-solid theme-${type} md:col`}>{text}</a>
                   ))
                 )}
                 {dropdownItems && (
-                  <div class="dropdown col-md">
                     <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn-solid theme-secondary dropdown-toggle w-100">
+                  <div class="dropdown md:col">
                       Navigation
                     </button>
                     <ul class="dropdown-menu w-100 white-space-normal">

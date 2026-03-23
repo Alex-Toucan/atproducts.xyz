@@ -6,7 +6,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
 
 <header class="main-navbar fixed-top">
 
-  <nav class="navbar navbar-expand-lg bg-1 fg-2">
+  <nav class="navbar lg:navbar-expand bg-1 fg-2">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <img src="/media/images/longblack.webp" height="45px" alt="AT Products LLC" class="headerimg">
@@ -26,7 +26,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
       </button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <ul class="navbar-nav me-auto mb-2 md:mb-0">
             <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-container="body" aria-expanded="false">
@@ -101,7 +101,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
           </ul>
 
           {breadcrumb && (
-            <ol class="navbar-nav breadcrumb m-0 flex-row d-block d-lg-none mt-4">
+            <ol class="navbar-nav breadcrumb m-0 flex-row d-block lg:d-none mt-4">
               <li class="breadcrumb-item"><a href="/">Home</a></li>
               <li class="breadcrumb-divider">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -125,7 +125,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
             </ol>
           )}
 
-          <div class="navbar-nav custom-group justify-content-start ms-lg-auto nav-tab-link mb-0 color-changer">
+          <div class="navbar-nav custom-group justify-content-start lg:ms-auto nav-tab-link mb-0 color-changer">
             <div class="custom-group-item p-0 dropdown dropdown-section color-dropdown">
               <a class="dropdown-toggle custom-group-item-action color-button d-block" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="bd-theme">
                 <span class="theme-icon-active"><i class="bi bi-sun-fill me-2"></i></span>
@@ -152,7 +152,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
   </nav>
 
   {breadcrumb && (
-    <nav class="navbar bg-1 pt-0 d-none d-lg-block">
+    <nav class="navbar bg-1 pt-0 d-none lg:d-block">
       <div class="container-fluid">
         <ol class="navbar-nav breadcrumb m-0 flex-row">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
