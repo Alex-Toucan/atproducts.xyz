@@ -7,26 +7,27 @@ var carouselMain = document.querySelector(".carousel-main");
 var slidebtn = document.querySelectorAll(".slidebtn");
 
 $(function () {
-    $(carouselMain).carousel({
-      pause: "false",
-	    ride: "true"
-    });
-    
-    $(playButton).click(function () {
-        $(carouselMain).carousel('cycle');
-    });
-    $(pauseButton).click(function () {
-        $(carouselMain).carousel('pause');
-    });
-	
-		$(nextButton).click(handleButton);
-    $(previousButton).click(handleButton);
-    $(slidebtn).click(handleButton);
-	
-    function handleButton() {
-        playButton.checked = true;
-			  pauseButton.checked = false;
-    };
+  const carousel = bootstrap.Carousel.getOrCreateInstance(carouselMain, {
+      pause: false,
+      ride: true
+  });
+
+  $(playButton).click(function () {
+      carousel.cycle();
+  });
+
+  $(pauseButton).click(function () {
+      carousel.pause();
+  });
+  
+  $(nextButton).click(handleButton);
+  $(previousButton).click(handleButton);
+  $(slidebtn).click(handleButton);
+
+  function handleButton() {
+      playButton.checked = true;
+      pauseButton.checked = false;
+  }
 });
 
 // History Tabs
