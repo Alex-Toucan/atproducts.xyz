@@ -93,7 +93,13 @@ if (devicon) {
       <slot/>
     </Fragment>
     <Fragment>
-      <script src={bootstrap}></script>
+      <script>
+        import * as bootstrap from '../scripts/bootstrap.bundle.js';
+        Object.assign(window, bootstrap);
+        window.bootstrap = bootstrap;
+        window.bootstrapReady?.();
+      </script>
+
       <script src={jquery}></script>
       <script src={jqueryui}></script>
       {highlight && (
