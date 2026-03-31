@@ -21,10 +21,6 @@ html, body {
   --bs-navbar-brand-padding-y: .3125rem;
 }
 
-.nav-link, .menu-item {
-  display: block;
-}
-
 .hero {
   width: 100%;
   position: relative;
