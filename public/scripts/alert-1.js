@@ -1,11 +1,11 @@
 // --- Config --- //
 var pureAlert1Type = "alert-dark"; // Color
-var pureAlert1Title = "MID-Q1 BREAK:"; // Title
+var pureAlert1Title = "2.25 BETA NOW FOR VIEWING:"; // Title
 var pureAlert1Icon = 'bi-plus-lg'; // Icon
-var pureAlert1Desc = "As part of our mid‑Q1 break, we will be unavailable from March 9th to March 13th. Email and contact form responses will be significantly delayed, and some messages may not be answered until after the break. Thank you for your understanding!"; // Description
-var pureAlert1Link = 'https://x.com/i/status/2019057093106454943'; // Link
-var pureAlert1LinkDesc = 'View our schedule.'; // Link text
-var pureAlert1Enabled = false; // Switch to enable/disable alert
+var pureAlert1Desc = "As we continue to develop our site to always become bigger and better, we are announcing the new version of the site that will shape the future of our platform: 2.25, which introduces Bootstrap v6. Public viewing is now available by clicking the link below."; // Description
+var pureAlert1Link = 'https://beta-testing.atproducts.xyz/links/'; // Link
+var pureAlert1LinkDesc = 'View more information'; // Link text
+var pureAlert1Enabled = true; // Switch to enable/disable alert
 // ---        --- //
 
 function setAlert1Cookie(name, value, days) {
