@@ -11,10 +11,10 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
-        "npm:@astrojs/netlify@^6.6.0",
-        "npm:@astrojs/react@^4.4.1",
+        "npm:@astrojs/netlify@^6.6.4",
+        "npm:@astrojs/react@^4.4.2",
         "npm:@types/jquery@^3.5.33",
-        "npm:astro@^5.15.3",
+        "npm:astro@^5.17.1",
         "npm:bootstrap-icons@^1.13.1",
         "npm:bootstrap@^5.3.8",
         "npm:jquery-ui@^1.14.1",
