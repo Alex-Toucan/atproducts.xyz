@@ -1806,6 +1806,10 @@ footer p {
   margin-bottom: 0!important;
 }
 
+.footer-header {
+  font-size: 1.25rem !important;
+}
+
 a:hover.footer-info {
   color: #696969;
 }
