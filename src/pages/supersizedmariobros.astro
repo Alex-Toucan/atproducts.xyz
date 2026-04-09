@@ -1,0 +1,14 @@
+---
+import DefaultBody from "../layouts/DefaultBody.astro";
+import GamePage from "../layouts/GamePage.astro";
+import GameList from "../layouts/GameList.astro";
+---
+
+<DefaultBody title="Super Sized Mario Bros" ruffle="true" 
+keywords="Super Sized Mario Bros, platformer, 3D, side-scrolling, Mario"
+description="Play Super Sized Mario Bros online! Control Mario as he jumps through challenging levels in this exciting 3D platformer adventure!"
+ author="AT Products LLC">
+  <GamePage title="Super Sized Mario Bros" link="/games/supersizedmariobros.swf" ruffle="true">
+    <GameList />
+  </GamePage>
+</DefaultBody>
