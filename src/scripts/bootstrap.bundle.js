@@ -37,6 +37,12 @@ const Data = {
     }
     return null;
   },
+  getAny(element) {
+    if (elementMap.has(element)) {
+      return elementMap.get(element).values().next().value || null;
+    }
+    return null;
+  },
   remove(element, key) {
     if (!elementMap.has(element)) {
       return;
@@ -788,13 +794,13 @@ const eventAction = (onEvent, stringSelector, callback) => {
  * Constants
  */
 
-const NAME$m = 'alert';
-const DATA_KEY$h = 'bs.alert';
-const EVENT_KEY$i = `.${DATA_KEY$h}`;
-const EVENT_CLOSE = `close${EVENT_KEY$i}`;
-const EVENT_CLOSED = `closed${EVENT_KEY$i}`;
-const CLASS_NAME_FADE$4 = 'fade';
-const CLASS_NAME_SHOW$8 = 'show';
+const NAME$k = 'alert';
+const DATA_KEY$g = 'bs.alert';
+const EVENT_KEY$h = `.${DATA_KEY$g}`;
+const EVENT_CLOSE = `close${EVENT_KEY$h}`;
+const EVENT_CLOSED = `closed${EVENT_KEY$h}`;
+const CLASS_NAME_FADE$3 = 'fade';
+const CLASS_NAME_SHOW$6 = 'show';
 
 /**
  * Class definition
@@ -803,7 +809,7 @@ const CLASS_NAME_SHOW$8 = 'show';
 class Alert extends BaseComponent {
   // Getters
   static get NAME() {
-    return NAME$m;
+    return NAME$k;
   }
 
   // Public
@@ -812,8 +818,8 @@ class Alert extends BaseComponent {
     if (closeEvent.defaultPrevented) {
       return;
     }
-    this._element.classList.remove(CLASS_NAME_SHOW$8);
-    const isAnimated = this._element.classList.contains(CLASS_NAME_FADE$4);
+    this._element.classList.remove(CLASS_NAME_SHOW$6);
+    const isAnimated = this._element.classList.contains(CLASS_NAME_FADE$3);
     this._queueCallback(() => this._destroyElement(), this._element, isAnimated);
   }
 
@@ -843,13 +849,13 @@ enableDismissTrigger(Alert, 'close');
  * Constants
  */
 
-const NAME$l = 'button';
-const DATA_KEY$g = 'bs.button';
-const EVENT_KEY$h = `.${DATA_KEY$g}`;
+const NAME$j = 'button';
+const DATA_KEY$f = 'bs.button';
+const EVENT_KEY$g = `.${DATA_KEY$f}`;
 const DATA_API_KEY$b = '.data-api';
 const CLASS_NAME_ACTIVE$4 = 'active';
 const SELECTOR_DATA_TOGGLE$a = '[data-bs-toggle="button"]';
-const EVENT_CLICK_DATA_API$8 = `click${EVENT_KEY$h}${DATA_API_KEY$b}`;
+const EVENT_CLICK_DATA_API$8 = `click${EVENT_KEY$g}${DATA_API_KEY$b}`;
 
 /**
  * Class definition
@@ -858,7 +864,7 @@ const EVENT_CLICK_DATA_API$8 = `click${EVENT_KEY$h}${DATA_API_KEY$b}`;
 class Button extends BaseComponent {
   // Getters
   static get NAME() {
-    return NAME$l;
+    return NAME$j;
   }
 
   // Public
@@ -891,26 +897,30 @@ EventHandler.on(document, EVENT_CLICK_DATA_API$8, SELECTOR_DATA_TOGGLE$a, event 
  * Constants
  */
 
-const NAME$k = 'swipe';
-const EVENT_KEY$g = '.bs.swipe';
-const EVENT_TOUCHSTART = `touchstart${EVENT_KEY$g}`;
-const EVENT_TOUCHMOVE = `touchmove${EVENT_KEY$g}`;
-const EVENT_TOUCHEND = `touchend${EVENT_KEY$g}`;
-const EVENT_POINTERDOWN = `pointerdown${EVENT_KEY$g}`;
-const EVENT_POINTERUP = `pointerup${EVENT_KEY$g}`;
+const NAME$i = 'swipe';
+const EVENT_KEY$f = '.bs.swipe';
+const EVENT_TOUCHSTART = `touchstart${EVENT_KEY$f}`;
+const EVENT_TOUCHMOVE = `touchmove${EVENT_KEY$f}`;
+const EVENT_TOUCHEND = `touchend${EVENT_KEY$f}`;
+const EVENT_POINTERDOWN = `pointerdown${EVENT_KEY$f}`;
+const EVENT_POINTERUP = `pointerup${EVENT_KEY$f}`;
 const POINTER_TYPE_TOUCH = 'touch';
 const POINTER_TYPE_PEN = 'pen';
 const CLASS_NAME_POINTER_EVENT = 'pointer-event';
 const SWIPE_THRESHOLD = 40;
-const Default$j = {
+const Default$h = {
   endCallback: null,
   leftCallback: null,
-  rightCallback: null
+  rightCallback: null,
+  upCallback: null,
+  downCallback: null
 };
-const DefaultType$j = {
+const DefaultType$h = {
   endCallback: '(function|null)',
   leftCallback: '(function|null)',
-  rightCallback: '(function|null)'
+  rightCallback: '(function|null)',
+  upCallback: '(function|null)',
+  downCallback: '(function|null)'
 };
 
 /**
@@ -926,57 +936,82 @@ class Swipe extends Config {
     }
     this._config = this._getConfig(config);
     this._deltaX = 0;
+    this._deltaY = 0;
     this._supportPointerEvents = Boolean(window.PointerEvent);
     this._initEvents();
   }
 
   // Getters
   static get Default() {
-    return Default$j;
+    return Default$h;
   }
   static get DefaultType() {
-    return DefaultType$j;
+    return DefaultType$h;
   }
   static get NAME() {
-    return NAME$k;
+    return NAME$i;
   }
 
   // Public
   dispose() {
-    EventHandler.off(this._element, EVENT_KEY$g);
+    EventHandler.off(this._element, EVENT_KEY$f);
   }
 
   // Private
   _start(event) {
     if (!this._supportPointerEvents) {
       this._deltaX = event.touches[0].clientX;
+      this._deltaY = event.touches[0].clientY;
       return;
     }
     if (this._eventIsPointerPenTouch(event)) {
       this._deltaX = event.clientX;
+      this._deltaY = event.clientY;
     }
   }
   _end(event) {
     if (this._eventIsPointerPenTouch(event)) {
       this._deltaX = event.clientX - this._deltaX;
+      this._deltaY = event.clientY - this._deltaY;
     }
     this._handleSwipe();
     execute(this._config.endCallback);
   }
   _move(event) {
-    this._deltaX = event.touches && event.touches.length > 1 ? 0 : event.touches[0].clientX - this._deltaX;
+    if (event.touches && event.touches.length > 1) {
+      this._deltaX = 0;
+      this._deltaY = 0;
+      return;
+    }
+    this._deltaX = event.touches[0].clientX - this._deltaX;
+    this._deltaY = event.touches[0].clientY - this._deltaY;
   }
   _handleSwipe() {
     const absDeltaX = Math.abs(this._deltaX);
-    if (absDeltaX <= SWIPE_THRESHOLD) {
+    const absDeltaY = Math.abs(this._deltaY);
+
+    // Determine primary axis: whichever has greater movement wins
+    if (absDeltaY > absDeltaX && absDeltaY > SWIPE_THRESHOLD) {
+      // Vertical swipe
+      const direction = this._deltaY > 0 ? 'down' : 'up';
+      this._deltaX = 0;
+      this._deltaY = 0;
+      execute(direction === 'down' ? this._config.downCallback : this._config.upCallback);
       return;
     }
-    const direction = absDeltaX / this._deltaX;
+    if (absDeltaX > SWIPE_THRESHOLD) {
+      // Horizontal swipe
+      const direction = absDeltaX / this._deltaX;
+      this._deltaX = 0;
+      this._deltaY = 0;
+      if (!direction) {
+        return;
+      }
+      execute(direction > 0 ? this._config.rightCallback : this._config.leftCallback);
+      return;
+    }
     this._deltaX = 0;
-    if (!direction) {
-      return;
-    }
-    execute(direction > 0 ? this._config.rightCallback : this._config.leftCallback);
+    this._deltaY = 0;
   }
   _initEvents() {
     if (this._supportPointerEvents) {
@@ -1011,9 +1046,9 @@ class Swipe extends Config {
  * Constants
  */
 
-const NAME$j = 'carousel';
-const DATA_KEY$f = 'bs.carousel';
-const EVENT_KEY$f = `.${DATA_KEY$f}`;
+const NAME$h = 'carousel';
+const DATA_KEY$e = 'bs.carousel';
+const EVENT_KEY$e = `.${DATA_KEY$e}`;
 const DATA_API_KEY$a = '.data-api';
 const ARROW_LEFT_KEY$2 = 'ArrowLeft';
 const ARROW_RIGHT_KEY$2 = 'ArrowRight';
@@ -1023,14 +1058,14 @@ const ORDER_NEXT = 'next';
 const ORDER_PREV = 'prev';
 const DIRECTION_LEFT = 'left';
 const DIRECTION_RIGHT = 'right';
-const EVENT_SLIDE = `slide${EVENT_KEY$f}`;
-const EVENT_SLID = `slid${EVENT_KEY$f}`;
-const EVENT_KEYDOWN$1 = `keydown${EVENT_KEY$f}`;
-const EVENT_MOUSEENTER$2 = `mouseenter${EVENT_KEY$f}`;
-const EVENT_MOUSELEAVE$1 = `mouseleave${EVENT_KEY$f}`;
-const EVENT_DRAG_START = `dragstart${EVENT_KEY$f}`;
-const EVENT_LOAD_DATA_API$3 = `load${EVENT_KEY$f}${DATA_API_KEY$a}`;
-const EVENT_CLICK_DATA_API$7 = `click${EVENT_KEY$f}${DATA_API_KEY$a}`;
+const EVENT_SLIDE = `slide${EVENT_KEY$e}`;
+const EVENT_SLID = `slid${EVENT_KEY$e}`;
+const EVENT_KEYDOWN$1 = `keydown${EVENT_KEY$e}`;
+const EVENT_MOUSEENTER$2 = `mouseenter${EVENT_KEY$e}`;
+const EVENT_MOUSELEAVE$1 = `mouseleave${EVENT_KEY$e}`;
+const EVENT_DRAG_START = `dragstart${EVENT_KEY$e}`;
+const EVENT_LOAD_DATA_API$3 = `load${EVENT_KEY$e}${DATA_API_KEY$a}`;
+const EVENT_CLICK_DATA_API$7 = `click${EVENT_KEY$e}${DATA_API_KEY$a}`;
 const CLASS_NAME_CAROUSEL = 'carousel';
 const CLASS_NAME_ACTIVE$3 = 'active';
 const CLASS_NAME_SLIDE = 'slide';
@@ -1049,7 +1084,7 @@ const KEY_TO_DIRECTION = {
   [ARROW_LEFT_KEY$2]: DIRECTION_RIGHT,
   [ARROW_RIGHT_KEY$2]: DIRECTION_LEFT
 };
-const Default$i = {
+const Default$g = {
   interval: 5000,
   keyboard: true,
   pause: 'hover',
@@ -1057,7 +1092,7 @@ const Default$i = {
   touch: true,
   wrap: true
 };
-const DefaultType$i = {
+const DefaultType$g = {
   interval: 'number',
   keyboard: 'boolean',
   pause: '(string|boolean)',
@@ -1087,13 +1122,13 @@ class Carousel extends BaseComponent {
 
   // Getters
   static get Default() {
-    return Default$i;
+    return Default$g;
   }
   static get DefaultType() {
-    return DefaultType$i;
+    return DefaultType$g;
   }
   static get NAME() {
-    return NAME$j;
+    return NAME$h;
   }
 
   // Public
@@ -1358,16 +1393,16 @@ EventHandler.on(window, EVENT_LOAD_DATA_API$3, () => {
  * Constants
  */
 
-const NAME$i = 'collapse';
-const DATA_KEY$e = 'bs.collapse';
-const EVENT_KEY$e = `.${DATA_KEY$e}`;
+const NAME$g = 'collapse';
+const DATA_KEY$d = 'bs.collapse';
+const EVENT_KEY$d = `.${DATA_KEY$d}`;
 const DATA_API_KEY$9 = '.data-api';
-const EVENT_SHOW$8 = `show${EVENT_KEY$e}`;
-const EVENT_SHOWN$8 = `shown${EVENT_KEY$e}`;
-const EVENT_HIDE$8 = `hide${EVENT_KEY$e}`;
-const EVENT_HIDDEN$8 = `hidden${EVENT_KEY$e}`;
-const EVENT_CLICK_DATA_API$6 = `click${EVENT_KEY$e}${DATA_API_KEY$9}`;
-const CLASS_NAME_SHOW$7 = 'show';
+const EVENT_SHOW$7 = `show${EVENT_KEY$d}`;
+const EVENT_SHOWN$6 = `shown${EVENT_KEY$d}`;
+const EVENT_HIDE$6 = `hide${EVENT_KEY$d}`;
+const EVENT_HIDDEN$8 = `hidden${EVENT_KEY$d}`;
+const EVENT_CLICK_DATA_API$6 = `click${EVENT_KEY$d}${DATA_API_KEY$9}`;
+const CLASS_NAME_SHOW$5 = 'show';
 const CLASS_NAME_COLLAPSE = 'collapse';
 const CLASS_NAME_COLLAPSING = 'collapsing';
 const CLASS_NAME_COLLAPSED = 'collapsed';
@@ -1377,11 +1412,11 @@ const WIDTH = 'width';
 const HEIGHT = 'height';
 const SELECTOR_ACTIVES = '.collapse.show, .collapse.collapsing';
 const SELECTOR_DATA_TOGGLE$9 = '[data-bs-toggle="collapse"]';
-const Default$h = {
+const Default$f = {
   parent: null,
   toggle: true
 };
-const DefaultType$h = {
+const DefaultType$f = {
   parent: '(null|element)',
   toggle: 'boolean'
 };
@@ -1414,13 +1449,13 @@ class Collapse extends BaseComponent {
 
   // Getters
   static get Default() {
-    return Default$h;
+    return Default$f;
   }
   static get DefaultType() {
-    return DefaultType$h;
+    return DefaultType$f;
   }
   static get NAME() {
-    return NAME$i;
+    return NAME$g;
   }
 
   // Public
@@ -1446,7 +1481,7 @@ class Collapse extends BaseComponent {
     if (activeChildren.length && activeChildren[0]._isTransitioning) {
       return;
     }
-    const startEvent = EventHandler.trigger(this._element, EVENT_SHOW$8);
+    const startEvent = EventHandler.trigger(this._element, EVENT_SHOW$7);
     if (startEvent.defaultPrevented) {
       return;
     }
@@ -1462,9 +1497,9 @@ class Collapse extends BaseComponent {
     const complete = () => {
       this._isTransitioning = false;
       this._element.classList.remove(CLASS_NAME_COLLAPSING);
-      this._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$7);
+      this._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$5);
       this._element.style[dimension] = '';
-      EventHandler.trigger(this._element, EVENT_SHOWN$8);
+      EventHandler.trigger(this._element, EVENT_SHOWN$6);
     };
     const capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
     const scrollSize = `scroll${capitalizedDimension}`;
@@ -1475,7 +1510,7 @@ class Collapse extends BaseComponent {
     if (this._isTransitioning || !this._isShown()) {
       return;
     }
-    const startEvent = EventHandler.trigger(this._element, EVENT_HIDE$8);
+    const startEvent = EventHandler.trigger(this._element, EVENT_HIDE$6);
     if (startEvent.defaultPrevented) {
       return;
     }
@@ -1483,7 +1518,7 @@ class Collapse extends BaseComponent {
     this._element.style[dimension] = `${this._element.getBoundingClientRect()[dimension]}px`;
     reflow(this._element);
     this._element.classList.add(CLASS_NAME_COLLAPSING);
-    this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$7);
+    this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$5);
     for (const trigger of this._triggerArray) {
       const element = SelectorEngine.getElementFromSelector(trigger);
       if (element && !this._isShown(element)) {
@@ -1503,7 +1538,7 @@ class Collapse extends BaseComponent {
 
   // Private
   _isShown(element = this._element) {
-    return element.classList.contains(CLASS_NAME_SHOW$7);
+    return element.classList.contains(CLASS_NAME_SHOW$5);
   }
   _configAfterMerge(config) {
     config.toggle = Boolean(config.toggle); // Coerce string values
@@ -3310,12 +3345,12 @@ const disposeBreakpointListeners = listeners => {
  * Constants
  */
 
-const NAME$h = 'menu';
-const DATA_KEY$d = 'bs.menu';
-const EVENT_KEY$d = `.${DATA_KEY$d}`;
+const NAME$f = 'menu';
+const DATA_KEY$c = 'bs.menu';
+const EVENT_KEY$c = `.${DATA_KEY$c}`;
 const DATA_API_KEY$8 = '.data-api';
-const ESCAPE_KEY$2 = 'Escape';
-const TAB_KEY$2 = 'Tab';
+const ESCAPE_KEY$1 = 'Escape';
+const TAB_KEY$1 = 'Tab';
 const ARROW_UP_KEY$2 = 'ArrowUp';
 const ARROW_DOWN_KEY$2 = 'ArrowDown';
 const ARROW_LEFT_KEY$1 = 'ArrowLeft';
@@ -3326,14 +3361,14 @@ const ENTER_KEY$1 = 'Enter';
 const SPACE_KEY$1 = ' ';
 const RIGHT_MOUSE_BUTTON = 2;
 const SUBMENU_CLOSE_DELAY = 100;
-const EVENT_HIDE$7 = `hide${EVENT_KEY$d}`;
-const EVENT_HIDDEN$7 = `hidden${EVENT_KEY$d}`;
-const EVENT_SHOW$7 = `show${EVENT_KEY$d}`;
-const EVENT_SHOWN$7 = `shown${EVENT_KEY$d}`;
-const EVENT_CLICK_DATA_API$5 = `click${EVENT_KEY$d}${DATA_API_KEY$8}`;
-const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY$d}${DATA_API_KEY$8}`;
-const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY$d}${DATA_API_KEY$8}`;
-const CLASS_NAME_SHOW$6 = 'show';
+const EVENT_HIDE$5 = `hide${EVENT_KEY$c}`;
+const EVENT_HIDDEN$7 = `hidden${EVENT_KEY$c}`;
+const EVENT_SHOW$6 = `show${EVENT_KEY$c}`;
+const EVENT_SHOWN$5 = `shown${EVENT_KEY$c}`;
+const EVENT_CLICK_DATA_API$5 = `click${EVENT_KEY$c}${DATA_API_KEY$8}`;
+const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY$c}${DATA_API_KEY$8}`;
+const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY$c}${DATA_API_KEY$8}`;
+const CLASS_NAME_SHOW$4 = 'show';
 const SELECTOR_DATA_TOGGLE$8 = '[data-bs-toggle="menu"]:not(.disabled):not(:disabled)';
 const SELECTOR_MENU$2 = '.menu';
 const SELECTOR_SUBMENU = '.submenu';
@@ -3349,7 +3384,7 @@ const resolveLogicalPlacement = placement => {
   return placement.replace(/^start(?=-|$)/, 'left').replace(/^end(?=-|$)/, 'right');
 };
 const triangleSign = (p1, p2, p3) => (p1.x - p3.x) * (p2.y - p3.y) - (p2.x - p3.x) * (p1.y - p3.y);
-const Default$g = {
+const Default$e = {
   autoClose: true,
   boundary: 'clippingParents',
   container: false,
@@ -3363,7 +3398,7 @@ const Default$g = {
   submenuTrigger: 'both',
   submenuDelay: SUBMENU_CLOSE_DELAY
 };
-const DefaultType$g = {
+const DefaultType$e = {
   autoClose: '(boolean|string)',
   boundary: '(string|element)',
   container: '(string|element|boolean)',
@@ -3405,13 +3440,13 @@ class Menu extends BaseComponent {
 
   // Getters
   static get Default() {
-    return Default$g;
+    return Default$e;
   }
   static get DefaultType() {
-    return DefaultType$g;
+    return DefaultType$e;
   }
   static get NAME() {
-    return NAME$h;
+    return NAME$f;
   }
 
   // Public
@@ -3425,7 +3460,7 @@ class Menu extends BaseComponent {
     const relatedTarget = {
       relatedTarget: this._element
     };
-    const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$7, relatedTarget);
+    const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$6, relatedTarget);
     if (showEvent.defaultPrevented) {
       return;
     }
@@ -3440,13 +3475,13 @@ class Menu extends BaseComponent {
       focusVisible: false
     });
     this._element.setAttribute('aria-expanded', 'true');
-    this._menu.classList.add(CLASS_NAME_SHOW$6);
-    this._element.classList.add(CLASS_NAME_SHOW$6);
+    this._menu.classList.add(CLASS_NAME_SHOW$4);
+    this._element.classList.add(CLASS_NAME_SHOW$4);
     if (this._parent) {
-      this._parent.classList.add(CLASS_NAME_SHOW$6);
+      this._parent.classList.add(CLASS_NAME_SHOW$4);
     }
     Menu._openInstances.add(this);
-    EventHandler.trigger(this._element, EVENT_SHOWN$7, relatedTarget);
+    EventHandler.trigger(this._element, EVENT_SHOWN$5, relatedTarget);
   }
   hide() {
     if (isDisabled(this._element) || !this._isShown()) {
@@ -3477,7 +3512,7 @@ class Menu extends BaseComponent {
     return SelectorEngine.next(this._element, SELECTOR_MENU$2)[0] || SelectorEngine.prev(this._element, SELECTOR_MENU$2)[0] || SelectorEngine.findOne(SELECTOR_MENU$2, this._parent);
   }
   _completeHide(relatedTarget) {
-    const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$7, relatedTarget);
+    const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$5, relatedTarget);
     if (hideEvent.defaultPrevented) {
       return;
     }
@@ -3489,10 +3524,10 @@ class Menu extends BaseComponent {
     }
     this._disposeFloating();
     this._restoreMenuToOriginalParent();
-    this._menu.classList.remove(CLASS_NAME_SHOW$6);
-    this._element.classList.remove(CLASS_NAME_SHOW$6);
+    this._menu.classList.remove(CLASS_NAME_SHOW$4);
+    this._element.classList.remove(CLASS_NAME_SHOW$4);
     if (this._parent) {
-      this._parent.classList.remove(CLASS_NAME_SHOW$6);
+      this._parent.classList.remove(CLASS_NAME_SHOW$4);
     }
     this._element.setAttribute('aria-expanded', 'false');
     Manipulator.removeDataAttribute(this._menu, 'placement');
@@ -3503,7 +3538,7 @@ class Menu extends BaseComponent {
   _getConfig(config) {
     config = super._getConfig(config);
     if (typeof config.reference === 'object' && !isElement$1(config.reference) && typeof config.reference.getBoundingClientRect !== 'function') {
-      throw new TypeError(`${NAME$h.toUpperCase()}: Option "reference" provided type "object" without a required "getBoundingClientRect" method.`);
+      throw new TypeError(`${NAME$f.toUpperCase()}: Option "reference" provided type "object" without a required "getBoundingClientRect" method.`);
     }
     return config;
   }
@@ -3544,7 +3579,7 @@ class Menu extends BaseComponent {
     await this._applyFloatingPosition(referenceElement, this._menu, floatingConfig.placement, floatingConfig.middleware, floatingConfig.strategy);
   }
   _isShown() {
-    return this._menu.classList.contains(CLASS_NAME_SHOW$6);
+    return this._menu.classList.contains(CLASS_NAME_SHOW$4);
   }
   _getPlacement() {
     const placement = this._responsivePlacements ? getResponsivePlacement(this._responsivePlacements, DEFAULT_PLACEMENT) : this._config.placement;
@@ -3761,8 +3796,8 @@ class Menu extends BaseComponent {
     }
     trigger.setAttribute('aria-expanded', 'true');
     trigger.setAttribute('aria-haspopup', 'true');
-    submenu.classList.add(CLASS_NAME_SHOW$6);
-    submenuWrapper.classList.add(CLASS_NAME_SHOW$6);
+    submenu.classList.add(CLASS_NAME_SHOW$4);
+    submenuWrapper.classList.add(CLASS_NAME_SHOW$4);
     const cleanup = this._createSubmenuFloating(trigger, submenu, submenuWrapper);
     this._openSubmenus.set(submenu, cleanup);
     EventHandler.on(submenu, 'mouseenter', () => {
@@ -3773,7 +3808,7 @@ class Menu extends BaseComponent {
     if (!this._openSubmenus.has(submenu)) {
       return;
     }
-    const nestedSubmenus = SelectorEngine.find(`${SELECTOR_SUBMENU} ${SELECTOR_MENU$2}.${CLASS_NAME_SHOW$6}`, submenu);
+    const nestedSubmenus = SelectorEngine.find(`${SELECTOR_SUBMENU} ${SELECTOR_MENU$2}.${CLASS_NAME_SHOW$4}`, submenu);
     for (const nested of nestedSubmenus) {
       const nestedWrapper = nested.closest(SELECTOR_SUBMENU);
       this._closeSubmenu(nested, nestedWrapper);
@@ -3788,8 +3823,8 @@ class Menu extends BaseComponent {
     if (trigger) {
       trigger.setAttribute('aria-expanded', 'false');
     }
-    submenu.classList.remove(CLASS_NAME_SHOW$6);
-    submenuWrapper.classList.remove(CLASS_NAME_SHOW$6);
+    submenu.classList.remove(CLASS_NAME_SHOW$4);
+    submenuWrapper.classList.remove(CLASS_NAME_SHOW$4);
     submenu.style.position = '';
     submenu.style.left = '';
     submenu.style.top = '';
@@ -3803,7 +3838,7 @@ class Menu extends BaseComponent {
   }
   _closeSiblingSubmenus(currentSubmenuWrapper) {
     const parent = currentSubmenuWrapper.parentNode;
-    const siblingSubmenus = SelectorEngine.find(`${SELECTOR_SUBMENU} > ${SELECTOR_MENU$2}.${CLASS_NAME_SHOW$6}`, parent);
+    const siblingSubmenus = SelectorEngine.find(`${SELECTOR_SUBMENU} > ${SELECTOR_MENU$2}.${CLASS_NAME_SHOW$4}`, parent);
     for (const siblingMenu of siblingSubmenus) {
       const siblingWrapper = siblingMenu.closest(SELECTOR_SUBMENU);
       if (siblingWrapper !== currentSubmenuWrapper) {
@@ -3978,7 +4013,7 @@ class Menu extends BaseComponent {
     return false;
   }
   static clearMenus(event) {
-    if (event.button === RIGHT_MOUSE_BUTTON || event.type === 'keyup' && event.key !== TAB_KEY$2) {
+    if (event.button === RIGHT_MOUSE_BUTTON || event.type === 'keyup' && event.key !== TAB_KEY$1) {
       return;
     }
     for (const instance of Menu._openInstances) {
@@ -3990,7 +4025,7 @@ class Menu extends BaseComponent {
       if (composedPath.includes(instance._element) || instance._config.autoClose === 'inside' && !isMenuTarget || instance._config.autoClose === 'outside' && isMenuTarget) {
         continue;
       }
-      if (instance._menu.contains(event.target) && (event.type === 'keyup' && event.key === TAB_KEY$2 || /input|select|option|textarea|form/i.test(event.target.tagName))) {
+      if (instance._menu.contains(event.target) && (event.type === 'keyup' && event.key === TAB_KEY$1 || /input|select|option|textarea|form/i.test(event.target.tagName))) {
         continue;
       }
       const relatedTarget = {
@@ -4004,7 +4039,7 @@ class Menu extends BaseComponent {
   }
   static dataApiKeydownHandler(event) {
     const isInput = /input|textarea/i.test(event.target.tagName);
-    const isEscapeEvent = event.key === ESCAPE_KEY$2;
+    const isEscapeEvent = event.key === ESCAPE_KEY$1;
     const isUpOrDownEvent = [ARROW_UP_KEY$2, ARROW_DOWN_KEY$2].includes(event.key);
     const isLeftOrRightEvent = [ARROW_LEFT_KEY$1, ARROW_RIGHT_KEY$1].includes(event.key);
     const isHomeOrEndEvent = [HOME_KEY$2, END_KEY$2].includes(event.key);
@@ -4075,25 +4110,25 @@ EventHandler.on(document, EVENT_CLICK_DATA_API$5, SELECTOR_DATA_TOGGLE$8, functi
  * Constants
  */
 
-const NAME$g = 'combobox';
-const DATA_KEY$c = 'bs.combobox';
-const EVENT_KEY$c = `.${DATA_KEY$c}`;
+const NAME$e = 'combobox';
+const DATA_KEY$b = 'bs.combobox';
+const EVENT_KEY$b = `.${DATA_KEY$b}`;
 const DATA_API_KEY$7 = '.data-api';
-const ESCAPE_KEY$1 = 'Escape';
-const TAB_KEY$1 = 'Tab';
+const ESCAPE_KEY = 'Escape';
+const TAB_KEY = 'Tab';
 const ARROW_UP_KEY$1 = 'ArrowUp';
 const ARROW_DOWN_KEY$1 = 'ArrowDown';
 const HOME_KEY$1 = 'Home';
 const END_KEY$1 = 'End';
 const ENTER_KEY = 'Enter';
 const SPACE_KEY = ' ';
-const EVENT_CHANGE$2 = `change${EVENT_KEY$c}`;
-const EVENT_SHOW$6 = `show${EVENT_KEY$c}`;
-const EVENT_SHOWN$6 = `shown${EVENT_KEY$c}`;
-const EVENT_HIDE$6 = `hide${EVENT_KEY$c}`;
-const EVENT_HIDDEN$6 = `hidden${EVENT_KEY$c}`;
-const EVENT_CLICK_DATA_API$4 = `click${EVENT_KEY$c}${DATA_API_KEY$7}`;
-const CLASS_NAME_SHOW$5 = 'show';
+const EVENT_CHANGE$2 = `change${EVENT_KEY$b}`;
+const EVENT_SHOW$5 = `show${EVENT_KEY$b}`;
+const EVENT_SHOWN$4 = `shown${EVENT_KEY$b}`;
+const EVENT_HIDE$4 = `hide${EVENT_KEY$b}`;
+const EVENT_HIDDEN$6 = `hidden${EVENT_KEY$b}`;
+const EVENT_CLICK_DATA_API$4 = `click${EVENT_KEY$b}${DATA_API_KEY$7}`;
+const CLASS_NAME_SHOW$3 = 'show';
 const CLASS_NAME_SELECTED = 'selected';
 const CLASS_NAME_PLACEHOLDER = 'combobox-placeholder';
 const SELECTOR_DATA_TOGGLE$7 = '[data-bs-toggle="combobox"]';
@@ -4103,7 +4138,7 @@ const SELECTOR_VISIBLE_ITEMS = '.menu-item[data-bs-value]:not(.disabled):not(:di
 const SELECTOR_VALUE = '.combobox-value';
 const SELECTOR_SEARCH_INPUT = '.combobox-search-input';
 const SELECTOR_NO_RESULTS = '.combobox-no-results';
-const Default$f = {
+const Default$d = {
   boundary: 'clippingParents',
   multiple: false,
   name: null,
@@ -4113,7 +4148,7 @@ const Default$f = {
   search: false,
   searchNormalize: false
 };
-const DefaultType$f = {
+const DefaultType$d = {
   boundary: '(string|element)',
   multiple: 'boolean',
   name: '(string|null)',
@@ -4146,13 +4181,13 @@ class Combobox extends BaseComponent {
 
   // Getters
   static get Default() {
-    return Default$f;
+    return Default$d;
   }
   static get DefaultType() {
-    return DefaultType$f;
+    return DefaultType$d;
   }
   static get NAME() {
-    return NAME$g;
+    return NAME$e;
   }
 
   // Public
@@ -4163,7 +4198,7 @@ class Combobox extends BaseComponent {
     if (isDisabled(this._toggle) || this._isShown()) {
       return;
     }
-    const showEvent = EventHandler.trigger(this._toggle, EVENT_SHOW$6);
+    const showEvent = EventHandler.trigger(this._toggle, EVENT_SHOW$5);
     if (showEvent.defaultPrevented) {
       return;
     }
@@ -4173,13 +4208,13 @@ class Combobox extends BaseComponent {
       this._filterItems('');
       requestAnimationFrame(() => this._searchInput.focus());
     }
-    EventHandler.trigger(this._toggle, EVENT_SHOWN$6);
+    EventHandler.trigger(this._toggle, EVENT_SHOWN$4);
   }
   hide() {
     if (!this._isShown()) {
       return;
     }
-    const hideEvent = EventHandler.trigger(this._toggle, EVENT_HIDE$6);
+    const hideEvent = EventHandler.trigger(this._toggle, EVENT_HIDE$4);
     if (hideEvent.defaultPrevented) {
       return;
     }
@@ -4195,14 +4230,14 @@ class Combobox extends BaseComponent {
       this._hiddenInput.remove();
       this._hiddenInput = null;
     }
-    EventHandler.off(this._menu, EVENT_KEY$c);
-    EventHandler.off(this._toggle, EVENT_KEY$c);
+    EventHandler.off(this._menu, EVENT_KEY$b);
+    EventHandler.off(this._toggle, EVENT_KEY$b);
     super.dispose();
   }
 
   // Private
   _isShown() {
-    return this._menu.classList.contains(CLASS_NAME_SHOW$5);
+    return this._menu.classList.contains(CLASS_NAME_SHOW$3);
   }
   _createHiddenInput() {
     const {
@@ -4263,7 +4298,7 @@ class Combobox extends BaseComponent {
             items[0].focus();
           }
         }
-        if (event.key === ESCAPE_KEY$1) {
+        if (event.key === ESCAPE_KEY) {
           this.hide();
           this._toggle.focus();
         }
@@ -4381,14 +4416,14 @@ class Combobox extends BaseComponent {
       key,
       target
     } = event;
-    if (key === ESCAPE_KEY$1) {
+    if (key === ESCAPE_KEY) {
       event.preventDefault();
       event.stopPropagation();
       this.hide();
       this._toggle.focus();
       return;
     }
-    if (key === TAB_KEY$1) {
+    if (key === TAB_KEY) {
       this.hide();
       return;
     }
@@ -4463,21 +4498,21 @@ var __defProp=Object.defineProperty,__defProps=Object.defineProperties,__getOwnP
  * Constants
  */
 
-const NAME$f = 'datepicker';
-const DATA_KEY$b = 'bs.datepicker';
-const EVENT_KEY$b = `.${DATA_KEY$b}`;
+const NAME$d = 'datepicker';
+const DATA_KEY$a = 'bs.datepicker';
+const EVENT_KEY$a = `.${DATA_KEY$a}`;
 const DATA_API_KEY$6 = '.data-api';
-const EVENT_CHANGE$1 = `change${EVENT_KEY$b}`;
-const EVENT_SHOW$5 = `show${EVENT_KEY$b}`;
-const EVENT_SHOWN$5 = `shown${EVENT_KEY$b}`;
-const EVENT_HIDE$5 = `hide${EVENT_KEY$b}`;
-const EVENT_HIDDEN$5 = `hidden${EVENT_KEY$b}`;
-const EVENT_CLICK_DATA_API$3 = `click${EVENT_KEY$b}${DATA_API_KEY$6}`;
-const EVENT_FOCUSIN_DATA_API = `focusin${EVENT_KEY$b}${DATA_API_KEY$6}`;
+const EVENT_CHANGE$1 = `change${EVENT_KEY$a}`;
+const EVENT_SHOW$4 = `show${EVENT_KEY$a}`;
+const EVENT_SHOWN$3 = `shown${EVENT_KEY$a}`;
+const EVENT_HIDE$3 = `hide${EVENT_KEY$a}`;
+const EVENT_HIDDEN$5 = `hidden${EVENT_KEY$a}`;
+const EVENT_CLICK_DATA_API$3 = `click${EVENT_KEY$a}${DATA_API_KEY$6}`;
+const EVENT_FOCUSIN_DATA_API = `focusin${EVENT_KEY$a}${DATA_API_KEY$6}`;
 const SELECTOR_DATA_TOGGLE$6 = '[data-bs-toggle="datepicker"]';
 const HIDE_DELAY = 100; // ms delay before hiding after selection
 
-const Default$e = {
+const Default$c = {
   datepickerTheme: null,
   // 'light', 'dark', 'auto' - explicit theme for datepicker popover only
   dateMin: null,
@@ -4502,7 +4537,7 @@ const Default$e = {
   // 'left', 'center', 'right', 'auto'
   vcpOptions: {} // Pass-through for any VCP option
 };
-const DefaultType$e = {
+const DefaultType$c = {
   datepickerTheme: '(null|string)',
   dateMin: '(null|string|number|object)',
   dateMax: '(null|string|number|object)',
@@ -4533,13 +4568,13 @@ class Datepicker extends BaseComponent {
 
   // Getters
   static get Default() {
-    return Default$e;
+    return Default$c;
   }
   static get DefaultType() {
-    return DefaultType$e;
+    return DefaultType$c;
   }
   static get NAME() {
-    return NAME$f;
+    return NAME$d;
   }
 
   // Public
@@ -4556,13 +4591,13 @@ class Datepicker extends BaseComponent {
     if (!this._calendar || isDisabled(this._element) || this._isShown) {
       return;
     }
-    const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$5);
+    const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$4);
     if (showEvent.defaultPrevented) {
       return;
     }
     this._calendar.show();
     this._isShown = true;
-    EventHandler.trigger(this._element, EVENT_SHOWN$5);
+    EventHandler.trigger(this._element, EVENT_SHOWN$3);
   }
   hide() {
     if (this._config.inline) {
@@ -4571,7 +4606,7 @@ class Datepicker extends BaseComponent {
     if (!this._calendar || !this._isShown) {
       return;
     }
-    const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$5);
+    const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$3);
     if (hideEvent.defaultPrevented) {
       return;
     }
@@ -4873,11 +4908,237 @@ EventHandler.on(document, EVENT_FOCUSIN_DATA_API, SELECTOR_DATA_TOGGLE$6, functi
 });
 
 // Auto-initialize inline datepickers on DOMContentLoaded
-EventHandler.on(document, `DOMContentLoaded${EVENT_KEY$b}${DATA_API_KEY$6}`, () => {
+EventHandler.on(document, `DOMContentLoaded${EVENT_KEY$a}${DATA_API_KEY$6}`, () => {
   for (const element of document.querySelectorAll(`${SELECTOR_DATA_TOGGLE$6}[data-bs-inline="true"]`)) {
     Datepicker.getOrCreateInstance(element);
   }
 });
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap dialog-base.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+
+/**
+ * Constants
+ */
+
+const CLASS_NAME_OPEN = 'dialog-open';
+
+/**
+ * Class definition
+ *
+ * Shared base class for Dialog and Drawer components that use
+ * the native <dialog> element. Provides common behavior for:
+ * - Show/hide/toggle lifecycle with events
+ * - Opening/closing via showModal()/show()/close()
+ * - Escape key handling (modal and non-modal)
+ * - Backdrop click handling
+ * - Static backdrop transition ("bounce")
+ * - Body scroll prevention
+ * - Transition coordination
+ * - Child component cleanup (tooltips, popovers, toasts)
+ */
+
+class DialogBase extends BaseComponent {
+  constructor(element, config) {
+    super(element, config);
+    this._isTransitioning = false;
+    this._openedAsModal = false;
+    this._addDialogListeners();
+  }
+
+  // Getters — subclasses override NAME with their own component name.
+  static get NAME() {
+    return 'dialogbase';
+  }
+
+  // Public — shared lifecycle methods
+
+  toggle(relatedTarget) {
+    return this._element.open ? this.hide() : this.show(relatedTarget);
+  }
+  show(relatedTarget) {
+    if (this._element.open || this._isTransitioning) {
+      return;
+    }
+    const showEvent = EventHandler.trigger(this._element, this.constructor.eventName('show'), {
+      relatedTarget
+    });
+    if (showEvent.defaultPrevented) {
+      return;
+    }
+    this._isTransitioning = true;
+    this._onBeforeShow();
+    const {
+      modal,
+      preventBodyScroll
+    } = this._getShowOptions();
+    this._showElement({
+      modal,
+      preventBodyScroll
+    });
+    this._queueCallback(() => {
+      this._isTransitioning = false;
+      EventHandler.trigger(this._element, this.constructor.eventName('shown'), {
+        relatedTarget
+      });
+    }, this._element, this._isAnimated());
+  }
+  hide() {
+    if (!this._element.open || this._isTransitioning) {
+      return;
+    }
+    const hideEvent = EventHandler.trigger(this._element, this.constructor.eventName('hide'));
+    if (hideEvent.defaultPrevented) {
+      return;
+    }
+    this._isTransitioning = true;
+    this._hideElement();
+    this._onAfterHide();
+    this._queueCallback(() => {
+      this._element.classList.remove('hiding');
+      this._isTransitioning = false;
+      EventHandler.trigger(this._element, this.constructor.eventName('hidden'));
+    }, this._element, this._isAnimated());
+  }
+
+  // Protected — hooks for subclasses to override
+
+  _getShowOptions() {
+    return {
+      modal: true,
+      preventBodyScroll: true
+    };
+  }
+  _onBeforeShow() {
+    // No-op by default — Dialog overrides to add nonmodal class
+  }
+  _onAfterHide() {
+    // No-op by default — Dialog overrides to remove nonmodal class
+  }
+  _isAnimated() {
+    return !this._element.classList.contains(this._getInstantClassName());
+  }
+  _getInstantClassName() {
+    return 'dialog-instant';
+  }
+  _getStaticClassName() {
+    return 'dialog-static';
+  }
+  _onCancel() {
+    // No-op by default — Dialog overrides to fire cancel event
+  }
+
+  // Protected — shared mechanics
+
+  _showElement({
+    modal = true,
+    preventBodyScroll = true
+  } = {}) {
+    this._openedAsModal = modal;
+    if (modal) {
+      this._element.showModal();
+    } else {
+      this._element.show();
+    }
+    if (preventBodyScroll) {
+      document.body.classList.add(CLASS_NAME_OPEN);
+    }
+  }
+  _hideElement() {
+    this._hideChildComponents();
+
+    // Add .hiding before close() so CSS exit transitions can play.
+    // Without this, the navbar's `:not([open])` transition-kill rule
+    // would prevent the slide-out animation.
+    this._element.classList.add('hiding');
+    this._element.close();
+    this._openedAsModal = false;
+
+    // Only restore body scroll if no other modal dialogs are open
+    if (!document.querySelector('dialog[open]:modal')) {
+      document.body.classList.remove(CLASS_NAME_OPEN);
+    }
+  }
+  _triggerBackdropTransition() {
+    const hidePreventedEvent = EventHandler.trigger(this._element, this.constructor.eventName('hidePrevented'));
+    if (hidePreventedEvent.defaultPrevented) {
+      return;
+    }
+    const staticClass = this._getStaticClassName();
+    this._element.classList.add(staticClass);
+    this._queueCallback(() => {
+      this._element.classList.remove(staticClass);
+    }, this._element);
+  }
+
+  // Hide any tooltips, popovers, or toasts inside the dialog before closing.
+  // These components append to the dialog (for top-layer rendering) and would
+  // otherwise persist visibly after close().
+  _hideChildComponents() {
+    const selector = '[data-bs-toggle="tooltip"], [data-bs-toggle="popover"]';
+    for (const el of SelectorEngine.find(selector, this._element)) {
+      const instance = Data.getAny(el);
+      if (instance && typeof instance.hide === 'function') {
+        instance.hide();
+      }
+    }
+
+    // Hide any visible toasts
+    for (const el of SelectorEngine.find('.toast.show', this._element)) {
+      const instance = Data.getAny(el);
+      if (instance && typeof instance.hide === 'function') {
+        instance.hide();
+      }
+    }
+  }
+
+  // Private
+
+  _addDialogListeners() {
+    const eventKey = this.constructor.EVENT_KEY;
+
+    // Handle native cancel event (Escape key) — only fires for modal dialogs
+    EventHandler.on(this._element, 'cancel', event => {
+      event.preventDefault();
+      if (!this._config.keyboard) {
+        this._triggerBackdropTransition();
+        return;
+      }
+      this._onCancel();
+      this.hide();
+    });
+
+    // Handle Escape key for non-modal dialogs (native cancel doesn't fire for show())
+    EventHandler.on(this._element, `keydown${eventKey}`, event => {
+      if (event.key !== 'Escape' || this._openedAsModal) {
+        return;
+      }
+      event.preventDefault();
+      if (!this._config.keyboard) {
+        return;
+      }
+      this._onCancel();
+      this.hide();
+    });
+
+    // Handle backdrop clicks — only applies to modal dialogs
+    EventHandler.on(this._element, `click${eventKey}`, event => {
+      if (event.target !== this._element || !this._openedAsModal) {
+        return;
+      }
+      if (this._config.backdrop === 'static') {
+        this._triggerBackdropTransition();
+        return;
+      }
+      this.hide();
+    });
+  }
+}
 
 /**
  * --------------------------------------------------------------------------
@@ -4891,29 +5152,22 @@ EventHandler.on(document, `DOMContentLoaded${EVENT_KEY$b}${DATA_API_KEY$6}`, () 
  * Constants
  */
 
-const NAME$e = 'dialog';
-const DATA_KEY$a = 'bs.dialog';
-const EVENT_KEY$a = `.${DATA_KEY$a}`;
+const NAME$c = 'dialog';
+const DATA_KEY$9 = 'bs.dialog';
+const EVENT_KEY$9 = `.${DATA_KEY$9}`;
 const DATA_API_KEY$5 = '.data-api';
-const EVENT_SHOW$4 = `show${EVENT_KEY$a}`;
-const EVENT_SHOWN$4 = `shown${EVENT_KEY$a}`;
-const EVENT_HIDE$4 = `hide${EVENT_KEY$a}`;
-const EVENT_HIDDEN$4 = `hidden${EVENT_KEY$a}`;
-const EVENT_HIDE_PREVENTED$1 = `hidePrevented${EVENT_KEY$a}`;
-const EVENT_CANCEL = `cancel${EVENT_KEY$a}`;
-const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$a}${DATA_API_KEY$5}`;
-const CLASS_NAME_STATIC = 'dialog-static';
-const CLASS_NAME_OPEN = 'dialog-open';
+const EVENT_SHOW$3 = `show${EVENT_KEY$9}`;
+const EVENT_HIDDEN$4 = `hidden${EVENT_KEY$9}`;
+const EVENT_CANCEL = `cancel${EVENT_KEY$9}`;
+const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$9}${DATA_API_KEY$5}`;
 const CLASS_NAME_NONMODAL = 'dialog-nonmodal';
 const SELECTOR_DATA_TOGGLE$5 = '[data-bs-toggle="dialog"]';
-const SELECTOR_OPEN_MODAL_DIALOG = 'dialog.dialog[open]:not(.dialog-nonmodal)';
-const Default$d = {
+const Default$b = {
   backdrop: true,
-  // true (click dismisses) or 'static' (click does nothing) - only applies to modal dialogs
   keyboard: true,
-  modal: true // true uses showModal(), false uses show() for non-modal dialogs
+  modal: true
 };
-const DefaultType$d = {
+const DefaultType$b = {
   backdrop: '(boolean|string)',
   keyboard: 'boolean',
   modal: 'boolean'
@@ -4923,143 +5177,41 @@ const DefaultType$d = {
  * Class definition
  */
 
-class Dialog extends BaseComponent {
-  constructor(element, config) {
-    super(element, config);
-    this._isTransitioning = false;
-    this._addEventListeners();
-  }
-
+class Dialog extends DialogBase {
   // Getters
   static get Default() {
-    return Default$d;
+    return Default$b;
   }
   static get DefaultType() {
-    return DefaultType$d;
+    return DefaultType$b;
   }
   static get NAME() {
-    return NAME$e;
+    return NAME$c;
   }
 
   // Public
-  toggle(relatedTarget) {
-    return this._element.open ? this.hide() : this.show(relatedTarget);
-  }
-  show(relatedTarget) {
-    if (this._element.open || this._isTransitioning) {
-      return;
-    }
-    const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$4, {
-      relatedTarget
-    });
-    if (showEvent.defaultPrevented) {
-      return;
-    }
-    this._isTransitioning = true;
-    if (this._config.modal) {
-      // Modal dialog: use showModal() for focus trapping, backdrop, and top layer
-      this._element.showModal();
-      // Prevent body scroll for modal dialogs
-      document.body.classList.add(CLASS_NAME_OPEN);
-    } else {
-      // Non-modal dialog: use show() - no backdrop, no focus trap, no top layer
-      this._element.classList.add(CLASS_NAME_NONMODAL);
-      this._element.show();
-    }
-    this._queueCallback(() => {
-      this._isTransitioning = false;
-      EventHandler.trigger(this._element, EVENT_SHOWN$4, {
-        relatedTarget
-      });
-    }, this._element, this._isAnimated());
-  }
-  hide() {
-    if (!this._element.open || this._isTransitioning) {
-      return;
-    }
-    const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$4);
-    if (hideEvent.defaultPrevented) {
-      return;
-    }
-    this._isTransitioning = true;
-    this._queueCallback(() => this._hideDialog(), this._element, this._isAnimated());
-  }
-  dispose() {
-    EventHandler.off(this._element, EVENT_KEY$a);
-    super.dispose();
-  }
   handleUpdate() {
     // Provided for API consistency with Modal.
-    // Native dialogs handle their own positioning.
   }
 
-  // Private
-  _hideDialog() {
-    this._element.close();
+  // Protected — hook overrides
+
+  _getShowOptions() {
+    return {
+      modal: this._config.modal,
+      preventBodyScroll: this._config.modal
+    };
+  }
+  _onBeforeShow() {
+    if (!this._config.modal) {
+      this._element.classList.add(CLASS_NAME_NONMODAL);
+    }
+  }
+  _onAfterHide() {
     this._element.classList.remove(CLASS_NAME_NONMODAL);
-    this._isTransitioning = false;
-
-    // Only restore body scroll if no other modal dialogs are open
-    if (!document.querySelector(SELECTOR_OPEN_MODAL_DIALOG)) {
-      document.body.classList.remove(CLASS_NAME_OPEN);
-    }
-    EventHandler.trigger(this._element, EVENT_HIDDEN$4);
   }
-  _isAnimated() {
-    return this._element.classList.contains('fade');
-  }
-  _triggerBackdropTransition() {
-    const hidePreventedEvent = EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED$1);
-    if (hidePreventedEvent.defaultPrevented) {
-      return;
-    }
-    this._element.classList.add(CLASS_NAME_STATIC);
-    this._queueCallback(() => {
-      this._element.classList.remove(CLASS_NAME_STATIC);
-    }, this._element);
-  }
-  _addEventListeners() {
-    // Handle native cancel event (Escape key) - only fires for modal dialogs
-    EventHandler.on(this._element, 'cancel', event => {
-      // Prevent native close behavior - we'll handle it
-      event.preventDefault();
-      if (!this._config.keyboard) {
-        this._triggerBackdropTransition();
-        return;
-      }
-      EventHandler.trigger(this._element, EVENT_CANCEL);
-      this.hide();
-    });
-
-    // Handle Escape key for non-modal dialogs (native cancel doesn't fire for show())
-    EventHandler.on(this._element, 'keydown', event => {
-      if (event.key !== 'Escape' || this._config.modal) {
-        return;
-      }
-      event.preventDefault();
-      if (!this._config.keyboard) {
-        return;
-      }
-      EventHandler.trigger(this._element, EVENT_CANCEL);
-      this.hide();
-    });
-
-    // Handle backdrop clicks (only applies to modal dialogs)
-    // Native <dialog> fires click on the dialog element when backdrop is clicked
-    EventHandler.on(this._element, 'click', event => {
-      // Only handle clicks directly on the dialog (backdrop area)
-      // Non-modal dialogs don't have a backdrop
-      if (event.target !== this._element || !this._config.modal) {
-        return;
-      }
-      if (this._config.backdrop === 'static') {
-        this._triggerBackdropTransition();
-        return;
-      }
-
-      // Default: click backdrop to dismiss
-      this.hide();
-    });
+  _onCancel() {
+    EventHandler.trigger(this._element, EVENT_CANCEL);
   }
 }
 
@@ -5072,7 +5224,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$5, functi
   if (['A', 'AREA'].includes(this.tagName)) {
     event.preventDefault();
   }
-  EventHandler.one(target, EVENT_SHOW$4, showEvent => {
+  EventHandler.one(target, EVENT_SHOW$3, showEvent => {
     if (showEvent.defaultPrevented) {
       return;
     }
@@ -5086,15 +5238,12 @@ EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$5, functi
   // Get config from trigger's data attributes
   const config = Manipulator.getDataAttributes(this);
 
-  // Check if trigger is inside an open dialog
+  // Check if trigger is inside an open dialog (dialog swapping)
   const currentDialog = this.closest('dialog[open]');
   const shouldSwap = currentDialog && currentDialog !== target;
   if (shouldSwap) {
-    // Open new dialog first (its backdrop appears over current)
     const newDialog = Dialog.getOrCreateInstance(target, config);
     newDialog.show(this);
-
-    // Close the current dialog (no backdrop flash since new one is already open)
     const currentInstance = Dialog.getInstance(currentDialog);
     if (currentInstance) {
       currentInstance.hide();
@@ -5118,11 +5267,11 @@ enableDismissTrigger(Dialog);
  * Constants
  */
 
-const NAME$d = 'navoverflow';
-const DATA_KEY$9 = 'bs.navoverflow';
-const EVENT_KEY$9 = `.${DATA_KEY$9}`;
-const EVENT_UPDATE = `update${EVENT_KEY$9}`;
-const EVENT_OVERFLOW = `overflow${EVENT_KEY$9}`;
+const NAME$b = 'navoverflow';
+const DATA_KEY$8 = 'bs.navoverflow';
+const EVENT_KEY$8 = `.${DATA_KEY$8}`;
+const EVENT_UPDATE = `update${EVENT_KEY$8}`;
+const EVENT_OVERFLOW = `overflow${EVENT_KEY$8}`;
 const CLASS_NAME_OVERFLOW = 'nav-overflow';
 const CLASS_NAME_OVERFLOW_MENU = 'nav-overflow-menu';
 const CLASS_NAME_HIDDEN = 'd-none';
@@ -5130,13 +5279,20 @@ const SELECTOR_NAV_ITEM = '.nav-item';
 const SELECTOR_NAV_LINK = '.nav-link';
 const SELECTOR_OVERFLOW_TOGGLE = '.nav-overflow-toggle';
 const SELECTOR_OVERFLOW_MENU = '.nav-overflow-menu';
+const SELECTOR_CUSTOM_ICON = '[data-bs-overflow-icon]';
 const CLASS_NAME_KEEP = 'nav-overflow-keep';
-const Default$c = {
+const Default$a = {
+  collapseBelow: 0,
+  iconPlacement: 'start',
+  menuPlacement: 'bottom-end',
   moreText: 'More',
   moreIcon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/></svg>',
   threshold: 0 // Minimum items to keep visible before showing overflow
 };
-const DefaultType$c = {
+const DefaultType$a = {
+  collapseBelow: '(number|string)',
+  iconPlacement: 'string',
+  menuPlacement: 'string',
   moreText: 'string',
   moreIcon: 'string',
   threshold: 'number'
@@ -5154,19 +5310,20 @@ class NavOverflow extends BaseComponent {
     this._overflowMenu = null;
     this._overflowToggle = null;
     this._resizeObserver = null;
+    this._collapseBelow = 0;
     this._isInitialized = false;
     this._init();
   }
 
   // Getters
   static get Default() {
-    return Default$c;
+    return Default$a;
   }
   static get DefaultType() {
-    return DefaultType$c;
+    return DefaultType$a;
   }
   static get NAME() {
-    return NAME$d;
+    return NAME$b;
   }
 
   // Public
@@ -5202,6 +5359,9 @@ class NavOverflow extends BaseComponent {
       item.dataset.bsNavOrder = index;
     }
 
+    // Resolve collapseBelow threshold once
+    this._collapseBelow = this._resolveCollapseBelow();
+
     // Create overflow menu if it doesn't exist
     this._createOverflowMenu();
 
@@ -5219,18 +5379,43 @@ class NavOverflow extends BaseComponent {
       this._overflowMenu = SelectorEngine.findOne(SELECTOR_OVERFLOW_MENU, this._element);
       return;
     }
+    const iconHtml = this._resolveIcon();
+    const iconSpan = `<span class="nav-overflow-icon">${iconHtml}</span>`;
+    const textSpan = `<span class="nav-overflow-text">${this._config.moreText}</span>`;
+    const toggleContent = this._config.iconPlacement === 'end' ? `${textSpan}${iconSpan}` : `${iconSpan}${textSpan}`;
     const overflowItem = document.createElement('li');
     overflowItem.className = 'nav-item nav-overflow-item';
     overflowItem.innerHTML = `
-      <button class="nav-link nav-overflow-toggle" type="button" data-bs-toggle="menu" data-bs-placement="bottom-end" aria-expanded="false">
-        <span class="nav-overflow-icon">${this._config.moreIcon}</span>
-        <span class="nav-overflow-text">${this._config.moreText}</span>
+      <button class="nav-link nav-overflow-toggle" type="button" data-bs-toggle="menu" data-bs-placement="${this._config.menuPlacement}" aria-expanded="false">
+        ${toggleContent}
       </button>
       <div class="${CLASS_NAME_OVERFLOW_MENU} menu"></div>
     `;
     this._element.append(overflowItem);
     this._overflowToggle = overflowItem.querySelector(SELECTOR_OVERFLOW_TOGGLE);
     this._overflowMenu = overflowItem.querySelector(SELECTOR_OVERFLOW_MENU);
+  }
+  _resolveIcon() {
+    const customIconElement = SelectorEngine.findOne(SELECTOR_CUSTOM_ICON, this._element);
+    if (!customIconElement) {
+      return this._config.moreIcon;
+    }
+    const iconClone = customIconElement.cloneNode(true);
+    iconClone.removeAttribute('data-bs-overflow-icon');
+    const iconHtml = iconClone.outerHTML;
+    customIconElement.remove();
+    return iconHtml;
+  }
+  _resolveCollapseBelow() {
+    const value = this._config.collapseBelow;
+    if (typeof value === 'number') {
+      return value;
+    }
+    if (typeof value === 'string' && value !== '') {
+      const cssValue = getComputedStyle(document.documentElement).getPropertyValue(`--bs-breakpoint-${value}`);
+      return Number.parseFloat(cssValue) || 0;
+    }
+    return 0;
   }
   _setupResizeObserver() {
     if (typeof ResizeObserver === 'undefined') {
@@ -5248,6 +5433,26 @@ class NavOverflow extends BaseComponent {
     this._restoreItems();
     const navWidth = this._element.offsetWidth;
     const overflowItem = this._overflowToggle?.closest('.nav-item');
+
+    // When below the collapseBelow threshold, force all items into overflow
+    if (this._collapseBelow > 0 && navWidth < this._collapseBelow) {
+      const itemsToOverflow = this._items.filter(item => !item.classList.contains(CLASS_NAME_KEEP));
+      this._moveToOverflow(itemsToOverflow);
+      if (overflowItem) {
+        if (itemsToOverflow.length > 0) {
+          overflowItem.classList.remove(CLASS_NAME_HIDDEN);
+        } else {
+          overflowItem.classList.add(CLASS_NAME_HIDDEN);
+        }
+      }
+      if (itemsToOverflow.length > 0) {
+        EventHandler.trigger(this._element, EVENT_OVERFLOW, {
+          overflowCount: itemsToOverflow.length,
+          visibleCount: this._items.length - itemsToOverflow.length
+        });
+      }
+      return;
+    }
     const overflowWidth = overflowItem?.offsetWidth || 0;
     let usedWidth = 0;
     const itemsToOverflow = [];
@@ -5349,7 +5554,7 @@ EventHandler.on(document, 'DOMContentLoaded', () => {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap util/backdrop.js
+ * Bootstrap drawer.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -5359,346 +5564,15 @@ EventHandler.on(document, 'DOMContentLoaded', () => {
  * Constants
  */
 
-const NAME$c = 'backdrop';
-const CLASS_NAME_FADE$3 = 'fade';
-const CLASS_NAME_SHOW$4 = 'show';
-const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$c}`;
-const Default$b = {
-  className: 'modal-backdrop',
-  clickCallback: null,
-  isAnimated: false,
-  isVisible: true,
-  // if false, we use the backdrop helper without adding any element to the dom
-  rootElement: 'body' // give the choice to place backdrop under different elements
-};
-const DefaultType$b = {
-  className: 'string',
-  clickCallback: '(function|null)',
-  isAnimated: 'boolean',
-  isVisible: 'boolean',
-  rootElement: '(element|string)'
-};
-
-/**
- * Class definition
- */
-
-class Backdrop extends Config {
-  constructor(config) {
-    super();
-    this._config = this._getConfig(config);
-    this._isAppended = false;
-    this._element = null;
-  }
-
-  // Getters
-  static get Default() {
-    return Default$b;
-  }
-  static get DefaultType() {
-    return DefaultType$b;
-  }
-  static get NAME() {
-    return NAME$c;
-  }
-
-  // Public
-  show(callback) {
-    if (!this._config.isVisible) {
-      execute(callback);
-      return;
-    }
-    this._append();
-    const element = this._getElement();
-    if (this._config.isAnimated) {
-      reflow(element);
-    }
-    element.classList.add(CLASS_NAME_SHOW$4);
-    this._emulateAnimation(() => {
-      execute(callback);
-    });
-  }
-  hide(callback) {
-    if (!this._config.isVisible) {
-      execute(callback);
-      return;
-    }
-    this._getElement().classList.remove(CLASS_NAME_SHOW$4);
-    this._emulateAnimation(() => {
-      this.dispose();
-      execute(callback);
-    });
-  }
-  dispose() {
-    if (!this._isAppended) {
-      return;
-    }
-    EventHandler.off(this._element, EVENT_MOUSEDOWN);
-    this._element.remove();
-    this._isAppended = false;
-  }
-
-  // Private
-  _getElement() {
-    if (!this._element) {
-      const backdrop = document.createElement('div');
-      backdrop.className = this._config.className;
-      if (this._config.isAnimated) {
-        backdrop.classList.add(CLASS_NAME_FADE$3);
-      }
-      this._element = backdrop;
-    }
-    return this._element;
-  }
-  _configAfterMerge(config) {
-    // use getElement() with the default "body" to get a fresh Element on each instantiation
-    config.rootElement = getElement(config.rootElement);
-    return config;
-  }
-  _append() {
-    if (this._isAppended) {
-      return;
-    }
-    const element = this._getElement();
-    this._config.rootElement.append(element);
-    EventHandler.on(element, EVENT_MOUSEDOWN, () => {
-      execute(this._config.clickCallback);
-    });
-    this._isAppended = true;
-  }
-  _emulateAnimation(callback) {
-    executeAfterTransition(callback, this._getElement(), this._config.isAnimated);
-  }
-}
-
-/**
- * --------------------------------------------------------------------------
- * Bootstrap util/focustrap.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
-
-/**
- * Constants
- */
-
-const NAME$b = 'focustrap';
-const DATA_KEY$8 = 'bs.focustrap';
-const EVENT_KEY$8 = `.${DATA_KEY$8}`;
-const EVENT_FOCUSIN$3 = `focusin${EVENT_KEY$8}`;
-const EVENT_KEYDOWN_TAB = `keydown.tab${EVENT_KEY$8}`;
-const TAB_KEY = 'Tab';
-const TAB_NAV_FORWARD = 'forward';
-const TAB_NAV_BACKWARD = 'backward';
-const Default$a = {
-  autofocus: true,
-  trapElement: null // The element to trap focus inside of
-};
-const DefaultType$a = {
-  autofocus: 'boolean',
-  trapElement: 'element'
-};
-
-/**
- * Class definition
- */
-
-class FocusTrap extends Config {
-  constructor(config) {
-    super();
-    this._config = this._getConfig(config);
-    this._isActive = false;
-    this._lastTabNavDirection = null;
-  }
-
-  // Getters
-  static get Default() {
-    return Default$a;
-  }
-  static get DefaultType() {
-    return DefaultType$a;
-  }
-  static get NAME() {
-    return NAME$b;
-  }
-
-  // Public
-  activate() {
-    if (this._isActive) {
-      return;
-    }
-    if (this._config.autofocus) {
-      this._config.trapElement.focus();
-    }
-    EventHandler.off(document, EVENT_KEY$8); // guard against infinite focus loop
-    EventHandler.on(document, EVENT_FOCUSIN$3, event => this._handleFocusin(event));
-    EventHandler.on(document, EVENT_KEYDOWN_TAB, event => this._handleKeydown(event));
-    this._isActive = true;
-  }
-  deactivate() {
-    if (!this._isActive) {
-      return;
-    }
-    this._isActive = false;
-    EventHandler.off(document, EVENT_KEY$8);
-  }
-
-  // Private
-  _handleFocusin(event) {
-    const {
-      trapElement
-    } = this._config;
-    if (event.target === document || event.target === trapElement || trapElement.contains(event.target)) {
-      return;
-    }
-    const elements = SelectorEngine.focusableChildren(trapElement);
-    if (elements.length === 0) {
-      trapElement.focus();
-    } else if (this._lastTabNavDirection === TAB_NAV_BACKWARD) {
-      elements[elements.length - 1].focus();
-    } else {
-      elements[0].focus();
-    }
-  }
-  _handleKeydown(event) {
-    if (event.key !== TAB_KEY) {
-      return;
-    }
-    this._lastTabNavDirection = event.shiftKey ? TAB_NAV_BACKWARD : TAB_NAV_FORWARD;
-  }
-}
-
-/**
- * --------------------------------------------------------------------------
- * Bootstrap util/scrollBar.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
-
-/**
- * Constants
- */
-
-const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
-const SELECTOR_STICKY_CONTENT = '.sticky-top';
-const PROPERTY_PADDING = 'padding-right';
-const PROPERTY_MARGIN = 'margin-right';
-
-/**
- * Class definition
- */
-
-class ScrollBarHelper {
-  constructor() {
-    this._element = document.body;
-  }
-
-  // Public
-  getWidth() {
-    // https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth#usage_notes
-    const documentWidth = document.documentElement.clientWidth;
-    return Math.abs(window.innerWidth - documentWidth);
-  }
-  hide() {
-    const width = this.getWidth();
-    this._disableOverFlow();
-    // give padding to element to balance the hidden scrollbar width
-    this._setElementAttributes(this._element, PROPERTY_PADDING, calculatedValue => calculatedValue + width);
-    // trick: We adjust positive paddingRight and negative marginRight to sticky-top elements to keep showing fullwidth
-    this._setElementAttributes(SELECTOR_FIXED_CONTENT, PROPERTY_PADDING, calculatedValue => calculatedValue + width);
-    this._setElementAttributes(SELECTOR_STICKY_CONTENT, PROPERTY_MARGIN, calculatedValue => calculatedValue - width);
-  }
-  reset() {
-    this._resetElementAttributes(this._element, 'overflow');
-    this._resetElementAttributes(this._element, PROPERTY_PADDING);
-    this._resetElementAttributes(SELECTOR_FIXED_CONTENT, PROPERTY_PADDING);
-    this._resetElementAttributes(SELECTOR_STICKY_CONTENT, PROPERTY_MARGIN);
-  }
-  isOverflowing() {
-    return this.getWidth() > 0;
-  }
-
-  // Private
-  _disableOverFlow() {
-    this._saveInitialAttribute(this._element, 'overflow');
-    this._element.style.overflow = 'hidden';
-  }
-  _setElementAttributes(selector, styleProperty, callback) {
-    const scrollbarWidth = this.getWidth();
-    const manipulationCallBack = element => {
-      if (element !== this._element && window.innerWidth > element.clientWidth + scrollbarWidth) {
-        return;
-      }
-      this._saveInitialAttribute(element, styleProperty);
-      const calculatedValue = window.getComputedStyle(element).getPropertyValue(styleProperty);
-      element.style.setProperty(styleProperty, `${callback(Number.parseFloat(calculatedValue))}px`);
-    };
-    this._applyManipulationCallback(selector, manipulationCallBack);
-  }
-  _saveInitialAttribute(element, styleProperty) {
-    const actualValue = element.style.getPropertyValue(styleProperty);
-    if (actualValue) {
-      Manipulator.setDataAttribute(element, styleProperty, actualValue);
-    }
-  }
-  _resetElementAttributes(selector, styleProperty) {
-    const manipulationCallBack = element => {
-      const value = Manipulator.getDataAttribute(element, styleProperty);
-      // We only want to remove the property if the value is `null`; the value can also be zero
-      if (value === null) {
-        element.style.removeProperty(styleProperty);
-        return;
-      }
-      Manipulator.removeDataAttribute(element, styleProperty);
-      element.style.setProperty(styleProperty, value);
-    };
-    this._applyManipulationCallback(selector, manipulationCallBack);
-  }
-  _applyManipulationCallback(selector, callBack) {
-    if (isElement$1(selector)) {
-      callBack(selector);
-      return;
-    }
-    for (const sel of SelectorEngine.find(selector, this._element)) {
-      callBack(sel);
-    }
-  }
-}
-
-/**
- * --------------------------------------------------------------------------
- * Bootstrap offcanvas.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * --------------------------------------------------------------------------
- */
-
-
-/**
- * Constants
- */
-
-const NAME$a = 'offcanvas';
-const DATA_KEY$7 = 'bs.offcanvas';
+const NAME$a = 'drawer';
+const DATA_KEY$7 = 'bs.drawer';
 const EVENT_KEY$7 = `.${DATA_KEY$7}`;
 const DATA_API_KEY$4 = '.data-api';
 const EVENT_LOAD_DATA_API$2 = `load${EVENT_KEY$7}${DATA_API_KEY$4}`;
-const ESCAPE_KEY = 'Escape';
-const CLASS_NAME_SHOW$3 = 'show';
-const CLASS_NAME_SHOWING$1 = 'showing';
-const CLASS_NAME_HIDING = 'hiding';
-const CLASS_NAME_BACKDROP = 'offcanvas-backdrop';
-const OPEN_SELECTOR = '.offcanvas.show';
-const EVENT_SHOW$3 = `show${EVENT_KEY$7}`;
-const EVENT_SHOWN$3 = `shown${EVENT_KEY$7}`;
-const EVENT_HIDE$3 = `hide${EVENT_KEY$7}`;
-const EVENT_HIDE_PREVENTED = `hidePrevented${EVENT_KEY$7}`;
 const EVENT_HIDDEN$3 = `hidden${EVENT_KEY$7}`;
 const EVENT_RESIZE = `resize${EVENT_KEY$7}`;
 const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$7}${DATA_API_KEY$4}`;
-const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$7}`;
-const SELECTOR_DATA_TOGGLE$4 = '[data-bs-toggle="offcanvas"]';
+const SELECTOR_DATA_TOGGLE$4 = '[data-bs-toggle="drawer"]';
 const Default$9 = {
   backdrop: true,
   keyboard: true,
@@ -5714,13 +5588,10 @@ const DefaultType$9 = {
  * Class definition
  */
 
-class Offcanvas extends BaseComponent {
+class Drawer extends DialogBase {
   constructor(element, config) {
     super(element, config);
-    this._isShown = false;
-    this._backdrop = this._initializeBackDrop();
-    this._focustrap = this._initializeFocusTrap();
-    this._addEventListeners();
+    this._swipeHelper = null;
   }
 
   // Getters
@@ -5735,105 +5606,61 @@ class Offcanvas extends BaseComponent {
   }
 
   // Public
-  toggle(relatedTarget) {
-    return this._isShown ? this.hide() : this.show(relatedTarget);
-  }
-  show(relatedTarget) {
-    if (this._isShown) {
-      return;
-    }
-    const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$3, {
-      relatedTarget
-    });
-    if (showEvent.defaultPrevented) {
-      return;
-    }
-    this._isShown = true;
-    this._backdrop.show();
-    if (!this._config.scroll) {
-      new ScrollBarHelper().hide();
-    }
-    this._element.setAttribute('aria-modal', true);
-    this._element.setAttribute('role', 'dialog');
-    this._element.classList.add(CLASS_NAME_SHOWING$1);
-    const completeCallBack = () => {
-      if (!this._config.scroll || this._config.backdrop) {
-        this._focustrap.activate();
-      }
-      this._element.classList.add(CLASS_NAME_SHOW$3);
-      this._element.classList.remove(CLASS_NAME_SHOWING$1);
-      EventHandler.trigger(this._element, EVENT_SHOWN$3, {
-        relatedTarget
-      });
-    };
-    this._queueCallback(completeCallBack, this._element, true);
-  }
-  hide() {
-    if (!this._isShown) {
-      return;
-    }
-    const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$3);
-    if (hideEvent.defaultPrevented) {
-      return;
-    }
-    this._focustrap.deactivate();
-    this._element.blur();
-    this._isShown = false;
-    this._element.classList.add(CLASS_NAME_HIDING);
-    this._backdrop.hide();
-    const completeCallback = () => {
-      this._element.classList.remove(CLASS_NAME_SHOW$3, CLASS_NAME_HIDING);
-      this._element.removeAttribute('aria-modal');
-      this._element.removeAttribute('role');
-      if (!this._config.scroll) {
-        new ScrollBarHelper().reset();
-      }
-      EventHandler.trigger(this._element, EVENT_HIDDEN$3);
-    };
-    this._queueCallback(completeCallback, this._element, true);
-  }
   dispose() {
-    this._backdrop.dispose();
-    this._focustrap.deactivate();
+    if (this._swipeHelper) {
+      this._swipeHelper.dispose();
+    }
     super.dispose();
   }
 
-  // Private
-  _initializeBackDrop() {
-    const clickCallback = () => {
-      if (this._config.backdrop === 'static') {
-        EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
-        return;
-      }
-      this.hide();
-    };
+  // Protected — hook overrides
 
-    // 'static' option will be translated to true, and booleans will keep their value
-    const isVisible = Boolean(this._config.backdrop);
-    return new Backdrop({
-      className: CLASS_NAME_BACKDROP,
-      isVisible,
-      isAnimated: true,
-      rootElement: this._element.parentNode,
-      clickCallback: isVisible ? clickCallback : null
-    });
+  _getShowOptions() {
+    const useModal = Boolean(this._config.backdrop) || !this._config.scroll;
+    return {
+      modal: useModal,
+      preventBodyScroll: !this._config.scroll
+    };
   }
-  _initializeFocusTrap() {
-    return new FocusTrap({
-      trapElement: this._element
-    });
+  _onBeforeShow() {
+    this._initSwipe();
   }
-  _addEventListeners() {
-    EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
-      if (event.key !== ESCAPE_KEY) {
-        return;
+  _getInstantClassName() {
+    return 'drawer-instant';
+  }
+  _getStaticClassName() {
+    return 'drawer-static';
+  }
+
+  // Private
+
+  _initSwipe() {
+    if (this._swipeHelper || !Swipe.isSupported()) {
+      return;
+    }
+
+    // Determine which swipe direction dismisses based on placement
+    const swipeConfig = {};
+    const element = this._element;
+    if (element.classList.contains('drawer-bottom')) {
+      swipeConfig.downCallback = () => this.hide();
+    } else if (element.classList.contains('drawer-top')) {
+      swipeConfig.upCallback = () => this.hide();
+    } else if (element.classList.contains('drawer-end')) {
+      // RTL: swipe left to dismiss end drawer
+      if (isRTL$1()) {
+        swipeConfig.leftCallback = () => this.hide();
+      } else {
+        swipeConfig.rightCallback = () => this.hide();
       }
-      if (this._config.keyboard) {
-        this.hide();
-        return;
-      }
-      EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
-    });
+    } else if (isRTL$1()) {
+      // drawer-start (default): swipe right to dismiss in RTL
+      swipeConfig.rightCallback = () => this.hide();
+    } else {
+      // drawer-start (default): swipe left to dismiss in LTR
+      swipeConfig.leftCallback = () => this.hide();
+    }
+    this._swipeHelper = new Swipe(element, swipeConfig);
   }
 }
 
@@ -5850,33 +5677,32 @@ EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE$4, functi
     return;
   }
   EventHandler.one(target, EVENT_HIDDEN$3, () => {
-    // focus on trigger when it is closed
     if (isVisible(this)) {
       this.focus();
     }
   });
 
-  // avoid conflict when clicking a toggler of an offcanvas, while another is open
-  const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR);
+  // Avoid conflict when clicking a toggler of a drawer, while another is open
+  const alreadyOpen = SelectorEngine.findOne('dialog.drawer[open]');
   if (alreadyOpen && alreadyOpen !== target) {
-    Offcanvas.getInstance(alreadyOpen).hide();
+    Drawer.getInstance(alreadyOpen).hide();
   }
-  const data = Offcanvas.getOrCreateInstance(target);
+  const data = Drawer.getOrCreateInstance(target);
   data.toggle(this);
 });
 EventHandler.on(window, EVENT_LOAD_DATA_API$2, () => {
-  for (const selector of SelectorEngine.find(OPEN_SELECTOR)) {
-    Offcanvas.getOrCreateInstance(selector).show();
+  for (const selector of SelectorEngine.find('dialog.drawer[open]')) {
+    Drawer.getOrCreateInstance(selector).show();
   }
 });
 EventHandler.on(window, EVENT_RESIZE, () => {
-  for (const element of SelectorEngine.find('[aria-modal][class*=show][class*=offcanvas-]')) {
+  for (const element of SelectorEngine.find('dialog[open][class*="\\:drawer"]')) {
     if (getComputedStyle(element).position !== 'fixed') {
-      Offcanvas.getOrCreateInstance(element).hide();
+      Drawer.getOrCreateInstance(element).hide();
     }
   }
 });
-enableDismissTrigger(Offcanvas);
+enableDismissTrigger(Drawer);
 
 /**
  * --------------------------------------------------------------------------
@@ -7305,9 +7131,13 @@ class Tooltip extends BaseComponent {
     this._disposeFloating();
     const tip = this._getTipElement();
     this._element.setAttribute('aria-describedby', tip.getAttribute('id'));
-    const {
+    let {
       container
     } = this._config;
+    const closestDialog = this._element.closest('dialog[open]');
+    if (closestDialog && container === document.body) {
+      container = closestDialog;
+    }
     if (!this._element.ownerDocument.documentElement.contains(this.tip)) {
       container.append(tip);
       EventHandler.trigger(this._element, this.constructor.eventName(EVENT_INSERTED));
@@ -8573,5 +8403,5 @@ class Toggler extends BaseComponent {
 
 eventActionOnPlugin(Toggler, EVENT_CLICK, SELECTOR_DATA_TOGGLE, 'toggle');
 
-export { Alert, Button, Carousel, ChipInput, Collapse, Combobox, Datepicker, Dialog, Menu, NavOverflow, Offcanvas, OtpInput, Popover, ScrollSpy, Strength, Tab, Toast, Toggler, Tooltip };
+export { Alert, Button, Carousel, ChipInput, Collapse, Combobox, Datepicker, Dialog, Drawer, Menu, NavOverflow, OtpInput, Popover, ScrollSpy, Strength, Tab, Toast, Toggler, Tooltip };
 //# sourceMappingURL=bootstrap.bundle.js.map
