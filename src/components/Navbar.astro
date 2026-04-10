@@ -5,27 +5,26 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
 <a href="#main-content" class="visually-hidden-focusable btn-solid theme-primary position-fixed m-2 hero-filter skip-content" title="Skip to main content">Skip to main content</a>
 
 <header class="main-navbar fixed-top">
-
   <nav class="navbar lg:navbar-expand fg-2">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <img src="/media/images/longblack.webp" height="45px" alt="AT Products LLC" class="headerimg">
       </a>
-      <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarLeftDrawer" aria-controls="navbarLeftDrawer" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarLeftDrawer" aria-controls="navbarLeftDrawer" aria-expanded="false" aria-label="Toggle navigation">
         <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M1 3.5h14M1 8h14M1 12.5h14"/></svg>
       </button>
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarLeftDrawer" aria-labelledby="navbarLeftDrawerLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="navbarLeftDrawerLabel">
+      <dialog class="drawer drawer-start" tabindex="-1" id="navbarLeftDrawer" aria-labelledby="navbarLeftDrawerLabel">
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navbarLeftDrawerLabel">
             <img src="/media/images/longblack.webp" height="45px" alt="AT Products LLC" class="headerimg">
           </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none">
         <path fill="currentcolor" d="M12 0a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4zm-.646 4.646a.5.5 0 0 0-.707 0L8 7.293 5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.647a.5.5 0 1 0 .708.707L8 8.707l2.647 2.646a.5.5 0 1 0 .707-.707L8.707 8l2.646-2.646a.5.5 0 0 0 0-.708z"/>
       </svg>
       </button>
         </div>
-        <div class="offcanvas-body">
+        <div class="drawer-body">
           <ul class="navbar-nav me-auto mb-2 md:mb-0">
             <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
             <li class="nav-item dropdown">
@@ -152,7 +151,7 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
             </div>
           </div>
         </div>
-      </div>
+      </dialog>
     </div>
   </nav>
 
