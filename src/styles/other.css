@@ -1823,6 +1823,18 @@ a:hover.footer-info {
   color: #FAF9F6;
 }
 
+.breadcrumb-link {
+  padding: var(--nav-link-padding-y) 0.25rem;
+}
+
+@media (max-width:767.98px) {
+  .breadcrumb-link {
+    padding: var(--nav-link-padding-y) var(--nav-link-padding-x) !important;
+  }
+}
+
+.breadcrumb-divider {
+  display: flex;
   align-items: center;
   padding: var(--nav-link-padding-y) !important;
 }
@@ -1837,6 +1849,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 
 @media (min-width: 991.98px) {
   body.fixedtopnavimage-breadcrumb, body.fixedtopnavimage-breadcrumb {
+    padding-top: 116px;
   }
   
   html.fixedtopnavimage-breadcrumb, html.fixedtopnavimage-breadcrumb {

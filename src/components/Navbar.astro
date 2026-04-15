@@ -104,27 +104,26 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
           </ul>
 
           {breadcrumb && (
-            <ol class="navbar-nav breadcrumb m-0 flex-row d-block lg:d-none mt-4">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
-              <li class="breadcrumb-divider">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </li>
-              {link && link.map(({ name, href, dropdown }, index) => (
-                <li class={`breadcrumb-item ${dropdown && breadcrumbcontent ? 'dropdown' : ''}`} key={index}>
-                  <a href={href} class={dropdown && breadcrumbcontent ? 'dropdown-toggle' : ''} data-bs-toggle={dropdown && breadcrumbcontent ? 'dropdown' : undefined} aria-expanded="false">{name}</a>
-                  {dropdown && breadcrumbcontent && (
-                    <ul class="menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                      {breadcrumbcontent.map(({ name, href }, index) => (
-                        <li key={index}><a class="menu-item text-wrap-auto" href={href}>{name}</a></li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-                <li class="breadcrumb-divider">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </li>
+            <ol class="navbar-nav breadcrumb m-0 flex-column d-flex lg:d-none align-items-start mt-4">
+              <div class="d-flex">
+                <div class="breadcrumb-item"><a href="/" class="breadcrumb-link">Home</a></div>
+              </div>
+              {link && link.map(({ name, href }) => (
+                <div class="d-flex">
+                  <div class="breadcrumb-divider">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <div class="breadcrumb-item">
+                    <a href={href} class="breadcrumb-link">{name}</a>
+                  </div>
+                </div>
               ))}
-              <li class="breadcrumb-item active" aria-current="page">{pageTitle}</li>
+              <div class="d-flex">
+                <div class="breadcrumb-divider">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="breadcrumb-item active" aria-current="page"><a href="#" class="breadcrumb-link">{pageTitle}</a></div>
+              </div>
             </ol>
           )}
 
@@ -157,26 +156,19 @@ const { breadcrumb, breadcrumbcontent, link, pageTitle } = Astro.props;
     <nav class="navbar pt-0 d-none lg:d-block">
       <div class="container-fluid">
         <ol class="navbar-nav breadcrumb m-0 flex-row">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/" class="breadcrumb-link">Home</a></li>
           <li class="breadcrumb-divider">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </li>
-          {link && link.map(({ name, href, dropdown }, index) => (
-            <li class={`breadcrumb-item ${dropdown && breadcrumbcontent ? 'dropdown' : ''}`} key={index}>
-              <a href={href} class={dropdown && breadcrumbcontent ? 'dropdown-toggle' : ''} data-bs-toggle={dropdown && breadcrumbcontent ? 'dropdown' : undefined} aria-expanded="false">{name}</a>
-              {dropdown && breadcrumbcontent && (
-                <ul class="menu dropdown-story" data-bs-popper="static" aria-label="Dropdown">
-                  {breadcrumbcontent.map(({ name, href }, index) => (
-                    <li key={index}><a class="menu-item text-wrap-auto" href={href}>{name}</a></li>
-                  ))}
-                </ul>
-              )}
+          {link && link.map(({ name, href }) => (
+            <li class="breadcrumb-item">
+              <a href={href} class="breadcrumb-link">{name}</a>
             </li>
             <li class="breadcrumb-divider">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" width="6" height="12"><path d="M2 2l4 6-4 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </li>
           ))}
-          <li class="breadcrumb-item active" aria-current="page">{pageTitle}</li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="#" class="breadcrumb-link">{pageTitle}</a></li>
         </ol>
       </div>
     </nav>
