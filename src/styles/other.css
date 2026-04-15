@@ -98,6 +98,10 @@ html, body {
   margin-bottom: 0 !important;
 }
 
+blockquote {
+  font-size: 1.25rem !important;
+}
+
 a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 	margin-block-start: 0 !important;
 }
@@ -105,10 +109,6 @@ a:not(p a), p, code:not(p code), b:not(p b), i:not(p i) { /* Custom */
 a {
   text-underline-offset: .25rem;
   text-decoration-color: rgba(var(--link-color-rgb), 0.25);
-}
-
-blockquote {
-  font-size: 1.25rem;
 }
 
 @media (min-width: 645.98px) {
