@@ -2170,7 +2170,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
 }
 
 .page-404 {
-  & .btn.rounded-pill {
+  & [class^="btn-"] {
     width: 150px;
   }
 
