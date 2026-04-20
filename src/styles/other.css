@@ -28,6 +28,7 @@ body.dialog-open {
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;   
+  color: lab(95.359 -0.243577 -0.684373) !important;
 }
 
 .hero-back {
