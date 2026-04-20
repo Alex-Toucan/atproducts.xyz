@@ -13,6 +13,10 @@ html, body {
   overflow-x: hidden !important;
 }
 
+body.dialog-open {
+  scrollbar-gutter: initial !important;
+}
+
 .navbar .navbar-brand {
   --navbar-brand-padding-y: .3125rem;
 }
