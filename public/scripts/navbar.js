@@ -3,7 +3,7 @@ function adjustDropdowns() {
 
     document.querySelectorAll("#bd-theme").forEach(d => {
         if (isMobile) {
-            d.setAttribute("data-bs-placement", "top-end");
+            d.setAttribute("data-bs-placement", "top-start");
           } else {
             d.setAttribute("data-bs-placement", "bottom-start");
         }
