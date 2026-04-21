@@ -1830,19 +1830,19 @@ a:hover.footer-info {
 }
 
 .breadcrumb-link {
-  padding: var(--nav-link-padding-y) 0.25rem;
+  padding: var(--bs-nav-link-padding-y) 0.25rem;
 }
 
 @media (max-width:767.98px) {
   .breadcrumb-link {
-    padding: var(--nav-link-padding-y) var(--nav-link-padding-x) !important;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x) !important;
   }
 }
 
 .breadcrumb-divider {
   display: flex;
   align-items: center;
-  padding: var(--nav-link-padding-y) !important;
+  padding: var(--bs-nav-link-padding-y) !important;
 }
 
 body.fixedtopnavimage, body.fixedtopnavimage-breadcrumb {
