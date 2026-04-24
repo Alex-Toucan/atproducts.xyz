@@ -1,0 +1,14 @@
+---
+import DefaultBody from "../layouts/DefaultBody.astro";
+import GamePage from "../layouts/GamePage.astro";
+import GameList from "../layouts/GameList.astro";
+---
+
+<DefaultBody title="Pico's School" ruffle="true"
+keywords="Pico's School, online game, play Pico's School, free Pico's School game"
+description="Play Pico's School online for free! Experience the dark and twisted world of Pico's School, a cult classic flash game that combines action and horror elements in a unique way."
+ author="AT Products LLC">
+  <GamePage title="Pico's School" link="/games/pico.swf" ruffle="true" warning>
+    <GameList />
+  </GamePage>
+</DefaultBody>
