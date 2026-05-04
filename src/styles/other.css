@@ -36,8 +36,11 @@ body.dialog-open {
 }
 
 .hero-back {
-  border-bottom: solid 1px #dee2e6;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-border {
+  border-bottom: solid 1px #dee2e6;
 }
 
 .hero-filter {
