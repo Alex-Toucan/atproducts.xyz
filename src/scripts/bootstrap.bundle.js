@@ -26,7 +26,7 @@ const Data = {
     // can be removed later when multiple key/instances are fine to be used
     if (!instanceMap.has(key) && instanceMap.size !== 0) {
       // eslint-disable-next-line no-console
-      console.error(`Bootstrap doesn't allow more than one instance per element. Bound instance: ${Array.from(instanceMap.keys())[0]}.`);
+      console.error(`Bootstrap doesn't allow more than one instance per element. Bound instance: ${[...instanceMap.keys()][0]}.`);
       return;
     }
     instanceMap.set(key, instance);
@@ -670,13 +670,13 @@ const getSelector = element => {
 };
 const SelectorEngine = {
   find(selector, element = document.documentElement) {
-    return [].concat(...Element.prototype.querySelectorAll.call(element, selector));
+    return [...Element.prototype.querySelectorAll.call(element, selector)];
   },
   findOne(selector, element = document.documentElement) {
     return Element.prototype.querySelector.call(element, selector);
   },
   children(element, selector) {
-    return [].concat(...element.children).filter(child => child.matches(selector));
+    return [...element.children].filter(child => child.matches(selector));
   },
   parents(element, selector) {
     const parents = [];
@@ -3467,7 +3467,7 @@ class Menu extends BaseComponent {
     this._moveMenuToContainer();
     this._createFloating();
     if ('ontouchstart' in document.documentElement && !this._parent.closest(SELECTOR_NAVBAR_NAV)) {
-      for (const element of [].concat(...document.body.children)) {
+      for (const element of document.body.children) {
         EventHandler.on(element, 'mouseover', noop);
       }
     }
@@ -3518,7 +3518,7 @@ class Menu extends BaseComponent {
     }
     this._closeAllSubmenus();
     if ('ontouchstart' in document.documentElement) {
-      for (const element of [].concat(...document.body.children)) {
+      for (const element of document.body.children) {
         EventHandler.off(element, 'mouseover', noop);
       }
     }
@@ -4005,7 +4005,7 @@ class Menu extends BaseComponent {
       const currentMenu = target.closest(SELECTOR_MENU$2);
       const items = SelectorEngine.find(`:scope > ${SELECTOR_VISIBLE_ITEMS$1}`, currentMenu).filter(element => isVisible(element));
       if (items.length) {
-        const targetItem = key === HOME_KEY$2 ? items[0] : items[items.length - 1];
+        const targetItem = key === HOME_KEY$2 ? items[0] : items.at(-1);
         targetItem.focus();
       }
       return true;
@@ -4401,7 +4401,7 @@ class Combobox extends BaseComponent {
       }
       const items = this._getVisibleItems();
       if (items.length > 0) {
-        const target = key === ARROW_DOWN_KEY$1 ? items[0] : items[items.length - 1];
+        const target = key === ARROW_DOWN_KEY$1 ? items[0] : items.at(-1);
         target.focus();
       }
       return;
@@ -4440,7 +4440,7 @@ class Combobox extends BaseComponent {
       event.preventDefault();
       const items = this._getVisibleItems();
       if (items.length > 0) {
-        const targetItem = key === HOME_KEY$1 ? items[0] : items[items.length - 1];
+        const targetItem = key === HOME_KEY$1 ? items[0] : items.at(-1);
         targetItem.focus();
       }
       return;
@@ -4998,9 +4998,15 @@ class DialogBase extends BaseComponent {
     }
     this._isTransitioning = true;
     this._hideElement();
-    this._onAfterHide();
     this._queueCallback(() => {
+      // For subclasses that defer close() until the exit transition ends
+      // (so the dialog stays in the top layer with its ::backdrop), close()
+      // happens here instead of in _hideElement().
+      if (this._element.open) {
+        this._closeAndCleanup();
+      }
       this._element.classList.remove('hiding');
+      this._onAfterHide();
       this._isTransitioning = false;
       EventHandler.trigger(this._element, this.constructor.eventName('hidden'));
     }, this._element, this._isAnimated());
@@ -5056,6 +5062,20 @@ class DialogBase extends BaseComponent {
     // Without this, the navbar's `:not([open])` transition-kill rule
     // would prevent the slide-out animation.
     this._element.classList.add('hiding');
+
+    // Subclasses can defer close() until after the exit transition by
+    // returning true from _shouldDeferClose(). This is needed for the
+    // native modal <dialog> centered case: close() removes the dialog
+    // from the top layer immediately, which strips its auto-centering
+    // and the ::backdrop, breaking the exit animation.
+    if (!this._shouldDeferClose()) {
+      this._closeAndCleanup();
+    }
+  }
+
+  // Closes the native <dialog> and tears down body-scroll prevention.
+  // Safe to call multiple times — close() is a no-op on a closed dialog.
+  _closeAndCleanup() {
     this._element.close();
     this._openedAsModal = false;
 
@@ -5063,6 +5083,13 @@ class DialogBase extends BaseComponent {
     if (!document.querySelector('dialog[open]:modal')) {
       document.body.classList.remove(CLASS_NAME_OPEN);
     }
+  }
+
+  // Hook: return true to keep the dialog in the top layer (i.e., delay
+  // calling close()) until the exit transition completes. The base class
+  // closes synchronously; Dialog overrides this for animated modal cases.
+  _shouldDeferClose() {
+    return false;
   }
   _triggerBackdropTransition() {
     const hidePreventedEvent = EventHandler.trigger(this._element, this.constructor.eventName('hidePrevented'));
@@ -5161,6 +5188,8 @@ const EVENT_HIDDEN$4 = `hidden${EVENT_KEY$9}`;
 const EVENT_CANCEL = `cancel${EVENT_KEY$9}`;
 const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$9}${DATA_API_KEY$5}`;
 const CLASS_NAME_NONMODAL = 'dialog-nonmodal';
+const CLASS_NAME_INSTANT = 'dialog-instant';
+const CLASS_NAME_SWAP_IN = 'dialog-swap-in';
 const SELECTOR_DATA_TOGGLE$5 = '[data-bs-toggle="dialog"]';
 const Default$b = {
   backdrop: true,
@@ -5210,6 +5239,16 @@ class Dialog extends DialogBase {
   _onAfterHide() {
     this._element.classList.remove(CLASS_NAME_NONMODAL);
   }
+
+  // Keep the dialog in the top layer until the exit transition ends. This
+  // preserves the browser's modal centering and the native ::backdrop, both
+  // of which disappear synchronously the moment close() is called. Without
+  // this, the dialog would jump to the top of the page and the backdrop
+  // blur would vanish instantly while the dialog faded — making the exit
+  // animation appear to skip entirely.
+  _shouldDeferClose() {
+    return this._isAnimated();
+  }
   _onCancel() {
     EventHandler.trigger(this._element, EVENT_CANCEL);
   }
@@ -5242,10 +5281,36 @@ EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$5, functi
   const currentDialog = this.closest('dialog[open]');
   const shouldSwap = currentDialog && currentDialog !== target;
   if (shouldSwap) {
+    // Swap strategy (seamless backdrop, no flash):
+    //   1. Mark the incoming dialog with .dialog-swap-in so its ::backdrop
+    //      skips the @starting-style fade-in and appears fully opaque on
+    //      its very first frame in the top layer.
+    //   2. Open the incoming dialog (showModal).
+    //   3. Close the outgoing dialog synchronously — no exit transition, no
+    //      .hiding — so its ::backdrop is removed in the same frame the
+    //      incoming dialog's backdrop appears. Since both backdrops render
+    //      the same color, the user sees one continuous backdrop. Two
+    //      simultaneously-visible backdrops would composite to ~75% darker,
+    //      and a fading-out + fading-in pair would dip to ~75% opacity —
+    //      either would look like a flash.
+    //   4. Clean up the .dialog-swap-in flag once the incoming dialog
+    //      finishes its entry transition.
     const newDialog = Dialog.getOrCreateInstance(target, config);
+    target.classList.add(CLASS_NAME_SWAP_IN);
     newDialog.show(this);
+    EventHandler.one(target, `shown${EVENT_KEY$9}`, () => {
+      target.classList.remove(CLASS_NAME_SWAP_IN);
+    });
     const currentInstance = Dialog.getInstance(currentDialog);
     if (currentInstance) {
+      // Force synchronous close: .dialog-instant makes _isAnimated() false,
+      // which makes _shouldDeferClose() false, so hide() calls close()
+      // immediately (no deferred .hiding path). The class is removed after
+      // the (now-synchronous) hidden event fires.
+      currentDialog.classList.add(CLASS_NAME_INSTANT);
+      EventHandler.one(currentDialog, EVENT_HIDDEN$4, () => {
+        currentDialog.classList.remove(CLASS_NAME_INSTANT);
+      });
       currentInstance.hide();
     }
     return;
@@ -5454,19 +5519,21 @@ class NavOverflow extends BaseComponent {
       return;
     }
     const overflowWidth = overflowItem?.offsetWidth || 0;
+
+    // Keep items are always visible; subtract their widths so the threshold
+    // reflects actual available space for non-keep items.
+    const keepWidth = this._items.filter(item => item.classList.contains(CLASS_NAME_KEEP)).reduce((sum, item) => sum + item.offsetWidth, 0);
     let usedWidth = 0;
     const itemsToOverflow = [];
-    const overflowThreshold = navWidth - overflowWidth - 10; // 10px buffer
+    const overflowThreshold = navWidth - overflowWidth - keepWidth - 10; // 10px buffer
 
     // Calculate which items need to overflow (skip items with keep class)
     for (const item of this._items) {
-      const itemWidth = item.offsetWidth;
-      usedWidth += itemWidth;
-
       // Never overflow items with the keep class
       if (item.classList.contains(CLASS_NAME_KEEP)) {
         continue;
       }
+      usedWidth += item.offsetWidth;
       if (usedWidth > overflowThreshold) {
         itemsToOverflow.push(item);
       }
@@ -5991,7 +6058,7 @@ class OtpInput extends BaseComponent {
     return this._inputs.map(input => input.value).join('');
   }
   setValue(value) {
-    const chars = String(value).split('');
+    const chars = [...String(value)];
     for (const [index, input] of this._inputs.entries()) {
       input.value = chars[index] || '';
     }
@@ -6056,7 +6123,7 @@ class OtpInput extends BaseComponent {
     // Handle multi-character input (some browsers/autofill)
     if (value.length > 1) {
       // Distribute characters across inputs
-      const chars = value.split('');
+      const chars = [...value];
       input.value = chars[0] || '';
       for (let i = 1; i < chars.length && index + i < this._inputs.length; i++) {
         this._inputs[index + i].value = chars[i];
@@ -6808,15 +6875,15 @@ function sanitizeHtml(unsafeHtml, allowList, sanitizeFunction) {
   }
   const domParser = new window.DOMParser();
   const createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
-  const elements = [].concat(...createdDocument.body.querySelectorAll('*'));
+  const elements = [...createdDocument.body.querySelectorAll('*')];
   for (const element of elements) {
     const elementName = element.nodeName.toLowerCase();
     if (!Object.keys(allowList).includes(elementName)) {
       element.remove();
       continue;
     }
-    const attributeList = [].concat(...element.attributes);
-    const allowedAttributes = [].concat(allowList['*'] || [], allowList[elementName] || []);
+    const attributeList = [...element.attributes];
+    const allowedAttributes = [...(allowList['*'] || []), ...(allowList[elementName] || [])];
     for (const attribute of attributeList) {
       if (!allowedAttribute(attribute, allowedAttributes)) {
         element.removeAttribute(attribute.nodeName);
@@ -7150,7 +7217,7 @@ class Tooltip extends BaseComponent {
     // only needed because of broken event delegation on iOS
     // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
     if ('ontouchstart' in document.documentElement) {
-      for (const element of [].concat(...document.body.children)) {
+      for (const element of document.body.children) {
         EventHandler.on(element, 'mouseover', noop);
       }
     }
@@ -7177,7 +7244,7 @@ class Tooltip extends BaseComponent {
     // If this is a touch-enabled device we remove the extra
     // empty mouseover listeners we added for iOS support
     if ('ontouchstart' in document.documentElement) {
-      for (const element of [].concat(...document.body.children)) {
+      for (const element of document.body.children) {
         EventHandler.off(element, 'mouseover', noop);
       }
     }
@@ -7565,15 +7632,17 @@ const initTooltip = event => {
     return;
   }
 
-  // Get or create instance and trigger the appropriate action
-  const tooltip = Tooltip.getOrCreateInstance(target);
-
-  // For focus events, manually trigger enter to show
-  if (event.type === 'focusin') {
-    tooltip._activeTrigger.focus = true;
-    tooltip._enter();
-  }
+  // Lazily create the instance. The instance's own `_setListeners()` registers
+  // the appropriate listeners on the element for the configured triggers
+  // (hover/focus by default), so we don't mutate `_activeTrigger` or call
+  // `_enter` here — doing so would show tooltips for triggers the user didn't
+  // opt into (e.g. `focusin` firing for click-focused buttons in Chromium,
+  // even when `trigger="hover"` or `trigger="manual"`) and leave stale state
+  // on `_activeTrigger`.
+  Tooltip.getOrCreateInstance(target);
 };
+
+// Auto-initialize tooltips on first interaction for hover and focus triggers
 EventHandler.on(document, EVENT_FOCUSIN$2, SELECTOR_DATA_TOGGLE$3, initTooltip);
 EventHandler.on(document, EVENT_MOUSEENTER$1, SELECTOR_DATA_TOGGLE$3, initTooltip);
 
@@ -7652,24 +7721,19 @@ const initPopover = event => {
     return;
   }
 
-  // Prevent default for click events to avoid navigation
+  // Prevent default for click events to avoid navigation (e.g. <a href="#">)
   if (event.type === 'click') {
     event.preventDefault();
   }
 
-  // Get or create instance
-  const popover = Popover.getOrCreateInstance(target);
-
-  // Trigger the appropriate action based on event type
-  if (event.type === 'click') {
-    popover.toggle();
-  } else if (event.type === 'focusin') {
-    popover._activeTrigger.focus = true;
-    popover._enter();
-  }
+  // Lazily create the instance. The instance's own `_setListeners()` registers
+  // the appropriate listeners on the element for the configured triggers
+  // (click/focus/hover), so we don't toggle or call `_enter` here — doing so
+  // would duplicate handlers and leave stale state on `_activeTrigger`.
+  Popover.getOrCreateInstance(target);
 };
 
-// Support click (default), hover, and focus triggers
+// Auto-initialize popovers on first interaction for click, hover, and focus triggers
 EventHandler.on(document, EVENT_CLICK$2, SELECTOR_DATA_TOGGLE$2, initPopover);
 EventHandler.on(document, EVENT_FOCUSIN$1, SELECTOR_DATA_TOGGLE$2, initPopover);
 EventHandler.on(document, EVENT_MOUSEENTER, SELECTOR_DATA_TOGGLE$2, initPopover);
@@ -8049,7 +8113,7 @@ class Tab extends BaseComponent {
     const children = this._getChildren().filter(element => !isDisabled(element));
     let nextActiveElement;
     if ([HOME_KEY, END_KEY].includes(event.key)) {
-      nextActiveElement = children[event.key === HOME_KEY ? 0 : children.length - 1];
+      nextActiveElement = event.key === HOME_KEY ? children[0] : children.at(-1);
     } else {
       const isNext = [ARROW_RIGHT_KEY, ARROW_DOWN_KEY].includes(event.key);
       nextActiveElement = getNextActiveElement(children, event.target, isNext, true);
