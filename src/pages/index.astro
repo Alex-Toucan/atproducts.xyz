@@ -1,0 +1,205 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout 
+    title="RadiumOS" 
+    description="RadiumOS is a 32-bit operating system written entirely from scratch by Pynx."
+    keywords="radiumos, radium os, pynx, operating system, os, 32-bit, written from scratch"
+    author="AT Products LLC & Pynx"
+  >
+  <div class="container">
+    <div id="header">
+      <img src="/media/images/radiumos.webp" alt="RadiumOS" class="main-img">
+      <h1 class="main-header">RadiumOS</h1>
+      <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">
+        <a class="social-button github-button" href="https://github.com/RadiumOS-Dev/RadiumOS" target="_blank"><i class="bi bi-github me-2"></i> GitHub Repo</a>
+        <a class="social-button atproducts-button" href="https://atproducts.xyz" target="_blank"><i class="ci ci-atproducts me-2"></i> AT Products LLC</a>
+        <a class="social-button downloads-button" href="#downloads" target="_blank"><i class="bi bi-download me-2"></i> Downloads</a>
+      </div>
+      <hr>
+    </div>
+    <div id="general-info">
+      <h2> General Information </h2>
+      <p>RadiumOS (formerly TomatoOS) is a 32-bit OS, similar to a former project, NyaOS, developed however completely from scratch. Test this OS in a virtual machine! <b>Note regarding Wi-Fi access, Virtio is supported only.</b>
+      </p>
+      <span>
+        <strong>The minimum requirements for RadiumOS is:</strong>
+      </span>
+      <ul>
+        <li>
+          <strong>CPU:</strong> At least 1 core.
+        </li>
+        <li>
+          <strong>RAM:</strong> At least 64mb (or roughly the size of the ISO).
+        </li>
+        <li>
+          <strong>Storage:</strong> None, since it's all run on the ISO.
+        </li>
+      </ul>
+      <hr>
+    </div>
+    <div id="commands">
+      <h2>Command Reference</h2>
+      <p style="font-size:0.9rem; color:#9ac89a; margin-bottom:10px;">
+          Scroll to see all 64 commands. Run <code>help</code> in the shell for the full list.
+      </p>
+      <div class="cmd-wrap">
+        <table>
+          <thead>
+              <tr><th>Command</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+              <tr class="grp"><td colspan="2">General</td></tr>
+              <tr><td>help</td><td>Display this message</td></tr>
+              <tr><td>clear</td><td>Clear terminal</td></tr>
+              <tr><td>echo</td><td>Echo messages</td></tr>
+              <tr><td>boot</td><td>Show welcome screen</td></tr>
+              <tr><td>cowsay</td><td>Cowsay</td></tr>
+              <tr><td>exit</td><td>Exit the shell</td></tr>
+              <tr><td>hexdump</td><td>Hexdump toolkit</td></tr>
+              <tr><td>ps</td><td>List tasks</td></tr>
+              <tr><td>kill</td><td>Kill task by PID</td></tr>
+              <tr><td>top</td><td>Task monitor</td></tr>
+              <tr><td>search</td><td>Search commands</td></tr>
+
+              <tr class="grp"><td colspan="2">Files</td></tr>
+              <tr><td>ls</td><td>List directory</td></tr>
+              <tr><td>cat</td><td>Read text file</td></tr>
+              <tr><td>rm</td><td>Remove file</td></tr>
+              <tr><td>cd</td><td>Change directory</td></tr>
+              <tr><td>onan</td><td>Text editor</td></tr>
+              <tr><td>cat.hex</td><td>Print file as hex</td></tr>
+              <tr><td>pie</td><td>Rust image editor</td></tr>
+
+              <tr class="grp"><td colspan="2">Network</td></tr>
+              <tr><td>ping</td><td>Ping a host</td></tr>
+              <tr><td>curl</td><td>Curl</td></tr>
+              <tr><td>testdns</td><td>Test DNS resolution</td></tr>
+              <tr><td>nettest</td><td>ARP/network test</td></tr>
+              <tr><td>rawsend</td><td>Send raw test packet</td></tr>
+              <tr><td>netdiag</td><td>Full network diagnostics</td></tr>
+              <tr><td>tcpreset</td><td>Force TCP state reset</td></tr>
+              <tr><td>setdns</td><td>Set DNS server (a b c d)</td></tr>
+              <tr><td>ifconfig</td><td>Network interfaces</td></tr>
+              <tr><td>arp</td><td>ARP table</td></tr>
+
+              <tr class="grp"><td colspan="2">Browser &amp; Proxy</td></tr>
+              <tr><td>gbrowser / gb</td><td>Graphical web browser</td></tr>
+              <tr><td>proxy.get</td><td>Download via proxy</td></tr>
+              <tr><td>files.proxy</td><td>Proxy + fi demo</td></tr>
+
+              <tr class="grp"><td colspan="2">Scripting</td></tr>
+              <tr><td>script</td><td>Run .rsh/.rash script</td></tr>
+              <tr><td>rshline</td><td>Execute a single script line</td></tr>
+              <tr><td>rash</td><td>Run /bin/autoexec.rsh</td></tr>
+              <tr><td>autoexec</td><td>Run /bin/autoexec.rsh</td></tr>
+              <tr><td>run.module</td><td>Run a module</td></tr>
+              <tr><td>list.modules</td><td>List all modules</td></tr>
+              <tr><td>remove.module</td><td>Remove a module</td></tr>
+              <tr><td>tag.module</td><td>Tag a module with a label</td></tr>
+              <tr><td>config.module</td><td>Configure a module</td></tr>
+              <tr><td>set.module</td><td>Create a Discord module</td></tr>
+              <tr><td>wbd.diag</td><td>Watchdog task diagram</td></tr>
+
+              <tr class="grp"><td colspan="2">AES Encryption</td></tr>
+              <tr><td>aes.trace.on</td><td>Enable full AES tracing</td></tr>
+              <tr><td>aes.trace.off</td><td>Disable AES tracing</td></tr>
+              <tr><td>aes.trace.flip</td><td>Toggle AES tracing state</td></tr>
+              <tr><td>aes.trace.query</td><td>Check AES tracing status</td></tr>
+              <tr><td>aes.key</td><td>Set AES encryption key</td></tr>
+              <tr><td>aes.enc</td><td>Encrypt a file</td></tr>
+              <tr><td>aes.dec</td><td>Decrypt a file</td></tr>
+
+              <tr class="grp"><td colspan="2">Discord</td></tr>
+              <tr><td>dinit</td><td>Init Discord (built-in token)</td></tr>
+              <tr><td>dtoken</td><td>Set Discord bot token</td></tr>
+              <tr><td>discord</td><td>Who am I</td></tr>
+              <tr><td>dguilds</td><td>Discord: list servers</td></tr>
+              <tr><td>dchannels</td><td>Discord: list channels</td></tr>
+              <tr><td>dmsg</td><td>Discord: fetch messages</td></tr>
+              <tr><td>dsend</td><td>Discord: send message</td></tr>
+              <tr><td>dembed</td><td>Discord: send embed</td></tr>
+              <tr><td>dreact</td><td>Discord: react to message</td></tr>
+              <tr><td>ddel</td><td>Discord: delete message</td></tr>
+              <tr><td>dshell</td><td>Discord: interactive shell</td></tr>
+              <tr><td>dcache</td><td>Discord: show message cache</td></tr>
+              <tr><td>dtest</td><td>Discord: test</td></tr>
+
+              <tr class="grp"><td colspan="2">Misc</td></tr>
+              <tr><td>jsontest</td><td>Test JSON parser</td></tr>
+              <tr><td>module.help</td><td>Module help (blank=all types)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+      </div>
+      <div id="run">
+        <h2>How to Run</h2>
+          <p class="warn">
+              <strong>⚠ QEMU required.</strong>
+              Download from <a href="https://www.qemu.org/" target="_blank">qemu.org</a>.
+              VirtualBox and VMware will cause kernel panics.
+          </p>
+          <p style="margin-top:8px;">
+              Download <a href="https://lfs.atproducts.xyz/media/files/RadiumOS.iso">RadiumOS.iso</a> and run:
+          </p>
+          <div class="code-block">
+            <div class="code-block-header">
+                <span>Bash</span>
+                <button class="copy-btn" id="copyBtn" onclick="copyQemu()">Copy</button>
+            </div>
+            <pre id="qemuCmd">qemu-system-i386 -display sdl \
+              -rtc base=utc,clock=host,driftfix=slew \
+              -m 256 \
+              -cdrom RadiumOS.iso \
+              -boot order=d \
+              -machine pc \
+              -smp 1 \
+              -serial pty \
+              -debugcon file:debug.log \
+              -global isa-debugcon.iobase=0xE9 \
+              -netdev user,id=net0 \
+              -device rtl8139,netdev=net0 \
+              -vga std \
+              -global VGA.vgamem_mb=16 \
+              -audiodev sdl,id=audio0,out.frequency=48000,out.channels=2,out.format=s32 \
+              -machine pcspk-audiodev=audio0 \
+              -d guest_errors</pre>
+          </div>
+        <hr>
+      </div>
+      <div id="downloads">
+        <h2>Downloads</h2>
+        <p class="dl-link">
+            <a href="https://lfs.atproducts.xyz/media/files/RadiumOS.iso">
+                <strong>RadiumOS.iso</strong>
+            </a>
+            — Latest release. Boot in QEMU. No installation required.
+        </p>
+        <p class="dl-link">
+            <a href="https://lfs.atproducts.xyz/media/files/TomatoOS.iso">TomatoOS.iso</a>
+            — Deprecated. Legacy name. Archived only.
+        </p>
+        <p class="dl-link">
+            <a href="https://github.com/RadiumOS-Dev/RadiumOS" target="_blank">GitHub Repository</a>
+            — Source code, issues, contributions.
+        </p>
+        <h3>ISO Stats</h3>
+        <table class="iso-stats">
+            <tr><td>Name</td><td>RadiumOS.iso</td></tr>
+            <tr><td>Version</td><td>v2.0.0</td></tr>
+            <tr><td>Last Modified</td><td>Saturday, May 2, 2026, 2:27:00 PM</td></tr>
+            <tr><td>Size</td><td>24.8 MB (26,093,568 bytes) (may differ on disk)</td></tr>
+        </table>
+      </div>
+    </div>
+    <div id="footer">
+      <p id="disclaimer" class="mx-md-8">
+        All content related to RadiumOS or TomatoOS is open source and freely distributed.
+        Maintained in partnership with <a href="https://atproducts.xyz" target="_blank" rel="noopener">AT Products LLC</a>.
+        Site inspired by <a href="https://templeos.org/" target="_blank" rel="noopener">TempleOS</a>, may Terry A. Davis's soul rest in peace.
+      </p>
+    </div>
+  </div>
+</Layout>

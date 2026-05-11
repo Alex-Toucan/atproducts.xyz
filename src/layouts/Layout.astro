@@ -1,0 +1,53 @@
+---
+const { title, description, keywords, author, additionalContent, figure } = Astro.props;
+
+import { Font } from 'astro:assets';
+
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+import '../styles/styles.css';
+import '../styles/fonts.css';
+---
+
+<!DOCTYPE html>
+<html class="fixedtopnav" lang="en">
+  <head>
+      <title>{title}</title> 
+      <Font cssVariable='--font-audiowide' preload />
+      <Font cssVariable='--font-customicons' preload />
+      <link rel="preload" as="script" href="/static/darkmode.js">
+      <link rel="shortcut icon" type="image/x-icon" href="/media/favicon/favicon.ico">
+      <link rel="icon" type="image/x-icon" href="/media/favicon/favicon.ico">
+      <meta property="og:image" content="/media/favicon/iconembed.png">
+      <meta name="twitter:image" content="/media/favicon/iconembed.png">
+      <link rel="manifest" href="/media/favicon/site.webmanifest">
+      <meta charset="UTF-8">
+      <meta name="msapplication-TileColor" content="#bbbbbb">
+      <meta name="title" content={title}>
+      <meta name="description" content={description}>
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@ATProductsLLC">
+      <meta name="twitter:creator" content="@ATProductsLLC">
+      <meta name="twitter:title" content={title}>
+      <meta name="twitter:description" content={description}>
+      {keywords && (
+        <meta name="keywords" content={keywords}>
+      )}
+      {author && (
+        <meta name="author" content={author}>
+      )}
+      <meta property="og:title" content={title}>
+      <meta property="og:description" content={description}>
+      <meta property="og:site_name" content={author}>
+      <meta name="theme-color" content="#bbbbbb">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <Fragment set:html={additionalContent}>
+      <script is:inline src="/static/darkmode.js"></script>
+  </head>
+  <body class="fixedtopnav">
+    <Fragment>  
+      <slot/>
+    </Fragment>
+  </body>
+</html>
