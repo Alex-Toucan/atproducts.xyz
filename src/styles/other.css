@@ -388,6 +388,10 @@ a {
   border-bottom-left-radius: 0;
 }
 
+.card {
+  border-radius: var(--bs-card-border-radius);
+}
+
 .permcard {
 	width: 100%;
 }
@@ -396,14 +400,6 @@ a {
   .permcard {
     width: 18rem !important;
   }
-}
-
-[data-bs-theme=dark] .card-border {
-  --bs-card-border-width: var( --bs-border-width);
-  --bs-card-border-color: var( --bs-border-color-translucent);
-  --bs-card-border-radius: var( --bs-border-radius);
-  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
-  border-radius: var(--bs-card-border-radius);
 }
 
 .popover {

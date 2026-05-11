@@ -3,18 +3,18 @@ const { id, title, description, cardLinks, size } = Astro.props;
 ---
 
 <div class={`hero hero-${id}`}>
-  <div class="hero-back h-100">
+  <div class="hero-back hero-border h-100">
     <div class="hero-filter">
       <div data-bs-theme="dark">
-        <h1 class="display-4 fw-bold title pt-3 pb-2" set:html={title}></h1>
+        <h1 class="fs-4xl fw-bold title pt-3 pb-2" set:html={title}></h1>
         {description && (
-          <p class="fs-lg mt-0 mb-3 text-body-secondary container">{description}</p>
+          <p class="fs-lg mt-0 mb-3 fg-emphasis-secondary container">{description}</p>
         )}
       </div>
       <div class={`${size}:d-flex flex-wrap mx-2`}>
         {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, secondaryHref, additionalImageClasses }, index) => (
           <div class="md:col mt-1 mb-3 m-1">
-            <div class="card text-center permcard mx-auto shadow-sm h-100">
+            <section class="card text-center permcard mx-auto shadow-sm h-100">
               {cardImage && (
                 <div class="bg-white card-img-top">
                   <img src={cardImage} alt={cardTitle} class={additionalImageClasses} width="100%">
@@ -27,7 +27,7 @@ const { id, title, description, cardLinks, size } = Astro.props;
                   <a href={cardHref} class="btn-solid theme-primary flex-grow-1">Visit</a>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
         ))}
       </div>
