@@ -3,7 +3,7 @@ const { title, id, parent, additionalClasses, bodyVisible } = Astro.props;
 const classes = additionalClasses ? `accordion-item ${additionalClasses}` : 'accordion-item';
 ---
 
-<details class={classes}>
+<details class={classes} id={id} name={parent}>
   <summary class="accordion-header">
     <Fragment set:html={title} />
     <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>

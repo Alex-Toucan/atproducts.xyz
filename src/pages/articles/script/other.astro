@@ -35,7 +35,7 @@ import BackToTop from '../../../components/BackToTop.astro';
         <div id="content">
           <Accordion id="other-accordion">
             <Fragment slot="accordion-content">
-              <AccordionItem title="Nitro Generator" id="ngott">
+              <AccordionItem title="Nitro Generator" id="ngott" parent="other-accordion">
                 <Fragment slot="accordion-item-content">
                   <h3> Disclaimer </h3>
                   <p> Note that an actual working key would take over a billion (10^6) years to find. </p>
@@ -47,12 +47,12 @@ import BackToTop from '../../../components/BackToTop.astro';
                   </p>
                 </Fragment>
               </AccordionItem>
-              <AccordionItem title="Kahoot Scripts" id="ksott">
+              <AccordionItem title="Kahoot Scripts" id="ksott" parent="other-accordion">
                 <Fragment slot="accordion-item-content">
                   <p> <a href="https://lfs.atproducts.xyz/media/files/id.py" download>Kahoot Answers (Python)</a> <a href="https://lfs.atproducts.xyz/media/files/lobby.py" download>Kahoot Lobby Flood (Python | KahootPY | Threading)</a> by Nasus</p>
                 </Fragment>
               </AccordionItem>
-              <AccordionItem title="Other Scripts" id="osott">
+              <AccordionItem title="Other Scripts" id="osott" parent="other-accordion">
                 <Fragment slot="accordion-item-content">
                   <p> 
                     <a href="https://lfs.atproducts.xyz/media/files/user_agents.txt" download>User Agents (TXT)</a> <br>

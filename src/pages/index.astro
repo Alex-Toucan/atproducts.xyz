@@ -15,7 +15,7 @@ bulletin={[
   { bulletinImage: "2241-030426-2.webp" },
   { bulletinImage: "2241-030426-3.webp" },
 ]} 
-index="true">
+index="true" accordion="true">
 <div id="page">
   <Navbar />
   <div id="main-content">
@@ -241,12 +241,12 @@ index="true">
           </div>
           <Accordion id="resourcesAccordion">
             <Fragment slot="accordion-content">
-              <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne">
+              <AccordionItem bodyVisible="none" title="Other Credits" id="creditsOne" parent="resourcesAccordion">
                 <Fragment slot="accordion-item-content">
                   <p class="mb-0"><a href="https://uigradients.com/">uiGradients</a> for providing gradients for the carousel images when we are lazy to do it ourselves.</p>
                 </Fragment>
               </AccordionItem>
-              <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo">
+              <AccordionItem bodyVisible="none" title="Older Credits" id="creditTwo" parent="resourcesAccordion">
                 <Fragment slot="accordion-item-content">
                   <div class="d-grid gap-3">
                     <div class="d-flex gap-2">

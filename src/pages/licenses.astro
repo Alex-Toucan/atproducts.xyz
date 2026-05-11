@@ -18,7 +18,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
       <div class="py-2" />
       <Accordion id="licensesAccordion">
         <Fragment slot="accordion-content">
-          <AccordionItem title="AT Products LLC & atproducts.xyz License" id="atproductsxyz">
+          <AccordionItem title="AT Products LLC & atproducts.xyz License" id="atproductsxyz" parent="licensesAccordion">
             <Fragment slot="accordion-item-content">
               <h2>AT Products LLC & atproducts.xyz License</h2>
               <p>
@@ -35,7 +35,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
               </div>
             </Fragment>
           </AccordionItem>
-          <AccordionItem title="Bootstrap &amp; Bootstrap Icons License" id="bootstrap">
+          <AccordionItem title="Bootstrap &amp; Bootstrap Icons License" id="bootstrap" parent="licensesAccordion">
             <Fragment slot="accordion-item-content">
               <h2>Bootstrap &amp; Bootstrap Icons License</h2>
               <p>
@@ -51,7 +51,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
               </div>
             </Fragment>
           </AccordionItem>
-          <AccordionItem title="Astro License" id="astro">
+          <AccordionItem title="Astro License" id="astro" parent="licensesAccordion">
             <Fragment slot="accordion-item-content">
               <h2>Astro License</h2>
               <p>
@@ -67,7 +67,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
               </div>
             </Fragment>
           </AccordionItem>
-          <AccordionItem title="JQuery License" id="jquery">
+          <AccordionItem title="JQuery License" id="jquery" parent="licensesAccordion">
             <Fragment slot="accordion-item-content">
               <h2>JQuery License</h2>
               <div>
@@ -90,7 +90,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
               </div>
             </Fragment>
           </AccordionItem>
-          <AccordionItem title="highlight.js License" id="highliht">
+          <AccordionItem title="highlight.js License" id="highlight" parent="licensesAccordion">
             <Fragment slot="accordion-item-content">
               <h2>highlight.js License</h2>
               <p>
@@ -131,7 +131,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
               </div>
             </Fragment>
           </AccordionItem>
-          <AccordionItem title="Dracula Theme License" id="dracula">
+          <AccordionItem title="Dracula Theme License" id="dracula" parent="licensesAccordion">
             <Fragment slot="accordion-item-content">
               <h2>Dracula Theme License</h2>
               <p>
