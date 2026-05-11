@@ -9,7 +9,7 @@ import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
 import '../styles/other.css';
 import '../styles/cookie.css';
 
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, contact, fourofour, accordion, scrollspy, breadcrumb, devicon } = Astro.props;
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, contact, fourofour, accordion, breadcrumb, devicon } = Astro.props;
 
 if (highlight) {
   import('../styles/highlight.css');
@@ -128,9 +128,6 @@ if (devicon) {
       {accordion && (
         <script is:inline src="/scripts/accordion-id.js"></script>
       )}    
-      {scrollspy && (
-        <script is:inline src="/scripts/scrollspy-id.js"></script>
-      )}
     </Fragment>
   </body>
 </html>
