@@ -128,12 +128,12 @@ a {
     max-width: 720px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .container-xsm {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .container-xsm {
     max-width: 1140px;
   }
@@ -160,7 +160,7 @@ a {
       max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .container-footer {
      max-width: 1140px;
   }
@@ -1709,7 +1709,7 @@ a {
     margin-top: 0.5rem !important;
   }
 }
-@media (max-width: 1200px) and (min-width: 991.98px) {
+@media (max-width: 1280px) and (min-width: 1023.98px) {
   .xesm\:me-2 {
     margin-right: 0.5rem !important;
   }
@@ -1735,7 +1735,7 @@ a {
 	}
 }
 
-@media (width >= 992px) {
+@media (width >= 1024px) {
   .lg\:text-centertostart {
     text-align: left !important;
   }
@@ -1760,7 +1760,7 @@ a {
 	}
 }
 
-@media (max-width:991.98px) {
+@media (max-width:1023.98px) {
 	.imgdiv {
 		width: 25%;
 		margin-left: auto;
@@ -1848,7 +1848,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   scroll-padding-top: calc(71px + 5px);
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: 1023.98px) {
   body.fixedtopnavimage-breadcrumb, body.fixedtopnavimage-breadcrumb {
     padding-top: 116px;
   }
@@ -1906,7 +1906,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   }
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: 1023.98px) {
 	.bd-toc {
 		position: fixed;
 		right: 0;
@@ -1916,7 +1916,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   }
 }
 
-@media (min-width: 767.98px) and (max-width: 991.98px) {
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
 	.bd-toc {
 		position: fixed;
 		top: 103px;
@@ -1955,12 +1955,12 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
     max-width: 70ch;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .container-story {
     max-width: 75ch;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .container-story {
     max-width: 80ch;
   }
@@ -2206,7 +2206,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   }
 }
 
-@media(min-width: 400px) and (max-width: 991.98px) {
+@media(min-width: 400px) and (max-width: 1023.98px) {
   .mx-xsm-5 {
     margin-inline: 3rem;
   }
