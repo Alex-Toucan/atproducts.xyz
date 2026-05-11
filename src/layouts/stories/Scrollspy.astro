@@ -6,7 +6,7 @@ const { id, scrollcontent } = Astro.props;
   <div class="bd-toc md:col-3 story-top-buttons">
     <div id={`${id}-list`} class="list-group story-buttons">
       {scrollcontent ? (
-        <div class="p-3 pb-0 rounded-2">
+        <div class="p-3 pb-0 rounded-4">
         {scrollcontent.map(({ name, href, additionalClasses }, index) => (
           <a class={`list-group-item list-group-item-action ${additionalClasses}`} href={href} key={index}>
             {name}
