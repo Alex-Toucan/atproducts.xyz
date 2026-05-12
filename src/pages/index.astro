@@ -21,22 +21,14 @@ import Layout from "../layouts/Layout.astro"
     </div>
     <div id="general-info">
       <h2> General Information </h2>
-      <p>RadiumOS (formerly TomatoOS) is a 32-bit OS, similar to a former project, NyaOS, developed however completely from scratch. Test this OS in a virtual machine! <b>Note regarding Wi-Fi access, Virtio is supported only.</b>
+      <p>RadiumOS (formerly TomatoOS) is a 32-bit OS, similar to a former project, NyaOS, developed however completely from scratch. Test this OS in a virtual machine!
       </p>
-      <span>
-        <strong>The minimum requirements for RadiumOS is:</strong>
-      </span>
-      <ul>
-        <li>
-          <strong>CPU:</strong> At least 1 core.
-        </li>
-        <li>
-          <strong>RAM:</strong> At least 64mb (or roughly the size of the ISO).
-        </li>
-        <li>
-          <strong>Storage:</strong> None, since it's all run on the ISO.
-        </li>
-      </ul>
+      <h3>Minimum Requirements</h3>
+      <table class="req-table">
+        <tr><td>CPU</td><td>At least 1 core</td></tr>
+        <tr><td>RAM</td><td>At least 2 GB (roughly the size of the ISO)</td></tr>
+        <tr><td>Storage</td><td>None — runs entirely from the ISO</td></tr>
+      </table>
       <hr>
     </div>
     <div id="commands">
@@ -179,7 +171,7 @@ import Layout from "../layouts/Layout.astro"
         </p>
         <p class="dl-link">
             <a href="https://lfs.atproducts.xyz/media/files/TomatoOS.iso">TomatoOS.iso</a>
-            — Deprecated. Legacy name. Archived only.
+            — Deprecated (7/29/2025). Legacy name. Archived only.
         </p>
         <p class="dl-link">
             <a href="https://github.com/RadiumOS-Dev/RadiumOS" target="_blank">GitHub Repository</a>
@@ -194,11 +186,15 @@ import Layout from "../layouts/Layout.astro"
         </table>
       </div>
     </div>
-    <div id="footer">
+    <div id="footer" class="my-4">
+      <a href="https://atproducts.xyz" target="_blank" rel="noopener">
+        <img src="/media/images/longwhite.webp" alt="AT Products LLC" height="45" class="atproducts-logo"> 
+      </a>
       <p id="disclaimer" class="mx-md-8">
         All content related to RadiumOS or TomatoOS is open source and freely distributed.
         Maintained in partnership with <a href="https://atproducts.xyz" target="_blank" rel="noopener">AT Products LLC</a>.
-        Site inspired by <a href="https://templeos.org/" target="_blank" rel="noopener">TempleOS</a>, may Terry A. Davis's soul rest in peace.
+        Site inspired by <a href="https://templeos.org/" target="_blank" rel="noopener">TempleOS</a>, may Terry A. Davis's soul rest in peace.<br><br>
+        2026 &reg; AT Products LLC.
       </p>
     </div>
   </div>
