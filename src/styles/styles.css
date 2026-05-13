@@ -192,6 +192,11 @@ hr {
 .cmd-wrap::-webkit-scrollbar-track { background: #050806; }
 .cmd-wrap::-webkit-scrollbar-thumb { background: var(--glow-green); border-radius: 3px; }
 
+#qemuCmd {
+    scrollbar-width: thin;
+    scrollbar-color: var(--glow-green) #050806;
+}
+
 table {
     width: 100%;
     max-width: 100%;
