@@ -4,6 +4,8 @@ import CardPage  from '../../layouts/CardPage.astro';
 import Navbar    from '../../components/Navbar.astro';
 import Footer    from '../../components/Footer.astro';
 import BackToTop from '../../components/BackToTop.astro';
+
+import '../../styles/imagesizes.css';
 ---
 
 <DefaultBody title="Pynx's Projects" heroid="ehs" description="View Pynx's projects." keywords="AT Products, Ethical Hacking Society, The Script Community, AT Products LLC, ATproducts" author="Alex Toucan & Pynx">
@@ -13,13 +15,14 @@ import BackToTop from '../../components/BackToTop.astro';
     <main id="pynx" class="text-center"> 
       <CardPage id="ehs" title="Pynx's Projects" size="md"
         cardLinks={[
-          { cardTitle: "RadiumOS", cardDescription: "Based off NyaOS, a new OS with potential.", cardHref: "https://radiumos.atproducts.xyz" },
+          { cardTitle: "RadiumOS", cardDescription: "Based off NyaOS, a new OS with potential; predecessor to RadiumOS.", cardImage: "/media/images/radium.png", cardHref: "https://radiumos.atproducts.xyz", additionalImageClasses: "object-fit-cover radium-image"},
+          { cardTitle: "NyaOS", cardDescription: "A hobby OS with potential; predecessor to RadiumOS.", cardHref: "nyaos" },
           { cardTitle: "ezpkgm", cardDescription: "A JavaScript package manager.", cardHref: "ezpkgm" },
           { cardTitle: "PSON", cardDescription: "The better JSON for programming languages.", cardHref: "pson" },
           { cardTitle: "BxPP", cardDescription: "A custom Python programming language!", cardHref: "bxpp" },
           { cardTitle: "FentaMini", cardDescription: "FentaMini; another programming language.", cardHref: "fenta" },
           { cardTitle: "Inferno", cardDescription: "Inferno is a very malicious ransomware executable that is relentless.", cardHref: "inferno" },
-          { cardTitle: "Noodle Hackerspace", cardDescription: "This community contains Pynx's code samples.", cardImage: "/media/images/noodle.webp", cardHref: "/noodle", secondaryHref: "/backup/noodle", additionalImageClasses: "w-25 py-1" },
+          { cardTitle: "Noodle Hackerspace", cardDescription: "This community contains Pynx's code samples.", cardImage: "/media/images/noodle.webp", cardHref: "/noodle", additionalImageClasses: "w-25 py-1" },
         ]} 
       />
     </main>
