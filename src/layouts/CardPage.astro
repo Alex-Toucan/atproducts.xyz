@@ -12,7 +12,7 @@ const { id, title, description, cardLinks, size } = Astro.props;
         )}
       </div>
       <div class={`d-${size}-flex flex-wrap mx-2`}>
-        {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, secondaryHref, additionalImageClasses }, index) => (
+        {cardLinks && cardLinks.map(({ cardTitle, cardDescription, cardImage, cardWidth, cardHref, additionalImageClasses }, index) => (
           <div class="col-md mt-1 mb-3 m-1">
             <div class="card text-center permcard shadow-sm h-100">
               {cardImage && (
@@ -25,9 +25,6 @@ const { id, title, description, cardLinks, size } = Astro.props;
                 <p class="card-text" set:html={cardDescription}></p>
                 <div class="tab-link d-grid gap-2">
                   <a href={cardHref} class="btn btn-primary w-100">Visit</a>
-                  {secondaryHref && (
-                    <a href={secondaryHref} class="btn btn-secondary w-100">Visit the all laid out version</a>
-                  )}
                 </div>
               </div>
             </div>
