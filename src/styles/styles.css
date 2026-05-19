@@ -85,16 +85,13 @@ hr {
     flex-direction: column !important;
 }
 
-@media (min-width: 576px) {
-    .flex-sm-row {
-        flex-direction: row !important;
-    }
-}
-
 @media (min-width: 768px) {
     .mx-md-8 {
         margin-left: 5rem !important;
         margin-right: 5rem !important;
+    }
+    .flex-md-row {
+        flex-direction: row !important;
     }
 }
 
