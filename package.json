@@ -1,8 +1,8 @@
 {
   "name": "atproducts.xyz",
-  "version": "2.24.1",
+  "version": "2.25.0",
   "config": {
-    "version_short": "2.23"
+    "version_short": "2.25"
   },
   "scripts": {
     "dev": "astro dev",
@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/netlify": "^7.0.10",
     "@astrojs/react": "^5.0.5",
-    "astro": "^6.3.4",
+    "astro": "^6.3.5",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "jquery": "^4.0.0",
