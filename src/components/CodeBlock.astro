@@ -29,15 +29,15 @@ if (language === "CSS") {
 }
 ---
 
-<div class="bg-dark-subtle rounded-2">
-  <div class="py-2 px-3 border-bottom d-flex justify-content-between">
+<div class="bg-1 rounded-4">
+  <div class="bg-2 rounded-top-4 py-2 px-3 border-bottom d-flex justify-content-between">
     <div class="d-flex gap-2">
       {icon && <i class={`${icon} my-auto`}></i>}
       <small class="font-monospace my-auto">
         <span>{language}</span>
       </small>
     </div>
-    <i class="bi bi-clipboard btn btn-clipboard p-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy to Clipboard"></i>
+    <i class="bi bi-clipboard btn btn-clipboard bg-transparent p-0 min-h-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy to Clipboard"></i>
   </div>
   <pre class="p-3"><code class={`language-${highlight_as}`}><slot name="code-example" /></code></pre>
 </div>

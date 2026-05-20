@@ -1,6 +1,6 @@
 $(document).ready(function () {
   function cleanAndCopyCode() {
-      const parentContainer = $(this).closest('.bg-dark-subtle');
+      const parentContainer = $(this).closest('.bg-1');
       const codeElement = parentContainer.find('code');
       if (codeElement.length) {
           const htmlCode = codeElement.html();

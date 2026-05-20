@@ -1,16 +1,15 @@
 ---
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url"
+import bootstrap from "../scripts/bootstrap.bundle.js?url";
 
 import jquery from "jquery/dist/jquery.min.js?url";
 import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
 
-import '../styles/navbar.css';
 import '../styles/other.css';
 import '../styles/cookie.css';
 
-const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, contact, fourofour, accordion, scrollspy, breadcrumb, devicon } = Astro.props;
+const { highlight, title, heroid, icon, color, bulletin, description, keywords, author, additionalContent, index, contact, fourofour, accordion, breadcrumb, devicon } = Astro.props;
 
 if (highlight) {
   import('../styles/highlight.css');
@@ -63,7 +62,7 @@ if (devicon) {
       }    
       <link rel="manifest" href="/media/favicon/site.webmanifest">
       <meta charset="UTF-8">
-      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="msapplication-TileColor" content="#131415">
       <meta name="title" content={title}>
       <meta name="description" content={description}>
       <meta name="twitter:card" content="summary">
@@ -83,7 +82,7 @@ if (devicon) {
       {color ? (
         <meta name="theme-color" content={color}>
       ) : (
-        <meta name="theme-color" content="#212529">
+        <meta name="theme-color" content="#131415">
       )}
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -94,7 +93,13 @@ if (devicon) {
       <slot/>
     </Fragment>
     <Fragment>
-      <script src={bootstrap}></script>
+      <script>
+        import * as bootstrap from '../scripts/bootstrap.bundle.js';
+        Object.assign(window, bootstrap);
+        window.bootstrap = bootstrap;
+        window.bootstrapReady?.();
+      </script>
+
       <script src={jquery}></script>
       <script src={jqueryui}></script>
       {highlight && (
@@ -123,9 +128,6 @@ if (devicon) {
       {accordion && (
         <script is:inline src="/scripts/accordion-id.js"></script>
       )}    
-      {scrollspy && (
-        <script is:inline src="/scripts/scrollspy-id.js"></script>
-      )}
     </Fragment>
   </body>
 </html>

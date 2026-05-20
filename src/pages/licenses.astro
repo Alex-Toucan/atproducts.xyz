@@ -16,7 +16,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
       <h5> Last Updated: <time>January 6th, 2025</time>. </h5>
       <h5> Into Effect: <time>February 12th, 2025</time>. </h5>
       <div class="py-2" />
-      <Accordion parent="licensesAccordion">
+      <Accordion id="licensesAccordion">
         <Fragment slot="accordion-content">
           <AccordionItem title="AT Products LLC & atproducts.xyz License" id="atproductsxyz" parent="licensesAccordion">
             <Fragment slot="accordion-item-content">
@@ -90,7 +90,7 @@ import AccordionItem from '../components/accordion/AccordionItem.astro';
               </div>
             </Fragment>
           </AccordionItem>
-          <AccordionItem title="highlight.js License" id="highliht" parent="licensesAccordion">
+          <AccordionItem title="highlight.js License" id="highlight" parent="licensesAccordion">
             <Fragment slot="accordion-item-content">
               <h2>highlight.js License</h2>
               <p>

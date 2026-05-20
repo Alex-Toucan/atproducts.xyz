@@ -21,8 +21,8 @@ const {
 const flexSize = size ? size : 'md';
 ---
 
-<div id="intro" class={`hero hero-${id} text-center ${marginBottom === 'false' ? '' : 'mb-3'}`} data-bs-theme="dark">
-  <div class="hero-back h-100 p-3 position-relative">
+<div id="intro" class={`hero hero-${id} text-center ${marginBottom === 'false' ? '' : 'mb-4'}`} data-bs-theme="dark">
+  <div class="hero-back hero-border h-100 p-3 position-relative">
     <div class="hero-filter w-100 align-items-center d-flex justify-content-center my-466 text-center">
       <div class="text-white">
         { htmlContent ? (
@@ -34,29 +34,30 @@ const flexSize = size ? size : 'md';
                 <img src={imageSrc} width={imageWidth} alt="icon" class={imageClasses} alt={`${imageAlt ? imageAlt : 'icon'}`} />
               )}
               {title && (
-                <h1 class={`display-3 fw-bold ${imageSrc ? 'mt-mmd-4 d-block d-md-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
+                <h1 class={`fs-4xl md:fs-5xl fw-bold md:mb-0 ${imageSrc ? 'mt-4 md:mt-0 d-block md:d-inline align-middle' : ''} ${titleClasses ? titleClasses : ''}`}>{title}</h1>
               )}
             </div>
-            <p class="fs-4 m-3 mb-0 text-body-secondary" set:html={description}></p>
-            <div class="mx-auto justify-content-between container mt-3" id="links">
-              <div class={`d-${flexSize}-flex d-grid gap-2`}>
+            <p class="fs-lg m-3 mb-0 fg-2" set:html={description}></p>
+            <div class="mx-auto justify-content-between container mt-4" id="links">
+              <div class={`${flexSize}:d-flex d-grid gap-2`}>
                 {errorButton && (
                   <Fragment set:html={errorButton} />
                 )}
                 {buttons && (
                   buttons.map(({ href, text, type }, index) => (
-                    <a href={href} class={`btn btn-${type} col-md`}>{text}</a>
+                    <a href={href} class={`btn-solid theme-${type} md:col`}>{text}</a>
                   ))
                 )}
                 {dropdownItems && (
-                  <div class="dropdown col-md">
-                    <button aria-expanded="false" data-bs-toggle="dropdown" type="button" class="btn btn-secondary dropdown-toggle w-100">
+                  <div class="dropdown md:col">
+                    <button aria-expanded="false" data-bs-toggle="menu" data-bs-placement="bottom" type="button" class="btn-solid theme-secondary dropdown-toggle w-100">
                       Navigation
+                      <i class="bi bi-chevron-expand ms-1"></i>
                     </button>
-                    <ul class="dropdown-menu w-100 white-space-normal">
+                    <ul class="menu white-space-normal">
                       {dropdownItems.map(({ navigationDesc, navigationLink }, index) => (
                         <li>
-                          <a class="dropdown-item" href={navigationLink}>{navigationDesc}</a>
+                          <a class="menu-item" href={navigationLink}>{navigationDesc}</a>
                         </li>
                       ))}
                     </ul>
@@ -64,9 +65,9 @@ const flexSize = size ? size : 'md';
                 )}
               </div>
               {icons && (
-                <div class="mt-2 p-1 d-flex justify-content-center gap-3 bg-dark rounded-2" id="icons">
+                <div class="mt-2 p-1 d-flex justify-content-center gap-4 bg-1 rounded-5" id="icons">
                   {icons && icons.map(({ icon, desc, href }, index) => (
-                    <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero fs-7" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc}>
+                    <a href={href} aria-label={desc} target="_blank" rel="noopener noreferrer" class="link-hero" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title={desc}>
                       <i class={`bi bi-${icon}`}></i>
                     </a>
                   ))}

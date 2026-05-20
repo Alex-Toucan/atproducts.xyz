@@ -24,26 +24,26 @@ import '../../../styles/imagesizes.css'
           <h5 class="text-start"><b>Made by:</b> <a href="/script">The Script Community</a>.</h5>
           <h5 class="text-start"><b>Published by:</b> <a href="/">AT Products LLC</a>.</h5>
           <div class="d-flex flex-wrap gap-2 pt-2">
-            <a href="https://www.i-techsupport.com/everything-you-need-to-know-about-phishing-attacks/" target="_blank" rel="noreferrer noopener" class="btn btn-info mb-1 me-0">Techsupport.com</a>
-            <a href="https://en.wikipedia.org/wiki/Phishing" target="_blank" rel="noreferrer noopener" class="btn btn-info mb-1 mx-0">Source (Wikipedia)</a>
-            <a href="https://phish.report" target="_blank" rel="noreferrer noopener" class="btn btn-info mb-1">Report Phishing</a>
+            <a href="https://www.i-techsupport.com/everything-you-need-to-know-about-phishing-attacks/" target="_blank" rel="noreferrer noopener" class="btn-solid theme-info mb-1 me-0">Techsupport.com</a>
+            <a href="https://en.wikipedia.org/wiki/Phishing" target="_blank" rel="noreferrer noopener" class="btn-solid theme-info mb-1 mx-0">Source (Wikipedia)</a>
+            <a href="https://phish.report" target="_blank" rel="noreferrer noopener" class="btn-solid theme-info mb-1">Report Phishing</a>
           </div>
           <hr>
         </div>
         <div id="content">
-          <div class="d-md-flex gap-2">
-            <figure class="figure mt-0 mb-2 col-md-6">
+          <div class="md:d-flex gap-2">
+            <figure class="figure mt-0 mb-2 md:col-6">
               <img src="/media/images/Phish.jpg" alt="Frame of an animation by the U.S. Federal Trade Commission intended to educate citizens about phishing tactics." width="100%" class="rounded-1 animation-image">
               <figcaption class="figure-caption mt-2"><a href="https://commons.wikimedia.org/wiki/File:Phish.jpg">Phish</a> by the <a href="https://www.ftc.gov/">U.S. Federal Trade Commission</a> is licensed under the public domain.</figcaption>
             </figure>
-            <figure class="figure h-100 mt-auto mb-2 col-md-6">
+            <figure class="figure h-100 mt-auto mb-2 md:col-6">
               <img src="/media/images/Computer_virus_scam.jpg" alt="Computer virus scam" width="100%" class="rounded-1 virus-image`">
               <figcaption class="figure-caption mt-2"><a href="https://commons.wikimedia.org/wiki/File:Computer_virus_scam.jpg">Computer virus scam</a> by <a href="https://commons.wikimedia.org/wiki/User:Packer1028">Packer1028</a> is licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</a></figcaption>
             </figure>
          </div>
           <p> Phishing is a type of social engineering where an attacker sends a fraudulent (e.g., spoofed, fake, or otherwise deceptive) message designed to trick a human victim into revealing sensitive information to the attacker or to deploy malicious software on the victim's infrastructure like ransomware. Phishing attacks have become increasingly sophisticated and often transparently mirror the site being targeted.
           <br> As of 2024, phishing is by far the most common attack performed by cybercriminals. </p>
-          <Accordion parent="phishing-accordion">
+          <Accordion id="phishing-accordion">
             <Fragment slot="accordion-content">
               <AccordionItem title="Email Phishing" id="eph" parent="phishing-accordion">
                 <Fragment slot="accordion-item-content">
@@ -70,7 +70,7 @@ import '../../../styles/imagesizes.css'
                   <p class="mb-0">Watering hole is a computer attack strategy in which an attacker guesses or observes which websites an organization often uses and infects one or more of them with malware. Eventually, some member of the targeted group will become infected.</p>
                 </Fragment>
               </AccordionItem>
-              <AccordionItem title="Clone Phishing" id="cph" parent="phishing-accordion">
+              <AccordionItem title="Clone Phishing" id="cph" parent="phishing-accordion ">
                 <Fragment slot="accordion-item-content">
                   <p class="mb-0">Clone phishing is a type of phishing attack whereby a legitimate, and previously delivered email containing an attachment or link has had its content and recipient address(es) taken and used to create an almost identical or cloned email. The attachment or link within the email is replaced with a malicious version and then sent from an email address spoofed to appear to come from the original sender.</p>
                 </Fragment>
