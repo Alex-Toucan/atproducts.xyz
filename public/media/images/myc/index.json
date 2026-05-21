@@ -1,0 +1,26 @@
+[
+  {
+    "name": "construct.png",
+    "path": "images/myc/construct.png",
+    "type": "file",
+    "size": "905.11 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "image/png"
+  },
+  {
+    "name": "dumb.txt",
+    "path": "images/myc/dumb.txt",
+    "type": "file",
+    "size": "3 B",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/plain"
+  },
+  {
+    "name": "index.json",
+    "path": "images/myc/index.json",
+    "type": "file",
+    "size": "524 B",
+    "mtime": "2026-05-20 14:02",
+    "mime": "application/json"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "1.png",
+    "path": "livestream/1.png",
+    "type": "file",
+    "size": "205.97 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "image/png"
+  },
+  {
+    "name": "2.png",
+    "path": "livestream/2.png",
+    "type": "file",
+    "size": "24.71 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "image/png"
+  },
+  {
+    "name": "3.png",
+    "path": "livestream/3.png",
+    "type": "file",
+    "size": "24.71 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "image/png"
+  },
+  {
+    "name": "index.json",
+    "path": "livestream/index.json",
+    "type": "file",
+    "size": "669 B",
+    "mtime": "2026-05-20 14:02",
+    "mime": "application/json"
+  }
+]

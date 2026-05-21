@@ -1,0 +1,42 @@
+[
+  {
+    "name": "index.json",
+    "path": "images/internals/index.json",
+    "type": "file",
+    "size": "1.05 kB",
+    "mtime": "2026-05-20 14:02",
+    "mime": "application/json"
+  },
+  {
+    "name": "Screenshot 2022-03-27 1.16.50 PM.png",
+    "path": "images/internals/Screenshot 2022-03-27 1.16.50 PM.png",
+    "type": "file",
+    "size": "62.91 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "image/png"
+  },
+  {
+    "name": "Screenshot 2022-03-27 1.18.21 PM.png",
+    "path": "images/internals/Screenshot 2022-03-27 1.18.21 PM.png",
+    "type": "file",
+    "size": "45.65 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "image/png"
+  },
+  {
+    "name": "Screenshot 2022-03-27 1.18.51 PM.png",
+    "path": "images/internals/Screenshot 2022-03-27 1.18.51 PM.png",
+    "type": "file",
+    "size": "50.39 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "image/png"
+  },
+  {
+    "name": "_.txt",
+    "path": "images/internals/_.txt",
+    "type": "file",
+    "size": "2 B",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/plain"
+  }
+]

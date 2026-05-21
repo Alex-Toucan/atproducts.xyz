@@ -1,0 +1,186 @@
+[
+  {
+    "name": "android-chrome-192x192.png",
+    "path": "favicon/android-chrome-192x192.png",
+    "type": "file",
+    "size": "6.88 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "android.png",
+    "path": "favicon/android.png",
+    "type": "file",
+    "size": "6.76 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "apple-touch-icon.png",
+    "path": "favicon/apple-touch-icon.png",
+    "type": "file",
+    "size": "6.83 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "ATP_Document_Example.pdf",
+    "path": "favicon/ATP_Document_Example.pdf",
+    "type": "file",
+    "size": "60.53 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "application/pdf"
+  },
+  {
+    "name": "blue",
+    "path": "favicon/blue",
+    "type": "directory",
+    "size": null,
+    "mtime": "2026-05-20 13:52",
+    "mime": null
+  },
+  {
+    "name": "browserconfig.xml",
+    "path": "favicon/browserconfig.xml",
+    "type": "file",
+    "size": "255 B",
+    "mtime": "2026-03-09 08:53",
+    "mime": "application/xml"
+  },
+  {
+    "name": "create.txt",
+    "path": "favicon/create.txt",
+    "type": "file",
+    "size": "5 B",
+    "mtime": "2026-05-20 12:51",
+    "mime": "text/plain"
+  },
+  {
+    "name": "favicon-16x16.png",
+    "path": "favicon/favicon-16x16.png",
+    "type": "file",
+    "size": "657 B",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "favicon-32x32.png",
+    "path": "favicon/favicon-32x32.png",
+    "type": "file",
+    "size": "1.16 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "favicon.ico",
+    "path": "favicon/favicon.ico",
+    "type": "file",
+    "size": "15.09 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/vnd.microsoft.icon"
+  },
+  {
+    "name": "favicon.png",
+    "path": "favicon/favicon.png",
+    "type": "file",
+    "size": "12.55 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "faviconblack.png",
+    "path": "favicon/faviconblack.png",
+    "type": "file",
+    "size": "11.43 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "iconblack.png",
+    "path": "favicon/iconblack.png",
+    "type": "file",
+    "size": "5.63 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "iconembed.png",
+    "path": "favicon/iconembed.png",
+    "type": "file",
+    "size": "191.76 kB",
+    "mtime": "2026-05-14 21:33",
+    "mime": "image/png"
+  },
+  {
+    "name": "index.json",
+    "path": "favicon/index.json",
+    "type": "file",
+    "size": "4.16 kB",
+    "mtime": "2026-05-20 14:02",
+    "mime": "application/json"
+  },
+  {
+    "name": "longblack.png",
+    "path": "favicon/longblack.png",
+    "type": "file",
+    "size": "17.76 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "longwhite.png",
+    "path": "favicon/longwhite.png",
+    "type": "file",
+    "size": "9.12 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "mstile-150x150.png",
+    "path": "favicon/mstile-150x150.png",
+    "type": "file",
+    "size": "7.84 kB",
+    "mtime": "2026-05-14 21:33",
+    "mime": "image/png"
+  },
+  {
+    "name": "rom-beta.png",
+    "path": "favicon/rom-beta.png",
+    "type": "file",
+    "size": "18.68 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "safari-pinned-tab.svg",
+    "path": "favicon/safari-pinned-tab.svg",
+    "type": "file",
+    "size": "3.59 kB",
+    "mtime": "2026-05-14 21:33",
+    "mime": "image/svg+xml"
+  },
+  {
+    "name": "shortblack.png",
+    "path": "favicon/shortblack.png",
+    "type": "file",
+    "size": "6.5 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "shortwhite.png",
+    "path": "favicon/shortwhite.png",
+    "type": "file",
+    "size": "6.5 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "image/png"
+  },
+  {
+    "name": "site.webmanifest",
+    "path": "favicon/site.webmanifest",
+    "type": "file",
+    "size": "744 B",
+    "mtime": "2026-05-20 12:51",
+    "mime": "application/manifest+json"
+  }
+]

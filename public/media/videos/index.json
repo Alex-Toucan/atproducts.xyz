@@ -1,0 +1,26 @@
+[
+  {
+    "name": "index.json",
+    "path": "videos/index.json",
+    "type": "file",
+    "size": "611 B",
+    "mtime": "2026-05-20 14:02",
+    "mime": "application/json"
+  },
+  {
+    "name": "Screen Recording 2025-08-07 140449.mp4",
+    "path": "videos/Screen Recording 2025-08-07 140449.mp4",
+    "type": "file",
+    "size": "4.01 MB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "video/mp4"
+  },
+  {
+    "name": "signal-2025-08-06-124848_002.mp4",
+    "path": "videos/signal-2025-08-06-124848_002.mp4",
+    "type": "file",
+    "size": "1.32 MB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "video/mp4"
+  }
+]

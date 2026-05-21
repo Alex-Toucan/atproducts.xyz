@@ -1,0 +1,162 @@
+[
+  {
+    "name": "404.js",
+    "path": "static/404.js",
+    "type": "file",
+    "size": "129 B",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "accordion-id.js",
+    "path": "static/accordion-id.js",
+    "type": "file",
+    "size": "1.23 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "alert-1.js",
+    "path": "static/alert-1.js",
+    "type": "file",
+    "size": "2.46 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "",
+    "path": "static/backup/",
+    "type": "directory",
+    "size": null,
+    "mtime": "2026-05-20 13:52",
+    "mime": null
+  },
+  {
+    "name": "bootstrap.css",
+    "path": "static/bootstrap.css",
+    "type": "file",
+    "size": "416.09 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/css"
+  },
+  {
+    "name": "bootstrap.css.map",
+    "path": "static/bootstrap.css.map",
+    "type": "file",
+    "size": "588.93 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "application/json"
+  },
+  {
+    "name": "cookie.css",
+    "path": "static/cookie.css",
+    "type": "file",
+    "size": "442 B",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/css"
+  },
+  {
+    "name": "darkmode.js",
+    "path": "static/darkmode.js",
+    "type": "file",
+    "size": "2.5 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "enabler.js",
+    "path": "static/enabler.js",
+    "type": "file",
+    "size": "208 B",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "index.js",
+    "path": "static/index.js",
+    "type": "file",
+    "size": "2.99 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "index.json",
+    "path": "static/index.json",
+    "type": "file",
+    "size": "3.28 kB",
+    "mtime": "2026-05-20 13:52",
+    "mime": "application/json"
+  },
+  {
+    "name": "message.js",
+    "path": "static/message.js",
+    "type": "file",
+    "size": "820 B",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "modal-id.js",
+    "path": "static/modal-id.js",
+    "type": "file",
+    "size": "1.86 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "other.css",
+    "path": "static/other.css",
+    "type": "file",
+    "size": "149.6 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/css"
+  },
+  {
+    "name": "purecookie.js",
+    "path": "static/purecookie.js",
+    "type": "file",
+    "size": "2.11 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "scroll.js",
+    "path": "static/scroll.js",
+    "type": "file",
+    "size": "409 B",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "scrollspy-id.js",
+    "path": "static/scrollspy-id.js",
+    "type": "file",
+    "size": "1.25 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "secondary.css",
+    "path": "static/secondary.css",
+    "type": "file",
+    "size": "127.03 kB",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/css"
+  },
+  {
+    "name": "version.js",
+    "path": "static/version.js",
+    "type": "file",
+    "size": "23 B",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  },
+  {
+    "name": "year.js",
+    "path": "static/year.js",
+    "type": "file",
+    "size": "42 B",
+    "mtime": "2026-05-20 12:52",
+    "mime": "text/javascript"
+  }
+]

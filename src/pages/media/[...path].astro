@@ -1,0 +1,117 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+
+export async function getStaticPaths() {
+  const root = path.join(process.cwd(), "public/media");
+
+  function walk(dir, prefix = "") {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    let paths = [];
+
+    paths.push({ params: { path: prefix } });
+
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        const sub = prefix ? `${prefix}/${entry.name}` : entry.name;
+        paths = paths.concat(walk(path.join(dir, entry.name), sub));
+      }
+    }
+
+    return paths;
+  }
+
+  return walk(root);
+}
+
+const reqPath = typeof Astro.params.path === "string" ? Astro.params.path : "";
+
+const dir = path.join(process.cwd(), "public/media", reqPath);
+
+const indexFile = path.join(dir, "index.json");
+
+let items = [];
+if (fs.existsSync(indexFile)) {
+  items = JSON.parse(fs.readFileSync(indexFile, "utf8"));
+}
+
+items = items.sort((a, b) => {
+  if (a.type === "directory" && b.type !== "directory") return -1;
+  if (a.type !== "directory" && b.type === "directory") return 1;
+  return a.name.localeCompare(b.name);
+});
+
+const parent = reqPath.split("/").slice(0, -1).join("/");
+const parentUrl = parent ? `/media/${parent}` : `/media`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Index of /media/{reqPath}</title>
+
+    <style>
+      body {
+        background: #111;
+        color: #ddd;
+        font-family: monospace;
+        padding: 2rem;
+      }
+      a {
+        color: #4da3ff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 0.5rem;
+        border-bottom: 1px solid #333;
+        text-align: left;
+      }
+      tr:hover {
+        background: #1a1a1a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Index of /media/{reqPath}</h1>
+
+    {reqPath && (
+      <p>
+        <a href={parentUrl}>⬅ Parent Directory</a>
+      </p>
+    )}
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Size</th>
+          <th>Modified</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map(item => {
+          const url = `/media/${item.path}`;
+          return (
+            <tr>
+              <td>
+                <a href={url}>
+                  {item.type === "directory" ? "📁" : "📄"} {item.name}
+                </a>
+              </td>
+              <td>{item.size ?? "-"}</td>
+              <td>{item.mtime}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </body>
+</html>

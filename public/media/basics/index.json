@@ -1,0 +1,66 @@
+[
+  {
+    "name": "css-coding.txt",
+    "path": "basics/css-coding.txt",
+    "type": "file",
+    "size": "1.72 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "text/plain"
+  },
+  {
+    "name": "html-coding.txt",
+    "path": "basics/html-coding.txt",
+    "type": "file",
+    "size": "1.08 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "text/plain"
+  },
+  {
+    "name": "html-script.txt",
+    "path": "basics/html-script.txt",
+    "type": "file",
+    "size": "1.1 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "text/plain"
+  },
+  {
+    "name": "index.json",
+    "path": "basics/index.json",
+    "type": "file",
+    "size": "1.41 kB",
+    "mtime": "2026-05-20 14:02",
+    "mime": "application/json"
+  },
+  {
+    "name": "js-coding.txt",
+    "path": "basics/js-coding.txt",
+    "type": "file",
+    "size": "1.12 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "text/plain"
+  },
+  {
+    "name": "js-script.txt",
+    "path": "basics/js-script.txt",
+    "type": "file",
+    "size": "1.12 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "text/plain"
+  },
+  {
+    "name": "py-coding.txt",
+    "path": "basics/py-coding.txt",
+    "type": "file",
+    "size": "1.03 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "text/plain"
+  },
+  {
+    "name": "py-script.txt",
+    "path": "basics/py-script.txt",
+    "type": "file",
+    "size": "1.85 kB",
+    "mtime": "2026-05-20 12:51",
+    "mime": "text/plain"
+  }
+]
