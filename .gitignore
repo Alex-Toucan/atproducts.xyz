@@ -26,3 +26,6 @@ pnpm-debug.log*
 
 # Local Netlify folder
 .netlify
+
+# LFS Database
+**/index*.json
