@@ -1,5 +1,5 @@
 {
-  "name": "astro-file-browser",
+  "name": "lfs-atproducts",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -8,10 +8,10 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^4.0.0",
-    "fast-glob": "^3.3.2",
-    "filesize": "^10.0.7",
-    "dayjs": "^1.11.10",
-    "mime-types": "^2.1.35"
+    "astro": "^6.3.7",
+    "dayjs": "^1.11.20",
+    "fast-glob": "^3.3.3",
+    "filesize": "^11.0.17",
+    "mime-types": "^3.0.2"
   }
 }
