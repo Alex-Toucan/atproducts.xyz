@@ -1,10 +1,10 @@
 {
-  "name": "ATPLLC LFS",
-  "short_name": "ATPLLC LFS",
-  "theme_color": "#212529",
-  "background_color": "#212529",
+  "name": "AT Products LLC",
+  "short_name": "AT Products LLC",
+  "theme_color": "#131415",
+  "background_color": "#131415",
   "display": "standalone",
-  "id": "1.0.0",
+  "id": "2.25",
   "start_url": "/",
   "prefer_related_applications": false,
   "icons": [
