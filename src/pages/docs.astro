@@ -1,0 +1,879 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+import "../styles/docs.css";
+---
+
+<Layout 
+    title="RSH Script Engine Documentation" 
+    description="RSH (RadiumOS Shell Script) is a lightweight cooperative scripting language that runs directly on the bare-metal RadiumOS kernel."
+    keywords="radiumos, radium os, pynx, operating system, os, 32-bit, written from scratch, rsh, script engine, documentation, docs"
+    author="AT Products LLC & Pynx"
+>
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a class="sidebar-brand audiowide" href="#">
+                RSH Script Engine
+                <span>RadiumOS Docs · v2.3</span>
+            </a>
+            <a class="main-link audiowide" href="/">
+                <i class="bi bi-arrow-left"></i> Back to Home
+            </a>
+
+            <div class="sidebar-section">Contents</div>
+            <nav id="sideNav">
+                <a href="#basics">1. Basics &amp; File Structure</a>
+                <a href="#comments">2. Comments</a>
+                <a href="#variables">3. Variables</a>
+                <a href="#output">4. Output Commands</a>
+                <a href="#math">5. Math &amp; Arithmetic</a>
+                <a href="#bitwise">6. Bitwise Operations</a>
+                <a href="#strings">7. String Operations</a>
+                <a href="#control">8. Control Flow</a>
+                <a href="#loops">9. Loops</a>
+                <a href="#switch">10. Switch / Case</a>
+                <a href="#functions">11. Functions</a>
+                <a href="#maps">12. Maps</a>
+                <a href="#files">13. File / AVFS Commands</a>
+                <a href="#io">14. Port I/O</a>
+                <a href="#vga">15. VGA Text Commands</a>
+                <a href="#timing">16. Timing Commands</a>
+                <a href="#typecheck">17. Type Checks</a>
+                <a href="#misc">18. Misc / Utility</a>
+                <a href="#limits">19. Engine Limits</a>
+                <a href="#example">20. Example: Keyboard Poller</a>
+            </nav>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="content">
+
+            <h1 class="audiowide">RSH Script Engine v2.3</h1>
+            <p class="doc-byline">RadiumOS Documentation &mdash; Written by scp_2801</p>
+
+            <p>RSH (RadiumOS Shell Script) is a lightweight cooperative scripting language that runs directly on the bare-metal RadiumOS kernel. It has no heap allocation, no dynamic memory, and uses fixed-size static buffers throughout. Scripts are loaded from AVFS, parsed into a flat line array, and executed cooperatively by the kernel.</p>
+
+            <!-- TOC -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ol>
+                    <li><a href="#basics">Basics and File Structure</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#output">Output Commands</a></li>
+                    <li><a href="#math">Math and Arithmetic</a></li>
+                    <li><a href="#bitwise">Bitwise Operations</a></li>
+                    <li><a href="#strings">String Operations</a></li>
+                    <li><a href="#control">Control Flow</a></li>
+                    <li><a href="#loops">Loops</a></li>
+                    <li><a href="#switch">Switch / Case</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#maps">Maps</a></li>
+                    <li><a href="#files">File / AVFS Commands</a></li>
+                    <li><a href="#io">Port I/O</a></li>
+                    <li><a href="#vga">VGA Text Commands</a></li>
+                    <li><a href="#timing">Timing Commands</a></li>
+                    <li><a href="#typecheck">Type Checks</a></li>
+                    <li><a href="#misc">Misc / Utility</a></li>
+                    <li><a href="#limits">Engine Limits</a></li>
+                    <li><a href="#example">Example: Keyboard Poller</a></li>
+                </ol>
+            </div>
+
+            <hr>
+
+            <!-- 1 -->
+            <h2 id="basics">1. Basics and File Structure</h2>
+            <p>RSH scripts are plain text files stored in AVFS. They are executed by calling <code>script_execute_file(path)</code> from C, or via the RSH shell command.</p>
+            <p>A script is read top-to-bottom. Blank lines and comment lines are skipped. Every non-blank, non-comment line is a command. Lines are trimmed of leading and trailing whitespace before execution.</p>
+            <p>The maximum file size is <strong>32768 bytes (32 KB)</strong>. The maximum number of lines per file is <strong>1000</strong>. Each line may be at most <strong>255 characters</strong>.</p>
+            <p>The file extension <code>.rsh</code> is automatically tried if the given path does not exist verbatim. So <code>script_execute_file("myscript")</code> will also try <code>myscript.rsh</code>.</p>
+
+            <h3>Entrypoint Declaration</h3>
+            <p>If your script defines functions and wants execution to start from a <code>main</code> function rather than top-to-bottom, put this at the top of the file:</p>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>^entrypoint</pre>
+            </div>
+            <p>This causes the engine to collect all function definitions first, then call <code>main</code> automatically. Without this directive, all non-function lines execute immediately top to bottom.</p>
+
+            <h3>Include</h3>
+            <p>You can include another RSH file with:</p>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>^include filename
+    ^include "other_script.rsh"</pre>
+            </div>
+            <p>Includes may be nested up to <strong>8 levels deep</strong>. The included file runs in the same script context (shares variables, maps, and functions).</p>
+
+            <hr>
+
+            <!-- 2 -->
+            <h2 id="comments">2. Comments</h2>
+            <p>Any line beginning with <code>%</code> or <code>#</code> is a comment and is completely ignored.</p>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>% This is a comment
+    # This is also a comment
+    echo Hello   % inline comments are NOT supported - only full-line comments work</pre>
+            </div>
+            <p>The special token <code>__~~%~~__</code> at the start of a line is also treated as a comment (used internally).</p>
+
+            <hr>
+
+            <!-- 3 -->
+            <h2 id="variables">3. Variables</h2>
+            <p>Variables are untyped. They hold byte strings. Numbers are stored as decimal strings and parsed on demand. There is no type system.</p>
+            <p>Variable names may contain letters, digits, and underscores. They are case-sensitive. There are at most <strong>32 variables</strong> active at once per scope.</p>
+
+            <h3>Setting Variables</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>set NAME value
+    set NAME "value with spaces"
+    let NAME value
+    export NAME value</pre>
+            </div>
+            <p><code>set</code>, <code>let</code>, and <code>export</code> are identical. Calling <code>set NAME</code> with no value sets it to an empty string.</p>
+
+            <h3>Variable Expansion</h3>
+            <p>Use <code>$NAME</code> or <code>$&lbrace;NAME&rbrace;</code> anywhere in a line to substitute its value. Expansion happens before the command is parsed.</p>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>set X 42
+    echo The value is $X
+    echo Also works: $&lbrace;X&rbrace;</pre>
+            </div>
+
+            <h3>Unsetting / Default / Swap / Copy</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>unset NAME
+    default NAME fallback_value
+    swap A B      % exchanges values of A and B
+    copy SRC DST  % copies value of SRC into DST</pre>
+            </div>
+
+            <h3>Listing / Debugging</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>vars           % print all defined variables
+    dump VARNAME   % print raw bytes of a variable as hex</pre>
+            </div>
+
+            <h3>Special Variables Set by the Engine</h3>
+            <ul>
+                <li><code>ARG_COUNT</code> — number of arguments passed to the current function</li>
+                <li><code>1</code>, <code>2</code>, <code>3</code>, ... — positional arguments inside a function</li>
+                <li><code>TICKS</code> — set by the <code>ticks</code> command</li>
+                <li><code>INB</code> / <code>INW</code> / <code>INL</code> — set by the respective port read commands</li>
+                <li><code>ITER</code> — current iteration index inside <code>repeat</code></li>
+                <li><code>key</code> and <code>val</code> — set automatically inside a <code>with</code> block</li>
+            </ul>
+
+            <hr>
+
+            <!-- 4 -->
+            <h2 id="output">4. Output Commands</h2>
+
+            <h3>echo</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>echo Hello World
+    echo "Value is" $X</pre>
+            </div>
+            <p>Prints all arguments separated by spaces, followed by a newline.</p>
+
+            <h3>print</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>print Hello
+    print $X</pre>
+            </div>
+            <p>Prints arguments concatenated with no separator and no trailing newline.</p>
+
+            <h3>echoln</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>echoln VARNAME</pre>
+            </div>
+            <p>Prints the value of the named variable followed by a newline. Takes a variable name, not a literal value.</p>
+
+            <h3>printf</h3>
+            <p>Formatted output. Supports format specifiers:</p>
+            <ul>
+                <li><code>%s</code> — string argument</li>
+                <li><code>%d</code> — decimal integer argument</li>
+                <li><code>%x</code> — hex integer argument (prints as 0xNNNN)</li>
+                <li><code>%%</code> — literal percent sign</li>
+                <li><code>%n</code> — newline</li>
+                <li><code>%t</code> — typewriter effect: prints one character at a time with 100ms delay</li>
+            </ul>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>set NAME scp_2801
+    printf "Hello %s you have %d items%n" $NAME 5
+    printf "Port value: %x%n" $PORTVAL</pre>
+            </div>
+
+            <hr>
+
+            <!-- 5 -->
+            <h2 id="math">5. Math and Arithmetic</h2>
+            <p>All math operates on 64-bit signed integers. Values are stored and read as decimal strings.</p>
+
+            <h3>math</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>math RESULT_VAR expression
+    math X $A + $B
+    math Y $X * 3</pre>
+            </div>
+            <p>Supported operators: <code>+</code> <code>-</code> <code>*</code> <code>/</code>. Evaluates left to right. For complex expressions use multiple math calls.</p>
+
+            <h3>inc / dec</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>inc VARNAME         % adds 1
+    inc VARNAME 5       % adds 5
+    dec VARNAME         % subtracts 1
+    dec VARNAME 3       % subtracts 3</pre>
+            </div>
+
+            <h3>mod / div / pow</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>mod A B RESULT      % RESULT = A mod B
+    div A B RESULT      % RESULT = A / B (integer division)
+    pow BASE EXP RESULT % RESULT = BASE ^ EXP</pre>
+            </div>
+
+            <h3>sqrt / abs / min / max / clamp / sign</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>sqrt N RESULT           % integer square root
+    abs N RESULT            % absolute value
+    min A B RESULT          % smaller of A and B
+    max A B RESULT          % larger of A and B
+    clamp N LO HI RESULT    % clamps N to [LO, HI]
+    sign N RESULT           % -1, 0, or 1</pre>
+            </div>
+
+            <h3>rand / hex / dec2</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>rand MIN MAX RESULT     % random integer in [MIN, MAX]
+    hex N RESULT            % converts decimal N to hex string (e.g. 0x1F)
+    dec2 N RESULT           % parses N (may be hex) and stores decimal value</pre>
+            </div>
+
+            <hr>
+
+            <!-- 6 -->
+            <h2 id="bitwise">6. Bitwise Operations</h2>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>band A B RESULT     % bitwise AND
+    bor  A B RESULT     % bitwise OR
+    bxor A B RESULT     % bitwise XOR
+    bnot A RESULT       % bitwise NOT (32-bit)
+    shl  A N RESULT     % shift A left by N bits
+    shr  A N RESULT     % shift A right by N bits
+    bit.set  A N RESULT % set bit N in A
+    bit.clr  A N RESULT % clear bit N in A
+    bit.test A N RESULT % result is 1 if bit N of A is set, else 0</pre>
+            </div>
+
+            <hr>
+
+            <!-- 7 -->
+            <h2 id="strings">7. String Operations</h2>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>strlen   VARNAME RESULT                    % length of value
+    substr   VARNAME START LEN RESULT           % extract substring
+    strcat   DEST SRC1 SRC2 ...                 % append SRC values onto DEST
+    strrep   VARNAME OLD NEW RESULT             % replace first occurrence
+    strrep.all VARNAME OLD NEW RESULT           % replace all occurrences
+    strupper VARNAME RESULT                     % uppercase copy
+    strlower VARNAME RESULT                     % lowercase copy
+    strfind  VARNAME NEEDLE RESULT              % index of first match, or -1
+    strsplit VARNAME SEPARATOR INDEX RESULT     % token at INDEX (zero-based)
+    strcount VARNAME NEEDLE RESULT              % count occurrences of NEEDLE
+    strtrim  VARNAME RESULT                     % whitespace-trimmed copy
+    strpad   VARNAME WIDTH PADCHAR RESULT       % left-pad to WIDTH
+    strpad.r VARNAME WIDTH PADCHAR RESULT       % right-pad to WIDTH
+    strhex   VARNAME RESULT                     % encode bytes as hex string
+    strrev   VARNAME RESULT                     % reverse the string
+    strjoin  SEPARATOR ARG1 ARG2 ... RESULT     % join args with SEPARATOR
+    strstarts VARNAME PREFIX RESULT             % 1 if starts with PREFIX
+    strends   VARNAME SUFFIX RESULT             % 1 if ends with SUFFIX
+    strsub.r  VARNAME N RESULT                  % last N characters</pre>
+            </div>
+
+            <hr>
+
+            <!-- 8 -->
+            <h2 id="control">8. Control Flow</h2>
+
+            <h3>if / elif / else / endif</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>if CONDITION
+    ... body ...
+    elif OTHER_CONDITION
+    ... body ...
+    else
+    ... body ...
+    endif</pre>
+            </div>
+            <p>Conditions support:</p>
+            <ul>
+                <li>Comparison: <code>==</code> <code>!=</code> <code>&lt;</code> <code>&gt;</code> <code>&lt;=</code> <code>&gt;=</code></li>
+                <li>Logical: <code>&amp;&amp;</code> <code>||</code></li>
+                <li>Negation: <code>!CONDITION</code></li>
+                <li>Keyword checks: <code>defined VARNAME</code>, <code>empty VARNAME</code>, <code>exists FILENAME</code>, <code>has MAPNAME KEY</code></li>
+                <li>Bare values: <code>true</code> <code>false</code> <code>1</code> <code>0</code> <code>yes</code> <code>no</code></li>
+            </ul>
+
+            <h3>Inline if</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>if CONDITION do COMMAND
+    if CONDITION do COMMAND else OTHER_COMMAND
+    echo hello if $X == 5</pre>
+            </div>
+
+            <h3>break / continue / return / exit</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>break       % exits current loop
+    continue    % skips to next loop iteration
+    return      % exits current function
+    exit N      % exits script with code N</pre>
+            </div>
+
+            <h3>assert</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>assert CONDITION
+    assert CONDITION "message if fails"</pre>
+            </div>
+
+            <hr>
+
+            <!-- 9 -->
+            <h2 id="loops">9. Loops</h2>
+
+            <h3>while</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>while CONDITION
+    ... body ...
+    endwhile</pre>
+            </div>
+            <p>Maximum iterations: <strong>100,000,000</strong>. Use <code>break</code> to exit early.</p>
+
+            <h3>for (range)</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>for VAR in START..END
+    ... body ...
+    endfor
+
+    for VAR in START..END..STEP
+    ... body ...
+    endfor</pre>
+            </div>
+            <p>STEP may be negative for counting down.</p>
+
+            <h3>for (token list)</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>for VAR in token1 token2 token3
+    ... body ...
+    endfor</pre>
+            </div>
+
+            <h3>repeat</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>repeat N COMMAND</pre>
+            </div>
+            <p>Runs COMMAND N times. <code>ITER</code> holds the current zero-based index.</p>
+
+            <hr>
+
+            <!-- 10 -->
+            <h2 id="switch">10. Switch / Case</h2>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>switch $VARIABLE
+    case value1
+    ... body ...
+    endcase
+    case value2
+    ... body ...
+    endcase
+    default
+    ... body ...
+    endcase
+    endswitch</pre>
+            </div>
+            <p>Only the first matching case runs. The <code>default</code> block runs if no case matched.</p>
+
+            <hr>
+
+            <!-- 11 -->
+            <h2 id="functions">11. Functions</h2>
+            <p>Maximum <strong>64 functions</strong> simultaneously. Each body may have at most <strong>128 lines</strong>. Call stack is at most <strong>16 frames deep</strong>.</p>
+
+            <h3>Defining a Function</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>function myfunction
+    echo Running myfunction
+    echo First arg is $1
+    echo Second arg is $2
+    echo Arg count is $ARG_COUNT
+    endfunction</pre>
+            </div>
+            <p><code>def</code> is an alias for <code>function</code>. Use <code>enddef</code> or <code>endfunction</code> to close.</p>
+
+            <h3>One-time Functions</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>ont function setup
+    echo This only runs once ever
+    endfunction</pre>
+            </div>
+
+            <h3>Recursive Functions</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>function countdown
+    echo $1
+    if $1 > 0 do call countdown $1 - 1
+    ^allowedRecursive
+    endfunction</pre>
+            </div>
+
+            <h3>Calling Functions</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>call functionname arg1 arg2 arg3
+    functionname arg1 arg2 arg3</pre>
+            </div>
+            <p>Arguments are accessible inside the function as <code>$1</code>, <code>$2</code>, etc. Functions are fully scoped — they cannot modify caller variables.</p>
+
+            <h3>Function Management</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>func.list       % print all defined functions
+    func.drop NAME  % undefine a function
+    pool.info       % show function body pool usage</pre>
+            </div>
+
+            <h3>once</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>once TAG COMMAND</pre>
+            </div>
+            <p>Runs COMMAND the first time this tag is encountered, then never again.</p>
+
+            <hr>
+
+            <!-- 12 -->
+            <h2 id="maps">12. Maps</h2>
+            <p>Up to <strong>16 maps</strong> at once, each holding up to <strong>32 entries</strong>. Keys up to 32 bytes, values up to 128 bytes.</p>
+
+            <h3>Declaring a Map</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>const MAP mymap
+    key1: value1
+    key2: value2
+    endMAP
+
+    editable MAP myeditable
+    setting1: off
+    setting2: 100
+    endMAP</pre>
+            </div>
+
+            <h3>Map Commands</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>map.new NAME [editable]
+    map.set NAME KEY VALUE
+    map.get NAME KEY RESULT
+    map.del NAME KEY
+    map.has NAME KEY RESULT
+    map.clear NAME
+    map.count NAME RESULT
+    map.key NAME INDEX RESULT
+    map.val NAME INDEX RESULT
+    map.keys NAME RESULT
+    map.vals NAME RESULT
+    map.merge SRC DST
+    map.copy SRC DST
+    map.drop NAME
+    map.dump NAME
+    map.sum NAME RESULT
+    map.max NAME RESULT [KEYRESULT]
+    map.min NAME RESULT [KEYRESULT]
+    map.invert SRC DST
+    map.list</pre>
+            </div>
+
+            <h3>Map Lookup via Variable Expansion</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>set K mykey
+    echo $mymap[$K]       % value at key mykey
+    echo $mymap[mykey]    % literal key
+    echo $mymap['mykey']  % quoted literal key</pre>
+            </div>
+
+            <h3>with Block</h3>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>with MAPNAME do
+    echo Key is $key Value is $val
+    endwith</pre>
+            </div>
+
+            <hr>
+
+            <!-- 13 -->
+            <h2 id="files">13. File / AVFS Commands</h2>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>fexists    FILENAME RESULT    % 1 if file exists
+    fsize      FILENAME RESULT    % file size in bytes, or -1
+    fread      FILENAME RESULT    % read content into RESULT (up to 4096 bytes)
+    fwrite     FILENAME VARNAME   % write VARNAME's value to file (overwrites)
+    fappend    FILENAME VARNAME   % append VARNAME's value to file
+    fdelete    FILENAME           % remove file from AVFS
+    fline      FILENAME N RESULT  % read line N (zero-based)
+    flinecount FILENAME RESULT    % count newlines in the file
+    fgrep      FILENAME NEEDLE RESULT  % first line containing NEEDLE</pre>
+            </div>
+            <p>The file read scratch buffer is 4096 bytes. Content longer than that is silently truncated.</p>
+
+            <hr>
+
+            <!-- 14 -->
+            <h2 id="io">14. Port I/O Commands</h2>
+            <p>Direct hardware port access. Calls <code>outb</code>/<code>inb</code> directly in the kernel.</p>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>outb PORT VALUE          % write 8-bit VALUE to I/O port PORT
+    inb  PORT [RESULT]       % read 8-bit value, store in RESULT (default INB)
+    outw PORT VALUE          % write 16-bit value
+    inw  PORT [RESULT]       % read 16-bit value (default INW)
+    outl PORT VALUE          % write 32-bit value
+    inl  PORT [RESULT]       % read 32-bit value (default INL)
+
+    io.wait PORT MASK EXPECTED_VAL [TIMEOUT_MS [OUT_VAR]]
+    % spins reading PORT until (value AND MASK) == EXPECTED_VAL
+    % OUT_VAR (default IO_WAIT_OK) is 1 on success, 0 on timeout</pre>
+            </div>
+            <p>You can also use inline function-call syntax:</p>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>outb(0x60, 0xFF)
+    set VAL inb(0x64)</pre>
+            </div>
+
+            <hr>
+
+            <!-- 15 -->
+            <h2 id="vga">15. VGA Text Commands</h2>
+            <p>Write directly to the VGA text-mode framebuffer at 0xB8000. Screen is 80 columns × 25 rows.</p>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>cls                              % clear the terminal
+    color FG [BG]                    % set terminal color (0-15)
+    vgaput ROW COL CHAR ATTR         % write single character at position
+    vgastr ROW COL STRING ATTR       % write string starting at position
+    vgabar CURRENT MAX WIDTH         % draw a text progress bar [###...]
+    vgaclear ROW ATTR                % fill entire row with spaces
+    vgafill ROW COL LEN CHAR ATTR    % fill LEN cells with CHAR</pre>
+            </div>
+            <p>Color values (0–15): 0=Black, 1=Blue, 2=Green, 3=Cyan, 4=Red, 5=Magenta, 6=Brown, 7=Light Grey, 8=Dark Grey, 9=Light Blue, 10=Light Green, 11=Light Cyan, 12=Light Red, 13=Light Magenta, 14=Yellow, 15=White.</p>
+
+            <hr>
+
+            <!-- 16 -->
+            <h2 id="timing">16. Timing Commands</h2>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>pause MS                     % sleep for MS milliseconds
+    ticks [RESULT]               % store PIT tick count in RESULT (default TICKS)
+    elapsed START_VAR RESULT     % RESULT = current_ticks - START_VAR</pre>
+            </div>
+            <p>At the default RadiumOS PIT frequency of 100 Hz, one tick equals 10ms.</p>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>ticks START
+    % ... do work ...
+    elapsed START DURATION
+    echo Elapsed ticks: $DURATION</pre>
+            </div>
+
+            <hr>
+
+            <!-- 17 -->
+            <h2 id="typecheck">17. Type Check Commands</h2>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>isnumber  VARNAME RESULT   % 1 if valid decimal integer
+    isempty   VARNAME RESULT   % 1 if empty or undefined
+    isdefined VARNAME RESULT   % 1 if variable is defined
+    tobool    VARNAME RESULT   % 1 if non-zero, else 0
+    bool.and  A B RESULT       % 1 if both non-zero
+    bool.or   A B RESULT       % 1 if either non-zero
+    bool.not  A RESULT         % 1 if A is zero
+    bool.xor  A B RESULT       % 1 if exactly one is non-zero
+
+    bool set VARNAME TRUE      % set to 1
+    bool set VARNAME FALSE     % set to 0
+    bool toggle VARNAME        % flip 0 to 1 or 1 to 0
+    bool is VARNAME            % sets ? to 1 or 0</pre>
+            </div>
+
+            <hr>
+
+            <!-- 18 -->
+            <h2 id="misc">18. Misc / Utility</h2>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>nop                  % no operation
+    log LEVEL MESSAGE    % print [RSH][LEVEL] MESSAGE to terminal
+    error MESSAGE        % print red error message and return -1
+    warn  MESSAGE        % print yellow warning message
+    info  MESSAGE        % print blue info message</pre>
+            </div>
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>log DEBUG "Value of X is $X"
+    log INFO "Starting scan loop"
+    log ERROR "Something went wrong"</pre>
+            </div>
+
+            <hr>
+
+            <!-- 19 -->
+            <h2 id="limits">19. Engine Limits</h2>
+            <table class="doc-table">
+                <thead><tr><th>Limit</th><th>Value</th></tr></thead>
+                <tbody>
+                    <tr><td>Max variables per scope</td><td>32</td></tr>
+                    <tr><td>Max functions</td><td>64</td></tr>
+                    <tr><td>Max call stack depth</td><td>16</td></tr>
+                    <tr><td>Max lines per file</td><td>1000</td></tr>
+                    <tr><td>Max line length</td><td>255 bytes</td></tr>
+                    <tr><td>Max function body lines total (pool)</td><td>3072</td></tr>
+                    <tr><td>Max lines per single function body</td><td>128</td></tr>
+                    <tr><td>Max arguments per call</td><td>16</td></tr>
+                    <tr><td>Max include depth</td><td>8</td></tr>
+                    <tr><td>Max while/for iterations</td><td>100,000,000</td></tr>
+                    <tr><td>Max maps</td><td>16</td></tr>
+                    <tr><td>Max entries per map</td><td>32</td></tr>
+                    <tr><td>Max map key length</td><td>32 bytes</td></tr>
+                    <tr><td>Max map value length</td><td>128 bytes</td></tr>
+                    <tr><td>Max file read size</td><td>32768 bytes (32 KB)</td></tr>
+                    <tr><td>Max once-tags</td><td>32</td></tr>
+                    <tr><td>Variable name max length</td><td>32 bytes</td></tr>
+                    <tr><td>Variable value max length</td><td>128 bytes</td></tr>
+                    <tr><td>Function name max length</td><td>64 bytes</td></tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <!-- 20 -->
+            <h2 id="example">20. Example: Keyboard Poller</h2>
+            <p>Demonstrates keyboard polling using PS/2 port I/O, state variables, conditional logic, maps, and a clean exit condition. Runs top to bottom — no main function.</p>
+            <p>Port <code>0x64</code> is the PS/2 status register. Bit 0 indicates whether a scancode is ready. Port <code>0x60</code> is the data port. Scancodes below <code>0x80</code> are key-press events; at or above <code>0x80</code> are key-release events. Scancode <code>0x01</code> is Escape.</p>
+
+            <div class="code-block">
+                <div class="code-block-header"><span>RSH</span><button class="copy-btn" onclick="copyBlock(this)">Copy</button></div>
+                <pre>% =============================================================
+    % RSH Keyboard Poller Example - RadiumOS / scp_2801
+    % Polls PS/2 port 0x60 and prints key names to the terminal.
+    % Press Escape to exit.
+    % =============================================================
+
+    set PS2_STATUS 0x64
+    set PS2_DATA   0x60
+    set SC_ESCAPE  0x01
+
+    cls
+    color 11
+    echo ==========================================
+    echo  RadiumOS RSH Keyboard Poller
+    echo  Press any keys. ESC to quit.
+    echo ==========================================
+    color 7
+    echo
+
+    set SHIFT_HELD 0
+    set RUNNING 1
+    set LAST_SC 0
+
+    while $RUNNING == 1
+
+    inb $PS2_STATUS STATUS_BYTE
+    band $STATUS_BYTE 1 DATA_READY
+
+    if $DATA_READY == 1
+
+        inb $PS2_DATA SCANCODE
+
+        if $SCANCODE == $LAST_SC
+        pause 1
+        continue
+        endif
+        set LAST_SC $SCANCODE
+
+        if $SCANCODE >= 128
+        math MAKE_CODE $SCANCODE - 128
+        if $MAKE_CODE == 42
+            set SHIFT_HELD 0
+        endif
+        if $MAKE_CODE == 54
+            set SHIFT_HELD 0
+        endif
+        continue
+        endif
+
+        if $SCANCODE == $SC_ESCAPE
+        color 12
+        echo ESC pressed - exiting keyboard poller.
+        color 7
+        set RUNNING 0
+        continue
+        endif
+
+        if $SCANCODE == 42
+        set SHIFT_HELD 1
+        echo [SHIFT LEFT held]
+        continue
+        endif
+        if $SCANCODE == 54
+        set SHIFT_HELD 1
+        echo [SHIFT RIGHT held]
+        continue
+        endif
+
+        if $SCANCODE == 58
+        echo [CAPS LOCK toggled]
+        continue
+        endif
+
+        map.new KEYMAP
+        map.set KEYMAP 2  1
+        map.set KEYMAP 3  2
+        map.set KEYMAP 4  3
+        map.set KEYMAP 5  4
+        map.set KEYMAP 6  5
+        map.set KEYMAP 7  6
+        map.set KEYMAP 8  7
+        map.set KEYMAP 9  8
+        map.set KEYMAP 10 9
+        map.set KEYMAP 11 0
+        map.set KEYMAP 16 q
+        map.set KEYMAP 17 w
+        map.set KEYMAP 18 e
+        map.set KEYMAP 19 r
+        map.set KEYMAP 20 t
+        map.set KEYMAP 21 y
+        map.set KEYMAP 22 u
+        map.set KEYMAP 23 i
+        map.set KEYMAP 24 o
+        map.set KEYMAP 25 p
+        map.set KEYMAP 30 a
+        map.set KEYMAP 31 s
+        map.set KEYMAP 32 d
+        map.set KEYMAP 33 f
+        map.set KEYMAP 34 g
+        map.set KEYMAP 35 h
+        map.set KEYMAP 36 j
+        map.set KEYMAP 37 k
+        map.set KEYMAP 38 l
+        map.set KEYMAP 44 z
+        map.set KEYMAP 45 x
+        map.set KEYMAP 46 c
+        map.set KEYMAP 47 v
+        map.set KEYMAP 48 b
+        map.set KEYMAP 49 n
+        map.set KEYMAP 50 m
+        map.set KEYMAP 28 ENTER
+        map.set KEYMAP 14 BACKSPACE
+        map.set KEYMAP 57 SPACE
+        map.set KEYMAP 15 TAB
+        map.set KEYMAP 72 UP
+        map.set KEYMAP 80 DOWN
+        map.set KEYMAP 75 LEFT
+        map.set KEYMAP 77 RIGHT
+        map.set KEYMAP 59 F1
+        map.set KEYMAP 60 F2
+        map.set KEYMAP 61 F3
+        map.set KEYMAP 62 F4
+        map.set KEYMAP 63 F5
+        map.set KEYMAP 64 F6
+
+        map.has KEYMAP $SCANCODE KEY_KNOWN
+        if $KEY_KNOWN == 1
+        map.get KEYMAP $SCANCODE KEY_NAME
+        if $SHIFT_HELD == 1
+            strupper KEY_NAME KEY_NAME
+        endif
+        color 10
+        printf "Key pressed: %s (scancode 0x%x)%n" $KEY_NAME $SCANCODE
+        color 7
+        else
+        hex $SCANCODE SC_HEX
+        color 14
+        printf "Unknown scancode: %s%n" $SC_HEX
+        color 7
+        endif
+
+        map.drop KEYMAP
+
+    endif
+
+    pause 5
+
+    endwhile
+
+    color 11
+    echo Keyboard poller stopped.
+    color 7</pre>
+            </div>
+
+            <h3>How It Works</h3>
+            <p><strong>Port polling:</strong> Every iteration reads port <code>0x64</code>. <code>band</code> isolates bit 0. If set, a scancode is ready at port <code>0x60</code>.</p>
+            <p><strong>Key release filtering:</strong> PS/2 break codes are make code OR <code>0x80</code> (≥128 decimal). The script subtracts 128 to recover the make code, checks for shift release, then skips printing with <code>continue</code>.</p>
+            <p><strong>Shift tracking:</strong> <code>SHIFT_HELD</code> is set to 1 on shift make, back to 0 on shift break. Used to call <code>strupper</code> on letter keys.</p>
+            <p><strong>Map-based lookup:</strong> Scancode-to-name mappings are loaded into a map each iteration and looked up with <code>map.has</code> / <code>map.get</code>. The map is dropped and recreated each iteration due to the 32-entry limit.</p>
+            <p><strong>Hex fallback:</strong> Unrecognized scancodes are converted with <code>hex</code> and printed in <code>0xNN</code> format.</p>
+            <p><strong>Exit condition:</strong> Scancode <code>0x01</code> (Escape) sets <code>RUNNING</code> to 0, which terminates the while loop on the next condition check.</p>
+
+            <hr>
+            <p class="disclaimer">RSH Script Engine v2.3 &mdash; RadiumOS &mdash; scp_2801<br><br>
+
+                All content related to RadiumOS or TomatoOS is open source and freely distributed.
+                Maintained in partnership with <a href="https://atproducts.xyz" target="_blank" rel="noopener">AT Products LLC</a>.
+                Site inspired by <a href="https://templeos.org/" target="_blank" rel="noopener">TempleOS</a>, may Terry A. Davis's soul rest in peace.<br><br>
+                2026 &reg; AT Products LLC.
+            </p>
+
+        </main>
+
+    </div>
+</Layout>

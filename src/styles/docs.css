@@ -1,0 +1,256 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-dark);
+  color: #d6ffe2;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  text-shadow: 0 0 15px rgba(126,255,94,0.7), 0 0 30px rgba(59,244,214,0.3);
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid var(--glow-border);
+    padding: 1.5rem 0;
+    background-color: rgba(8,10,8,0.97);
+    scrollbar-width: thin;
+    scrollbar-color: var(--glow-green) #050806;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: #050806; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--glow-green); }
+
+.sidebar-brand {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 1rem;
+  color: var(--glow-green);
+  text-shadow: 0 0 12px rgba(126,255,94,0.8);
+  padding: 0 1.25rem 1rem;
+  display: block;
+  text-decoration: none;
+}
+.main-link {
+    display: flex;
+    gap: 0.5rem;
+    font-family: 'Audiowide', sans-serif;
+    font-size: .75rem;
+    padding: 0 1.25rem 1rem;
+    border-bottom: 1px solid var(--glow-border);
+    margin-bottom: 0.75rem;
+}
+.sidebar-brand span {
+  display: block;
+  font-family: system-ui, sans-serif;
+  font-size: 0.7rem;
+  color: var(--glow-teal);
+  text-shadow: 0 0 8px rgba(59,244,214,0.6);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.sidebar-section {
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--glow-teal);
+  text-shadow: 0 0 6px rgba(59,244,214,0.5);
+  padding: 0.8rem 1.25rem 0.3rem;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 0.28rem 1.25rem;
+  font-size: 0.82rem;
+  color: #9ac89a;
+  text-decoration: none;
+  text-shadow: none;
+  transition: color 0.1s, background 0.1s;
+  border-left: 2px solid transparent;
+}
+.sidebar nav a:hover {
+    color: var(--glow-green);
+    background: rgba(126,255,94,0.05);
+    border-left-color: var(--glow-green);
+}
+.sidebar nav a.active {
+    color: var(--glow-green);
+    border-left-color: var(--glow-green);
+    text-shadow: 0 0 6px rgba(126,255,94,0.4);
+}
+
+.content {
+    flex: 1;
+    padding: 2.5rem 2.5rem 4rem;
+    min-width: 0;
+    border-left: 1px solid var(--glow-border);
+    background-color: rgba(8,10,8,0.95);
+}
+
+h1 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: var(--glow-green);
+    text-shadow: 0 0 18px rgba(126,255,94,0.9), 0 0 35px rgba(59,244,214,0.4);
+    margin-bottom: 0.4rem;
+}
+.doc-byline {
+    font-size: 0.8rem;
+    color: var(--glow-teal);
+    text-shadow: 0 0 8px rgba(59,244,214,0.5);
+    margin-bottom: 1.2rem;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--glow-green);
+    text-shadow: 0 0 14px rgba(126,255,94,0.8);
+    margin: 2.5rem 0 0.6rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--glow-border);
+}
+h2:first-of-type { margin-top: 0; }
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--glow-teal);
+    text-shadow: 0 0 10px rgba(59,244,214,0.6);
+    margin: 1.4rem 0 0.4rem;
+}
+
+p { font-size: 0.93rem; color: #c8ffc8; margin-bottom: 0.75rem; }
+
+a { color: var(--glow-teal); text-shadow: 0 0 8px rgba(59,244,214,0.5); }
+a:hover { color: var(--glow-green); }
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(90deg,
+        var(--glow-green), var(--glow-teal),
+        var(--glow-orange), var(--glow-yellow));
+    box-shadow: 0 0 18px rgba(126,255,94,0.45);
+    margin: 2rem 0;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85em;
+    color: var(--glow-green);
+    text-shadow: 0 0 5px rgba(126,255,94,0.5);
+    background: rgba(126,255,94,0.07);
+    border: 1px solid rgba(126,255,94,0.2);
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+.code-block {
+    border: 1px solid var(--glow-border);
+    box-shadow: 0 0 14px rgba(126,255,94,0.12);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0.75rem 0 1rem;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+li {
+    font-size: 0.93rem;
+    color: #c8ffc8;
+    margin-bottom: 0.25rem;
+}
+li code { font-size: 0.82em; }
+
+.doc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin: 0.75rem 0 1rem;
+    text-shadow: none;
+}
+.doc-table thead th {
+    background: rgba(0,20,0,0.95);
+    color: var(--glow-green);
+    text-shadow: 0 0 6px rgba(126,255,94,0.5);
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--glow-border);
+    text-align: left;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.doc-table tbody td {
+    padding: 6px 12px;
+    border-bottom: 1px solid rgba(126,255,94,0.08);
+    color: #c8ffc8;
+}
+.doc-table tbody td:first-child {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--glow-teal);
+    text-shadow: 0 0 5px rgba(59,244,214,0.4);
+    white-space: nowrap;
+    width: 40%;
+}
+.doc-table tbody tr:nth-child(even) td { background: rgba(126,255,94,0.03); }
+.doc-table tbody tr:hover td { background: rgba(126,255,94,0.06); }
+.doc-table tbody tr:last-child td { border-bottom: none; }
+
+.toc {
+    background: rgba(126,255,94,0.04);
+    border: 1px solid var(--glow-border);
+    border-radius: 4px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 2rem;
+}
+.toc h3 {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--glow-teal);
+    margin: 0 0 0.6rem;
+}
+.toc ol {
+    margin: 0;
+    padding-left: 1.2rem;
+    column-count: 2;
+    column-gap: 2rem;
+}
+@media (max-width: 700px) { .toc ol { column-count: 1; } }
+.toc li { margin-bottom: 0.2rem; }
+.toc a {
+    font-size: 0.82rem;
+    color: var(--glow-green);
+    text-shadow: none;
+    text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; color: var(--glow-teal); }
+
+@media (max-width: 768px) {
+    .sidebar { display: none; }
+    .content { padding: 1.5rem 1.1rem 3rem; border-left: none; }
+}
+
+.disclaimer {
+    font-size:0.82rem; 
+    color:#3a5a3a; 
+    font-style:italic;
+}

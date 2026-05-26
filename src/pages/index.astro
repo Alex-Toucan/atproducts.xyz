@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
+
+import "../styles/index.css";
 ---
 
 <Layout 
@@ -13,7 +15,7 @@ import Layout from "../layouts/Layout.astro"
       <img src="/media/images/radiumos.webp" alt="RadiumOS" class="main-img">
       <h1 class="main-header">RadiumOS</h1>
       <div class="d-flex flex-column flex-md-row gap-2 justify-content-center">
-        <a class="social-button docs-button" href="/docs" target="_blank" rel="noopener noreferrer"><i class="bi bi-journal-code me-2"></i> Documentation</a>
+        <a class="social-button docs-button" href="/docs" target="_blank" rel="noopener noreferrer"><i class="bi bi-journal-code me-2"></i> RSH Documentation</a>
         <a class="social-button github-button" href="https://github.com/RadiumOS-Dev/RadiumOS" target="_blank" rel="noopener noreferrer"><i class="bi bi-github me-2"></i> GitHub Repo</a>
         <a class="social-button atproducts-button" href="https://atproducts.xyz" target="_blank" rel="noopener noreferrer"><i class="ci ci-atproducts me-2"></i> AT Products LLC</a>
         <a class="social-button downloads-button" href="#downloads"><i class="bi bi-download me-2"></i> Downloads</a>
@@ -140,7 +142,7 @@ import Layout from "../layouts/Layout.astro"
           <div class="code-block">
             <div class="code-block-header">
                 <span>Bash</span>
-                <button class="copy-btn" id="copyBtn" onclick="copyQemu()">Copy</button>
+                <button class="copy-btn" id="copyBtn" onclick="copyBlock(this)">Copy</button>
             </div>
             <pre id="qemuCmd">qemu-system-i386 -display sdl \
               -rtc base=utc,clock=host,driftfix=slew \
