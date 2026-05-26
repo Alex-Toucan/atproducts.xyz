@@ -4,6 +4,8 @@ import Hero     from '../components/Hero.astro';
 import Navbar    from '../components/Navbar.astro';
 import Footer    from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
+import Accordion from '../components/accordion/Accordion.astro';
+import AccordionItem from '../components/accordion/AccordionItem.astro';
 
 import '../styles/imagesizes.css';
 ---
@@ -35,42 +37,189 @@ import '../styles/imagesizes.css';
         <a class="btn-solid theme-primary btn-lg mt-2 mb-3" href="https://lfs.atproducts.xyz/media/files/minefalls.mcworld" download>.mcworld Download</a>
         <br><span>Information:</span>
         <ul> 
-          <li> <b>Version:</b> v26.0.26 (Bedrock) </li> 
-          <li> <b>Size:</b> 140 MB </li> 
-          <li> <b>Last Updated:</b> 12/4/2025 </li> 
+          <li> <b>Version:</b> v26.30.29 (Bedrock Preview) </li> 
+          <li> <b>Size:</b> 173 MB </li> 
+          <li> <b>Last Updated:</b> 5/25/2026 </li> 
         </ul>
       </div>
       <hr>
       <div id="gallery">
-        <h2>Gallery</h2>
-        <div class="mt-4" id="tpt2-album">
-          <div class="row gx-4 gy-4">
-            <div class="xl:col-6 col-12">
-              <img src="/media/images/Mine Falls Sunset.png" alt="A sunset from the I-90 highway in southern Mine Falls." class="img-fluid rounded-4 w-100">
-              <div class="mt-2 figure-caption">A sunset from the I-90 highway in southern Mine Falls.</div>
-            </div>
-            <div class="xl:col-6 col-12">
-              <img src="/media/images/Screenshot 2025-08-04 173429.png" alt="3 buildings in Northern Mine Falls alongside SD-41." class="img-fluid rounded-4 w-100">
-              <div class="mt-2 figure-caption">3 buildings in Northern Mine Falls alongside SD-41.</div>
-            </div>
-            <div class="xl:col-6 col-12">
-              <img src="/media/images/Screenshot 2025-08-04 172535.png" alt="The SD-41 bridge from 15th St. S to Sioux Dr. S (Night)." class="img-fluid rounded-4 w-100">
-              <div class="mt-2 figure-caption">The SD-41 bridge from 15th St. S to Sioux Dr. S (Night).</div>
-            </div>
-            <div class="xl:col-6 col-12">
-              <img src="/media/images/Screenshot 2025-08-04 173219.png" alt="The SD-41 bridge from 15th St. S to Sioux Dr. S (Day)." class="img-fluid rounded-4 w-100">
-              <div class="mt-2 figure-caption">The SD-41 bridge from 15th St. S to Sioux Dr. S (Day).</div>
-            </div>
-            <div class="xl:col-6 col-12">
-              <img src="/media/images/Screenshot 2025-08-04 173339.png" alt="Downtown Mine Falls facing south from 3rd Ave. N." class="img-fluid rounded-4 w-100">
-              <div class="mt-2 figure-caption">Downtown Mine Falls facing south from 3rd Ave. N.</div>
-            </div>
-            <div class="xl:col-6 col-12">
-              <img src="/media/images/Screenshot 2025-08-04 173532.png" alt="Downtown Mine Falls with multiple buildings: the Visiting Center, the MFS-NEW hospital, and the train station from 3rd Ave. S." class="img-fluid rounded-4 w-100">
-              <div class="mt-2 figure-caption">Downtown Mine Falls with multiple buildings: the Visiting Center, the MFS-NEW hospital, and the train station from 3rd Ave. S.</div>
-            </div>
-          </div>
-        </div>
+        <h2 class="mb-3">Gallery</h2>
+        <Accordion id="gallery-accordion">
+          <Fragment slot="accordion-content">
+            <AccordionItem title="Mine Falls" id="minefalls-gallery" parent="gallery-accordion">
+              <Fragment slot="accordion-item-content">
+                <div class="row gx-4 gy-4">
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/Downtown Mine Falls.png" alt="Downtown Mine Falls, looking South from 3rd Ave. N." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">Downtown Mine Falls, looking South from 3rd Ave. N.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/Airport.png" alt="Mine Falls-Newport International Airport from US-101." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">Mine Falls-Newport International Airport from US-101.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/3 Buildings.png" alt="3 buildings alongside SD-41 in Northern Mine Falls." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">3 buildings alongside SD-41 in Northern Mine Falls.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/I-90 Sunset.png" alt="A sunset looking onto eastern I-90 in southern Mine Falls." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">A sunset looking onto eastern I-90 in southern Mine Falls.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/Northern Mine Falls.png" alt="Northern Mine Falls." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">Northern Mine Falls.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/Southern Mine Falls.png" alt="Mid-southern Mine Falls." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">Mid-southern Mine Falls.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/Residents.png" alt="Homes in southern Mine Falls." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">Homes in southern Mine Falls.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/House.png" alt="A house in southern Mine Falls." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">A house in southern Mine Falls.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/Zoo.png" alt="The Mine Falls Zoo in the northern part of the city." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The Mine Falls Zoo in the northern part of the city.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/SD-18 to MF.png" alt="SD-18 to northern Mine Falls." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">SD-18 to northern Mine Falls.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Mine Falls/Screenshot 2025-08-04 172535.png" alt="The SD-41 bridge in southern Mine Falls." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The SD-41 bridge in southern Mine Falls.</div>
+                  </div>
+                </div>
+              </Fragment>
+            </AccordionItem>
+            <AccordionItem title="Newport" id="newport-gallery" parent="gallery-accordion">
+              <Fragment slot="accordion-item-content">
+                <div class="row gx-4 gy-4">
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Newport/Downtown Newport.png" alt="Downtown Newport." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">Downtown Newport.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Newport/Northern Newport.png" alt="Northern Newport with the State Capital." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">Northern Newport with the State Capital.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Newport/Newport houses.png" alt="Numerous houses in Southeastern Newport." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">Numerous houses in Southeastern Newport.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Newport/Apartments.png" alt="Apartments in Southeastern Newport." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">Apartments in Southeastern Newport.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Newport/SD-30 @ SD-41.png" alt="SD-30 @ SD-41" class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">SD-30 @ SD-41</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Newport/Mansion.png" alt="A mansion near Downtown Newport." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">A mansion near Downtown Newport.</div>
+                  </div>
+                </div>
+              </Fragment>
+            </AccordionItem>
+            <AccordionItem title="Winter" id="winter-gallery" parent="gallery-accordion">
+              <Fragment slot="accordion-item-content">
+                <div class="row gx-4 gy-4">
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Baymount.png" alt="The city of Baymount." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Baymount.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Cory.png" alt="The city of Cory." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Cory.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/I-90 Tunnel.png" alt="I-90 @ SD-27 before entering a tunnel." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">I-90 @ SD-27 before entering a tunnel.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Northview.png" alt="The city of Northview." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Northview.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Pillagerport.png" alt="The city of Pillagerport." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Pillagerport.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Ridgevale.png" alt="The city of Ridgevale." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Ridgevale.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Riverbuild.png" alt="The city of Riverbuild." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Riverbuild.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Snowlite.png" alt="The city of Snowlite." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Snowlite.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Tall Trees.png" alt="The city of Tall Trees." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Tall Trees.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Tallosse.png" alt="The city of Tallosse." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Tallosse.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Westover.png" alt="The city of Westover." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Westover.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Winterville.png" alt="The city of Winterville." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Winterville.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Adeline.png" alt="The city of Adeline." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Adeline.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Adeline Sign.png" alt="The sign of Adeline." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The sign of Adeline.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Adeline's mansion.png" alt="The mansion of Adeline." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The mansion of Adeline.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Winter/Kimberly.png" alt="The city of Northview." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Kimberly.</div>
+                  </div>
+                </div>
+              </Fragment>
+            </AccordionItem>
+            <AccordionItem title="Plains" id="Plains-gallery" parent="gallery-accordion">
+              <Fragment slot="accordion-item-content">
+                <div class="row gx-4 gy-4">
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Plains/Hazel.png" alt="The city of Hazel." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Hazel.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Plains/Irene.png" alt="The city of Irene." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Irene.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Plains/Sapphire.png" alt="The city of Sapphire." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The city of Sapphire.</div>
+                  </div>
+                  <div class="xl:col-6 col-12">
+                    <img src="/media/images/Mine Falls/Plains/SD-DOT.png" alt="The testing site of SD-DOT, near Hazel." class="img-fluid rounded-4 w-100">
+                    <div class="mt-2 figure-caption fs-sm fg-secondary">The testing site of SD-DOT, near Hazel.</div>
+                  </div>
+                </div>
+              </Fragment>
+          </Fragment>
+        </Accordion>
       </div>
     </main>
     <Footer author="Alex Toucan & CodingLive" />
