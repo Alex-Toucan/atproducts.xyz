@@ -2069,6 +2069,13 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   & .progress-bar {
     width: 0%;
   }
+
+  & #history-buttons {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .text-wrap {
