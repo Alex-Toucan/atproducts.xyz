@@ -47,8 +47,7 @@
 }
 
 .short-img {
-  min-height: 40px;
-  max-height: 125px;
+  max-width: 50px;
 }
 
 .card-img {
