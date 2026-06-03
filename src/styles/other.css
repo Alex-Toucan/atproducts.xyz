@@ -107,7 +107,7 @@ body.dialog-open {
   margin-bottom: 0 !important;
 }
 
-blockquote {
+blockquote, .footer-header, .index-link {
   font-size: 1.25rem !important;
 }
 
@@ -1811,10 +1811,6 @@ a {
 
 footer p {
   margin-bottom: 0!important;
-}
-
-.footer-header {
-  font-size: 1.25rem !important;
 }
 
 a:hover.footer-info {
