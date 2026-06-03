@@ -35,11 +35,11 @@ const reversedVersions = versions.reverse();
 <div class="versions-wrapper versions-tab d-flex flex-column md:flex-row border border-2 rounded-6 shadow-sm">
   <!-- Sidebar -->
   <aside class="versions-sidebar md:col-3 p-3 md:d-block">
-    <ul class="nav nav-pills flex-column gap-2">
+    <ul class="nav nav-pills flex-column gap-2 bg-transparent w-stretch" role="tablist">
       {reversedVersions.map(({ id, title, links, betalinks }, index) => (
         <li class="nav-item">
           <button
-            class={`nav-link w-100 text-start ${index === 0 ? "active" : ""}`}
+            class={`nav-link w-100 text-start d-block rounded-4 ${index === 0 ? "active" : ""}`}
             id={`${id}-tab`}
             data-bs-toggle="tab"
             data-bs-target={`#${id}-pane`}
