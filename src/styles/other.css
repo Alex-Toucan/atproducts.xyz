@@ -2245,3 +2245,7 @@ html.fixedtopnavimage, html.fixedtopnavimage-breadcrumb {
   width: -moz-available !important;
   width: stretch !important;
 }
+
+.form-label {
+  display: inline-block;
+}
