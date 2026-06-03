@@ -107,7 +107,7 @@ body.dialog-open {
   margin-bottom: 0 !important;
 }
 
-blockquote, .footer-header, .index-link {
+blockquote, .footer-header, .index-link, .quote {
   font-size: 1.25rem !important;
 }
 
