@@ -1,0 +1,31 @@
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 30px;
+  bottom: 47.5px;
+  box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
+    
+  border: 1px solid var(--glow-border);
+  background: rgba(0, 20, 0, 0.95);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  align-self: center;
+  justify-content: space-around;
+  z-index: 1050;
+  border-radius: 4px;
+
+  filter: drop-shadow(0 0 5px var(--glow-border));
+}
+
+@media (min-width:1079.98px) {
+  .back-to-top {
+    bottom: 30px !important;
+  }
+}
+
+@media (max-width:767.98px) {
+	.back-to-top {
+		bottom: 60px !important;
+	}
+}

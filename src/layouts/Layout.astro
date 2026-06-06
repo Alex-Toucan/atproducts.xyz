@@ -1,12 +1,19 @@
 ---
-const { title, description, keywords, author, additionalContent, figure } = Astro.props;
+const { title, description, keywords, author, additionalContent, scroll } = Astro.props;
 
 import { Font } from 'astro:assets';
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
+import jquery from "jquery/dist/jquery.min.js?url";
+import jqueryui from "jquery-ui/dist/jquery-ui.min.js?url";
+
 import '../styles/styles.css';
 import '../styles/fonts.css';
+
+if (scroll) {
+  import('../styles/back-to-top.css');
+}
 ---
 
 <!DOCTYPE html>
@@ -48,7 +55,14 @@ import '../styles/fonts.css';
     <Fragment>  
       <slot/>
     </Fragment>
+    
+    <script src={jquery}></script>
+    <script src={jqueryui}></script>
+
     <script src="/static/copy.js" is:inline></script>
     <script src="/static/sidebar.js" is:inline></script>
+    {scroll && (
+      <script src="/static/scroll.js" is:inline></script>
+    )}
   </body>
 </html>
