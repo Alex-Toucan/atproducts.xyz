@@ -3,7 +3,7 @@
   $(window).scroll(function () {
       if ($(this).scrollTop() > 100) {
           if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-              $('.back-to-top').css('display', 'block');
+              $('.back-to-top').css('display', 'flex');
           } else {
               $('.back-to-top').fadeIn('slow');
               $('.back-to-top').css('display', 'flex');
