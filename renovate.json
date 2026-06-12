@@ -40,17 +40,17 @@
     },
     {
       "groupName": "Other dependencies",
-      "matchPackageNames": [
-        "*",
-        "!/^react/",
-        "!/^@types/react/",
-        "!/^react-dom/",
-        "!/^astro/",
-        "!/^@astrojs/",
-        "!/^bootstrap/",
-        "!/^bootstrap-icons/",
-        "!/^jquery/",
-        "!/^@types/jquery/"
+      "matchPackageNames": ["*"],
+      "excludePackageNames": [
+        "/^react/",
+        "/^@types/react/",
+        "/^react-dom/",
+        "/^astro/",
+        "/^@astrojs/",
+        "/^bootstrap/",
+        "/^bootstrap-icons/",
+        "/^jquery/",
+        "/^@types/jquery/"
       ],
       "rangeStrategy": "bump"
     }
