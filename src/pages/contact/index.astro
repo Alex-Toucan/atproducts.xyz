@@ -30,19 +30,19 @@ import '../../styles/contact.css'
           <div class="col">
             <div class="form-floating mb-3">
               <input name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
-              <label for="nameInput" class="form-label">Name</label>
+              <label for="nameInput" class="form-label fw-normal">Name</label>
           </div>
           </div>
           <div class="col">
             <div class="form-floating mb-3">
               <input name="Email" type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
-              <label for="emailInput" class="form-label">Email address</label>
+              <label for="emailInput" class="form-label fw-normal">Email address</label>
             </div>
           </div>
         </div>
         <div class="form-floating mb-3">
           <textarea name="Text" class="form-control info-box" id="textareaInput" placeholder="Input comments or information to send" required></textarea>
-          <label for="textareaInput" class="form-label">Information to Send</label>
+          <label for="textareaInput" class="form-label fw-normal">Information to Send</label>
         </div>
         <div class="my-2">
           <label 
@@ -51,7 +51,7 @@ import '../../styles/contact.css'
             tabindex="0"
             class="form-control file-box d-flex justify-content-between align-items-center small"
           >
-            <span class="text-muted">Attach a File (optional)</span>
+            <span class="fw-normal">Attach a File (optional)</span>
             <span id="attachment-filename" class="text-end text-break">Select a File</span>
           </label>
           <div id="attachment-feedback" class="invalid-feedback d-none">
@@ -66,7 +66,7 @@ import '../../styles/contact.css'
           >
         </div>
         <small>If you wish to include more than one file, you must <a href="mailto:support@atproducts.xyz">email us manually</a> due to Netlify complications. Please allow 72 hours for a response back to your email provided. If your response is considered spam, it may not be responded to.</small>
-        <button type="submit" class="mt-2 btn btn-lg btn-primary col-12">Send</button>
+        <button type="submit" class="mt-2 btn btn-lg btn-solid theme-primary col-12">Send</button>
       </form>
     </main>
   <Footer />

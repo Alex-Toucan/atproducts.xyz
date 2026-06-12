@@ -1,3 +1,9 @@
+[[redirects]]
+  from = "/pynx/radiumos"
+  to = "https://radiumos.atproducts.xyz/"
+  status = 301
+  force = true
+
 # Enable if maintenance mode.
 # [[redirects]]
 #   from = "/*"

@@ -2,11 +2,11 @@
 const { title, id, description, buttonHref, buttonText, footerText } = Astro.props;
 ---
 
-<div class="card shadow-sm col-12" id={id}>
+<div class="card border border-1 rounded-4 shadow-sm col-12" id={id}>
   <div class="d-flex flex-column">
 
-    <div class="d-md-flex flex-md-row">
-      <div class="col-md-4 custom-card-header d-flex flex-column">
+    <div class="md:d-flex md:flex-row">
+      <div class="md:col-4 custom-card-header d-flex flex-column">
 
         <h2 class="m-1 fw-normal">{title}</h2>
         <hr class="custom-hr">
@@ -15,7 +15,7 @@ const { title, id, description, buttonHref, buttonText, footerText } = Astro.pro
           <div class="d-flex gap-3 flex-column flex-wrap align-items-stretch other-services">
             <p class="mb-0">{description}</p>
             {buttonHref && buttonText && (
-              <a class="w-100 btn btn-lg btn-primary my-auto" href={buttonHref}>
+              <a class="w-100 btn btn-lg btn-solid theme-primary my-auto" href={buttonHref}>
                 {buttonText}
               </a>
             )}
@@ -30,7 +30,7 @@ const { title, id, description, buttonHref, buttonText, footerText } = Astro.pro
         )}
       </div>
 
-      <div class="col-md-8 p-2">
+      <div class="md:col-8 p-2">
         <slot name="paid-card-content" />
       </div>
     </div>

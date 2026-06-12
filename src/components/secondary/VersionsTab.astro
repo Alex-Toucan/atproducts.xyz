@@ -32,14 +32,14 @@ function isLatestVersion({ links = [], betalinks = [] }) {
 const reversedVersions = versions.reverse();
 ---
 
-<div class="versions-wrapper versions-tab d-flex flex-column flex-md-row border border-2 rounded-3 shadow-sm">
+<div class="versions-wrapper versions-tab d-flex flex-column md:flex-row border border-2 rounded-6 shadow-sm">
   <!-- Sidebar -->
-  <aside class="versions-sidebar col-md-3 p-3 d-md-block">
-    <ul class="nav nav-pills flex-column gap-2">
+  <aside class="versions-sidebar md:col-3 p-3 md:d-block">
+    <ul class="nav nav-pills flex-column gap-2 bg-transparent w-stretch" role="tablist">
       {reversedVersions.map(({ id, title, links, betalinks }, index) => (
         <li class="nav-item">
           <button
-            class={`nav-link w-100 text-start ${index === 0 ? "active" : ""}`}
+            class={`nav-link w-100 text-start d-block rounded-4 ${index === 0 ? "active" : ""}`}
             id={`${id}-tab`}
             data-bs-toggle="tab"
             data-bs-target={`#${id}-pane`}
@@ -75,7 +75,7 @@ const reversedVersions = versions.reverse();
           {betalinks && (
             <div class="d-flex flex-wrap gap-3 my-4">
               {betalinks.map(({ label, url }) => (
-                <a href={url} class="btn btn-outline-warning">
+                <a href={url} class="btn-subtle theme-warning">
                   {label}
                   {label === latestLabel && (
                     <span class="badge bg-success ms-2">Latest</span>
@@ -88,7 +88,7 @@ const reversedVersions = versions.reverse();
           {links && (
             <div class="d-flex flex-wrap gap-3 my-4">
               {links.map(({ label, url }) => (
-                <a href={url} class="btn btn-outline-primary">
+                <a href={url} class="btn-subtle theme-primary">
                   {label}
                   {label === latestLabel && (
                     <span class="badge bg-success ms-2">Latest</span>
