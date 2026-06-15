@@ -41,7 +41,6 @@
     {
       "groupName": "Other dependencies",
       "matchPackageNames": [
-        "*",
         "!/^react/",
         "!/^@types/react/",
         "!/^react-dom/",
