@@ -1,0 +1,11 @@
+---
+import "../styles/bootstrap.css";
+import bootstrap from "../scripts/bootstrap.bundle.js?url";
+---
+
+<script>
+    import * as bootstrap from '../scripts/bootstrap.bundle.js';
+    Object.assign(window, bootstrap);
+    (window as any).bootstrap = bootstrap;
+    window.bootstrapReady?.();
+</script>
