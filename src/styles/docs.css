@@ -254,3 +254,22 @@ li code { font-size: 0.82em; }
     color:#3a5a3a; 
     font-style:italic;
 }
+
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
