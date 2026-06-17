@@ -2,7 +2,7 @@
 var pureAlert2Type = "alert-dark"; // Color
 var pureAlert2Title = "GITHUB TRANSFER NOTICE:"; // Title
 var pureAlert2Icon = 'bi-github'; // Icon
-var pureAlert2Desc = "On June 17th, the GitHub repository: <a href='https://github.com/Alex-Toucan/atproducts.xyz' target='_blank'>Alex-Toucan/atproducts.xyz</a>, will be moved from the <a href='https://github.com/Alex-Toucan' target='_blank'>Alex-Toucan GitHub account</a> to the <a href='https://github.com/ATProductsLLC' target='_blank'>ATProductsLLC GitHub account</a>. As a result, Maintenance Mode will be enabled for approximately 5:30 to 6:30 PM CDT on June 17th. We appreciate your patience as we improve our site."; // Description
+var pureAlert2Desc = "On June 17th, the GitHub repository: <a href='https://github.com/Alex-Toucan/atproducts.xyz' target='_blank'>Alex-Toucan/atproducts.xyz</a>, has been transferred from the <a href='https://github.com/Alex-Toucan' target='_blank'>Alex-Toucan GitHub account</a> to the <a href='https://github.com/ATProductsLLC' target='_blank'>ATProductsLLC GitHub account</a>. Please ensure you update your local clones and forks accordingly."; // Description
 var pureAlert2Link = 'https://x.com/ATProductsLLC/status/2061307838790521052'; // Link
 var pureAlert2LinkDesc = 'Read the announcement.'; // Link text
 var pureAlert2Enabled = true; // Switch to enable/disable alert
