@@ -13,3 +13,8 @@
 .hero-image-large {
     min-width: 250px;
 }
+
+.radium-image {
+    max-height: 100px;
+    filter: brightness(0.8);
+}

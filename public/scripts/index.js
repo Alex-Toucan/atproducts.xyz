@@ -7,26 +7,27 @@ var carouselMain = document.querySelector(".carousel-main");
 var slidebtn = document.querySelectorAll(".slidebtn");
 
 $(function () {
-    $(carouselMain).carousel({
-        pause: "false",
-	ride: "true"
-    });
-    
-    $(playButton).click(function () {
-        $(carouselMain).carousel('cycle');
-    });
-    $(pauseButton).click(function () {
-        $(carouselMain).carousel('pause');
-    });
-	
-		$(nextButton).click(handleButton);
-    $(previousButton).click(handleButton);
-    $(slidebtn).click(handleButton);
-	
-    function handleButton() {
-        playButton.checked = true;
-			  pauseButton.checked = false;
-    };
+  const carousel = bootstrap.Carousel.getOrCreateInstance(carouselMain, {
+      pause: false,
+      ride: true
+  });
+
+  $(playButton).click(function () {
+      carousel.cycle();
+  });
+
+  $(pauseButton).click(function () {
+      carousel.pause();
+  });
+  
+  $(nextButton).click(handleButton);
+  $(previousButton).click(handleButton);
+  $(slidebtn).click(handleButton);
+
+  function handleButton() {
+      playButton.checked = true;
+      pauseButton.checked = false;
+  }
 });
 
 // History Tabs
@@ -79,8 +80,8 @@ $(document).ready(function() {
     // Remove the "active" class from all buttons and update classes
     yearButtons.each((index, button) => {
       $(button).toggleClass("active", index + 1 == year)
-        .toggleClass("btn-secondary", index + 1 > year)
-        .toggleClass("btn-primary", index + 1 <= year);
+        .toggleClass("theme-secondary", index + 1 > year)
+        .toggleClass("theme-primary", index + 1 <= year);
       $(`#history-${index + 1}-pane`).toggleClass("active", index + 1 == year).removeClass("show");
     });
 

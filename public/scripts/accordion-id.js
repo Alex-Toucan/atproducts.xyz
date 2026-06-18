@@ -1,31 +1,32 @@
 $(document).ready(function() {
   function openAccordionFromHash() {
-    const hash = decodeURIComponent(window.location.hash); // Decode the hash
+    const hash = decodeURIComponent(window.location.hash);
 
     if (hash && hash.startsWith('#')) {
-      const targetId = hash.substring(1); // Remove '#' from the hash
+      const targetId = hash.substring(1);
+      const accordion = $('#' + targetId);
 
-      const accordion = $('#' + targetId); // Use the ID directly
-      const modal = accordion.closest('.modal'); // Find the closest parent modal
+      if (accordion.length && accordion.prop('tagName').toLowerCase() === 'details') {
 
-      if (modal && modal.length) {
-        modal.modal('show'); // Open the modal if it exists
-      }
+        const groupName = accordion.attr('name');
+        if (groupName) {
+          $(`details[name="${groupName}"]`).each(function () {
+            if (this !== accordion[0]) {
+              $(this).removeAttr('open');
+            }
+          });
+        }
 
-      if (accordion.length && accordion.hasClass('collapse')) {
-        if (!accordion.hasClass('show')) {
-          $('.collapse.show').collapse('hide');
-          accordion.collapse('show');
-          const element = document.getElementById(targetId);
+        accordion.attr('open', '');
 
-          // Scroll to the element's section with padding and animation
-          if (element) {
-            const paddingTop = 150; // 150px
-            const sectionTop = accordion.offset().top - paddingTop;
-            $('html, body').animate({
-              scrollTop: sectionTop
-            }, 800);
-          }
+        const element = document.getElementById(targetId);
+        if (element) {
+          const paddingTop = 150;
+          const sectionTop = accordion.offset().top - paddingTop;
+
+          $('html, body').animate({
+            scrollTop: sectionTop
+          }, 800);
         }
       }
     }

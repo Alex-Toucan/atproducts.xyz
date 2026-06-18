@@ -1,13 +1,18 @@
 .custom-card-header {
  & {
+  --bs-border-size: .75rem;
   padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
   margin-bottom: 0;
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
  }
+
  @media (max-width: 768px) {
   & {
+    --bs-border-size: .75rem;
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    border-top-left-radius: var(--bs-border-size);
+    border-top-right-radius: var(--bs-border-size);
     gap: .5rem;
   }
   & .custom-hr {
@@ -17,7 +22,12 @@
  }
  @media (min-width: 768px) {
   & {
+    --bs-border-size: .75rem;
     border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    border-top-left-radius: var(--bs-border-size);
+    border-bottom-left-radius: var(--bs-border-size);
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
   }
   & .other-services {
     height: 100% !important;
@@ -37,8 +47,7 @@
 }
 
 .short-img {
-  min-height: 40px;
-  max-height: 125px;
+  max-width: 50px;
 }
 
 .card-img {

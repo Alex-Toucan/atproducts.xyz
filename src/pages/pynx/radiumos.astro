@@ -9,7 +9,7 @@ import AccordionItem from '../../components/accordion/AccordionItem.astro';
 import CodeBlock from '../../components/CodeBlock.astro';
 ---
 
-<DefaultBody title="RadiumOS" heroid="radium" icon="radium.webp" description="RadiumOS; a sequel off the previous Pynx Project: NyaOS." keywords="Inferno, NyaOS, RadiumOS, BxPP, AT Products LLC" author="Alex Toucan & Pynx" highlight="true" devicon="true" scrollspy="true">
+<DefaultBody title="RadiumOS" heroid="radium" icon="radium.webp" description="RadiumOS; a sequel off the previous Pynx Project: NyaOS." keywords="Inferno, NyaOS, RadiumOS, BxPP, AT Products LLC" author="Alex Toucan & Pynx" highlight="true" devicon="true">
 <div id="page">
 	<Navbar />
 	<div id="main-content">
@@ -19,7 +19,7 @@ import CodeBlock from '../../components/CodeBlock.astro';
 			description="Made by Pynx&semi; based from NyaOS, RadiumOS is a hobby OS with potential."
 	    buttons={[
 	      { href: "#downloads", text: "Downloads", type: "primary" },
-				{ href: "https://github.com/RadiumOS-Dev/RadiumOS" , text: "<i class='bi bi-github fs-6 me-2'></i> GitHub Repo" , type: "secondary" }, 
+				{ href: "https://github.com/RadiumOS-Dev/RadiumOS" , text: "<i class='bi bi-github md:fs me-2'></i> GitHub Repo" , type: "secondary" }, 
 	    ]},
 	    dropdownItems={[
         { navigationDesc: "General Information", navigationLink: "#general-info" },
@@ -41,7 +41,7 @@ import CodeBlock from '../../components/CodeBlock.astro';
 	    <hr>
       <div id="commands">
         <h2>Commands</h2>
-<pre class="mt-2 p-2 border-2 border-solid rounded-2"><code>-- General Commands --
+<pre class="mt-2 p-2 border-2 border-solid rounded-4"><code>-- General Commands --
 help             # shows a help message
 clear            # clears screen
 date		 # shows current date and time
@@ -74,11 +74,11 @@ rsh              # RadiumOS shell scripting
       <hr>
 	    <div id="downloads">
 	      <h2>Downloads</h2>
-			<div class="d-grid d-md-flex flex-wrap gap-2 my-3">
-				<a class="btn btn-primary btn-lg" href="https://lfs.atproducts.xyz/media/files/RadiumOS.iso">ISO Download</a>
+			<div class="d-grid md:d-flex flex-wrap gap-2 my-3">
+				<a class="btn-solid theme-primary btn-lg" href="https://lfs.atproducts.xyz/media/files/RadiumOS.iso">ISO Download</a>
 			</div>
-			<div class="d-grid d-md-flex flex-wrap gap-2 my-3">
-				<a class="btn btn-secondary" href="https://lfs.atproducts.xyz/media/files/TomatoOS.iso">TomatoISO (deprecated) (July 29th release)</a>
+			<div class="d-grid md:d-flex flex-wrap gap-2 my-3">
+				<a class="btn-solid theme-secondary" href="https://lfs.atproducts.xyz/media/files/TomatoOS.iso">TomatoISO (deprecated) (July 29th release)</a>
 			</div>
 			<h3>How to Run</h3>
 			<p>You <b>MUST</b> use <a href="https://www.qemu.org/">QEMU</a>, or else it will result in a kernel panic.</p>
@@ -113,7 +113,7 @@ rsh              # RadiumOS shell scripting
 	    </div>
 			<hr>
 			<div id="nyaos">
-				<Accordion parent="nyaosAccordion">
+				<Accordion id="nyaosAccordion">
 					<Fragment slot="accordion-content">
 						<AccordionItem title="NyaOS" id="nyaosItem" parent="nyaosAccordion">
 							<Fragment slot="accordion-item-content">
@@ -127,7 +127,7 @@ rsh              # RadiumOS shell scripting
 									<li><strong>Storage:</strong> None, since it's all run on the ISO.</li>
 								</ul>
 								<span><strong>Most commands are similar, but also feature extra ones:</strong></span>
-								<pre class="mt-2 p-2 border-2 border-solid rounded-2"><code>-- General Commands --
+								<pre class="mt-2 p-2 border-2 border-solid rounded-4"><code>-- General Commands --
 help             # shows a help message
 ping             # just outputs pong 
 echo             # echos back said string(s) (currently, echo is bugged)
@@ -147,8 +147,8 @@ mkdir &lt;dirname&gt;  # creates a new directory
 cd &lt;dirname&gt;     # changes the current directory
 </code></pre>
 								<span><strong>Download here:</strong></span>
-								<div class="d-grid d-md-flex flex-wrap gap-2 my-3">
-									<a class="btn btn-primary btn-lg" href="https://lfs.atproducts.xyz/media/files/NyaOS.iso">ISO Download</a>
+								<div class="d-grid md:d-flex flex-wrap gap-2 my-3">
+									<a class="btn-solid theme-primary btn-lg" href="https://lfs.atproducts.xyz/media/files/NyaOS.iso">ISO Download</a>
 								</div>
 								<h3>ISO Stats</h3>
 								<ul>

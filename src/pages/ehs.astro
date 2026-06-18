@@ -15,7 +15,6 @@ import Figure from '../components/Figure.astro';
     <Hero id="ehs" title="Ethical Hacking Society" description="The Ethical Hacking Society is about ethical hacking as a whole." 
       buttons={[
         { href: "https://discord.gg/yCnteHexEs", text: "Discord Server Invite", type: "primary" },
-        { href: "/backup/ehs", text: "View the all laid out format", type: "secondary" },
       ]},
       icons={[
           { icon: "discord", desc: "Discord Server Invite", href: "https://discord.gg/zPdxVST5VU" },
@@ -38,7 +37,7 @@ import Figure from '../components/Figure.astro';
       <div id="history">
         <h2> History </h2>
         <Figure 
-          image={[{ src: "/media/images/ehs.webp", alt: "Ethical Hacking Society Logo.", width: "50%", additionalClasses: "rounded-1" }]} 
+          image={[{ src: "/media/images/ehs.webp", alt: "Ethical Hacking Society Logo.", width: "50%", additionalClasses: "rounded-4" }]} 
           caption="The Ethical Hacking Society logo is owned by AT Products LLC. All rights reserved.">
           <Fragment slot="history-content">
             <p> The Ethical Hacking Society (EHS) was founded in August 12th, 2021 by CobraCommander and Alex Toucan as a community for individuals interested in ethical hacking and cybersecurity. The society aimed to provide a platform for learning, sharing knowledge, and collaborating on projects related to ethical hacking practices. <br>
@@ -54,31 +53,31 @@ import Figure from '../components/Figure.astro';
       <div id="resources" class="text-center">
         <h2> Resources </h4>
         <p> What do you want to know about today? </p>
-        <a class="btn btn-dl btn-resource" type="button" href="/articles/ehs/onion">
+        <a class="btn-solid theme-inverse btn-resource" type="button" href="/articles/ehs/onion">
           Onion Links
         </a>
-        <a class="btn btn-dl btn-resource" type="button" href="/articles/ehs/slammer">
+        <a class="btn-solid theme-inverse btn-resource" type="button" href="/articles/ehs/slammer">
           Slammer
         </a>
-        <a class="btn btn-dl btn-resource" type="button" href="/articles/ehs/dos">
+        <a class="btn-solid theme-inverse btn-resource" type="button" href="/articles/ehs/dos">
           Denial of Service
         </a>
-        <a class="btn btn-dl btn-resource" type="button" href="/articles/ehs/ddos">
+        <a class="btn-solid theme-inverse btn-resource" type="button" href="/articles/ehs/ddos">
           Distributed Denial of Service
         </a>
-        <a class="btn btn-dl btn-resource" type="button" href="/articles/ehs/token">
+        <a class="btn-solid theme-inverse btn-resource" type="button" href="/articles/ehs/token">
           Token Grabbers
         </a>
-        <a class="btn btn-dl btn-resource" type="button" href="/articles/ehs/ransomware">
+        <a class="btn-solid theme-inverse btn-resource" type="button" href="/articles/ehs/ransomware">
           Ransomware
         </a>
-        <a class="btn btn-dl btn-resource" type="button" href="/articles/ehs/trojans">
+        <a class="btn-solid theme-inverse btn-resource" type="button" href="/articles/ehs/trojans">
           Trojans
         </a>
-        <a class="btn btn-dl btn-resource" type="button" href="/articles/ehs/worms">
+        <a class="btn-solid theme-inverse btn-resource" type="button" href="/articles/ehs/worms">
           Worms
         </a>
-        <a class="btn btn-dl btn-resource" type="button" href="/articles/ehs/other">
+        <a class="btn-solid theme-inverse btn-resource" type="button" href="/articles/ehs/other">
           Other Resources
         </a>
       </div>
